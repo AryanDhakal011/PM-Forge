@@ -1,0 +1,32 @@
+.trail {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--z-cursor) - 1);
+  pointer-events: none;
+}
+
+.dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--terra);
+  opacity: 0.4;
+  z-index: var(--z-cursor);
+  pointer-events: none;
+  transition: opacity 180ms var(--ease);
+  will-change: transform;
+}
+
+.dot[data-hidden="true"] {
+  opacity: 0;
+}
+
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .dot,
+  .trail {
+    display: none;
+  }
+}

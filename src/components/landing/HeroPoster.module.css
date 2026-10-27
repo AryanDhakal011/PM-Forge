@@ -1,0 +1,334 @@
+.poster {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 72% 18%, rgba(255, 238, 208, 0.9) 0%, rgba(243, 235, 221, 0) 60%),
+    linear-gradient(180deg, #efe5d4 0%, #e6d8c2 61%, #b98d67 61.4%, #8a6447 100%);
+  isolation: isolate;
+}
+
+.halo {
+  position: absolute;
+  width: 62%;
+  aspect-ratio: 1;
+  left: 34%;
+  top: 4%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 247, 230, 0.85), rgba(255, 247, 230, 0) 68%);
+  filter: blur(12px);
+}
+
+.engine {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  width: min(56%, 430px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%) rotate(-3deg);
+}
+
+.ringOuter,
+.ringMiddle,
+.ringInner,
+.meridian {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid rgba(177, 138, 80, 0.9);
+  box-shadow: 0 0 18px rgba(255, 226, 178, 0.35) inset;
+}
+
+.ringOuter {
+  transform: rotate(12deg) scaleX(0.68);
+  border-color: rgba(184, 115, 74, 0.85);
+}
+
+.ringMiddle {
+  inset: 12%;
+  transform: rotate(-36deg) scaleY(0.7);
+  border-color: rgba(209, 178, 118, 0.86);
+}
+
+.ringInner {
+  inset: 27%;
+  transform: rotate(58deg) scaleX(0.76);
+  border-color: rgba(143, 70, 53, 0.55);
+}
+
+.meridian {
+  inset: 5%;
+  transform: rotate(-8deg) scaleX(0.24);
+  opacity: 0.6;
+}
+
+.core {
+  position: absolute;
+  inset: 38%;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 32% 28%, #fffdf7 0%, #dcd5c8 18%, #8c8880 46%, #3b3833 72%, #d9cdb9 100%);
+  box-shadow:
+    0 22px 34px rgba(60, 43, 26, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.28) inset;
+}
+
+.plane {
+  position: absolute;
+  inset: 29% 14%;
+  border: 1px solid rgba(255, 253, 247, 0.5);
+  border-radius: 3px;
+  background: linear-gradient(135deg, rgba(255, 252, 243, 0.34), rgba(233, 223, 206, 0.08));
+  backdrop-filter: blur(1px);
+  transform: rotate(-7deg);
+}
+
+.dial {
+  position: absolute;
+  left: 50%;
+  top: -7%;
+  width: 15%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle at 36% 30%, #e8cf9b, #b18a50 55%, #6f522d);
+  box-shadow: 0 8px 14px rgba(71, 49, 26, 0.32);
+}
+
+.needle {
+  position: absolute;
+  left: 50%;
+  top: 18%;
+  width: 1.5px;
+  height: 38%;
+  background: #8f4635;
+  transform-origin: bottom center;
+  transform: rotate(-28deg);
+}
+
+.lamp {
+  position: absolute;
+  right: 4%;
+  bottom: 4%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #66744f;
+  box-shadow: 0 0 10px rgba(127, 163, 93, 0.8);
+}
+
+.card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  width: clamp(84px, 12vw, 128px);
+  padding: 0.55rem 0.6rem;
+  background: #fbf8f0;
+  border: 1px solid rgba(37, 35, 31, 0.14);
+  border-radius: 2px;
+  box-shadow: 0 14px 26px rgba(72, 54, 39, 0.18);
+  color: var(--ink);
+  z-index: 2;
+}
+
+.card span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.card strong {
+  font-family: var(--font-display);
+  font-size: clamp(0.75rem, 0.8vw, 0.875rem);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.card em {
+  font-family: var(--font-display);
+  font-style: normal;
+  color: var(--terra-dark);
+  font-size: clamp(0.9rem, 1.8vw, 1.6rem);
+  line-height: 1;
+}
+
+.card svg {
+  width: 100%;
+  height: 14px;
+  margin-top: 0.2rem;
+}
+
+.card svg path {
+  fill: none;
+  stroke: var(--terra-dark);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.cardA {
+  right: 4%;
+  top: 9%;
+  transform: rotate(6deg);
+}
+
+.cardB {
+  left: 6%;
+  bottom: 22%;
+  transform: rotate(-5deg);
+}
+
+.cardC {
+  right: 9%;
+  bottom: 14%;
+  transform: rotate(-2deg);
+  width: clamp(72px, 9vw, 104px);
+}
+
+.sticky {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: clamp(46px, 6vw, 66px);
+  aspect-ratio: 1;
+  font-family: var(--font-hand);
+  font-size: clamp(0.75rem, 1vw, 0.9rem);
+  color: rgba(37, 35, 31, 0.78);
+  box-shadow: 0 8px 14px rgba(60, 42, 24, 0.16);
+  z-index: 3;
+}
+
+.stickyA {
+  background: #dcc07a;
+  left: 26%;
+  top: 4%;
+  transform: rotate(-6deg);
+}
+
+.stickyB {
+  background: #d8a791;
+  right: 18%;
+  top: 5%;
+  transform: rotate(4deg);
+}
+
+.stickyC {
+  background: #a8b598;
+  right: 9%;
+  top: 31%;
+  transform: rotate(-3deg);
+}
+
+.why {
+  position: absolute;
+  left: 28%;
+  bottom: 17%;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  background: #e8c98f;
+  font-family: var(--font-hand);
+  font-size: 1rem;
+  color: rgba(37, 35, 31, 0.8);
+  transform: rotate(9deg);
+  box-shadow: 0 6px 12px rgba(60, 42, 24, 0.14);
+  z-index: 4;
+}
+
+.whyVisible {
+  animation: whyOut 2s 1.2s var(--ease) forwards;
+}
+
+.mug {
+  position: absolute;
+  left: 17%;
+  bottom: 10%;
+  width: 44px;
+  height: 34px;
+  border-radius: 4px 4px 12px 12px;
+  background: linear-gradient(90deg, #f8f2e6, #d9cebc);
+  box-shadow: 0 10px 16px rgba(52, 36, 22, 0.25);
+}
+
+.mug::after {
+  content: "";
+  position: absolute;
+  right: -12px;
+  top: 7px;
+  width: 16px;
+  height: 16px;
+  border: 3px solid #e6dccb;
+  border-left: 0;
+  border-radius: 0 50% 50% 0;
+}
+
+.plant {
+  position: absolute;
+  right: 2%;
+  bottom: 4%;
+  width: 90px;
+  height: 120px;
+  filter: drop-shadow(0 12px 14px rgba(60, 42, 24, 0.2));
+}
+
+.plant::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 36px;
+  height: 28px;
+  transform: translateX(-50%);
+  background: #a8765a;
+  border-radius: 3px 3px 8px 8px;
+}
+
+.plant span {
+  --angle: calc(var(--i) * 26deg - 78deg);
+  position: absolute;
+  left: 50%;
+  bottom: 26px;
+  width: 18px;
+  height: 62px;
+  border-radius: 90% 0 90% 0;
+  background: linear-gradient(180deg, #8a9874, #5e6f4d);
+  transform-origin: bottom center;
+  transform: translateX(-50%) rotate(var(--angle)) scaleY(calc(0.7 + var(--i) * 0.04));
+  opacity: 0.9;
+}
+
+@keyframes whyOut {
+  to {
+    opacity: 0;
+    transform: rotate(14deg) translateY(20px);
+  }
+}
+
+@media (max-width: 767px) {
+  .poster {
+    background:
+      radial-gradient(120% 80% at 60% 20%, rgba(255, 238, 208, 0.9) 0%, rgba(243, 235, 221, 0) 62%),
+      linear-gradient(180deg, #efe5d4 0%, #e6d8c2 68%, #b98d67 68.4%, #8a6447 100%);
+  }
+
+  .card {
+    width: 74px;
+    padding: 0.35rem 0.4rem;
+  }
+
+  .card span {
+    font-size: 0.75rem;
+  }
+
+  .cardB {
+    left: 2%;
+    bottom: 26%;
+  }
+
+  .stickyC {
+    display: none;
+  }
+}

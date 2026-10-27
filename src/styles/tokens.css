@@ -1,0 +1,107 @@
+:root {
+  /* Core palette */
+  --cream: #f3ebdd;
+  --paper: #f6f0e2;
+  --paper-deep: #ede3cf;
+  --wall-0: #f2ebdd;
+  --wall-1: #e9dcc3;
+  --wall-2: #dcc8a6;
+  --dusk: #2b1c12;
+  --warm: #e9dfce;
+  --sand: #e5d9c7;
+  --wood: #8c6447;
+  --wood-dark: #5a4030;
+  --terra: #b85f45;
+  --terra-dark: #8f4635;
+  --sage: #899477;
+  --sage-dark: #58654e;
+  --green: #0f5c3a;
+  --green-hover: #12704a;
+  --green-ink: #2f6f4e;
+  --walnut-1: #8a5a38;
+  --walnut-2: #5a3820;
+  --graphite: #3b3a36;
+  --olive: #6e743f;
+  --okra: #b99a4a;
+  --brass: #b5894a;
+  --brass-ink: #7f5c2b;
+  --brass-light: #d1b276;
+  --copper: #b8734a;
+  --ink: #23211c;
+  --ink-soft: #4a463f;
+  /* Text-safe muted tone: 5.19:1 on --warm and 6.45:1 on --paper. */
+  --muted: #5f5a51;
+  --line: #d5c9b7;
+  --line-light: #e5dccf;
+  --ok: #647c4b;
+  --alert: #a64d3a;
+  --white: #fffdf7;
+
+  /* Type */
+  --font-display: "DM Serif Display", "Iowan Old Style", Georgia, serif;
+  --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-hand: "Caveat", "Segoe Script", cursive;
+
+  /* Layout */
+  --maxw: 1840px;
+  --max: var(--maxw);
+  --gutter: clamp(20px, 5vw, 112px);
+  --edge: max(var(--gutter), calc((100vw - var(--maxw)) / 2 + var(--gutter)));
+  --nav-h: 80px;
+
+  /* Depth */
+  --shadow-xs: 0 2px 6px rgba(64, 46, 30, 0.07);
+  --shadow-sm: 0 4px 12px rgba(37, 35, 31, 0.08);
+  --shadow-md: 0 14px 35px rgba(37, 35, 31, 0.1);
+  --shadow-lg: 0 30px 70px rgba(37, 35, 31, 0.13);
+  --shadow-paper: 0 18px 50px rgba(72, 54, 39, 0.12);
+
+  /* Radii */
+  --r-paper: 3px;
+  --r-ui: 10px;
+  --r-panel: 16px;
+  --r-pill: 999px;
+
+  /* Motion */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in: cubic-bezier(0.55, 0, 0.8, 0.3);
+  --ease: var(--ease-out);
+  --ease-soft: var(--ease-in-out);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-micro: 160ms;
+  --dur-ui: 240ms;
+  --dur-card: 400ms;
+  --dur-panel: 520ms;
+  --dur-section: 800ms;
+
+  /* Loader timings (mirror src/lib/loaderTokens.ts). */
+  --loader-hold: 1100ms;
+  --loader-fall: 450ms;
+  --loader-spread: 1250ms;
+  --loader-fade: 250ms;
+  --loader-route-fade: 300ms;
+  --loader-repeat: 600ms;
+  --loader-meta-in: 500ms;
+  --loader-meta-delay: 180ms;
+
+  --z-nav: 60;
+  --z-status: 55;
+  --z-dialog: 90;
+  --z-cursor: 100;
+  --z-loader: 110;
+}
+
+html {
+  scroll-padding-top: var(--nav-h);
+}
+
+section[id] {
+  scroll-margin-top: var(--nav-h);
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --nav-h: 68px;
+  }
+}

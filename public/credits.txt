@@ -1,0 +1,61 @@
+PMForge — Credits & Attribution
+================================
+
+A practice ground for product judgment. Built as a Next.js application.
+
+TYPE
+----
+DM Serif Display — Colophon Foundry / Google Fonts — SIL Open Font License 1.1
+Inter — Rasmus Andersson / Google Fonts — SIL Open Font License 1.1
+Caveat — Impallari Type / Google Fonts — SIL Open Font License 1.1
+Served locally through @fontsource packages (no third-party font CDN at runtime).
+
+PHOTOGRAPHY
+-----------
+"Mountain ridge at dusk" (final-mountains.jpg)
+Photographer: Eberhard Grossgasteiger
+Source: Pexels — https://www.pexels.com/@eberhardgross/
+License: Pexels License (free to use, attribution appreciated)
+Used in the final Decision Blueprint plate.
+
+TEXTURES
+--------
+Wood Table 001 (diffuse + roughness maps)
+Source: Poly Haven — https://polyhaven.com/a/wood_table_001
+License: CC0 1.0 Universal (public domain)
+Used in the final Decision Blueprint 3D scene.
+
+ILLUSTRATION & 3D
+-----------------
+The Decision Engine, Learning Cluster, and Blueprint maquette are original
+procedural geometry rendered at runtime with React Three Fiber and Three.js.
+No GLB model files or third-party 3D assets are bundled. The hero poster and
+the remaining "plates" are original CSS/SVG art direction built in this repo.
+
+ICONS
+-----
+Lucide — https://lucide.dev — ISC License
+Brand marks (GitHub, LinkedIn, X) drawn locally as simple SVG glyphs.
+
+OPEN SOURCE
+-----------
+Next.js — MIT
+React — MIT
+React Three Fiber — MIT
+@react-three/drei — MIT
+three.js — MIT
+GSAP + ScrollTrigger — GreenSock standard "no charge" license
+Lenis — MIT
+Zod — MIT
+lucide-react — ISC
+
+CONTENT
+-------
+All product-management scenarios, interview cases, rubric language, and
+editorial copy are original to this project. Names, companies, and outcomes in
+the cases are fictional. No AI-generated imagery is used.
+
+CONTACT
+-------
+hello@pmforge.example — placeholder address; this demo runs entirely locally
+and does not send email.
