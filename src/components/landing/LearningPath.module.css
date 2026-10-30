@@ -13,8 +13,16 @@
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(46% 55% at 49% 46%, rgba(255, 250, 235, 0.8), transparent 74%),
-    radial-gradient(30% 30% at 95% 8%, rgba(213, 201, 183, 0.24), transparent 70%);
+    radial-gradient(
+      46% 55% at 49% 46%,
+      rgba(255, 250, 235, 0.8),
+      transparent 74%
+    ),
+    radial-gradient(
+      30% 30% at 95% 8%,
+      rgba(213, 201, 183, 0.24),
+      transparent 70%
+    );
 }
 
 .inner {
@@ -25,7 +33,10 @@
   margin-inline: auto;
   padding-inline: var(--gutter);
   display: grid;
-  grid-template-columns: minmax(240px, 0.78fr) minmax(360px, 1.2fr) minmax(380px, 1.12fr);
+  grid-template-columns: minmax(240px, 0.78fr) minmax(360px, 1.2fr) minmax(
+      380px,
+      1.12fr
+    );
   gap: clamp(1.5rem, 2.6vw, 3.2rem);
   align-items: center;
 }
@@ -108,7 +119,11 @@
   position: absolute;
   inset: 8% 3% 5%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(185, 154, 74, 0.11), transparent 67%);
+  background: radial-gradient(
+    circle,
+    rgba(185, 154, 74, 0.11),
+    transparent 67%
+  );
   opacity: calc(0.68 + var(--calm, 0) * 0.32);
   pointer-events: none;
 }
@@ -223,8 +238,16 @@
   border: 1px solid rgba(78, 83, 88, 0.44);
   border-radius: 50%;
   background:
-    radial-gradient(ellipse at 32% 27%, rgba(255, 255, 255, 0.98), transparent 23%),
-    radial-gradient(ellipse at 69% 74%, rgba(75, 81, 88, 0.72), transparent 47%),
+    radial-gradient(
+      ellipse at 32% 27%,
+      rgba(255, 255, 255, 0.98),
+      transparent 23%
+    ),
+    radial-gradient(
+      ellipse at 69% 74%,
+      rgba(75, 81, 88, 0.72),
+      transparent 47%
+    ),
     linear-gradient(135deg, #f2f4f5 5%, #adb6bf 42%, #e6e8e9 68%, #737c85 100%);
   box-shadow:
     inset -8px -9px 15px rgba(45, 51, 57, 0.38),
@@ -597,7 +620,10 @@
 
 @media (max-width: 1200px) {
   .inner {
-    grid-template-columns: minmax(215px, 0.7fr) minmax(310px, 1.08fr) minmax(330px, 1.1fr);
+    grid-template-columns: minmax(215px, 0.7fr) minmax(310px, 1.08fr) minmax(
+        330px,
+        1.1fr
+      );
     gap: 1.4rem;
   }
 
@@ -707,7 +733,6 @@
   .rowTitle {
     font-size: 1rem;
   }
-
 }
 
 @media (max-width: 420px) {
@@ -717,4 +742,74 @@
 }
 
 /* Pseudo-elements explicitly inherit only from their bound painted object. */
-.stage::before{--calm:inherit}
+.stage::before {
+  --calm: inherit;
+}
+
+/* The numbered shelf and its nodes are one reference preview. */
+.inner {
+  grid-template-columns: minmax(220px, 0.8fr) minmax(300px, 1.05fr) minmax(
+      300px,
+      1.05fr
+    );
+  gap: 24px;
+}
+.copy {
+  max-width: 350px;
+}
+.section {
+  padding: clamp(3rem, 5vw, 5rem) 0;
+}
+.listHead {
+  font-size: 0.8125rem;
+}
+.rowHot {
+  background: #b5894a1c;
+  box-shadow: inset 3px 0 var(--brass);
+}
+@media (max-width: 1279px) {
+  .inner {
+    grid-template-columns: minmax(240px, 1fr) minmax(300px, 1fr);
+  }
+  .copy {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .stage {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .listCol {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    min-width: 0;
+  }
+}
+@media (max-width: 767px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .copy,
+  .stage,
+  .listCol {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .stage {
+    min-height: 280px;
+    height: 300px;
+  }
+  .listCol {
+    width: 100%;
+  }
+  .copy {
+    max-width: 48ch;
+  }
+  .title {
+    font-size: 2.6rem;
+  }
+  .row {
+    min-height: 48px;
+  }
+}

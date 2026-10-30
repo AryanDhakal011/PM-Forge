@@ -28,7 +28,19 @@ import { Dialog } from "@/components/ui/Dialog";
 import { useWorkspace } from "./WorkspaceProvider";
 import { useWorkspaceData } from "./useWorkspaceData";
 import { EmptyState } from "./WorkspaceUI";
+import { getQuestion, categoryOf } from "@/lib/product/content";
+import { getProject } from "@/lib/projects/content";
 import styles from "./Product.module.css";
+const fieldHints: Record<keyof RecordFields, string> = {
+  problem: "What decision needs to be made, and for whom?",
+  evidence: "What did you observe? Include the source.",
+  assumptions: "What are you treating as true?",
+  options: "Which credible alternatives did you consider?",
+  tradeoffs: "What do you give up by choosing this?",
+  decision: "State the call and why the evidence supports it.",
+  metric: "Which outcome and guardrail will you watch?",
+  nextCheck: "Who checks what, and when would you change course?",
+};
 const labels: Record<keyof RecordFields, string> = {
   problem: "The problem",
   evidence: "Evidence",
@@ -120,6 +132,27 @@ export function RecordEditor({ id }: { id?: string }) {
   const [status, setStatus] = useState("");
   const [confirm, setConfirm] = useState(false);
   const [busy, setBusy] = useState(false);
+  const origin = useLiveQuery(async () => {
+    if (!profile || !record?.runId || record.ownerId !== profile.id)
+      return null;
+    const practice = await db.runs.get(record.runId);
+    if (practice?.ownerId === profile.id) {
+      const q = getQuestion(practice.questionId);
+      return q
+        ? {
+            label: `${categoryOf(q.category).label} · ${q.title}`,
+            href: `/app/run/${practice.id}/debrief`,
+          }
+        : null;
+    }
+    const campaign = await db.projectRuns.get(record.runId);
+    if (campaign?.ownerId === profile.id)
+      return {
+        label: `${getProject(campaign.projectId)?.title || "Project"} · Chapter ${campaign.chapter}`,
+        href: `/app/projects/${campaign.projectId}`,
+      };
+    return null;
+  }, [record?.runId, record?.ownerId, profile?.id]);
   useEffect(() => {
     if (record && record.ownerId === profile?.id) {
       setTitle(record.title);
@@ -190,7 +223,9 @@ export function RecordEditor({ id }: { id?: string }) {
   };
   return (
     <>
-      <div className={`${styles.pageHead} ${styles.screenOnly}`}>
+      <div
+        className={`${styles.pageHead} ${styles.recordHeading} ${styles.screenOnly}`}
+      >
         <div>
           <span className={styles.eyebrow}>
             {record?.source === "Demo"
@@ -260,17 +295,33 @@ export function RecordEditor({ id }: { id?: string }) {
         </div>
       </div>
       <article className={`${styles.panel} ${styles.recordSheet}`}>
+        <header className={styles.recordContext}>
+          <span>
+            <FileText size={16} />
+            Decision record ·{" "}
+            {origin?.label ||
+              (record?.source === "Demo"
+                ? "Practice preview"
+                : "Independent decision")}
+          </span>
+          {origin ? (
+            <Link href={origin.href}>Revisit the decision ↗</Link>
+          ) : (
+            <span>Evidence → tradeoff → next check</span>
+          )}
+        </header>
         {editing ? (
           <form
             onSubmit={(e) => {
               e.preventDefault();
               void save();
             }}
-            className={styles.stack}
+            className={styles.recordForm}
           >
             <label className={styles.field}>
               Record title
               <input
+                name="title"
                 required
                 maxLength={140}
                 value={title}
@@ -287,6 +338,9 @@ export function RecordEditor({ id }: { id?: string }) {
                   {labels[key]}
                   {key === "decision" ? " *" : ""}
                   <textarea
+                    name={key}
+                    placeholder={fieldHints[key]}
+                    rows={2}
                     required={key === "decision"}
                     maxLength={20000}
                     value={fields[key]}

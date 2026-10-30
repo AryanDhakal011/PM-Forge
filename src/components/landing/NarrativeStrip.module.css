@@ -81,7 +81,9 @@
 .signalPhrase {
   filter: blur(var(--beat-blur, 0px));
   transform: translateY(var(--beat-rise, 0px));
-  transition: filter 100ms linear, transform 100ms linear;
+  transition:
+    filter 100ms linear,
+    transform 100ms linear;
 }
 
 .signalLine,
@@ -293,7 +295,12 @@
   position: absolute;
   inset: 0;
   width: 22%;
-  background: linear-gradient(90deg, transparent, rgba(177, 138, 80, 0.7), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(177, 138, 80, 0.7),
+    transparent
+  );
   transform: translateX(calc(-120% + var(--beat-travel, 0%)));
 }
 
@@ -421,4 +428,14 @@
   .rule::after {
     transform: none;
   }
+}
+
+/* The first transition resolves through composited opacity and transforms. */
+.noise-to-signal .signalPhrase {
+  filter: none;
+  opacity: var(--beat-opacity, 1);
+  transition:
+    opacity 100ms linear,
+    transform 100ms linear;
+  will-change: transform, opacity;
 }

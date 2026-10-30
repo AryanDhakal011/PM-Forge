@@ -27,8 +27,16 @@ html[data-reduced-motion="true"] .hero {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(90% 80% at 72% 20%, rgba(255, 241, 215, 0.55), transparent 58%),
-    linear-gradient(180deg, rgba(243, 235, 221, 0) 70%, rgba(243, 235, 221, 0.6) 100%);
+    radial-gradient(
+      90% 80% at 72% 20%,
+      rgba(255, 241, 215, 0.55),
+      transparent 58%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(243, 235, 221, 0) 70%,
+      rgba(243, 235, 221, 0.6) 100%
+    );
   pointer-events: none;
   z-index: 2;
 }
@@ -150,15 +158,29 @@ html[data-reduced-motion="true"] .hero {
 .canvasWrap {
   position: absolute;
   inset: 0;
-  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.5) 9%, #000 25%);
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.5) 9%, #000 25%);
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.5) 9%,
+    #000 25%
+  );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.5) 9%,
+    #000 25%
+  );
 }
 
 .scene::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(243, 235, 221, 0.25), transparent 24%);
+  background: linear-gradient(
+    180deg,
+    rgba(243, 235, 221, 0.25),
+    transparent 24%
+  );
   opacity: calc(1 - var(--calm, 0) * 0.4);
   pointer-events: none;
 }
@@ -325,7 +347,12 @@ html[data-reduced-motion="true"] .hero {
   padding: 0 var(--edge) 28px;
   border-top: 1px solid rgba(255, 246, 228, 0.35);
   background:
-    linear-gradient(110deg, rgba(90, 56, 32, 0.98), rgba(138, 90, 56, 0.96) 58%, rgba(115, 73, 43, 0.98)),
+    linear-gradient(
+      110deg,
+      rgba(90, 56, 32, 0.98),
+      rgba(138, 90, 56, 0.96) 58%,
+      rgba(115, 73, 43, 0.98)
+    ),
     url("/assets/textures/wood-table-diffuse.jpg") center / cover;
   box-shadow: 0 -14px 28px -18px rgba(37, 35, 31, 0.28);
 }
@@ -357,7 +384,10 @@ html[data-reduced-motion="true"] .hero {
   transform: rotate(var(--card-tilt, 0deg));
   text-decoration: none;
   scroll-snap-align: start;
-  transition: color var(--dur-ui) var(--ease-out), transform var(--dur-ui) var(--ease-out), box-shadow var(--dur-ui) var(--ease-out);
+  transition:
+    color var(--dur-ui) var(--ease-out),
+    transform var(--dur-ui) var(--ease-out),
+    box-shadow var(--dur-ui) var(--ease-out);
 }
 
 .trustItem:hover {
@@ -387,7 +417,9 @@ html[data-reduced-motion="true"] .hero {
 .trustItem svg {
   color: var(--wood);
   flex: none;
-  transition: transform var(--dur-ui) var(--ease-out), color var(--dur-ui) var(--ease-out);
+  transition:
+    transform var(--dur-ui) var(--ease-out),
+    color var(--dur-ui) var(--ease-out);
 }
 
 .trustItem:hover svg {
@@ -635,4 +667,111 @@ html[data-reduced-motion="true"] .hero {
 }
 
 /* Pseudo-elements explicitly inherit only from their bound painted object. */
-.scene::after{--calm:inherit}
+.scene::after {
+  --calm: inherit;
+}
+
+/* The desk remains the hero; the pillars become a quiet navigation ledge. */
+.trust {
+  min-height: 104px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding: 12px var(--gutter) 16px;
+  background: linear-gradient(180deg, #f3ebdd00, #f3ebdde8 35%);
+  border-top: 0;
+  box-shadow: none;
+}
+.trust::after {
+  display: none;
+}
+.trustItem {
+  min-height: 60px;
+  padding: 8px 0;
+  background: none;
+  border: 0;
+  border-top: 1px solid #8d745433;
+  box-shadow: none;
+  transform: none;
+  gap: 12px;
+}
+.trustItem:hover {
+  transform: none;
+  box-shadow: none;
+}
+.trustItem svg {
+  width: 21px;
+  height: 21px;
+}
+.trustItem span {
+  font-size: 0.9375rem;
+}
+.trustItem small {
+  font-size: 0.8125rem;
+}
+.annotations {
+  opacity: 0.75;
+}
+@media (min-width: 1600px) {
+  .scene {
+    right: var(--edge);
+    width: 760px;
+  }
+  .copy {
+    width: 600px;
+  }
+  .headline {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 1023px) {
+  .trust {
+    min-height: 0;
+    overflow: visible;
+    padding: 8px var(--gutter) 20px;
+    align-items: center;
+    scroll-snap-type: none;
+    position: relative;
+  }
+}
+@media (max-width: 767px) {
+  .headline {
+    font-size: clamp(2.7rem, 10.5vw, 3.5rem);
+    max-width: 17ch;
+    line-height: 1;
+  }
+  .copy {
+    padding-top: 26px;
+    padding-bottom: 16px;
+  }
+  .scene {
+    height: 250px;
+    min-height: 250px;
+  }
+  .canvasWrap {
+    inset: 0 8%;
+  }
+  .trust {
+    grid-template-columns: 1fr;
+    gap: 0;
+    background: var(--cream);
+    padding-bottom: 24px;
+  }
+  .trustItem {
+    min-height: 48px;
+    gap: 12px;
+  }
+  .trustItem span {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .trustItem:first-child {
+    border-top: 1px solid #8d745433;
+  }
+  .statusChip {
+    display: none;
+  }
+}

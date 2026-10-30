@@ -43,9 +43,9 @@
   --font-hand: "Caveat", "Segoe Script", cursive;
 
   /* Layout */
-  --maxw: 1840px;
+  --maxw: 1384px;
   --max: var(--maxw);
-  --gutter: clamp(20px, 5vw, 112px);
+  --gutter: clamp(20px, 2.25vw, 32px);
   --edge: max(var(--gutter), calc((100vw - var(--maxw)) / 2 + var(--gutter)));
   --nav-h: 80px;
 

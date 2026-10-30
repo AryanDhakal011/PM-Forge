@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-29T23:49:23.018Z",
+  "capturedAt": "2026-10-30T09:49:25.815Z",
   "runs": [
     {
       "name": "desktop",
@@ -12,50 +12,236 @@
           "id": "hero",
           "top": 0,
           "height": 2580,
-          "calm": "0.000",
-          "stage": null
+          "calm": "0",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "lYpGPq_copy",
+              "value": "0"
+            },
+            {
+              "class": "",
+              "value": "0"
+            },
+            {
+              "class": "lYpGPq_scene",
+              "value": "0"
+            },
+            {
+              "class": "lYpGPq_annotation lYpGPq_annA",
+              "value": "0"
+            },
+            {
+              "class": "lYpGPq_annotation lYpGPq_annB",
+              "value": "0"
+            },
+            {
+              "class": "lYpGPq_annotation lYpGPq_annC",
+              "value": "0"
+            },
+            {
+              "class": "lYpGPq_annotation lYpGPq_annD",
+              "value": "0"
+            },
+            {
+              "class": "lYpGPq_trust",
+              "value": "0"
+            }
+          ]
         },
         {
           "id": "signal",
           "top": 2709,
           "height": 2150,
-          "calm": "0.580",
-          "stage": "resolve"
+          "calm": "0.58",
+          "stage": "resolve",
+          "bindings": [
+            {
+              "class": "O8UzlW_tableGlow",
+              "value": "0.58"
+            },
+            {
+              "class": "O8UzlW_instrumentCanvas",
+              "value": "0.58"
+            },
+            {
+              "class": "O8UzlW_decision",
+              "value": "0.58"
+            }
+          ]
         },
         {
           "id": "learning",
           "top": 4988,
-          "height": 947.609375,
-          "calm": "1.000",
-          "stage": null
+          "height": 861.234375,
+          "calm": "1",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "JxVh0a_copy",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_stage",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_handNote",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_listCol",
+              "value": "1"
+            }
+          ]
         },
         {
           "id": "projects",
-          "top": 6064.609375,
+          "top": 5978.234375,
           "height": 1473.03125,
-          "calm": "1.000",
-          "stage": null
+          "calm": "1",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "tlfcrG_wood",
+              "value": "1"
+            },
+            {
+              "class": "tlfcrG_lightShaft",
+              "value": "1"
+            },
+            {
+              "class": "tlfcrG_sheet",
+              "value": "1"
+            },
+            {
+              "class": "tlfcrG_artifact",
+              "value": "1"
+            },
+            {
+              "class": "tlfcrG_artifact",
+              "value": "1"
+            },
+            {
+              "class": "tlfcrG_sprint",
+              "value": "1"
+            }
+          ]
         },
         {
           "id": "interview",
-          "top": 8107.78125,
-          "height": 978.765625,
-          "calm": "1.000",
-          "stage": null
+          "top": 8021.40625,
+          "height": 756.4375,
+          "calm": "1",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "_2o2OMG_leafShadows",
+              "value": "1"
+            },
+            {
+              "class": "_2o2OMG_copy",
+              "value": "1"
+            },
+            {
+              "class": "_2o2OMG_pivots",
+              "value": "1"
+            },
+            {
+              "class": "_2o2OMG_card",
+              "value": "1"
+            }
+          ]
         },
         {
           "id": "career",
-          "top": 9918.109375,
-          "height": 1313.84375,
-          "calm": "0.000",
-          "stage": null
+          "top": 9110.578125,
+          "height": 1320.8125,
+          "calm": "1",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "p3Y2tq_plantShadows",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_copy",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_profile",
+              "value": "1"
+            },
+            {
+              "class": "",
+              "value": "1"
+            },
+            {
+              "class": "",
+              "value": "1"
+            },
+            {
+              "class": "",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_tile",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_tile",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_tile",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_tile",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_tile",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_tile",
+              "value": "1"
+            }
+          ]
         },
         {
           "id": "blueprint",
-          "top": 11231.953125,
+          "top": 10431.390625,
           "height": 860,
-          "calm": "1.000",
-          "stage": null
+          "calm": "1",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "FBMz8W_landscape",
+              "value": "1"
+            },
+            {
+              "class": "FBMz8W_clouds",
+              "value": "1"
+            },
+            {
+              "class": "FBMz8W_copy",
+              "value": "1"
+            },
+            {
+              "class": "FBMz8W_start btn btnPrimary",
+              "value": "1"
+            },
+            {
+              "class": "FBMz8W_model",
+              "value": "1"
+            },
+            {
+              "class": "FBMz8W_blueprintActions",
+              "value": "1"
+            }
+          ]
         }
       ],
       "samples": [
@@ -63,11 +249,11 @@
           "id": "hero",
           "scrollY": 0,
           "draws": {
-            "hero": 3010
+            "hero": 3014
           },
-          "fps": 60.2,
+          "fps": 60.3,
           "medianMs": 16.69999999999891,
-          "p95Ms": 16.899999999999636,
+          "p95Ms": 16.80000000000109,
           "contexts": 1,
           "overflow": false,
           "sceneVisibility": {
@@ -82,12 +268,12 @@
           "scrollY": 3999,
           "draws": {
             "hero": 0,
-            "signal": 371,
+            "signal": 423,
             "learning": 0
           },
-          "fps": 53,
+          "fps": 60.4,
           "medianMs": 16.700000000000728,
-          "p95Ms": 17.799999999999272,
+          "p95Ms": 16.80000000000291,
           "contexts": 3,
           "overflow": false,
           "sceneVisibility": {
@@ -99,15 +285,15 @@
         },
         {
           "id": "learning",
-          "scrollY": 5032,
+          "scrollY": 4989,
           "draws": {
             "hero": 0,
             "signal": 0,
-            "learning": 906
+            "learning": 905
           },
           "fps": 60.4,
-          "medianMs": 16.700000000000728,
-          "p95Ms": 16.900000000001455,
+          "medianMs": 16.69999999999709,
+          "p95Ms": 16.80000000000291,
           "contexts": 3,
           "overflow": false,
           "sceneVisibility": {
@@ -119,15 +305,15 @@
         },
         {
           "id": "projects",
-          "scrollY": 6371,
+          "scrollY": 6285,
           "draws": {
             "hero": 0,
             "signal": 0,
             "learning": 0
           },
-          "fps": 60.5,
+          "fps": 60.3,
           "medianMs": 16.69999999999709,
-          "p95Ms": 16.900000000001455,
+          "p95Ms": 16.80000000000291,
           "contexts": 3,
           "overflow": false,
           "sceneVisibility": {
@@ -139,7 +325,7 @@
         },
         {
           "id": "interview",
-          "scrollY": 8167,
+          "scrollY": 8021,
           "draws": {
             "hero": 0,
             "signal": 0,
@@ -147,7 +333,7 @@
           },
           "fps": 60.4,
           "medianMs": 16.69999999999709,
-          "p95Ms": 17.099999999998545,
+          "p95Ms": 17,
           "contexts": 3,
           "overflow": false,
           "sceneVisibility": {
@@ -159,15 +345,15 @@
         },
         {
           "id": "career",
-          "scrollY": 8740,
+          "scrollY": 9341,
           "draws": {
             "hero": 0,
             "signal": 0,
             "learning": 0
           },
-          "fps": 60.2,
+          "fps": 60.4,
           "medianMs": 16.69999999999709,
-          "p95Ms": 17.30000000000291,
+          "p95Ms": 16.80000000000291,
           "contexts": 3,
           "overflow": false,
           "sceneVisibility": {
@@ -179,7 +365,7 @@
         },
         {
           "id": "blueprint",
-          "scrollY": 11232,
+          "scrollY": 10431,
           "draws": {
             "hero": 0,
             "signal": 0,
@@ -187,7 +373,7 @@
           },
           "fps": 60.3,
           "medianMs": 16.69999999999709,
-          "p95Ms": 17.19999999999709,
+          "p95Ms": 16.80000000000291,
           "contexts": 3,
           "overflow": false,
           "sceneVisibility": {
@@ -202,48 +388,130 @@
       "signalSelected": {
         "top": 2709,
         "height": 2150,
-        "calm": "1.000",
-        "stage": "resolve"
+        "calm": "1",
+        "stage": "resolve",
+        "bindings": [
+          {
+            "class": "O8UzlW_tableGlow",
+            "value": "1"
+          },
+          {
+            "class": "O8UzlW_instrumentCanvas",
+            "value": "1"
+          },
+          {
+            "class": "O8UzlW_decision",
+            "value": "1"
+          }
+        ]
       },
       "signalJustified": true,
       "signalAfterResize": {
         "top": 2709,
         "height": 2150,
-        "calm": "1.000",
-        "stage": "resolve"
+        "calm": "1",
+        "stage": "resolve",
+        "bindings": [
+          {
+            "class": "O8UzlW_tableGlow",
+            "value": "1"
+          },
+          {
+            "class": "O8UzlW_instrumentCanvas",
+            "value": "1"
+          },
+          {
+            "class": "O8UzlW_decision",
+            "value": "1"
+          }
+        ]
       },
       "learningProgress": [
         {
           "progress": 0,
           "top": 4988,
-          "height": 947.609375,
-          "calm": "0.000",
-          "stage": null
+          "height": 861.234375,
+          "calm": "0",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "JxVh0a_copy",
+              "value": "0"
+            },
+            {
+              "class": "JxVh0a_stage",
+              "value": "0"
+            },
+            {
+              "class": "JxVh0a_handNote",
+              "value": "0"
+            },
+            {
+              "class": "JxVh0a_listCol",
+              "value": "0"
+            }
+          ]
         },
         {
           "progress": 0.5,
           "top": 4988,
-          "height": 947.609375,
-          "calm": "0.480",
-          "stage": null
+          "height": 861.234375,
+          "calm": "0.48",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "JxVh0a_copy",
+              "value": "0.48"
+            },
+            {
+              "class": "JxVh0a_stage",
+              "value": "0.48"
+            },
+            {
+              "class": "JxVh0a_handNote",
+              "value": "0.48"
+            },
+            {
+              "class": "JxVh0a_listCol",
+              "value": "0.48"
+            }
+          ]
         },
         {
           "progress": 1,
           "top": 4988,
-          "height": 947.609375,
-          "calm": "1.000",
-          "stage": null
+          "height": 861.234375,
+          "calm": "1",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "JxVh0a_copy",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_stage",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_handNote",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_listCol",
+              "value": "1"
+            }
+          ]
         }
       ],
       "overlap": {
         "draws": {
           "hero": 0,
-          "signal": 423,
-          "learning": 907
+          "signal": 422,
+          "learning": 904
         },
-        "fps": 60.4,
-        "medianMs": 16.700000000000728,
-        "p95Ms": 16.799999999999272,
+        "fps": 60.3,
+        "medianMs": 16.69999999999709,
+        "p95Ms": 16.80000000000291,
         "contexts": 3,
         "overflow": false,
         "sceneVisibility": {
@@ -254,11 +522,11 @@
         "perf": null
       },
       "projectWritten": "true",
-      "interviewLive": "live",
       "interviewAfter": {
         "phase": "review",
         "feedback": true,
-        "timer": "1:59"
+        "timer": "2:00",
+        "checks": 4
       },
       "counters": [
         {
@@ -270,19 +538,1108 @@
           "actual": "1"
         },
         {
-          "expected": "82",
-          "actual": "82"
+          "expected": "72",
+          "actual": "72"
         }
       ],
       "returnToHero": {
         "draws": {
-          "hero": 3037,
+          "hero": 2976,
           "signal": 0,
           "learning": 0
         },
+        "fps": 59.3,
+        "medianMs": 16.69999999999709,
+        "p95Ms": 16.90000000000873,
+        "contexts": 3,
+        "overflow": false,
+        "sceneVisibility": {
+          "hero": true,
+          "signal": false,
+          "learning": false
+        },
+        "perf": null
+      },
+      "errors": []
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "reduced": false,
+      "loaderDone": "true",
+      "sections": [
+        {
+          "id": "hero",
+          "top": 0,
+          "height": 975.609375,
+          "calm": "0",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "lYpGPq_copy",
+              "value": "0"
+            },
+            {
+              "class": "",
+              "value": "0"
+            },
+            {
+              "class": "lYpGPq_scene",
+              "value": "0"
+            },
+            {
+              "class": "lYpGPq_annotation lYpGPq_annA",
+              "value": "0"
+            },
+            {
+              "class": "lYpGPq_annotation lYpGPq_annB",
+              "value": "0"
+            },
+            {
+              "class": "lYpGPq_annotation lYpGPq_annC",
+              "value": "0"
+            },
+            {
+              "class": "lYpGPq_annotation lYpGPq_annD",
+              "value": "0"
+            },
+            {
+              "class": "lYpGPq_trust",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "id": "signal",
+          "top": 1127.609375,
+          "height": 2637.1875,
+          "calm": "0",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "O8UzlW_tableGlow",
+              "value": "0"
+            },
+            {
+              "class": "O8UzlW_instrumentCanvas",
+              "value": "0"
+            },
+            {
+              "class": "O8UzlW_decision",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "id": "learning",
+          "top": 4141.125,
+          "height": 1400.703125,
+          "calm": "1",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "JxVh0a_copy",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_stage",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_handNote",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_listCol",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "id": "projects",
+          "top": 5693.828125,
+          "height": 3824.578125,
+          "calm": "1",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "tlfcrG_wood",
+              "value": "1"
+            },
+            {
+              "class": "tlfcrG_lightShaft",
+              "value": "1"
+            },
+            {
+              "class": "tlfcrG_sheet",
+              "value": "1"
+            },
+            {
+              "class": "tlfcrG_artifact",
+              "value": "1"
+            },
+            {
+              "class": "tlfcrG_artifact",
+              "value": "1"
+            },
+            {
+              "class": "tlfcrG_sprint",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "id": "interview",
+          "top": 9670.40625,
+          "height": 1635.546875,
+          "calm": "1",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "_2o2OMG_leafShadows",
+              "value": "1"
+            },
+            {
+              "class": "_2o2OMG_copy",
+              "value": "1"
+            },
+            {
+              "class": "_2o2OMG_pivots",
+              "value": "1"
+            },
+            {
+              "class": "_2o2OMG_card",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "id": "career",
+          "top": 11718,
+          "height": 2458.6875,
+          "calm": "1",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "p3Y2tq_plantShadows",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_copy",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_profile",
+              "value": "1"
+            },
+            {
+              "class": "",
+              "value": "1"
+            },
+            {
+              "class": "",
+              "value": "1"
+            },
+            {
+              "class": "",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_tile",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_tile",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_tile",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_tile",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_tile",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_tile",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "id": "blueprint",
+          "top": 14176.6875,
+          "height": 1084.78125,
+          "calm": "1",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "FBMz8W_landscape",
+              "value": "1"
+            },
+            {
+              "class": "FBMz8W_clouds",
+              "value": "1"
+            },
+            {
+              "class": "FBMz8W_copy",
+              "value": "1"
+            },
+            {
+              "class": "FBMz8W_start btn btnPrimary",
+              "value": "1"
+            },
+            {
+              "class": "FBMz8W_model",
+              "value": "1"
+            },
+            {
+              "class": "FBMz8W_blueprintActions",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "samples": [
+        {
+          "id": "hero",
+          "scrollY": 0,
+          "draws": {},
+          "fps": 60.3,
+          "medianMs": 16.699999999999818,
+          "p95Ms": 16.899999999999636,
+          "contexts": 0,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": true,
+            "signal": false,
+            "learning": false
+          },
+          "perf": null
+        },
+        {
+          "id": "signal",
+          "scrollY": 2024,
+          "draws": {},
+          "fps": 60.3,
+          "medianMs": 16.69999999999891,
+          "p95Ms": 16.899999999999636,
+          "contexts": 0,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": true,
+            "learning": false
+          },
+          "perf": null
+        },
+        {
+          "id": "learning",
+          "scrollY": 4419,
+          "draws": {},
+          "fps": 60.1,
+          "medianMs": 16.69999999999891,
+          "p95Ms": 17,
+          "contexts": 0,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": false,
+            "learning": true
+          },
+          "perf": null
+        },
+        {
+          "id": "projects",
+          "scrollY": 7184,
+          "draws": {},
+          "fps": 60.4,
+          "medianMs": 16.69999999999709,
+          "p95Ms": 17.200000000000728,
+          "contexts": 0,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": false,
+            "learning": false
+          },
+          "perf": null
+        },
+        {
+          "id": "interview",
+          "scrollY": 10066,
+          "draws": {},
+          "fps": 60,
+          "medianMs": 16.700000000000728,
+          "p95Ms": 17.19999999999709,
+          "contexts": 0,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": false,
+            "learning": false
+          },
+          "perf": null
+        },
+        {
+          "id": "career",
+          "scrollY": 12525,
+          "draws": {},
+          "fps": 60.4,
+          "medianMs": 16.69999999999709,
+          "p95Ms": 17.299999999995634,
+          "contexts": 0,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": false,
+            "learning": false
+          },
+          "perf": null
+        },
+        {
+          "id": "blueprint",
+          "scrollY": 14297,
+          "draws": {},
+          "fps": 60.2,
+          "medianMs": 16.69999999999709,
+          "p95Ms": 17,
+          "contexts": 0,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": false,
+            "learning": false
+          },
+          "perf": null
+        }
+      ],
+      "signalBefore": false,
+      "signalSelected": {
+        "top": 1127.609375,
+        "height": 2861.515625,
+        "calm": "1",
+        "stage": null,
+        "bindings": [
+          {
+            "class": "O8UzlW_tableGlow",
+            "value": "1"
+          },
+          {
+            "class": "O8UzlW_instrumentCanvas",
+            "value": "1"
+          },
+          {
+            "class": "O8UzlW_decision",
+            "value": "1"
+          }
+        ]
+      },
+      "signalJustified": true,
+      "signalAfterResize": {
+        "top": 1127.609375,
+        "height": 2861.515625,
+        "calm": "1",
+        "stage": null,
+        "bindings": [
+          {
+            "class": "O8UzlW_tableGlow",
+            "value": "1"
+          },
+          {
+            "class": "O8UzlW_instrumentCanvas",
+            "value": "1"
+          },
+          {
+            "class": "O8UzlW_decision",
+            "value": "1"
+          }
+        ]
+      },
+      "learningProgress": [
+        {
+          "progress": 0,
+          "top": 4141.125,
+          "height": 1400.703125,
+          "calm": "0",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "JxVh0a_copy",
+              "value": "0"
+            },
+            {
+              "class": "JxVh0a_stage",
+              "value": "0"
+            },
+            {
+              "class": "JxVh0a_handNote",
+              "value": "0"
+            },
+            {
+              "class": "JxVh0a_listCol",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "progress": 0.5,
+          "top": 4141.125,
+          "height": 1400.703125,
+          "calm": "0.481",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "JxVh0a_copy",
+              "value": "0.481"
+            },
+            {
+              "class": "JxVh0a_stage",
+              "value": "0.481"
+            },
+            {
+              "class": "JxVh0a_handNote",
+              "value": "0.481"
+            },
+            {
+              "class": "JxVh0a_listCol",
+              "value": "0.481"
+            }
+          ]
+        },
+        {
+          "progress": 1,
+          "top": 4141.125,
+          "height": 1400.703125,
+          "calm": "1",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "JxVh0a_copy",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_stage",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_handNote",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_listCol",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "overlap": {
+        "draws": {},
+        "fps": 60.2,
+        "medianMs": 16.700000000000728,
+        "p95Ms": 16.900000000001455,
+        "contexts": 0,
+        "overflow": false,
+        "sceneVisibility": {
+          "hero": false,
+          "signal": true,
+          "learning": true
+        },
+        "perf": null
+      },
+      "projectWritten": "true",
+      "interviewAfter": {
+        "phase": "review",
+        "feedback": true,
+        "timer": "2:00",
+        "checks": 4
+      },
+      "counters": [
+        {
+          "expected": "10",
+          "actual": "10"
+        },
+        {
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "expected": "72",
+          "actual": "72"
+        }
+      ],
+      "returnToHero": {
+        "draws": {},
         "fps": 60.3,
         "medianMs": 16.69999999999709,
         "p95Ms": 16.900000000001455,
+        "contexts": 0,
+        "overflow": false,
+        "sceneVisibility": {
+          "hero": true,
+          "signal": false,
+          "learning": false
+        },
+        "perf": null
+      },
+      "errors": []
+    },
+    {
+      "name": "reduced",
+      "width": 1440,
+      "height": 860,
+      "reduced": true,
+      "loaderDone": "true",
+      "sections": [
+        {
+          "id": "hero",
+          "top": 0,
+          "height": 860,
+          "calm": "0.86",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "lYpGPq_copy",
+              "value": "0.86"
+            },
+            {
+              "class": "",
+              "value": "0.86"
+            },
+            {
+              "class": "lYpGPq_scene",
+              "value": "0.86"
+            },
+            {
+              "class": "lYpGPq_annotation lYpGPq_annA",
+              "value": "0.86"
+            },
+            {
+              "class": "lYpGPq_annotation lYpGPq_annB",
+              "value": "0.86"
+            },
+            {
+              "class": "lYpGPq_annotation lYpGPq_annC",
+              "value": "0.86"
+            },
+            {
+              "class": "lYpGPq_annotation lYpGPq_annD",
+              "value": "0.86"
+            },
+            {
+              "class": "lYpGPq_trust",
+              "value": "0.86"
+            }
+          ]
+        },
+        {
+          "id": "signal",
+          "top": 989,
+          "height": 867.65625,
+          "calm": "0",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "O8UzlW_tableGlow",
+              "value": "0"
+            },
+            {
+              "class": "O8UzlW_instrumentCanvas",
+              "value": "0"
+            },
+            {
+              "class": "O8UzlW_decision",
+              "value": "0"
+            }
+          ]
+        },
+        {
+          "id": "learning",
+          "top": 1985.65625,
+          "height": 861.234375,
+          "calm": "1",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "JxVh0a_copy",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_stage",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_handNote",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_listCol",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "id": "projects",
+          "top": 2975.890625,
+          "height": 1914.171875,
+          "calm": "1",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "tlfcrG_wood",
+              "value": "1"
+            },
+            {
+              "class": "tlfcrG_lightShaft",
+              "value": "1"
+            },
+            {
+              "class": "tlfcrG_sheet",
+              "value": "1"
+            },
+            {
+              "class": "tlfcrG_artifact",
+              "value": "1"
+            },
+            {
+              "class": "tlfcrG_artifact",
+              "value": "1"
+            },
+            {
+              "class": "tlfcrG_sprint",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "id": "interview",
+          "top": 5019.0625,
+          "height": 756.4375,
+          "calm": "1",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "_2o2OMG_leafShadows",
+              "value": "1"
+            },
+            {
+              "class": "_2o2OMG_copy",
+              "value": "1"
+            },
+            {
+              "class": "_2o2OMG_pivots",
+              "value": "1"
+            },
+            {
+              "class": "_2o2OMG_card",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "id": "career",
+          "top": 6108.234375,
+          "height": 1320.8125,
+          "calm": "1",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "p3Y2tq_plantShadows",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_copy",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_profile",
+              "value": "1"
+            },
+            {
+              "class": "",
+              "value": "1"
+            },
+            {
+              "class": "",
+              "value": "1"
+            },
+            {
+              "class": "",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_tile",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_tile",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_tile",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_tile",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_tile",
+              "value": "1"
+            },
+            {
+              "class": "p3Y2tq_tile",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "id": "blueprint",
+          "top": 7429.046875,
+          "height": 860,
+          "calm": "1",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "FBMz8W_landscape",
+              "value": "1"
+            },
+            {
+              "class": "FBMz8W_clouds",
+              "value": "1"
+            },
+            {
+              "class": "FBMz8W_copy",
+              "value": "1"
+            },
+            {
+              "class": "FBMz8W_start btn btnPrimary",
+              "value": "1"
+            },
+            {
+              "class": "FBMz8W_model",
+              "value": "1"
+            },
+            {
+              "class": "FBMz8W_blueprintActions",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "samples": [
+        {
+          "id": "hero",
+          "scrollY": 0,
+          "draws": {
+            "learning": 0,
+            "hero": 0
+          },
+          "fps": 60.4,
+          "medianMs": 16.69999999999891,
+          "p95Ms": 17.100000000000364,
+          "contexts": 2,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": true,
+            "signal": false,
+            "learning": false
+          },
+          "perf": null
+        },
+        {
+          "id": "signal",
+          "scrollY": 993,
+          "draws": {
+            "learning": 0,
+            "hero": 0,
+            "signal": 0
+          },
+          "fps": 60,
+          "medianMs": 16.69999999999891,
+          "p95Ms": 16.899999999999636,
+          "contexts": 3,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": true,
+            "learning": false
+          },
+          "perf": null
+        },
+        {
+          "id": "learning",
+          "scrollY": 1986,
+          "draws": {
+            "learning": 0,
+            "hero": 0,
+            "signal": 0
+          },
+          "fps": 60.5,
+          "medianMs": 16.69999999999709,
+          "p95Ms": 17,
+          "contexts": 3,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": false,
+            "learning": true
+          },
+          "perf": null
+        },
+        {
+          "id": "projects",
+          "scrollY": 3503,
+          "draws": {
+            "learning": 0,
+            "hero": 0,
+            "signal": 0
+          },
+          "fps": 60.1,
+          "medianMs": 16.69999999999709,
+          "p95Ms": 17.10000000000582,
+          "contexts": 3,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": false,
+            "learning": false
+          },
+          "perf": null
+        },
+        {
+          "id": "interview",
+          "scrollY": 5019,
+          "draws": {
+            "learning": 0,
+            "hero": 0,
+            "signal": 0
+          },
+          "fps": 59.7,
+          "medianMs": 16.69999999999709,
+          "p95Ms": 17.19999999999709,
+          "contexts": 3,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": false,
+            "learning": false
+          },
+          "perf": null
+        },
+        {
+          "id": "career",
+          "scrollY": 6339,
+          "draws": {
+            "learning": 0,
+            "hero": 0,
+            "signal": 0
+          },
+          "fps": 59.4,
+          "medianMs": 16.69999999999709,
+          "p95Ms": 17.5,
+          "contexts": 3,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": false,
+            "learning": false
+          },
+          "perf": null
+        },
+        {
+          "id": "blueprint",
+          "scrollY": 7429,
+          "draws": {
+            "learning": 0,
+            "hero": 0,
+            "signal": 0
+          },
+          "fps": 59.9,
+          "medianMs": 16.69999999999709,
+          "p95Ms": 17.10000000000582,
+          "contexts": 3,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": false,
+            "learning": false
+          },
+          "perf": null
+        }
+      ],
+      "signalBefore": false,
+      "signalSelected": {
+        "top": 989,
+        "height": 867.65625,
+        "calm": "1",
+        "stage": null,
+        "bindings": [
+          {
+            "class": "O8UzlW_tableGlow",
+            "value": "1"
+          },
+          {
+            "class": "O8UzlW_instrumentCanvas",
+            "value": "1"
+          },
+          {
+            "class": "O8UzlW_decision",
+            "value": "1"
+          }
+        ]
+      },
+      "signalJustified": true,
+      "signalAfterResize": {
+        "top": 989,
+        "height": 867.65625,
+        "calm": "1",
+        "stage": null,
+        "bindings": [
+          {
+            "class": "O8UzlW_tableGlow",
+            "value": "1"
+          },
+          {
+            "class": "O8UzlW_instrumentCanvas",
+            "value": "1"
+          },
+          {
+            "class": "O8UzlW_decision",
+            "value": "1"
+          }
+        ]
+      },
+      "learningProgress": [
+        {
+          "progress": 0,
+          "top": 1985.65625,
+          "height": 861.234375,
+          "calm": "1",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "JxVh0a_copy",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_stage",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_handNote",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_listCol",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "progress": 0.5,
+          "top": 1985.65625,
+          "height": 861.234375,
+          "calm": "1",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "JxVh0a_copy",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_stage",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_handNote",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_listCol",
+              "value": "1"
+            }
+          ]
+        },
+        {
+          "progress": 1,
+          "top": 1985.65625,
+          "height": 861.234375,
+          "calm": "1",
+          "stage": null,
+          "bindings": [
+            {
+              "class": "JxVh0a_copy",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_stage",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_handNote",
+              "value": "1"
+            },
+            {
+              "class": "JxVh0a_listCol",
+              "value": "1"
+            }
+          ]
+        }
+      ],
+      "overlap": {
+        "draws": {
+          "learning": 0,
+          "hero": 0,
+          "signal": 0
+        },
+        "fps": 60.4,
+        "medianMs": 16.69999999999709,
+        "p95Ms": 17,
+        "contexts": 3,
+        "overflow": false,
+        "sceneVisibility": {
+          "hero": false,
+          "signal": true,
+          "learning": true
+        },
+        "perf": null
+      },
+      "projectWritten": "true",
+      "interviewAfter": {
+        "phase": "review",
+        "feedback": true,
+        "timer": "2:00",
+        "checks": 4
+      },
+      "counters": [
+        {
+          "expected": "10",
+          "actual": "10"
+        },
+        {
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "expected": "72",
+          "actual": "72"
+        }
+      ],
+      "returnToHero": {
+        "draws": {
+          "learning": 0,
+          "hero": 0,
+          "signal": 0
+        },
+        "fps": 60.4,
+        "medianMs": 16.69999999999709,
+        "p95Ms": 17.599999999998545,
         "contexts": 3,
         "overflow": false,
         "sceneVisibility": {

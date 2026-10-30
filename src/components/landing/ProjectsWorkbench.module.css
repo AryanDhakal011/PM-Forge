@@ -2,7 +2,11 @@
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(ellipse at 50% 38%, rgba(255, 190, 120, 0.22), transparent 60%),
+    radial-gradient(
+      ellipse at 50% 38%,
+      rgba(255, 190, 120, 0.22),
+      transparent 60%
+    ),
     linear-gradient(180deg, var(--dusk), #3a2618);
   color: var(--paper);
   padding: clamp(5.5rem, 8vw, 9rem) 0 clamp(4.5rem, 7vw, 7rem);
@@ -42,7 +46,8 @@
 }
 
 @keyframes monolithFloat {
-  0%, 100% {
+  0%,
+  100% {
     translate: 0 0;
   }
   50% {
@@ -51,9 +56,15 @@
 }
 
 @keyframes streamArrive {
-  0% { scale: 1; }
-  55% { scale: 1.06; }
-  100% { scale: 1; }
+  0% {
+    scale: 1;
+  }
+  55% {
+    scale: 1.06;
+  }
+  100% {
+    scale: 1;
+  }
 }
 
 .wood::after {
@@ -61,8 +72,19 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(43, 28, 18, 0.34), rgba(43, 28, 18, 0.06) 44%, rgba(43, 28, 18, 0.26)),
-    linear-gradient(180deg, rgba(43, 28, 18, 0.26), transparent 28%, transparent 72%, rgba(43, 28, 18, 0.38));
+    linear-gradient(
+      90deg,
+      rgba(43, 28, 18, 0.34),
+      rgba(43, 28, 18, 0.06) 44%,
+      rgba(43, 28, 18, 0.26)
+    ),
+    linear-gradient(
+      180deg,
+      rgba(43, 28, 18, 0.26),
+      transparent 28%,
+      transparent 72%,
+      rgba(43, 28, 18, 0.38)
+    );
 }
 
 .lightShaft {
@@ -70,7 +92,13 @@
   inset: -20% -10% auto -30%;
   height: 80%;
   z-index: -2;
-  background: linear-gradient(104deg, transparent 16%, rgba(255, 228, 175, 0.1) 38%, rgba(255, 228, 175, 0.04) 47%, transparent 62%);
+  background: linear-gradient(
+    104deg,
+    transparent 16%,
+    rgba(255, 228, 175, 0.1) 38%,
+    rgba(255, 228, 175, 0.04) 47%,
+    transparent 62%
+  );
   filter: blur(10px);
   transform: rotate(-3deg);
   pointer-events: none;
@@ -97,7 +125,10 @@
 
 .top {
   display: grid;
-  grid-template-columns: minmax(225px, 0.72fr) minmax(450px, 1.48fr) minmax(238px, 0.64fr);
+  grid-template-columns: minmax(225px, 0.72fr) minmax(450px, 1.48fr) minmax(
+      238px,
+      0.64fr
+    );
   gap: clamp(1.3rem, 2.4vw, 2.6rem);
   align-items: start;
 }
@@ -237,8 +268,24 @@
   right: 0;
   top: -8px;
   height: 18px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(255, 251, 241, 0.08));
-  clip-path: polygon(0 100%, 3% 22%, 14% 40%, 26% 8%, 42% 35%, 57% 12%, 71% 32%, 84% 6%, 96% 28%, 100% 0, 100% 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 251, 241, 0.08)
+  );
+  clip-path: polygon(
+    0 100%,
+    3% 22%,
+    14% 40%,
+    26% 8%,
+    42% 35%,
+    57% 12%,
+    71% 32%,
+    84% 6%,
+    96% 28%,
+    100% 0,
+    100% 100%
+  );
   opacity: 0.8;
 }
 
@@ -402,7 +449,9 @@
   border: 1px solid rgba(58, 43, 28, 0.12);
   box-shadow: 0 12px 18px -14px rgba(40, 26, 15, 0.5);
   transform: rotate(0.4deg);
-  transition: transform 240ms var(--ease), box-shadow 240ms var(--ease);
+  transition:
+    transform 240ms var(--ease),
+    box-shadow 240ms var(--ease);
 }
 
 .artifact:nth-child(2) {
@@ -673,7 +722,9 @@
   flex: 1 0 215px;
   height: 215px;
   margin-top: 0.5rem;
-  transition: --tilt 900ms var(--ease-in-out), --tilt-x 900ms var(--ease-in-out);
+  transition:
+    --tilt 900ms var(--ease-in-out),
+    --tilt-x 900ms var(--ease-in-out);
 }
 
 .streams {
@@ -722,9 +773,18 @@
   top: 49%;
   width: 64px;
   height: 92px;
-  transform: translate(-50%, -50%) perspective(430px) rotateX(calc(-8deg + var(--tilt-x, 0deg))) rotateY(var(--tilt)) rotateZ(2deg);
-  background:
-    linear-gradient(102deg, #78552f 0%, #c4a269 22%, #e8d1a0 38%, #b88e56 58%, #88663e 78%, #5b4027 100%);
+  transform: translate(-50%, -50%) perspective(430px)
+    rotateX(calc(-8deg + var(--tilt-x, 0deg))) rotateY(var(--tilt))
+    rotateZ(2deg);
+  background: linear-gradient(
+    102deg,
+    #78552f 0%,
+    #c4a269 22%,
+    #e8d1a0 38%,
+    #b88e56 58%,
+    #88663e 78%,
+    #5b4027 100%
+  );
   border-radius: 2px 5px 4px 2px;
   transform-origin: 50% 70%;
   box-shadow:
@@ -1050,7 +1110,9 @@
   box-shadow:
     0 24px 38px -24px rgba(25, 15, 8, 0.6),
     0 1px 0 rgba(255, 255, 255, 0.7) inset;
-  transition: transform 260ms var(--ease-out), box-shadow 260ms var(--ease-out);
+  transition:
+    transform 260ms var(--ease-out),
+    box-shadow 260ms var(--ease-out);
 }
 
 .recordBar:hover {
@@ -1104,12 +1166,24 @@
   min-width: 0;
 }
 
-.recordDecision { grid-area: decision; }
-.recordContext { grid-area: context; }
-.recordEvidence { grid-area: evidence; }
-.recordConsequence { grid-area: consequence; }
-.recordOwner { grid-area: owner; }
-.recordReview { grid-area: review; }
+.recordDecision {
+  grid-area: decision;
+}
+.recordContext {
+  grid-area: context;
+}
+.recordEvidence {
+  grid-area: evidence;
+}
+.recordConsequence {
+  grid-area: consequence;
+}
+.recordOwner {
+  grid-area: owner;
+}
+.recordReview {
+  grid-area: review;
+}
 
 .recordFields > div {
   min-width: 0;
@@ -1168,12 +1242,24 @@
   animation: recordWrite 520ms var(--ease-out) both;
 }
 
-.section[data-revealed="true"] .recordDecision dd { animation-delay: 760ms; }
-.section[data-revealed="true"] .recordEvidence dd { animation-delay: 940ms; }
-.section[data-revealed="true"] .recordOwner dd { animation-delay: 1120ms; }
-.section[data-revealed="true"] .recordContext dd { animation-delay: 1300ms; }
-.section[data-revealed="true"] .recordConsequence dd { animation-delay: 1480ms; }
-.section[data-revealed="true"] .recordReview dd { animation-delay: 1660ms; }
+.section[data-revealed="true"] .recordDecision dd {
+  animation-delay: 760ms;
+}
+.section[data-revealed="true"] .recordEvidence dd {
+  animation-delay: 940ms;
+}
+.section[data-revealed="true"] .recordOwner dd {
+  animation-delay: 1120ms;
+}
+.section[data-revealed="true"] .recordContext dd {
+  animation-delay: 1300ms;
+}
+.section[data-revealed="true"] .recordConsequence dd {
+  animation-delay: 1480ms;
+}
+.section[data-revealed="true"] .recordReview dd {
+  animation-delay: 1660ms;
+}
 
 .section[data-revealed="true"] .writtenStamp {
   animation: stampIn 240ms var(--ease-spring) 2480ms both;
@@ -1191,13 +1277,25 @@
 }
 
 @keyframes recordWrite {
-  from { opacity: 0; clip-path: inset(0 100% 0 0); }
-  to { opacity: 1; clip-path: inset(0); }
+  from {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0);
+  }
 }
 
 @keyframes stampIn {
-  from { opacity: 0; transform: rotate(-6deg) scale(1.25); }
-  to { opacity: 0.9; transform: rotate(-6deg) scale(1); }
+  from {
+    opacity: 0;
+    transform: rotate(-6deg) scale(1.25);
+  }
+  to {
+    opacity: 0.9;
+    transform: rotate(-6deg) scale(1);
+  }
 }
 
 .copyRecord {
@@ -1388,8 +1486,14 @@
 }
 
 @keyframes recordSettle {
-  from { opacity: 0.75; translate: 0 6px; }
-  to { opacity: 1; translate: 0 0; }
+  from {
+    opacity: 0.75;
+    translate: 0 6px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1636,5 +1740,104 @@
 
   .switchButton {
     min-width: 100%;
+  }
+}
+
+.sprint {
+  border-top: 3px solid var(--brass-light);
+  box-shadow: 0 12px 24px #100b0724;
+}
+.sprintTitle {
+  font-size: 1.2rem;
+}
+.check {
+  min-height: 44px;
+}
+.sprintNote {
+  color: var(--ink-soft);
+}
+@media (max-width: 767px) {
+  .section {
+    padding: 48px 0;
+  }
+  .wood {
+    filter: none;
+    opacity: 0.24;
+    transform: none;
+    background-image: linear-gradient(155deg, #53361f, #251b12);
+  }
+  .lightShaft,
+  .plant,
+  .steam,
+  .monolithNote,
+  .monolithStage {
+    display: none;
+  }
+  .sheet,
+  .sprint,
+  .artifact {
+    transform: none !important;
+    box-shadow: 0 8px 20px #0002;
+  }
+  .introCopy {
+    max-width: 48ch;
+  }
+  .title {
+    font-size: 2.6rem;
+    line-height: 1.05;
+  }
+  .title br {
+    display: none;
+  }
+  .switch {
+    grid-template-columns: 1fr;
+  }
+  .top,
+  .deskRow,
+  .pressureLayout,
+  .choices {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .streamButtons {
+    flex-wrap: wrap;
+  }
+  .sprint {
+    margin: 0;
+  }
+  .meters {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mobileStreams {
+  display: none;
+}
+@media (max-width: 767px) {
+  .mobileStreams {
+    display: grid;
+    gap: 8px;
+    margin: 16px 0;
+  }
+  .mobileStreams button {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #d2b07e66;
+    border-radius: 6px;
+    background: #352518;
+    color: var(--paper);
+    font: 500 0.875rem var(--font-body);
+    cursor: pointer;
+  }
+  .mobileStreams button > span {
+    font-size: 0.8125rem;
+    color: #d9c7a8;
+  }
+  .mobileStreams button[aria-pressed="true"] {
+    border-color: var(--brass-light);
+    background: #58412a;
   }
 }

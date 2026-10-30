@@ -112,7 +112,9 @@ export function useAssetReadiness({
     }
 
     const onSceneReady = (event: Event) => {
-      if ((event as CustomEvent<string>).detail === "hero") markHero();
+      const detail = (event as CustomEvent<string | { scene: string }>).detail;
+      if ((typeof detail === "string" ? detail : detail?.scene) === "hero")
+        markHero();
     };
     window.addEventListener("pmforge:landing-scene-ready", onSceneReady);
 
@@ -123,6 +125,7 @@ export function useAssetReadiness({
     heroTimer = window.setTimeout(() => {
       if (cancelled || milestonesRef.current.hero) return;
       setHeroUnavailable(true);
+      window.dispatchEvent(new Event("pmforge:hero-unavailable"));
       mark("hero");
     }, heroTimeout);
 

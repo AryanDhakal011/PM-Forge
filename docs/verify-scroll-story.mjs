@@ -164,16 +164,15 @@ try {
         run.projectWritten = await evaluate(`document.getElementById('decision-record').dataset.written`);
       }
       if (id === 'interview') {
-        await evaluate(`Array.from(document.querySelectorAll('#interview button')).find(b=>b.textContent.includes('Type'))?.click()`);
-        await wait(1150);
-        run.interviewLive = await evaluate(`document.querySelector('#interview-card').dataset.phase`);
-        await evaluate(`(() => {const field=document.getElementById('interview-answer');if(!field)throw Error('Missing answer field');
-          const setter=Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype,'value').set;
-          setter.call(field,'I would first segment the mobile activation drop by Android version and cohort. We should compare conversion against the baseline, interview affected users and test a small workaround. Prioritize the highest impact option with an engineering effort estimate. Measure activation and retention with an error rate guardrail, then review the experiment in one week.');field.dispatchEvent(new Event('input',{bubbles:true}));})()`);
-        await wait(150);
-        await evaluate(`Array.from(document.querySelectorAll('#interview button')).find(b=>b.textContent.includes('feedback')&&b.type==='button'&&!b.disabled)?.click()`);
-        await wait(600);
-        run.interviewAfter = await evaluate(`({phase:document.querySelector('#interview-card').dataset.phase,feedback:!!document.getElementById('interview-feedback'),timer:document.querySelector('[role="timer"]').textContent})`);
+        const demoClick = async (text) => { await evaluate(`Array.from(document.querySelectorAll('#interview button')).find(b=>b.textContent.includes(${JSON.stringify(text)})&&!b.disabled).click()`); await wait(180); };
+        await demoClick('Try the decision preview');
+        await demoClick('Did sign-ups fall');
+        await demoClick('Inspect the evidence');
+        await evaluate(`document.querySelector('#interview details').open=true`); await wait(250);
+        await demoClick('Defend a call');
+        await evaluate(`document.querySelector('[aria-label="Decision direction"] button').click();document.querySelector('#interview input[type="checkbox"]').click()`); await wait(200);
+        await demoClick('Review my recorded choices');
+        run.interviewAfter = await evaluate(`({phase:document.querySelector('#interview-card').dataset.phase,feedback:!!document.getElementById('interview-feedback'),timer:document.querySelector('#interview [role="timer"]').textContent,checks:document.querySelectorAll('[data-preview-check]').length})`);
         await shot(`${config.name}-interview-feedback`);
       }
     }

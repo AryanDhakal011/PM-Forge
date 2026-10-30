@@ -66,8 +66,7 @@ function measureGeometry(compact: boolean): Geometry {
 
   const canvas = document.querySelector<HTMLCanvasElement>("#hero canvas");
   const target: Element | null =
-    canvas ??
-    document.querySelector<HTMLElement>("#hero [role='img']");
+    canvas ?? document.querySelector<HTMLElement>("#hero [role='img']");
   if (target) {
     const rect = target.getBoundingClientRect();
     if (rect.width > 0 && rect.height > 0) {
@@ -83,7 +82,9 @@ function measureGeometry(compact: boolean): Geometry {
     x,
     y,
     dropY: Math.max(56, Math.min(y - 80, height * 0.16)),
-    radius: Math.hypot(Math.max(x, width - x), Math.max(y, height - y)) + (compact ? 8 : 16),
+    radius:
+      Math.hypot(Math.max(x, width - x), Math.max(y, height - y)) +
+      (compact ? 8 : 16),
   };
 }
 
@@ -99,7 +100,10 @@ function deviceQuality(): LoaderQuality {
     if (cores <= LOADER_DEVICE.lowCores || memory <= LOADER_DEVICE.lowMemory) {
       return "low";
     }
-    if (cores <= LOADER_DEVICE.mediumCores || memory <= LOADER_DEVICE.mediumMemory) {
+    if (
+      cores <= LOADER_DEVICE.mediumCores ||
+      memory <= LOADER_DEVICE.mediumMemory
+    ) {
       return "medium";
     }
     return "high";
@@ -108,10 +112,7 @@ function deviceQuality(): LoaderQuality {
   }
 }
 
-function lowerTier(
-  current: LoaderQuality,
-  next: LoaderQuality,
-): LoaderQuality {
+function lowerTier(current: LoaderQuality, next: LoaderQuality): LoaderQuality {
   const rank: Record<LoaderQuality, number> = {
     low: 0,
     medium: 1,
@@ -169,11 +170,8 @@ export function LoaderOverlay() {
     const deepLink = Boolean(
       window.location.hash && window.location.hash !== "#top",
     );
-    let variant: LoaderVariant = reduced || deepLink
-      ? "fade"
-      : hasSeenLoader()
-        ? "repeat"
-        : "full";
+    let variant: LoaderVariant =
+      reduced || deepLink ? "fade" : hasSeenLoader() ? "repeat" : "full";
 
     let quality: LoaderQuality = reduced ? "reduced" : deviceQuality();
     if (devParam === "low") quality = "low";
@@ -186,6 +184,7 @@ export function LoaderOverlay() {
     let holdDone = false;
     let holdCall: gsap.core.Tween | null = null;
     let maxCall: gsap.core.Tween | null = null;
+    let deadlineTimer = 0;
     const geometryRef = { current: measureGeometry(compactRef.current) };
 
     // Expose enough state for local QA without shipping any of it.
@@ -209,8 +208,6 @@ export function LoaderOverlay() {
       main?.removeAttribute("inert");
       header?.removeAttribute("inert");
       body.removeAttribute("aria-busy");
-      html.dataset.loaderDone = "true";
-      window.dispatchEvent(new Event("pmforge:loader-done"));
       setAnnouncement("PMForge ready");
     };
 
@@ -225,6 +222,7 @@ export function LoaderOverlay() {
       holdCall?.kill();
       maxCall?.kill();
       reveal();
+      window.clearTimeout(deadlineTimer);
       timelineRef.current?.kill();
       timelineRef.current = null;
       detachSkip();
@@ -519,6 +517,23 @@ export function LoaderOverlay() {
     };
     window.addEventListener("pmforge:landing-scene-ready", onSceneReady);
 
+    // GSAP's animation clock can pause or smooth a long shader compile. The
+    // maximum loading budget is wall-clock time, so it needs a native timer.
+    const onDeadline = () => {
+      if (html.dataset.heroSceneReady !== "true") {
+        window.dispatchEvent(new Event("pmforge:hero-unavailable"));
+      }
+      finish();
+    };
+    window.addEventListener("pmforge:loader-timeout", onDeadline);
+    if (html.classList.contains("loader-failed")) onDeadline();
+    else if (devParam !== "hold") {
+      deadlineTimer = window.setTimeout(
+        onDeadline,
+        Math.max(0, LOADER_TIMING.hardMax * 1000 - performance.now()),
+      );
+    }
+
     if (debug) {
       (window as Window & { __pmLoader?: unknown }).__pmLoader = debug;
     }
@@ -527,6 +542,8 @@ export function LoaderOverlay() {
       active = false;
       holdCall?.kill();
       maxCall?.kill();
+      window.clearTimeout(deadlineTimer);
+      window.removeEventListener("pmforge:loader-timeout", onDeadline);
       window.cancelAnimationFrame(probeRaf);
       timelineRef.current?.kill();
       timelineRef.current = null;
@@ -555,6 +572,24 @@ export function LoaderOverlay() {
     // a mount-once effect because it owns the first paint.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    if (!gone) return;
+    // Publish readiness after React removes the veil and its scroll-lock
+    // styles have painted. Measuring pinned sections mid-reveal makes the
+    // first gesture compete with the loader's final layout change.
+    let second = 0;
+    const first = requestAnimationFrame(() => {
+      second = requestAnimationFrame(() => {
+        document.documentElement.dataset.loaderDone = "true";
+        window.dispatchEvent(new Event("pmforge:loader-done"));
+      });
+    });
+    return () => {
+      cancelAnimationFrame(first);
+      cancelAnimationFrame(second);
+    };
+  }, [gone]);
 
   if (gone) return null;
 
@@ -593,7 +628,11 @@ export function LoaderOverlay() {
           />
         ))}
 
-        <circle ref={splashRef} className={styles.splash} data-loader-splash="" />
+        <circle
+          ref={splashRef}
+          className={styles.splash}
+          data-loader-splash=""
+        />
 
         {Array.from({ length: LOADER_DROPLETS }, (_, index) => (
           <circle
@@ -615,7 +654,12 @@ export function LoaderOverlay() {
         </g>
       </svg>
 
-      <div ref={metaRef} className={styles.meta} data-loader-meta="" aria-hidden="true">
+      <div
+        ref={metaRef}
+        className={styles.meta}
+        data-loader-meta=""
+        aria-hidden="true"
+      >
         <span className={styles.wordmark}>
           PM<span className={styles.wordmarkAccent}>Forge</span>
         </span>

@@ -222,6 +222,11 @@ export function ProjectGallery({
           <span>Pause between chapters</span>
         </div>
         <div className={s.galleryMap}>
+          <p>
+            {hover
+              ? projects.find((p) => p.id === hover)?.title
+              : "Choose a waypoint to find its mission."}
+          </p>
           <RouteMap
             selected={hover}
             states={Object.fromEntries(
@@ -300,6 +305,7 @@ export function ProjectGallery({
               key={p.id}
               className={s.card}
               id={`project-${p.id}`}
+              data-highlighted={hover === p.id}
               onMouseEnter={() => setHover(p.id)}
               onMouseLeave={() => setHover("")}
               onFocus={() => setHover(p.id)}

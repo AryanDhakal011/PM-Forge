@@ -338,7 +338,7 @@ export function RouteMap({
       ref={ref}
       className={s.routeMap}
       viewBox="0 0 480 180"
-      role="img"
+      role="group"
       aria-label="Twelve project waypoints. Open a project or jump to its card."
     >
       <path
@@ -367,6 +367,7 @@ export function RouteMap({
             aria-label={`${p.title}, ${states[p.id] === 3 ? "completed" : states[p.id] ? "in progress" : "not started"}`}
           >
             <title>{p.title}</title>
+            <circle cx={x} cy={y} r="22" fill="transparent" />
             <circle
               cx={x}
               cy={y}

@@ -1,0 +1,279 @@
+{
+  "at": "2026-10-30T09:24:41.253Z",
+  "checks": [
+    {
+      "label": "practice no horizontal overflow at 1920",
+      "pass": true,
+      "details": {
+        "width": 1920,
+        "page": "practice",
+        "main": {
+          "width": 1632,
+          "left": 284.390625
+        },
+        "gridWidth": 1478.40625,
+        "columns": 4,
+        "cardHeight": 308.6875,
+        "overflow": false,
+        "toolbarConnected": false
+      }
+    },
+    {
+      "label": "projects no horizontal overflow at 1920",
+      "pass": true,
+      "details": {
+        "width": 1920,
+        "page": "projects",
+        "main": {
+          "width": 1632,
+          "left": 284.390625
+        },
+        "gridWidth": 1478.40625,
+        "columns": 4,
+        "cardHeight": 482.1875,
+        "overflow": false,
+        "toolbarConnected": false
+      }
+    },
+    {
+      "label": "record no horizontal overflow at 1920",
+      "pass": true,
+      "details": {
+        "width": 1920,
+        "page": "record",
+        "main": {
+          "width": 1632,
+          "left": 284.390625
+        },
+        "gridWidth": 1632,
+        "columns": 2,
+        "cardHeight": 1001.015625,
+        "overflow": false,
+        "toolbarConnected": false
+      }
+    },
+    {
+      "label": "practice no horizontal overflow at 1440",
+      "pass": true,
+      "details": {
+        "width": 1440,
+        "page": "practice",
+        "main": {
+          "width": 1184.40625,
+          "left": 255.59375
+        },
+        "gridWidth": 1069.21875,
+        "columns": 3,
+        "cardHeight": 293.78125,
+        "overflow": false,
+        "toolbarConnected": false
+      }
+    },
+    {
+      "label": "projects no horizontal overflow at 1440",
+      "pass": true,
+      "details": {
+        "width": 1440,
+        "page": "projects",
+        "main": {
+          "width": 1184.40625,
+          "left": 255.59375
+        },
+        "gridWidth": 1069.21875,
+        "columns": 3,
+        "cardHeight": 445,
+        "overflow": false,
+        "toolbarConnected": false
+      }
+    },
+    {
+      "label": "record no horizontal overflow at 1440",
+      "pass": true,
+      "details": {
+        "width": 1440,
+        "page": "record",
+        "main": {
+          "width": 1184.40625,
+          "left": 255.59375
+        },
+        "gridWidth": 1184.40625,
+        "columns": 2,
+        "cardHeight": 983.578125,
+        "overflow": false,
+        "toolbarConnected": false
+      }
+    },
+    {
+      "label": "practice no horizontal overflow at 390",
+      "pass": true,
+      "details": {
+        "width": 417,
+        "page": "practice",
+        "main": {
+          "width": 390,
+          "left": 0
+        },
+        "gridWidth": 350,
+        "columns": 1,
+        "cardHeight": 259.640625,
+        "overflow": false,
+        "toolbarConnected": false
+      }
+    },
+    {
+      "label": "projects no horizontal overflow at 390",
+      "pass": true,
+      "details": {
+        "width": 390,
+        "page": "projects",
+        "main": {
+          "width": 390,
+          "left": 0
+        },
+        "gridWidth": 350,
+        "columns": 1,
+        "cardHeight": 420.71875,
+        "overflow": false,
+        "toolbarConnected": false
+      }
+    },
+    {
+      "label": "record no horizontal overflow at 390",
+      "pass": true,
+      "details": {
+        "width": 390,
+        "page": "record",
+        "main": {
+          "width": 390,
+          "left": 0
+        },
+        "gridWidth": 390,
+        "columns": 1,
+        "cardHeight": 1400.0625,
+        "overflow": false,
+        "toolbarConnected": false
+      }
+    }
+  ],
+  "errors": [],
+  "mode": "before",
+  "layouts": [
+    {
+      "width": 1920,
+      "page": "practice",
+      "main": {
+        "width": 1632,
+        "left": 284.390625
+      },
+      "gridWidth": 1478.40625,
+      "columns": 4,
+      "cardHeight": 308.6875,
+      "overflow": false,
+      "toolbarConnected": false
+    },
+    {
+      "width": 1920,
+      "page": "projects",
+      "main": {
+        "width": 1632,
+        "left": 284.390625
+      },
+      "gridWidth": 1478.40625,
+      "columns": 4,
+      "cardHeight": 482.1875,
+      "overflow": false,
+      "toolbarConnected": false
+    },
+    {
+      "width": 1920,
+      "page": "record",
+      "main": {
+        "width": 1632,
+        "left": 284.390625
+      },
+      "gridWidth": 1632,
+      "columns": 2,
+      "cardHeight": 1001.015625,
+      "overflow": false,
+      "toolbarConnected": false
+    },
+    {
+      "width": 1440,
+      "page": "practice",
+      "main": {
+        "width": 1184.40625,
+        "left": 255.59375
+      },
+      "gridWidth": 1069.21875,
+      "columns": 3,
+      "cardHeight": 293.78125,
+      "overflow": false,
+      "toolbarConnected": false
+    },
+    {
+      "width": 1440,
+      "page": "projects",
+      "main": {
+        "width": 1184.40625,
+        "left": 255.59375
+      },
+      "gridWidth": 1069.21875,
+      "columns": 3,
+      "cardHeight": 445,
+      "overflow": false,
+      "toolbarConnected": false
+    },
+    {
+      "width": 1440,
+      "page": "record",
+      "main": {
+        "width": 1184.40625,
+        "left": 255.59375
+      },
+      "gridWidth": 1184.40625,
+      "columns": 2,
+      "cardHeight": 983.578125,
+      "overflow": false,
+      "toolbarConnected": false
+    },
+    {
+      "width": 417,
+      "page": "practice",
+      "main": {
+        "width": 390,
+        "left": 0
+      },
+      "gridWidth": 350,
+      "columns": 1,
+      "cardHeight": 259.640625,
+      "overflow": false,
+      "toolbarConnected": false
+    },
+    {
+      "width": 390,
+      "page": "projects",
+      "main": {
+        "width": 390,
+        "left": 0
+      },
+      "gridWidth": 350,
+      "columns": 1,
+      "cardHeight": 420.71875,
+      "overflow": false,
+      "toolbarConnected": false
+    },
+    {
+      "width": 390,
+      "page": "record",
+      "main": {
+        "width": 390,
+        "left": 0
+      },
+      "gridWidth": 390,
+      "columns": 1,
+      "cardHeight": 1400.0625,
+      "overflow": false,
+      "toolbarConnected": false
+    }
+  ]
+}

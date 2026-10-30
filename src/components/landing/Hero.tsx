@@ -45,12 +45,29 @@ export function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
   const [justified, setJustified] = useState(false);
   const [inspected, setInspected] = useState<Inspected>(null);
+  const [mobile, setMobile] = useState<boolean | null>(null);
+  const [sceneFailed, setSceneFailed] = useState(false);
   const router = useRouter();
   const markHeroReady = useCallback(() => markLandingSceneReady("hero"), []);
 
   useEffect(() => {
-    if (webgl === false) markHeroReady();
-  }, [markHeroReady, webgl]);
+    const media = matchMedia("(max-width:767px)");
+    const update = () => setMobile(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
+  useEffect(() => {
+    const fallback = () => setSceneFailed(true);
+    if (document.documentElement.classList.contains("loader-failed"))
+      fallback();
+    window.addEventListener("pmforge:hero-unavailable", fallback);
+    return () =>
+      window.removeEventListener("pmforge:hero-unavailable", fallback);
+  }, []);
+  useEffect(() => {
+    if (webgl === false || mobile === true || sceneFailed) markHeroReady();
+  }, [markHeroReady, webgl, mobile, sceneFailed]);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -159,7 +176,7 @@ export function Hero() {
           </p>
 
           <div className={styles.canvasWrap}>
-            {webgl === false ? (
+            {webgl === false || mobile !== false || sceneFailed ? (
               <HeroPoster note />
             ) : (
               <HeroScene

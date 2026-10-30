@@ -28,8 +28,12 @@ window.setTimeout(function(){
 if(html.getAttribute("data-loader-done")==="true")return;
 html.classList.add("loader-failed");
 html.classList.remove("is-loading");
-if(document.body)document.body.classList.remove("no-scroll");
+html.setAttribute("data-loader-done","true");
+if(document.body){document.body.classList.remove("no-scroll");document.body.removeAttribute("aria-busy");}
 var nodes=document.querySelectorAll("[inert]");
 for(var i=0;i<nodes.length;i++){nodes[i].removeAttribute("inert");}
+window.dispatchEvent(new Event("pmforge:hero-unavailable"));
+window.dispatchEvent(new Event("pmforge:loader-timeout"));
+window.dispatchEvent(new Event("pmforge:loader-done"));
 },${WATCHDOG_MS});
 }catch(e){}})();`;

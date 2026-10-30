@@ -11,6 +11,7 @@ import { Footer } from "./Footer";
 import { LoaderOverlay } from "./LoaderOverlay";
 import { PencilCursor } from "@/components/ui/PencilCursor";
 import { PerformanceReport } from "@/components/dev/PerformanceReport";
+import { getQuestion } from "@/lib/product/content";
 
 export function LandingPage() {
   return (
@@ -50,7 +51,7 @@ export function LandingPage() {
           tone="warm"
         />
 
-        <InterviewLab />
+        <InterviewLab scenario={getQuestion("RCA-E-1")!} />
         <CareerBoard />
 
         <DecisionBlueprint />

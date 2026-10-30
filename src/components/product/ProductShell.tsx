@@ -424,6 +424,11 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
           id="main"
           ref={content}
           className={isRun ? undefined : styles.content}
+          data-density={
+            pathname === "/app/practice" || pathname === "/app/projects"
+              ? "wide"
+              : "reading"
+          }
           tabIndex={-1}
         >
           {!isRun &&
@@ -436,7 +441,9 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
                     ? "/app/projects"
                     : pathname.includes("/practice/")
                       ? "/app/practice"
-                      : "/app"
+                      : pathname.includes("/portfolio/")
+                        ? "/app/portfolio"
+                        : "/app"
                 }
                 className={`${styles.textButton} ${styles.small}`}
                 style={{ minHeight: 30, marginBottom: 15 }}
@@ -447,7 +454,9 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
                   ? "projects"
                   : pathname.includes("/practice/")
                     ? "practice"
-                    : "Home"}
+                    : pathname.includes("/portfolio/")
+                      ? "portfolio"
+                      : "Today"}
               </Link>
             )}
           {children}

@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-30T00:32:07.197Z",
+  "at": "2026-10-30T09:50:28.148Z",
   "checks": [
     {
       "label": "Signal product CTA remains visible at the desktop pin threshold",
@@ -25,7 +25,7 @@
       "details": {
         "idleDrawsOver2s": 0,
         "canvases": 1,
-        "jsEncodedBytes": 2452241
+        "jsEncodedBytes": 746625
       }
     },
     {
@@ -131,7 +131,7 @@
   },
   "signalLayout": {
     "scrollY": 3979,
-    "htmlClass": "js-ready loader-failed lenis lenis-scrolling",
+    "htmlClass": "js-ready lenis lenis-scrolling",
     "attrs": {},
     "chain": [
       {
@@ -168,34 +168,34 @@
         "overflow": "visible",
         "transform": "none",
         "top": -3979,
-        "height": 10819.25
+        "height": 10517.515625
       },
       {
         "tag": "BODY",
         "class": "",
         "position": "static",
-        "overflow": "clip visible",
+        "overflow": "hidden auto",
         "transform": "none",
         "top": -3979,
-        "height": 11636.171875
+        "height": 11223.28125
       },
       {
         "tag": "HTML",
-        "class": "js-ready loader-failed lenis lenis-scrolling",
+        "class": "js-ready lenis lenis-scrolling",
         "position": "static",
-        "overflow": "auto",
+        "overflow": "visible",
         "transform": "none",
         "top": -3979,
-        "height": 11636.171875
+        "height": 11223.28125
       }
     ]
   },
   "homePerformance": {
     "idleDrawsOver2s": 0,
     "canvases": 1,
-    "jsEncodedBytes": 2452241
+    "jsEncodedBytes": 746625
   },
-  "runPath": "/app/run/8d7de48a-9397-4379-8a99-45312942edb2",
+  "runPath": "/app/run/be9a1a7b-4a2f-4d1a-bfe6-c7a97acfd170",
   "api": {
     "me": {
       "user": null

@@ -566,6 +566,31 @@ export function ProjectsWorkbench() {
               ))}
             </div>
 
+            <div
+              className={styles.mobileStreams}
+              role="group"
+              aria-label="Stakeholder pulls"
+            >
+              {streamButtons.map((stream) => (
+                <button
+                  key={stream.index}
+                  type="button"
+                  aria-pressed={pinnedStream === stream.index}
+                  onClick={() =>
+                    setPinnedStream((current) =>
+                      current === stream.index ? null : stream.index,
+                    )
+                  }
+                >
+                  {stream.label}
+                  <span>
+                    {pinnedStream === stream.index
+                      ? "Selected"
+                      : "See the pressure"}
+                  </span>
+                </button>
+              ))}
+            </div>
             <p className={styles.monolithNote}>
               <Move3d size={12} strokeWidth={1.5} aria-hidden="true" />
               At rest, it leans toward the customer outcome. Pull a stream to

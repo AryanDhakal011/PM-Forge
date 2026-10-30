@@ -657,3 +657,132 @@
 .hero .heroCopy > div > a {
   color: #ede4cf;
 }
+
+/* One connected control surface, followed immediately by denser cards. */
+.toolbar {
+  padding: 16px;
+  border: 1px solid var(--p-line);
+  border-radius: 10px;
+  background: var(--p-panel);
+  box-shadow: 0 3px 12px #292b2405;
+  margin-bottom: 18px;
+}
+.searchRow {
+  gap: 12px;
+}
+.categoryFilters {
+  margin: 12px 0;
+  gap: 6px;
+}
+.categoryFilters button {
+  padding: 6px 10px;
+}
+.filterRow {
+  padding-top: 10px;
+  border-top: 1px solid var(--p-line);
+}
+.resultRow {
+  margin: 12px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--p-line);
+}
+.resultRow > div {
+  min-width: 200px;
+}
+.resultRow > div > button {
+  font-weight: 600;
+  border-color: var(--p-brass);
+  background: var(--p-soft);
+}
+.scenarios {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.scenarioTop {
+  padding: 16px 56px 0 16px;
+}
+.cardLink {
+  padding: 14px 16px 16px;
+}
+.cardLink p {
+  margin: 10px 0 16px !important;
+  line-height: 1.4;
+}
+.cardLink footer {
+  padding-top: 12px;
+}
+.scenarioCard {
+  contain-intrinsic-size: auto 260px;
+}
+.scenarios[data-layout="list"] {
+  grid-template-columns: 1fr;
+}
+@media (max-width: 1279px) {
+  .scenarios {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 767px) {
+  .scenarios {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .toolbar {
+    position: static;
+    padding: 12px;
+  }
+  .resultRow {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .resultRow > div {
+    min-width: 180px;
+  }
+  .searchRow > label {
+    flex-basis: 100%;
+  }
+  .rooms {
+    grid-template-columns: 1fr;
+  }
+  .roomCard {
+    min-height: 0;
+  }
+  .cardLink footer {
+    align-items: center;
+  }
+}
+
+.searchRow > label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  min-width: 0;
+  border: 1px solid var(--p-line);
+  border-radius: 6px;
+  padding: 0 12px;
+  background: var(--p-bg);
+}
+.searchRow > label > svg {
+  position: static;
+  flex: none;
+  color: var(--p-muted);
+}
+.searchRow > label > input {
+  width: 100%;
+  min-width: 0;
+  flex: 1;
+  min-height: 44px;
+  padding: 10px 0 !important;
+  border: 0;
+  background: transparent;
+  color: var(--p-ink);
+  outline: none;
+}
+.searchRow > label:focus-within {
+  outline: 2px solid var(--p-brass);
+  outline-offset: 2px;
+}
+.searchRow > label > kbd {
+  color: var(--p-muted);
+  flex: none;
+}

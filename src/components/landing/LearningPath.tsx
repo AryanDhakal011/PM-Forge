@@ -197,7 +197,7 @@ export function LearningPath() {
     >
       <div className={styles.inner}>
         <div className={styles.copy}>
-          <p className="eyebrow">Learning path</p>
+          <p className="eyebrow">Reference shelf</p>
           <h2 id="learning-title" className={`${styles.title} display`}>
             Pressure test logic.
           </h2>
@@ -252,10 +252,13 @@ export function LearningPath() {
 
         <div className={styles.listCol}>
           <div className={styles.listHead}>
-            <span>Curriculum</span>
+            <span>Reference previews</span>
             <span>01 — 10</span>
           </div>
-          <ul className={styles.list} aria-label="Ten learning modules">
+          <ul
+            className={styles.list}
+            aria-label="Ten decision-framework previews"
+          >
             {modules.map((module, index) => {
               const state = states[index];
               return (
@@ -316,7 +319,7 @@ export function LearningPath() {
           <div
             className={styles.legend}
             role="group"
-            aria-label="Module progress legend"
+            aria-label="Preview reading progress"
           >
             <span>
               <Circle size={12} strokeWidth={1.5} aria-hidden="true" /> Not
@@ -331,9 +334,9 @@ export function LearningPath() {
             </span>
           </div>
           <p className={styles.listFoot}>
-            Each module ends with a decision you have to defend, not a quiz you
-            can guess. Progress shown here is read from this browser. The
-            decision-frame illustration is illustrative, not module scoring.
+            Ten reference previews. Hover a node or a row to find its matching
+            topic, then open a short reading and a related scenario. Reading
+            progress stays on this browser.
           </p>
         </div>
       </div>

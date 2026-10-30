@@ -504,6 +504,27 @@ export function LibraryView({
     },
     [profile?.id, router, saved],
   );
+  const hasFilters =
+    view !== "saved" ||
+    bookmarks.filter((b) => !b.questionId.startsWith("project:")).length >= 5;
+  const resultControls = (
+    <div className={s.resultRow}>
+      <p role="status" aria-live="polite">
+        {filtered.length} {filtered.length === 1 ? "scenario" : "scenarios"}
+      </p>
+      <Select
+        label="Sort scenarios"
+        value={sort}
+        onChange={(v) => update("sort", v)}
+        options={[
+          { value: "recommended", label: "Recommended" },
+          { value: "level", label: "By level" },
+          { value: "duration", label: "Shortest first" },
+          { value: "content", label: "Content order" },
+        ]}
+      />
+    </div>
+  );
   const filters = (
     <>
       <div className={s.categoryFilters} role="group" aria-label="Categories">
@@ -610,9 +631,7 @@ export function LibraryView({
         <ProjectActivity mode="bookmarks" />
       ) : (
         <>
-          {(view !== "saved" ||
-            bookmarks.filter((b) => !b.questionId.startsWith("project:"))
-              .length >= 5) && (
+          {hasFilters && (
             <section className={s.toolbar} aria-label="Filter scenarios">
               <div className={s.searchRow}>
                 <label className={u.searchField}>
@@ -650,25 +669,10 @@ export function LibraryView({
                 </div>
               </div>
               <div className={s.desktopFilters}>{filters}</div>
+              {resultControls}
             </section>
           )}
-          <div className={s.resultRow}>
-            <p role="status" aria-live="polite">
-              {filtered.length}{" "}
-              {filtered.length === 1 ? "scenario" : "scenarios"}
-            </p>
-            <Select
-              label="Sort scenarios"
-              value={sort}
-              onChange={(v) => update("sort", v)}
-              options={[
-                { value: "recommended", label: "Recommended" },
-                { value: "level", label: "By level" },
-                { value: "duration", label: "Shortest first" },
-                { value: "content", label: "Content order" },
-              ]}
-            />
-          </div>
+          {!hasFilters && resultControls}
           {(categories.length > 0 || level || length) && (
             <div className={s.activeFilters}>
               {categories.map((id) => (

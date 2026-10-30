@@ -2854,3 +2854,151 @@ button.evidenceCard {
 .nav a {
   position: relative;
 }
+
+/* A shared, bounded shell; grids use the wider variant, reading stays calm. */
+.content {
+  width: 100%;
+  max-width: 1264px;
+  padding: 28px 32px 64px;
+}
+.content[data-density="wide"] {
+  max-width: 1384px;
+}
+.topbar {
+  padding-inline: 32px;
+}
+.recordSheet {
+  padding: 24px;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+.recordForm {
+  display: grid;
+  gap: 16px;
+}
+.recordSheet .formGrid {
+  gap: 16px;
+}
+.recordSheet .field {
+  gap: 6px;
+}
+.recordSheet textarea {
+  min-height: 88px;
+  padding: 10px 12px;
+  line-height: 1.5;
+}
+.recordSheet .wide textarea {
+  min-height: 96px;
+}
+.recordContext {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  border-bottom: 1px solid var(--p-line);
+  padding-bottom: 14px;
+  margin-bottom: 20px;
+  font-size: 0.8125rem;
+  color: var(--p-muted);
+}
+.recordContext > span {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.recordContext a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.recordSheet .field > input {
+  min-height: 44px;
+}
+@media (max-width: 1024px) {
+  .content {
+    padding-inline: 24px;
+  }
+  .topbar {
+    padding-inline: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .content {
+    padding: 24px 20px calc(88px + env(safe-area-inset-bottom));
+  }
+  .grid2,
+  .grid3,
+  .formGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .formGrid .wide {
+    grid-column: auto;
+  }
+  .recordSheet {
+    padding: 20px 16px;
+  }
+  .recordContext {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .recordSheet textarea {
+    min-height: 88px;
+  }
+}
+@media print {
+  .content {
+    max-width: none;
+    padding: 0;
+  }
+  .recordContext a {
+    display: none;
+  }
+}
+
+.tabs {
+  flex-wrap: wrap;
+  gap: 4px 12px;
+}
+.tabs button {
+  white-space: normal;
+}
+@media (max-width: 767px) {
+  .tabs[aria-label="Practice views"] {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 4px;
+  }
+  .tabs[aria-label="Practice views"] button {
+    padding: 8px 4px;
+    font-size: 0.8125rem;
+    line-height: 1.35;
+    min-width: 0;
+  }
+}
+@media (max-width: 479px) {
+  .tabs[aria-label="Practice views"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.recordHeading {
+  min-height: 0;
+  margin-bottom: 20px;
+}
+.recordSheet textarea {
+  height: 76px;
+  min-height: 72px;
+}
+.recordSheet .wide textarea {
+  height: 88px;
+  min-height: 88px;
+}
+.recordSheet textarea::placeholder {
+  color: var(--p-muted);
+  opacity: 1;
+}
+.recordSheet .formGrid {
+  gap: 14px 16px;
+}
