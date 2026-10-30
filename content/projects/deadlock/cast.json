@@ -1,0 +1,44 @@
+[
+  {
+    "id": "Mara",
+    "name": "Mara Okafor",
+    "role": "Head of Engineering",
+    "voice": "af_nicole",
+    "color": "#c9a24a"
+  },
+  {
+    "id": "Dev",
+    "name": "Dev Raman",
+    "role": "Robotics Lead",
+    "voice": "am_michael",
+    "color": "#ff9a5b"
+  },
+  {
+    "id": "Ines",
+    "name": "Ines Calder",
+    "role": "Software & Safety Lead",
+    "voice": "bf_emma",
+    "color": "#83c5be"
+  },
+  {
+    "id": "Theo",
+    "name": "Theo Lindqvist",
+    "role": "Northgate Ventures",
+    "voice": "af_sarah",
+    "color": "#c9a24a"
+  },
+  {
+    "id": "Nadia",
+    "name": "Nadia Brandt",
+    "role": "Meridian Safety Labs",
+    "voice": "bf_isabella",
+    "color": "#e9efea"
+  },
+  {
+    "id": "CONTROL",
+    "name": "CONTROL",
+    "role": "Facility system",
+    "voice": "af_heart",
+    "color": "#e9efea"
+  }
+]

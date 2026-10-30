@@ -14,4 +14,21 @@ jobs:
       - run: npm ci --legacy-peer-deps
       - run: npm run typecheck
       - run: npm test
+      - run: npm run test:deadlock
       - run: npm run build
+      - run: node scripts/deadlock-budgets.mjs
+  deadlock-balance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --legacy-peer-deps
+      - run: npm run deadlock:sim
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: deadlock-balance-report
+          path: docs/deadlock-verification/simulation.json

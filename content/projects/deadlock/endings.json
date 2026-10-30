@@ -1,0 +1,51 @@
+[
+  {
+    "id": "QUIET ROOM",
+    "lines": [
+      "EN-01",
+      "EN-02",
+      "EN-03"
+    ]
+  },
+  {
+    "id": "FRACTURE",
+    "lines": [
+      "EN-F1",
+      "EN-F2",
+      "EN-F3"
+    ]
+  },
+  {
+    "id": "SHARED GROUND",
+    "lines": [
+      "EN-G1",
+      "EN-G2",
+      "EN-G3",
+      "EN-G4"
+    ]
+  },
+  {
+    "id": "STANDING GUARD",
+    "lines": [
+      "EN-W1",
+      "EN-W2",
+      "EN-W3",
+      "EN-W4"
+    ]
+  },
+  {
+    "id": "BABYSITTER",
+    "lines": [
+      "EN-B1",
+      "EN-B2"
+    ]
+  },
+  {
+    "id": "STEADY HANDS",
+    "lines": [
+      "EN-S1",
+      "EN-S2",
+      "EN-S3"
+    ]
+  }
+]

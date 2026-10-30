@@ -1,0 +1,58 @@
+{
+  "speed": [
+    {
+      "value": 0.5,
+      "label": "0.5 m/s",
+      "weeks": 0
+    },
+    {
+      "value": 0.8,
+      "label": "0.8 m/s",
+      "weeks": 0
+    },
+    {
+      "value": 1,
+      "label": "1.0 + curtain",
+      "weeks": 1
+    },
+    {
+      "value": 1.2,
+      "label": "1.2 + curtain",
+      "weeks": 1
+    }
+  ],
+  "recovery": [
+    {
+      "value": "manual",
+      "label": "MANUAL",
+      "weeks": 0
+    },
+    {
+      "value": "assisted",
+      "label": "ASSISTED · one tap",
+      "weeks": 1
+    },
+    {
+      "value": "auto",
+      "label": "AUTO",
+      "weeks": 2
+    }
+  ],
+  "learning": [
+    {
+      "value": "always",
+      "label": "ALWAYS CONFIRM",
+      "weeks": 0
+    },
+    {
+      "value": "uncertain",
+      "label": "WHEN UNCERTAIN",
+      "weeks": 1
+    },
+    {
+      "value": "never",
+      "label": "NEVER CONFIRM",
+      "weeks": -1
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+[
+  {
+    "id": "D1",
+    "title": "THROUGHPUT",
+    "callout": "The cap costs 6%.",
+    "bars": [
+      {
+        "label": "1.2 m/s",
+        "value": 100
+      },
+      {
+        "label": "1.0 m/s",
+        "value": 98
+      },
+      {
+        "label": "0.8 m/s",
+        "value": 96
+      },
+      {
+        "label": "0.5 m/s",
+        "value": 94
+      }
+    ],
+    "unit": "% throughput",
+    "lines": [
+      "S-D1-DEV",
+      "S-D1-INES"
+    ]
+  },
+  {
+    "id": "D2",
+    "title": "LEARNING",
+    "callout": "A shared blind spot.",
+    "bars": [
+      {
+        "label": "Unattended",
+        "value": 81,
+        "note": "No prompts"
+      },
+      {
+        "label": "Always confirm",
+        "value": 96,
+        "note": "31% of picks interrupted"
+      },
+      {
+        "label": "When uncertain",
+        "value": 94,
+        "note": "9% of picks interrupted"
+      }
+    ],
+    "unit": "% accuracy",
+    "lines": [
+      "S-D2-DEV",
+      "S-D2-INES",
+      "S-D2-MARA"
+    ]
+  },
+  {
+    "id": "D3",
+    "title": "SAFETY MARGIN",
+    "callout": "Stopping target: 0.40 m.",
+    "bars": [
+      {
+        "label": "0.5 m/s",
+        "value": 10,
+        "note": "0.10 m — OK"
+      },
+      {
+        "label": "1.0 + curtain",
+        "value": 22,
+        "note": "0.22 m — OK"
+      },
+      {
+        "label": "1.2 + curtain",
+        "value": 46,
+        "note": "0.46 m — FAIL"
+      }
+    ],
+    "unit": "cm stopping distance",
+    "lines": [
+      "S-D3-INES",
+      "S-D3-DEV"
+    ]
+  },
+  {
+    "id": "D4",
+    "title": "JAM RECOVERY",
+    "callout": "Calibration, not the interlock.",
+    "bars": [
+      {
+        "label": "Assisted",
+        "value": 88,
+        "note": "9 s · 0 unexpected moves"
+      },
+      {
+        "label": "Auto",
+        "value": 93,
+        "note": "2 / 30 moves without interlock; 0 with it"
+      }
+    ],
+    "unit": "% cleared",
+    "lines": [
+      "S-D4-DEV",
+      "S-D4-INES"
+    ]
+  }
+]

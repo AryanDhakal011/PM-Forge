@@ -1,0 +1,180 @@
+{
+  "lanes": [
+    {
+      "id": "speed",
+      "name": "SPEED",
+      "robotics": "Speed ramps to 1.2 m/s near people",
+      "software": "Speed cap 0.5 m/s within 1.5 m of people",
+      "rWeeks": 2,
+      "sWeeks": 1
+    },
+    {
+      "id": "recovery",
+      "name": "RECOVERY",
+      "robotics": "Self-recovery from jams, no e-stop",
+      "software": "Hardware e-stop + software interlock on every motion",
+      "rWeeks": 2,
+      "sWeeks": 2
+    },
+    {
+      "id": "learning",
+      "name": "LEARNING",
+      "robotics": "Learn new objects on the fly",
+      "software": "Operator confirms each new learned object",
+      "rWeeks": 3,
+      "sWeeks": 1
+    }
+  ],
+  "sockets": [
+    {
+      "id": "R",
+      "label": "ROBOTICS",
+      "ap": 0
+    },
+    {
+      "id": "S",
+      "label": "SOFTWARE",
+      "ap": 0
+    },
+    {
+      "id": "B",
+      "label": "BRIDGE",
+      "ap": 2
+    },
+    {
+      "id": "D",
+      "label": "DEFER BOTH",
+      "ap": 0
+    }
+  ],
+  "foundation": "Autonomous path planning, no operator",
+  "matrix": {
+    "E1": {
+      "speed": [
+        "S"
+      ],
+      "recovery": [
+        "R"
+      ],
+      "learning": [
+        "R"
+      ]
+    },
+    "E2": {
+      "speed": [
+        "S"
+      ],
+      "recovery": [
+        "S"
+      ],
+      "learning": []
+    },
+    "E3": {
+      "speed": [
+        "B"
+      ],
+      "recovery": [
+        "B"
+      ],
+      "learning": [
+        "B"
+      ]
+    },
+    "E4": {
+      "speed": [
+        "B",
+        "D"
+      ],
+      "recovery": [
+        "D"
+      ],
+      "learning": [
+        "B",
+        "D"
+      ]
+    },
+    "E5": {
+      "speed": [
+        "B"
+      ],
+      "recovery": [
+        "B"
+      ],
+      "learning": [
+        "B"
+      ]
+    }
+  },
+  "effects": {
+    "R": {
+      "rob": -8,
+      "sw": 14,
+      "ready": 5,
+      "align": -6,
+      "runway": 0,
+      "ap": 0
+    },
+    "S": {
+      "rob": 14,
+      "sw": -8,
+      "ready": 2,
+      "align": -6,
+      "runway": 0,
+      "ap": 0
+    },
+    "B": {
+      "rob": -6,
+      "sw": -6,
+      "ready": 4,
+      "align": 9,
+      "runway": -1,
+      "ap": -2
+    },
+    "D": {
+      "rob": 4,
+      "sw": 4,
+      "ready": -6,
+      "align": -3,
+      "runway": 0,
+      "ap": 0
+    }
+  },
+  "assumptions": [
+    {
+      "id": "AR1",
+      "owner": "Dev",
+      "text": "A speed cap kills the demo",
+      "brokenBy": "D1"
+    },
+    {
+      "id": "AR2",
+      "owner": "Dev",
+      "text": "Unattended learning is accurate enough",
+      "brokenBy": "D2"
+    },
+    {
+      "id": "AR3",
+      "owner": "Dev",
+      "text": "The interlock is what jams the arm",
+      "brokenBy": "D4"
+    },
+    {
+      "id": "AS1",
+      "owner": "Ines",
+      "text": "Above 0.5 m/s near people is unsafe",
+      "brokenBy": "D3"
+    },
+    {
+      "id": "AS2",
+      "owner": "Ines",
+      "text": "Self-recovery can never be safe",
+      "brokenBy": "D4"
+    },
+    {
+      "id": "AS3",
+      "owner": "Ines",
+      "text": "Confirmation prompts cost nothing",
+      "brokenBy": "D2"
+    }
+  ]
+}

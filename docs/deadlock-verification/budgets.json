@@ -1,0 +1,161 @@
+{
+  "at": "2026-10-30T15:18:51.259Z",
+  "buildId": "mBmqUlDJZ3W1bGiCSz9ew",
+  "method": "gzip of the production Deadlock client-reference dependency set plus signature-identified lazy scene chunks. This is a component-boundary budget; unrelated Next runtime/bootstrap scripts are outside this measurement.",
+  "boundaryGzipBytes": 236728,
+  "totalBoundaryAndScenesGzipBytes": 266851,
+  "incrementalChapterGzipBytes": {
+    "chapter1": 11105,
+    "chapter2": 8773,
+    "chapter3": 3821,
+    "debrief": 6424
+  },
+  "fonts": [
+    {
+      "file": "barlow-condensed-latin-600-normal.woff2",
+      "bytes": 22308
+    },
+    {
+      "file": "ibm-plex-mono-latin-400-normal.woff2",
+      "bytes": 14708
+    }
+  ],
+  "imagePlateBytes": 0,
+  "recordedAudioBytes": 0,
+  "assetStatus": "Vector plates and procedural/device audio; final raster plates and recorded voices are not supplied.",
+  "files": [
+    {
+      "file": "/_next/static/chunks/05kfhvm3_-c6g.js",
+      "gzipBytes": 10983
+    },
+    {
+      "file": "/_next/static/chunks/3jkqjz_9k7bjm.js",
+      "gzipBytes": 9906
+    },
+    {
+      "file": "/_next/static/chunks/34k3wq8i73w1w.js",
+      "gzipBytes": 18096
+    },
+    {
+      "file": "/_next/static/chunks/2yhk9aeug-aqs.js",
+      "gzipBytes": 27118
+    },
+    {
+      "file": "/_next/static/chunks/3qx02_6--t5rb.js",
+      "gzipBytes": 198
+    },
+    {
+      "file": "/_next/static/chunks/2m0_zqka9ts1o.js",
+      "gzipBytes": 24106
+    },
+    {
+      "file": "/_next/static/chunks/3_-9h8kuy7735.js",
+      "gzipBytes": 8132
+    },
+    {
+      "file": "/_next/static/chunks/03eit8toff6dz.js",
+      "gzipBytes": 31576
+    },
+    {
+      "file": "/_next/static/chunks/38kogmg_8p45n.js",
+      "gzipBytes": 42003
+    },
+    {
+      "file": "/_next/static/chunks/0zoetdzyhnyl-.js",
+      "gzipBytes": 31108
+    },
+    {
+      "file": "/_next/static/chunks/1oda0-1p75ao8.js",
+      "gzipBytes": 440
+    },
+    {
+      "file": "/_next/static/chunks/3liur1inole_f.js",
+      "gzipBytes": 19932
+    },
+    {
+      "file": "/_next/static/chunks/1rfqf-481_40i.js",
+      "gzipBytes": 13130
+    },
+    {
+      "file": "/_next/static/chunks/00zmsxtookrxi.js",
+      "gzipBytes": 3258
+    },
+    {
+      "file": "/_next/static/chunks/4079upubnl9uf.js",
+      "gzipBytes": 3275
+    },
+    {
+      "file": "/_next/static/chunks/11cuq-378ract.js",
+      "gzipBytes": 2296
+    },
+    {
+      "file": "/_next/static/chunks/3o6ehvfyw8sxy.js",
+      "gzipBytes": 2276
+    },
+    {
+      "file": "/_next/static/chunks/2xe4n5l7hoo2-.js",
+      "gzipBytes": 1952
+    },
+    {
+      "file": "/_next/static/chunks/3q4_-6uy9mtee.js",
+      "gzipBytes": 1932
+    },
+    {
+      "file": "/_next/static/chunks/0mkaojb6oov4x.js",
+      "gzipBytes": 2434
+    },
+    {
+      "file": "/_next/static/chunks/1rrkn0upxhxuz.js",
+      "gzipBytes": 2455
+    },
+    {
+      "file": "/_next/static/chunks/05-rsu04xyfr8.js",
+      "gzipBytes": 1920
+    },
+    {
+      "file": "/_next/static/chunks/2y0vw1fbzq60p.js",
+      "gzipBytes": 1901
+    },
+    {
+      "file": "/_next/static/chunks/097t17io56eyb.js",
+      "gzipBytes": 3223
+    },
+    {
+      "file": "/_next/static/chunks/3xmydd949ol2x.js",
+      "gzipBytes": 3201
+    }
+  ],
+  "scenes": {
+    "floor": [
+      "/_next/static/chunks/00zmsxtookrxi.js",
+      "/_next/static/chunks/4079upubnl9uf.js"
+    ],
+    "table": [
+      "/_next/static/chunks/11cuq-378ract.js",
+      "/_next/static/chunks/3o6ehvfyw8sxy.js"
+    ],
+    "data": [
+      "/_next/static/chunks/2xe4n5l7hoo2-.js",
+      "/_next/static/chunks/3q4_-6uy9mtee.js"
+    ],
+    "forge": [
+      "/_next/static/chunks/0mkaojb6oov4x.js",
+      "/_next/static/chunks/1rrkn0upxhxuz.js"
+    ],
+    "run": [
+      "/_next/static/chunks/05-rsu04xyfr8.js",
+      "/_next/static/chunks/2y0vw1fbzq60p.js"
+    ],
+    "debrief": [
+      "/_next/static/chunks/097t17io56eyb.js",
+      "/_next/static/chunks/3xmydd949ol2x.js"
+    ]
+  },
+  "checks": {
+    "totalAtMost350KB": true,
+    "chapter1AtMost150KB": true,
+    "chapter2AtMost90KB": true,
+    "chapter3AtMost70KB": true,
+    "debriefAtMost60KB": true
+  }
+}

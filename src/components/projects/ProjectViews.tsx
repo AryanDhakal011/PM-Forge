@@ -153,6 +153,12 @@ export function ProjectGallery({
 }) {
   const { profile } = useWorkspace();
   const runs = useProjectRuns();
+  const deadlockRuns =
+    useLiveQuery(async () => {
+      if (!profile) return [];
+      const { listRuns } = await import("@/lib/deadlock/storage");
+      return listRuns(profile.id);
+    }, [profile?.id]) || [];
   const { runs: interviews } = useWorkspaceData();
   const [filters, setFilters] = useState<string[]>([]);
   const [sort, setSort] = useState("recommended");
@@ -287,7 +293,7 @@ export function ProjectGallery({
           onChange={(value) => change(() => setSort(value))}
           options={[
             { value: "recommended", label: "Recommended" },
-            { value: "duration", label: "Duration (all 45–75 min)" },
+            { value: "duration", label: "Duration" },
             { value: "pressure", label: "Pressure first" },
           ]}
         />
@@ -318,24 +324,44 @@ export function ProjectGallery({
                   Case {String(projects.indexOf(p) + 1).padStart(2, "0")} /{" "}
                   {categoryNames[p.category] || p.category}
                 </span>
-                <DraftDot />
+                {p.id === "deadlock" ? (
+                  <span title="Playable simulation prototype">
+                    LIVE · PROTOTYPE
+                  </span>
+                ) : (
+                  <DraftDot />
+                )}
               </div>
               <ProjectPosterArt id={p.id} />
               <h2>{p.title}</h2>
-              <p>{p.skill}.</p>
+              <p>
+                {p.id === "deadlock"
+                  ? "Two teams. Twelve weeks. One prototype."
+                  : `${p.skill}.`}
+              </p>
               {!publicView && (
                 <span className={s.cardStatus}>
-                  {open && (
-                    <Meter
-                      value={open.decisions.length}
-                      label={`${open.decisions.length} of 3 chapters complete`}
-                    />
+                  {p.id === "deadlock" ? (
+                    deadlockRuns.length ? (
+                      "Saved simulation · continue on v1.0"
+                    ) : (
+                      "Playable prototype · three distinct chapter loops"
+                    )
+                  ) : (
+                    <>
+                      {open && (
+                        <Meter
+                          value={open.decisions.length}
+                          label={`${open.decisions.length} of 3 chapters complete`}
+                        />
+                      )}
+                      {open
+                        ? `In progress · chapter ${open.chapter}/3`
+                        : done
+                          ? `Completed · ${projectArchetype(done).label}`
+                          : "New"}
+                    </>
                   )}
-                  {open
-                    ? `In progress · chapter ${open.chapter}/3`
-                    : done
-                      ? `Completed · ${projectArchetype(done).label}`
-                      : "New"}
                 </span>
               )}
               {p.id === recommended && !publicView && (
@@ -343,16 +369,21 @@ export function ProjectGallery({
                   ↗ Suggested from your recorded practice
                 </p>
               )}
-              {open && (
+              {open && p.id !== "deadlock" && (
                 <p className={s.remaining}>
                   About {Math.max(15, (3 - open.decisions.length) * 20)} min
                   remaining, estimate
                 </p>
               )}
               <div className={s.cardFoot}>
-                <span>45–75 min · {p.tags[0]}</span>
+                <span>
+                  {p.id === "deadlock" ? "About 40 minutes" : "45–75 min"} ·{" "}
+                  {p.tags[0]}
+                </span>
                 <Link href={`/app/projects/${p.id}`}>
-                  {open ? "Resume" : "Enter project"}{" "}
+                  {(p.id === "deadlock" ? deadlockRuns.length > 0 : !!open)
+                    ? "Resume"
+                    : "Enter project"}{" "}
                   <ArrowRight size={13} style={{ display: "inline" }} />
                 </Link>
               </div>

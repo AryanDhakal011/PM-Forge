@@ -1,0 +1,11 @@
+{
+  "copy": "Good decisions are judged by how they were made, then by what happened.",
+  "archetypes": {
+    "MEDIATOR": "You made both teams see the same facts and built what they could both sign.",
+    "DECIDER": "You picked a side when it mattered and still brought the whole team across the line.",
+    "SHOWRUNNER": "You went for the spectacle and paid for it in supervision.",
+    "GAMBLER": "You bet on speed and the room cracked.",
+    "BYSTANDER": "You kept the peace and shipped nothing. Politeness is not a plan.",
+    "PRAGMATIST": "You took the steady path and the results were steady."
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "at": "2026-10-30T14:25:40.354Z",
+  "seedRange": [
+    1,
+    200000
+  ],
+  "policies": 200000,
+  "policyDefinition": "Uniform inspected sets, budget-feasible sockets, dataset count/order, dial stops and available defense attachments. Second proposals are independently sampled; available push/revise and four run actions are equiprobable. No tuning changes.",
+  "durationMs": 222255,
+  "counts": {
+    "BABYSITTER": 164390,
+    "FRACTURE": 8628,
+    "QUIET ROOM": 20482,
+    "STEADY HANDS": 5962,
+    "STANDING GUARD": 523,
+    "SHARED GROUND": 15
+  },
+  "percentages": {
+    "BABYSITTER": 82.195,
+    "FRACTURE": 4.314,
+    "QUIET ROOM": 10.241,
+    "STEADY HANDS": 2.981,
+    "STANDING GUARD": 0.2615,
+    "SHARED GROUND": 0.0075
+  },
+  "archetypes": {
+    "BYSTANDER": 185423,
+    "GAMBLER": 8628,
+    "DECIDER": 3324,
+    "SHOWRUNNER": 244,
+    "PRAGMATIST": 2109,
+    "MEDIATOR": 272
+  },
+  "exampleSeeds": {
+    "BABYSITTER": 1,
+    "FRACTURE": 14,
+    "QUIET ROOM": 21,
+    "STEADY HANDS": 35,
+    "STANDING GUARD": 71,
+    "SHARED GROUND": 39207
+  },
+  "named": {
+    "INFORMED": {
+      "ending": "SHARED GROUND",
+      "archetype": "MEDIATOR",
+      "metrics": {
+        "rob": 44,
+        "sw": 21,
+        "runway": 7,
+        "ready": 84,
+        "align": 66,
+        "cred": 68
+      },
+      "wow": 78,
+      "supervision": 0
+    },
+    "LEAN": {
+      "ending": "STEADY HANDS",
+      "archetype": "DECIDER",
+      "metrics": {
+        "rob": 100,
+        "sw": 24,
+        "runway": 12,
+        "ready": 68,
+        "align": 11,
+        "cred": 32
+      },
+      "wow": 45,
+      "supervision": 2
+    },
+    "BOLD": {
+      "ending": "STANDING GUARD",
+      "archetype": "DECIDER",
+      "metrics": {
+        "rob": 34,
+        "sw": 100,
+        "runway": 8,
+        "ready": 94,
+        "align": 6,
+        "cred": 32
+      },
+      "wow": 67,
+      "supervision": 4
+    },
+    "AVOIDANT": {
+      "ending": "QUIET ROOM",
+      "archetype": "BYSTANDER",
+      "metrics": {
+        "rob": 70,
+        "sw": 60,
+        "runway": 6,
+        "ready": 44,
+        "align": 20,
+        "cred": 32
+      },
+      "wow": 40,
+      "supervision": 0
+    }
+  },
+  "targets": {
+    "allOrdinaryEndingsAtLeast3": false,
+    "goldenBetweenPoint2And4": false,
+    "quietAtMost25": true,
+    "fractureAtMost35": true,
+    "informedGolden": true,
+    "boldStandingGuard": true,
+    "leanSteadyHands": true,
+    "avoidantQuietRoom": true,
+    "atLeastFourArchetypes": true
+  },
+  "allTargetsMet": false
+}

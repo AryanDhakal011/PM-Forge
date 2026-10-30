@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Warm-up batch",
+    "caption": "Event one. Warm-up batch. Hands off.",
+    "line": "RN-E1-H",
+    "allowIntervention": false
+  },
+  {
+    "id": 2,
+    "title": "A technician crosses",
+    "caption": "Event two. A technician at point four meters.",
+    "line": "RN-E2-H1",
+    "allowIntervention": true
+  },
+  {
+    "id": 3,
+    "title": "A jam",
+    "caption": "Event three. A jam.",
+    "line": "RN-E3-H",
+    "allowIntervention": true
+  },
+  {
+    "id": 4,
+    "title": "An unknown object",
+    "caption": "Event four. An object it has never seen.",
+    "line": "RN-E4-H",
+    "allowIntervention": true
+  },
+  {
+    "id": 5,
+    "title": "Northgate is watching",
+    "caption": "Event five. Northgate is watching.",
+    "line": "RN-E5-H",
+    "allowIntervention": false
+  }
+]

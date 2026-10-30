@@ -1,0 +1,67 @@
+[
+  {
+    "id": "E1",
+    "zone": "bay",
+    "title": "Demo wall",
+    "kind": "scrub",
+    "label": "94% autonomous picks",
+    "card": "Demo reel: 94% of picks fully autonomous. One near-miss at 1.1 m/s, 0.4 m from a person.",
+    "reaction": [
+      "FW-01a",
+      "FW-01b"
+    ]
+  },
+  {
+    "id": "E2",
+    "zone": "pit",
+    "title": "Incident log",
+    "kind": "slips",
+    "label": "Three slips. Six weeks.",
+    "card": "Incident log: 3 near-misses in 6 weeks. Two when the e-stop was not wired to the software interlock. One during self-recovery.",
+    "slips": [
+      "E-stop wasn’t wired to the interlock",
+      "Same. Arm kept moving 1.4 s.",
+      "Self-recovery moved arm during jam clear."
+    ],
+    "reaction": [
+      "FW-02a"
+    ]
+  },
+  {
+    "id": "E3",
+    "zone": "table",
+    "title": "Slack wall",
+    "kind": "freeze",
+    "label": "Facts, or assumptions?",
+    "card": "Slack: each side asserts an assumption nobody has tested. Dev: a speed cap kills the demo. Ines: confirmation prompts are harmless.",
+    "reaction": [
+      "FW-03c"
+    ]
+  },
+  {
+    "id": "E4",
+    "zone": "pit",
+    "title": "BENCH-0914",
+    "kind": "seal",
+    "label": "Sealed. Shared with neither team.",
+    "card": "Bench data exists and has not been shared with either team.",
+    "reaction": [
+      "FW-04"
+    ]
+  },
+  {
+    "id": "E5",
+    "zone": "table",
+    "title": "Northgate letter",
+    "kind": "highlight",
+    "label": "An unopened envelope",
+    "card": "Northgate needs autonomy AND documented overrides. Both.",
+    "letter": [
+      "We want a demonstration of autonomous operation.",
+      "Our safety auditor requires documented override compliance."
+    ],
+    "reaction": [
+      "FW-05b"
+    ]
+  }
+]

@@ -141,8 +141,8 @@ export default function CreditsPage() {
               </li>
             </ul>
             <p>
-              Fonts are self-hosted through Fontsource packages. The site makes no
-              request to Google Fonts at runtime.
+              Fonts are self-hosted through Fontsource packages. The site makes
+              no request to Google Fonts at runtime.
             </p>
 
             <h2>Icons and software</h2>
@@ -163,8 +163,8 @@ export default function CreditsPage() {
                 <strong>Next.js</strong> and <strong>React</strong> — MIT.
               </li>
               <li>
-                <strong>Three.js</strong>, <strong>React Three Fiber</strong>, and{" "}
-                <strong>@react-three/drei</strong> — MIT.
+                <strong>Three.js</strong>, <strong>React Three Fiber</strong>,
+                and <strong>@react-three/drei</strong> — MIT.
               </li>
               <li>
                 <strong>GSAP</strong> and ScrollTrigger — used under the GSAP
@@ -183,33 +183,47 @@ export default function CreditsPage() {
 
             <h2>What was authored in code</h2>
             <p>
-              The Decision Engine, the learning cluster, the wooden desk surfaces,
-              the annotated evidence cards, the certificate/blueprint line art, the
-              career profile illustration, the architectural maquette, and all
-              section plates are procedural Three.js geometry, CSS, or inline SVG
-              authored for this project. No Blender source files or GLB exports were
-              delivered with this build.
+              The Decision Engine, the learning cluster, the wooden desk
+              surfaces, the annotated evidence cards, the certificate/blueprint
+              line art, the career profile illustration, the architectural
+              maquette, and all section plates are procedural Three.js geometry,
+              CSS, or inline SVG authored for this project. No Blender source
+              files or GLB exports were delivered with this build.
             </p>
             <p>
-              No generative image model was used to create the visual assets. The
-              only photographic raster asset is the mountain plate above; the
-              remaining photographic effects are CSS gradients, textures, and SVG
-              noise.
+              No generative image model was used to create the visual assets.
+              The only photographic raster asset is the mountain plate above;
+              the remaining photographic effects are CSS gradients, textures,
+              and SVG noise.
             </p>
 
+            <h2>The Deadlock prototype</h2>
+            <p>
+              The boiler room plates, paper-cut avatars, gauges and TERN-1 arm
+              are original vector artwork. Effects and ambience use procedural
+              WebAudio. Narration uses the device voice selected by the player;
+              no Kokoro recordings or model weights are shipped. All cast
+              members and organizations are fictional.
+            </p>
+            <p>
+              Self-hosted Barlow Condensed and IBM Plex Mono use the SIL Open
+              Font License 1.1.{" "}
+              <a href="/deadlock/fonts/Barlow-OFL.txt">Barlow license</a> ·{" "}
+              <a href="/deadlock/fonts/IBMPlex-OFL.txt">IBM Plex license</a>.
+            </p>
             <h2>What is fictional</h2>
             <p>
-              The project scenarios, evidence cards, interview case, profile card,
-              company names, and metrics are fictional teaching material. Any
-              resemblance to a real company's internal data is coincidental. There
-              are no customer testimonials, logos, or claims of outcomes on this
-              site.
+              The project scenarios, evidence cards, interview case, profile
+              card, company names, and metrics are fictional teaching material.
+              Any resemblance to a real company's internal data is coincidental.
+              There are no customer testimonials, logos, or claims of outcomes
+              on this site.
             </p>
 
             <div className={styles.note} style={{ marginTop: "1.6rem" }}>
               Found an attribution error or a missing credit?{" "}
-              <Link href="/help">Use the help page</Link> to see how to reach the
-              maintainer.
+              <Link href="/help">Use the help page</Link> to see how to reach
+              the maintainer.
             </div>
           </div>
         </div>

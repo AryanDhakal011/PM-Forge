@@ -1,0 +1,669 @@
+{
+  "version": "1.0",
+  "status": "device-voice-fallback",
+  "model": null,
+  "generatedAt": null,
+  "lines": {
+    "CO-01": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "CO-02": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "CO-03": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "CO-05": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "CO-04": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "CO-06": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "FW-01a": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "FW-01b": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "FW-02a": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "FW-02b": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "FW-03a": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "FW-03b": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "FW-03c": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "FW-04": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "FW-05a": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "FW-05b": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "FW-06": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "FW-07": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "FW-08": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "FW-09": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "T-INTRO": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "T-R-DEV": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "T-R-INES": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "T-S-INES": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "T-S-DEV": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "T-B-DEV": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "T-B-INES": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "T-D-DEV": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "T-D-INES": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "T-EV-SUP": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "T-EV-CON": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "T-EV-NEU": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "T-EV-NONE": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "T-AP": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "T-LOCK": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "C1-ALIGNED": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "C1-ROBOTICS": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "C1-SOFTWARE": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "C1-STALLED": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "C1-MIXED": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "O2-A1": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "O2-R1": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "O2-R2": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "O2-R3": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "O2-S1": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "O2-S2": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "O2-T1": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "O2-M1": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "O2-CTRL": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "O2-14": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "O2-15": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "O2-16": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "S-D1-DEV": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "S-D1-INES": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "S-D2-DEV": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "S-D2-INES": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "S-D2-MARA": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "S-D3-INES": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "S-D3-DEV": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "S-D4-DEV": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "S-D4-INES": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "S-NAD-OK": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "S-NAD-NO": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "S-VETO-R": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "S-VETO-S": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "S-END": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "S-COST": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "F-INTRO": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "F-ACC-DEV": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "F-ACC-INES": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "F-ACC-MARA": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "F-REJ-DEV-1": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "F-REJ-DEV-2": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "F-REJ-DEV-3": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "F-REJ-INES-1": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "F-REJ-INES-2": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "F-REJ-INES-3": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "F-REJ-INES-4": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "F-PUSH-MARA": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "F-PUSH-DEV": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "F-PUSH-INES": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "F-IMP": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "F-GOLD": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "F-RUNWAY": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "C2-AGREED": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "C2-PUSHED": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "C2-IMPOSED": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "RN-E1-H": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "RN-E1-FAST": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "RN-E1-SLOW": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "RN-E2-H1": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "RN-E2-H2": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "RN-E2-ASK": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "RN-E2-SAFE": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "RN-E2-INC": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "RN-E2-INC2": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "RN-INT-PAUSE": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "RN-INT-SLOW": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "RN-INT-TAKE": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "RN-E3-H": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "RN-E3-MAN": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "RN-E3-ASS": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "RN-E3-AUTO": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "RN-E3-INC": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "RN-E4-H": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "RN-E4-ALW": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "RN-E4-UNC": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "RN-E4-FAIL": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "RN-E5-H": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "EN-01": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "EN-02": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "EN-03": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "EN-F1": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "EN-F2": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "EN-F3": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "EN-G1": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "EN-G2": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "EN-G3": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "EN-G4": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "EN-W1": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "EN-W2": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "EN-W3": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "EN-W4": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "EN-B1": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "EN-B2": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "EN-S1": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "EN-S2": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "EN-S3": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "EN-END": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "T-EV-SUP-DEV": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "T-EV-SUP-INES": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    },
+    "T-EV-SUP-MARA": {
+      "file": null,
+      "voice": null,
+      "status": "not-rendered"
+    }
+  },
+  "sfx": "Procedural WebAudio; authored in code. No third-party samples."
+}

@@ -93,6 +93,9 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
     }, root);
     return () => context.revert();
   }, [pathname, collapsed, loading, profile?.id, reducedMotion]);
+  const isDeadlock =
+    pathname === "/app/projects/deadlock" ||
+    /^\/app\/projects\/deadlock\/(play|debrief)\//.test(pathname);
   const isRun =
     pathname.startsWith("/app/run/") ||
     /^\/app\/projects\/[a-z0-9-]+\/run\//.test(pathname);
@@ -119,6 +122,7 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
     window.addEventListener("pmforge:theme", update);
     let prefixAt = 0;
     const key = (event: KeyboardEvent) => {
+      if (window.location.pathname.startsWith("/app/projects/deadlock")) return;
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
         event.preventDefault();
         setSearchOpen((o) => !o);
@@ -221,6 +225,7 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
         </div>
       </div>
     );
+  if (isDeadlock && error) return <>{children}</>;
   if (error)
     return (
       <div className={styles.product}>
@@ -253,6 +258,13 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
           </noscript>
         </div>
       </div>
+    );
+  if (isDeadlock)
+    return (
+      <>
+        <OfflineSupport />
+        {children}
+      </>
     );
   return (
     <div

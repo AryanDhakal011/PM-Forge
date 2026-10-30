@@ -1,0 +1,112 @@
+{
+  "at": "2026-10-30T13:33:34.243Z",
+  "seedRange": [
+    1,
+    200000
+  ],
+  "policies": 200000,
+  "policyDefinition": "Uniform inspected set, feasible uniform sockets, uniform dataset count/order and build stops; named proposals and intervention policy specified in scripts/deadlock-policies.ts. No tuning changes.",
+  "durationMs": 191666,
+  "counts": {
+    "STEADY HANDS": 14526,
+    "BABYSITTER": 151512,
+    "QUIET ROOM": 24466,
+    "FRACTURE": 8822,
+    "STANDING GUARD": 666,
+    "SHARED GROUND": 8
+  },
+  "percentages": {
+    "STEADY HANDS": 7.263,
+    "BABYSITTER": 75.756,
+    "QUIET ROOM": 12.232999999999999,
+    "FRACTURE": 4.4110000000000005,
+    "STANDING GUARD": 0.333,
+    "SHARED GROUND": 0.004
+  },
+  "archetypes": {
+    "PRAGMATIST": 5437,
+    "BYSTANDER": 176821,
+    "GAMBLER": 8822,
+    "DECIDER": 8278,
+    "SHOWRUNNER": 316,
+    "MEDIATOR": 326
+  },
+  "exampleSeeds": {
+    "STEADY HANDS": 1,
+    "BABYSITTER": 2,
+    "QUIET ROOM": 4,
+    "FRACTURE": 6,
+    "STANDING GUARD": 160,
+    "SHARED GROUND": 30332
+  },
+  "named": {
+    "INFORMED": {
+      "ending": "SHARED GROUND",
+      "archetype": "MEDIATOR",
+      "metrics": {
+        "rob": 44,
+        "sw": 21,
+        "runway": 7,
+        "ready": 84,
+        "align": 66,
+        "cred": 68
+      },
+      "wow": 78,
+      "supervision": 0
+    },
+    "LEAN": {
+      "ending": "STEADY HANDS",
+      "archetype": "DECIDER",
+      "metrics": {
+        "rob": 100,
+        "sw": 24,
+        "runway": 12,
+        "ready": 68,
+        "align": 11,
+        "cred": 32
+      },
+      "wow": 45,
+      "supervision": 2
+    },
+    "BOLD": {
+      "ending": "STANDING GUARD",
+      "archetype": "DECIDER",
+      "metrics": {
+        "rob": 34,
+        "sw": 100,
+        "runway": 8,
+        "ready": 94,
+        "align": 6,
+        "cred": 32
+      },
+      "wow": 67,
+      "supervision": 4
+    },
+    "AVOIDANT": {
+      "ending": "QUIET ROOM",
+      "archetype": "BYSTANDER",
+      "metrics": {
+        "rob": 70,
+        "sw": 60,
+        "runway": 6,
+        "ready": 44,
+        "align": 20,
+        "cred": 32
+      },
+      "wow": 40,
+      "supervision": 0
+    }
+  },
+  "targets": {
+    "allOrdinaryEndingsAtLeast3": false,
+    "goldenBetweenPoint2And4": false,
+    "quietAtMost25": true,
+    "fractureAtMost35": true,
+    "informedGolden": true,
+    "boldStandingGuard": true,
+    "leanSteadyHands": true,
+    "avoidantQuietRoom": true,
+    "atLeastFourArchetypes": true
+  },
+  "allTargetsMet": false
+}

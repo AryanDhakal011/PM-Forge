@@ -25,6 +25,9 @@ Guest mode needs no credentials. Set up Google or GitHub through [.env.example](
 | `/app/practice/[slug]` | Scenario brief and start/resume |
 | `/app/run/[id]` | Guided practice, workbench, spoken synthesis, debrief and reflection |
 | `/app/projects` | Twelve missions and their chapter progress |
+| `/app/projects/deadlock` | The Deadlock: a dedicated playable simulation prototype |
+| `/app/projects/deadlock/play/[runId]` | Floor/table, projector/Forge, and live robot supervision |
+| `/app/projects/deadlock/debrief/[runId]` | Decision trace, verified counterfactual levers and fork comparison |
 | `/app/progress` | Coverage, bands and project constellation |
 | `/app/progress?tab=history` | Interview and project session trails |
 | `/app/portfolio` | Decision records and Markdown export |
@@ -46,6 +49,8 @@ node docs/check-product-routes.mjs
 Windows Chromium harnesses in `docs/verify-*.mjs` and `docs/verify-*.ts` exercise real guest flows in isolated browser profiles. GitHub Actions checks types, engine/account tests and production build on Node 24. The optional `npm run launch:check` separately reports missing launch credentials and expert reviews.
 
 ## Scope and limits
+
+The Deadlock replaces its earlier decision-form experience with three distinct playable loops. Its event log, forks, optional notes and transcript are stored on this device; use **Export run** inside the simulation for backup. These logs are not yet included in general workspace backup/import or account sync. Vector room art and device speech are functional fallbacks. See [Deadlock QA](docs/DEADLOCK_QA.md), [known gaps and balance results](docs/DEADLOCK_GAPS.md), and the [playtest packet](docs/DEADLOCK_PLAYTEST.md). `npm run test:deadlock` verifies the engine; `npm run deadlock:sim` runs 200,000 seeded policies and currently fails its balance distribution gate with the supplied defaults.
 
 Scenario numbers are simulated. Scenarios remain drafts until independently reviewed; readiness bands are provisional and do not grade spoken delivery or originality. No real expert ratings, public deployment or external AI scoring are implied. Guest data is browser-local; export backups from the top-bar device menu or Settings.
 

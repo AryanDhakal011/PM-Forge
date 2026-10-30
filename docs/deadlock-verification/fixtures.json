@@ -1,0 +1,2707 @@
+{
+  "room-ALIGNED_BURN": {
+    "id": "0be2a15c-ca5c-4ea6-8f0f-8effb41bd31d",
+    "ownerId": "fixture-owner",
+    "contentVersion": "1.0",
+    "events": [
+      {
+        "type": "START",
+        "mode": "silent",
+        "seq": 0,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "intro",
+        "seq": 1,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "floor",
+        "seq": 2,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "speed",
+        "res": "B",
+        "previewMs": 900,
+        "seq": 3,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "recovery",
+        "res": "B",
+        "previewMs": 900,
+        "seq": 4,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "learning",
+        "res": "R",
+        "previewMs": 900,
+        "seq": 5,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "LOCK_PLAN",
+        "seq": 6,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence1",
+        "seq": 7,
+        "t": "2026-10-30T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2026-10-30T00:00:00.000Z",
+    "updatedAt": "2026-10-30T00:00:00.000Z",
+    "revision": 8
+  },
+  "room-ROBOTICS_WIN": {
+    "id": "457df66a-a0a9-400b-9fd9-d63237d7e742",
+    "ownerId": "fixture-owner",
+    "contentVersion": "1.0",
+    "events": [
+      {
+        "type": "START",
+        "mode": "silent",
+        "seq": 0,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "intro",
+        "seq": 1,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "floor",
+        "seq": 2,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "speed",
+        "res": "R",
+        "previewMs": 900,
+        "seq": 3,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "recovery",
+        "res": "R",
+        "previewMs": 900,
+        "seq": 4,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "learning",
+        "res": "S",
+        "previewMs": 900,
+        "seq": 5,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "LOCK_PLAN",
+        "seq": 6,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence1",
+        "seq": 7,
+        "t": "2026-10-30T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2026-10-30T00:00:00.000Z",
+    "updatedAt": "2026-10-30T00:00:00.000Z",
+    "revision": 8
+  },
+  "room-SOFTWARE_WIN": {
+    "id": "28aec39a-921b-45d4-b546-24581e90d7ae",
+    "ownerId": "fixture-owner",
+    "contentVersion": "1.0",
+    "events": [
+      {
+        "type": "START",
+        "mode": "silent",
+        "seq": 0,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "intro",
+        "seq": 1,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "floor",
+        "seq": 2,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "speed",
+        "res": "S",
+        "previewMs": 900,
+        "seq": 3,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "recovery",
+        "res": "S",
+        "previewMs": 900,
+        "seq": 4,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "learning",
+        "res": "R",
+        "previewMs": 900,
+        "seq": 5,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "LOCK_PLAN",
+        "seq": 6,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence1",
+        "seq": 7,
+        "t": "2026-10-30T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2026-10-30T00:00:00.000Z",
+    "updatedAt": "2026-10-30T00:00:00.000Z",
+    "revision": 8
+  },
+  "room-STALLED": {
+    "id": "8e572af3-6028-4c32-b1ed-a97ea9d330b9",
+    "ownerId": "fixture-owner",
+    "contentVersion": "1.0",
+    "events": [
+      {
+        "type": "START",
+        "mode": "silent",
+        "seq": 0,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "intro",
+        "seq": 1,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "floor",
+        "seq": 2,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "speed",
+        "res": "D",
+        "previewMs": 900,
+        "seq": 3,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "recovery",
+        "res": "D",
+        "previewMs": 900,
+        "seq": 4,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "learning",
+        "res": "R",
+        "previewMs": 900,
+        "seq": 5,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "LOCK_PLAN",
+        "seq": 6,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence1",
+        "seq": 7,
+        "t": "2026-10-30T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2026-10-30T00:00:00.000Z",
+    "updatedAt": "2026-10-30T00:00:00.000Z",
+    "revision": 8
+  },
+  "room-MIXED": {
+    "id": "62641cf8-a68a-452d-96ba-51c195da625a",
+    "ownerId": "fixture-owner",
+    "contentVersion": "1.0",
+    "events": [
+      {
+        "type": "START",
+        "mode": "silent",
+        "seq": 0,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "intro",
+        "seq": 1,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "floor",
+        "seq": 2,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "speed",
+        "res": "R",
+        "previewMs": 900,
+        "seq": 3,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "recovery",
+        "res": "S",
+        "previewMs": 900,
+        "seq": 4,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "learning",
+        "res": "D",
+        "previewMs": 900,
+        "seq": 5,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "LOCK_PLAN",
+        "seq": 6,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence1",
+        "seq": 7,
+        "t": "2026-10-30T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2026-10-30T00:00:00.000Z",
+    "updatedAt": "2026-10-30T00:00:00.000Z",
+    "revision": 8
+  },
+  "floor": {
+    "id": "668d7dc4-e1b2-4064-bb3d-d54fc81ccc7f",
+    "ownerId": "fixture-owner",
+    "contentVersion": "1.0",
+    "events": [
+      {
+        "type": "START",
+        "mode": "silent",
+        "seq": 0,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "intro",
+        "seq": 1,
+        "t": "2026-10-30T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2026-10-30T00:00:00.000Z",
+    "updatedAt": "2026-10-30T00:00:00.000Z",
+    "revision": 0
+  },
+  "table": {
+    "id": "00001092-2650-4521-a89f-9611112528bd",
+    "ownerId": "fixture-owner",
+    "contentVersion": "1.0",
+    "events": [
+      {
+        "type": "START",
+        "mode": "silent",
+        "seq": 0,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "intro",
+        "seq": 1,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E1",
+        "seq": 2,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E2",
+        "seq": 3,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E3",
+        "seq": 4,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "floor",
+        "seq": 5,
+        "t": "2026-10-30T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2026-10-30T00:00:00.000Z",
+    "updatedAt": "2026-10-30T00:00:00.000Z",
+    "revision": 0
+  },
+  "forge": {
+    "id": "19c3d4f0-bf4c-4593-b536-d7fcba4fd4f0",
+    "ownerId": "fixture-owner",
+    "contentVersion": "1.0",
+    "events": [
+      {
+        "type": "START",
+        "mode": "silent",
+        "seq": 0,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "intro",
+        "seq": 1,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E1",
+        "seq": 2,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E2",
+        "seq": 3,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E3",
+        "seq": 4,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "floor",
+        "seq": 5,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "speed",
+        "card": "E3",
+        "seq": 6,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "speed",
+        "res": "B",
+        "previewMs": 900,
+        "seq": 7,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "recovery",
+        "card": "E3",
+        "seq": 8,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "recovery",
+        "res": "B",
+        "previewMs": 900,
+        "seq": 9,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "learning",
+        "card": "E2",
+        "seq": 10,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "learning",
+        "res": "S",
+        "previewMs": 900,
+        "seq": 11,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "LOCK_PLAN",
+        "seq": 12,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence1",
+        "seq": 13,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "opening2",
+        "seq": 14,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D2",
+        "previewMs": 900,
+        "seq": 15,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D3",
+        "previewMs": 900,
+        "seq": 16,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "data",
+        "seq": 17,
+        "t": "2026-10-30T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2026-10-30T00:00:00.000Z",
+    "updatedAt": "2026-10-30T00:00:00.000Z",
+    "revision": 0
+  },
+  "run": {
+    "id": "8ddde6b8-6ff5-4ae2-89a0-06019749c81e",
+    "ownerId": "fixture-owner",
+    "contentVersion": "1.0",
+    "events": [
+      {
+        "type": "START",
+        "mode": "silent",
+        "seq": 0,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "intro",
+        "seq": 1,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E1",
+        "seq": 2,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E2",
+        "seq": 3,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E3",
+        "seq": 4,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "floor",
+        "seq": 5,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "speed",
+        "card": "E3",
+        "seq": 6,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "speed",
+        "res": "B",
+        "previewMs": 900,
+        "seq": 7,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "recovery",
+        "card": "E3",
+        "seq": 8,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "recovery",
+        "res": "B",
+        "previewMs": 900,
+        "seq": 9,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "learning",
+        "card": "E2",
+        "seq": 10,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "learning",
+        "res": "S",
+        "previewMs": 900,
+        "seq": 11,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "LOCK_PLAN",
+        "seq": 12,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence1",
+        "seq": 13,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "opening2",
+        "seq": 14,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D2",
+        "previewMs": 900,
+        "seq": 15,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D3",
+        "previewMs": 900,
+        "seq": 16,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "data",
+        "seq": 17,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "DIAL",
+        "value": {
+          "s": 1,
+          "r": "assisted",
+          "l": "uncertain"
+        },
+        "seq": 18,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "speed",
+        "card": "D3",
+        "seq": 19,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "learning",
+        "card": "D2",
+        "seq": 20,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "recovery",
+        "card": "E2",
+        "seq": 21,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "PROPOSE",
+        "previewMs": 1200,
+        "seq": 22,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence2",
+        "seq": 23,
+        "t": "2026-10-30T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2026-10-30T00:00:00.000Z",
+    "updatedAt": "2026-10-30T00:00:00.000Z",
+    "revision": 0
+  },
+  "debrief": {
+    "id": "9698a2b4-79da-4120-99cb-b0ea2a7f3e72",
+    "ownerId": "fixture-owner",
+    "contentVersion": "1.0",
+    "events": [
+      {
+        "type": "START",
+        "mode": "silent",
+        "seq": 0,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "intro",
+        "seq": 1,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E1",
+        "seq": 2,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E2",
+        "seq": 3,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E3",
+        "seq": 4,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "floor",
+        "seq": 5,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "speed",
+        "card": "E3",
+        "seq": 6,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "speed",
+        "res": "B",
+        "previewMs": 900,
+        "seq": 7,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "recovery",
+        "card": "E3",
+        "seq": 8,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "recovery",
+        "res": "B",
+        "previewMs": 900,
+        "seq": 9,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "learning",
+        "card": "E2",
+        "seq": 10,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "learning",
+        "res": "S",
+        "previewMs": 900,
+        "seq": 11,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "LOCK_PLAN",
+        "seq": 12,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence1",
+        "seq": 13,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "opening2",
+        "seq": 14,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D2",
+        "previewMs": 900,
+        "seq": 15,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D3",
+        "previewMs": 900,
+        "seq": 16,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "data",
+        "seq": 17,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "DIAL",
+        "value": {
+          "s": 1,
+          "r": "assisted",
+          "l": "uncertain"
+        },
+        "seq": 18,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "speed",
+        "card": "D3",
+        "seq": 19,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "learning",
+        "card": "D2",
+        "seq": 20,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "recovery",
+        "card": "E2",
+        "seq": 21,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "PROPOSE",
+        "previewMs": 1200,
+        "seq": 22,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence2",
+        "seq": 23,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 1,
+        "action": "let",
+        "seq": 24,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 2,
+        "action": "let",
+        "seq": 25,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 3,
+        "action": "let",
+        "seq": 26,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 4,
+        "action": "let",
+        "seq": 27,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 5,
+        "action": "let",
+        "seq": 28,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "ending",
+        "seq": 29,
+        "t": "2026-10-30T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2026-10-30T00:00:00.000Z",
+    "updatedAt": "2026-10-30T00:00:00.000Z",
+    "revision": 0
+  },
+  "extra-floor": {
+    "id": "0786381d-1bca-41b8-9e93-7793aee360cd",
+    "ownerId": "fixture-owner",
+    "contentVersion": "1.0",
+    "events": [
+      {
+        "type": "START",
+        "mode": "silent",
+        "seq": 0,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "intro",
+        "seq": 1,
+        "t": "2026-10-30T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2026-10-30T00:00:00.000Z",
+    "updatedAt": "2026-10-30T00:00:00.000Z",
+    "revision": 0
+  },
+  "run-final": {
+    "id": "beb2f50c-aadd-439f-9c9b-96ca8adad220",
+    "ownerId": "fixture-owner",
+    "contentVersion": "1.0",
+    "events": [
+      {
+        "type": "START",
+        "mode": "silent",
+        "seq": 0,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "intro",
+        "seq": 1,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E1",
+        "seq": 2,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E2",
+        "seq": 3,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E3",
+        "seq": 4,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "floor",
+        "seq": 5,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "speed",
+        "card": "E3",
+        "seq": 6,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "speed",
+        "res": "B",
+        "previewMs": 900,
+        "seq": 7,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "recovery",
+        "card": "E3",
+        "seq": 8,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "recovery",
+        "res": "B",
+        "previewMs": 900,
+        "seq": 9,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "learning",
+        "card": "E2",
+        "seq": 10,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "learning",
+        "res": "S",
+        "previewMs": 900,
+        "seq": 11,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "LOCK_PLAN",
+        "seq": 12,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence1",
+        "seq": 13,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "opening2",
+        "seq": 14,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D2",
+        "previewMs": 900,
+        "seq": 15,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D3",
+        "previewMs": 900,
+        "seq": 16,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "data",
+        "seq": 17,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "DIAL",
+        "value": {
+          "s": 1,
+          "r": "assisted",
+          "l": "uncertain"
+        },
+        "seq": 18,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "speed",
+        "card": "D3",
+        "seq": 19,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "learning",
+        "card": "D2",
+        "seq": 20,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "recovery",
+        "card": "E2",
+        "seq": 21,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "PROPOSE",
+        "previewMs": 1200,
+        "seq": 22,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence2",
+        "seq": 23,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 1,
+        "action": "let",
+        "seq": 24,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 2,
+        "action": "let",
+        "seq": 25,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 3,
+        "action": "let",
+        "seq": 26,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 4,
+        "action": "let",
+        "seq": 27,
+        "t": "2026-10-30T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2026-10-30T00:00:00.000Z",
+    "updatedAt": "2026-10-30T00:00:00.000Z",
+    "revision": 0
+  },
+  "ending": {
+    "id": "e593edb5-6d37-44fc-9634-6c2addf13811",
+    "ownerId": "fixture-owner",
+    "contentVersion": "1.0",
+    "events": [
+      {
+        "type": "START",
+        "mode": "silent",
+        "seq": 0,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "intro",
+        "seq": 1,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E1",
+        "seq": 2,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E2",
+        "seq": 3,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E3",
+        "seq": 4,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "floor",
+        "seq": 5,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "speed",
+        "card": "E3",
+        "seq": 6,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "speed",
+        "res": "B",
+        "previewMs": 900,
+        "seq": 7,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "recovery",
+        "card": "E3",
+        "seq": 8,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "recovery",
+        "res": "B",
+        "previewMs": 900,
+        "seq": 9,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "learning",
+        "card": "E2",
+        "seq": 10,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "learning",
+        "res": "S",
+        "previewMs": 900,
+        "seq": 11,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "LOCK_PLAN",
+        "seq": 12,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence1",
+        "seq": 13,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "opening2",
+        "seq": 14,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D2",
+        "previewMs": 900,
+        "seq": 15,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D3",
+        "previewMs": 900,
+        "seq": 16,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "data",
+        "seq": 17,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "DIAL",
+        "value": {
+          "s": 1,
+          "r": "assisted",
+          "l": "uncertain"
+        },
+        "seq": 18,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "speed",
+        "card": "D3",
+        "seq": 19,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "learning",
+        "card": "D2",
+        "seq": 20,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "recovery",
+        "card": "E2",
+        "seq": 21,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "PROPOSE",
+        "previewMs": 1200,
+        "seq": 22,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence2",
+        "seq": 23,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 1,
+        "action": "let",
+        "seq": 24,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 2,
+        "action": "let",
+        "seq": 25,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 3,
+        "action": "let",
+        "seq": 26,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 4,
+        "action": "let",
+        "seq": 27,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 5,
+        "action": "let",
+        "seq": 28,
+        "t": "2026-10-30T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2026-10-30T00:00:00.000Z",
+    "updatedAt": "2026-10-30T00:00:00.000Z",
+    "revision": 0
+  },
+  "ending-BABYSITTER": {
+    "id": "cf0cf02f-7f0a-4499-920f-eaaec36e5b70",
+    "ownerId": "fixture-owner",
+    "contentVersion": "1.0",
+    "events": [
+      {
+        "type": "START",
+        "mode": "silent",
+        "seq": 0,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "intro",
+        "seq": 1,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E5",
+        "seq": 2,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E3",
+        "seq": 3,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E2",
+        "seq": 4,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "floor",
+        "seq": 5,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "speed",
+        "card": "E3",
+        "seq": 6,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "speed",
+        "res": "D",
+        "previewMs": 900,
+        "seq": 7,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "recovery",
+        "card": "E2",
+        "seq": 8,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "recovery",
+        "res": "B",
+        "previewMs": 900,
+        "seq": 9,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "learning",
+        "card": "E5",
+        "seq": 10,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "learning",
+        "res": "S",
+        "previewMs": 900,
+        "seq": 11,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "LOCK_PLAN",
+        "seq": 12,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence1",
+        "seq": 13,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "opening2",
+        "seq": 14,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D4",
+        "previewMs": 900,
+        "seq": 15,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D3",
+        "previewMs": 900,
+        "seq": 16,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "data",
+        "seq": 17,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "DIAL",
+        "value": {
+          "s": 0.5,
+          "r": "assisted",
+          "l": "never"
+        },
+        "seq": 18,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "speed",
+        "card": "E5",
+        "seq": 19,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "recovery",
+        "card": "E5",
+        "seq": 20,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "learning",
+        "seq": 21,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "PROPOSE",
+        "previewMs": 1200,
+        "seq": 22,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "REVISE",
+        "seq": 23,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "DIAL",
+        "value": {
+          "s": 0.8,
+          "r": "assisted",
+          "l": "never"
+        },
+        "seq": 24,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "speed",
+        "card": "E5",
+        "seq": 25,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "recovery",
+        "card": "E5",
+        "seq": 26,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "learning",
+        "card": "E2",
+        "seq": 27,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "PROPOSE",
+        "previewMs": 900,
+        "seq": 28,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "REVISE",
+        "seq": 29,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence2",
+        "seq": 30,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 1,
+        "action": "let",
+        "seq": 31,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 2,
+        "action": "takeover",
+        "seq": 32,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 3,
+        "action": "let",
+        "seq": 33,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 4,
+        "action": "slow",
+        "seq": 34,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 5,
+        "action": "let",
+        "seq": 35,
+        "t": "2026-10-30T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2026-10-30T00:00:00.000Z",
+    "updatedAt": "2026-10-30T00:00:00.000Z",
+    "revision": 0
+  },
+  "ending-FRACTURE": {
+    "id": "b10911e9-2493-47f4-8e55-cdd947bd4a27",
+    "ownerId": "fixture-owner",
+    "contentVersion": "1.0",
+    "events": [
+      {
+        "type": "START",
+        "mode": "silent",
+        "seq": 0,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "intro",
+        "seq": 1,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E5",
+        "seq": 2,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E1",
+        "seq": 3,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E4",
+        "seq": 4,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "floor",
+        "seq": 5,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "speed",
+        "card": "E4",
+        "seq": 6,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "speed",
+        "res": "R",
+        "previewMs": 900,
+        "seq": 7,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "recovery",
+        "res": "R",
+        "previewMs": 900,
+        "seq": 8,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "learning",
+        "card": "E5",
+        "seq": 9,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "learning",
+        "res": "D",
+        "previewMs": 900,
+        "seq": 10,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "LOCK_PLAN",
+        "seq": 11,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence1",
+        "seq": 12,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "opening2",
+        "seq": 13,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D2",
+        "previewMs": 900,
+        "seq": 14,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "data",
+        "seq": 15,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "DIAL",
+        "value": {
+          "s": 0.8,
+          "r": "auto",
+          "l": "always"
+        },
+        "seq": 16,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "speed",
+        "card": "E4",
+        "seq": 17,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "recovery",
+        "card": "E5",
+        "seq": 18,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "learning",
+        "card": "E4",
+        "seq": 19,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "PROPOSE",
+        "previewMs": 1200,
+        "seq": 20,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "REVISE",
+        "seq": 21,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "DIAL",
+        "value": {
+          "s": 0.8,
+          "r": "auto",
+          "l": "uncertain"
+        },
+        "seq": 22,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "speed",
+        "card": "D2",
+        "seq": 23,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "recovery",
+        "card": "E5",
+        "seq": 24,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "learning",
+        "card": "E5",
+        "seq": 25,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "PROPOSE",
+        "previewMs": 900,
+        "seq": 26,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "PUSH",
+        "seq": 27,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence2",
+        "seq": 28,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 1,
+        "action": "let",
+        "seq": 29,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 2,
+        "action": "slow",
+        "seq": 30,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 3,
+        "action": "let",
+        "seq": 31,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 4,
+        "action": "let",
+        "seq": 32,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 5,
+        "action": "let",
+        "seq": 33,
+        "t": "2026-10-30T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2026-10-30T00:00:00.000Z",
+    "updatedAt": "2026-10-30T00:00:00.000Z",
+    "revision": 0
+  },
+  "ending-QUIET-ROOM": {
+    "id": "463fe6bd-1014-4a5e-8b6c-5835f1196043",
+    "ownerId": "fixture-owner",
+    "contentVersion": "1.0",
+    "events": [
+      {
+        "type": "START",
+        "mode": "silent",
+        "seq": 0,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "intro",
+        "seq": 1,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E4",
+        "seq": 2,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E5",
+        "seq": 3,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E1",
+        "seq": 4,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "floor",
+        "seq": 5,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "speed",
+        "res": "S",
+        "previewMs": 900,
+        "seq": 6,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "recovery",
+        "card": "E5",
+        "seq": 7,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "recovery",
+        "res": "D",
+        "previewMs": 900,
+        "seq": 8,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "learning",
+        "card": "E5",
+        "seq": 9,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "learning",
+        "res": "D",
+        "previewMs": 900,
+        "seq": 10,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "LOCK_PLAN",
+        "seq": 11,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence1",
+        "seq": 12,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "opening2",
+        "seq": 13,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D4",
+        "previewMs": 900,
+        "seq": 14,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D1",
+        "previewMs": 900,
+        "seq": 15,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D2",
+        "previewMs": 900,
+        "seq": 16,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D3",
+        "previewMs": 900,
+        "seq": 17,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "data",
+        "seq": 18,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "DIAL",
+        "value": {
+          "s": 0.5,
+          "r": "assisted",
+          "l": "never"
+        },
+        "seq": 19,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "speed",
+        "seq": 20,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "recovery",
+        "card": "E1",
+        "seq": 21,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "learning",
+        "card": "E4",
+        "seq": 22,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "PROPOSE",
+        "previewMs": 1200,
+        "seq": 23,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "REVISE",
+        "seq": 24,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "DIAL",
+        "value": {
+          "s": 1,
+          "r": "assisted",
+          "l": "always"
+        },
+        "seq": 25,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "speed",
+        "card": "D1",
+        "seq": 26,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "recovery",
+        "card": "D2",
+        "seq": 27,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "learning",
+        "card": "D3",
+        "seq": 28,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "PROPOSE",
+        "previewMs": 900,
+        "seq": 29,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "REVISE",
+        "seq": 30,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence2",
+        "seq": 31,
+        "t": "2026-10-30T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2026-10-30T00:00:00.000Z",
+    "updatedAt": "2026-10-30T00:00:00.000Z",
+    "revision": 0
+  },
+  "ending-STEADY-HANDS": {
+    "id": "8bae80ba-42f0-47ee-8245-0993d720588c",
+    "ownerId": "fixture-owner",
+    "contentVersion": "1.0",
+    "events": [
+      {
+        "type": "START",
+        "mode": "silent",
+        "seq": 0,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "intro",
+        "seq": 1,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E5",
+        "seq": 2,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E2",
+        "seq": 3,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E4",
+        "seq": 4,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "floor",
+        "seq": 5,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "speed",
+        "card": "E2",
+        "seq": 6,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "speed",
+        "res": "S",
+        "previewMs": 900,
+        "seq": 7,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "recovery",
+        "res": "B",
+        "previewMs": 900,
+        "seq": 8,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "learning",
+        "card": "E4",
+        "seq": 9,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "learning",
+        "res": "R",
+        "previewMs": 900,
+        "seq": 10,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "LOCK_PLAN",
+        "seq": 11,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence1",
+        "seq": 12,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "opening2",
+        "seq": 13,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D4",
+        "previewMs": 900,
+        "seq": 14,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "data",
+        "seq": 15,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "DIAL",
+        "value": {
+          "s": 1.2,
+          "r": "manual",
+          "l": "never"
+        },
+        "seq": 16,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "speed",
+        "card": "E2",
+        "seq": 17,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "recovery",
+        "seq": 18,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "learning",
+        "card": "E5",
+        "seq": 19,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "PROPOSE",
+        "previewMs": 1200,
+        "seq": 20,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "REVISE",
+        "seq": 21,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "DIAL",
+        "value": {
+          "s": 1.2,
+          "r": "assisted",
+          "l": "never"
+        },
+        "seq": 22,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "speed",
+        "seq": 23,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "recovery",
+        "card": "E4",
+        "seq": 24,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "learning",
+        "card": "E5",
+        "seq": 25,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "PROPOSE",
+        "previewMs": 900,
+        "seq": 26,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "REVISE",
+        "seq": 27,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence2",
+        "seq": 28,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 1,
+        "action": "let",
+        "seq": 29,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 2,
+        "action": "let",
+        "seq": 30,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 3,
+        "action": "let",
+        "seq": 31,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 4,
+        "action": "let",
+        "seq": 32,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 5,
+        "action": "let",
+        "seq": 33,
+        "t": "2026-10-30T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2026-10-30T00:00:00.000Z",
+    "updatedAt": "2026-10-30T00:00:00.000Z",
+    "revision": 0
+  },
+  "ending-STANDING-GUARD": {
+    "id": "6f25cbf6-b01c-41a6-a677-5c98ad9ecdc1",
+    "ownerId": "fixture-owner",
+    "contentVersion": "1.0",
+    "events": [
+      {
+        "type": "START",
+        "mode": "silent",
+        "seq": 0,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "intro",
+        "seq": 1,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E5",
+        "seq": 2,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E3",
+        "seq": 3,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E2",
+        "seq": 4,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "floor",
+        "seq": 5,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "speed",
+        "card": "E5",
+        "seq": 6,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "speed",
+        "res": "S",
+        "previewMs": 900,
+        "seq": 7,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "recovery",
+        "card": "E3",
+        "seq": 8,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "recovery",
+        "res": "B",
+        "previewMs": 900,
+        "seq": 9,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "learning",
+        "card": "E3",
+        "seq": 10,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "learning",
+        "res": "D",
+        "previewMs": 900,
+        "seq": 11,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "LOCK_PLAN",
+        "seq": 12,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence1",
+        "seq": 13,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "opening2",
+        "seq": 14,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D1",
+        "previewMs": 900,
+        "seq": 15,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D2",
+        "previewMs": 900,
+        "seq": 16,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D4",
+        "previewMs": 900,
+        "seq": 17,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D3",
+        "previewMs": 900,
+        "seq": 18,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "data",
+        "seq": 19,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "DIAL",
+        "value": {
+          "s": 0.8,
+          "r": "auto",
+          "l": "uncertain"
+        },
+        "seq": 20,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "speed",
+        "card": "D2",
+        "seq": 21,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "recovery",
+        "seq": 22,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "learning",
+        "card": "D1",
+        "seq": 23,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "PROPOSE",
+        "previewMs": 1200,
+        "seq": 24,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence2",
+        "seq": 25,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 1,
+        "action": "let",
+        "seq": 26,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 2,
+        "action": "slow",
+        "seq": 27,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 3,
+        "action": "let",
+        "seq": 28,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 4,
+        "action": "let",
+        "seq": 29,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 5,
+        "action": "let",
+        "seq": 30,
+        "t": "2026-10-30T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2026-10-30T00:00:00.000Z",
+    "updatedAt": "2026-10-30T00:00:00.000Z",
+    "revision": 0
+  },
+  "ending-SHARED-GROUND": {
+    "id": "4148f82d-86b2-4bdf-84df-e65e4d98b2ac",
+    "ownerId": "fixture-owner",
+    "contentVersion": "1.0",
+    "events": [
+      {
+        "type": "START",
+        "mode": "silent",
+        "seq": 0,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "intro",
+        "seq": 1,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E2",
+        "seq": 2,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E5",
+        "seq": 3,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "INSPECT",
+        "card": "E3",
+        "seq": 4,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "floor",
+        "seq": 5,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "speed",
+        "card": "E5",
+        "seq": 6,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "speed",
+        "res": "B",
+        "previewMs": 900,
+        "seq": 7,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "recovery",
+        "card": "E3",
+        "seq": 8,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "recovery",
+        "res": "R",
+        "previewMs": 900,
+        "seq": 9,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH",
+        "lane": "learning",
+        "card": "E5",
+        "seq": 10,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SOCKET",
+        "lane": "learning",
+        "res": "B",
+        "previewMs": 900,
+        "seq": 11,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "LOCK_PLAN",
+        "seq": 12,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence1",
+        "seq": 13,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "opening2",
+        "seq": 14,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D2",
+        "previewMs": 900,
+        "seq": 15,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D4",
+        "previewMs": 900,
+        "seq": 16,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "SHOW",
+        "dataset": "D1",
+        "previewMs": 900,
+        "seq": 17,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "data",
+        "seq": 18,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "DIAL",
+        "value": {
+          "s": 0.8,
+          "r": "assisted",
+          "l": "uncertain"
+        },
+        "seq": 19,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "speed",
+        "card": "D4",
+        "seq": 20,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "recovery",
+        "card": "E3",
+        "seq": 21,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ATTACH_DIAL",
+        "dial": "learning",
+        "card": "E5",
+        "seq": 22,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "PROPOSE",
+        "previewMs": 1200,
+        "seq": 23,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "ACK_SCENE",
+        "scene": "consequence2",
+        "seq": 24,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 1,
+        "action": "let",
+        "seq": 25,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 2,
+        "action": "let",
+        "seq": 26,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 3,
+        "action": "let",
+        "seq": 27,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 4,
+        "action": "let",
+        "seq": 28,
+        "t": "2026-10-30T00:00:00.000Z"
+      },
+      {
+        "type": "RUN_DECISION",
+        "eventNo": 5,
+        "action": "let",
+        "seq": 29,
+        "t": "2026-10-30T00:00:00.000Z"
+      }
+    ],
+    "createdAt": "2026-10-30T00:00:00.000Z",
+    "updatedAt": "2026-10-30T00:00:00.000Z",
+    "revision": 0
+  }
+}

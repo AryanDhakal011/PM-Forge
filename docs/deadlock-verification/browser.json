@@ -1,0 +1,1138 @@
+{
+  "at": "2026-10-30T15:25:55.930Z",
+  "checks": [
+    {
+      "label": "three manipulated objects spend exactly three Focus bolts",
+      "pass": true
+    },
+    {
+      "label": "all three physical tokens resolve their conflict lanes",
+      "pass": true
+    },
+    {
+      "label": "no free-text input in the decision act",
+      "pass": true
+    },
+    {
+      "label": "shared datasets visibly break the authored assumptions",
+      "pass": true
+    },
+    {
+      "label": "informed UI path earns the golden ending",
+      "pass": true
+    },
+    {
+      "label": "fork restores an earlier decision in a new run",
+      "pass": true
+    },
+    {
+      "label": "mobile decision table has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "label": "fork remains playable with no typing",
+      "pass": true
+    },
+    {
+      "label": "original retains the branch for comparison",
+      "pass": true
+    },
+    {
+      "label": "all stage controls fit floor at 1440",
+      "pass": true,
+      "details": {
+        "width": 1440,
+        "scene": "floor",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside floor at 1440",
+      "pass": true,
+      "details": {
+        "width": 1440,
+        "scene": "floor",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit table at 1440",
+      "pass": true,
+      "details": {
+        "width": 1440,
+        "scene": "table",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside table at 1440",
+      "pass": true,
+      "details": {
+        "width": 1440,
+        "scene": "table",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit forge at 1440",
+      "pass": true,
+      "details": {
+        "width": 1440,
+        "scene": "forge",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside forge at 1440",
+      "pass": true,
+      "details": {
+        "width": 1440,
+        "scene": "forge",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit run at 1440",
+      "pass": true,
+      "details": {
+        "width": 1440,
+        "scene": "run",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside run at 1440",
+      "pass": true,
+      "details": {
+        "width": 1440,
+        "scene": "run",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit debrief at 1440",
+      "pass": true,
+      "details": {
+        "width": 1440,
+        "scene": "debrief",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside debrief at 1440",
+      "pass": true,
+      "details": {
+        "width": 1440,
+        "scene": "debrief",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit floor at 1024",
+      "pass": true,
+      "details": {
+        "width": 1024,
+        "scene": "floor",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside floor at 1024",
+      "pass": true,
+      "details": {
+        "width": 1024,
+        "scene": "floor",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit table at 1024",
+      "pass": true,
+      "details": {
+        "width": 1024,
+        "scene": "table",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside table at 1024",
+      "pass": true,
+      "details": {
+        "width": 1024,
+        "scene": "table",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit forge at 1024",
+      "pass": true,
+      "details": {
+        "width": 1024,
+        "scene": "forge",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside forge at 1024",
+      "pass": true,
+      "details": {
+        "width": 1024,
+        "scene": "forge",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit run at 1024",
+      "pass": true,
+      "details": {
+        "width": 1024,
+        "scene": "run",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside run at 1024",
+      "pass": true,
+      "details": {
+        "width": 1024,
+        "scene": "run",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit debrief at 1024",
+      "pass": true,
+      "details": {
+        "width": 1024,
+        "scene": "debrief",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside debrief at 1024",
+      "pass": true,
+      "details": {
+        "width": 1024,
+        "scene": "debrief",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit floor at 768",
+      "pass": true,
+      "details": {
+        "width": 768,
+        "scene": "floor",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside floor at 768",
+      "pass": true,
+      "details": {
+        "width": 768,
+        "scene": "floor",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit table at 768",
+      "pass": true,
+      "details": {
+        "width": 768,
+        "scene": "table",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside table at 768",
+      "pass": true,
+      "details": {
+        "width": 768,
+        "scene": "table",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit forge at 768",
+      "pass": true,
+      "details": {
+        "width": 768,
+        "scene": "forge",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 802,
+        "captionTop": 802,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside forge at 768",
+      "pass": true,
+      "details": {
+        "width": 768,
+        "scene": "forge",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 802,
+        "captionTop": 802,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit run at 768",
+      "pass": true,
+      "details": {
+        "width": 768,
+        "scene": "run",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside run at 768",
+      "pass": true,
+      "details": {
+        "width": 768,
+        "scene": "run",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit debrief at 768",
+      "pass": true,
+      "details": {
+        "width": 768,
+        "scene": "debrief",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside debrief at 768",
+      "pass": true,
+      "details": {
+        "width": 768,
+        "scene": "debrief",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 812,
+        "captionTop": 812,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit floor at 390",
+      "pass": true,
+      "details": {
+        "width": 390,
+        "scene": "floor",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 804,
+        "captionTop": 804,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside floor at 390",
+      "pass": true,
+      "details": {
+        "width": 390,
+        "scene": "floor",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 804,
+        "captionTop": 804,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit table at 390",
+      "pass": true,
+      "details": {
+        "width": 390,
+        "scene": "table",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 804,
+        "captionTop": 804,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside table at 390",
+      "pass": true,
+      "details": {
+        "width": 390,
+        "scene": "table",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 804,
+        "captionTop": 804,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit forge at 390",
+      "pass": true,
+      "details": {
+        "width": 390,
+        "scene": "forge",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 778.5,
+        "captionTop": 778.5,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside forge at 390",
+      "pass": true,
+      "details": {
+        "width": 390,
+        "scene": "forge",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 778.5,
+        "captionTop": 778.5,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit run at 390",
+      "pass": true,
+      "details": {
+        "width": 390,
+        "scene": "run",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 804,
+        "captionTop": 804,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside run at 390",
+      "pass": true,
+      "details": {
+        "width": 390,
+        "scene": "run",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 804,
+        "captionTop": 804,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit debrief at 390",
+      "pass": true,
+      "details": {
+        "width": 390,
+        "scene": "debrief",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 804,
+        "captionTop": 804,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside debrief at 390",
+      "pass": true,
+      "details": {
+        "width": 390,
+        "scene": "debrief",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 804,
+        "captionTop": 804,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit floor at 320",
+      "pass": true,
+      "details": {
+        "width": 320,
+        "scene": "floor",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 783.609375,
+        "captionTop": 783.609375,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside floor at 320",
+      "pass": true,
+      "details": {
+        "width": 320,
+        "scene": "floor",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 783.609375,
+        "captionTop": 783.609375,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit table at 320",
+      "pass": true,
+      "details": {
+        "width": 320,
+        "scene": "table",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 783.609375,
+        "captionTop": 783.609375,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside table at 320",
+      "pass": true,
+      "details": {
+        "width": 320,
+        "scene": "table",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 783.609375,
+        "captionTop": 783.609375,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit forge at 320",
+      "pass": true,
+      "details": {
+        "width": 320,
+        "scene": "forge",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 783.609375,
+        "captionTop": 783.609375,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside forge at 320",
+      "pass": true,
+      "details": {
+        "width": 320,
+        "scene": "forge",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 783.609375,
+        "captionTop": 783.609375,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit run at 320",
+      "pass": true,
+      "details": {
+        "width": 320,
+        "scene": "run",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 804,
+        "captionTop": 804,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside run at 320",
+      "pass": true,
+      "details": {
+        "width": 320,
+        "scene": "run",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 804,
+        "captionTop": 804,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "all stage controls fit debrief at 320",
+      "pass": true,
+      "details": {
+        "width": 320,
+        "scene": "debrief",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 804,
+        "captionTop": 804,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "captions reserve space outside debrief at 320",
+      "pass": true,
+      "details": {
+        "width": 320,
+        "scene": "debrief",
+        "pageOverflow": false,
+        "sceneOverflow": false,
+        "mainBottom": 804,
+        "captionTop": 804,
+        "headerFit": true
+      }
+    },
+    {
+      "label": "authored ending renders QUIET ROOM",
+      "pass": true
+    },
+    {
+      "label": "authored ending renders FRACTURE",
+      "pass": true
+    },
+    {
+      "label": "authored ending renders SHARED GROUND",
+      "pass": true
+    },
+    {
+      "label": "authored ending renders STANDING GUARD",
+      "pass": true
+    },
+    {
+      "label": "authored ending renders BABYSITTER",
+      "pass": true
+    },
+    {
+      "label": "authored ending renders STEADY HANDS",
+      "pass": true
+    },
+    {
+      "label": "opening inherits ALIGNED_BURN",
+      "pass": true,
+      "details": {
+        "room": "ALIGNED_BURN",
+        "warm": ".75",
+        "cool": ".7",
+        "props": [
+          "SHARED SPEC · D.R. + I.C."
+        ]
+      }
+    },
+    {
+      "label": "opening inherits ROBOTICS_WIN",
+      "pass": true,
+      "details": {
+        "room": "ROBOTICS_WIN",
+        "warm": "1",
+        "cool": ".06",
+        "props": [
+          "NADIA BRANDT · VISITOR"
+        ]
+      }
+    },
+    {
+      "label": "opening inherits SOFTWARE_WIN",
+      "pass": true,
+      "details": {
+        "room": "SOFTWARE_WIN",
+        "warm": ".05",
+        "cool": "1",
+        "props": [
+          "DEV · PERSONAL EFFECTS"
+        ]
+      }
+    },
+    {
+      "label": "opening inherits STALLED",
+      "pass": true,
+      "details": {
+        "room": "STALLED",
+        "warm": ".07",
+        "cool": ".07",
+        "props": [
+          "WAITING"
+        ]
+      }
+    },
+    {
+      "label": "opening inherits MIXED",
+      "pass": true,
+      "details": {
+        "room": "MIXED",
+        "warm": ".48",
+        "cool": ".4",
+        "props": []
+      }
+    },
+    {
+      "label": "five room states have distinct light grades",
+      "pass": true
+    },
+    {
+      "label": "five-person final gallery fits 390",
+      "pass": true
+    },
+    {
+      "label": "five-person final gallery fits 320",
+      "pass": true
+    },
+    {
+      "label": "sealed bench cover grants the headstart without exposing data",
+      "pass": true
+    },
+    {
+      "label": "both letter requirements must be highlighted",
+      "pass": true
+    },
+    {
+      "label": "original run event log remains unchanged after fork and matrix checks",
+      "pass": true
+    },
+    {
+      "label": "seventh fork is rejected without changing the original",
+      "pass": true
+    },
+    {
+      "label": "keyboard token lift, arrows and drop work offline",
+      "pass": true
+    },
+    {
+      "label": "offline reload restores the same socket from its saved log",
+      "pass": true
+    },
+    {
+      "label": "caption transcript survives an offline reload",
+      "pass": true
+    },
+    {
+      "label": "guarded plan lever commits with Enter twice and no extra pointer input",
+      "pass": true
+    },
+    {
+      "label": "quota failure declares memory-only play",
+      "pass": true
+    },
+    {
+      "label": "memory-only fallback continues across subsequent events",
+      "pass": true
+    },
+    {
+      "label": "explicit voice test resumes and restores pause state (speech API stub)",
+      "pass": true
+    },
+    {
+      "label": "no browser exceptions during complete run, forks, responsive and offline checks",
+      "pass": true,
+      "details": []
+    }
+  ],
+  "errors": [],
+  "runId": "2b955959-a5d9-4904-a292-b393e4c44eee",
+  "layouts": [
+    {
+      "width": 1440,
+      "scene": "floor",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 812,
+      "captionTop": 812,
+      "headerFit": true
+    },
+    {
+      "width": 1440,
+      "scene": "table",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 812,
+      "captionTop": 812,
+      "headerFit": true
+    },
+    {
+      "width": 1440,
+      "scene": "forge",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 812,
+      "captionTop": 812,
+      "headerFit": true
+    },
+    {
+      "width": 1440,
+      "scene": "run",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 812,
+      "captionTop": 812,
+      "headerFit": true
+    },
+    {
+      "width": 1440,
+      "scene": "debrief",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 812,
+      "captionTop": 812,
+      "headerFit": true
+    },
+    {
+      "width": 1024,
+      "scene": "floor",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 812,
+      "captionTop": 812,
+      "headerFit": true
+    },
+    {
+      "width": 1024,
+      "scene": "table",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 812,
+      "captionTop": 812,
+      "headerFit": true
+    },
+    {
+      "width": 1024,
+      "scene": "forge",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 812,
+      "captionTop": 812,
+      "headerFit": true
+    },
+    {
+      "width": 1024,
+      "scene": "run",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 812,
+      "captionTop": 812,
+      "headerFit": true
+    },
+    {
+      "width": 1024,
+      "scene": "debrief",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 812,
+      "captionTop": 812,
+      "headerFit": true
+    },
+    {
+      "width": 768,
+      "scene": "floor",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 812,
+      "captionTop": 812,
+      "headerFit": true
+    },
+    {
+      "width": 768,
+      "scene": "table",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 812,
+      "captionTop": 812,
+      "headerFit": true
+    },
+    {
+      "width": 768,
+      "scene": "forge",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 802,
+      "captionTop": 802,
+      "headerFit": true
+    },
+    {
+      "width": 768,
+      "scene": "run",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 812,
+      "captionTop": 812,
+      "headerFit": true
+    },
+    {
+      "width": 768,
+      "scene": "debrief",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 812,
+      "captionTop": 812,
+      "headerFit": true
+    },
+    {
+      "width": 390,
+      "scene": "floor",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 804,
+      "captionTop": 804,
+      "headerFit": true
+    },
+    {
+      "width": 390,
+      "scene": "table",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 804,
+      "captionTop": 804,
+      "headerFit": true
+    },
+    {
+      "width": 390,
+      "scene": "forge",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 778.5,
+      "captionTop": 778.5,
+      "headerFit": true
+    },
+    {
+      "width": 390,
+      "scene": "run",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 804,
+      "captionTop": 804,
+      "headerFit": true
+    },
+    {
+      "width": 390,
+      "scene": "debrief",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 804,
+      "captionTop": 804,
+      "headerFit": true
+    },
+    {
+      "width": 320,
+      "scene": "floor",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 783.609375,
+      "captionTop": 783.609375,
+      "headerFit": true
+    },
+    {
+      "width": 320,
+      "scene": "table",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 783.609375,
+      "captionTop": 783.609375,
+      "headerFit": true
+    },
+    {
+      "width": 320,
+      "scene": "forge",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 783.609375,
+      "captionTop": 783.609375,
+      "headerFit": true
+    },
+    {
+      "width": 320,
+      "scene": "run",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 804,
+      "captionTop": 804,
+      "headerFit": true
+    },
+    {
+      "width": 320,
+      "scene": "debrief",
+      "pageOverflow": false,
+      "sceneOverflow": false,
+      "mainBottom": 804,
+      "captionTop": 804,
+      "headerFit": true
+    }
+  ],
+  "endings": [
+    "QUIET ROOM",
+    "FRACTURE",
+    "SHARED GROUND",
+    "STANDING GUARD",
+    "BABYSITTER",
+    "STEADY HANDS"
+  ],
+  "performance": [
+    {
+      "width": 1440,
+      "cpu": 1,
+      "p95Ms": 16.90000000000009,
+      "longTasks": [],
+      "heapMB": 20.247340202331543
+    },
+    {
+      "width": 390,
+      "cpu": 4,
+      "p95Ms": 16.899999999999864,
+      "longTasks": [],
+      "heapMB": 20.35431671142578
+    }
+  ],
+  "rooms": [
+    {
+      "room": "ALIGNED_BURN",
+      "warm": ".75",
+      "cool": ".7",
+      "props": [
+        "SHARED SPEC · D.R. + I.C."
+      ]
+    },
+    {
+      "room": "ROBOTICS_WIN",
+      "warm": "1",
+      "cool": ".06",
+      "props": [
+        "NADIA BRANDT · VISITOR"
+      ]
+    },
+    {
+      "room": "SOFTWARE_WIN",
+      "warm": ".05",
+      "cool": "1",
+      "props": [
+        "DEV · PERSONAL EFFECTS"
+      ]
+    },
+    {
+      "room": "STALLED",
+      "warm": ".07",
+      "cool": ".07",
+      "props": [
+        "WAITING"
+      ]
+    },
+    {
+      "room": "MIXED",
+      "warm": ".48",
+      "cool": ".4",
+      "props": []
+    }
+  ],
+  "guardKeyboard": [
+    {
+      "active": "LOCK THE PLAN ↓ pull · hold · Enter",
+      "scene": "table",
+      "guard": " GUARD OPEN"
+    },
+    {
+      "active": "TWO LEADS, ARMS CROSSEDThe room remembers.MaraHalf a plan. Both of them still watching you.Dev RamanRobotics LeadInes CalderSoftware & Safety LeadCONTINUE →Skippable · Case file keeps the briefing",
+      "scene": "consequence1"
+    }
+  ]
+}

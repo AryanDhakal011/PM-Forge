@@ -1,0 +1,24 @@
+{
+  "id": "deadlock",
+  "version": "1.0",
+  "title": "The Deadlock",
+  "tagline": "Two teams. Twelve weeks. One prototype.",
+  "company": "HALYARD ROBOTICS",
+  "product": "TERN-1",
+  "chapters": [
+    "Boiler Room",
+    "The Evidence Breach",
+    "First Run"
+  ],
+  "initial": {
+    "rob": 48,
+    "sw": 48,
+    "runway": 12,
+    "ready": 52,
+    "align": 35,
+    "cred": 50,
+    "ap": 5,
+    "focus": 3
+  },
+  "simulated": true
+}

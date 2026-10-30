@@ -1,0 +1,1058 @@
+[
+  {
+    "id": "CO-01",
+    "speaker": "Mara",
+    "text": "Robotics won't ship without full autonomy, and Software won't sign off without hard overrides. We have twelve weeks of runway and neither team will move.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "CO-02",
+    "speaker": "Dev",
+    "text": "TERN-1 does 94% of picks on its own. Don't cap it. — D.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "CO-03",
+    "speaker": "Ines",
+    "text": "Three near-misses in six weeks. This is not a feature request. — I.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "CO-05",
+    "speaker": "Mara",
+    "text": "We want to see it run itself. Our auditor needs to see it stop.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "CO-04",
+    "speaker": "CONTROL",
+    "text": "Twelve weeks. Two teams. One prototype. Walk the floor, then decide who moves.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "CO-06",
+    "speaker": "CONTROL",
+    "text": "Inspect three things. You can't open everything.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "FW-01a",
+    "speaker": "Dev",
+    "text": "Ninety-four percent, hands off. Nobody has ever done that.",
+    "condition": "after H1 opened",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "FW-01b",
+    "speaker": "Ines",
+    "text": "That's the one I flagged. Point four meters.",
+    "condition": "H1 and the red marker was found",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "FW-02a",
+    "speaker": "Ines",
+    "text": "Three in six weeks. The e-stop wasn't even wired to the interlock.",
+    "condition": "after H2",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "FW-02b",
+    "speaker": "Dev",
+    "text": "Bench tests. Not the demo.",
+    "condition": "H2 opened and E1 inspected",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "FW-03a",
+    "speaker": "Dev",
+    "text": "Capping speed kills the demo. Obviously.",
+    "condition": "H3 frozen",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "FW-03b",
+    "speaker": "Ines",
+    "text": "Confirmation prompts cost nothing. Always have.",
+    "condition": "H3 frozen",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "FW-03c",
+    "speaker": "CONTROL",
+    "text": "Two assumptions. Nobody has tested either.",
+    "condition": "both pinned",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "FW-04",
+    "speaker": "Mara",
+    "text": "BENCH-0914. Nobody's opened it. I was waiting for a reason.",
+    "condition": "after H4",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "FW-05a",
+    "speaker": "CONTROL",
+    "text": "Both lines are in the same letter.",
+    "condition": "letter opened",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "FW-05b",
+    "speaker": "Mara",
+    "text": "Autonomy and overrides. They want both.",
+    "condition": "bracket drawn",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "FW-06",
+    "speaker": "CONTROL",
+    "text": "Three looks. That's what the morning allows.",
+    "condition": "focus = 0",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "FW-07",
+    "speaker": "CONTROL",
+    "text": "You still have looks left. Go to the table anyway?",
+    "condition": "Table pressed with focus ≥ 1",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "FW-08",
+    "speaker": "Dev",
+    "text": "You only looked at Ines's side.",
+    "condition": "only software evidence inspected (E2, E4) and lock reached",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "FW-09",
+    "speaker": "Ines",
+    "text": "You only looked at Dev's side.",
+    "condition": "only E1 inspected (plus neutral) and lock reached",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "T-INTRO",
+    "speaker": "CONTROL",
+    "text": "Three conflicts. Five alignment points. Move the tokens.",
+    "condition": "arrival",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "T-R-DEV",
+    "speaker": "Dev",
+    "text": "Good. {thing} stays in. That's the demo.",
+    "condition": "lane → ROBOTICS",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "T-R-INES",
+    "speaker": "Ines",
+    "text": "Noted. If it hits someone, this decision is on record.",
+    "condition": "lane → ROBOTICS",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "T-S-INES",
+    "speaker": "Ines",
+    "text": "Thank you. {thing} gets the guard rails.",
+    "condition": "lane → SOFTWARE",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "T-S-DEV",
+    "speaker": "Dev",
+    "text": "So the demo gets a leash. Great.",
+    "condition": "lane → SOFTWARE",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "T-B-DEV",
+    "speaker": "Dev",
+    "text": "Fine. Show me the version that doesn't gut it.",
+    "condition": "lane → BRIDGE",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "T-B-INES",
+    "speaker": "Ines",
+    "text": "Fine. Show me the version that stays safe.",
+    "condition": "lane → BRIDGE",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "T-D-DEV",
+    "speaker": "Dev",
+    "text": "We're not deciding? The clock is.",
+    "condition": "lane → DEFER",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "T-D-INES",
+    "speaker": "Ines",
+    "text": "Deferring isn't deciding. It's drifting.",
+    "condition": "lane → DEFER",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "T-EV-SUP",
+    "speaker": "Mara",
+    "text": "Okay. That's not nothing.",
+    "condition": "evidence SUPPORT",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "T-EV-CON",
+    "speaker": "Mara",
+    "text": "That says the opposite of your call.",
+    "condition": "evidence CONTRADICT",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "T-EV-NEU",
+    "speaker": "Mara",
+    "text": "That doesn't speak to this one.",
+    "condition": "evidence NEUTRAL",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "T-EV-NONE",
+    "speaker": "Mara",
+    "text": "Based on what?",
+    "condition": "no evidence",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "T-AP",
+    "speaker": "CONTROL",
+    "text": "A bridge costs two points and a week.",
+    "condition": "bridge socket hover first time",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "T-LOCK",
+    "speaker": "CONTROL",
+    "text": "Plan locked.",
+    "condition": "lever pulled",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "C1-ALIGNED",
+    "speaker": "Mara",
+    "text": "Two lanes with real agreements. It cost weeks. It's a start.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "C1-ROBOTICS",
+    "speaker": "Mara",
+    "text": "Dev's flying. Ines isn't speaking. That won't last.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "C1-SOFTWARE",
+    "speaker": "Mara",
+    "text": "Ines can sleep. Dev is packing a box.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "C1-STALLED",
+    "speaker": "Mara",
+    "text": "We decided not to decide. Finance noticed.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "C1-MIXED",
+    "speaker": "Mara",
+    "text": "Half a plan. Both of them still watching you.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "O2-A1",
+    "speaker": "Mara",
+    "text": "You bought us alignment. It cost weeks. Use them.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "O2-R1",
+    "speaker": "Nadia",
+    "text": "Mind if I sit in? Northgate asked me to.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "O2-R2",
+    "speaker": "Ines",
+    "text": "She's here for the override evidence.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "O2-R3",
+    "speaker": "CONTROL",
+    "text": "Nadia is waiting for proof.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "O2-S1",
+    "speaker": "Dev",
+    "text": "I've got another offer. Show me you're not building a leash.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "O2-S2",
+    "speaker": "Mara",
+    "text": "He's not bluffing.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "O2-T1",
+    "speaker": "Mara",
+    "text": "We're out of time to be polite.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "O2-M1",
+    "speaker": "Mara",
+    "text": "Half a plan, two tired leads. Pick what they see.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "O2-CTRL",
+    "speaker": "CONTROL",
+    "text": "Four sealed folders. Whatever you project, both teams see.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "O2-14",
+    "speaker": "Dev",
+    "text": "Fine. I'm here. Don't make me regret it.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "O2-15",
+    "speaker": "Dev",
+    "text": "Okay. Show me.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "O2-16",
+    "speaker": "Dev",
+    "text": "I'm done.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "S-D1-DEV",
+    "speaker": "Dev",
+    "text": "Six percent? I told everyone thirty.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "S-D1-INES",
+    "speaker": "Ines",
+    "text": "I told you the cap was cheap.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "S-D2-DEV",
+    "speaker": "Dev",
+    "text": "Eighty-one. I was wrong about unattended.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "S-D2-INES",
+    "speaker": "Ines",
+    "text": "Thirty-one percent of picks interrupted? I was wrong about prompts.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "S-D2-MARA",
+    "speaker": "Mara",
+    "text": "First time they've agreed on anything.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "S-D3-INES",
+    "speaker": "Ines",
+    "text": "Point two two with the curtain. I'd sign that. Not at one-point-two.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "S-D3-DEV",
+    "speaker": "Dev",
+    "text": "So one-point-zero is real.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "S-D4-DEV",
+    "speaker": "Dev",
+    "text": "The jams aren't the interlock.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "S-D4-INES",
+    "speaker": "Ines",
+    "text": "And auto-recovery is fine, with the interlock.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "S-NAD-OK",
+    "speaker": "Nadia",
+    "text": "Override data. Noted.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "S-NAD-NO",
+    "speaker": "Nadia",
+    "text": "No override evidence in this meeting. Noted.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "S-VETO-R",
+    "speaker": "Dev",
+    "text": "Recovery stays auto. I'm not negotiating that.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "S-VETO-S",
+    "speaker": "Ines",
+    "text": "The cap stays at point five.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "S-END",
+    "speaker": "Mara",
+    "text": "Enough data. Build something they'll both sign.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "S-COST",
+    "speaker": "CONTROL",
+    "text": "Each folder costs a point.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "F-INTRO",
+    "speaker": "CONTROL",
+    "text": "Three dials. A question mark means you never opened that folder.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "F-ACC-DEV",
+    "speaker": "Dev",
+    "text": "I can ship that.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "F-ACC-INES",
+    "speaker": "Ines",
+    "text": "I can sign that.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "F-ACC-MARA",
+    "speaker": "Mara",
+    "text": "Both signed. Write it down.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "F-REJ-DEV-1",
+    "speaker": "Dev",
+    "text": "That speed makes the demo look timid.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "F-REJ-DEV-2",
+    "speaker": "Dev",
+    "text": "I'm not hand-holding every jam.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "F-REJ-DEV-3",
+    "speaker": "Dev",
+    "text": "Confirming everything defeats the point.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "F-REJ-INES-1",
+    "speaker": "Ines",
+    "text": "Show me the margin at that speed.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "F-REJ-INES-2",
+    "speaker": "Ines",
+    "text": "No self-recovery without the interlock data.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "F-REJ-INES-3",
+    "speaker": "Ines",
+    "text": "That learning setting has no tuned threshold.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "F-REJ-INES-4",
+    "speaker": "Ines",
+    "text": "Never confirming is not an option.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "F-PUSH-MARA",
+    "speaker": "Mara",
+    "text": "Pushed through. They'll remember.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "F-PUSH-DEV",
+    "speaker": "Dev",
+    "text": "Fine. Your call.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "F-PUSH-INES",
+    "speaker": "Ines",
+    "text": "Fine. On the record.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "F-IMP",
+    "speaker": "Mara",
+    "text": "I'm calling it. Lean build. Move.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "F-GOLD",
+    "speaker": "CONTROL",
+    "text": "Shared ground.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "F-RUNWAY",
+    "speaker": "CONTROL",
+    "text": "Reserve: two weeks for the run.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "C2-AGREED",
+    "speaker": "Mara",
+    "text": "One build. Two signatures. Don't waste it.",
+    "condition": "agreed",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "C2-PUSHED",
+    "speaker": "Mara",
+    "text": "It'll run. Someone's angry.",
+    "condition": "pushed",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "C2-IMPOSED",
+    "speaker": "Mara",
+    "text": "It's the safe build. It won't impress anyone.",
+    "condition": "imposed",
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "RN-E1-H",
+    "speaker": "CONTROL",
+    "text": "Event one. Warm-up batch. Hands off.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "RN-E1-FAST",
+    "speaker": "Dev",
+    "text": "Look at that cycle time.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "RN-E1-SLOW",
+    "speaker": "Dev",
+    "text": "It's slow, but it's clean.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "RN-E2-H1",
+    "speaker": "CONTROL",
+    "text": "Event two. A technician at point four meters.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "RN-E2-H2",
+    "speaker": "Ines",
+    "text": "Heads up. Crossing.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "RN-E2-ASK",
+    "speaker": "CONTROL",
+    "text": "Let it run, or step in.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "RN-E2-SAFE",
+    "speaker": "Ines",
+    "text": "Margin held.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "RN-E2-INC",
+    "speaker": "Nadia",
+    "text": "Stop the arm. Stop it.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "RN-E2-INC2",
+    "speaker": "Mara",
+    "text": "Cut it.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "RN-INT-PAUSE",
+    "speaker": "Ines",
+    "text": "Good call.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "RN-INT-SLOW",
+    "speaker": "Dev",
+    "text": "Slowing it. Fine.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "RN-INT-TAKE",
+    "speaker": "Dev",
+    "text": "Taking the stick.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "RN-E3-H",
+    "speaker": "CONTROL",
+    "text": "Event three. A jam.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "RN-E3-MAN",
+    "speaker": "Dev",
+    "text": "Clearing it by hand.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "RN-E3-ASS",
+    "speaker": "Dev",
+    "text": "One tap.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "RN-E3-AUTO",
+    "speaker": "Dev",
+    "text": "It cleared itself.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "RN-E3-INC",
+    "speaker": "Ines",
+    "text": "It moved. Without telling anyone.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "RN-E4-H",
+    "speaker": "CONTROL",
+    "text": "Event four. An object it has never seen.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "RN-E4-ALW",
+    "speaker": "Dev",
+    "text": "Prompt on screen. Confirm.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "RN-E4-UNC",
+    "speaker": "Dev",
+    "text": "It asked once. Only once.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "RN-E4-FAIL",
+    "speaker": "Ines",
+    "text": "It dropped it.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "RN-E5-H",
+    "speaker": "CONTROL",
+    "text": "Event five. Northgate is watching.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "EN-01",
+    "speaker": "Mara",
+    "text": "Everyone was careful. Nothing was built.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "EN-02",
+    "speaker": "Theo",
+    "text": "We'll pause the demo. Call me when there's something to see.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "EN-03",
+    "speaker": "CONTROL",
+    "text": "The runway ran down four more weeks.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "EN-F1",
+    "speaker": "Nadia",
+    "text": "Override response failed at point four meters. I can't sign this.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "EN-F2",
+    "speaker": "Theo",
+    "text": "I can't take this to my partners.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "EN-F3",
+    "speaker": "Mara",
+    "text": "Then we find out what broke.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "EN-G1",
+    "speaker": "Nadia",
+    "text": "Documented overrides, demonstrated autonomy. I'll sign.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "EN-G2",
+    "speaker": "Theo",
+    "text": "I came for the demo. I'm staying for the team.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "EN-G3",
+    "speaker": "Ines",
+    "text": "Nice build.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "EN-G4",
+    "speaker": "Dev",
+    "text": "You too.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "EN-W1",
+    "speaker": "Theo",
+    "text": "It's remarkable. How many people does it take to run?",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "EN-W2",
+    "speaker": "Ines",
+    "text": "Three.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "EN-W3",
+    "speaker": "Dev",
+    "text": "For now.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "EN-W4",
+    "speaker": "Mara",
+    "text": "Then we have a plan.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "EN-B1",
+    "speaker": "Theo",
+    "text": "It works if someone holds its hand all day.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "EN-B2",
+    "speaker": "Mara",
+    "text": "We can fix that.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "EN-S1",
+    "speaker": "Theo",
+    "text": "Solid. Safe. Not a story.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "EN-S2",
+    "speaker": "Nadia",
+    "text": "Compliant.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "EN-S3",
+    "speaker": "Mara",
+    "text": "Safe is a start.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "EN-END",
+    "speaker": "CONTROL",
+    "text": "The run is over. The room remembers.",
+    "condition": null,
+    "source": "handoff §17",
+    "audio": null
+  },
+  {
+    "id": "T-EV-SUP-DEV",
+    "speaker": "Dev",
+    "text": "Okay. That's not nothing.",
+    "condition": "SUPPORT evidence; losing lead, or Mara for bridge/defer",
+    "source": "handoff §17.3",
+    "audio": null
+  },
+  {
+    "id": "T-EV-SUP-INES",
+    "speaker": "Ines",
+    "text": "Okay. That's not nothing.",
+    "condition": "SUPPORT evidence; losing lead, or Mara for bridge/defer",
+    "source": "handoff §17.3",
+    "audio": null
+  },
+  {
+    "id": "T-EV-SUP-MARA",
+    "speaker": "Mara",
+    "text": "That's a real reason.",
+    "condition": "SUPPORT evidence; losing lead, or Mara for bridge/defer",
+    "source": "handoff §17.3",
+    "audio": null
+  }
+]

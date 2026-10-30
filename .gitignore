@@ -47,3 +47,7 @@ docs/project-verification/*.png
 docs/workspace-verification/*.png
 
 docs/spatial-verification/*.png
+
+docs/deadlock-verification/*.png
+docs/deadlock-verification/*.log
+.deadlock-*.log
