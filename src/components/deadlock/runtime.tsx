@@ -2,17 +2,24 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { Action, DeadlockState, Metrics } from "@/lib/deadlock/types";
 import s from "./Deadlock.module.css";
+import { audioManifest } from "@/lib/deadlock/content";
 export type SceneProps = {
   state: DeadlockState;
   dispatch: (a: Action) => void;
   busy: boolean;
   paused: boolean;
   calm: boolean;
-  caption: (id: string, onEnd?: () => void) => void;
+  caption: (id: string, onEnd?: (played?: boolean) => void) => void;
+  autoAdvance?: boolean;
+  sound?: boolean;
+  toggleSound?: () => void;
+  voiceRevision?: number;
   preview: (m?: Metrics) => void;
 };
 export type Preferences = {
   mode: "silent" | "sound" | "listen";
+  autoAdvance: boolean;
+  skipGuides: boolean;
   voice: string;
   characters: boolean;
   rate: number;
@@ -29,7 +36,9 @@ export type Preferences = {
 };
 export const defaultPreferences: Preferences = {
   mode: "silent",
-  voice: "device",
+  autoAdvance: false,
+  skipGuides: false,
+  voice: "recorded",
   characters: true,
   rate: 1,
   narration: 1,
@@ -45,13 +54,20 @@ export const defaultPreferences: Preferences = {
 };
 export function usePreferences() {
   const [prefs, setPrefs] = useState(defaultPreferences);
+  const [ready, setReady] = useState(false);
   useEffect(() => {
     try {
       const p = JSON.parse(
         localStorage.getItem("pmforge.deadlock.settings.v1") || "null",
       );
-      if (p) setPrefs({ ...defaultPreferences, ...p });
+      if (p)
+        setPrefs({
+          ...defaultPreferences,
+          ...p,
+          mode: p.mode === "listen" ? "sound" : p.mode,
+        });
     } catch {}
+    setReady(true);
   }, []);
   const update = useCallback(
     (p: Partial<Preferences>) =>
@@ -67,7 +83,7 @@ export function usePreferences() {
       }),
     [],
   );
-  return { prefs, update };
+  return { prefs, update, ready };
 }
 export function useVisible() {
   const [visible, setVisible] = useState(true);
@@ -116,7 +132,6 @@ export function useClock(
 }
 export function GuardControl({
   label,
-  lever = false,
   disabled = false,
   onCommit,
 }: {
@@ -125,81 +140,10 @@ export function GuardControl({
   disabled?: boolean;
   onCommit: () => void;
 }) {
-  const [armed, setArmed] = useState(false),
-    [distance, setDistance] = useState(0);
-  const y = useRef(0),
-    timer = useRef(0),
-    done = useRef(false);
-  const commitButton = useRef<HTMLButtonElement>(null);
-  useEffect(() => {
-    if (armed) commitButton.current?.focus();
-  }, [armed]);
-  const commit = () => {
-    if (done.current || disabled) return;
-    done.current = true;
-    clearTimeout(timer.current);
-    setArmed(false);
-    setDistance(0);
-    onCommit();
-  };
-  useEffect(() => () => clearTimeout(timer.current), []);
   return (
-    <div className={s.row}>
-      <button
-        className={s.button}
-        disabled={disabled}
-        aria-pressed={armed}
-        onClick={() => {
-          setArmed(!armed);
-          done.current = false;
-        }}
-      >
-        {" "}
-        {armed ? "GUARD OPEN" : "FLIP GUARD"}
-      </button>
-      {armed && (
-        <button
-          ref={commitButton}
-          className={s.guardButton}
-          disabled={disabled}
-          aria-label={label}
-          style={
-            lever
-              ? { transform: `translateY(${Math.min(distance, 20)}px)` }
-              : undefined
-          }
-          onClick={(e) => {
-            if (!lever || e.detail === 0) commit();
-          }}
-          onPointerDown={(e) => {
-            if (!lever) return;
-            e.currentTarget.setPointerCapture(e.pointerId);
-            y.current = e.clientY;
-            done.current = false;
-            if (e.pointerType === "touch")
-              timer.current = window.setTimeout(commit, 600);
-          }}
-          onPointerMove={(e) => {
-            if (!lever || !e.currentTarget.hasPointerCapture(e.pointerId))
-              return;
-            const d = Math.max(0, e.clientY - y.current);
-            setDistance(d);
-            if (d >= 80) commit();
-          }}
-          onPointerUp={() => {
-            clearTimeout(timer.current);
-            setDistance(0);
-          }}
-          onPointerCancel={() => {
-            clearTimeout(timer.current);
-            setDistance(0);
-          }}
-        >
-          {label}
-          {lever && <small> ↓ pull · hold · Enter</small>}
-        </button>
-      )}
-    </div>
+    <button className={s.brassButton} disabled={disabled} onClick={onCommit}>
+      {label}
+    </button>
   );
 }
 type AudioNodes = {
@@ -213,29 +157,39 @@ export function useAudio(
   paused: boolean,
   pressure: number,
 ) {
-  const nodes = useRef<AudioNodes | null>(null);
-  const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
-  useEffect(() => {
-    if (!("speechSynthesis" in window)) return;
-    const update = () => setVoices(speechSynthesis.getVoices());
-    update();
-    speechSynthesis.addEventListener("voiceschanged", update);
-    return () => {
-      speechSynthesis.removeEventListener("voiceschanged", update);
-      speechSynthesis.cancel();
-    };
-  }, []);
+  const nodes = useRef<AudioNodes | null>(null),
+    player = useRef<HTMLAudioElement | null>(null),
+    generation = useRef(0),
+    frame = useRef(0);
+  const [status, setStatus] = useState("");
+  const latest = useRef({ prefs, paused });
+  latest.current = { prefs, paused };
+  const clearMouth = () => {
+    delete document.documentElement.dataset.deadlockSpeaker;
+    document.documentElement.style.setProperty("--voice-mouth", "0");
+    cancelAnimationFrame(frame.current);
+  };
+  const stop = () => {
+    generation.current++;
+    if (player.current) {
+      player.current.pause();
+      player.current.onended = null;
+      player.current.onerror = null;
+      player.current = null;
+    }
+    clearMouth();
+  };
   const unlock = () => {
     if (nodes.current) {
       void nodes.current.context.resume().catch(() => {});
       return;
     }
     try {
-      const context = new AudioContext();
-      const ambient = context.createGain(),
+      const context = new AudioContext(),
+        ambient = context.createGain(),
         fx = context.createGain();
       ambient.gain.value = 0;
-      fx.gain.value = 0.04;
+      fx.gain.value = 0.03;
       ambient.connect(context.destination);
       fx.connect(context.destination);
       const filter = context.createBiquadFilter();
@@ -252,32 +206,37 @@ export function useAudio(
       });
       nodes.current = { context, ambient, fx, oscillators };
       void context.resume().catch(() => {});
-    } catch {
-      /* Captions remain the primary playback path. */
-    }
+    } catch {}
   };
   useEffect(() => {
     const n = nodes.current;
     if (n) {
       n.ambient.gain.setTargetAtTime(
-        paused || prefs.mode === "silent"
-          ? 0
-          : prefs.music *
-              (pressure >= 60 ? 0.013 : pressure >= 40 ? 0.009 : 0.006),
+        paused || prefs.mode === "silent" ? 0 : prefs.music * 0.005,
         n.context.currentTime,
-        0.4,
+        0.3,
       );
-      n.fx.gain.value = prefs.effects * (prefs.calm ? 0.035 : 0.06);
+      n.fx.gain.value = prefs.effects * 0.035;
       if (paused) void n.context.suspend().catch(() => {});
       else void n.context.resume().catch(() => {});
     }
-    if ("speechSynthesis" in window) {
-      if (paused) speechSynthesis.pause();
-      else speechSynthesis.resume();
+    const a = player.current;
+    if (a) {
+      a.volume =
+        prefs.mode === "silent" || !prefs.characters ? 0 : prefs.narration;
+      a.playbackRate = prefs.rate;
+      if (paused) {
+        a.pause();
+        clearMouth();
+      } else if (a.paused && !a.ended)
+        void a
+          .play()
+          .catch(() => setStatus("Audio is paused. Use Replay to start it."));
     }
   }, [paused, prefs, pressure]);
   useEffect(
     () => () => {
+      stop();
       const n = nodes.current;
       if (n) {
         n.oscillators.forEach((o) => o.stop());
@@ -290,53 +249,64 @@ export function useAudio(
     text: string,
     speaker = "CONTROL",
     force = false,
-    onEnd?: () => void,
+    onEnd?: (played?: boolean) => void,
+    id?: string,
   ) => {
-    if (
-      (prefs.mode === "silent" && !force) ||
-      prefs.voice === "off" ||
-      (!prefs.characters && speaker !== "CONTROL") ||
-      !("speechSynthesis" in window)
-    ) {
-      onEnd?.();
+    stop();
+    setStatus("");
+    const p = latest.current.prefs;
+    if (!force && (p.mode === "silent" || !p.characters)) {
+      onEnd?.(false);
       return;
     }
-    speechSynthesis.cancel();
-    // A voice test or explicit replay is allowed while the room is paused.
-    if (force && speechSynthesis.paused) speechSynthesis.resume();
-    const u = new SpeechSynthesisUtterance(
-      speaker === "CONTROL" ? text : `${speaker}. ${text}`,
-    );
-    u.rate = Math.max(0.8, Math.min(1.4, prefs.rate));
-    u.volume = Math.max(0, Math.min(1, prefs.narration));
-    u.voice =
-      voices.find((v) => v.voiceURI === prefs.voice) ||
-      voices.find((v) =>
-        /zira|aria|jenny|samantha|victoria|karen|moira|female/i.test(v.name),
-      ) ||
-      voices.find((v) => v.lang.startsWith("en")) ||
-      null;
-    const n = nodes.current;
-    if (n) n.ambient.gain.setTargetAtTime(0.001, n.context.currentTime, 0.1);
-    let finished = false;
-    const finish = () => {
-      if (finished) return;
-      finished = true;
-      if (n)
-        n.ambient.gain.setTargetAtTime(
-          prefs.mode === "silent" || paused ? 0 : prefs.music * 0.008,
-          n.context.currentTime,
-          0.4,
+    const entry = id
+      ? audioManifest.lines[id]
+      : Object.values(audioManifest.lines).find(
+          (l) => l.caption === text && l.speaker === speaker,
         );
-      if (force && paused) {
-        speechSynthesis.pause();
-        if (n) void n.context.suspend().catch(() => {});
-      }
-      onEnd?.();
+    if (!entry?.file) {
+      setStatus("This line is available as captions.");
+      onEnd?.(false);
+      return;
+    }
+    const ticket = generation.current,
+      a = new Audio(entry.file);
+    player.current = a;
+    a.preload = "auto";
+    a.volume = p.narration;
+    a.playbackRate = p.rate;
+    let finished = false;
+    const finish = (played: boolean) => {
+      if (finished || ticket !== generation.current) return;
+      finished = true;
+      clearMouth();
+      if (!played)
+        setStatus(
+          "Audio could not load. Your place is saved; read the caption or Replay.",
+        );
+      onEnd?.(played);
     };
-    u.onend = finish;
-    u.onerror = finish;
-    speechSynthesis.speak(u);
+    a.onended = () => finish(true);
+    a.onerror = () => finish(false);
+    a.onplaying = () => {
+      document.documentElement.dataset.deadlockSpeaker = speaker;
+      const tick = () => {
+        if (ticket !== generation.current || a.ended) return;
+        const level =
+          !a.paused && a.volume > 0
+            ? entry.envelope?.[Math.floor(a.currentTime * 20)] || 0
+            : 0;
+        document.documentElement.style.setProperty(
+          "--voice-mouth",
+          level > 0.14 ? "1" : "0",
+        );
+        frame.current = requestAnimationFrame(tick);
+      };
+      cancelAnimationFrame(frame.current);
+      frame.current = requestAnimationFrame(tick);
+    };
+    if (!latest.current.paused || force)
+      void a.play().catch(() => finish(false));
   };
   const effect = (kind: "slam" | "tick" | "gold" | "alarm" = "slam") => {
     const n = nodes.current;
@@ -367,5 +337,6 @@ export function useAudio(
     if (prefs.haptics && navigator.vibrate)
       navigator.vibrate(kind === "alarm" ? 24 : 12);
   };
-  return { unlock, speak, effect, voices };
+
+  return { unlock, speak, effect, stop, status };
 }

@@ -1,0 +1,227 @@
+{
+  "at": "2026-10-30T19:03:25.807Z",
+  "checks": [
+    {
+      "label": "intro-silent fits 390px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "intro-silent fits 320px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "silent never advances an intro line without Next",
+      "pass": true
+    },
+    {
+      "label": "briefing-silent fits 390px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "briefing-silent fits 320px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "briefing has illustrated situation map",
+      "pass": true
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "silent all nine introductions and seven briefing lines appear exactly in order",
+      "pass": true
+    },
+    {
+      "label": "evidence-silent fits 390px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "evidence-silent fits 320px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "discovery appears immediately without a pin screen",
+      "pass": true
+    },
+    {
+      "label": "three short investigations spend exactly three investigations",
+      "pass": true
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "leave-for-later explanation is always visible",
+      "pass": true
+    },
+    {
+      "label": "table-silent fits 390px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "table-silent fits 320px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "plan confirmation explains all choices and projected changes",
+      "pass": true
+    },
+    {
+      "label": "plan can return to editing",
+      "pass": true
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "review-silent fits 390px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "review-silent fits 320px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "event 1 has a paused explanation",
+      "pass": true
+    },
+    {
+      "label": "event 1 is strictly watch-only",
+      "pass": true
+    },
+    {
+      "label": "event 2 has a paused explanation",
+      "pass": true
+    },
+    {
+      "label": "event-popup-silent fits 390px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "event-popup-silent fits 320px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "event 3 has a paused explanation",
+      "pass": true
+    },
+    {
+      "label": "event 4 has a paused explanation",
+      "pass": true
+    },
+    {
+      "label": "event 5 has a paused explanation",
+      "pass": true
+    },
+    {
+      "label": "event 5 is strictly watch-only",
+      "pass": true
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "final debrief reuses three chapter review cards",
+      "pass": true
+    },
+    {
+      "label": "zero console errors or browser exceptions",
+      "pass": true,
+      "details": []
+    }
+  ],
+  "errors": [],
+  "modes": [
+    {
+      "mode": "silent",
+      "observed": [
+        "INT-01",
+        "INT-02",
+        "INT-03",
+        "INT-04",
+        "INT-05",
+        "INT-06",
+        "INT-07",
+        "INT-08",
+        "INT-09",
+        "BRF-01",
+        "BRF-02",
+        "BRF-03",
+        "BRF-04",
+        "BRF-05",
+        "BRF-06",
+        "BRF-07"
+      ],
+      "complete": true
+    }
+  ]
+}

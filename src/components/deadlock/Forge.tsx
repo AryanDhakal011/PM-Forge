@@ -92,7 +92,7 @@ export default function Forge({
                       dispatch({ type: "REMOVE_VETO", side: veto })
                     }
                   >
-                    UNLOCK · 1 AP
+                    Unlock · 1 persuasion point
                   </button>
                 )}
                 {absent && (lane === "recovery" || lane === "learning") && (
@@ -171,7 +171,7 @@ export default function Forge({
                 <span>{facts.secondary}</span>
               </div>
               <label className={s.defense}>
-                <span>DEFENSE CLAMP</span>
+                <span>SUPPORTING EVIDENCE</span>
                 <select
                   aria-label={`${lane} dial defense`}
                   disabled={busy || !!state.proposal}
@@ -231,7 +231,7 @@ export default function Forge({
           <small>
             {ledger
               ? "GHOST RUNWAY PREVIEW"
-              : "The cost is visible before you lift the guard."}
+              : "The time cost is visible before you submit."}
           </small>
           <p className={s.muted} data-beat>
             Auto recovery adds one ongoing supervision unit; 1.2 m/s adds one.
@@ -240,7 +240,7 @@ export default function Forge({
         </div>
         {!state.proposal && (
           <GuardControl
-            label="PROPOSE BUILD"
+            label="Submit proposal"
             disabled={busy || remaining < 2}
             onCommit={() => {
               preview();
@@ -293,7 +293,7 @@ export default function Forge({
               }
               onClick={() => dispatch({ type: "PUSH" })}
             >
-              PUSH THROUGH · 2 AP
+              PUSH THROUGH · 2 persuasion points
             </button>
           </div>
         </>
@@ -304,7 +304,7 @@ export default function Forge({
           disabled={busy || state.ap < 2}
           onClick={() => dispatch({ type: "CALL_DEV" })}
         >
-          ☎ CALL DEV BACK · 2 AP
+          ☎ CALL DEV BACK · 2 persuasion points
         </button>
       )}
       <div className={s.castRow}>

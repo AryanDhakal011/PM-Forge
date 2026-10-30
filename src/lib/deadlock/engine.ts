@@ -37,6 +37,7 @@ export const actionSchema = z.discriminatedUnion("type", [
   z.object({
     type: z.literal("START"),
     mode: z.enum(["sound", "silent", "listen"]),
+    experienceVersion: z.literal(2).optional(),
   }),
   z.object({
     type: z.literal("ACK_SCENE"),
@@ -362,6 +363,22 @@ export function endingFor(s: DeadlockState): Ending {
   if (s.run.wow < 65 && s.run.supervision >= 3) return "BABYSITTER";
   return "STEADY HANDS";
 }
+/** V2's brief explicitly makes slowing cheaper than pausing. Legacy replays retain v1 costs. */
+export function stepInCost(
+  s: DeadlockState,
+  action: "let" | "pause" | "slow" | "takeover",
+) {
+  if (action === "let") return 0;
+  return action === "takeover"
+    ? 10
+    : action === "pause"
+      ? s.experienceVersion === 2
+        ? 6
+        : 4
+      : s.experienceVersion === 2
+        ? 4
+        : 6;
+}
 export function archetypeFor(s: DeadlockState): Archetype {
   const e = s.ending || endingFor(s),
     success = ["SHARED GROUND", "STEADY HANDS", "STANDING GUARD"].includes(e);
@@ -472,6 +489,7 @@ export function reduceEvent(
   switch (e.type) {
     case "START":
       at("entry");
+      if (e.experienceVersion === 2) s.experienceVersion = 2;
       s.scene = "intro";
       break;
     case "ACK_SCENE": {
@@ -824,7 +842,7 @@ export function reduceEvent(
         s.run.tokens--;
         s.run.interventions++;
         s.run.supervision++;
-        s.run.wow -= e.action === "pause" ? 4 : e.action === "slow" ? 6 : 10;
+        s.run.wow -= stepInCost(s, e.action);
         flag(s, `intervened_E${e.eventNo}`);
       }
       const incident = risk && e.eventNo !== 4 && !intervene;

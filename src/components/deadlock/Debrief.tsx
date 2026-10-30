@@ -13,6 +13,7 @@ import {
 } from "@/lib/deadlock/storage";
 import type { DeadlockState, SavedRun } from "@/lib/deadlock/types";
 import s from "./Deadlock.module.css";
+import { ReviewCard } from "./Coaching";
 const labels = {
   rob: "Robotics resentment",
   sw: "Software resentment",
@@ -20,7 +21,7 @@ const labels = {
   ready: "Readiness",
   align: "Alignment",
   cred: "Credibility",
-  ap: "Alignment points",
+  ap: "Persuasion points",
   wow: "Wow",
   supervision: "Supervision",
   incidents: "Incidents",
@@ -114,6 +115,23 @@ export default function Debrief({
         </p>
       </div>
       <p data-beat>{debrief.copy}</p>
+      <div className={s.reviewStack}>
+        {[1, 2, 3].map((chapter) => {
+          const marker =
+            chapter === 1
+              ? "consequence1"
+              : chapter === 2
+                ? "consequence2"
+                : "ending";
+          const at = run.events.findIndex(
+            (e) => e.type === "ACK_SCENE" && e.scene === marker,
+          );
+          const snapshot = at >= 0 ? replay(run.events.slice(0, at)) : state;
+          return (
+            <ReviewCard key={chapter} chapter={chapter} state={snapshot} />
+          );
+        })}
+      </div>
       <div className={s.tabs} role="tablist" aria-label="Debrief views">
         {["trace", "levers", "compare"].map((t) => (
           <button

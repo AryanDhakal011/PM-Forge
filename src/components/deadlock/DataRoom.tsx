@@ -46,10 +46,10 @@ export default function DataRoom({ state, dispatch, busy, calm }: SceneProps) {
           <h2>Let them see the same thing.</h2>
         </div>
         <p className={s.muted} data-beat>
-          {state.ap} AP remaining.{" "}
+          {state.ap} persuasion points remaining.{" "}
           {cost === 0
             ? "HEADSTART · first projection is free."
-            : "Each sealed folder costs 1 AP."}{" "}
+            : "Each sealed folder costs 1 persuasion point."}{" "}
           Replays are free.
         </p>
       </header>
@@ -158,8 +158,7 @@ export default function DataRoom({ state, dispatch, busy, calm }: SceneProps) {
               e.dataTransfer.setData("deadlock-folder", d.id);
             }}
             onClick={() => {
-              setSelected(d.id);
-              if (state.shown.includes(d.id)) setActive(d.id);
+              project(d.id);
             }}
           >
             <span className={s.folderSeal}>
@@ -169,33 +168,20 @@ export default function DataRoom({ state, dispatch, busy, calm }: SceneProps) {
             <small>
               {state.shown.includes(d.id)
                 ? "OPENED · REPLAY FREE"
-                : `${cost} AP · BOTH TEAMS SEE`}
+                : `${cost} persuasion point · click to show both teams`}
             </small>
           </button>
         ))}
       </div>
       <div className={s.planFooter}>
         <div className={s.row}>
-          <button
-            className={s.brassButton}
-            disabled={
-              !selected ||
-              busy ||
-              (!state.shown.includes(selected) && state.ap < cost)
-            }
-            onClick={() => selected && project(selected)}
-          >
-            {selected && state.shown.includes(selected)
-              ? "REPLAY PROJECTION"
-              : "PROJECT SELECTED FOLDER"}
-          </button>
           {has(state, "dev_absent") && !has(state, "dev_recalled") && (
             <button
               className={s.button}
               disabled={state.ap < 2 || busy}
               onClick={() => dispatch({ type: "CALL_DEV" })}
             >
-              ☎ CALL DEV BACK · 2 AP
+              ☎ CALL DEV BACK · 2 persuasion points
             </button>
           )}
         </div>
@@ -204,7 +190,7 @@ export default function DataRoom({ state, dispatch, busy, calm }: SceneProps) {
           disabled={busy}
           onClick={() => dispatch({ type: "ACK_SCENE", scene: "data" })}
         >
-          END BRIEFING → THE FORGE
+          Finish · choose the build →
         </button>
       </div>
       {state.room === "ROBOTICS_WIN" && (

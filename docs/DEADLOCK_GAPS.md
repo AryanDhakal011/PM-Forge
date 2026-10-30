@@ -1,5 +1,7 @@
 # Deadlock prototype: decisions, conflicts and unfinished acceptance work
 
+Historical v1 report. [Deadlock v2](DEADLOCK-V2.md) supersedes the presentation and voice limitations below and versions the corrected intervention costs. The remaining engine-rule conflicts, external validation and cloud-sync limits still apply. The simulation percentages below describe v1 only.
+
 Source: `PMForge_Deadlock_Prototype_Handoff_v1.txt`, dated 30 October 2026. The supplied cast, company, narrative, starting variables and decision rules were adopted for this prototype. No founder approvals, external reviews or playtest results are implied.
 
 ## Rule conflicts and interpretations

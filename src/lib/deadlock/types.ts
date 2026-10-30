@@ -64,7 +64,11 @@ export type Badges = {
   adapted: Badge;
 };
 export type Action =
-  | { type: "START"; mode: "sound" | "silent" | "listen" }
+  | {
+      type: "START";
+      mode: "sound" | "silent" | "listen";
+      experienceVersion?: 2;
+    }
   | { type: "ACK_SCENE"; scene: Scene }
   | { type: "INSPECT"; card: Evidence }
   | { type: "BEGIN_INSPECT"; card: Evidence }
@@ -115,6 +119,7 @@ export type DeadlockState = Metrics & {
     previewMs: number;
   };
   flags: string[];
+  experienceVersion?: 2;
   run: {
     wow: number;
     supervision: number;

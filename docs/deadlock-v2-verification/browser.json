@@ -1,0 +1,1312 @@
+{
+  "at": "2026-10-30T18:58:43.707Z",
+  "checks": [
+    {
+      "label": "intro-silent fits 390px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "intro-silent fits 320px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "silent never advances an intro line without Next",
+      "pass": true
+    },
+    {
+      "label": "briefing-silent fits 390px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "briefing-silent fits 320px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "briefing has illustrated situation map",
+      "pass": true
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "silent all nine introductions and seven briefing lines appear exactly in order",
+      "pass": true
+    },
+    {
+      "label": "evidence-silent fits 390px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "evidence-silent fits 320px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "discovery appears immediately without a pin screen",
+      "pass": true
+    },
+    {
+      "label": "three short investigations spend exactly three investigations",
+      "pass": true
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "leave-for-later explanation is always visible",
+      "pass": true
+    },
+    {
+      "label": "table-silent fits 390px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "table-silent fits 320px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "plan confirmation explains all choices and projected changes",
+      "pass": true
+    },
+    {
+      "label": "plan can return to editing",
+      "pass": true
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "review-silent fits 390px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "review-silent fits 320px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "event 1 has a paused explanation",
+      "pass": true
+    },
+    {
+      "label": "event 1 is strictly watch-only",
+      "pass": true
+    },
+    {
+      "label": "event 2 has a paused explanation",
+      "pass": true
+    },
+    {
+      "label": "event-popup-silent fits 390px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "event-popup-silent fits 320px",
+      "pass": true,
+      "details": {
+        "page": false,
+        "dialog": false
+      }
+    },
+    {
+      "label": "event 3 has a paused explanation",
+      "pass": true
+    },
+    {
+      "label": "event 4 has a paused explanation",
+      "pass": true
+    },
+    {
+      "label": "event 5 has a paused explanation",
+      "pass": true
+    },
+    {
+      "label": "event 5 is strictly watch-only",
+      "pass": true
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "final debrief reuses three chapter review cards",
+      "pass": true
+    },
+    {
+      "label": "recorded voice activates Mara portrait",
+      "pass": true
+    },
+    {
+      "label": "sound never advances an intro line without Next",
+      "pass": true
+    },
+    {
+      "label": "briefing has illustrated situation map",
+      "pass": true
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "sound all nine introductions and seven briefing lines appear exactly in order",
+      "pass": true
+    },
+    {
+      "label": "discovery appears immediately without a pin screen",
+      "pass": true
+    },
+    {
+      "label": "three short investigations spend exactly three investigations",
+      "pass": true
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "leave-for-later explanation is always visible",
+      "pass": true
+    },
+    {
+      "label": "plan confirmation explains all choices and projected changes",
+      "pass": true
+    },
+    {
+      "label": "plan can return to editing",
+      "pass": true
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "event 1 has a paused explanation",
+      "pass": true
+    },
+    {
+      "label": "event 1 is strictly watch-only",
+      "pass": true
+    },
+    {
+      "label": "event 2 has a paused explanation",
+      "pass": true
+    },
+    {
+      "label": "event 3 has a paused explanation",
+      "pass": true
+    },
+    {
+      "label": "event 4 has a paused explanation",
+      "pass": true
+    },
+    {
+      "label": "event 5 has a paused explanation",
+      "pass": true
+    },
+    {
+      "label": "event 5 is strictly watch-only",
+      "pass": true
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "final debrief reuses three chapter review cards",
+      "pass": true
+    },
+    {
+      "label": "skip-all guide preference is persistent",
+      "pass": true
+    },
+    {
+      "label": "keyboard Enter advances exactly one dialogue line",
+      "pass": true
+    },
+    {
+      "label": "returning run suppresses automatic guides",
+      "pass": true
+    },
+    {
+      "label": "manual guide still works after skip all",
+      "pass": true
+    },
+    {
+      "label": "skip guides survives a page reload",
+      "pass": true
+    },
+    {
+      "label": "auto dialogue waits the extra 600ms after audio ends",
+      "pass": true
+    },
+    {
+      "label": "duplicate audio-end events advance exactly once",
+      "pass": true
+    },
+    {
+      "label": "audio failure keeps the caption in place and offers replay",
+      "pass": true
+    },
+    {
+      "label": "all 185 pre-rendered audio files decode and play to ended",
+      "pass": true
+    },
+    {
+      "label": "zero console errors or browser exceptions",
+      "pass": true,
+      "details": []
+    }
+  ],
+  "errors": [],
+  "modes": [
+    {
+      "mode": "silent",
+      "observed": [
+        "INT-01",
+        "INT-02",
+        "INT-03",
+        "INT-04",
+        "INT-05",
+        "INT-06",
+        "INT-07",
+        "INT-08",
+        "INT-09",
+        "BRF-01",
+        "BRF-02",
+        "BRF-03",
+        "BRF-04",
+        "BRF-05",
+        "BRF-06",
+        "BRF-07"
+      ],
+      "complete": true
+    },
+    {
+      "mode": "sound",
+      "observed": [
+        "INT-01",
+        "INT-02",
+        "INT-03",
+        "INT-04",
+        "INT-05",
+        "INT-06",
+        "INT-07",
+        "INT-08",
+        "INT-09",
+        "BRF-01",
+        "BRF-02",
+        "BRF-03",
+        "BRF-04",
+        "BRF-05",
+        "BRF-06",
+        "BRF-07"
+      ],
+      "complete": true
+    }
+  ],
+  "audio": [
+    {
+      "id": "INT-01",
+      "duration": 8.15263,
+      "played": true
+    },
+    {
+      "id": "INT-02",
+      "duration": 6.108685,
+      "played": true
+    },
+    {
+      "id": "INT-03",
+      "duration": 5.988005,
+      "played": true
+    },
+    {
+      "id": "INT-04",
+      "duration": 7.337347,
+      "played": true
+    },
+    {
+      "id": "INT-05",
+      "duration": 5.158685,
+      "played": true
+    },
+    {
+      "id": "INT-06",
+      "duration": 5.287959,
+      "played": true
+    },
+    {
+      "id": "INT-07",
+      "duration": 2.806009,
+      "played": true
+    },
+    {
+      "id": "INT-08",
+      "duration": 1.315306,
+      "played": true
+    },
+    {
+      "id": "INT-09",
+      "duration": 3.168685,
+      "played": true
+    },
+    {
+      "id": "BRF-01",
+      "duration": 5.95068,
+      "played": true
+    },
+    {
+      "id": "BRF-02",
+      "duration": 12.749297,
+      "played": true
+    },
+    {
+      "id": "BRF-03",
+      "duration": 9.203333,
+      "played": true
+    },
+    {
+      "id": "BRF-04",
+      "duration": 9.917302,
+      "played": true
+    },
+    {
+      "id": "BRF-05",
+      "duration": 7.938005,
+      "played": true
+    },
+    {
+      "id": "BRF-06",
+      "duration": 9.6,
+      "played": true
+    },
+    {
+      "id": "BRF-07",
+      "duration": 5.525351,
+      "played": true
+    },
+    {
+      "id": "GUIDE-FLOOR",
+      "duration": 4.99068,
+      "played": true
+    },
+    {
+      "id": "GUIDE-TABLE",
+      "duration": 5.15,
+      "played": true
+    },
+    {
+      "id": "GUIDE-CONSEQUENCE1",
+      "duration": 4.188685,
+      "played": true
+    },
+    {
+      "id": "GUIDE-DATA",
+      "duration": 3.945556,
+      "played": true
+    },
+    {
+      "id": "GUIDE-FORGE",
+      "duration": 7.298005,
+      "played": true
+    },
+    {
+      "id": "GUIDE-RUN",
+      "duration": 5.235351,
+      "played": true
+    },
+    {
+      "id": "GUIDE-ENDING",
+      "duration": 4.531338,
+      "played": true
+    },
+    {
+      "id": "GUIDE-DEBRIEF",
+      "duration": 4.148685,
+      "played": true
+    },
+    {
+      "id": "DISC-E1",
+      "duration": 3.06068,
+      "played": true
+    },
+    {
+      "id": "DISC-E2",
+      "duration": 4.092018,
+      "played": true
+    },
+    {
+      "id": "DISC-E3",
+      "duration": 4.918639,
+      "played": true
+    },
+    {
+      "id": "DISC-E4",
+      "duration": 3.932676,
+      "played": true
+    },
+    {
+      "id": "DISC-E5",
+      "duration": 3.712585,
+      "played": true
+    },
+    {
+      "id": "MISMATCH-DEV-1",
+      "duration": 5.281338,
+      "played": true
+    },
+    {
+      "id": "MISMATCH-DEV-2",
+      "duration": 2.963333,
+      "played": true
+    },
+    {
+      "id": "MISMATCH-DEV-3",
+      "duration": 3.182018,
+      "played": true
+    },
+    {
+      "id": "MISMATCH-DEV-4",
+      "duration": 4.061338,
+      "played": true
+    },
+    {
+      "id": "MISMATCH-DEV-5",
+      "duration": 2.477347,
+      "played": true
+    },
+    {
+      "id": "MISMATCH-INES-1",
+      "duration": 3.857347,
+      "played": true
+    },
+    {
+      "id": "MISMATCH-INES-2",
+      "duration": 3.228005,
+      "played": true
+    },
+    {
+      "id": "MISMATCH-INES-3",
+      "duration": 2.984671,
+      "played": true
+    },
+    {
+      "id": "MISMATCH-INES-4",
+      "duration": 3.237302,
+      "played": true
+    },
+    {
+      "id": "MISMATCH-INES-5",
+      "duration": 2.398005,
+      "played": true
+    },
+    {
+      "id": "MISMATCH-INES-6",
+      "duration": 3.092676,
+      "played": true
+    },
+    {
+      "id": "MISMATCH-INES-7",
+      "duration": 3.868685,
+      "played": true
+    },
+    {
+      "id": "MISMATCH-INES-8",
+      "duration": 1.962676,
+      "played": true
+    },
+    {
+      "id": "MATCH-DEV-1",
+      "duration": 3.304671,
+      "played": true
+    },
+    {
+      "id": "MATCH-DEV-2",
+      "duration": 2.088685,
+      "played": true
+    },
+    {
+      "id": "MATCH-INES-1",
+      "duration": 1.741973,
+      "played": true
+    },
+    {
+      "id": "MATCH-INES-2",
+      "duration": 2.727959,
+      "played": true
+    },
+    {
+      "id": "MATCH-MARA-1",
+      "duration": 5.129297,
+      "played": true
+    },
+    {
+      "id": "EVENT-1",
+      "duration": 4.247959,
+      "played": true
+    },
+    {
+      "id": "EVENT-2",
+      "duration": 2.578639,
+      "played": true
+    },
+    {
+      "id": "EVENT-3",
+      "duration": 3.826009,
+      "played": true
+    },
+    {
+      "id": "EVENT-4",
+      "duration": 2.652676,
+      "played": true
+    },
+    {
+      "id": "EVENT-5",
+      "duration": 3.40068,
+      "played": true
+    },
+    {
+      "id": "LETTER-01",
+      "duration": 8.40263,
+      "played": true
+    },
+    {
+      "id": "CO-01",
+      "duration": 9.640249,
+      "played": true
+    },
+    {
+      "id": "CO-02",
+      "duration": 5.167347,
+      "played": true
+    },
+    {
+      "id": "CO-03",
+      "duration": 4.836644,
+      "played": true
+    },
+    {
+      "id": "CO-05",
+      "duration": 3.924014,
+      "played": true
+    },
+    {
+      "id": "CO-04",
+      "duration": 5.279932,
+      "played": true
+    },
+    {
+      "id": "CO-06",
+      "duration": 3.23,
+      "played": true
+    },
+    {
+      "id": "FW-01a",
+      "duration": 3.966009,
+      "played": true
+    },
+    {
+      "id": "FW-01b",
+      "duration": 3.083515,
+      "played": true
+    },
+    {
+      "id": "FW-02a",
+      "duration": 4.295351,
+      "played": true
+    },
+    {
+      "id": "FW-02b",
+      "duration": 2.195351,
+      "played": true
+    },
+    {
+      "id": "FW-03a",
+      "duration": 3.198005,
+      "played": true
+    },
+    {
+      "id": "FW-03b",
+      "duration": 3.533333,
+      "played": true
+    },
+    {
+      "id": "FW-03c",
+      "duration": 2.983968,
+      "played": true
+    },
+    {
+      "id": "FW-04",
+      "duration": 5.095964,
+      "played": true
+    },
+    {
+      "id": "FW-05a",
+      "duration": 2.247596,
+      "played": true
+    },
+    {
+      "id": "FW-05b",
+      "duration": 2.854603,
+      "played": true
+    },
+    {
+      "id": "FW-06",
+      "duration": 2.639433,
+      "played": true
+    },
+    {
+      "id": "FW-07",
+      "duration": 3.133311,
+      "played": true
+    },
+    {
+      "id": "FW-08",
+      "duration": 2.302018,
+      "played": true
+    },
+    {
+      "id": "FW-09",
+      "duration": 2.112018,
+      "played": true
+    },
+    {
+      "id": "T-INTRO",
+      "duration": 3.856667,
+      "played": true
+    },
+    {
+      "id": "T-R-DEV",
+      "duration": 2.945306,
+      "played": true
+    },
+    {
+      "id": "T-R-INES",
+      "duration": 3.822676,
+      "played": true
+    },
+    {
+      "id": "T-S-INES",
+      "duration": 2.749297,
+      "played": true
+    },
+    {
+      "id": "T-S-DEV",
+      "duration": 2.705964,
+      "played": true
+    },
+    {
+      "id": "T-B-DEV",
+      "duration": 3.113333,
+      "played": true
+    },
+    {
+      "id": "T-B-INES",
+      "duration": 2.759342,
+      "played": true
+    },
+    {
+      "id": "T-D-DEV",
+      "duration": 2.680635,
+      "played": true
+    },
+    {
+      "id": "T-D-INES",
+      "duration": 3.047347,
+      "played": true
+    },
+    {
+      "id": "T-EV-SUP",
+      "duration": 2.217959,
+      "played": true
+    },
+    {
+      "id": "T-EV-CON",
+      "duration": 2.188685,
+      "played": true
+    },
+    {
+      "id": "T-EV-NEU",
+      "duration": 1.911338,
+      "played": true
+    },
+    {
+      "id": "T-EV-NONE",
+      "duration": 1.383311,
+      "played": true
+    },
+    {
+      "id": "T-AP",
+      "duration": 2.334014,
+      "played": true
+    },
+    {
+      "id": "T-LOCK",
+      "duration": 1.277302,
+      "played": true
+    },
+    {
+      "id": "C1-ALIGNED",
+      "duration": 4.281338,
+      "played": true
+    },
+    {
+      "id": "C1-ROBOTICS",
+      "duration": 3.746667,
+      "played": true
+    },
+    {
+      "id": "C1-SOFTWARE",
+      "duration": 3.089342,
+      "played": true
+    },
+    {
+      "id": "C1-STALLED",
+      "duration": 3.379342,
+      "played": true
+    },
+    {
+      "id": "C1-MIXED",
+      "duration": 2.994014,
+      "played": true
+    },
+    {
+      "id": "O2-A1",
+      "duration": 3.397302,
+      "played": true
+    },
+    {
+      "id": "O2-R1",
+      "duration": 3.245964,
+      "played": true
+    },
+    {
+      "id": "O2-R2",
+      "duration": 2.557302,
+      "played": true
+    },
+    {
+      "id": "O2-R3",
+      "duration": 2.034014,
+      "played": true
+    },
+    {
+      "id": "O2-S1",
+      "duration": 3.695964,
+      "played": true
+    },
+    {
+      "id": "O2-S2",
+      "duration": 1.538685,
+      "played": true
+    },
+    {
+      "id": "O2-T1",
+      "duration": 1.952676,
+      "played": true
+    },
+    {
+      "id": "O2-M1",
+      "duration": 3.456009,
+      "played": true
+    },
+    {
+      "id": "O2-CTRL",
+      "duration": 3.867302,
+      "played": true
+    },
+    {
+      "id": "O2-14",
+      "duration": 2.878005,
+      "played": true
+    },
+    {
+      "id": "O2-15",
+      "duration": 1.576667,
+      "played": true
+    },
+    {
+      "id": "O2-16",
+      "duration": 1.211338,
+      "played": true
+    },
+    {
+      "id": "S-D1-DEV",
+      "duration": 3.048685,
+      "played": true
+    },
+    {
+      "id": "S-D1-INES",
+      "duration": 2.103333,
+      "played": true
+    },
+    {
+      "id": "S-D2-DEV",
+      "duration": 2.948005,
+      "played": true
+    },
+    {
+      "id": "S-D2-INES",
+      "duration": 4.24263,
+      "played": true
+    },
+    {
+      "id": "S-D2-MARA",
+      "duration": 2.402018,
+      "played": true
+    },
+    {
+      "id": "S-D3-INES",
+      "duration": 4.706009,
+      "played": true
+    },
+    {
+      "id": "S-D3-DEV",
+      "duration": 2.28068,
+      "played": true
+    },
+    {
+      "id": "S-D4-DEV",
+      "duration": 2.216667,
+      "played": true
+    },
+    {
+      "id": "S-D4-INES",
+      "duration": 3.148005,
+      "played": true
+    },
+    {
+      "id": "S-NAD-OK",
+      "duration": 2.668685,
+      "played": true
+    },
+    {
+      "id": "S-NAD-NO",
+      "duration": 3.539977,
+      "played": true
+    },
+    {
+      "id": "S-VETO-R",
+      "duration": 3.518005,
+      "played": true
+    },
+    {
+      "id": "S-VETO-S",
+      "duration": 2.261338,
+      "played": true
+    },
+    {
+      "id": "S-END",
+      "duration": 2.952902,
+      "played": true
+    },
+    {
+      "id": "S-COST",
+      "duration": 1.864671,
+      "played": true
+    },
+    {
+      "id": "F-INTRO",
+      "duration": 4.167347,
+      "played": true
+    },
+    {
+      "id": "F-ACC-DEV",
+      "duration": 1.491338,
+      "played": true
+    },
+    {
+      "id": "F-ACC-INES",
+      "duration": 1.720635,
+      "played": true
+    },
+    {
+      "id": "F-ACC-MARA",
+      "duration": 2.255964,
+      "played": true
+    },
+    {
+      "id": "F-REJ-DEV-1",
+      "duration": 2.60068,
+      "played": true
+    },
+    {
+      "id": "F-REJ-DEV-2",
+      "duration": 2.558005,
+      "played": true
+    },
+    {
+      "id": "F-REJ-DEV-3",
+      "duration": 2.792676,
+      "played": true
+    },
+    {
+      "id": "F-REJ-INES-1",
+      "duration": 2.26263,
+      "played": true
+    },
+    {
+      "id": "F-REJ-INES-2",
+      "duration": 3.122018,
+      "played": true
+    },
+    {
+      "id": "F-REJ-INES-3",
+      "duration": 2.823333,
+      "played": true
+    },
+    {
+      "id": "F-REJ-INES-4",
+      "duration": 2.429297,
+      "played": true
+    },
+    {
+      "id": "F-PUSH-MARA",
+      "duration": 2.112676,
+      "played": true
+    },
+    {
+      "id": "F-PUSH-DEV",
+      "duration": 1.555351,
+      "played": true
+    },
+    {
+      "id": "F-PUSH-INES",
+      "duration": 2.131293,
+      "played": true
+    },
+    {
+      "id": "F-IMP",
+      "duration": 2.976644,
+      "played": true
+    },
+    {
+      "id": "F-GOLD",
+      "duration": 1.331338,
+      "played": true
+    },
+    {
+      "id": "F-RUNWAY",
+      "duration": 2.075351,
+      "played": true
+    },
+    {
+      "id": "C2-AGREED",
+      "duration": 3.283311,
+      "played": true
+    },
+    {
+      "id": "C2-PUSHED",
+      "duration": 2.273719,
+      "played": true
+    },
+    {
+      "id": "C2-IMPOSED",
+      "duration": 2.922676,
+      "played": true
+    },
+    {
+      "id": "RN-E1-H",
+      "duration": 2.86068,
+      "played": true
+    },
+    {
+      "id": "RN-E1-FAST",
+      "duration": 1.982018,
+      "played": true
+    },
+    {
+      "id": "RN-E1-SLOW",
+      "duration": 1.939342,
+      "played": true
+    },
+    {
+      "id": "RN-E2-H1",
+      "duration": 3.085351,
+      "played": true
+    },
+    {
+      "id": "RN-E2-H2",
+      "duration": 1.962018,
+      "played": true
+    },
+    {
+      "id": "RN-E2-ASK",
+      "duration": 1.862018,
+      "played": true
+    },
+    {
+      "id": "RN-E2-SAFE",
+      "duration": 1.571293,
+      "played": true
+    },
+    {
+      "id": "RN-E2-INC",
+      "duration": 2.169342,
+      "played": true
+    },
+    {
+      "id": "RN-E2-INC2",
+      "duration": 1.072086,
+      "played": true
+    },
+    {
+      "id": "RN-INT-PAUSE",
+      "duration": 1.584671,
+      "played": true
+    },
+    {
+      "id": "RN-INT-SLOW",
+      "duration": 1.64068,
+      "played": true
+    },
+    {
+      "id": "RN-INT-TAKE",
+      "duration": 1.53263,
+      "played": true
+    },
+    {
+      "id": "RN-E3-H",
+      "duration": 1.961973,
+      "played": true
+    },
+    {
+      "id": "RN-E3-MAN",
+      "duration": 1.683333,
+      "played": true
+    },
+    {
+      "id": "RN-E3-ASS",
+      "duration": 1.305351,
+      "played": true
+    },
+    {
+      "id": "RN-E3-AUTO",
+      "duration": 1.576667,
+      "played": true
+    },
+    {
+      "id": "RN-E3-INC",
+      "duration": 2.574014,
+      "played": true
+    },
+    {
+      "id": "RN-E4-H",
+      "duration": 3.015351,
+      "played": true
+    },
+    {
+      "id": "RN-E4-ALW",
+      "duration": 2.497302,
+      "played": true
+    },
+    {
+      "id": "RN-E4-UNC",
+      "duration": 2.464671,
+      "played": true
+    },
+    {
+      "id": "RN-E4-FAIL",
+      "duration": 1.443311,
+      "played": true
+    },
+    {
+      "id": "RN-E5-H",
+      "duration": 2.668639,
+      "played": true
+    },
+    {
+      "id": "EN-01",
+      "duration": 2.831973,
+      "played": true
+    },
+    {
+      "id": "EN-02",
+      "duration": 3.806009,
+      "played": true
+    },
+    {
+      "id": "EN-03",
+      "duration": 2.215964,
+      "played": true
+    },
+    {
+      "id": "EN-F1",
+      "duration": 4.327959,
+      "played": true
+    },
+    {
+      "id": "EN-F2",
+      "duration": 2.716667,
+      "played": true
+    },
+    {
+      "id": "EN-F3",
+      "duration": 1.91,
+      "played": true
+    },
+    {
+      "id": "EN-G1",
+      "duration": 4.242676,
+      "played": true
+    },
+    {
+      "id": "EN-G2",
+      "duration": 3.419342,
+      "played": true
+    },
+    {
+      "id": "EN-G3",
+      "duration": 1.432018,
+      "played": true
+    },
+    {
+      "id": "EN-G4",
+      "duration": 1.19,
+      "played": true
+    },
+    {
+      "id": "EN-W1",
+      "duration": 3.557302,
+      "played": true
+    },
+    {
+      "id": "EN-W2",
+      "duration": 1.041973,
+      "played": true
+    },
+    {
+      "id": "EN-W3",
+      "duration": 1.191293,
+      "played": true
+    },
+    {
+      "id": "EN-W4",
+      "duration": 1.56,
+      "played": true
+    },
+    {
+      "id": "EN-B1",
+      "duration": 3.410635,
+      "played": true
+    },
+    {
+      "id": "EN-B2",
+      "duration": 1.517347,
+      "played": true
+    },
+    {
+      "id": "EN-S1",
+      "duration": 2.625964,
+      "played": true
+    },
+    {
+      "id": "EN-S2",
+      "duration": 1.339342,
+      "played": true
+    },
+    {
+      "id": "EN-S3",
+      "duration": 1.538685,
+      "played": true
+    },
+    {
+      "id": "EN-END",
+      "duration": 2.564671,
+      "played": true
+    },
+    {
+      "id": "T-EV-SUP-DEV",
+      "duration": 2.003333,
+      "played": true
+    },
+    {
+      "id": "T-EV-SUP-INES",
+      "duration": 2.026667,
+      "played": true
+    },
+    {
+      "id": "T-EV-SUP-MARA",
+      "duration": 1.686644,
+      "played": true
+    }
+  ]
+}

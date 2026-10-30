@@ -1,0 +1,543 @@
+{
+  "version": "2.0",
+  "intro": [
+    "INT-01",
+    "INT-02",
+    "INT-03",
+    "INT-04",
+    "INT-05",
+    "INT-06",
+    "INT-07",
+    "INT-08",
+    "INT-09"
+  ],
+  "briefing": [
+    "BRF-01",
+    "BRF-02",
+    "BRF-03",
+    "BRF-04",
+    "BRF-05",
+    "BRF-06",
+    "BRF-07"
+  ],
+  "guides": {
+    "floor": {
+      "title": "Walk the lab",
+      "speaker": "Mara",
+      "line": "GUIDE-FLOOR",
+      "goal": "Investigate 3 of the 5 objects.",
+      "doThis": "Choose an object, follow its short instruction, and the discovery goes straight into your case file.",
+      "watch": "You have three investigations. Once you start handling an object, closing it does not refund one."
+    },
+    "table": {
+      "title": "Put the conflict on the table",
+      "speaker": "Mara",
+      "line": "GUIDE-TABLE",
+      "goal": "Settle all three arguments.",
+      "doThis": "Back Dev, back Ines, find a compromise, or leave it for later. Attach evidence that supports the actual argument.",
+      "watch": "Each compromise costs 2 persuasion points and 1 week. The faint gauge needles preview your whole plan."
+    },
+    "consequence1": {
+      "title": "The room reacts",
+      "speaker": "Ines",
+      "line": "GUIDE-CONSEQUENCE1",
+      "goal": "Understand how the team took your plan.",
+      "doThis": "Read the response, review the consequences, then continue.",
+      "watch": "Who is still in the room? Who is no longer listening?"
+    },
+    "data": {
+      "title": "The projector",
+      "speaker": "Dev",
+      "line": "GUIDE-DATA",
+      "goal": "Help the team reconsider its assumptions.",
+      "doThis": "Choose a dataset to project. Read the team response, then show another or select Finish.",
+      "watch": "Finding evidence and sharing it are different. If Dev left, you can call him back."
+    },
+    "forge": {
+      "title": "Build the prototype",
+      "speaker": "Mara",
+      "line": "GUIDE-FORGE",
+      "goal": "Choose settings the leads can accept.",
+      "doThis": "Pick a speed, recovery mode and confirmation rule. Attach supporting evidence, then submit.",
+      "watch": "Watch the time cost and unknowns. If rejected, you can revise once."
+    },
+    "run": {
+      "title": "Live demo",
+      "speaker": "Mara",
+      "line": "GUIDE-RUN",
+      "goal": "Demonstrate the prototype you actually built.",
+      "doThis": "Watch events 1 and 5. At events 2, 3 and 4, decide whether to trust the robot or step in.",
+      "watch": "Three chances to step in, shared across the run. Safety can come at the cost of impact."
+    },
+    "ending": {
+      "title": "See what happened",
+      "speaker": "Mara",
+      "line": "GUIDE-ENDING",
+      "goal": "Understand the result.",
+      "doThis": "Read the ending, then open your chapter reviews and decision trace.",
+      "watch": "A dramatic demo is not the same as a team that can deliver it."
+    },
+    "debrief": {
+      "title": "Reflect and try another path",
+      "speaker": "Mara",
+      "line": "GUIDE-DEBRIEF",
+      "goal": "Connect your decisions to their consequences.",
+      "doThis": "Read the reviews, inspect your trace, or fork an earlier decision and compare the results.",
+      "watch": "Your original stays intact. Export this run to keep a backup."
+    }
+  },
+  "evidence": {
+    "E1": {
+      "instruction": "This is footage from our best demo. Drag the timeline to the red marker at 0:47, then click that moment.",
+      "discovery": "The numbers look great, but there is a near-miss at 0:47 that never made the highlight video.",
+      "line": "DISC-E1"
+    },
+    "E2": {
+      "instruction": "Three incident slips are pinned here. Click each one to flip it open.",
+      "discovery": "The interlock and jam recovery have both caused real problems.",
+      "line": "DISC-E2"
+    },
+    "E3": {
+      "instruction": "Two threads, frozen mid-argument. Select the two claims nobody has actually tested.",
+      "discovery": "Both leads are treating guesses as facts.",
+      "line": "DISC-E3"
+    },
+    "E4": {
+      "instruction": "Open the sealed cover. You can drag it aside or select Open report.",
+      "discovery": "There is test data that never reached the team.",
+      "line": "DISC-E4"
+    },
+    "E5": {
+      "instruction": "Open the envelope, then highlight the two sentences describing what Northgate needs.",
+      "discovery": "Northgate wants both: a robot that runs without constant help, and a documented way for a human to override it.",
+      "line": "DISC-E5"
+    }
+  },
+  "mismatch": {
+    "Dev": [
+      "MISMATCH-DEV-1",
+      "MISMATCH-DEV-2",
+      "MISMATCH-DEV-3",
+      "MISMATCH-DEV-4",
+      "MISMATCH-DEV-5"
+    ],
+    "Ines": [
+      "MISMATCH-INES-1",
+      "MISMATCH-INES-2",
+      "MISMATCH-INES-3",
+      "MISMATCH-INES-4",
+      "MISMATCH-INES-5",
+      "MISMATCH-INES-6",
+      "MISMATCH-INES-7",
+      "MISMATCH-INES-8"
+    ]
+  },
+  "match": {
+    "Dev": [
+      "MATCH-DEV-1",
+      "MATCH-DEV-2"
+    ],
+    "Ines": [
+      "MATCH-INES-1",
+      "MATCH-INES-2"
+    ],
+    "Mara": [
+      "MATCH-MARA-1"
+    ]
+  },
+  "events": {
+    "1": {
+      "line": "EVENT-1",
+      "goal": "Watch the robot handle the first tray."
+    },
+    "2": {
+      "line": "EVENT-2",
+      "goal": "A technician crosses 0.4 metres from the robot."
+    },
+    "3": {
+      "line": "EVENT-3",
+      "goal": "A parcel jams the cell. Does the robot recover safely?"
+    },
+    "4": {
+      "line": "EVENT-4",
+      "goal": "The robot sees an object it has not learned before."
+    },
+    "5": {
+      "line": "EVENT-5",
+      "goal": "Watch the final demonstration and the customer response."
+    }
+  },
+  "lines": [
+    {
+      "id": "INT-01",
+      "speaker": "Mara",
+      "text": "There you are. I'm Mara, Head of Engineering. Short version of my job: when two smart people disagree, I get the headache.",
+      "expression": "neutral",
+      "emotion": "warm, dry"
+    },
+    {
+      "id": "INT-02",
+      "speaker": "Mara",
+      "text": "I brought you in because I need someone who looks at the evidence, not at whoever is loudest in the room.",
+      "expression": "neutral",
+      "emotion": "conversational"
+    },
+    {
+      "id": "INT-03",
+      "speaker": "Dev",
+      "text": "Dev! Robotics Lead. I build the part where people say, wait, it did that on its own?",
+      "expression": "neutral",
+      "emotion": "energetic"
+    },
+    {
+      "id": "INT-04",
+      "speaker": "Dev",
+      "text": "TERN-1 sorts a full tray in under a minute. Slow it down and you're showing Northgate a very expensive shelf.",
+      "expression": "neutral",
+      "emotion": "conversational"
+    },
+    {
+      "id": "INT-05",
+      "speaker": "Ines",
+      "text": "Ines. Software and Safety. I make sure the robot stops when it's supposed to stop.",
+      "expression": "neutral",
+      "emotion": "calm, precise"
+    },
+    {
+      "id": "INT-06",
+      "speaker": "Ines",
+      "text": "I'd also like everyone to keep all ten fingers through the demo. Call me old fashioned.",
+      "expression": "neutral",
+      "emotion": "conversational"
+    },
+    {
+      "id": "INT-07",
+      "speaker": "Dev",
+      "text": "Nobody is losing fingers, Ines.",
+      "expression": "neutral",
+      "emotion": "conversational"
+    },
+    {
+      "id": "INT-08",
+      "speaker": "Ines",
+      "text": "Not yet.",
+      "expression": "annoyed",
+      "emotion": "conversational"
+    },
+    {
+      "id": "INT-09",
+      "speaker": "Mara",
+      "text": "And that is the meeting I have every single day.",
+      "expression": "neutral",
+      "emotion": "dry"
+    },
+    {
+      "id": "BRF-01",
+      "speaker": "Mara",
+      "text": "Here's the situation. We're Halyard Robotics, building a warehouse robot called TERN-1.",
+      "expression": "thinking",
+      "emotion": "warm"
+    },
+    {
+      "id": "BRF-02",
+      "speaker": "Mara",
+      "text": "Our customer, Northgate, watches a live demo in twelve weeks. They want two things that don't naturally get along: a robot that works on its own, and a paper trail proving a human can override it.",
+      "expression": "thinking",
+      "emotion": "warm"
+    },
+    {
+      "id": "BRF-03",
+      "speaker": "Mara",
+      "text": "Dev says speed and autonomy win the contract. Ines says safeguards win it. They're both partly right, and they've stopped listening to each other.",
+      "expression": "thinking",
+      "emotion": "warm"
+    },
+    {
+      "id": "BRF-04",
+      "speaker": "Mara",
+      "text": "Your job, in six moves: check the evidence, settle three arguments, show the team the data, choose the robot's settings, run the demo, then see what happened.",
+      "expression": "thinking",
+      "emotion": "warm"
+    },
+    {
+      "id": "BRF-05",
+      "speaker": "Mara",
+      "text": "Watch the gauges at the top. Resentment, runway, readiness, team alignment, and your credibility. Every choice moves them.",
+      "expression": "thinking",
+      "emotion": "warm"
+    },
+    {
+      "id": "BRF-06",
+      "speaker": "Mara",
+      "text": "You can't check everything. You get three investigations, five persuasion points, and three chances to step in during the demo. Spend them like they matter.",
+      "expression": "thinking",
+      "emotion": "warm"
+    },
+    {
+      "id": "BRF-07",
+      "speaker": "Mara",
+      "text": "Nobody is grading you on being right. They're watching what you do with the evidence. Ready?",
+      "expression": "thinking",
+      "emotion": "warm"
+    },
+    {
+      "id": "GUIDE-FLOOR",
+      "speaker": "Mara",
+      "text": "Five things in this room could change how we argue. You can look closely at three.",
+      "expression": "thinking",
+      "emotion": "conversational"
+    },
+    {
+      "id": "GUIDE-TABLE",
+      "speaker": "Mara",
+      "text": "Three arguments are on this table. For each one, drop a token on who you back.",
+      "expression": "thinking",
+      "emotion": "conversational"
+    },
+    {
+      "id": "GUIDE-CONSEQUENCE1",
+      "speaker": "Ines",
+      "text": "That's how the team took it. This mood follows us into the next chapter.",
+      "expression": "thinking",
+      "emotion": "conversational"
+    },
+    {
+      "id": "GUIDE-DATA",
+      "speaker": "Dev",
+      "text": "Four sets of numbers. Pick what we show, and in what order.",
+      "expression": "thinking",
+      "emotion": "conversational"
+    },
+    {
+      "id": "GUIDE-FORGE",
+      "speaker": "Mara",
+      "text": "Now the real choices. Speed, recovery, learning. And remember, a question mark means nobody measured it.",
+      "expression": "thinking",
+      "emotion": "conversational"
+    },
+    {
+      "id": "GUIDE-RUN",
+      "speaker": "Mara",
+      "text": "Five events. The action pauses before each choice, so no countdown panic.",
+      "expression": "thinking",
+      "emotion": "conversational"
+    },
+    {
+      "id": "GUIDE-ENDING",
+      "speaker": "Mara",
+      "text": "The demo is over. Now let us look at what your decisions made possible.",
+      "expression": "thinking",
+      "emotion": "conversational"
+    },
+    {
+      "id": "GUIDE-DEBRIEF",
+      "speaker": "Mara",
+      "text": "You can rewind a decision without erasing the run you just made.",
+      "expression": "thinking",
+      "emotion": "conversational"
+    },
+    {
+      "id": "DISC-E1",
+      "speaker": "Dev",
+      "text": "Okay. That is not in the highlight video.",
+      "expression": "annoyed",
+      "emotion": "conversational"
+    },
+    {
+      "id": "DISC-E2",
+      "speaker": "Ines",
+      "text": "Three separate incidents. The repeated part is what matters.",
+      "expression": "thinking",
+      "emotion": "conversational"
+    },
+    {
+      "id": "DISC-E3",
+      "speaker": "Mara",
+      "text": "Good. Now we have two assumptions to test, instead of two people to blame.",
+      "expression": "thinking",
+      "emotion": "conversational"
+    },
+    {
+      "id": "DISC-E4",
+      "speaker": "Ines",
+      "text": "We tested this. We just never put the results in the same room.",
+      "expression": "thinking",
+      "emotion": "conversational"
+    },
+    {
+      "id": "DISC-E5",
+      "speaker": "Mara",
+      "text": "Read it twice. They're not picking a side. They want both.",
+      "expression": "thinking",
+      "emotion": "conversational"
+    },
+    {
+      "id": "MISMATCH-DEV-1",
+      "speaker": "Dev",
+      "text": "I want to like this, I really do. But it's answering a question nobody asked.",
+      "expression": "annoyed",
+      "emotion": "conversational"
+    },
+    {
+      "id": "MISMATCH-DEV-2",
+      "speaker": "Dev",
+      "text": "That's like bringing a parachute to a bake sale.",
+      "expression": "annoyed",
+      "emotion": "conversational"
+    },
+    {
+      "id": "MISMATCH-DEV-3",
+      "speaker": "Dev",
+      "text": "Interesting! Unrelated, but interesting.",
+      "expression": "annoyed",
+      "emotion": "conversational"
+    },
+    {
+      "id": "MISMATCH-DEV-4",
+      "speaker": "Dev",
+      "text": "Is that a clue or a fun fact? I can't use a fun fact.",
+      "expression": "annoyed",
+      "emotion": "conversational"
+    },
+    {
+      "id": "MISMATCH-DEV-5",
+      "speaker": "Dev",
+      "text": "Right instinct, wrong exhibit.",
+      "expression": "annoyed",
+      "emotion": "conversational"
+    },
+    {
+      "id": "MISMATCH-INES-1",
+      "speaker": "Ines",
+      "text": "That's real data. It just isn't evidence for this decision.",
+      "expression": "annoyed",
+      "emotion": "conversational"
+    },
+    {
+      "id": "MISMATCH-INES-2",
+      "speaker": "Ines",
+      "text": "Accurate, relevant to something, and not to this.",
+      "expression": "annoyed",
+      "emotion": "conversational"
+    },
+    {
+      "id": "MISMATCH-INES-3",
+      "speaker": "Ines",
+      "text": "Please connect it to the claim. I'll wait.",
+      "expression": "annoyed",
+      "emotion": "conversational"
+    },
+    {
+      "id": "MISMATCH-INES-4",
+      "speaker": "Ines",
+      "text": "I agree with every word of it, and it still doesn't help.",
+      "expression": "annoyed",
+      "emotion": "conversational"
+    },
+    {
+      "id": "MISMATCH-INES-5",
+      "speaker": "Ines",
+      "text": "You've brought a map of the wrong city.",
+      "expression": "annoyed",
+      "emotion": "conversational"
+    },
+    {
+      "id": "MISMATCH-INES-6",
+      "speaker": "Ines",
+      "text": "That supports a different argument. Save it.",
+      "expression": "annoyed",
+      "emotion": "conversational"
+    },
+    {
+      "id": "MISMATCH-INES-7",
+      "speaker": "Ines",
+      "text": "If I accept this, I have to accept anything. Try another.",
+      "expression": "annoyed",
+      "emotion": "conversational"
+    },
+    {
+      "id": "MISMATCH-INES-8",
+      "speaker": "Ines",
+      "text": "Good card. Wrong table.",
+      "expression": "annoyed",
+      "emotion": "conversational"
+    },
+    {
+      "id": "MATCH-DEV-1",
+      "speaker": "Dev",
+      "text": "Okay, that one lands. I hate that it lands.",
+      "expression": "approving",
+      "emotion": "conversational"
+    },
+    {
+      "id": "MATCH-DEV-2",
+      "speaker": "Dev",
+      "text": "Fine. That changes things.",
+      "expression": "approving",
+      "emotion": "conversational"
+    },
+    {
+      "id": "MATCH-INES-1",
+      "speaker": "Ines",
+      "text": "Now we're talking.",
+      "expression": "approving",
+      "emotion": "conversational"
+    },
+    {
+      "id": "MATCH-INES-2",
+      "speaker": "Ines",
+      "text": "That's the first thing today I can build on.",
+      "expression": "approving",
+      "emotion": "conversational"
+    },
+    {
+      "id": "MATCH-MARA-1",
+      "speaker": "Mara",
+      "text": "Careful. Persuading someone is not the same as being right. Make sure you have both.",
+      "expression": "approving",
+      "emotion": "conversational"
+    },
+    {
+      "id": "EVENT-1",
+      "speaker": "Mara",
+      "text": "Warm-up batch. Nothing scary yet. Watch how smooth it is.",
+      "expression": "thinking",
+      "emotion": "conversational"
+    },
+    {
+      "id": "EVENT-2",
+      "speaker": "Ines",
+      "text": "This is the moment I was worried about.",
+      "expression": "annoyed",
+      "emotion": "conversational"
+    },
+    {
+      "id": "EVENT-3",
+      "speaker": "Mara",
+      "text": "A jam. Your recovery setting decides what happens next.",
+      "expression": "thinking",
+      "emotion": "conversational"
+    },
+    {
+      "id": "EVENT-4",
+      "speaker": "Dev",
+      "text": "New object. Let's see if it asks.",
+      "expression": "thinking",
+      "emotion": "conversational"
+    },
+    {
+      "id": "EVENT-5",
+      "speaker": "Mara",
+      "text": "This is the one Northgate sees. Fingers crossed.",
+      "expression": "thinking",
+      "emotion": "conversational"
+    },
+    {
+      "id": "LETTER-01",
+      "speaker": "Northgate",
+      "text": "We want a demonstration of autonomous operation. Our safety auditor requires documented override compliance.",
+      "expression": "neutral",
+      "emotion": "formal"
+    }
+  ]
+}

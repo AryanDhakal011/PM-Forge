@@ -14,6 +14,7 @@ type DialogProps = {
   size?: "sm" | "md" | "lg";
   footer?: React.ReactNode;
   placement?: "center" | "bottom";
+  dismissible?: boolean;
 };
 
 export function Dialog({
@@ -25,6 +26,7 @@ export function Dialog({
   size = "md",
   footer,
   placement = "center",
+  dismissible = true,
 }: DialogProps) {
   const panelRef = useRef<HTMLDivElement>(null);
   const restoreRef = useRef<HTMLElement | null>(null);
@@ -53,7 +55,7 @@ export function Dialog({
     }, 30);
 
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
+      if (event.key === "Escape" && dismissible) {
         event.preventDefault();
         onCloseRef.current();
       }
@@ -82,7 +84,7 @@ export function Dialog({
       document.body.classList.remove("no-scroll");
       restoreRef.current?.focus?.();
     };
-  }, [open]);
+  }, [open, dismissible]);
 
   if (!open || typeof document === "undefined") return null;
 
@@ -91,7 +93,7 @@ export function Dialog({
       className={styles.backdrop}
       data-placement={placement}
       onPointerDown={(event) => {
-        if (event.target === event.currentTarget) onClose();
+        if (dismissible && event.target === event.currentTarget) onClose();
       }}
     >
       <div
@@ -113,14 +115,16 @@ export function Dialog({
               </p>
             ) : null}
           </div>
-          <button
-            type="button"
-            className={styles.close}
-            onClick={onClose}
-            aria-label="Close dialog"
-          >
-            <X size={18} strokeWidth={1.8} aria-hidden="true" />
-          </button>
+          {dismissible && (
+            <button
+              type="button"
+              className={styles.close}
+              onClick={onClose}
+              aria-label="Close dialog"
+            >
+              <X size={18} strokeWidth={1.8} aria-hidden="true" />
+            </button>
+          )}
         </div>
         <div className={styles.body} data-lenis-prevent>
           {children}

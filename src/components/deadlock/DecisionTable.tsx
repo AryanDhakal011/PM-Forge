@@ -1,7 +1,8 @@
 "use client";
 import { useRef, useState } from "react";
 import gsap from "gsap";
-import { board, objects, resolutions } from "@/lib/deadlock/content";
+import { board, objects, resolutions, project } from "@/lib/deadlock/content";
+import { Dialog } from "@/components/ui/Dialog";
 import { evidenceRelation, previewSocket } from "@/lib/deadlock/engine";
 import type { Evidence, Lane, Resolution } from "@/lib/deadlock/types";
 import { GuardControl, type SceneProps } from "./runtime";
@@ -13,6 +14,7 @@ export default function DecisionTable({
   busy,
   preview,
 }: SceneProps) {
+  const [confirm, setConfirm] = useState(false);
   const [picked, setPicked] = useState<Lane | null>(null),
     [hover, setHover] = useState<{ lane: Lane; res: Resolution } | null>(null);
   const entered = useRef({ lane: "", res: "", at: 0 }),
@@ -57,7 +59,7 @@ export default function DecisionTable({
       <div className={s.table}>
         <div className={s.tableIntro}>
           <span>FOUNDATION · {board.foundation}</span>
-          <span>ALIGNMENT POINTS · {state.ap} / 5</span>
+          <span>PERSUASION POINTS · {state.ap} / 5</span>
         </div>
         <div className={s.conflictLanes}>
           {board.lanes.map((lane) => {
@@ -177,9 +179,9 @@ export default function DecisionTable({
                         disabled={disabled}
                         title={
                           disabled
-                            ? "Needs 2 AP. Undo another bridge."
+                            ? "Needs 2 persuasion points. Change another compromise first."
                             : socket.id === "B"
-                              ? "2 AP and 1 week of runway."
+                              ? "2 persuasion points and 1 week of runway."
                               : "Preview the live instruments before committing."
                         }
                         onPointerEnter={() => show(id, socket.id)}
@@ -195,13 +197,22 @@ export default function DecisionTable({
                         }}
                         onClick={() => choose(id, socket.id)}
                       >
-                        {socket.label}
+                        {
+                          {
+                            R: "Back Dev",
+                            S: "Back Ines",
+                            B: "Compromise",
+                            D: "Leave for later",
+                          }[socket.id]
+                        }
                         <small>
                           {socket.id === "B"
-                            ? "2 AP · 1 WEEK"
+                            ? "Use 2 persuasion points and 1 week to bring both sides into the plan."
                             : socket.id === "D"
-                              ? "−6 READINESS"
-                              : "WATCH THE GAUGES"}
+                              ? "Leave this for later. It costs nothing now, but the problem is still there."
+                              : socket.id === "R"
+                                ? lane.robotics
+                                : lane.software}
                         </small>
                       </button>
                     );
@@ -209,7 +220,7 @@ export default function DecisionTable({
                 </div>
                 <label className={s.defense}>
                   <span>
-                    DEFENSE CLAMP ·{" "}
+                    SUPPORTING EVIDENCE ·{" "}
                     {c.res
                       ? evidenceRelation(c.evidence, id, c.res)
                       : "NO TOKEN YET"}
@@ -244,26 +255,92 @@ export default function DecisionTable({
         </div>
         <p className={s.previewLegend} role="status">
           {hover
-            ? `${hover.lane.toUpperCase()} → ${board.sockets.find((x) => x.id === hover.res)?.label}. Ghost needles show the complete projected plan.`
+            ? `${hover.lane.toUpperCase()} → ${{ R: "Dev", S: "Ines", B: "Compromise", D: "Leave for later" }[hover.res]}. The faint needles show your complete projected plan.`
             : picked
               ? `${picked.toUpperCase()} token lifted. Tap a socket, or use arrow keys and Enter.`
-              : "Hover or focus a socket to see ghost needles. Undoing a bridge refunds its points and week."}
+              : "Hover or focus a choice to preview the consequences. Changing a compromise returns its points and week."}
         </p>
         <div className={s.planFooter}>
           <span className={s.muted}>
-            Three conflicts. Five alignment points.
+            Three arguments. Five persuasion points.
           </span>
           <GuardControl
-            label="LOCK THE PLAN"
-            lever
+            label="Review and lock the plan"
             disabled={busy || board.lanes.some((l) => !state.lanes[l.id].res)}
             onCommit={() => {
               preview();
-              dispatch({ type: "LOCK_PLAN" });
+              setConfirm(true);
             }}
           />
         </div>
       </div>
+      <Dialog
+        open={confirm}
+        onClose={() => setConfirm(false)}
+        title="Before you lock the plan"
+        size="lg"
+      >
+        <div className={`${s.game} ${s.planSummary}`}>
+          <p className={s.kicker}>YOU CHOSE</p>
+          <ul>
+            {board.lanes.map((l) => (
+              <li key={l.id}>
+                <strong>{l.id === "learning" ? "Confirmation" : l.name}</strong>
+                <span>
+                  {
+                    {
+                      R: "Dev",
+                      S: "Ines",
+                      B: "Compromise (−2 persuasion, −1 week)",
+                      D: "Leave for later",
+                    }[state.lanes[l.id].res || "D"]
+                  }
+                </span>
+              </li>
+            ))}
+          </ul>
+          <h3>Projected consequences</h3>
+          <div className={s.summaryMetrics}>
+            {(["rob", "sw", "runway", "ready", "align"] as const).map((key) => (
+              <span key={key}>
+                {
+                  {
+                    rob: "Robotics resentment",
+                    sw: "Software resentment",
+                    runway: "Runway",
+                    ready: "Readiness",
+                    align: "Team alignment",
+                  }[key]
+                }
+                <b>
+                  {state[key] - project.initial[key] > 0 ? "+" : ""}
+                  {state[key] - project.initial[key]}
+                  {key === "runway" ? " weeks" : ""}
+                </b>
+              </span>
+            ))}
+          </div>
+          <p className={s.muted}>
+            These changes are relative to the start of the case. Locking carries
+            this plan and the team’s response into the next chapter.
+          </p>
+          <div className={s.row}>
+            <button className={s.button} onClick={() => setConfirm(false)}>
+              Change something
+            </button>
+            <button
+              className={s.brassButton}
+              disabled={busy}
+              onClick={() => {
+                setConfirm(false);
+                dispatch({ type: "LOCK_PLAN" });
+              }}
+            >
+              Lock it →
+            </button>
+          </div>
+        </div>
+      </Dialog>
       <div className={s.castRow}>
         <Avatar
           person="Dev"

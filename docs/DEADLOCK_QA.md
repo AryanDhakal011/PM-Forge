@@ -1,5 +1,7 @@
 # Deadlock prototype verification
 
+Historical v1 verification. The corrected guided/voiced experience and its current checks are documented in [Deadlock v2](DEADLOCK-V2.md).
+
 Verified locally on 30 October 2026, Windows / Node 24 / production Next.js 16.4.3. This is a playable prototype, not a release acceptance sign-off. See [known gaps](DEADLOCK_GAPS.md) and the [prepared playtest](DEADLOCK_PLAYTEST.md).
 
 ## Play and persistence

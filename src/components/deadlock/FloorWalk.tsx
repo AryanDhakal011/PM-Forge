@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { Dialog } from "@/components/ui/Dialog";
-import { objects } from "@/lib/deadlock/content";
+import { objects, experience } from "@/lib/deadlock/content";
 import type { Evidence } from "@/lib/deadlock/types";
 import { Arm, Avatar } from "./Stage";
 import type { SceneProps } from "./runtime";
@@ -11,7 +11,8 @@ export default function FloorWalk(props: SceneProps) {
   const { state, dispatch, busy, calm, caption } = props;
   const [zone, setZone] = useState<"bay" | "table" | "pit">("bay"),
     [object, setObject] = useState<Evidence | null>(null),
-    [confirm, setConfirm] = useState(false);
+    [confirm, setConfirm] = useState(false),
+    [discovery, setDiscovery] = useState<Evidence | null>(null);
   const camera = useRef<HTMLDivElement>(null),
     swipe = useRef(0);
   useEffect(() => {
@@ -37,12 +38,12 @@ export default function FloorWalk(props: SceneProps) {
         </div>
         <div
           className={s.bolts}
-          aria-label={`${state.focus} of 3 Focus bolts remaining`}
+          aria-label={`Investigations left: ${state.focus} of 3`}
         >
           {[0, 1, 2].map((i) => (
             <i key={i} data-spent={i >= state.focus} />
           ))}
-          <span>{state.focus} / 3 LOOKS LEFT</span>
+          <span>Investigations left: {state.focus}</span>
         </div>
       </header>
       <div
@@ -104,7 +105,7 @@ export default function FloorWalk(props: SceneProps) {
                       : state.inspecting === o.id
                         ? "OPEN · finish inspection"
                         : blocked
-                          ? "UNSEEN · no looks left"
+                          ? "Unseen · no investigations left"
                           : o.label}
                   </span>
                 </button>
@@ -112,6 +113,13 @@ export default function FloorWalk(props: SceneProps) {
             })}
         </div>
       </div>
+      {discovery && (
+        <div className={s.discovery} role="status">
+          <span className={s.kicker}>DISCOVERY · SAVED TO YOUR CASE FILE</span>
+          <h3>{objects.find((o) => o.id === discovery)?.title}</h3>
+          <p>{experience.evidence[discovery].discovery}</p>
+        </div>
+      )}
       <nav className={s.zoneNav} aria-label="Lab zones">
         {(
           [
@@ -131,7 +139,7 @@ export default function FloorWalk(props: SceneProps) {
       </nav>
       <div className={s.planFooter}>
         <span className={s.muted}>
-          Three looks. The unopened objects remain visible unknowns.
+          Choose three investigations. Your case file keeps what you discover.
         </span>
         <button
           className={s.brassButton}
@@ -176,6 +184,10 @@ export default function FloorWalk(props: SceneProps) {
             id={object}
             {...props}
             onClose={() => setObject(null)}
+            onDiscover={() => {
+              setDiscovery(object);
+              setObject(null);
+            }}
           />
         )}
       </Dialog>
@@ -189,16 +201,19 @@ function Inspection({
   busy,
   caption,
   onClose,
-}: SceneProps & { id: Evidence; onClose: () => void }) {
+  onDiscover,
+}: SceneProps & { id: Evidence; onClose: () => void; onDiscover: () => void }) {
   const obj = objects.find((o) => o.id === id)!;
   const [scrub, setScrub] = useState(0),
     [slips, setSlips] = useState<number[]>([]),
-    [frozen, setFrozen] = useState(false),
+    [frozen, setFrozen] = useState(true),
     [pins, setPins] = useState<number[]>([]),
     [revealed, setRevealed] = useState(false),
     [highlight, setHighlight] = useState<number[]>([]),
-    [feed, setFeed] = useState(1),
+    [feed, setFeed] = useState(6),
     [hint, setHint] = useState("");
+  const finished = useRef(false);
+  const [moment, setMoment] = useState(false);
   const began = useRef(state.inspecting === id || state.inspected.includes(id));
   const mark = () => {
     if (!began.current) {
@@ -207,13 +222,11 @@ function Inspection({
     }
   };
   useEffect(() => {
-    if (id !== "E3" || frozen) return;
-    const timer = setInterval(() => setFeed((n) => Math.min(6, n + 1)), 1200);
-    return () => clearInterval(timer);
-  }, [id, frozen]);
+    if (id === "E5" && revealed) caption("LETTER-01");
+  }, [id, revealed, caption]);
   const complete =
     id === "E1"
-      ? Math.abs(scrub - 8) < 0.6
+      ? moment
       : id === "E2"
         ? slips.length === 3
         : id === "E3"
@@ -221,6 +234,12 @@ function Inspection({
           : id === "E4"
             ? revealed
             : highlight.length === 2;
+  useEffect(() => {
+    if (!complete || busy || finished.current) return;
+    finished.current = true;
+    if (!state.inspected.includes(id)) dispatch({ type: "INSPECT", card: id });
+    onDiscover();
+  }, [complete, busy, state.inspected, id, dispatch, onDiscover]);
   const messages = [
     "94% of picks fully autonomous.",
     "Three near-misses in six weeks.",
@@ -231,16 +250,20 @@ function Inspection({
   ];
   return (
     <div className={`${s.game} ${s.inspector}`}>
+      <p className={s.objectInstruction}>
+        {experience.evidence[id].instruction}
+      </p>
       {id === "E1" && (
         <>
           <Arm state={state} active={scrub > 0 && !complete} />
           <label>
-            DEMO REEL · {scrub.toFixed(1)} / 12 s
+            Demo footage · 0:{Math.floor(scrub).toString().padStart(2, "0")} /
+            1:00
             <input
               type="range"
-              aria-label="Scrub demo reel"
+              aria-label="Scrub demo footage"
               min="0"
-              max="12"
+              max="60"
               step=".1"
               value={scrub}
               onChange={(e) => {
@@ -255,11 +278,11 @@ function Inspection({
               className={s.button}
               onClick={() => {
                 mark();
-                setScrub(8);
-                caption("FW-01b");
+                setScrub(47);
+                setMoment(true);
               }}
             >
-              ▲ 0:08 · flagged by I.
+              ▲ 0:47 · inspect the red marker
             </button>
           </div>
           {complete && (
@@ -300,19 +323,6 @@ function Inspection({
       )}
       {id === "E3" && (
         <>
-          <button
-            className={s.brassButton}
-            onClick={() => {
-              mark();
-              setFrozen(!frozen);
-              if (!frozen) {
-                setFeed(6);
-                caption("FW-03a");
-              }
-            }}
-          >
-            {frozen ? "FEED FROZEN · RELEASE" : "PULL FREEZE LEVER"}
-          </button>
           <div className={s.slackMessages}>
             {messages.slice(0, feed).map((text, i) => (
               <button
@@ -353,7 +363,7 @@ function Inspection({
                 setRevealed(true);
               }}
             >
-              PULL SHARE TAB →
+              Open report →
             </button>
           ) : (
             <>
@@ -384,7 +394,7 @@ function Inspection({
                 setRevealed(true);
               }}
             >
-              TEAR OPEN ENVELOPE →
+              Open Northgate’s letter →
             </button>
           ) : (
             <>
@@ -415,25 +425,11 @@ function Inspection({
           )}
         </div>
       )}
-      <div className={s.spread}>
-        <small>
-          {began.current && !state.inspected.includes(id)
-            ? "Focus bolt spent. Finish this object to pin it."
-            : "Cancel before touching an object to keep the bolt."}
-        </small>
-        <button
-          className={s.brassButton}
-          disabled={!complete || busy}
-          onClick={() => {
-            if (!state.inspected.includes(id))
-              dispatch({ type: "INSPECT", card: id });
-            caption(obj.reaction[0]);
-            onClose();
-          }}
-        >
-          PIN TO CASE FILE
-        </button>
-      </div>
+      <p className={s.muted}>
+        {began.current && !state.inspected.includes(id)
+          ? "Investigation started. Complete the short task; your discovery is saved automatically."
+          : "Looking costs one investigation once you start handling the object."}
+      </p>
     </div>
   );
 }

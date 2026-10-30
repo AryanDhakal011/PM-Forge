@@ -1,0 +1,166 @@
+{
+  "at": "2026-10-30T19:09:02.810Z",
+  "buildId": "cCBPYX7f8aSHNzqx2NRr8",
+  "method": "gzip of the production Deadlock client-reference dependency set plus signature-identified lazy scene chunks. This is a component-boundary budget; unrelated Next runtime/bootstrap scripts are outside this measurement.",
+  "boundaryGzipBytes": 273477,
+  "totalBoundaryAndScenesGzipBytes": 305791,
+  "incrementalChapterGzipBytes": {
+    "chapter1": 12331,
+    "chapter2": 8668,
+    "chapter3": 4654,
+    "debrief": 6661
+  },
+  "fonts": [
+    {
+      "file": "barlow-condensed-latin-600-normal.woff2",
+      "bytes": 22308
+    },
+    {
+      "file": "ibm-plex-mono-latin-400-normal.woff2",
+      "bytes": 14708
+    }
+  ],
+  "imagePlateBytes": 0,
+  "recordedAudioBytes": 7391191,
+  "characterAtlasBytes": 236560,
+  "assetStatus": "Vector room and robot, generated illustrated character atlas, pre-rendered Kokoro neural MP3 cast; clips load on demand, no model runs in the browser.",
+  "files": [
+    {
+      "file": "/_next/static/chunks/03yhj2-a49nls.js",
+      "gzipBytes": 11004
+    },
+    {
+      "file": "/_next/static/chunks/3jkqjz_9k7bjm.js",
+      "gzipBytes": 9906
+    },
+    {
+      "file": "/_next/static/chunks/34k3wq8i73w1w.js",
+      "gzipBytes": 18096
+    },
+    {
+      "file": "/_next/static/chunks/2yhk9aeug-aqs.js",
+      "gzipBytes": 27118
+    },
+    {
+      "file": "/_next/static/chunks/3qx02_6--t5rb.js",
+      "gzipBytes": 198
+    },
+    {
+      "file": "/_next/static/chunks/2m0_zqka9ts1o.js",
+      "gzipBytes": 24106
+    },
+    {
+      "file": "/_next/static/chunks/3_-9h8kuy7735.js",
+      "gzipBytes": 8132
+    },
+    {
+      "file": "/_next/static/chunks/03eit8toff6dz.js",
+      "gzipBytes": 31576
+    },
+    {
+      "file": "/_next/static/chunks/38kogmg_8p45n.js",
+      "gzipBytes": 42003
+    },
+    {
+      "file": "/_next/static/chunks/0zoetdzyhnyl-.js",
+      "gzipBytes": 31108
+    },
+    {
+      "file": "/_next/static/chunks/0mmdrspwmdd-0.js",
+      "gzipBytes": 434
+    },
+    {
+      "file": "/_next/static/chunks/3zxl6ttuu9t1z.js",
+      "gzipBytes": 14440
+    },
+    {
+      "file": "/_next/static/chunks/2b1-g40kq1eby.js",
+      "gzipBytes": 13814
+    },
+    {
+      "file": "/_next/static/chunks/2y253c09oy8id.js",
+      "gzipBytes": 41542
+    },
+    {
+      "file": "/_next/static/chunks/0s_moto5eo5c1.js",
+      "gzipBytes": 3349
+    },
+    {
+      "file": "/_next/static/chunks/0utl0gm3e6riv.js",
+      "gzipBytes": 3331
+    },
+    {
+      "file": "/_next/static/chunks/1ub4txizttm48.js",
+      "gzipBytes": 2836
+    },
+    {
+      "file": "/_next/static/chunks/3zlnu8ui6046b.js",
+      "gzipBytes": 2815
+    },
+    {
+      "file": "/_next/static/chunks/30vk2d6rqu0q4.js",
+      "gzipBytes": 1867
+    },
+    {
+      "file": "/_next/static/chunks/3t6g9g4x925sq.js",
+      "gzipBytes": 1888
+    },
+    {
+      "file": "/_next/static/chunks/11s37f2sk6cjz.js",
+      "gzipBytes": 2446
+    },
+    {
+      "file": "/_next/static/chunks/3sun4ld0mvetw.js",
+      "gzipBytes": 2467
+    },
+    {
+      "file": "/_next/static/chunks/1pm973tkck_5t.js",
+      "gzipBytes": 2317
+    },
+    {
+      "file": "/_next/static/chunks/35b0-47vzxlr2.js",
+      "gzipBytes": 2337
+    },
+    {
+      "file": "/_next/static/chunks/2zprbrbec91uj.js",
+      "gzipBytes": 3320
+    },
+    {
+      "file": "/_next/static/chunks/39jon07az-9gk.js",
+      "gzipBytes": 3341
+    }
+  ],
+  "scenes": {
+    "floor": [
+      "/_next/static/chunks/0s_moto5eo5c1.js",
+      "/_next/static/chunks/0utl0gm3e6riv.js"
+    ],
+    "table": [
+      "/_next/static/chunks/1ub4txizttm48.js",
+      "/_next/static/chunks/3zlnu8ui6046b.js"
+    ],
+    "data": [
+      "/_next/static/chunks/30vk2d6rqu0q4.js",
+      "/_next/static/chunks/3t6g9g4x925sq.js"
+    ],
+    "forge": [
+      "/_next/static/chunks/11s37f2sk6cjz.js",
+      "/_next/static/chunks/3sun4ld0mvetw.js"
+    ],
+    "run": [
+      "/_next/static/chunks/1pm973tkck_5t.js",
+      "/_next/static/chunks/35b0-47vzxlr2.js"
+    ],
+    "debrief": [
+      "/_next/static/chunks/2zprbrbec91uj.js",
+      "/_next/static/chunks/39jon07az-9gk.js"
+    ]
+  },
+  "checks": {
+    "totalAtMost350KB": true,
+    "chapter1AtMost150KB": true,
+    "chapter2AtMost90KB": true,
+    "chapter3AtMost70KB": true,
+    "debriefAtMost60KB": true
+  }
+}

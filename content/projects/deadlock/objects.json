@@ -2,7 +2,7 @@
   {
     "id": "E1",
     "zone": "bay",
-    "title": "Demo wall",
+    "title": "Demo footage",
     "kind": "scrub",
     "label": "94% autonomous picks",
     "card": "Demo reel: 94% of picks fully autonomous. One near-miss at 1.1 m/s, 0.4 m from a person.",
@@ -41,7 +41,7 @@
   {
     "id": "E4",
     "zone": "pit",
-    "title": "BENCH-0914",
+    "title": "Sealed bench report",
     "kind": "seal",
     "label": "Sealed. Shared with neither team.",
     "card": "Bench data exists and has not been shared with either team.",

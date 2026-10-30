@@ -337,75 +337,57 @@ export function Instruments({
 function AvatarDrawing({
   person,
   mood = "neutral",
+  expression,
   small = false,
 }: {
   person: string;
   mood?: "neutral" | "pleased" | "tense" | "away";
+  expression?: "neutral" | "thinking" | "annoyed" | "approving";
   small?: boolean;
 }) {
   const p = cast.find((x) => x.id === person) || cast[0];
-  const dark = person === "Dev" || person === "Mara",
-    hair = person === "Ines";
+  const row = Math.max(
+    0,
+    ["Mara", "Dev", "Ines", "Nadia", "Theo"].indexOf(person),
+  );
+  const face =
+    expression ||
+    (mood === "pleased"
+      ? "approving"
+      : mood === "tense"
+        ? "annoyed"
+        : "neutral");
+  const col = ["neutral", "thinking", "annoyed", "approving"].indexOf(face);
   return (
-    <figure className={s.avatar} data-mood={mood} data-small={small}>
-      <svg viewBox="0 0 130 150" role="img" aria-label={`${p.name}, ${mood}`}>
-        <path
-          d="M14 150V120Q25 96 48 96H82Q109 100 116 122V150"
-          fill={p.color}
-          fillOpacity=".8"
-        />
-        <path d="M46 100 64 125 84 100" fill="#152627" />
-        <path
-          d="M56 77V106L66 116 76 105V77"
-          fill={dark ? "#825848" : "#be9178"}
-        />
-        <ellipse
-          cx="65"
-          cy="57"
-          rx="28"
-          ry="35"
-          fill={dark ? "#a67859" : "#d0a68a"}
-        />
-        {hair ? (
-          <path
-            d="M35 80V39Q39 12 65 16 100 12 96 80L85 63V35L55 30 43 55V90Z"
-            fill="#352c29"
-          />
-        ) : (
-          <path
-            d="M36 47Q28 10 66 15 100 12 95 47L81 30 47 35Z"
-            fill="#222929"
-          />
-        )}
-        <path
-          d="M49 56H57M73 56H81"
-          stroke="#172224"
-          strokeWidth="3"
-          strokeLinecap="round"
-        />
-        <path
-          d={
-            mood === "pleased"
-              ? "M55 75Q65 83 76 74"
-              : mood === "tense"
-                ? "M55 79Q65 71 76 79"
-                : "M56 77H75"
-          }
-          fill="none"
-          stroke="#583d32"
-          strokeWidth="2"
-        />
-        {person === "Ines" && (
-          <g fill="none" stroke="#213f42" strokeWidth="2">
-            <rect x="45" y="50" width="17" height="13" rx="4" />
-            <rect x="68" y="50" width="17" height="13" rx="4" />
-            <path d="M62 55H68" />
-          </g>
-        )}
-      </svg>
+    <figure
+      className={s.avatar}
+      data-mood={mood}
+      data-small={small}
+      data-person={person}
+      data-expression={face}
+    >
+      <div
+        className={s.portrait}
+        role="img"
+        aria-label={
+          p.name + ", " + (mood === "away" ? "not in the room" : face)
+        }
+        style={
+          {
+            backgroundPosition: (col * 100) / 3 + "% " + row * 25 + "%",
+            "--skin": ["#9e6a49", "#ba865e", "#c89576", "#ae7856", "#dba17b"][
+              row
+            ],
+          } as React.CSSProperties
+        }
+      >
+        <span className={s.mouth} aria-hidden="true" />
+        <span className={s.eyelidLeft} aria-hidden="true" />
+        <span className={s.eyelidRight} aria-hidden="true" />
+      </div>
       <figcaption>
         <strong>{p.name}</strong>
-        <span>{p.role}</span>
+        <span>{mood === "away" ? "Not in the room" : p.role}</span>
       </figcaption>
     </figure>
   );

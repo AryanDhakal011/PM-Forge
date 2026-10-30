@@ -1,0 +1,36 @@
+{
+  "at": "2026-10-30T19:08:52.636Z",
+  "checks": [
+    {
+      "label": "legacy device voice control is removed",
+      "pass": true
+    },
+    {
+      "label": "Mara preview plays its own recording while captions-only is selected",
+      "pass": true
+    },
+    {
+      "label": "Dev preview plays its own recording while captions-only is selected",
+      "pass": true
+    },
+    {
+      "label": "Ines preview plays its own recording while captions-only is selected",
+      "pass": true
+    },
+    {
+      "label": "auditioning does not change the selected playback mode",
+      "pass": true
+    },
+    {
+      "label": "old device voice off preference cannot block the recorded cast",
+      "pass": true
+    },
+    {
+      "label": "zero console errors or browser exceptions",
+      "pass": true,
+      "details": []
+    }
+  ],
+  "errors": [],
+  "modes": []
+}

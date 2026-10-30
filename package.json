@@ -10,7 +10,7 @@
     "typecheck": "tsc --noEmit",
     "launch:check": "node --env-file-if-exists=.env.local scripts/check-launch.mjs",
     "test": "node --import tsx --test tests/interview-engine.test.ts tests/calibration.test.ts tests/projects.test.ts && node --conditions=react-server --import tsx --test tests/account-server.test.ts",
-    "test:deadlock": "node --import tsx --test tests/deadlock.test.ts",
+    "test:deadlock": "node --import tsx --test tests/deadlock.test.ts tests/deadlock-v2.test.ts",
     "deadlock:sim": "node --import tsx scripts/deadlock-sim.ts"
   },
   "dependencies": {

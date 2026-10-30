@@ -4,6 +4,7 @@ import {
   existsSync,
   statSync,
   writeFileSync,
+  mkdirSync,
 } from "node:fs";
 import { gzipSync } from "node:zlib";
 import { runInNewContext } from "node:vm";
@@ -75,9 +76,12 @@ const report = {
       bytes: statSync("public/deadlock/fonts/" + file).size,
     })),
   imagePlateBytes: 0,
-  recordedAudioBytes: 0,
+  recordedAudioBytes: readdirSync("public/deadlock/audio")
+    .filter((f) => f.endsWith(".mp3"))
+    .reduce((n, f) => n + statSync("public/deadlock/audio/" + f).size, 0),
+  characterAtlasBytes: statSync("public/deadlock/characters/cast-v2.webp").size,
   assetStatus:
-    "Vector plates and procedural/device audio; final raster plates and recorded voices are not supplied.",
+    "Vector room and robot, generated illustrated character atlas, pre-rendered Kokoro neural MP3 cast; clips load on demand, no model runs in the browser.",
   files: all.map((file) => ({ file, gzipBytes: size(file) })),
   scenes,
 };
@@ -89,8 +93,9 @@ report.checks = {
   chapter3AtMost70KB: report.incrementalChapterGzipBytes.chapter3 <= 70 * 1024,
   debriefAtMost60KB: report.incrementalChapterGzipBytes.debrief <= 60 * 1024,
 };
+mkdirSync("docs/deadlock-v2-verification", { recursive: true });
 writeFileSync(
-  "docs/deadlock-verification/budgets.json",
+  "docs/deadlock-v2-verification/budgets.json",
   JSON.stringify(report, null, 2) + "\n",
 );
 console.log(JSON.stringify(report, null, 2));

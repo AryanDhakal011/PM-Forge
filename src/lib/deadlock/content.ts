@@ -10,6 +10,7 @@ import forgeJSON from "../../../content/projects/deadlock/forge.json";
 import runJSON from "../../../content/projects/deadlock/run.json";
 import debriefJSON from "../../../content/projects/deadlock/debrief.json";
 import audioJSON from "../../../content/projects/deadlock/audio-manifest.json";
+import experienceJSON from "../../../content/projects/deadlock/experience-v2.json";
 import type { Evidence, Dataset, Lane, Resolution } from "./types";
 const id = z.string().min(1);
 export const project = z
@@ -76,7 +77,16 @@ export const lines = z
       audio: z.string().nullable(),
     }),
   )
-  .parse(linesJSON);
+  .parse([
+    ...linesJSON,
+    ...experienceJSON.lines.map((l) => ({
+      ...l,
+      condition: null,
+      source: "corrected handoff v2",
+      audio: null,
+    })),
+  ]);
+export const experience = experienceJSON;
 export const cast = z
   .array(z.object({ id, name: id, role: id, voice: id, color: id }))
   .parse(castJSON);
@@ -155,6 +165,12 @@ export const audioManifest = z
         file: z.string().nullable(),
         voice: z.string().nullable(),
         status: id,
+        speaker: z.string().optional(),
+        caption: z.string().optional(),
+        expression: z.string().optional(),
+        emotion: z.string().optional(),
+        duration: z.number().optional(),
+        envelope: z.array(z.number()).optional(),
       }),
     ),
     sfx: id,
@@ -167,5 +183,11 @@ export const resolutions: Resolution[] = ["R", "S", "B", "D"];
 export function line(id: string, thing = "The requirement") {
   const found = lines.find((l) => l.id === id);
   if (!found) throw Error(`Unknown authored line: ${id}`);
-  return { ...found, text: found.text.replace("{thing}", thing) };
+  return {
+    ...found,
+    text:
+      audioManifest.lines[id]?.caption || found.text.replace("{thing}", thing),
+    expression:
+      experienceJSON.lines.find((l) => l.id === id)?.expression || "neutral",
+  };
 }

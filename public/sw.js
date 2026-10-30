@@ -1,9 +1,9 @@
 /* Only static assets and anonymous app shells are cached. Never APIs/auth/RSC. */
-const CACHE = "pmforge-offline-v2";
+const CACHE = "pmforge-offline-v3";
 const staticAsset = (url) =>
   url.origin === self.location.origin &&
   (url.pathname.startsWith("/_next/static/") ||
-    url.pathname.startsWith("/deadlock/fonts/"));
+    url.pathname.startsWith("/deadlock/fonts/") || url.pathname.startsWith('/deadlock/characters/') || url.pathname.startsWith('/deadlock/audio/'));
 self.addEventListener("install", (event) =>
   event.waitUntil(
     caches
@@ -87,8 +87,10 @@ self.addEventListener("fetch", (event) => {
       caches.open(CACHE).then(async (cache) => {
         const cached = await cache.match(request);
         if (cached) return cached;
-        const response = await fetch(request);
-        if (response.ok) await cache.put(request, response.clone());
+        // Store complete short voice clips, never a 206 fragment. A full 200
+        // response is valid for a Range request and can be replayed offline.
+        const response = await fetch(request.headers.has('range')?url.href:request);
+        if (response.ok) try{await cache.put(request,response.clone())}catch{/* Playback must survive storage quota errors. */}
         return response;
       }),
     );

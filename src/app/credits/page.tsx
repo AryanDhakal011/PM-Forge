@@ -191,18 +191,20 @@ export default function CreditsPage() {
               files or GLB exports were delivered with this build.
             </p>
             <p>
-              No generative image model was used to create the visual assets.
-              The only photographic raster asset is the mountain plate above;
-              the remaining photographic effects are CSS gradients, textures,
-              and SVG noise.
+              The landing page uses the mountain plate above, CSS gradients,
+              textures and SVG noise. The Deadlock’s illustrated cast was
+              created with OpenAI image generation and optimized as a local
+              WebP expression atlas.
             </p>
 
             <h2>The Deadlock prototype</h2>
             <p>
-              The boiler room plates, paper-cut avatars, gauges and TERN-1 arm
+              The boiler room plates, gauges and TERN-1 arm
               are original vector artwork. Effects and ambience use procedural
-              WebAudio. Narration uses the device voice selected by the player;
-              no Kokoro recordings or model weights are shipped. All cast
+              WebAudio. Dialogue uses pre-rendered Kokoro-82M v1.0 neural
+              voices, with a distinct voice for each character. The model is
+              Apache-2.0 licensed; model weights and synthesis code are not
+              shipped to the browser. All cast
               members and organizations are fictional.
             </p>
             <p>

@@ -51,3 +51,11 @@ docs/spatial-verification/*.png
 docs/deadlock-verification/*.png
 docs/deadlock-verification/*.log
 .deadlock-*.log
+docs/deadlock-v2-verification/*.png
+docs/deadlock-v2-verification/*.log
+!docs/deadlock-v2-verification/intro-silent.png
+!docs/deadlock-v2-verification/briefing-silent.png
+!docs/deadlock-v2-verification/evidence-silent.png
+!docs/deadlock-v2-verification/table-silent.png
+!docs/deadlock-v2-verification/event-popup-silent.png
+!docs/deadlock-v2-verification/review-silent.png

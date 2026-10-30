@@ -7,16 +7,24 @@ import gsap from "gsap";
 import { Dialog } from "@/components/ui/Dialog";
 import { useWorkspace } from "@/components/product/WorkspaceProvider";
 import { useSettings } from "@/components/providers/SettingsProvider";
-import { board, line, objects, project } from "@/lib/deadlock/content";
+import {
+  board,
+  line,
+  objects,
+  project,
+  experience,
+} from "@/lib/deadlock/content";
 import {
   append,
   createRun,
+  forkRun,
   has,
   initialState,
   reduceEvent,
   replay,
 } from "@/lib/deadlock/engine";
 import { reactionFor } from "@/lib/deadlock/reactions";
+import { selectReaction } from "@/lib/deadlock/dialogue";
 import {
   DeadlockConflict,
   deleteRun,
@@ -33,6 +41,8 @@ import type {
 } from "@/lib/deadlock/types";
 import { Arm, Instruments, RoomPlate } from "./Stage";
 import Cinematic from "./Cinematic";
+import { Conversation } from "./Conversation";
+import { Guide, StepStrip, ReviewCard } from "./Coaching";
 import {
   useAudio,
   useClock,
@@ -57,7 +67,7 @@ export default function DeadlockExperience() {
   const router = useRouter(),
     pathname = usePathname();
   const runId = pathname.match(/\/(?:play|debrief)\/([^/]+)$/)?.[1];
-  const { prefs, update } = usePreferences(),
+  const { prefs, update, ready: preferencesReady } = usePreferences(),
     visible = useVisible();
   const [run, setRun] = useState<SavedRun | null>(null),
     [runs, setRuns] = useState<SavedRun[]>([]),
@@ -79,6 +89,12 @@ export default function DeadlockExperience() {
       lines: { id: string; thing?: string }[];
     } | null>(null),
     [tier, setTier] = useState("B");
+  const [voiceRevision, setVoiceRevision] = useState(0);
+  const [guide, setGuide] = useState<keyof typeof experience.guides | null>(
+      null,
+    ),
+    [review, setReview] = useState<number | null>(null);
+  const guidesSeen = useRef(new Set<string>());
   const root = useRef<HTMLDivElement>(null),
     current = useRef<SavedRun | null>(null),
     writing = useRef(false),
@@ -95,7 +111,8 @@ export default function DeadlockExperience() {
     caseOpen ||
     transcriptOpen ||
     exit ||
-    introReplay;
+    introReplay ||
+    !!guide;
   const calm =
     reducedMotion ||
     prefs.motion ||
@@ -104,7 +121,7 @@ export default function DeadlockExperience() {
     tier === "C";
   const audio = useAudio(
     prefs,
-    halt && !introReplay,
+    halt && !introReplay && !guide,
     (state.rob + state.sw) / 2,
   );
   const audioRef = useRef(audio);
@@ -142,7 +159,7 @@ export default function DeadlockExperience() {
     return () => clearTimeout(timer);
   }, []);
   const present = useCallback(
-    (id: string, onEnd?: () => void, thing?: string) => {
+    (id: string, onEnd?: (played?: boolean) => void, thing?: string) => {
       try {
         const l: Spoken = {
           ...line(id, thing),
@@ -163,7 +180,7 @@ export default function DeadlockExperience() {
           } catch {
             /* Captions continue when storage is unavailable. */
           }
-        audioRef.current.speak(l.text, l.speaker, false, onEnd);
+        audioRef.current.speak(l.text, l.speaker, false, onEnd, id);
       } catch (e) {
         setError(String(e));
       }
@@ -177,6 +194,9 @@ export default function DeadlockExperience() {
     setLoading(true);
     setError("");
     setReaction(null);
+    setGuide(null);
+    setReview(null);
+    audioRef.current.stop();
     setPreview(undefined);
     setPaused(false);
     setTranscript([]);
@@ -257,21 +277,6 @@ export default function DeadlockExperience() {
       cancelled = true;
     };
   }, [runId, owner]);
-  useEffect(() => {
-    if (!runId || loading || reaction || !run) return;
-    const key = `${runId}:${state.scene}`;
-    if (introduced.current.has(key)) return;
-    introduced.current.add(key);
-    const id =
-      state.scene === "floor"
-        ? "CO-06"
-        : state.scene === "table"
-          ? "T-INTRO"
-          : state.scene === "forge"
-            ? "F-INTRO"
-            : undefined;
-    if (id) present(id);
-  }, [runId, loading, state.scene, reaction, run, present]);
   const dispatch = useCallback((action: Action) => {
     const beforeRun = current.current;
     if (!beforeRun || writing.current) return;
@@ -284,7 +289,17 @@ export default function DeadlockExperience() {
       setPreview(undefined);
       writing.current = true;
       setBusy(true);
-      const lines = reactionFor(next.events.at(-1)!, before, after);
+      let lines = reactionFor(next.events.at(-1)!, before, after);
+      if (action.type === "INSPECT")
+        lines = [{ id: experience.evidence[action.card].line }];
+      lines = lines.map((response) => {
+        if (!/^T-EV-(SUP|NEU|CON)/.test(response.id)) return response;
+        const who = line(response.id).speaker;
+        const pool = response.id.includes("-SUP-")
+          ? experience.match[who as "Dev" | "Ines" | "Mara"]
+          : experience.mismatch[who === "Dev" ? "Dev" : "Ines"];
+        return { id: selectReaction(pool, spokenLog.current.at(-1)?.id) };
+      });
       if (lines.length) {
         setReaction({ key: next.events.length, lines });
         audioRef.current.effect(
@@ -323,6 +338,75 @@ export default function DeadlockExperience() {
       setError(e instanceof Error ? e.message : "This action is unavailable.");
     }
   }, []);
+  useEffect(() => {
+    if (
+      !preferencesReady ||
+      !runId ||
+      loading ||
+      !run ||
+      reaction ||
+      review ||
+      prefs.skipGuides
+    )
+      return;
+    const key = runId + ":" + state.scene;
+    if (!(state.scene in experience.guides) || guidesSeen.current.has(key))
+      return;
+    guidesSeen.current.add(key);
+    setGuide(state.scene as keyof typeof experience.guides);
+  }, [
+    preferencesReady,
+    runId,
+    loading,
+    run,
+    state.scene,
+    reaction,
+    review,
+    prefs.skipGuides,
+  ]);
+  const closeGuide = () => {
+    audioRef.current.stop();
+    setGuide(null);
+    setVoiceRevision((n) => n + 1);
+  };
+  const advance = (action: Action) => {
+    if (
+      action.type === "ACK_SCENE" &&
+      ["consequence1", "consequence2", "ending"].includes(action.scene)
+    ) {
+      audioRef.current.stop();
+      setReaction(null);
+      setReview(
+        action.scene === "consequence1"
+          ? 1
+          : action.scene === "consequence2"
+            ? 2
+            : 3,
+      );
+      return;
+    }
+    dispatch(action);
+  };
+  const replayChapter = async (chapter: number) => {
+    if (!run) return;
+    try {
+      const marker = ["intro", "consequence1", "consequence2"][chapter - 1];
+      const index = run.events.findIndex(
+        (e) => e.type === "ACK_SCENE" && e.scene === marker,
+      );
+      const branch = forkRun(run, Math.max(1, index + 1), owner);
+      await persistRun(branch);
+      window.history.pushState(
+        null,
+        "",
+        "/app/projects/deadlock/play/" + branch.id,
+      );
+    } catch (e) {
+      setError(
+        e instanceof Error ? e.message : "Could not replay this chapter.",
+      );
+    }
+  };
   const start = async (mode: "sound" | "silent" | "listen") => {
     if (writing.current) return;
     writing.current = true;
@@ -330,7 +414,11 @@ export default function DeadlockExperience() {
     update({ mode });
     if (mode !== "silent") audio.unlock();
     try {
-      const next = append(createRun(owner), { type: "START", mode });
+      const next = append(createRun(owner), {
+        type: "START",
+        mode,
+        experienceVersion: 2,
+      });
       const ok = await persistRun(next);
       setSaved(ok);
       window.history.pushState(
@@ -359,14 +447,6 @@ export default function DeadlockExperience() {
     const currentUrl = location.href;
     const onKey = (e: KeyboardEvent) => {
       if ((e.target as HTMLElement).matches("input,textarea,select")) return;
-      if (e.key.toLowerCase() === "r" && !e.ctrlKey && !e.metaKey) {
-        e.preventDefault();
-        audioRef.current.speak(
-          `Robotics resentment ${state.rob}. Software resentment ${state.sw}. Runway ${state.runway} weeks. Readiness ${state.ready}. Team alignment ${state.align}.`,
-          "CONTROL",
-          true,
-        );
-      }
       if (e.key === "Escape" && !document.querySelector('[role="dialog"]'))
         setPaused((p) => !p);
     };
@@ -445,9 +525,16 @@ export default function DeadlockExperience() {
   }, [state.scene, runId, pathname, router]);
   const sceneProps: SceneProps = {
     state,
-    dispatch,
-    busy,
+    dispatch: advance,
+    busy: busy || !!reaction || !!guide,
     paused: halt || !!reaction,
+    autoAdvance: prefs.autoAdvance,
+    voiceRevision,
+    sound: prefs.mode !== "silent",
+    toggleSound: () => {
+      audio.unlock();
+      update({ mode: prefs.mode === "silent" ? "sound" : "silent" });
+    },
     calm,
     caption: present,
     preview: setPreview,
@@ -506,33 +593,47 @@ export default function DeadlockExperience() {
           </div>
           <div className={s.entryPlate}>
             <p className={s.kicker}>
-              ABOUT 40 MINUTES · THREE CHAPTERS · PAUSE ANYWHERE
+              THREE CHAPTERS · YOUR PACE · SAVES AFTER EVERY DECISION
             </p>
             <div className={s.switches}>
               {(
                 [
-                  ["sound", "SOUND + CAPTIONS"],
-                  ["silent", "SILENT + CAPTIONS"],
-                  ["listen", "LISTEN MODE"],
+                  ["silent", "Captions only"],
+                  ["sound", "Sound + captions"],
                 ] as const
               ).map(([mode, label]) => (
                 <button
                   key={mode}
                   className={s.switch}
                   disabled={busy}
-                  autoFocus={mode === prefs.mode}
-                  onClick={() => void start(mode)}
+                  aria-pressed={mode === prefs.mode}
+                  onClick={() => update({ mode })}
                 >
                   {label}
-                  {mode === "listen" && (
-                    <small>Device narration · waits at every decision</small>
-                  )}
+                  <small>
+                    {mode === prefs.mode
+                      ? "Selected"
+                      : mode === "silent"
+                        ? "Read at your own pace"
+                        : "Hear the pre-recorded cast"}
+                  </small>
                 </button>
               ))}
             </div>
+            <button
+              className={s.brassButton}
+              data-enter-lab=""
+              autoFocus
+              disabled={busy}
+              onClick={() =>
+                void start(prefs.mode === "listen" ? "sound" : prefs.mode)
+              }
+            >
+              Enter the lab →
+            </button>
             <p className={s.muted} data-beat>
-              Fictional company. Fictional people. Simulated numbers. Not safety
-              advice. No typing required.
+              Step into a robotics team’s hardest decision. Meet the people,
+              investigate the evidence, and shape what they build.
             </p>
           </div>
           {loading ? (
@@ -565,7 +666,7 @@ export default function DeadlockExperience() {
                         );
                       }}
                     >
-                      Continue on v1.0 →
+                      Continue this run →
                     </Link>
                     <div className={s.row}>
                       <button
@@ -603,7 +704,7 @@ export default function DeadlockExperience() {
             <div className={s.brand}>
               THE DEADLOCK
               <small title="Fictional company and people; all numbers are simulated.">
-                SIMULATED · v1.0
+                SIMULATED · v2
               </small>
             </div>
             <button className={s.button} onClick={() => setPaused(true)}>
@@ -626,7 +727,19 @@ export default function DeadlockExperience() {
             </main>
           ) : (
             <>
-              <Instruments state={state} preview={preview} calm={calm} />
+              <div className={s.orientation}>
+                <StepStrip
+                  scene={state.scene}
+                  onGuide={() =>
+                    setGuide(
+                      (state.scene in experience.guides
+                        ? state.scene
+                        : "floor") as keyof typeof experience.guides,
+                    )
+                  }
+                />
+                <Instruments state={state} preview={preview} calm={calm} />
+              </div>
               <main
                 id="main"
                 inert={halt}
@@ -635,7 +748,19 @@ export default function DeadlockExperience() {
                 className={s.scene}
                 aria-label={`${state.scene} simulation scene`}
               >
-                {state.scene === "floor" ? (
+                {review ? (
+                  <ReviewCard
+                    state={state}
+                    chapter={review}
+                    busy={busy}
+                    onContinue={() => {
+                      const scene = state.scene;
+                      setReview(null);
+                      dispatch({ type: "ACK_SCENE", scene });
+                    }}
+                    onReplay={() => void replayChapter(review)}
+                  />
+                ) : state.scene === "floor" ? (
                   <FloorWalk {...sceneProps} />
                 ) : state.scene === "table" ? (
                   <DecisionTable {...sceneProps} />
@@ -648,43 +773,34 @@ export default function DeadlockExperience() {
                 ) : state.scene === "debrief" ? (
                   <Debrief run={run} state={state} onError={setError} />
                 ) : (
-                  <Cinematic
-                    key={state.scene}
-                    {...sceneProps}
-                    listen={
-                      prefs.mode === "listen" &&
-                      audio.voices.length > 0 &&
-                      prefs.voice !== "off"
-                    }
-                  />
+                  <Cinematic key={state.scene} {...sceneProps} />
                 )}
               </main>
-              <footer className={s.caption} aria-label="Captions">
+              <footer className={s.caption} aria-label="Run status">
                 <div
                   className={s.player}
-                  aria-label={`Your credibility ${state.cred} of 100`}
+                  aria-label={"Your credibility " + state.cred + " of 100"}
                 >
                   {state.cred}
                 </div>
-                <div
-                  className={s.captionBody}
-                  aria-live="polite"
-                  aria-atomic="true"
-                >
-                  <strong>{spoken?.speaker || "CONTROL"}</strong>
-                  <p>{spoken?.text || "The room is waiting for you."}</p>
-                </div>
+                <span className={s.muted}>
+                  Credibility · decisions leave a trace
+                </span>
+                <span className={s.audioStatus} role="status">
+                  {audio.status}
+                </span>
                 <button
-                  className={s.button}
-                  aria-label="Replay caption"
-                  onClick={() =>
-                    spoken && audio.speak(spoken.text, spoken.speaker, true)
-                  }
+                  className={s.linkButton}
+                  onClick={() => setTranscriptOpen(true)}
                 >
-                  ↻
+                  Conversation log
                 </button>
                 <span className={s.saveChip}>
-                  {busy ? "SAVING…" : saved ? "ON THIS DEVICE" : "MEMORY ONLY"}
+                  {busy
+                    ? "Saving…"
+                    : saved
+                      ? "Saved on this device"
+                      : "Memory only"}
                 </span>
               </footer>
               {reaction && (
@@ -693,7 +809,18 @@ export default function DeadlockExperience() {
                   lines={reaction.lines}
                   paused={halt}
                   present={present}
-                  onDone={() => setReaction(null)}
+                  autoAdvance={prefs.autoAdvance}
+                  sound={prefs.mode !== "silent"}
+                  toggleSound={() => {
+                    audio.unlock();
+                    update({
+                      mode: prefs.mode === "silent" ? "sound" : "silent",
+                    });
+                  }}
+                  onDone={() => {
+                    audioRef.current.stop();
+                    setReaction(null);
+                  }}
                 />
               )}
             </>
@@ -710,6 +837,29 @@ export default function DeadlockExperience() {
           <p className={s.muted} style={{ marginBottom: 20 }}>
             Twelve weeks. Full autonomy. Documented overrides. Both required.
           </p>
+          <section className={s.briefingSummary}>
+            <h3>Your case briefing</h3>
+            <p>
+              You are the PM at Halyard Robotics. In twelve weeks, Northgate
+              will watch TERN-1 sort a tray. Dev wants autonomy and speed; Ines
+              needs reliable safeguards. Your job is to use evidence to agree a
+              build the team can demonstrate.
+            </p>
+            <p>
+              Northgate needs both autonomous operation and documented human
+              overrides. You have three investigations, five persuasion points
+              and three chances to step in.
+            </p>
+            <button
+              className={s.button}
+              onClick={() => {
+                setCaseOpen(false);
+                setIntroReplay(true);
+              }}
+            >
+              Meet the team & replay briefing
+            </button>
+          </section>
           <div className={s.caseCards}>
             {objects.map((o) => (
               <article
@@ -759,7 +909,11 @@ export default function DeadlockExperience() {
       </Dialog>
       <Dialog
         open={settings}
-        onClose={() => setSettings(false)}
+        onClose={() => {
+          audio.stop();
+          setSettings(false);
+          setVoiceRevision((n) => n + 1);
+        }}
         title="Boiler room controls"
         size="lg"
       >
@@ -773,30 +927,30 @@ export default function DeadlockExperience() {
                 if (e.target.value !== "silent") audio.unlock();
               }}
             >
-              <option value="silent">Silent + captions</option>
+              <option value="silent">Captions only</option>
               <option value="sound">Sound + captions</option>
-              <option value="listen">Listen mode</option>
             </select>
+          </label>
+          <p className={s.muted}>
+            Hear each character’s recorded dialogue. You control when the
+            conversation moves on; captions are always available.
+          </p>
+          <label>
+            Auto-advance after recording ends
+            <input
+              type="checkbox"
+              checked={prefs.autoAdvance}
+              onChange={(e) => update({ autoAdvance: e.target.checked })}
+            />
           </label>
           <label>
-            Device voice
-            <select
-              value={prefs.voice}
-              onChange={(e) => update({ voice: e.target.value })}
-            >
-              <option value="device">Automatic device voice</option>
-              {audio.voices.map((v) => (
-                <option key={v.voiceURI} value={v.voiceURI}>
-                  {v.name} · {v.lang}
-                </option>
-              ))}
-              <option value="off">Text only</option>
-            </select>
+            Skip automatic guides
+            <input
+              type="checkbox"
+              checked={prefs.skipGuides}
+              onChange={(e) => update({ skipGuides: e.target.checked })}
+            />
           </label>
-          <p className={s.muted} data-beat>
-            Uses your device’s installed voices. Studio voice recordings are not
-            included in this prototype. Captions always remain available.
-          </p>
           <label>
             Character voices
             <input
@@ -887,19 +1041,21 @@ export default function DeadlockExperience() {
               <option value="C">C · Static room</option>
             </select>
           </label>
-          <button
-            className={s.brassButton}
-            onClick={() => {
-              audio.unlock();
-              audio.speak(
-                "Twelve weeks. Two teams. One prototype.",
-                "CONTROL",
-                true,
-              );
-            }}
-          >
-            TEST DEVICE VOICE
-          </button>
+          <div className={s.row}>
+            {(["Mara", "Dev", "Ines"] as const).map((speaker, i) => (
+              <button
+                key={speaker}
+                className={s.button}
+                onClick={() => {
+                  const id = ["INT-01", "INT-03", "INT-05"][i];
+                  audio.unlock();
+                  audio.speak(line(id).text, speaker, true, undefined, id);
+                }}
+              >
+                Preview {speaker}
+              </button>
+            ))}
+          </div>
         </div>
       </Dialog>
       <Dialog
@@ -989,6 +1145,18 @@ export default function DeadlockExperience() {
           />
         </div>
       </Dialog>
+      {guide && (
+        <Guide
+          key={guide}
+          {...sceneProps}
+          paused={false}
+          busy={false}
+          guideKey={guide}
+          onClose={closeGuide}
+          skip={prefs.skipGuides}
+          setSkip={(skip) => update({ skipGuides: skip })}
+        />
+      )}
     </div>
   );
 }
@@ -997,28 +1165,35 @@ function Reaction({
   paused,
   present,
   onDone,
+  autoAdvance,
+  sound,
+  toggleSound,
 }: {
   lines: { id: string; thing?: string }[];
   paused: boolean;
-  present: (id: string, onEnd?: () => void, thing?: string) => void;
+  present: (
+    id: string,
+    onEnd?: (played?: boolean) => void,
+    thing?: string,
+  ) => void;
   onDone: () => void;
+  autoAdvance: boolean;
+  sound: boolean;
+  toggleSound: () => void;
 }) {
-  const elapsed = useClock(Math.max(1800, lines.length * 1900), paused, onDone),
-    index = Math.max(0, Math.min(lines.length - 1, Math.floor(elapsed / 1900)));
-  const current = lines[index];
-  useEffect(() => {
-    present(current.id, undefined, current.thing);
-  }, [current.id, current.thing]);
-  const l = line(current.id, current.thing);
   return (
-    <aside className={s.reaction} aria-label="Authored reaction">
-      <div className={s.speech}>
-        <b>{l.speaker}</b>
-        <p>{l.text}</p>
-      </div>
-      <button className={s.button} onClick={onDone}>
-        SKIP REACTION →
-      </button>
+    <aside className={s.reaction} aria-label="Team response">
+      <Conversation
+        ids={lines.map((l) => l.id)}
+        caption={present}
+        paused={paused}
+        autoAdvance={autoAdvance}
+        sound={sound}
+        toggleSound={toggleSound}
+        onDone={onDone}
+        finishLabel="Back to the decision →"
+        title="Team response"
+      />
     </aside>
   );
 }
