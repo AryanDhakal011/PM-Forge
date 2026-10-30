@@ -26,6 +26,13 @@ import {
 } from "@/lib/content";
 import { copyText } from "@/lib/clipboard";
 import { track } from "@/lib/analytics";
+import { scrollState } from "@/lib/scrollState";
+import {
+  ensureScrollTrigger,
+  resolveCalm,
+  setCalmVar,
+  bindStoryTargets,
+} from "@/lib/scrollStory";
 import styles from "./DecisionBlueprint.module.css";
 
 const BLUEPRINT_KEY = "pmforge.blueprint.v1";
@@ -238,6 +245,46 @@ export function DecisionBlueprint() {
     return () => observer.disconnect();
   }, [reducedMotion]);
 
+  /**
+   * Final beat: the landscape, copy, and model settle as the section arrives.
+   * The blueprint's own draw-in still owns the moment of the reveal; this only
+   * sets the resting frame.
+   */
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+    bindStoryTargets(
+      section,
+      "--calm",
+      `.${styles.copy},.${styles.model},.${styles.landscape},.${styles.clouds},.${styles.blueprintActions},.${styles.start}`,
+    );
+
+    if (reducedMotion) {
+      scrollState.calm = 1;
+      setCalmVar(section, 1);
+      return;
+    }
+
+    const ScrollTrigger = ensureScrollTrigger();
+    const apply = (value: number) => {
+      const calm = resolveCalm(value);
+      scrollState.calm = calm;
+      setCalmVar(section, calm);
+    };
+
+    const trigger = ScrollTrigger.create({
+      trigger: section,
+      start: "top 82%",
+      end: "center 50%",
+      invalidateOnRefresh: true,
+      onUpdate: (self) => apply(self.progress),
+      onRefresh: (self) => apply(self.progress),
+    });
+    apply(trigger.progress);
+
+    return () => trigger.kill();
+  }, [reducedMotion]);
+
   useEffect(() => {
     const firstInvalid = FIELD_DEFS.find((field) => errors[field.id]);
     if (!firstInvalid) return;
@@ -287,7 +334,9 @@ export function DecisionBlueprint() {
         JSON.stringify({ fields: form, at: Date.now() }),
       );
     } catch {
-      setNote("Blueprint generated. Browser storage is unavailable, so it will not persist.");
+      setNote(
+        "Blueprint generated. Browser storage is unavailable, so it will not persist.",
+      );
     }
     setFormOpen(false);
     playCue("chime");
@@ -343,11 +392,6 @@ export function DecisionBlueprint() {
 
   const startLearning = (event: React.MouseEvent<HTMLAnchorElement>) => {
     track("start_learning", { source: "blueprint" });
-    const signedIn = window.localStorage.getItem("pmforge.user");
-    if (signedIn) {
-      event.preventDefault();
-      router.push("/learn");
-    }
   };
 
   const rationale = savedFields
@@ -394,8 +438,8 @@ export function DecisionBlueprint() {
             <ArrowRight size={17} strokeWidth={1.8} aria-hidden="true" />
           </Link>
           <p className={styles.startNote}>
-            Free practice workspace. No credit card. Your blueprint stays in your
-            browser unless you create an account.
+            Free practice workspace. No credit card. Your blueprint stays in
+            your browser unless you create an account.
           </p>
           <p className={styles.handNote}>
             The decision is the portfolio.
@@ -423,7 +467,11 @@ export function DecisionBlueprint() {
         <div
           className={`${styles.blueprint} ${savedFields ? styles.yours : ""}`}
           role="group"
-          aria-label={savedFields ? "Your decision blueprint" : "Example decision blueprint"}
+          aria-label={
+            savedFields
+              ? "Your decision blueprint"
+              : "Example decision blueprint"
+          }
         >
           <svg
             className={styles.techLines}
@@ -465,18 +513,28 @@ export function DecisionBlueprint() {
               </ul>
             </div>
             <div className={styles.blueprintCol}>
-              <h4>{savedFields ? "Assumptions to watch" : "Remaining risks"}</h4>
+              <h4>
+                {savedFields ? "Assumptions to watch" : "Remaining risks"}
+              </h4>
               <ul className={styles.riskList}>
                 {risks.length > 0 ? (
                   risks.map((item, index) => (
                     <li key={`${item}-${index}`}>
-                      <TriangleAlert size={11} strokeWidth={1.8} aria-hidden="true" />
+                      <TriangleAlert
+                        size={11}
+                        strokeWidth={1.8}
+                        aria-hidden="true"
+                      />
                       <span>{item}</span>
                     </li>
                   ))
                 ) : (
                   <li>
-                    <TriangleAlert size={11} strokeWidth={1.8} aria-hidden="true" />
+                    <TriangleAlert
+                      size={11}
+                      strokeWidth={1.8}
+                      aria-hidden="true"
+                    />
                     <span>No assumption written yet.</span>
                   </li>
                 )}
@@ -491,9 +549,7 @@ export function DecisionBlueprint() {
                 ? "Saved locally · next check documented"
                 : "Decision justified · evidence strength high"}
             </span>
-            {savedFields ? (
-              <span className={styles.footMeta}>v1.0</span>
-            ) : null}
+            {savedFields ? <span className={styles.footMeta}>v1.0</span> : null}
           </div>
 
           <div className={styles.blueprintActions}>
@@ -504,7 +560,11 @@ export function DecisionBlueprint() {
                   className={`${styles.action} btn btnOutline btnSm`}
                   onClick={copyBlueprint}
                 >
-                  <ClipboardCopy size={13} strokeWidth={1.7} aria-hidden="true" />
+                  <ClipboardCopy
+                    size={13}
+                    strokeWidth={1.7}
+                    aria-hidden="true"
+                  />
                   {copied ? "Copied" : copyFailed ? "Copy failed" : "Copy"}
                 </button>
                 <button
@@ -614,7 +674,11 @@ export function DecisionBlueprint() {
                   }
                 />
                 {errors[field.id] ? (
-                  <p className={styles.fieldError} id={`bp-error-${field.id}`} role="alert">
+                  <p
+                    className={styles.fieldError}
+                    id={`bp-error-${field.id}`}
+                    role="alert"
+                  >
                     {errors[field.id]}
                   </p>
                 ) : null}

@@ -7,6 +7,20 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/app/bookmarks",
+        destination: "/app/practice?view=saved",
+        permanent: true,
+      },
+      {
+        source: "/app/history",
+        destination: "/app/progress?tab=history",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

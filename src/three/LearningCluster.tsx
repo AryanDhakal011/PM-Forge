@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, type RefObject } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Environment, Lightformer } from "@react-three/drei";
 import * as THREE from "three";
@@ -9,6 +9,7 @@ import type { SceneFrameloop } from "./sceneLifecycle";
 import {
   AdaptiveDpr,
   FrameLoopBridge,
+  SceneInvalidationBridge,
   SceneMetricsProbe,
   resolveDprBounds,
   resolveDprCeiling,
@@ -27,6 +28,8 @@ type ClusterProps = {
   onSelect: (index: number) => void;
   states: ModuleState[];
   pulls: [number, number, number][];
+  /** Section story state; a ref keeps scroll out of React. */
+  progressRef?: RefObject<number>;
 };
 
 const CARD_POSITIONS: [number, number, number][] = [
@@ -62,6 +65,32 @@ const BLOCK_POSITIONS: [number, number, number, number][] = [
   [-0.85, 2.65, -2.3, 0.2],
   [2.0, 1.75, -2.4, 0.22],
 ];
+
+/*
+ * Where the 18 loose blocks settle once the section is understood: a stable
+ * three-tier curriculum. The widest, quietest tier at the base carries the
+ * foundations; each tier above is shorter, larger, and settles later, so the
+ * hierarchy literally builds upward.
+ */
+const ORGANIZED_ROWS = [
+  { count: 8, y: -1.52, z: -1.0, spacing: 0.78, scale: 0.25, delay: 0 },
+  { count: 6, y: -0.06, z: -1.32, spacing: 0.9, scale: 0.29, delay: 0.1 },
+  { count: 4, y: 1.12, z: -1.5, spacing: 1.1, scale: 0.33, delay: 0.22 },
+];
+
+const ORGANIZED_BLOCKS: [number, number, number, number][] = ORGANIZED_ROWS.flatMap(
+  (row) =>
+    Array.from({ length: row.count }, (_, column) => [
+      (column - (row.count - 1) / 2) * row.spacing,
+      row.y,
+      row.z,
+      row.scale,
+    ] as [number, number, number, number]),
+);
+
+const BLOCK_DELAYS: number[] = ORGANIZED_ROWS.flatMap((row) =>
+  Array.from({ length: row.count }, (_, column) => row.delay + column * 0.015),
+);
 
 const MODULE_COLORS = [
   "#b99a4a",
@@ -269,27 +298,75 @@ function PaperCard({
   );
 }
 
-function ModuleBlocks({ hovered }: { hovered: number | null }) {
+const ease = (t: number) => t * t * (3 - 2 * t);
+const mix = (from: number, to: number, t: number) => from + (to - from) * t;
+
+function ModuleBlocks({
+  hovered,
+  progressRef,
+}: {
+  hovered: number | null;
+  progressRef?: RefObject<number>;
+}) {
   const meshRef = useRef<THREE.InstancedMesh>(null);
   const dummy = useMemo(() => new THREE.Object3D(), []);
+  const applied = useRef(-1);
+
+  // Writes matrices only when the story state actually changed, so an idle
+  // section never touches the instanced buffer.
+  const writeMatrices = useMemo(
+    () => (calm: number) => {
+      const mesh = meshRef.current;
+      if (!mesh) return;
+      BLOCK_POSITIONS.forEach(([x, y, z, scale], index) => {
+        const [targetX, targetY, targetZ, targetScale] =
+          ORGANIZED_BLOCKS[index];
+        const delay = BLOCK_DELAYS[index];
+        const local = ease(
+          Math.min(1, Math.max(0, (calm - delay) / (1 - delay))),
+        );
+        dummy.position.set(
+          mix(x, targetX, local),
+          mix(y, targetY, local),
+          mix(z, targetZ, local),
+        );
+        dummy.rotation.set(
+          mix(index * 0.6, ((index % 3) - 1) * 0.16, local),
+          mix(index * 0.9, (index % 2 === 0 ? 1 : -1) * 0.12, local),
+          mix(index * 0.3, 0, local),
+        );
+        dummy.scale.setScalar(mix(scale, targetScale, local));
+        dummy.updateMatrix();
+        mesh.setMatrixAt(index, dummy.matrix);
+      });
+      mesh.instanceMatrix.needsUpdate = true;
+    },
+    [dummy],
+  );
 
   useLayoutEffect(() => {
     const mesh = meshRef.current;
     if (!mesh) return;
-    BLOCK_POSITIONS.forEach(([x, y, z, scale], index) => {
-      dummy.position.set(x, y, z);
-      dummy.rotation.set(index * 0.6, index * 0.9, index * 0.3);
-      dummy.scale.setScalar(scale);
-      dummy.updateMatrix();
-      mesh.setMatrixAt(index, dummy.matrix);
+    mesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+    BLOCK_POSITIONS.forEach((_, index) => {
       mesh.setColorAt(
         index,
         new THREE.Color(MODULE_COLORS[index % MODULE_COLORS.length]),
       );
     });
-    mesh.instanceMatrix.needsUpdate = true;
     if (mesh.instanceColor) mesh.instanceColor.needsUpdate = true;
-  }, [dummy]);
+    const calm = progressRef?.current ?? 0;
+    applied.current = calm;
+    writeMatrices(calm);
+  }, [progressRef, writeMatrices]);
+
+  useFrame(() => {
+    if (!progressRef) return;
+    const calm = progressRef.current;
+    if (Math.abs(calm - applied.current) < 0.001) return;
+    applied.current = calm;
+    writeMatrices(calm);
+  });
 
   return (
     <instancedMesh
@@ -316,6 +393,7 @@ function Cluster({
   onSelect,
   states,
   pulls,
+  progressRef,
 }: ClusterProps) {
   const groupRef = useRef<THREE.Group>(null);
   const cardsRef = useRef<THREE.Group>(null);
@@ -354,8 +432,13 @@ function Cluster({
   useFrame((state, delta) => {
     const group = groupRef.current;
     if (!group) return;
+    // Calm slows the whole assembly: once the curriculum has resolved it
+    // drifts rather than spins, and the idle tilt flattens out.
+    const calm = progressRef?.current ?? 0;
     if (!reducedMotion) {
-      if (!drag.current.active) drag.current.target += delta * 0.12;
+      if (!drag.current.active) {
+        drag.current.target += delta * 0.12 * (1 - calm * 0.72);
+      }
       drag.current.rotation = THREE.MathUtils.damp(
         drag.current.rotation,
         drag.current.target,
@@ -363,8 +446,10 @@ function Cluster({
         delta,
       );
       group.rotation.y = drag.current.rotation;
-      group.rotation.x = Math.sin(state.clock.elapsedTime * 0.22) * 0.035;
-      group.position.y = Math.sin(state.clock.elapsedTime * 0.5) * 0.05;
+      group.rotation.x =
+        Math.sin(state.clock.elapsedTime * 0.22) * 0.035 * (1 - calm);
+      group.position.y =
+        Math.sin(state.clock.elapsedTime * 0.5) * 0.05 * (1 - calm);
     } else {
       group.rotation.y = -0.16;
       group.rotation.x = 0.04;
@@ -373,7 +458,7 @@ function Cluster({
     if (cardsRef.current) {
       cardsRef.current.rotation.z = reducedMotion
         ? 0
-        : Math.sin(state.clock.elapsedTime * 0.12) * 0.012;
+        : Math.sin(state.clock.elapsedTime * 0.12) * 0.012 * (1 - calm);
     }
     if (ballRef.current) {
       const [engineering, sales, ux] =
@@ -428,7 +513,7 @@ function Cluster({
           ))}
         </group>
 
-        <ModuleBlocks hovered={hovered} />
+        <ModuleBlocks hovered={hovered} progressRef={progressRef} />
 
         <lineSegments>
           <icosahedronGeometry args={[3.12, 1]} />
@@ -462,6 +547,7 @@ export function LearningCluster({
   onSelect,
   states,
   pulls,
+  progressRef,
   onFail,
 }: ClusterProps & { frameloop: SceneFrameloop; onFail?: () => void }) {
   const [failed, setFailed] = useState(false);
@@ -500,6 +586,7 @@ export function LearningCluster({
         enabled={!reducedMotion}
       />
       <FrameLoopBridge watch={reducedMotion ? `${hovered}:${reducedMotion}` : undefined} />
+      <SceneInvalidationBridge id="learning" />
       <SceneMetricsProbe id="learning" />
       <ambientLight intensity={1.2} />
       <directionalLight position={[4, 6, 5]} intensity={2.4} color="#fff7eb" />
@@ -537,6 +624,7 @@ export function LearningCluster({
         onSelect={onSelect}
         states={states}
         pulls={pulls}
+        progressRef={progressRef}
       />
     </Canvas>
   );

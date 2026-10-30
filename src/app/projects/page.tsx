@@ -1,89 +1,87 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
-import { PageHero } from "@/components/site/PageHero";
-import { ProjectsWorkbench } from "@/components/landing/ProjectsWorkbench";
-import styles from "@/styles/pages.module.css";
-
+import { projects } from "@/lib/projects/content";
+import s from "@/components/projects/Projects.module.css";
+import u from "@/components/product/Product.module.css";
 export const metadata: Metadata = {
-  title: "Project workbench",
+  title: "Real World Projects · 12 living case studies",
   description:
-    "Work a full-cycle product project: select a phase, inspect artifacts, complete the sprint, then make and document a decision under pressure.",
-  alternates: { canonical: "/projects" },
+    "Three-chapter product campaigns with persistent decisions, authored consequences, traceable debriefs and alternate timelines.",
 };
-
-export default function ProjectsPage() {
+export default function Page() {
   return (
     <PageShell>
-      <PageHero
-        kicker="Project workbench"
-        title={
-          <>
-            Work the mess,
-            <br />
-            <em>not a case study.</em>
-          </>
-        }
-        lede="Two live scenarios, each with a phase timeline, artifacts, a sprint checklist, and a pressure event that changes the evidence. Your decision and rationale are saved in this browser."
-        aside={
-          <>
-            <strong>Two scenarios</strong>
-            Marketplace Checkout Recovery and Growth Onboarding. Same interface,
-            different constraints.
-          </>
-        }
-      >
-        <Link href="#projects" className="btn btnPrimary">
-          Open the workbench
-          <ArrowRight size={16} strokeWidth={1.8} aria-hidden="true" />
-        </Link>
-        <Link href="/#blueprint" className="btn btnOutline">
-          Turn a decision into a blueprint
-        </Link>
-      </PageHero>
-
-      <ProjectsWorkbench />
-
-      <section className={`${styles.section} ${styles.sectionTight}`}>
-        <div className={styles.inner}>
-          <div className={styles.grid}>
-            <article className={styles.card}>
-              <p className={styles.cardMeta}>
-                <span>Habit</span>
-                <span className={styles.cardNumber}>01</span>
-              </p>
-              <h2 className={styles.cardTitle}>Inspect before deciding</h2>
-              <p className={styles.cardBody}>
-                Open the artifacts for the phase you are in. A decision made from
-                the brief alone is a guess with better formatting.
-              </p>
-            </article>
-            <article className={styles.card}>
-              <p className={styles.cardMeta}>
-                <span>Habit</span>
-                <span className={styles.cardNumber}>02</span>
-              </p>
-              <h2 className={styles.cardTitle}>Name the trade-off</h2>
-              <p className={styles.cardBody}>
-                Every pressure choice costs something. The record asks what you
-                gave up, not just what you chose.
-              </p>
-            </article>
-            <article className={styles.card}>
-              <p className={styles.cardMeta}>
-                <span>Habit</span>
-                <span className={styles.cardNumber}>03</span>
-              </p>
-              <h2 className={styles.cardTitle}>Set the next check</h2>
-              <p className={styles.cardBody}>
-                A decision without a review trigger is a belief. Write the
-                evidence that would make you reassess.
-              </p>
-            </article>
+      <div className={u.product} style={{ minHeight: 0 }}>
+        <main
+          className={u.content}
+          style={{ maxWidth: 1350, margin: "0 auto", paddingTop: 70 }}
+        >
+          <header className={s.galleryHead}>
+            <span className={u.eyebrow}>
+              Real World Projects / from practice to consequence
+            </span>
+            <h1>
+              The map draws itself
+              <br />
+              <em>while you walk.</em>
+            </h1>
+            <p>
+              Twelve fictional companies. Three chapters each. Make an
+              irreversible tradeoff, watch the operating state change, and enter
+              the next chapter with that commitment still on the table.
+            </p>
+            <Link href="/app/projects" className={u.primary}>
+              Explore all 12 campaigns →
+            </Link>
+            <p className={u.finePrint}>
+              45–75 minutes per campaign, with pause/resume. Guest work is saved
+              on this device. Configured accounts can sync. All data is
+              simulated; authored content awaits expert review.
+            </p>
+          </header>
+          <div className={s.grid}>
+            {projects.map((p, i) => (
+              <article
+                key={p.id}
+                className={s.card}
+                style={
+                  {
+                    "--case-bg": p.palette.bg,
+                    "--case-ink": p.palette.ink,
+                    "--case-accent": p.palette.accent,
+                  } as CSSProperties
+                }
+              >
+                <div className={s.cardTop}>
+                  <span>Case {String(i + 1).padStart(2, "0")}</span>
+                  <span>3 chapters</span>
+                </div>
+                <h2>{p.title}</h2>
+                <p>{p.skill}.</p>
+                <div className={s.cardFoot}>
+                  <span>45–75 min · {p.tags[0]}</span>
+                  <Link href={`/app/projects/${p.id}`}>Read the brief →</Link>
+                </div>
+              </article>
+            ))}
           </div>
-        </div>
-      </section>
+          <section className={u.panel} style={{ margin: "40px 0 70px" }}>
+            <h2>What happens inside?</h2>
+            <p className={u.prose}>
+              Enter an authored setting, inspect conflicting evidence, choose a
+              commitment, and review its known cost before locking it. State
+              changes become the next chapter’s constraints. Finish with a
+              consequence trace, an archetype description, exports, and a branch
+              from any completed chapter. No single score and no generated plot.
+            </p>
+            <Link className={u.textButton} href="/app/projects">
+              Find your first recurring battle →
+            </Link>
+          </section>
+        </main>
+      </div>
     </PageShell>
   );
 }

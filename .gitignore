@@ -39,3 +39,9 @@ yarn-error.log*
 # local scratch
 .perf-images.cjs
 .next-server.log
+docs/scroll-story-verification/*.png
+.data/
+docs/product-verification/*.png
+docs/project-verification/*.png
+
+docs/workspace-verification/*.png

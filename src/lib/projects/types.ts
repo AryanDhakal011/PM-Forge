@@ -1,0 +1,92 @@
+export type ProjectState = Record<string, number>;
+export type ReactionKind = "fracture" | "dim" | "surge" | "recover" | "fog";
+export type ProjectChoice = {
+  id: string;
+  label: string;
+  cost: string;
+  delta: ProjectState;
+  reaction: string;
+  kind: ReactionKind;
+  constraint: string;
+  archetype: string;
+};
+export type ProjectChapter = {
+  title: string;
+  brief: string;
+  pattern: "tradeoff" | "investigate" | "ally" | "frame" | "rank";
+  evidence: { source: string; text: string; confidence: string }[];
+  choices: ProjectChoice[];
+};
+export type ProjectRule = {
+  chapter: number;
+  flag: string;
+  choice?: string;
+  variable?: string;
+  below?: number;
+  delta: ProjectState;
+  reaction: string;
+  kind: ReactionKind;
+  constraint: string;
+};
+export type Project = {
+  id: string;
+  title: string;
+  setting: string;
+  skill: string;
+  category: string;
+  tags: string[];
+  palette: { bg: string; ink: string; accent: string };
+  variables: {
+    id: string;
+    label: string;
+    initial: number;
+    max: number;
+    unit: string;
+    bad: boolean;
+  }[];
+  chapters: ProjectChapter[];
+  rules: ProjectRule[];
+  archetypes: { label: string; definition: string }[];
+};
+export type ProjectDecision = {
+  chapter: number;
+  choiceId: string;
+  label: string;
+  before: ProjectState;
+  after: ProjectState;
+  delta: ProjectState;
+  reaction: string;
+  kind: ReactionKind;
+  constraint: string;
+  ruleIds: number[];
+  rationale: string;
+  evidence: string[];
+  ranking: string[];
+  at: string;
+};
+export type ProjectRun = {
+  id: string;
+  ownerId: string;
+  projectId: string;
+  version: 1;
+  revision: number;
+  chapter: number;
+  phase: "entrance" | "decision" | "consequence" | "debrief";
+  status: "active" | "paused" | "complete";
+  state: ProjectState;
+  flags: string[];
+  decisions: ProjectDecision[];
+  draft: {
+    choiceId: string;
+    rationale: string;
+    evidence: string[];
+    ranking: string[];
+  };
+  includeNotes: boolean;
+  entranceSeen: boolean;
+  startedAt: string;
+  updatedAt: string;
+  completedAt?: string;
+  parentRunId?: string;
+  branchChapter?: number;
+};

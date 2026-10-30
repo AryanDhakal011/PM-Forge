@@ -24,6 +24,13 @@ import {
 } from "@/lib/content";
 import { copyText } from "@/lib/clipboard";
 import { track } from "@/lib/analytics";
+import { scrollState } from "@/lib/scrollState";
+import {
+  ensureScrollTrigger,
+  resolveCalm,
+  setCalmVar,
+  bindStoryTargets,
+} from "@/lib/scrollStory";
 import styles from "./ProjectsWorkbench.module.css";
 
 type DecisionMap = Record<string, string>;
@@ -35,7 +42,7 @@ const STORAGE_KEY = "pmforge.projects.v1";
 const streamTilt = [-30, 30, 0];
 
 export function ProjectsWorkbench() {
-  const { playCue } = useSettings();
+  const { playCue, reducedMotion } = useSettings();
   const [scenarioIndex, setScenarioIndex] = useState(0);
   const [phaseIndex, setPhaseIndex] = useState(0);
   const [checks, setChecks] = useState<SprintMap>({});
@@ -58,17 +65,20 @@ export function ProjectsWorkbench() {
   const done = checks[scenario.id] ?? [];
   const decisionId = decisions[scenario.id] ?? null;
   const outcome = decisionId
-    ? (scenario.id === "onboarding"
-        ? onboardingPressureOutcomes[decisionId]
-        : pressureOutcomes[decisionId])
+    ? scenario.id === "onboarding"
+      ? onboardingPressureOutcomes[decisionId]
+      : pressureOutcomes[decisionId]
     : null;
-  const chosen = pressureChoices.find((choice) => choice.id === decisionId) ?? null;
+  const chosen =
+    pressureChoices.find((choice) => choice.id === decisionId) ?? null;
   const activeStream: Stream | null = pinnedStream ?? hoveredStream;
   const constraint =
     activeStream !== null
       ? scenario.pressure.constraints[activeStream]
       : scenario.pressure.constraints[2];
-  const sprintPercent = Math.round((done.length / scenario.sprint.length) * 100);
+  const sprintPercent = Math.round(
+    (done.length / scenario.sprint.length) * 100,
+  );
   const pressureReady = revealed;
 
   const meters = outcome?.meters ?? scenario.baseline;
@@ -77,7 +87,10 @@ export function ProjectsWorkbench() {
     try {
       const raw = window.localStorage.getItem(STORAGE_KEY);
       if (raw) {
-        const parsed = JSON.parse(raw) as { checks?: SprintMap; decisions?: DecisionMap };
+        const parsed = JSON.parse(raw) as {
+          checks?: SprintMap;
+          decisions?: DecisionMap;
+        };
         setChecks(parsed.checks ?? {});
         setDecisions(parsed.decisions ?? {});
       }
@@ -135,6 +148,48 @@ export function ProjectsWorkbench() {
     observer.observe(node);
     return () => observer.disconnect();
   }, []);
+
+  /**
+   * The desk surfaces as the section enters: the wood drifts a few pixels,
+   * the light shaft straightens, and the loose sheets square up. A
+   * pass-through trigger only — no pin, no extra scroll length.
+   */
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+    bindStoryTargets(
+      section,
+      "--calm",
+      `.${styles.wood},.${styles.lightShaft},.${styles.sheet},.${styles.sprint},.${styles.artifact}`,
+    );
+
+    if (reducedMotion) {
+      scrollState.projects = 1;
+      scrollState.calm = 1;
+      setCalmVar(section, 1);
+      return;
+    }
+
+    const ScrollTrigger = ensureScrollTrigger();
+    const apply = (value: number) => {
+      const calm = resolveCalm(value);
+      scrollState.projects = calm;
+      scrollState.calm = calm;
+      setCalmVar(section, calm);
+    };
+
+    const trigger = ScrollTrigger.create({
+      trigger: section,
+      start: "top 82%",
+      end: "center 42%",
+      invalidateOnRefresh: true,
+      onUpdate: (self) => apply(self.progress),
+      onRefresh: (self) => apply(self.progress),
+    });
+    apply(trigger.progress);
+
+    return () => trigger.kill();
+  }, [reducedMotion]);
 
   const selectScenario = (index: number) => {
     if (index === scenarioIndex) return;
@@ -200,7 +255,10 @@ export function ProjectsWorkbench() {
     if (ok) {
       playCue("chime");
       track("decision_record_copy", { scenario: scenario.id });
-      window.setTimeout(() => recordLinkRef.current?.focus({ preventScroll: true }), 240);
+      window.setTimeout(
+        () => recordLinkRef.current?.focus({ preventScroll: true }),
+        240,
+      );
     }
   };
 
@@ -225,17 +283,18 @@ export function ProjectsWorkbench() {
           <div className={styles.introCopy}>
             <p className={`eyebrow ${styles.eyebrow}`}>Real-world projects</p>
             <h2 id="projects-title" className={`${styles.title} display`}>
-              Build.{" "}
-              <br />
-              Ship.{" "}
-              <br />
+              Build. <br />
+              Ship. <br />
               Learn.
             </h2>
             <p className={styles.body}>
               Work on full-cycle product projects with real-world inputs,
               stakeholder feedback, and evolving scenarios.
             </p>
-            <Link href="/projects" className={`${styles.explore} btn btnOutlineLight`}>
+            <Link
+              href="/projects"
+              className={`${styles.explore} btn btnOutlineLight`}
+            >
               Explore Projects
               <ArrowRight size={16} strokeWidth={1.7} aria-hidden="true" />
             </Link>
@@ -256,7 +315,8 @@ export function ProjectsWorkbench() {
                   className={styles.switchButton}
                   onClick={() => selectScenario(index)}
                   onKeyDown={(event) => {
-                    if (!["ArrowRight", "ArrowLeft"].includes(event.key)) return;
+                    if (!["ArrowRight", "ArrowLeft"].includes(event.key))
+                      return;
                     event.preventDefault();
                     const next =
                       event.key === "ArrowRight"
@@ -293,7 +353,11 @@ export function ProjectsWorkbench() {
 
             <p className={styles.sheetBrief}>{scenario.brief}</p>
 
-            <div className={styles.timeline} role="group" aria-label="Project phases">
+            <div
+              className={styles.timeline}
+              role="group"
+              aria-label="Project phases"
+            >
               <span className={styles.timelineLine} aria-hidden="true" />
               <span
                 className={styles.timelineFill}
@@ -312,7 +376,10 @@ export function ProjectsWorkbench() {
                   aria-current={index === phaseIndex ? "step" : undefined}
                   onClick={() => {
                     setPhaseIndex(index);
-                    track("project_phase", { scenario: scenario.id, phase: item.name });
+                    track("project_phase", {
+                      scenario: scenario.id,
+                      phase: item.name,
+                    });
                   }}
                 >
                   <span className={styles.phaseDot}>
@@ -331,7 +398,9 @@ export function ProjectsWorkbench() {
             <div className={styles.artifacts} aria-live="polite">
               {artifacts.map((artifact, index) => (
                 <article className={styles.artifact} key={artifact.title}>
-                  <span className={styles.artifactKicker}>{artifact.kicker}</span>
+                  <span className={styles.artifactKicker}>
+                    {artifact.kicker}
+                  </span>
                   <h4>{artifact.title}</h4>
                   <p>{artifact.body}</p>
                   <button
@@ -340,7 +409,11 @@ export function ProjectsWorkbench() {
                     onClick={() => setArtifactOpen(index)}
                   >
                     Open artifact
-                    <ArrowRight size={12} strokeWidth={1.8} aria-hidden="true" />
+                    <ArrowRight
+                      size={12}
+                      strokeWidth={1.8}
+                      aria-hidden="true"
+                    />
                   </button>
                 </article>
               ))}
@@ -352,7 +425,11 @@ export function ProjectsWorkbench() {
             </p>
           </div>
 
-          <div className={styles.sprint} role="group" aria-label="Sprint checklist">
+          <div
+            className={styles.sprint}
+            role="group"
+            aria-label="Sprint checklist"
+          >
             <div className={styles.sprintHead}>
               <span className={styles.sprintKicker}>Sprint 3</span>
               <span
@@ -404,7 +481,9 @@ export function ProjectsWorkbench() {
         <div className={styles.deskRow}>
           <div className={styles.monolithCard}>
             <div className={styles.monolithHead}>
-              <span className={styles.darkKicker}>Cross-functional pressure</span>
+              <span className={styles.darkKicker}>
+                Cross-functional pressure
+              </span>
               <h3 className={styles.panelTitle}>One decision. Three pulls.</h3>
             </div>
 
@@ -432,10 +511,18 @@ export function ProjectsWorkbench() {
                   d="M286 34C230 42 200 78 172 108"
                 />
                 <path
-                  className={activeStream === 2 || activeStream === null ? styles.streamPathActive : ""}
+                  className={
+                    activeStream === 2 || activeStream === null
+                      ? styles.streamPathActive
+                      : ""
+                  }
                   d="M160 230C160 190 160 145 160 112"
                 />
-                <circle r="3.5" className={styles.streamPulse} aria-hidden="true">
+                <circle
+                  r="3.5"
+                  className={styles.streamPulse}
+                  aria-hidden="true"
+                >
                   <animateMotion
                     key={activeStream ?? "idle"}
                     path={
@@ -481,8 +568,8 @@ export function ProjectsWorkbench() {
 
             <p className={styles.monolithNote}>
               <Move3d size={12} strokeWidth={1.5} aria-hidden="true" />
-              At rest, it leans toward the customer outcome. Pull a stream to feel
-              the cost.
+              At rest, it leans toward the customer outcome. Pull a stream to
+              feel the cost.
             </p>
             <p className={styles.constraint} role="status">
               <span>{constraint.team}</span>
@@ -511,13 +598,19 @@ export function ProjectsWorkbench() {
             <ul className={styles.evidence}>
               {scenario.pressure.evidence.map((item, index) => (
                 <li key={item} style={{ "--i": index } as React.CSSProperties}>
-                  <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+                  <span aria-hidden="true">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
                   {item}
                 </li>
               ))}
             </ul>
 
-            <div className={styles.choices} role="group" aria-label="Pressure decision">
+            <div
+              className={styles.choices}
+              role="group"
+              aria-label="Pressure decision"
+            >
               {pressureChoices.map((choice) => (
                 <button
                   key={choice.id}
@@ -534,7 +627,11 @@ export function ProjectsWorkbench() {
               ))}
             </div>
 
-            <div className={styles.meters} role="group" aria-label="Decision impact, out of ten">
+            <div
+              className={styles.meters}
+              role="group"
+              aria-label="Decision impact, out of ten"
+            >
               <Meter
                 icon={<Users size={14} strokeWidth={1.7} />}
                 label="Users"
@@ -566,6 +663,7 @@ export function ProjectsWorkbench() {
         <div
           id="decision-record"
           className={styles.recordBar}
+          data-written={Boolean(outcome && chosen)}
           aria-live="polite"
         >
           {outcome && chosen ? (
@@ -606,13 +704,28 @@ export function ProjectsWorkbench() {
                 </div>
               </dl>
               <div className={styles.recordActions}>
+                <Link
+                  href="/signup?intent=save&src=project-record&next=%2Fapp%2Fportfolio"
+                  className="btn btnOutline btnSm"
+                >
+                  Save this record to my portfolio
+                  <ArrowRight size={13} aria-hidden="true" />
+                </Link>
                 <button
                   type="button"
                   className={`${styles.copyRecord} btn btnOutline btnSm`}
                   onClick={copyRecord}
                 >
-                  <ClipboardCopy size={13} strokeWidth={1.7} aria-hidden="true" />
-                  {copied ? "Record copied" : copyFailed ? "Copy failed" : "Copy record"}
+                  <ClipboardCopy
+                    size={13}
+                    strokeWidth={1.7}
+                    aria-hidden="true"
+                  />
+                  {copied
+                    ? "Record copied"
+                    : copyFailed
+                      ? "Copy failed"
+                      : "Copy record"}
                 </button>
                 <Link
                   href="/#blueprint"
@@ -630,7 +743,9 @@ export function ProjectsWorkbench() {
                 Written
               </span>
               <span className="srOnly" aria-live="polite">
-                {copied ? "Record copied. You can turn it into a blueprint." : ""}
+                {copied
+                  ? "Record copied. You can turn it into a blueprint."
+                  : ""}
                 {copyFailed
                   ? "Copying is blocked here. Select the record text and copy it manually."
                   : ""}

@@ -1,0 +1,786 @@
+{
+  "checks": [
+    {
+      "label": "The Sacred No at 1440px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 15.21762403284192,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.662745 0.937255 0.392157 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 634.234375
+      }
+    },
+    {
+      "label": "The Silent Churn at 1440px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 8.32100735766821,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.52549 0.65098 0.792157 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 634.234375
+      }
+    },
+    {
+      "label": "The Feature Factory at 1440px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 8.635973914406266,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.698039 0.584314 1 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 634.234375
+      }
+    },
+    {
+      "label": "The Ghost Metric at 1440px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 4.663989411908249,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.65098 0.411765 0.129412 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 634.234375
+      }
+    },
+    {
+      "label": "The Pivot Point at 1440px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 5.166406358039473,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.0862745 0.552941 0.509804 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 634.234375
+      }
+    },
+    {
+      "label": "The Legacy Fracture at 1440px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 10.460692739635135,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.823529 0.705882 0.4 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 634.234375
+      }
+    },
+    {
+      "label": "The Shadow Roadmap at 1440px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 12.133518718438403,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.717647 0.780392 0.831373 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 634.234375
+      }
+    },
+    {
+      "label": "The Trojan Horse at 1440px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 10.736665079587317,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.933333 0.639216 0.796078 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 634.234375
+      }
+    },
+    {
+      "label": "The Invisible Wall at 1440px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 13.152880119981209,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.721569 0.827451 0.768627 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 634.234375
+      }
+    },
+    {
+      "label": "The Deadlock at 1440px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 10.246027739230387,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.952941 0.643137 0.32549 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 634.234375
+      }
+    },
+    {
+      "label": "The Public Fracture at 1440px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 8.818011915526812,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.937255 0.54902 0.560784 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 634.234375
+      }
+    },
+    {
+      "label": "The Last Mile at 1440px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 13.93691314827549,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.898039 0.831373 0.396078 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 634.234375
+      }
+    },
+    {
+      "label": "The Sacred No at 390px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 15.21762403284192,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.662745 0.937255 0.392157 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 298
+      }
+    },
+    {
+      "label": "The Silent Churn at 390px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 8.32100735766821,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.52549 0.65098 0.792157 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 298
+      }
+    },
+    {
+      "label": "The Feature Factory at 390px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 8.635973914406266,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.698039 0.584314 1 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 298
+      }
+    },
+    {
+      "label": "The Ghost Metric at 390px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 4.663989411908249,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.65098 0.411765 0.129412 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 298
+      }
+    },
+    {
+      "label": "The Pivot Point at 390px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 5.166406358039473,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.0862745 0.552941 0.509804 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 298
+      }
+    },
+    {
+      "label": "The Legacy Fracture at 390px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 10.460692739635135,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.823529 0.705882 0.4 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 298
+      }
+    },
+    {
+      "label": "The Shadow Roadmap at 390px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 12.133518718438403,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.717647 0.780392 0.831373 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 298
+      }
+    },
+    {
+      "label": "The Trojan Horse at 390px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 10.736665079587317,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.933333 0.639216 0.796078 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 298
+      }
+    },
+    {
+      "label": "The Invisible Wall at 390px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 13.152880119981209,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.721569 0.827451 0.768627 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 298
+      }
+    },
+    {
+      "label": "The Deadlock at 390px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 10.246027739230387,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.952941 0.643137 0.32549 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 298
+      }
+    },
+    {
+      "label": "The Public Fracture at 390px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 8.818011915526812,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.937255 0.54902 0.560784 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 298
+      }
+    },
+    {
+      "label": "The Last Mile at 390px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 13.93691314827549,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.898039 0.831373 0.396078 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 298
+      }
+    },
+    {
+      "label": "The Sacred No at 320px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 15.21762403284192,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.662745 0.937255 0.392157 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 228
+      }
+    },
+    {
+      "label": "The Silent Churn at 320px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 8.32100735766821,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.52549 0.65098 0.792157 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 228
+      }
+    },
+    {
+      "label": "The Feature Factory at 320px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 8.635973914406266,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.698039 0.584314 1 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 228
+      }
+    },
+    {
+      "label": "The Ghost Metric at 320px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 4.663989411908249,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.65098 0.411765 0.129412 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 228
+      }
+    },
+    {
+      "label": "The Pivot Point at 320px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 5.166406358039473,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.0862745 0.552941 0.509804 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 228
+      }
+    },
+    {
+      "label": "The Legacy Fracture at 320px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 10.460692739635135,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.823529 0.705882 0.4 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 228
+      }
+    },
+    {
+      "label": "The Shadow Roadmap at 320px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 12.133518718438403,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.717647 0.780392 0.831373 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 228
+      }
+    },
+    {
+      "label": "The Trojan Horse at 320px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 10.736665079587317,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.933333 0.639216 0.796078 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 228
+      }
+    },
+    {
+      "label": "The Invisible Wall at 320px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 13.152880119981209,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.721569 0.827451 0.768627 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 228
+      }
+    },
+    {
+      "label": "The Deadlock at 320px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 10.246027739230387,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.952941 0.643137 0.32549 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 228
+      }
+    },
+    {
+      "label": "The Public Fracture at 320px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 8.818011915526812,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.937255 0.54902 0.560784 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 228
+      }
+    },
+    {
+      "label": "The Last Mile at 320px: hierarchy, two-line title, locked cards, disclosure and contrast",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "titleFits": true,
+        "titleLines": 2,
+        "status": [
+          "available",
+          "locked",
+          "locked"
+        ],
+        "lockedLinks": 0,
+        "uniqueTeasers": 2,
+        "detailsClosed": true,
+        "technicalHidden": true,
+        "buttonContrast": 13.93691314827549,
+        "surfaceBackground": "radial-gradient(at 90% 0%, color(srgb 0.898039 0.831373 0.396078 / 0.09), rgba(0, 0, 0, 0) 58%), radial-gradient(at 0% 18%, rgba(244, 216, 163, 0.035), rgba(0, 0, 0, 0) 65%), none",
+        "settingWidth": 228
+      }
+    },
+    {
+      "label": "mechanics disclosure opens with complete timing information",
+      "pass": true
+    },
+    {
+      "label": "save action retains its persistent pressed state",
+      "pass": true
+    },
+    {
+      "label": "active campaign shows Completed, Available, Locked with a review action",
+      "pass": true
+    },
+    {
+      "label": "resume action still enters the exact saved chapter",
+      "pass": true
+    },
+    {
+      "label": "completed campaign shows three reviewable completed chapters",
+      "pass": true
+    },
+    {
+      "label": "no browser runtime exceptions",
+      "pass": true,
+      "details": []
+    }
+  ],
+  "errors": []
+}

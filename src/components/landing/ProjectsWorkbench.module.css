@@ -1353,6 +1353,45 @@
   animation-delay: 220ms;
 }
 
+/*
+ * Story settle. Entering the desk brings it into focus: the wood eases a few
+ * pixels, the light shaft straightens, and the loose sheets square up. All of
+ * it is transform/opacity only, so scrolling stays compositor-friendly.
+ */
+.wood {
+  transform: translateY(calc(var(--calm, 0) * 14px))
+    scale(calc(1.03 + var(--calm, 0) * 0.012));
+}
+
+.lightShaft {
+  opacity: calc(0.72 + var(--calm, 0) * 0.28);
+  transform: rotate(calc(-3deg + var(--calm, 0) * 0.6deg));
+}
+
+.sheet {
+  transform: rotate(calc(-0.8deg + var(--calm, 0) * 0.8deg));
+}
+
+.sprint {
+  transform: rotate(calc(1.5deg - var(--calm, 0) * 0.9deg));
+}
+
+.artifact {
+  transform: rotate(calc(0.4deg - var(--calm, 0) * 0.4deg));
+}
+
+/* Only a real choice earns the completed-record emphasis. */
+.recordBar[data-written="true"] {
+  border-color: rgba(185, 154, 74, 0.6);
+  box-shadow: 0 6px 18px rgba(36, 24, 14, 0.12);
+  animation: recordSettle 280ms var(--ease-out) both;
+}
+
+@keyframes recordSettle {
+  from { opacity: 0.75; translate: 0 6px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .monolith,
   .streamPulse {

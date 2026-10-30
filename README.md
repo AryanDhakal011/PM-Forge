@@ -1,81 +1,54 @@
 # PMForge
 
-A local-first practice ground for product judgment. PMForge turns a landing-page narrative — **CHAOS → SIGNAL → DECISION → IMPACT** — into working tools: a 3D decision engine, a ten-input signal test, a project workbench, a timed interview lab, a career board, and a downloadable decision blueprint.
+A practice workspace for product judgment: 63 interview scenarios, seven category workbenches, twelve three-chapter projects, evidence-backed debriefs and a private decision portfolio.
 
-The build is a Next.js App Router application. There is no backend, no hosted account, and no model call. Profiles, progress, and preferences live in the browser's `localStorage`.
+## Run locally
 
-## Run it
-
-```bash
-npm install
-npm run dev        # http://localhost:3000
-```
-
-Production check:
-
-```bash
-npm run typecheck
+```sh
+npm ci --legacy-peer-deps
+npm run dev
+# Production preview:
 npm run build
-npm run start
+npm run start -- --port 3001
 ```
 
-Set `NEXT_PUBLIC_SITE_URL` before a real deployment so canonical and Open Graph URLs resolve to the production origin. Without it the app uses `http://localhost:3001`. The current local production preview runs on **port 3001** (`$env:PORT=3001; npm run start` on Windows).
+Guest mode needs no credentials. Set up Google or GitHub through [.env.example](.env.example) before offering account sync. The account backend uses Better Auth and Node SQLite in ignored `.data/`; deployment requires durable storage and configured OAuth. Secrets and personal practice data must stay out of Git.
 
-## What is real
-
-- The hero is a live React Three Fiber scene with a poster fallback when WebGL is unavailable or reduced motion is on.
-- The signal test is keyboard- and pointer-operable, with a pinned scene and persisted result.
-- The learning path reads real progress from `pmforge.learning.v1`; it no longer ships sample completion states.
-- The workbench has two scenarios, four phases, five sprint checks, a pressure decision, consequences, and a copyable decision record.
-- The interview lab uses the browser's Web Speech API for optional dictation after explicit consent. The browser's speech provider may process audio remotely; PMForge does not record or store audio. Written answers are scored locally with a deterministic seven-criterion rubric.
-- The blueprint validates eight fields with Zod, persists a draft, copies to the clipboard, and downloads a Markdown file.
-- The career board validates a LinkedIn URL, saves a target role, and copies a practice summary.
-
-## Honest limits
-
-- Local-only profiles: no password, OAuth, server session, password reset, or cross-device sync.
-- No AI grading, transcription, voice recording, or recruiter marketplace.
-- No Blender/GLB pipeline. The 3D scenes are procedural Three.js geometry; the wood textures and two photographic plates are the external assets.
-- One Pexels mountain photograph and one workspace plate (provenance unrecorded) are used; the remaining photographic “plates” are original CSS/SVG art direction.
-- `hello@pmforge.example` is a placeholder support address. No inbox is monitored.
-
-See [`BLOCKERS.md`](BLOCKERS.md) for the full list.
-
-## Routes
+## Navigation
 
 | Route | Purpose |
 | --- | --- |
-| `/` | Landing narrative and seven interactive/editorial scenes plus the drafting-sheet footer |
-| `/learn` | Ten-module curriculum |
-| `/learn/[slug]` | Ten statically generated lessons |
-| `/projects` | Two-scenario project workbench |
-| `/practice` | Interview lab and question bank |
-| `/career` | Local career evidence board |
-| `/tools` | Evidence-strength check and tool index |
-| `/resources` | Question bank, rubric, reading paths, templates |
-| `/signup`, `/login` | Local profile creation and reopening |
-| `/dashboard` | Workspace snapshot and next action |
-| `/about`, `/credits`, `/help` | Context, attribution, operating manual |
-| `/privacy`, `/terms` | Local-data and use terms |
+| `/` | Interactive landing narrative |
+| `/app` | Today: suggested Easy brief, real coverage instrument, rooms and decision shelf |
+| `/app/practice` | Cards, list or map; category, level, length and status filters |
+| `/app/practice?view=saved` | Saved scenarios and project decision points |
+| `/app/practice/[slug]` | Scenario brief and start/resume |
+| `/app/run/[id]` | Guided practice, workbench, spoken synthesis, debrief and reflection |
+| `/app/projects` | Twelve missions and their chapter progress |
+| `/app/progress` | Coverage, bands and project constellation |
+| `/app/progress?tab=history` | Interview and project session trails |
+| `/app/portfolio` | Decision records and Markdown export |
+| `/app/settings` | Preferences, backup/import and account controls |
+| `/app/bookmarks`, `/app/history` | Permanent redirects to Saved and History |
+| `/questions`, `/projects`, `/learn` | Public library, project overview and curriculum |
 
-## Documentation
+The app uses native scroll. Lenis and ScrollTrigger coordinate only the marketing pages. Mobile and reduced-motion users receive an interactive SVG coverage equivalent. Cmd/Ctrl+K opens the palette; / searches Practice; g then h/p/r opens Today/Practice/Projects.
 
-- [`docs/ASSET_MANIFEST.md`](docs/ASSET_MANIFEST.md) — every runtime asset, source, licence, and use.
-- [`docs/IMPLEMENTATION_STATUS.md`](docs/IMPLEMENTATION_STATUS.md) — what is built and how it was verified.
-- [`docs/QA_CHECKLIST.md`](docs/QA_CHECKLIST.md) — the QA record, including failures found and fixed.
-- [`DECISIONS.md`](DECISIONS.md) — architecture and product trade-offs.
-- [`BLOCKERS.md`](BLOCKERS.md) — missing inputs and deliberate limitations.
-- [`public/credits.txt`](public/credits.txt) — plain-text attribution shipped with the app.
+## Verification
 
-## Stack
+```sh
+npm run typecheck
+npm test
+npm run build
+node docs/check-product-routes.mjs
+```
 
-Next.js 16.4.3 · React 19.3.1 · TypeScript 5.9.3 · React Three Fiber 9.8.2 · drei 10.7.9 · three 0.186.1 · GSAP 3.15 · Lenis 1.3.27 · Zod 4.6.7 · lucide-react 1.61 · CSS Modules and custom properties. No Tailwind.
+Windows Chromium harnesses in `docs/verify-*.mjs` and `docs/verify-*.ts` exercise real guest flows in isolated browser profiles. GitHub Actions checks types, engine/account tests and production build on Node 24. The optional `npm run launch:check` separately reports missing launch credentials and expert reviews.
 
-## Notes for maintainers
+## Scope and limits
 
-- The scroll authority is `src/components/providers/SmoothScroll.tsx`; same-page anchors are intercepted there.
-- `src/lib/scrollTo.ts` exposes the Lenis instance to non-React code.
-- Every dialog uses `src/components/ui/Dialog.tsx` for focus trapping and restoration.
-- The mobile menu has its own focus trap and body scroll lock in `Navigation.tsx`.
-- Progress events use the browser event `pmforge:progress`; analytics events use `pmforge:analytics` and stay in the page.
-- This directory is not a Git repository and has no CI. Verification is local, documented in the QA checklist.
+Scenario numbers are simulated. Scenarios remain drafts until independently reviewed; readiness bands are provisional and do not grade spoken delivery or originality. No real expert ratings, public deployment or external AI scoring are implied. Guest data is browser-local; export backups from the top-bar device menu or Settings.
+
+Set `NEXT_PUBLIC_SITE_URL` to the deployment origin. The default local origin is `http://localhost:3001`. The stack is Next.js 16.4.3, React 19.3.1, Three.js 0.182.0, R3F, drei, GSAP, Dexie and CSS Modules.
+
+See [product MVP](PRODUCT-MVP-REPORT.md), [projects](docs/REAL-WORLD-PROJECTS-REPORT.md), [workspace corrections](docs/WORKSPACE-CORRECTIONS.md), and [asset provenance](docs/ASSET_MANIFEST.md). Older implementation reports describe earlier landing prototypes.

@@ -880,3 +880,34 @@
     width: 100%;
   }
 }
+
+/* ------------------------------ story settle ------------------------------ */
+
+/*
+ * Final resting frame: the landscape eases, the copy lifts, and the physical
+ * model settles. The blueprint's own draw-in still carries the reveal.
+ */
+.copy {
+  transform: translateY(calc(var(--calm, 0) * -5px));
+}
+
+.model {
+  translate: 0 calc(var(--calm, 0) * -5px);
+}
+
+.landscape {
+  transform: scale(calc(1.01 + var(--calm, 0) * 0.015))
+    translateY(calc(var(--calm, 0) * -8px));
+}
+
+.clouds {
+  opacity: calc(0.5 + var(--calm, 0) * 0.14);
+}
+
+.blueprintActions {
+  translate: 0 calc((1 - var(--calm, 0)) * 5px);
+}
+
+.start {
+  translate: 0 calc((1 - var(--calm, 0)) * 4px);
+}

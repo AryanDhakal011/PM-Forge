@@ -20,8 +20,17 @@
 .woodEdge {
   height: 10px;
   background:
-    repeating-linear-gradient(90deg, transparent 0 15px, rgba(59, 58, 54, 0.22) 15px 16px),
-    linear-gradient(180deg, var(--line) 0 1px, transparent 1px 7px, var(--line) 7px 8px);
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 15px,
+      rgba(59, 58, 54, 0.22) 15px 16px
+    ),
+    linear-gradient(
+      180deg,
+      var(--line) 0 1px,
+      transparent 1px 7px,
+      var(--line) 7px 8px
+    );
 }
 
 .inner {
@@ -161,7 +170,9 @@
   border: 1px solid var(--graphite);
   border-radius: 50%;
   background: var(--paper-deep);
-  transition: background-color var(--dur-ui) var(--ease-out), transform var(--dur-ui) var(--ease-out);
+  transition:
+    background-color var(--dur-ui) var(--ease-out),
+    transform var(--dur-ui) var(--ease-out);
 }
 
 .journey[data-visible="true"] .node {
@@ -240,6 +251,10 @@
   border: 1px solid var(--line);
   border-radius: 3px;
   background: rgba(251, 248, 240, 0.56);
+  display: block;
+}
+
+.prefsControls {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -449,7 +464,7 @@
     gap: 1rem;
   }
 
-  .prefs {
+  .prefsControls {
     align-items: flex-start;
     flex-direction: column;
   }

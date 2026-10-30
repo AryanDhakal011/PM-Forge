@@ -1,0 +1,674 @@
+{
+  "at": "2026-10-30T00:11:47.781Z",
+  "checks": [
+    {
+      "label": "instrument GPU resources return to zero after unmount",
+      "pass": true,
+      "details": {
+        "created": 134,
+        "lost": 67,
+        "textures": 0,
+        "buffers": 0,
+        "programs": 0
+      }
+    },
+    {
+      "label": "no runtime errors during scroll and repeated navigation",
+      "pass": true,
+      "details": []
+    }
+  ],
+  "errors": [],
+  "scroll": [
+    {
+      "id": "hero",
+      "frames": 129,
+      "medianMs": 16.69999999999891,
+      "p95Ms": 16.900000000001455,
+      "longTasks": [],
+      "gl": {
+        "created": 4,
+        "lost": 0,
+        "textures": 24,
+        "buffers": 242,
+        "programs": 22
+      },
+      "overflow": false,
+      "cpu": {
+        "TaskDurationMs": 1469.2,
+        "ScriptDurationMs": 494.1,
+        "LayoutDurationMs": 15.6,
+        "RecalcStyleDurationMs": 397.5
+      }
+    },
+    {
+      "id": "signal",
+      "frames": 109,
+      "medianMs": 16.700000000000728,
+      "p95Ms": 33.5,
+      "longTasks": [
+        {
+          "start": 17501.59999999404,
+          "duration": 105
+        }
+      ],
+      "gl": {
+        "created": 6,
+        "lost": 0,
+        "textures": 38,
+        "buffers": 320,
+        "programs": 30
+      },
+      "overflow": false,
+      "cpu": {
+        "TaskDurationMs": 1988.8,
+        "ScriptDurationMs": 379.4,
+        "LayoutDurationMs": 13.9,
+        "RecalcStyleDurationMs": 859.2
+      }
+    },
+    {
+      "id": "learning",
+      "frames": 127,
+      "medianMs": 16.700000000000728,
+      "p95Ms": 33.29999999999927,
+      "longTasks": [],
+      "gl": {
+        "created": 6,
+        "lost": 0,
+        "textures": 51,
+        "buffers": 407,
+        "programs": 37
+      },
+      "overflow": false,
+      "cpu": {
+        "TaskDurationMs": 1795.9,
+        "ScriptDurationMs": 293.2,
+        "LayoutDurationMs": 15.6,
+        "RecalcStyleDurationMs": 464.1
+      }
+    },
+    {
+      "id": "projects",
+      "frames": 129,
+      "medianMs": 16.69999999999709,
+      "p95Ms": 16.799999999999272,
+      "longTasks": [],
+      "gl": {
+        "created": 6,
+        "lost": 0,
+        "textures": 51,
+        "buffers": 407,
+        "programs": 37
+      },
+      "overflow": false,
+      "cpu": {
+        "TaskDurationMs": 1344.9,
+        "ScriptDurationMs": 79.9,
+        "LayoutDurationMs": 38.6,
+        "RecalcStyleDurationMs": 299.3
+      }
+    },
+    {
+      "id": "interview",
+      "frames": 130,
+      "medianMs": 16.700000000000728,
+      "p95Ms": 16.799999999999272,
+      "longTasks": [],
+      "gl": {
+        "created": 6,
+        "lost": 0,
+        "textures": 51,
+        "buffers": 407,
+        "programs": 37
+      },
+      "overflow": false,
+      "cpu": {
+        "TaskDurationMs": 1432.4,
+        "ScriptDurationMs": 86.6,
+        "LayoutDurationMs": 14.9,
+        "RecalcStyleDurationMs": 500.5
+      }
+    },
+    {
+      "id": "career",
+      "frames": 127,
+      "medianMs": 16.69999999999709,
+      "p95Ms": 16.900000000001455,
+      "longTasks": [
+        {
+          "start": 31250.69999998808,
+          "duration": 164
+        }
+      ],
+      "gl": {
+        "created": 6,
+        "lost": 0,
+        "textures": 51,
+        "buffers": 407,
+        "programs": 37
+      },
+      "overflow": false,
+      "cpu": {
+        "TaskDurationMs": 1581.7,
+        "ScriptDurationMs": 128.7,
+        "LayoutDurationMs": 16.9,
+        "RecalcStyleDurationMs": 329.3
+      }
+    },
+    {
+      "id": "blueprint",
+      "frames": 129,
+      "medianMs": 16.69999999999709,
+      "p95Ms": 16.80000000000291,
+      "longTasks": [],
+      "gl": {
+        "created": 6,
+        "lost": 0,
+        "textures": 51,
+        "buffers": 407,
+        "programs": 37
+      },
+      "overflow": false,
+      "cpu": {
+        "TaskDurationMs": 991.1,
+        "ScriptDurationMs": 83.2,
+        "LayoutDurationMs": 18.9,
+        "RecalcStyleDurationMs": 165.2
+      }
+    }
+  ],
+  "gpuLifecycle": [
+    {
+      "cycle": 3,
+      "elapsedSeconds": 14,
+      "gl": {
+        "created": 8,
+        "lost": 3,
+        "textures": 8,
+        "buffers": 87,
+        "programs": 7
+      },
+      "dom": {
+        "documents": 9,
+        "nodes": 3617,
+        "jsEventListeners": 535
+      },
+      "heap": {
+        "usedSize": 13766128,
+        "totalSize": 15425536,
+        "embedderHeapUsedSize": 5324944,
+        "backingStorageSize": 3033909
+      }
+    },
+    {
+      "cycle": 6,
+      "elapsedSeconds": 28,
+      "gl": {
+        "created": 14,
+        "lost": 6,
+        "textures": 8,
+        "buffers": 87,
+        "programs": 7
+      },
+      "dom": {
+        "documents": 9,
+        "nodes": 5900,
+        "jsEventListeners": 571
+      },
+      "heap": {
+        "usedSize": 14886296,
+        "totalSize": 15687680,
+        "embedderHeapUsedSize": 6197688,
+        "backingStorageSize": 3033909
+      }
+    },
+    {
+      "cycle": 9,
+      "elapsedSeconds": 41,
+      "gl": {
+        "created": 20,
+        "lost": 9,
+        "textures": 8,
+        "buffers": 87,
+        "programs": 7
+      },
+      "dom": {
+        "documents": 9,
+        "nodes": 8183,
+        "jsEventListeners": 607
+      },
+      "heap": {
+        "usedSize": 16122128,
+        "totalSize": 17260544,
+        "embedderHeapUsedSize": 7041512,
+        "backingStorageSize": 3033909
+      }
+    },
+    {
+      "cycle": 12,
+      "elapsedSeconds": 55,
+      "gl": {
+        "created": 26,
+        "lost": 12,
+        "textures": 8,
+        "buffers": 87,
+        "programs": 7
+      },
+      "dom": {
+        "documents": 9,
+        "nodes": 10466,
+        "jsEventListeners": 643
+      },
+      "heap": {
+        "usedSize": 16908508,
+        "totalSize": 18309120,
+        "embedderHeapUsedSize": 7625616,
+        "backingStorageSize": 3033905
+      }
+    },
+    {
+      "cycle": 15,
+      "elapsedSeconds": 69,
+      "gl": {
+        "created": 32,
+        "lost": 15,
+        "textures": 8,
+        "buffers": 87,
+        "programs": 7
+      },
+      "dom": {
+        "documents": 9,
+        "nodes": 12749,
+        "jsEventListeners": 679
+      },
+      "heap": {
+        "usedSize": 17660248,
+        "totalSize": 18833408,
+        "embedderHeapUsedSize": 8554968,
+        "backingStorageSize": 3033905
+      }
+    },
+    {
+      "cycle": 18,
+      "elapsedSeconds": 82,
+      "gl": {
+        "created": 38,
+        "lost": 18,
+        "textures": 8,
+        "buffers": 87,
+        "programs": 7
+      },
+      "dom": {
+        "documents": 9,
+        "nodes": 15032,
+        "jsEventListeners": 715
+      },
+      "heap": {
+        "usedSize": 18367824,
+        "totalSize": 19357696,
+        "embedderHeapUsedSize": 9411000,
+        "backingStorageSize": 3033909
+      }
+    },
+    {
+      "cycle": 21,
+      "elapsedSeconds": 96,
+      "gl": {
+        "created": 44,
+        "lost": 21,
+        "textures": 8,
+        "buffers": 87,
+        "programs": 7
+      },
+      "dom": {
+        "documents": 9,
+        "nodes": 17315,
+        "jsEventListeners": 751
+      },
+      "heap": {
+        "usedSize": 19045160,
+        "totalSize": 20406272,
+        "embedderHeapUsedSize": 9995320,
+        "backingStorageSize": 3033905
+      }
+    },
+    {
+      "cycle": 24,
+      "elapsedSeconds": 110,
+      "gl": {
+        "created": 50,
+        "lost": 24,
+        "textures": 8,
+        "buffers": 87,
+        "programs": 7
+      },
+      "dom": {
+        "documents": 9,
+        "nodes": 19598,
+        "jsEventListeners": 787
+      },
+      "heap": {
+        "usedSize": 19703588,
+        "totalSize": 20668416,
+        "embedderHeapUsedSize": 10799968,
+        "backingStorageSize": 3033905
+      }
+    },
+    {
+      "cycle": 27,
+      "elapsedSeconds": 124,
+      "gl": {
+        "created": 56,
+        "lost": 27,
+        "textures": 8,
+        "buffers": 87,
+        "programs": 7
+      },
+      "dom": {
+        "documents": 9,
+        "nodes": 21881,
+        "jsEventListeners": 823
+      },
+      "heap": {
+        "usedSize": 20466428,
+        "totalSize": 21716992,
+        "embedderHeapUsedSize": 11577616,
+        "backingStorageSize": 3033905
+      }
+    },
+    {
+      "cycle": 30,
+      "elapsedSeconds": 138,
+      "gl": {
+        "created": 62,
+        "lost": 30,
+        "textures": 8,
+        "buffers": 87,
+        "programs": 7
+      },
+      "dom": {
+        "documents": 9,
+        "nodes": 24164,
+        "jsEventListeners": 859
+      },
+      "heap": {
+        "usedSize": 21131440,
+        "totalSize": 22241280,
+        "embedderHeapUsedSize": 12632712,
+        "backingStorageSize": 3033909
+      }
+    },
+    {
+      "cycle": 33,
+      "elapsedSeconds": 151,
+      "gl": {
+        "created": 68,
+        "lost": 33,
+        "textures": 8,
+        "buffers": 87,
+        "programs": 7
+      },
+      "dom": {
+        "documents": 9,
+        "nodes": 26447,
+        "jsEventListeners": 895
+      },
+      "heap": {
+        "usedSize": 21773812,
+        "totalSize": 23289856,
+        "embedderHeapUsedSize": 13534496,
+        "backingStorageSize": 3033909
+      }
+    },
+    {
+      "cycle": 36,
+      "elapsedSeconds": 165,
+      "gl": {
+        "created": 74,
+        "lost": 36,
+        "textures": 8,
+        "buffers": 87,
+        "programs": 7
+      },
+      "dom": {
+        "documents": 9,
+        "nodes": 28730,
+        "jsEventListeners": 931
+      },
+      "heap": {
+        "usedSize": 22421968,
+        "totalSize": 23814144,
+        "embedderHeapUsedSize": 14300608,
+        "backingStorageSize": 3033905
+      }
+    },
+    {
+      "cycle": 39,
+      "elapsedSeconds": 179,
+      "gl": {
+        "created": 80,
+        "lost": 39,
+        "textures": 8,
+        "buffers": 87,
+        "programs": 7
+      },
+      "dom": {
+        "documents": 9,
+        "nodes": 31013,
+        "jsEventListeners": 967
+      },
+      "heap": {
+        "usedSize": 23081880,
+        "totalSize": 24338432,
+        "embedderHeapUsedSize": 15349064,
+        "backingStorageSize": 3033909
+      }
+    },
+    {
+      "cycle": 42,
+      "elapsedSeconds": 193,
+      "gl": {
+        "created": 86,
+        "lost": 42,
+        "textures": 8,
+        "buffers": 87,
+        "programs": 7
+      },
+      "dom": {
+        "documents": 9,
+        "nodes": 33296,
+        "jsEventListeners": 1003
+      },
+      "heap": {
+        "usedSize": 23778876,
+        "totalSize": 25649152,
+        "embedderHeapUsedSize": 15942768,
+        "backingStorageSize": 3033905
+      }
+    },
+    {
+      "cycle": 45,
+      "elapsedSeconds": 207,
+      "gl": {
+        "created": 92,
+        "lost": 45,
+        "textures": 8,
+        "buffers": 87,
+        "programs": 7
+      },
+      "dom": {
+        "documents": 9,
+        "nodes": 35579,
+        "jsEventListeners": 1039
+      },
+      "heap": {
+        "usedSize": 24417020,
+        "totalSize": 26173440,
+        "embedderHeapUsedSize": 16991472,
+        "backingStorageSize": 3033909
+      }
+    },
+    {
+      "cycle": 48,
+      "elapsedSeconds": 221,
+      "gl": {
+        "created": 98,
+        "lost": 48,
+        "textures": 8,
+        "buffers": 87,
+        "programs": 7
+      },
+      "dom": {
+        "documents": 9,
+        "nodes": 37862,
+        "jsEventListeners": 1075
+      },
+      "heap": {
+        "usedSize": 25005556,
+        "totalSize": 26435584,
+        "embedderHeapUsedSize": 17704304,
+        "backingStorageSize": 3033805
+      }
+    },
+    {
+      "cycle": 51,
+      "elapsedSeconds": 234,
+      "gl": {
+        "created": 104,
+        "lost": 51,
+        "textures": 8,
+        "buffers": 87,
+        "programs": 7
+      },
+      "dom": {
+        "documents": 9,
+        "nodes": 40145,
+        "jsEventListeners": 1111
+      },
+      "heap": {
+        "usedSize": 25653480,
+        "totalSize": 27222016,
+        "embedderHeapUsedSize": 18518784,
+        "backingStorageSize": 3033805
+      }
+    },
+    {
+      "cycle": 54,
+      "elapsedSeconds": 248,
+      "gl": {
+        "created": 110,
+        "lost": 54,
+        "textures": 8,
+        "buffers": 87,
+        "programs": 7
+      },
+      "dom": {
+        "documents": 9,
+        "nodes": 42428,
+        "jsEventListeners": 1147
+      },
+      "heap": {
+        "usedSize": 26271008,
+        "totalSize": 27746304,
+        "embedderHeapUsedSize": 19213216,
+        "backingStorageSize": 3033805
+      }
+    },
+    {
+      "cycle": 57,
+      "elapsedSeconds": 262,
+      "gl": {
+        "created": 116,
+        "lost": 57,
+        "textures": 8,
+        "buffers": 87,
+        "programs": 7
+      },
+      "dom": {
+        "documents": 9,
+        "nodes": 44711,
+        "jsEventListeners": 1183
+      },
+      "heap": {
+        "usedSize": 26914408,
+        "totalSize": 28270592,
+        "embedderHeapUsedSize": 20040560,
+        "backingStorageSize": 3033805
+      }
+    },
+    {
+      "cycle": 60,
+      "elapsedSeconds": 276,
+      "gl": {
+        "created": 122,
+        "lost": 60,
+        "textures": 8,
+        "buffers": 87,
+        "programs": 7
+      },
+      "dom": {
+        "documents": 9,
+        "nodes": 46994,
+        "jsEventListeners": 1219
+      },
+      "heap": {
+        "usedSize": 27559512,
+        "totalSize": 29319168,
+        "embedderHeapUsedSize": 21088656,
+        "backingStorageSize": 3033805
+      }
+    },
+    {
+      "cycle": 63,
+      "elapsedSeconds": 291,
+      "gl": {
+        "created": 128,
+        "lost": 63,
+        "textures": 8,
+        "buffers": 87,
+        "programs": 7
+      },
+      "dom": {
+        "documents": 9,
+        "nodes": 49277,
+        "jsEventListeners": 1255
+      },
+      "heap": {
+        "usedSize": 27260296,
+        "totalSize": 28573696,
+        "embedderHeapUsedSize": 21768496,
+        "backingStorageSize": 3031754
+      }
+    },
+    {
+      "cycle": 66,
+      "elapsedSeconds": 305,
+      "gl": {
+        "created": 134,
+        "lost": 66,
+        "textures": 8,
+        "buffers": 87,
+        "programs": 7
+      },
+      "dom": {
+        "documents": 9,
+        "nodes": 51560,
+        "jsEventListeners": 1291
+      },
+      "heap": {
+        "usedSize": 27771308,
+        "totalSize": 29360128,
+        "embedderHeapUsedSize": 22665592,
+        "backingStorageSize": 3028601
+      }
+    }
+  ],
+  "afterUnmount": {
+    "created": 134,
+    "lost": 67,
+    "textures": 0,
+    "buffers": 0,
+    "programs": 0
+  }
+}

@@ -1,0 +1,299 @@
+{
+  "capturedAt": "2026-10-29T23:49:23.018Z",
+  "runs": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 860,
+      "reduced": false,
+      "loaderDone": "true",
+      "sections": [
+        {
+          "id": "hero",
+          "top": 0,
+          "height": 2580,
+          "calm": "0.000",
+          "stage": null
+        },
+        {
+          "id": "signal",
+          "top": 2709,
+          "height": 2150,
+          "calm": "0.580",
+          "stage": "resolve"
+        },
+        {
+          "id": "learning",
+          "top": 4988,
+          "height": 947.609375,
+          "calm": "1.000",
+          "stage": null
+        },
+        {
+          "id": "projects",
+          "top": 6064.609375,
+          "height": 1473.03125,
+          "calm": "1.000",
+          "stage": null
+        },
+        {
+          "id": "interview",
+          "top": 8107.78125,
+          "height": 978.765625,
+          "calm": "1.000",
+          "stage": null
+        },
+        {
+          "id": "career",
+          "top": 9918.109375,
+          "height": 1313.84375,
+          "calm": "0.000",
+          "stage": null
+        },
+        {
+          "id": "blueprint",
+          "top": 11231.953125,
+          "height": 860,
+          "calm": "1.000",
+          "stage": null
+        }
+      ],
+      "samples": [
+        {
+          "id": "hero",
+          "scrollY": 0,
+          "draws": {
+            "hero": 3010
+          },
+          "fps": 60.2,
+          "medianMs": 16.69999999999891,
+          "p95Ms": 16.899999999999636,
+          "contexts": 1,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": true,
+            "signal": false,
+            "learning": false
+          },
+          "perf": null
+        },
+        {
+          "id": "signal",
+          "scrollY": 3999,
+          "draws": {
+            "hero": 0,
+            "signal": 371,
+            "learning": 0
+          },
+          "fps": 53,
+          "medianMs": 16.700000000000728,
+          "p95Ms": 17.799999999999272,
+          "contexts": 3,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": true,
+            "learning": false
+          },
+          "perf": null
+        },
+        {
+          "id": "learning",
+          "scrollY": 5032,
+          "draws": {
+            "hero": 0,
+            "signal": 0,
+            "learning": 906
+          },
+          "fps": 60.4,
+          "medianMs": 16.700000000000728,
+          "p95Ms": 16.900000000001455,
+          "contexts": 3,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": false,
+            "learning": true
+          },
+          "perf": null
+        },
+        {
+          "id": "projects",
+          "scrollY": 6371,
+          "draws": {
+            "hero": 0,
+            "signal": 0,
+            "learning": 0
+          },
+          "fps": 60.5,
+          "medianMs": 16.69999999999709,
+          "p95Ms": 16.900000000001455,
+          "contexts": 3,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": false,
+            "learning": false
+          },
+          "perf": null
+        },
+        {
+          "id": "interview",
+          "scrollY": 8167,
+          "draws": {
+            "hero": 0,
+            "signal": 0,
+            "learning": 0
+          },
+          "fps": 60.4,
+          "medianMs": 16.69999999999709,
+          "p95Ms": 17.099999999998545,
+          "contexts": 3,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": false,
+            "learning": false
+          },
+          "perf": null
+        },
+        {
+          "id": "career",
+          "scrollY": 8740,
+          "draws": {
+            "hero": 0,
+            "signal": 0,
+            "learning": 0
+          },
+          "fps": 60.2,
+          "medianMs": 16.69999999999709,
+          "p95Ms": 17.30000000000291,
+          "contexts": 3,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": false,
+            "learning": false
+          },
+          "perf": null
+        },
+        {
+          "id": "blueprint",
+          "scrollY": 11232,
+          "draws": {
+            "hero": 0,
+            "signal": 0,
+            "learning": 0
+          },
+          "fps": 60.3,
+          "medianMs": 16.69999999999709,
+          "p95Ms": 17.19999999999709,
+          "contexts": 3,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": false,
+            "learning": false
+          },
+          "perf": null
+        }
+      ],
+      "signalBefore": false,
+      "signalSelected": {
+        "top": 2709,
+        "height": 2150,
+        "calm": "1.000",
+        "stage": "resolve"
+      },
+      "signalJustified": true,
+      "signalAfterResize": {
+        "top": 2709,
+        "height": 2150,
+        "calm": "1.000",
+        "stage": "resolve"
+      },
+      "learningProgress": [
+        {
+          "progress": 0,
+          "top": 4988,
+          "height": 947.609375,
+          "calm": "0.000",
+          "stage": null
+        },
+        {
+          "progress": 0.5,
+          "top": 4988,
+          "height": 947.609375,
+          "calm": "0.480",
+          "stage": null
+        },
+        {
+          "progress": 1,
+          "top": 4988,
+          "height": 947.609375,
+          "calm": "1.000",
+          "stage": null
+        }
+      ],
+      "overlap": {
+        "draws": {
+          "hero": 0,
+          "signal": 423,
+          "learning": 907
+        },
+        "fps": 60.4,
+        "medianMs": 16.700000000000728,
+        "p95Ms": 16.799999999999272,
+        "contexts": 3,
+        "overflow": false,
+        "sceneVisibility": {
+          "hero": false,
+          "signal": true,
+          "learning": true
+        },
+        "perf": null
+      },
+      "projectWritten": "true",
+      "interviewLive": "live",
+      "interviewAfter": {
+        "phase": "review",
+        "feedback": true,
+        "timer": "1:59"
+      },
+      "counters": [
+        {
+          "expected": "10",
+          "actual": "10"
+        },
+        {
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "expected": "82",
+          "actual": "82"
+        }
+      ],
+      "returnToHero": {
+        "draws": {
+          "hero": 3037,
+          "signal": 0,
+          "learning": 0
+        },
+        "fps": 60.3,
+        "medianMs": 16.69999999999709,
+        "p95Ms": 16.900000000001455,
+        "contexts": 3,
+        "overflow": false,
+        "sceneVisibility": {
+          "hero": true,
+          "signal": false,
+          "learning": false
+        },
+        "perf": null
+      },
+      "errors": []
+    }
+  ],
+  "failures": []
+}

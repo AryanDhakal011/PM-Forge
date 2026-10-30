@@ -10,7 +10,15 @@ import { useWebGLSupport } from "@/hooks/useWebGLSupport";
 import { modules, type Module } from "@/lib/content";
 import { readLearning, type LearningState } from "@/lib/progress";
 import { track } from "@/lib/analytics";
+import { scrollState } from "@/lib/scrollState";
+import {
+  ensureScrollTrigger,
+  resolveCalm,
+  setCalmVar,
+  bindStoryTargets,
+} from "@/lib/scrollStory";
 import { useSceneActivity } from "@/three/sceneLifecycle";
+import { invalidateScene } from "@/three/sceneRuntime";
 import styles from "./LearningPath.module.css";
 
 const EMPTY: LearningState = { completed: [], drills: {} };
@@ -79,10 +87,58 @@ export function LearningPath() {
   const { reducedMotion } = useSettings();
   const webgl = useWebGLSupport();
   const scene = useSceneActivity("learning", reducedMotion);
+  const sectionRef = useRef<HTMLElement>(null);
+  const calmRef = useRef(reducedMotion ? 1 : 0);
   const [webglFailed, setWebglFailed] = useState(false);
   const [hovered, setHovered] = useState<number | null>(null);
   const [openModule, setOpenModule] = useState<Module | null>(null);
   const [learning, setLearning] = useState<LearningState>(EMPTY);
+
+  /**
+   * The module blocks start as loose debris and resolve into a readable
+   * hierarchy as the section enters. This is a pass-through section, not a
+   * pin: one trigger, no extra scroll length.
+   */
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+    bindStoryTargets(
+      section,
+      "--calm",
+      `.${styles.copy},.${styles.listCol},.${styles.stage},.${styles.handNote}`,
+    );
+
+    if (reducedMotion) {
+      calmRef.current = 1;
+      scrollState.learning = 1;
+      scrollState.calm = 1;
+      setCalmVar(section, 1);
+      invalidateScene("learning");
+      return;
+    }
+
+    const ScrollTrigger = ensureScrollTrigger();
+    const apply = (value: number) => {
+      const calm = resolveCalm(value);
+      calmRef.current = calm;
+      scrollState.learning = calm;
+      scrollState.calm = calm;
+      setCalmVar(section, calm);
+      invalidateScene("learning");
+    };
+
+    const trigger = ScrollTrigger.create({
+      trigger: section,
+      start: "top 88%",
+      end: "center 52%",
+      invalidateOnRefresh: true,
+      onUpdate: (self) => apply(self.progress),
+      onRefresh: (self) => apply(self.progress),
+    });
+    apply(trigger.progress);
+
+    return () => trigger.kill();
+  }, [reducedMotion]);
 
   useEffect(() => {
     const sync = () => setLearning(readLearning());
@@ -117,21 +173,28 @@ export function LearningPath() {
     ? states[modules.findIndex((module) => module.slug === openModule.slug)]
     : null;
   const activePull = hovered === null ? null : MODULE_PULLS[hovered];
-  const strongestPull = activePull
-    ? Math.max(...activePull)
-    : 0;
+  const strongestPull = activePull ? Math.max(...activePull) : 0;
   const pullCaption =
-    activePull && activePull.filter((weight) => weight === strongestPull).length === 1
+    activePull &&
+    activePull.filter((weight) => weight === strongestPull).length === 1
       ? PULL_CAPTIONS[activePull.indexOf(strongestPull)]
       : "A good decision weighs all three.";
 
   const selectModule = (index: number) => {
     setOpenModule(modules[index]);
-    track("lesson_open", { slug: modules[index].slug, source: "learning_path" });
+    track("lesson_open", {
+      slug: modules[index].slug,
+      source: "learning_path",
+    });
   };
 
   return (
-    <section id="learning" className={styles.section} aria-labelledby="learning-title">
+    <section
+      id="learning"
+      ref={sectionRef}
+      className={styles.section}
+      aria-labelledby="learning-title"
+    >
       <div className={styles.inner}>
         <div className={styles.copy}>
           <p className="eyebrow">Learning path</p>
@@ -139,14 +202,16 @@ export function LearningPath() {
             Pressure test logic.
           </h2>
           <p className={styles.body}>
-            The real world isn&apos;t a straight line. It&apos;s a series of course
-            corrections based on messy evidence.
+            The real world isn&apos;t a straight line. It&apos;s a series of
+            course corrections based on messy evidence.
           </p>
-          <Link href="/learn" className={`${styles.explore} btn btnOutline`}>
-            Explore all modules
+          <Link
+            href="/frameworks"
+            className={`${styles.explore} btn btnOutline`}
+          >
+            Explore the reference shelf
             <ArrowRight size={16} strokeWidth={1.7} aria-hidden="true" />
           </Link>
-
         </div>
 
         <div className={styles.stage}>
@@ -157,6 +222,7 @@ export function LearningPath() {
               <LearningCluster
                 reducedMotion={reducedMotion}
                 frameloop={scene.frameloop}
+                progressRef={calmRef}
                 hovered={hovered}
                 onHover={setHovered}
                 onSelect={selectModule}
@@ -200,7 +266,10 @@ export function LearningPath() {
                       hovered === index ? styles.rowHot : ""
                     } ${state.state === "complete" ? styles.rowComplete : ""}`}
                     style={
-                      { "--accent": MODULE_ACCENTS[index % MODULE_ACCENTS.length] } as React.CSSProperties
+                      {
+                        "--accent":
+                          MODULE_ACCENTS[index % MODULE_ACCENTS.length],
+                      } as React.CSSProperties
                     }
                     data-state={state.state}
                     onMouseEnter={() => setHovered(index)}
@@ -235,19 +304,27 @@ export function LearningPath() {
                           : "Not started"}
                     </span>
                     {state.state === "in-progress" ? (
-                      <span className={styles.rowPercent}>{state.progress}%</span>
+                      <span className={styles.rowPercent}>
+                        {state.progress}%
+                      </span>
                     ) : null}
                   </button>
                 </li>
               );
             })}
           </ul>
-          <div className={styles.legend} role="group" aria-label="Module progress legend">
+          <div
+            className={styles.legend}
+            role="group"
+            aria-label="Module progress legend"
+          >
             <span>
-              <Circle size={12} strokeWidth={1.5} aria-hidden="true" /> Not started
+              <Circle size={12} strokeWidth={1.5} aria-hidden="true" /> Not
+              started
             </span>
             <span>
-              <LoaderCircle size={12} strokeWidth={1.5} aria-hidden="true" /> In progress
+              <LoaderCircle size={12} strokeWidth={1.5} aria-hidden="true" /> In
+              progress
             </span>
             <span>
               <Check size={12} strokeWidth={2} aria-hidden="true" /> Complete
@@ -264,7 +341,9 @@ export function LearningPath() {
       <Dialog
         open={openModule !== null}
         onClose={() => setOpenModule(null)}
-        title={openModule ? `${openModule.number} · ${openModule.title}` : "Module"}
+        title={
+          openModule ? `${openModule.number} · ${openModule.title}` : "Module"
+        }
         description={openModule?.short}
         size="md"
         footer={
@@ -278,13 +357,11 @@ export function LearningPath() {
                 Close
               </button>
               <Link
-                href={`/learn/${openModule.slug}`}
+                href={`/questions?category=${({ "foundation-and-product-strategy": "strategy", "customer-discovery": "product-sense", "data-and-experimentation": "root-cause", "prioritization-and-decision-making": "execution-metrics", "technical-fluency": "ai-technical", "ui-ux-collaboration": "product-sense", "execution-and-delivery": "execution-metrics", "stakeholder-leadership": "behavioral", "ai-product-management": "ai-technical", "job-ready": "behavioral" } as Record<string, string>)[openModule.slug] || "root-cause"}`}
                 className="btn btnPrimary btnSm"
                 onClick={() => setOpenModule(null)}
               >
-                {openState?.state === "not-started"
-                  ? "Start module"
-                  : "Continue module"}
+                Practice related questions
                 <ArrowRight size={14} strokeWidth={1.8} aria-hidden="true" />
               </Link>
             </>

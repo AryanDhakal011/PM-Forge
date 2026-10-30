@@ -29,6 +29,78 @@
   padding-top: var(--nav-h);
 }
 
+/*
+ * Desktop story: the board pins for roughly 1.5 viewports while the field
+ * resolves. CSS sticky does the pinning, so there is no pin spacer and no
+ * extra ScrollTrigger bookkeeping. Mobile keeps the natural document flow.
+ */
+@media (min-width: 1180px) and (min-height: 860px) {
+  .section {
+    height: 250svh;
+    min-height: 0;
+    background-color: #b99a74;
+    background-image: none;
+  }
+
+  .section::before {
+    display: none;
+  }
+
+  .sticky {
+    position: sticky;
+    top: 0;
+    height: 100svh;
+    min-height: 0;
+    overflow: hidden;
+    background-color: #c2a47e;
+    background-image: url("/assets/images/plates/cozy-sunlit-workspace.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  /* Fit the fixed 3:2 board inside the pinned viewport. At the pin threshold
+     this is a 10px trim; above it the 1180px floor applies unchanged. */
+  .inner {
+    min-width: min(1180px, calc((100svh - var(--nav-h)) * 1.5));
+  }
+
+  .sticky::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(115deg, rgba(255, 250, 235, 0.12), transparent 44%),
+      radial-gradient(ellipse at 14% 38%, rgba(249, 242, 227, 0.34), transparent 35%),
+      linear-gradient(180deg, transparent 72%, rgba(60, 39, 24, 0.12));
+  }
+}
+
+/* Reduced motion never pins: the story stays in the document flow. */
+html[data-reduced-motion="true"] .section {
+  height: auto;
+  min-height: calc(100svh - var(--nav-h));
+  background-color: #c2a47e;
+  background-image: url("/assets/images/plates/cozy-sunlit-workspace.webp");
+}
+
+html[data-reduced-motion="true"] .section::before {
+  display: block;
+}
+
+html[data-reduced-motion="true"] .sticky {
+  position: relative;
+  height: auto;
+  min-height: calc(100svh - var(--nav-h));
+  background-image: none;
+  background-color: transparent;
+}
+
+html[data-reduced-motion="true"] .sticky::before {
+  display: none;
+}
+
 .inner {
   position: relative;
   z-index: 1;
@@ -166,7 +238,7 @@
   border-radius: 50%;
   pointer-events: none;
   background: radial-gradient(circle, rgba(255, 198, 137, 0.36), rgba(255, 198, 137, 0.12) 52%, transparent 72%);
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(calc(1 + var(--calm, 0) * 0.06));
   animation: haloBreathe 5s ease-in-out infinite alternate;
   transition: opacity 600ms var(--ease);
 }
@@ -207,7 +279,10 @@
   text-align: left;
   cursor: grab;
   touch-action: manipulation;
-  transform: translate(-50%, -50%) rotate(var(--card-rotation));
+  /* The field settles as the story advances: rotations straighten and the
+     sheet lifts a few pixels. Interaction states below keep the same lift. */
+  transform: translate(-50%, calc(-50% + var(--signal-p, 0) * -4px))
+    rotate(calc(var(--card-rotation) * (1 - var(--signal-p, 0) * 0.55)));
   transform-origin: 50% 50%;
   transition:
     opacity 240ms ease,
@@ -250,7 +325,8 @@
     0 1px 0 rgba(255, 255, 255, 0.62) inset,
     0 5px 8px rgba(60, 40, 20, 0.2),
     0 22px 42px -10px rgba(60, 40, 20, 0.38);
-  transform: translate(-50%, -50%) rotate(calc(var(--card-rotation) * 0.6)) scale(1.03);
+  transform: translate(-50%, calc(-50% + var(--signal-p, 0) * -4px))
+    rotate(calc(var(--card-rotation) * 0.6)) scale(1.03);
 }
 
 .card:active {
@@ -412,11 +488,48 @@
     0 5px 8px rgba(60, 40, 20, 0.22),
     0 22px 42px -10px rgba(60, 40, 20, 0.38);
   opacity: 1;
-  transform: translate(-50%, -50%) rotate(calc(var(--card-rotation) * 0.4));
+  transform: translate(-50%, calc(-50% + var(--signal-p, 0) * -4px))
+    rotate(calc(var(--card-rotation) * 0.4));
 }
 
 .cardResolved {
   border-color: rgba(15, 92, 58, 0.75);
+}
+
+/*
+ * The scroll beats. "quiet" recedes evidence the visitor has not inspected
+ * and that is not among the four measured candidates; "connect" brings those
+ * candidates and their spokes forward. Both are driven by real card state as
+ * well as scroll, so nothing here is a decorative loop.
+ */
+.section[data-signal-stage="quiet"] .card[data-relevant="false"][data-inspected="false"],
+.section[data-signal-stage="connect"] .card[data-relevant="false"][data-inspected="false"],
+.section[data-signal-stage="resolve"] .card[data-relevant="false"][data-inspected="false"] {
+  opacity: 0.58;
+  filter: saturate(0.72);
+}
+
+.section[data-signal-stage="connect"] .card[data-relevant="true"]:not(.selected),
+.section[data-signal-stage="resolve"] .card[data-relevant="true"]:not(.selected) {
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.62) inset,
+    0 4px 6px rgba(60, 40, 20, 0.18),
+    0 18px 32px -12px rgba(60, 40, 20, 0.4);
+}
+
+.section[data-signal-stage="quiet"] .spokes path:not([data-relevant="true"]),
+.section[data-signal-stage="connect"] .spokes path:not([data-relevant="true"]) {
+  opacity: 0.4;
+}
+
+.section[data-signal-stage="connect"] .spokes path[data-relevant="true"] {
+  opacity: 1;
+}
+
+.section[data-signal-stage="quiet"] .annotations,
+.section[data-signal-stage="connect"] .annotations,
+.section[data-signal-stage="resolve"] .annotations {
+  opacity: calc(1 - var(--signal-p, 0) * 0.4);
 }
 
 .dragging {
@@ -597,6 +710,7 @@
   position: absolute;
   inset: 0;
   filter: drop-shadow(0 15px 16px rgba(48, 31, 18, 0.18));
+  transform: translateY(calc(var(--calm, 0) * -3px));
 }
 
 .instrumentCanvas canvas {
@@ -630,6 +744,12 @@
   backdrop-filter: blur(6px);
 }
 
+.productEntry {
+  margin-top: 0.8rem;
+  max-width: 100%;
+  white-space: normal;
+}
+
 .decision {
   position: absolute;
   z-index: 8;
@@ -648,6 +768,7 @@
   border-radius: 12px;
   background: rgba(246, 240, 226, 0.96);
   box-shadow: 0 18px 40px rgba(60, 40, 20, 0.15);
+  transform: translateY(calc(var(--calm, 0) * -6px));
 }
 
 .decisionIcon {
@@ -1289,3 +1410,6 @@
     transition: none;
   }
 }
+
+/* Promote the moving paper only while its owning scene is on screen. */
+.section[data-scene-active="true"] .card{will-change:transform}

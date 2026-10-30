@@ -1,0 +1,170 @@
+{
+  "checks": [
+    {
+      "label": "guest entry reaches all twelve project cards",
+      "pass": true
+    },
+    {
+      "label": "gallery crisis filter matches three campaigns",
+      "pass": true
+    },
+    {
+      "label": "entrance does not expose skip immediately",
+      "pass": true
+    },
+    {
+      "label": "entrance is not replayed after saved reload",
+      "pass": true
+    },
+    {
+      "label": "free-form rationale is not opted into sync by default",
+      "pass": true
+    },
+    {
+      "label": "pause and reload freeze exact chapter state",
+      "pass": true
+    },
+    {
+      "label": "The Sacred No: three browser-locked chapters match authored state rules",
+      "pass": true
+    },
+    {
+      "label": "The Sacred No: rationale stays inert",
+      "pass": true
+    },
+    {
+      "label": "earlier Sacred No promise creates the authored board-demo fracture",
+      "pass": true
+    },
+    {
+      "label": "chapter replay preserves prefix state and preselects a real alternative",
+      "pass": true
+    },
+    {
+      "label": "replay leaves original decision log unchanged",
+      "pass": true
+    },
+    {
+      "label": "The Silent Churn: three browser-locked chapters match authored state rules",
+      "pass": true
+    },
+    {
+      "label": "The Silent Churn: rationale stays inert",
+      "pass": true
+    },
+    {
+      "label": "The Feature Factory: three browser-locked chapters match authored state rules",
+      "pass": true
+    },
+    {
+      "label": "The Feature Factory: rationale stays inert",
+      "pass": true
+    },
+    {
+      "label": "The Ghost Metric: three browser-locked chapters match authored state rules",
+      "pass": true
+    },
+    {
+      "label": "The Ghost Metric: rationale stays inert",
+      "pass": true
+    },
+    {
+      "label": "The Pivot Point: three browser-locked chapters match authored state rules",
+      "pass": true
+    },
+    {
+      "label": "The Pivot Point: rationale stays inert",
+      "pass": true
+    },
+    {
+      "label": "The Legacy Fracture: three browser-locked chapters match authored state rules",
+      "pass": true
+    },
+    {
+      "label": "The Legacy Fracture: rationale stays inert",
+      "pass": true
+    },
+    {
+      "label": "The Shadow Roadmap: three browser-locked chapters match authored state rules",
+      "pass": true
+    },
+    {
+      "label": "The Shadow Roadmap: rationale stays inert",
+      "pass": true
+    },
+    {
+      "label": "The Trojan Horse: three browser-locked chapters match authored state rules",
+      "pass": true
+    },
+    {
+      "label": "The Trojan Horse: rationale stays inert",
+      "pass": true
+    },
+    {
+      "label": "The Invisible Wall: three browser-locked chapters match authored state rules",
+      "pass": true
+    },
+    {
+      "label": "The Invisible Wall: rationale stays inert",
+      "pass": true
+    },
+    {
+      "label": "The Deadlock: three browser-locked chapters match authored state rules",
+      "pass": true
+    },
+    {
+      "label": "The Deadlock: rationale stays inert",
+      "pass": true
+    },
+    {
+      "label": "The Public Fracture: three browser-locked chapters match authored state rules",
+      "pass": true
+    },
+    {
+      "label": "The Public Fracture: rationale stays inert",
+      "pass": true
+    },
+    {
+      "label": "The Last Mile: three browser-locked chapters match authored state rules",
+      "pass": true
+    },
+    {
+      "label": "The Last Mile: rationale stays inert",
+      "pass": true
+    },
+    {
+      "label": "history project filter includes all twelve completions",
+      "pass": true
+    },
+    {
+      "label": "progress constellation includes twelve completed worlds",
+      "pass": true
+    },
+    {
+      "label": "bookmarks include a campaign decision point",
+      "pass": true
+    },
+    {
+      "label": "mobile gallery has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "label": "mobile rank decision surface has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "label": "reduced-motion entrance settles without a forced sequence",
+      "pass": true
+    },
+    {
+      "label": "competing-tab revision produces an explicit save conflict",
+      "pass": true
+    },
+    {
+      "label": "no browser runtime exceptions",
+      "pass": true,
+      "details": []
+    }
+  ],
+  "errors": []
+}

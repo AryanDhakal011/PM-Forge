@@ -135,3 +135,16 @@
     padding-inline: 1.15rem;
   }
 }
+
+@media (max-width: 900px) {
+  .backdrop[data-placement="bottom"] {
+    align-items: flex-end;
+    padding: 0;
+  }
+  .backdrop[data-placement="bottom"] .panel {
+    max-height: 90dvh;
+    max-width: 100%;
+    border-radius: 16px 16px 0 0;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}

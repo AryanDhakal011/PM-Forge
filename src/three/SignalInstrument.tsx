@@ -1,7 +1,7 @@
 "use client";
 
 import { Canvas } from "@react-three/fiber";
-import { useState } from "react";
+import { useState, type RefObject } from "react";
 import { Environment, Lightformer } from "@react-three/drei";
 import * as THREE from "three";
 import { DecisionInstrument } from "./DecisionInstrument";
@@ -10,6 +10,7 @@ import {
   AdaptiveDpr,
   FirstFrameReady,
   FrameLoopBridge,
+  SceneInvalidationBridge,
   SceneMetricsProbe,
   resolveDprBounds,
   resolveDprCeiling,
@@ -20,6 +21,8 @@ type SignalInstrumentCanvasProps = {
   reducedMotion: boolean;
   frameloop: SceneFrameloop;
   progress: number;
+  /** Scroll-driven story state; a ref keeps scroll out of React. */
+  progressRef?: RefObject<number>;
   hovering: boolean;
   onReady?: () => void;
   onFail?: () => void;
@@ -29,6 +32,7 @@ export function SignalInstrumentCanvas({
   reducedMotion,
   frameloop,
   progress,
+  progressRef,
   hovering,
   onReady,
   onFail,
@@ -79,6 +83,7 @@ export function SignalInstrumentCanvas({
         watch={reducedMotion ? `${progress}:${hovering}:${reducedMotion}` : undefined}
       />
       <FirstFrameReady onReady={onReady} />
+      <SceneInvalidationBridge id="signal" />
       <SceneMetricsProbe id="signal" />
       <ambientLight intensity={0.55} color="#f5f7f5" />
       <hemisphereLight args={["#f5f7f8", "#655b4e", 0.82]} />
@@ -126,6 +131,7 @@ export function SignalInstrumentCanvas({
       <DecisionInstrument
         reducedMotion={reducedMotion}
         progress={progress}
+        progressRef={progressRef}
         hovering={hovering}
       />
     </Canvas>

@@ -1,0 +1,74 @@
+{
+  "checks": [
+    {
+      "label": "lock is initially disabled with an explicit readiness explanation",
+      "pass": true
+    },
+    {
+      "label": "selecting a direction alone cannot bypass evidence readiness",
+      "pass": true
+    },
+    {
+      "label": "pending draft is not labelled saved",
+      "pass": true
+    },
+    {
+      "label": "failed decision persistence never advances the world or claims a locked consequence",
+      "pass": true
+    },
+    {
+      "label": "save failure is announced and moves focus to visible recovery controls",
+      "pass": true
+    },
+    {
+      "label": "background flush during a lock does not enqueue an obsolete decision snapshot",
+      "pass": true
+    },
+    {
+      "label": "retry then explicit confirmation locks exactly one decision",
+      "pass": true
+    },
+    {
+      "label": "successful consequence receives keyboard focus clear of the header",
+      "pass": true
+    },
+    {
+      "label": "chapter tracker identifies the current chapter",
+      "pass": true
+    },
+    {
+      "label": "completed chapter opens a read-only commitment review",
+      "pass": true
+    },
+    {
+      "label": "closing review restores keyboard focus to its chapter control",
+      "pass": true
+    },
+    {
+      "label": "mobile begins with a compact operating-state summary",
+      "pass": true
+    },
+    {
+      "label": "mobile brief is visible without traversing five expanded meters",
+      "pass": true
+    },
+    {
+      "label": "mobile operating-state disclosure reveals every meter",
+      "pass": true
+    },
+    {
+      "label": "high resentment renders as guarded capacity in the live stakeholder panel",
+      "pass": true
+    },
+    {
+      "label": "stakeholder smoke fixture retains canonical authored state",
+      "pass": true
+    },
+    {
+      "label": "final build smoke has no runtime exceptions",
+      "pass": true,
+      "details": []
+    }
+  ],
+  "errors": []
+}

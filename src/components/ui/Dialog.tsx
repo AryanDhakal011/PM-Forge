@@ -13,6 +13,7 @@ type DialogProps = {
   children: React.ReactNode;
   size?: "sm" | "md" | "lg";
   footer?: React.ReactNode;
+  placement?: "center" | "bottom";
 };
 
 export function Dialog({
@@ -23,6 +24,7 @@ export function Dialog({
   children,
   size = "md",
   footer,
+  placement = "center",
 }: DialogProps) {
   const panelRef = useRef<HTMLDivElement>(null);
   const restoreRef = useRef<HTMLElement | null>(null);
@@ -87,6 +89,7 @@ export function Dialog({
   return createPortal(
     <div
       className={styles.backdrop}
+      data-placement={placement}
       onPointerDown={(event) => {
         if (event.target === event.currentTarget) onClose();
       }}

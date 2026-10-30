@@ -69,7 +69,7 @@ export function useSceneActivity(
       { root: null, rootMargin: "0px", threshold: 0 },
     );
 
-    // Mount a scene roughly one viewport before it can be seen so its chunk
+    // Mount a scene roughly two viewports before it can be seen so its chunk
     // and shaders are ready, without keeping it rendering in the meantime.
     const nearObserver = new IntersectionObserver(
       (entries) => {
@@ -77,7 +77,7 @@ export function useSceneActivity(
           if (entry.isIntersecting) setNear(true);
         }
       },
-      { root: null, rootMargin: "100% 0px 100% 0px", threshold: 0 },
+      { root: null, rootMargin: "200% 0px 200% 0px", threshold: 0 },
     );
 
     visibilityObserver.observe(element);

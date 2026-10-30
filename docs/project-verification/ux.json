@@ -1,0 +1,426 @@
+{
+  "checks": [
+    {
+      "label": "lock is initially disabled with an explicit readiness explanation",
+      "pass": true
+    },
+    {
+      "label": "selecting a direction alone cannot bypass evidence readiness",
+      "pass": true
+    },
+    {
+      "label": "pending draft is not labelled saved",
+      "pass": true
+    },
+    {
+      "label": "failed decision persistence never advances the world or claims a locked consequence",
+      "pass": true
+    },
+    {
+      "label": "save failure is announced and moves focus to visible recovery controls",
+      "pass": true
+    },
+    {
+      "label": "background flush during a lock does not enqueue an obsolete decision snapshot",
+      "pass": true
+    },
+    {
+      "label": "retry then explicit confirmation locks exactly one decision",
+      "pass": true
+    },
+    {
+      "label": "successful consequence receives keyboard focus clear of the header",
+      "pass": true
+    },
+    {
+      "label": "chapter tracker identifies the current chapter",
+      "pass": true
+    },
+    {
+      "label": "completed chapter opens a read-only commitment review",
+      "pass": true
+    },
+    {
+      "label": "closing review restores keyboard focus to its chapter control",
+      "pass": true
+    },
+    {
+      "label": "mobile begins with a compact operating-state summary",
+      "pass": true
+    },
+    {
+      "label": "mobile brief is visible without traversing five expanded meters",
+      "pass": true
+    },
+    {
+      "label": "mobile operating-state disclosure reveals every meter",
+      "pass": true
+    },
+    {
+      "label": "sacred-no at 1440px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "silent-churn at 1440px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "feature-factory at 1440px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "ghost-metric at 1440px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "pivot-point at 1440px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "legacy-fracture at 1440px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "shadow-roadmap at 1440px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "trojan-horse at 1440px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "invisible-wall at 1440px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "deadlock at 1440px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "public-fracture at 1440px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "last-mile at 1440px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "sacred-no at 390px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "silent-churn at 390px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "feature-factory at 390px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "ghost-metric at 390px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "pivot-point at 390px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "legacy-fracture at 390px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "shadow-roadmap at 390px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "trojan-horse at 390px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "invisible-wall at 390px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "deadlock at 390px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "public-fracture at 390px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "last-mile at 390px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "sacred-no at 320px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "silent-churn at 320px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "feature-factory at 320px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "ghost-metric at 320px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "pivot-point at 320px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "legacy-fracture at 320px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "shadow-roadmap at 320px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "trojan-horse at 320px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "invisible-wall at 320px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "deadlock at 320px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "public-fracture at 320px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "last-mile at 320px: chapter navigation and responsive decision surface",
+      "pass": true,
+      "details": {
+        "overflow": false,
+        "tracker": 3,
+        "smallTargets": false,
+        "headingFocused": true
+      }
+    },
+    {
+      "label": "no browser runtime exceptions",
+      "pass": true,
+      "details": []
+    }
+  ],
+  "errors": []
+}

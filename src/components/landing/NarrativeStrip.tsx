@@ -3,13 +3,15 @@
 import { useEffect, useRef } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 import { useSettings } from "@/components/providers/SettingsProvider";
+import { ensureScrollTrigger } from "@/lib/scrollStory";
 import styles from "./NarrativeStrip.module.css";
 
 type NarrativeStripProps = {
   left?: string;
   right?: string;
   statement?: string;
-  variant?: "noise-to-signal" | "evidence-vs-assumptions" | "new-evidence" | "reassess";
+  variant?:
+    "noise-to-signal" | "evidence-vs-assumptions" | "new-evidence" | "reassess";
   tone?: "cream" | "warm";
   id?: string;
 };
@@ -18,8 +20,8 @@ function splitLetters(text: string) {
   return Array.from(text).map((letter, index) => {
     const seed = Math.sin(index * 12.9898) * 43758.5453;
     const x = ((seed - Math.floor(seed)) * 6 - 3).toFixed(1);
-    const y = ((Math.sin(index * 4.17) * 7)).toFixed(1);
-    const rotation = ((Math.cos(index * 2.31) * 3)).toFixed(1);
+    const y = (Math.sin(index * 4.17) * 7).toFixed(1);
+    const rotation = (Math.cos(index * 2.31) * 3).toFixed(1);
     return (
       <span
         key={`${letter}-${index}`}
@@ -66,20 +68,28 @@ export function NarrativeStrip({
       section.style.setProperty("--beat-blur", "0px");
       section.style.setProperty("--beat-rise", "0px");
       section.style.setProperty("--beat-opacity", "1");
-      section.querySelectorAll<HTMLElement>("[data-beat-letter]").forEach((letter) => {
-        letter.style.transform = "none";
-      });
+      section
+        .querySelectorAll<HTMLElement>("[data-beat-letter]")
+        .forEach((letter) => {
+          letter.style.transform = "none";
+        });
       return;
     }
 
-    let frame = 0;
-    const update = () => {
-      frame = 0;
-      const rect = section.getBoundingClientRect();
-      const progress = Math.max(
-        0,
-        Math.min(1, (window.innerHeight * 0.86 - rect.top) / (rect.height + window.innerHeight * 0.35)),
-      );
+    const letters = Array.from(
+      section.querySelectorAll<HTMLElement>("[data-beat-letter]"),
+    ).map((node) => ({
+      node,
+      x: Number(node.dataset.scatterX),
+      y: Number(node.dataset.scatterY),
+      rotation: Number(node.dataset.scatterRotation),
+    }));
+    let previous = -1;
+    let previousScatter = -1;
+    const update = (raw: number) => {
+      const progress = Math.round(raw * 10000) / 10000;
+      if (progress === previous) return;
+      previous = progress;
       const lineProgress = Math.max(0, Math.min(1, (progress - 0.2) / 0.5));
       const stampProgress = Math.max(0, Math.min(1, (progress - 0.42) / 0.18));
       section.style.setProperty("--beat-progress", String(progress));
@@ -107,25 +117,26 @@ export function NarrativeStrip({
         "--beat-letter-spacing",
         `${(1 - progress) * 0.04}em`,
       );
-      section.querySelectorAll<HTMLElement>("[data-beat-letter]").forEach((letter) => {
-        const scatter = Math.max(0, 1 - progress / 0.35);
-        const x = Number(letter.dataset.scatterX) * scatter;
-        const y = Number(letter.dataset.scatterY) * scatter;
-        const rotation = Number(letter.dataset.scatterRotation) * scatter;
-        letter.style.transform = `translate(${x}px, ${y}px) rotate(${rotation}deg)`;
-      });
+      const scatter = Math.max(0, 1 - progress / 0.35);
+      if (scatter !== previousScatter) {
+        previousScatter = scatter;
+        letters.forEach(({ node, x, y, rotation }) => {
+          node.style.transform = `translate(${x * scatter}px, ${y * scatter}px) rotate(${rotation * scatter}deg)`;
+        });
+      }
     };
-    const schedule = () => {
-      if (!frame) frame = window.requestAnimationFrame(update);
-    };
-    update();
-    window.addEventListener("scroll", schedule, { passive: true });
-    window.addEventListener("resize", schedule);
-    return () => {
-      window.removeEventListener("scroll", schedule);
-      window.removeEventListener("resize", schedule);
-      if (frame) window.cancelAnimationFrame(frame);
-    };
+    // ScrollTrigger measures once at refresh and updates only while this strip
+    // crosses the viewport. No per-strip read/write layout loop on every scroll.
+    const ScrollTrigger = ensureScrollTrigger();
+    const trigger = ScrollTrigger.create({
+      trigger: section,
+      start: "top 86%",
+      end: "bottom 51%",
+      onUpdate: (self) => update(self.progress),
+      onRefresh: (self) => update(self.progress),
+    });
+    update(trigger.progress);
+    return () => trigger.kill();
   }, [reducedMotion]);
 
   return (

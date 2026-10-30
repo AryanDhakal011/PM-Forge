@@ -1,14 +1,9 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import {
-  ArrowRight,
-  Check,
-  CircleHelp,
-  RotateCcw,
-  X,
-} from "lucide-react";
+import { ArrowRight, Check, CircleHelp, RotateCcw, X } from "lucide-react";
 import { Dialog } from "@/components/ui/Dialog";
 import { useSettings } from "@/components/providers/SettingsProvider";
 import {
@@ -22,8 +17,18 @@ import {
 import { track } from "@/lib/analytics";
 import { markLandingSceneReady } from "@/lib/landingSceneReadiness";
 import { cancelSmoothScroll, scrollToElement } from "@/lib/scrollTo";
+import { scrollState } from "@/lib/scrollState";
+import {
+  clamp01,
+  ensureScrollTrigger,
+  resolveCalm,
+  setCalmVar,
+  bindStoryTargets,
+  setStoryVar,
+} from "@/lib/scrollStory";
 import { useWebGLSupport } from "@/hooks/useWebGLSupport";
 import { useNearViewport, useSceneActivity } from "@/three/sceneLifecycle";
+import { invalidateScene } from "@/three/sceneRuntime";
 import styles from "./SignalTest.module.css";
 
 type Verdict = "idle" | "strong" | "related" | "weak";
@@ -151,7 +156,11 @@ export function SignalTest() {
   const [selectedId, setSelectedId] = useState<number | null>(null);
   const [verdict, setVerdict] = useState<Verdict>("idle");
   const [inspected, setInspected] = useState<Set<number>>(() => new Set());
-  const [dragging, setDragging] = useState<{ id: number; x: number; y: number } | null>(null);
+  const [dragging, setDragging] = useState<{
+    id: number;
+    x: number;
+    y: number;
+  } | null>(null);
   const [rationaleOpen, setRationaleOpen] = useState(false);
   const [started, setStarted] = useState(false);
   const [skipMessage, setSkipMessage] = useState("");
@@ -161,6 +170,9 @@ export function SignalTest() {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const dragStart = useRef<{ x: number; y: number } | null>(null);
   const suppressClick = useRef(false);
+  const progressRef = useRef(0);
+  const calmRef = useRef(0);
+  const interactionRef = useRef(0);
   const markSignalReady = useCallback(
     () => markLandingSceneReady("signal"),
     [],
@@ -182,9 +194,132 @@ export function SignalTest() {
   const selected = evidenceCards.find((card) => card.id === selectedId) ?? null;
   const preview = selected
     ? null
-    : evidenceCards.find((card) => card.id === hoveredId) ?? null;
-  const instrumentProgress =
-    selectedId === strongestEvidenceId ? 1 : selectedId !== null ? 0.62 : narrowed ? 0.3 : 0;
+    : (evidenceCards.find((card) => card.id === hoveredId) ?? null);
+  // Real interaction state, not scroll position, decides how resolved the
+  // instrument is allowed to become. Scrolling can organise the field; only a
+  // justified selection fully settles it.
+  const interactionCalm =
+    selectedId === strongestEvidenceId
+      ? 1
+      : selectedId !== null
+        ? 0.72
+        : narrowed
+          ? 0.46
+          : Math.min(inspected.size / 10, 1) * 0.3;
+
+  /**
+   * Desktop pins the board for ~1.5 viewports while the field resolves.
+   * Mobile keeps the natural document flow: no pin, no scroll-scrubbed
+   * choreography, just the same hierarchy and interaction.
+   */
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    bindStoryTargets(
+      section,
+      "--calm",
+      `.${styles.tableGlow},.${styles.instrumentCanvas},.${styles.decision}`,
+    );
+    bindStoryTargets(
+      section,
+      "--signal-p",
+      `.${styles.card},.${styles.annotations}`,
+    );
+    const ScrollTrigger = ensureScrollTrigger();
+    const query = window.matchMedia(
+      "(min-width: 1180px) and (min-height: 860px)",
+    );
+    let trigger: { kill: () => void; progress: number } | null = null;
+
+    const apply = (value: number) => {
+      const progress = clamp01(value);
+      progressRef.current = progress;
+      // Scroll organises the field, but the story only fully calms when the
+      // visitor actually justifies a decision.
+      const gated =
+        reducedMotion || !query.matches
+          ? interactionRef.current
+          : resolveCalm(progress) * (0.58 + 0.42 * interactionRef.current);
+      calmRef.current = gated;
+      scrollState.signal = progress;
+      scrollState.calm = gated;
+      setCalmVar(section, gated);
+      setStoryVar(section, "--signal-p", progress.toFixed(3));
+
+      if (!reducedMotion && query.matches) {
+        const stage =
+          progress < 0.2
+            ? "scatter"
+            : progress < 0.42
+              ? "inspect"
+              : progress < 0.66
+                ? "quiet"
+                : progress < 0.86
+                  ? "connect"
+                  : "resolve";
+        if (section.dataset.signalStage !== stage) {
+          section.dataset.signalStage = stage;
+        }
+      } else {
+        delete section.dataset.signalStage;
+      }
+
+      // State changed; ask the active canvas for one frame. Offscreen scenes
+      // ignore this because their frameloop is "never".
+      invalidateScene("signal");
+    };
+
+    const setup = () => {
+      trigger?.kill();
+      trigger = null;
+
+      if (reducedMotion || !query.matches) {
+        progressRef.current = 0;
+        setStoryVar(section, "--signal-p", "0");
+        delete section.dataset.signalStage;
+        apply(0);
+        return;
+      }
+
+      trigger = ScrollTrigger.create({
+        trigger: section,
+        start: "top top",
+        end: "bottom bottom",
+        invalidateOnRefresh: true,
+        onUpdate: (self) => apply(self.progress),
+        onRefresh: (self) => apply(self.progress),
+      });
+      apply(trigger.progress);
+    };
+
+    setup();
+    query.addEventListener("change", setup);
+
+    return () => {
+      query.removeEventListener("change", setup);
+      trigger?.kill();
+      delete section.dataset.signalStage;
+    };
+  }, [reducedMotion]);
+
+  // Selecting, inspecting, or isolating changes the instrument's ceiling
+  // without recreating the trigger or re-rendering the scene tree.
+  useEffect(() => {
+    interactionRef.current = interactionCalm;
+    const section = sectionRef.current;
+    if (!section) return;
+    const desktop =
+      !reducedMotion &&
+      window.matchMedia("(min-width: 1180px) and (min-height: 860px)").matches;
+    const gated = desktop
+      ? resolveCalm(progressRef.current) * (0.58 + 0.42 * interactionCalm)
+      : interactionCalm;
+    calmRef.current = gated;
+    scrollState.calm = gated;
+    setCalmVar(section, gated);
+    invalidateScene("signal");
+  }, [interactionCalm, reducedMotion]);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -291,7 +426,10 @@ export function SignalTest() {
     track("signal_isolate", { stage: "auto" });
   }, [choose, narrowed, ranked, reset, selectedId]);
 
-  const onPointerDown = (event: React.PointerEvent<HTMLButtonElement>, id: number) => {
+  const onPointerDown = (
+    event: React.PointerEvent<HTMLButtonElement>,
+    id: number,
+  ) => {
     if (event.pointerType === "touch") return;
     const card = event.currentTarget;
     card.setPointerCapture(event.pointerId);
@@ -300,7 +438,10 @@ export function SignalTest() {
     setDragging({ id, x: 0, y: 0 });
   };
 
-  const onPointerMove = (event: React.PointerEvent<HTMLButtonElement>, id: number) => {
+  const onPointerMove = (
+    event: React.PointerEvent<HTMLButtonElement>,
+    id: number,
+  ) => {
     if (!dragStart.current || dragging?.id !== id) return;
     const x = event.clientX - dragStart.current.x;
     const y = event.clientY - dragStart.current.y;
@@ -308,7 +449,10 @@ export function SignalTest() {
     setDragging({ id, x, y });
   };
 
-  const onPointerUp = (event: React.PointerEvent<HTMLButtonElement>, card: EvidenceCard) => {
+  const onPointerUp = (
+    event: React.PointerEvent<HTMLButtonElement>,
+    card: EvidenceCard,
+  ) => {
     if (!dragStart.current) return;
     const moved = Math.hypot(
       event.clientX - dragStart.current.x,
@@ -330,11 +474,19 @@ export function SignalTest() {
     }, 40);
   };
 
-  const onKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>, index: number) => {
-    if (!["ArrowRight", "ArrowDown", "ArrowLeft", "ArrowUp"].includes(event.key)) return;
+  const onKeyDown = (
+    event: React.KeyboardEvent<HTMLButtonElement>,
+    index: number,
+  ) => {
+    if (
+      !["ArrowRight", "ArrowDown", "ArrowLeft", "ArrowUp"].includes(event.key)
+    )
+      return;
     event.preventDefault();
-    const direction = event.key === "ArrowRight" || event.key === "ArrowDown" ? 1 : -1;
-    const next = (index + direction + evidenceCards.length) % evidenceCards.length;
+    const direction =
+      event.key === "ArrowRight" || event.key === "ArrowDown" ? 1 : -1;
+    const next =
+      (index + direction + evidenceCards.length) % evidenceCards.length;
     cardRefs.current[next]?.focus();
   };
 
@@ -384,6 +536,7 @@ export function SignalTest() {
   return (
     <section
       id="signal"
+      data-scene-active={!reducedMotion && scene.active}
       ref={sectionRef}
       className={`${styles.section} ${started ? styles.started : ""} ${
         verdict === "strong" ? styles.resolved : ""
@@ -404,8 +557,8 @@ export function SignalTest() {
               <span>signal?</span>
             </h2>
             <p className={styles.copy}>
-              You have 10 conflicting data points and a deadline in an hour. What
-              moves the needle?
+              You have 10 conflicting data points and a deadline in an hour.
+              What moves the needle?
             </p>
             <button
               type="button"
@@ -419,6 +572,16 @@ export function SignalTest() {
                   : "Isolate the signal"}
               <ArrowRight size={17} strokeWidth={1.8} aria-hidden="true" />
             </button>
+
+            {verdict === "strong" ? (
+              <Link
+                href="/signup?intent=practice&src=signal&next=%2Fapp%2Fpractice"
+                className={`${styles.productEntry} btn btnOutline btnSm`}
+              >
+                Practice 63 more scenarios
+                <ArrowRight size={13} aria-hidden="true" />
+              </Link>
+            ) : null}
 
             <p className={styles.instruction}>
               <span>Separate evidence from assumptions.</span>
@@ -437,7 +600,11 @@ export function SignalTest() {
           </div>
 
           <div className={styles.fieldWrap}>
-            <div className={styles.table} role="group" aria-label="Ten pieces of evidence">
+            <div
+              className={styles.table}
+              role="group"
+              aria-label="Ten pieces of evidence"
+            >
               <div className={styles.tableGlow} aria-hidden="true" />
               <div className={styles.orbShadow} aria-hidden="true" />
               <svg
@@ -465,7 +632,10 @@ export function SignalTest() {
                 {evidenceCards.map((card) => (
                   <path
                     key={card.id}
-                    className={selectedId === card.id ? styles.spokeSelected : ""}
+                    data-relevant={topFour.has(card.id) ? "true" : "false"}
+                    className={
+                      selectedId === card.id ? styles.spokeSelected : ""
+                    }
                     d={getSpokePath(card.id)}
                   />
                 ))}
@@ -489,7 +659,8 @@ export function SignalTest() {
                     <SignalInstrumentCanvas
                       reducedMotion={reducedMotion}
                       frameloop={scene.frameloop}
-                      progress={instrumentProgress}
+                      progress={interactionCalm}
+                      progressRef={calmRef}
                       hovering={hoveredId !== null}
                       onReady={markSignalReady}
                       onFail={() => setWebglFailed(true)}
@@ -500,7 +671,11 @@ export function SignalTest() {
                 </div>
               </div>
 
-              <div className={styles.cards} role="group" aria-label="Evidence cards">
+              <div
+                className={styles.cards}
+                role="group"
+                aria-label="Evidence cards"
+              >
                 {evidenceCards.map((card, index) => {
                   const slot = CARD_SLOTS[card.id];
                   const isSelected = selectedId === card.id;
@@ -508,7 +683,8 @@ export function SignalTest() {
                     selectedId !== null && selectedId !== card.id;
                   const isDragging = dragging?.id === card.id;
                   const isRinged = narrowed && topFour.has(card.id);
-                  const isWeak = narrowed && selectedId === null && !topFour.has(card.id);
+                  const isWeak =
+                    narrowed && selectedId === null && !topFour.has(card.id);
                   return (
                     <button
                       key={card.id}
@@ -524,7 +700,9 @@ export function SignalTest() {
                         isDragging ? styles.dragging : "",
                         isRinged ? styles.ringed : "",
                         isWeak ? styles.weak : "",
-                        isSelected && verdict === "strong" ? styles.cardResolved : "",
+                        isSelected && verdict === "strong"
+                          ? styles.cardResolved
+                          : "",
                       ]
                         .filter(Boolean)
                         .join(" ")}
@@ -541,7 +719,11 @@ export function SignalTest() {
                         } as React.CSSProperties
                       }
                       aria-pressed={isSelected}
-                      aria-describedby={isSelected ? "signal-result" : undefined}
+                      aria-describedby={
+                        isSelected ? "signal-result" : undefined
+                      }
+                      data-relevant={topFour.has(card.id) ? "true" : "false"}
+                      data-inspected={inspected.has(card.id) ? "true" : "false"}
                       onPointerDown={(event) => onPointerDown(event, card.id)}
                       onPointerMove={(event) => onPointerMove(event, card.id)}
                       onPointerUp={(event) => onPointerUp(event, card)}
@@ -551,12 +733,16 @@ export function SignalTest() {
                       }}
                       onFocus={() => {
                         setHoveredId(card.id);
-                        setInspected((current) => new Set(current).add(card.id));
+                        setInspected((current) =>
+                          new Set(current).add(card.id),
+                        );
                       }}
                       onBlur={() => setHoveredId(null)}
                       onMouseEnter={() => {
                         setHoveredId(card.id);
-                        setInspected((current) => new Set(current).add(card.id));
+                        setInspected((current) =>
+                          new Set(current).add(card.id),
+                        );
                       }}
                       onMouseLeave={() => setHoveredId(null)}
                       onClick={() => {
@@ -568,7 +754,9 @@ export function SignalTest() {
                       <span className={styles.cardTop}>
                         <span className={styles.cardDot} aria-hidden="true" />
                         <span className={styles.cardNumber}>{card.number}</span>
-                        <span className={styles.cardCategory}>{card.category}</span>
+                        <span className={styles.cardCategory}>
+                          {card.category}
+                        </span>
                       </span>
                       <span className={styles.pushpin} aria-hidden="true" />
                       <span className={styles.cardContent}>{card.content}</span>
@@ -670,12 +858,13 @@ export function SignalTest() {
                   {verdict === "strong" ? (
                     <div className={styles.successFoot}>
                       <p>
-                        Good PM work isn&apos;t knowing everything. It&apos;s knowing
-                        what matters next.
+                        Good PM work isn&apos;t knowing everything. It&apos;s
+                        knowing what matters next.
                       </p>
                       {helped ? (
                         <p className={styles.helpNote}>
-                          Isolated with help. This run did not earn completion credit.
+                          Isolated with help. This run did not earn completion
+                          credit.
                         </p>
                       ) : null}
                     </div>
@@ -691,15 +880,17 @@ export function SignalTest() {
                   ) : (
                     <p className={styles.decisionBody}>
                       Choose the evidence that most changes what you would do
-                      next. The card you pick will be scored on four factors, not
-                      on whether it sounds urgent.
+                      next. The card you pick will be scored on four factors,
+                      not on whether it sounds urgent.
                     </p>
                   )}
                 </>
               )}
               <dl className={styles.scoreTracks}>
                 {FACTOR_LABELS.map(([label, factor]) => {
-                  const value = selected ? getFactorValue(selected, factor) : null;
+                  const value = selected
+                    ? getFactorValue(selected, factor)
+                    : null;
                   return (
                     <div key={factor} data-factor={factor}>
                       <dt>{label}</dt>
@@ -740,7 +931,11 @@ export function SignalTest() {
                     onClick={() => jumpToLearning(false)}
                   >
                     Continue
-                    <ArrowRight size={15} strokeWidth={1.8} aria-hidden="true" />
+                    <ArrowRight
+                      size={15}
+                      strokeWidth={1.8}
+                      aria-hidden="true"
+                    />
                   </button>
                 ) : (
                   <button
@@ -832,10 +1027,18 @@ export function SignalTest() {
               <thead>
                 <tr>
                   <th scope="col">Card</th>
-                  <th scope="col" title="Measured">M</th>
-                  <th scope="col" title="Recency">R</th>
-                  <th scope="col" title="Scope">S</th>
-                  <th scope="col" title="Revenue link">$</th>
+                  <th scope="col" title="Measured">
+                    M
+                  </th>
+                  <th scope="col" title="Recency">
+                    R
+                  </th>
+                  <th scope="col" title="Scope">
+                    S
+                  </th>
+                  <th scope="col" title="Revenue link">
+                    $
+                  </th>
                   <th scope="col">Score</th>
                   <th scope="col">Strength</th>
                 </tr>
@@ -846,7 +1049,9 @@ export function SignalTest() {
                   return (
                     <tr
                       key={card.id}
-                      className={selectedId === card.id ? styles.rowSelected : ""}
+                      className={
+                        selectedId === card.id ? styles.rowSelected : ""
+                      }
                     >
                       <th scope="row">
                         <span>{card.number}</span> {card.content}
@@ -857,7 +1062,10 @@ export function SignalTest() {
                       <td>{card.factors.revenue}</td>
                       <td>{score}/8</td>
                       <td>
-                        <span className={styles.strengthPill} data-level={evidenceStrength(card)}>
+                        <span
+                          className={styles.strengthPill}
+                          data-level={evidenceStrength(card)}
+                        >
                           {evidenceStrength(card)}
                         </span>
                       </td>

@@ -6,6 +6,7 @@ import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useSettings } from "@/components/providers/SettingsProvider";
+import { ensureScrollTrigger } from "@/lib/scrollStory";
 import { setScrollInstance, scrollToSection } from "@/lib/scrollTo";
 
 /**
@@ -18,7 +19,13 @@ export function SmoothScroll() {
   const pathname = usePathname();
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    ensureScrollTrigger();
+
+    if (pathname.startsWith("/app") || pathname === "/onboarding") {
+      document.documentElement.classList.remove("lenis", "lenis-smooth");
+      setScrollInstance(null);
+      return;
+    }
 
     if (reducedMotion) {
       document.documentElement.classList.remove("lenis", "lenis-smooth");
@@ -35,6 +42,9 @@ export function SmoothScroll() {
       touchMultiplier: 1.6,
       syncTouch: false,
       anchors: false,
+      // This component owns resize observation. Avoid a second ResizeObserver
+      // in Lenis measuring the same document during ScrollTrigger refreshes.
+      autoResize: false,
     });
 
     setScrollInstance(lenis);
@@ -46,8 +56,61 @@ export function SmoothScroll() {
     gsap.ticker.add(raf);
     gsap.ticker.lagSmoothing(0);
 
-    const refresh = () => ScrollTrigger.refresh();
+    let disposed = false;
+    let lastWidth = 0;
+    let lastHeight = 0;
+    let lastViewportWidth = 0;
+    let lastViewportHeight = 0;
+    const refresh = () => {
+      if (disposed) return;
+      lenis.resize();
+      ScrollTrigger.refresh();
+      // Refresh can change pin spacing. Record the resulting dimensions so
+      // the observer does not schedule another refresh for our own writes.
+      lastWidth = document.body.offsetWidth;
+      lastHeight = document.body.offsetHeight;
+      lastViewportWidth = window.innerWidth;
+      lastViewportHeight = window.innerHeight;
+    };
     const refreshSoon = window.setTimeout(refresh, 600);
+
+    // Pin distances depend on the final font metrics and on the loader no
+    // longer covering the page. Recalculate once at each real milestone.
+    window.addEventListener("pmforge:loader-done", refresh);
+    void document.fonts?.ready.then(refresh);
+
+    // Late images or a canvas mounting can still change document height after
+    // those milestones. Recalculate once the layout has actually stopped
+    // moving, debounced so a burst of changes only costs one refresh.
+    let settleTimer = 0;
+    const refreshWhenSettled = () => {
+      window.clearTimeout(settleTimer);
+      settleTimer = window.setTimeout(() => {
+        if (disposed) return;
+        if (
+          document.body.offsetWidth === lastWidth &&
+          document.body.offsetHeight === lastHeight &&
+          window.innerWidth === lastViewportWidth &&
+          window.innerHeight === lastViewportHeight
+        )
+          return;
+        // A late image should not interrupt a wheel gesture with synchronous
+        // measurements of every pinned section. Settle after scrolling stops.
+        if (ScrollTrigger.isScrolling()) {
+          refreshWhenSettled();
+          return;
+        }
+        refresh();
+      }, 180);
+    };
+    const resizeObserver =
+      typeof ResizeObserver !== "undefined"
+        ? new ResizeObserver(refreshWhenSettled)
+        : null;
+    if (resizeObserver) {
+      resizeObserver.observe(document.body);
+    }
+    window.addEventListener("resize", refreshWhenSettled);
 
     // Dialog and menu locking already set this class; keep Lenis in sync.
     const observer = new MutationObserver(() => {
@@ -63,20 +126,26 @@ export function SmoothScroll() {
     });
 
     return () => {
+      disposed = true;
       window.clearTimeout(refreshSoon);
+      window.clearTimeout(settleTimer);
+      window.removeEventListener("pmforge:loader-done", refresh);
+      window.removeEventListener("resize", refreshWhenSettled);
+      resizeObserver?.disconnect();
       observer.disconnect();
       lenis.off("scroll", onScroll);
       gsap.ticker.remove(raf);
       lenis.destroy();
       setScrollInstance(null);
     };
-  }, [reducedMotion]);
+  }, [reducedMotion, pathname]);
 
   useEffect(() => {
     // Same-page anchors use Lenis instead of a native jump.
     const onClick = (event: MouseEvent) => {
       if (event.defaultPrevented || event.button !== 0) return;
-      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
+        return;
 
       const anchor = (event.target as Element | null)?.closest?.("a");
       if (!anchor) return;

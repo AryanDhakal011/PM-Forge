@@ -62,7 +62,11 @@
   --r-panel: 16px;
   --r-pill: 999px;
 
-  /* Motion */
+  /* Motion
+     --calm is the story state, not a generic multiplier:
+     0 = unresolved noise, 1 = a resolved decision. Sections set it locally
+     from their ScrollTrigger and consume it only where it carries meaning. */
+  --calm: 0;
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
   --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
   --ease-in: cubic-bezier(0.55, 0, 0.8, 0.3);

@@ -45,6 +45,19 @@
   letter-spacing: -0.03em;
 }
 
+/*
+ * Story settle. As the block hierarchy resolves, the copy and the list come
+ * to rest a few pixels higher and the hand-written note straightens. Short
+ * physical movement, no bounce, driven by the section's --calm.
+ */
+.copy {
+  transform: translateY(calc(var(--calm, 0) * -6px));
+}
+
+.listCol {
+  transform: translateY(calc(var(--calm, 0) * -4px));
+}
+
 .body {
   max-width: 33ch;
   font-size: 1.0625rem;
@@ -96,6 +109,7 @@
   inset: 8% 3% 5%;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(185, 154, 74, 0.11), transparent 67%);
+  opacity: calc(0.68 + var(--calm, 0) * 0.32);
   pointer-events: none;
 }
 
@@ -126,7 +140,8 @@
   left: 0;
   bottom: 6%;
   z-index: 4;
-  transform: rotate(-5deg);
+  transform: rotate(calc(-5deg + var(--calm, 0) * 3deg))
+    translateY(calc(var(--calm, 0) * -4px));
   font-family: var(--font-hand);
   font-size: clamp(1.35rem, 1.9vw, 1.85rem);
   line-height: 0.9;
@@ -700,3 +715,6 @@
     height: 330px;
   }
 }
+
+/* Pseudo-elements explicitly inherit only from their bound painted object. */
+.stage::before{--calm:inherit}

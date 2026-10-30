@@ -45,13 +45,18 @@ export function PencilCursor() {
       targetX = event.clientX;
       targetY = event.clientY;
       const target = event.target as HTMLElement | null;
-      const isField = target?.closest("input, textarea, select, [contenteditable='true']");
+      const isField = target?.closest(
+        "input, textarea, select, [contenteditable='true']",
+      );
       dot.dataset.hidden = isField ? "true" : "false";
       points.push({ x: targetX, y: targetY, t: performance.now() });
+      if (!raf && document.visibilityState !== "hidden")
+        raf = requestAnimationFrame(render);
       if (points.length > 44) points.shift();
     };
 
     const render = () => {
+      raf = 0;
       frame += 1;
       currentX += (targetX - currentX) * 0.18;
       currentY += (targetY - currentY) * 0.18;
@@ -79,7 +84,13 @@ export function PencilCursor() {
         }
       }
 
-      raf = window.requestAnimationFrame(render);
+      if (
+        document.visibilityState !== "hidden" &&
+        (points.length ||
+          Math.abs(targetX - currentX) > 0.05 ||
+          Math.abs(targetY - currentY) > 0.05)
+      )
+        raf = window.requestAnimationFrame(render);
     };
 
     window.addEventListener("pointermove", onMove, { passive: true });

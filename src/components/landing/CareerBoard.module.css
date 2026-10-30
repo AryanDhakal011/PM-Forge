@@ -1126,3 +1126,32 @@
     font-size: 0.75rem;
   }
 }
+
+/* ------------------------------ story settle ------------------------------ */
+
+/*
+ * Final career beat: the profile lifts into place as the board enters. Uses
+ * the independent translate property so it never fights the pointer tilt or
+ * the card's own transition.
+ */
+.copy {
+  translate: 0 calc(var(--calm, 0) * -4px);
+}
+
+.profile {
+  translate: 0 calc(var(--calm, 0) * -6px);
+}
+
+.plantShadows {
+  opacity: calc(0.52 + var(--calm, 0) * 0.14);
+}
+
+.tile {
+  translate: 0 calc((1 - var(--calm, 0)) * 6px);
+  opacity: calc(0.82 + var(--calm, 0) * 0.18);
+}
+
+.stats strong {
+  translate: 0 calc((1 - var(--calm, 0)) * 3px);
+  opacity: calc(0.76 + var(--calm, 0) * 0.24);
+}

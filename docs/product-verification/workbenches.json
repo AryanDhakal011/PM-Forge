@@ -1,0 +1,52 @@
+{
+  "checks": [
+    {
+      "category": "root-cause",
+      "overflow": false,
+      "controls": 23
+    },
+    {
+      "category": "product-sense",
+      "overflow": false,
+      "controls": 19
+    },
+    {
+      "category": "strategy",
+      "overflow": false,
+      "controls": 15
+    },
+    {
+      "category": "execution-metrics",
+      "overflow": false,
+      "controls": 18
+    },
+    {
+      "category": "estimation",
+      "overflow": false,
+      "controls": 27
+    },
+    {
+      "category": "ai-technical",
+      "overflow": false,
+      "controls": 18
+    },
+    {
+      "category": "behavioral",
+      "overflow": false,
+      "controls": 20
+    },
+    {
+      "edge": "pending draft persists on SPA navigation",
+      "pass": true
+    },
+    {
+      "viewport": 320,
+      "overflow": false
+    },
+    {
+      "edge": "external revision conflict is detected",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

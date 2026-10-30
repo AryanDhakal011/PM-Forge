@@ -1,0 +1,195 @@
+{
+  "at": "2026-10-30T00:30:01.568Z",
+  "checks": [
+    {
+      "label": "capability probes and retired renderers release their WebGL contexts",
+      "pass": true,
+      "details": {
+        "created": 2,
+        "lost": 2,
+        "textures": 0,
+        "buffers": 0,
+        "programs": 0
+      }
+    },
+    {
+      "label": "instrument GPU resources return to zero after unmount",
+      "pass": true,
+      "details": {
+        "created": 2,
+        "lost": 2,
+        "textures": 0,
+        "buffers": 0,
+        "programs": 0
+      }
+    },
+    {
+      "label": "no runtime errors during scroll and repeated navigation",
+      "pass": true,
+      "details": []
+    }
+  ],
+  "errors": [],
+  "scroll": [
+    {
+      "id": "hero",
+      "frames": 132,
+      "medianMs": 16.69999999999891,
+      "p95Ms": 16.80000000000109,
+      "longTasks": [],
+      "gl": {
+        "created": 2,
+        "lost": 1,
+        "textures": 24,
+        "buffers": 242,
+        "programs": 22
+      },
+      "overflow": false,
+      "cpu": {
+        "TaskDurationMs": 1528.6,
+        "ScriptDurationMs": 504.9,
+        "LayoutDurationMs": 13.9,
+        "RecalcStyleDurationMs": 444.5
+      }
+    },
+    {
+      "id": "signal",
+      "frames": 113,
+      "medianMs": 16.700000000000728,
+      "p95Ms": 33.5,
+      "longTasks": [],
+      "gl": {
+        "created": 4,
+        "lost": 1,
+        "textures": 38,
+        "buffers": 320,
+        "programs": 30
+      },
+      "overflow": false,
+      "cpu": {
+        "TaskDurationMs": 2070.1,
+        "ScriptDurationMs": 254.2,
+        "LayoutDurationMs": 12.8,
+        "RecalcStyleDurationMs": 1045.8
+      }
+    },
+    {
+      "id": "learning",
+      "frames": 127,
+      "medianMs": 16.700000000000728,
+      "p95Ms": 16.899999999997817,
+      "longTasks": [],
+      "gl": {
+        "created": 4,
+        "lost": 1,
+        "textures": 51,
+        "buffers": 407,
+        "programs": 37
+      },
+      "overflow": false,
+      "cpu": {
+        "TaskDurationMs": 1644.1,
+        "ScriptDurationMs": 291.9,
+        "LayoutDurationMs": 15.3,
+        "RecalcStyleDurationMs": 351.9
+      }
+    },
+    {
+      "id": "projects",
+      "frames": 131,
+      "medianMs": 16.69999999999709,
+      "p95Ms": 16.900000000001455,
+      "longTasks": [],
+      "gl": {
+        "created": 4,
+        "lost": 1,
+        "textures": 51,
+        "buffers": 407,
+        "programs": 37
+      },
+      "overflow": false,
+      "cpu": {
+        "TaskDurationMs": 1407.9,
+        "ScriptDurationMs": 92.8,
+        "LayoutDurationMs": 37.4,
+        "RecalcStyleDurationMs": 317.4
+      }
+    },
+    {
+      "id": "interview",
+      "frames": 133,
+      "medianMs": 16.700000000000728,
+      "p95Ms": 17,
+      "longTasks": [],
+      "gl": {
+        "created": 4,
+        "lost": 1,
+        "textures": 51,
+        "buffers": 407,
+        "programs": 37
+      },
+      "overflow": false,
+      "cpu": {
+        "TaskDurationMs": 1564.1,
+        "ScriptDurationMs": 87.8,
+        "LayoutDurationMs": 14.5,
+        "RecalcStyleDurationMs": 525.4
+      }
+    },
+    {
+      "id": "career",
+      "frames": 131,
+      "medianMs": 16.69999999999709,
+      "p95Ms": 17.200000000000728,
+      "longTasks": [
+        {
+          "start": 32040.40000000596,
+          "duration": 157
+        }
+      ],
+      "gl": {
+        "created": 4,
+        "lost": 1,
+        "textures": 51,
+        "buffers": 407,
+        "programs": 37
+      },
+      "overflow": false,
+      "cpu": {
+        "TaskDurationMs": 1662,
+        "ScriptDurationMs": 98.3,
+        "LayoutDurationMs": 16.3,
+        "RecalcStyleDurationMs": 514.5
+      }
+    },
+    {
+      "id": "blueprint",
+      "frames": 129,
+      "medianMs": 16.69999999999709,
+      "p95Ms": 16.900000000001455,
+      "longTasks": [],
+      "gl": {
+        "created": 4,
+        "lost": 1,
+        "textures": 51,
+        "buffers": 407,
+        "programs": 37
+      },
+      "overflow": false,
+      "cpu": {
+        "TaskDurationMs": 1317.8,
+        "ScriptDurationMs": 82.8,
+        "LayoutDurationMs": 17.1,
+        "RecalcStyleDurationMs": 496.9
+      }
+    }
+  ],
+  "gpuLifecycle": [],
+  "afterUnmount": {
+    "created": 2,
+    "lost": 2,
+    "textures": 0,
+    "buffers": 0,
+    "programs": 0
+  }
+}

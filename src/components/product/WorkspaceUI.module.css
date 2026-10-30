@@ -1,0 +1,204 @@
+.emblem {
+  width: 24px;
+  height: 24px;
+  flex: none;
+  color: var(--accent, currentColor);
+}
+.roomScene {
+  width: 80px;
+  height: 80px;
+  color: var(--accent, currentColor);
+}
+.scenePoint {
+  transform-origin: 32px 32px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  a:hover .scenePoint,
+  a:focus-visible .scenePoint {
+    animation: orbit 1.2s ease-in-out 1;
+  }
+  @keyframes orbit {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+.draftDot {
+  display: inline-flex;
+  position: relative;
+  width: 28px;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+.draftDot::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #a47726;
+}
+.draftDot > span {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  padding: 8px 12px;
+  min-width: 190px;
+  background: #292b24;
+  color: #fffdf7;
+  font-size: 0.8125rem;
+  border-radius: 6px;
+  z-index: 10;
+}
+.draftDot:hover > span,
+.draftDot:focus > span {
+  display: block;
+}
+.meter {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+.meter i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--accent, #6b655b);
+}
+.meter i[data-lit="true"] {
+  background: var(--accent, #194b37);
+}
+.coverage {
+  overflow-x: auto;
+}
+.coverage table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.8125rem;
+}
+.coverage caption {
+  text-align: left;
+  color: var(--p-muted);
+  padding-bottom: 12px;
+}
+.coverage th {
+  text-align: left;
+  font-weight: 500;
+}
+.coverage td,
+.coverage th {
+  border-bottom: 1px solid var(--p-line);
+  padding: 0 6px;
+}
+.coverage a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  text-decoration: none;
+}
+.coverage td a {
+  justify-content: center;
+}
+.coverage thead th:not(:first-child) {
+  text-align: center;
+}
+.coverage p {
+  font-size: 0.8125rem;
+  color: var(--p-muted);
+  padding-top: 12px;
+}
+.empty {
+  padding: 40px 24px;
+  text-align: center;
+  background: var(--p-panel);
+  border: 1px solid var(--p-line);
+  border-radius: 16px;
+}
+.empty svg {
+  height: 110px;
+  width: 180px;
+  color: var(--p-brass);
+  margin: auto auto 20px;
+}
+.empty h2 {
+  font-size: 1.5rem !important;
+}
+.empty p {
+  max-width: 44ch;
+  margin: 12px auto !important;
+  color: var(--p-muted);
+  font-size: 1rem;
+}
+.action {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--p-green);
+  font-size: 0.9375rem;
+}
+.select {
+  position: relative;
+  min-width: 155px;
+  font-size: 0.9375rem;
+}
+.select button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 44px;
+  padding: 8px 12px;
+  width: 100%;
+  color: var(--p-ink);
+  background: var(--p-panel);
+  border: 1px solid var(--p-line);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.options {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 100%;
+  background: var(--p-panel);
+  box-shadow: 0 12px 32px #0002;
+  padding: 6px;
+  border: 1px solid var(--p-line);
+  border-radius: 10px;
+  z-index: 40;
+}
+.options button {
+  border: 0;
+  text-align: left;
+  white-space: nowrap;
+}
+.options button:hover,
+.options button[aria-selected="true"] {
+  background: var(--p-soft);
+}
+.routeMap {
+  width: 100%;
+  max-width: 520px;
+  min-height: 150px;
+  color: var(--p-brass, #d6b981);
+  overflow: visible;
+}
+.routeMap a {
+  outline-offset: 4px;
+}
+.routeMap a:hover circle {
+  stroke-width: 4px;
+}
+.routeMap circle {
+  transition:
+    r 0.24s,
+    stroke-width 0.24s;
+}
+
+.draftDot {
+  z-index: 3;
+}

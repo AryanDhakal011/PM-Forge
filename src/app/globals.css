@@ -1,5 +1,10 @@
 @import "../styles/tokens.css";
 
+/* Scroll inputs are local to the objects that use them. This preserves the
+   exact choreography without invalidating a whole section's inherited style. */
+@property --calm { syntax: "<number>"; inherits: false; initial-value: 0; }
+@property --signal-p { syntax: "<number>"; inherits: false; initial-value: 0; }
+
 *,
 *::before,
 *::after {
@@ -38,6 +43,13 @@ html.loader-failed {
   overflow: auto;
 }
 
+/* The fallback makes html the scroller. Keep body from becoming a second
+   scrolling ancestor, which would prevent the landing's sticky board pin. */
+html.loader-failed body {
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
 html.lenis,
 html.lenis body {
   height: auto;
@@ -62,6 +74,10 @@ body {
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
+
+html[data-product="true"] { scroll-behavior: auto; background: #f2efe7; font-size: clamp(16px, .35vw + 12px, 21px); }
+html[data-product="true"] body { background: #f2efe7; }
+html[data-product="true"] .grain { display: none; }
 
 .wallRun {
   position: relative;

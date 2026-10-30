@@ -1114,6 +1114,30 @@
   }
 }
 
+/* ------------------------------ story settle ------------------------------ */
+
+/*
+ * Entering the lab settles the answer sheet square and brings the pivot notes
+ * up with it. Transform/opacity only; the lab remains fully interactive at any
+ * scroll position, and reduced motion lands directly on the settled state.
+ */
+.copy {
+  transform: translateY(calc(var(--calm, 0) * -5px));
+}
+
+.card {
+  transform: rotate(calc(-0.35deg + var(--calm, 0) * 0.35deg))
+    translateY(calc(var(--calm, 0) * -5px));
+}
+
+.pivots {
+  transform: rotate(calc(1.2deg - var(--calm, 0) * 0.8deg));
+}
+
+.leafShadows {
+  opacity: calc(0.55 + var(--calm, 0) * 0.16);
+}
+
 /* ------------------------------ responsive ------------------------------ */
 
 @media (max-width: 1200px) {

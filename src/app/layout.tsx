@@ -10,6 +10,7 @@ import "./globals.css";
 import { SettingsProvider } from "@/components/providers/SettingsProvider";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import { LOADER_BOOT_SCRIPT } from "@/lib/loaderBoot";
+import { EntryGate } from "@/components/product/EntryGate";
 
 // Set NEXT_PUBLIC_SITE_URL when deploying. The localhost fallback keeps
 // canonical and social URLs valid for a local preview on the documented port.
@@ -73,6 +74,7 @@ export default function RootLayout({
         <SettingsProvider>
           <SmoothScroll />
           {children}
+          <EntryGate />
         </SettingsProvider>
         <div className="grain" aria-hidden="true" />
       </body>

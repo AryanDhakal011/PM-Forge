@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { readinessBand, RUBRIC_LIMIT } from "@/lib/product/readiness";
+import gsap from "gsap";
 import {
   ArrowRight,
   ClipboardCopy,
@@ -12,12 +14,7 @@ import {
   Square,
   Target,
 } from "lucide-react";
-import {
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Dialog } from "@/components/ui/Dialog";
 import { useSettings } from "@/components/providers/SettingsProvider";
 import { interviewCase } from "@/lib/content";
@@ -30,17 +27,19 @@ import {
 import { copyText } from "@/lib/clipboard";
 import { scrollToElement } from "@/lib/scrollTo";
 import { track } from "@/lib/analytics";
+import { scrollState } from "@/lib/scrollState";
+import {
+  ensureScrollTrigger,
+  resolveCalm,
+  setCalmVar,
+  bindStoryTargets,
+} from "@/lib/scrollStory";
 import styles from "./InterviewLab.module.css";
 
 type Phase = "idle" | "live" | "review";
 type Mode = "voice" | "text";
 type MicState =
-  | "idle"
-  | "requesting"
-  | "granted"
-  | "denied"
-  | "absent"
-  | "stopped";
+  "idle" | "requesting" | "granted" | "denied" | "absent" | "stopped";
 type DictationState = "off" | "starting" | "on" | "unsupported";
 
 type SpeechAlternative = { transcript: string };
@@ -87,7 +86,8 @@ const PIVOT_PROMPTS: Record<string, string> = {
   problem: "What exactly changed, for whom, and where in the journey?",
   impact: "What user outcome moves, and what business metric follows it?",
   risks: "What could still go wrong, and when will you look again?",
-  prioritization: "What are you choosing not to do, and why is that acceptable?",
+  prioritization:
+    "What are you choosing not to do, and why is that acceptable?",
 };
 
 function formatTime(seconds: number) {
@@ -124,6 +124,9 @@ export function InterviewLab() {
   const restartTimerRef = useRef(0);
   const restartDelayRef = useRef(150);
   const waveRef = useRef<HTMLCanvasElement>(null);
+  const speechLevelRef = useRef(0);
+  speechLevelRef.current = levelPercent;
+  const sectionRef = useRef<HTMLElement>(null);
   const startedAtRef = useRef<number>(0);
   const timeoutRef = useRef(false);
   const mountedRef = useRef(true);
@@ -191,7 +194,11 @@ export function InterviewLab() {
     recognition.onresult = (event: SpeechResultEvent) => {
       let finalText = "";
       let draft = "";
-      for (let index = event.resultIndex; index < event.results.length; index += 1) {
+      for (
+        let index = event.resultIndex;
+        index < event.results.length;
+        index += 1
+      ) {
         const result = event.results[index];
         const transcript = result?.[0]?.transcript ?? "";
         if (result?.isFinal) finalText += transcript;
@@ -205,10 +212,11 @@ export function InterviewLab() {
         const separator =
           start > 0 && !/\s$/.test(current.slice(0, start)) ? " " : "";
         const insertion = `${separator}${finalText.trim()} `;
-        const next = `${current.slice(0, start)}${insertion}${current.slice(end)}`.slice(
-          0,
-          4000,
-        );
+        const next =
+          `${current.slice(0, start)}${insertion}${current.slice(end)}`.slice(
+            0,
+            4000,
+          );
         setAnswer(next);
         window.requestAnimationFrame(() => {
           const caret = Math.min(start + insertion.length, next.length);
@@ -330,10 +338,85 @@ export function InterviewLab() {
     return () => window.removeEventListener("popstate", onPopState);
   }, []);
 
+  /**
+   * The answer sheet comes to rest as the section enters. Pass-through
+   * trigger only: the lab itself stays fully usable at any scroll position.
+   */
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+    bindStoryTargets(
+      section,
+      "--calm",
+      `.${styles.copy},.${styles.card},.${styles.pivots},.${styles.leafShadows}`,
+    );
+
+    if (reducedMotion) {
+      scrollState.calm = 1;
+      setCalmVar(section, 1);
+      return;
+    }
+
+    const ScrollTrigger = ensureScrollTrigger();
+    const apply = (value: number) => {
+      const calm = resolveCalm(value);
+      scrollState.calm = calm;
+      setCalmVar(section, calm);
+    };
+
+    const trigger = ScrollTrigger.create({
+      trigger: section,
+      start: "top 82%",
+      end: "center 46%",
+      invalidateOnRefresh: true,
+      onUpdate: (self) => apply(self.progress),
+      onRefresh: (self) => apply(self.progress),
+    });
+    apply(trigger.progress);
+
+    return () => trigger.kill();
+  }, [reducedMotion]);
+
   const openRubric = () => {
-    window.history.pushState({ dialog: "interview-scoring" }, "", "#/interview/scoring");
+    window.history.pushState(
+      { dialog: "interview-scoring" },
+      "",
+      "#/interview/scoring",
+    );
     setRubricOpen(true);
   };
+
+  // Finite transitions follow the actual session. Nothing here starts audio
+  // or substitutes an animation for microphone permission or speech events.
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section || reducedMotion) return;
+    const context = gsap.context(() => {
+      if (phase === "review") {
+        gsap.fromTo(
+          resultsRef.current,
+          { opacity: 0, y: 8 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.32,
+            clearProps: "opacity,transform",
+          },
+        );
+      }
+      gsap.fromTo(
+        `.${styles.timer}`,
+        { y: 2, opacity: 0.72 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.18,
+          clearProps: "opacity,transform",
+        },
+      );
+    }, section);
+    return () => context.revert();
+  }, [phase, secondsLeft, reducedMotion]);
 
   const closeRubric = () => {
     if (window.location.hash === "#/interview/scoring") {
@@ -352,6 +435,11 @@ export function InterviewLab() {
     let height = 0;
     let visible = false;
     let lastFrame = 0;
+    const animate =
+      !reducedMotion &&
+      phase === "live" &&
+      mode === "voice" &&
+      dictation === "on";
     const context = canvas.getContext("2d");
     if (!context) return;
 
@@ -365,12 +453,13 @@ export function InterviewLab() {
         context.strokeStyle = "rgba(143, 70, 53, 0.78)";
         context.lineCap = "round";
         context.beginPath();
-        const time = now / 1000;
+        const time = animate ? now / 1000 : 0;
+        const amplitude = animate ? (speechLevelRef.current / 100) * 8 : 0;
         for (let x = 0; x < width; x += 1) {
           const y =
             height / 2 +
-            Math.sin(x * 0.028 + time * 0.8) * 1.2 +
-            Math.sin(x * 0.011 - time * 0.45) * 0.8;
+            Math.sin(x * 0.028 + time * 0.8) * amplitude +
+            Math.sin(x * 0.011 - time * 0.45) * amplitude * 0.5;
           if (x === 0) context.moveTo(x, y);
           else context.lineTo(x, y);
         }
@@ -382,7 +471,7 @@ export function InterviewLab() {
         context.lineTo(width, height / 2);
         context.stroke();
       }
-      if (!reducedMotion) raf = requestAnimationFrame(render);
+      if (animate) raf = requestAnimationFrame(render);
     };
 
     const resizeObserver = new ResizeObserver(([entry]) => {
@@ -395,6 +484,7 @@ export function InterviewLab() {
         canvas.width = pixelWidth;
         canvas.height = pixelHeight;
       }
+      if (visible && !animate) render(performance.now());
     });
     resizeObserver.observe(canvas);
 
@@ -410,7 +500,7 @@ export function InterviewLab() {
       resizeObserver.disconnect();
       intersectionObserver.disconnect();
     };
-  }, [reducedMotion]);
+  }, [reducedMotion, phase, mode, dictation]);
 
   useEffect(() => {
     if (phase !== "live") return;
@@ -475,6 +565,9 @@ export function InterviewLab() {
         "pmforge.interview.v1",
         JSON.stringify({
           overall: result.overall,
+          answer: trimmed,
+          mode,
+          promptId: "landing-demo",
           band: result.band,
           missing: result.missing.label,
           words: result.words,
@@ -552,7 +645,10 @@ export function InterviewLab() {
     window.setTimeout(() => {
       scrollToElement("interview", { offset: -96, duration: 0.8 });
       window.setTimeout(
-        () => document.getElementById("interview-start")?.focus({ preventScroll: true }),
+        () =>
+          document
+            .getElementById("interview-start")
+            ?.focus({ preventScroll: true }),
         850,
       );
     }, 80);
@@ -562,12 +658,12 @@ export function InterviewLab() {
     if (!evaluation) return;
     const text = [
       `PMForge interview feedback · ${interviewCase.prompt}`,
-      `Overall: ${evaluation.overall}/100 (${evaluation.band})`,
+      `Overall: ${readinessBand(evaluation.overall)} · provisional`,
       `Method: deterministic local rubric — no model call`,
       "",
       ...evaluation.criteria.map(
         (criterion) =>
-          `${criterion.label}: ${criterion.score}/4 — ${criterion.feedback}`,
+          `${criterion.label}: ${readinessBand(criterion.score * 25)} — ${criterion.feedback}`,
       ),
       "",
       `Strength: "${evaluation.strength}"`,
@@ -596,8 +692,8 @@ export function InterviewLab() {
       : micState === "absent"
         ? "No microphone is available in this browser. Use the written answer mode."
         : micState === "stopped"
-            ? "Listening stopped. Review your answer and submit it when ready."
-            : null;
+          ? "Listening stopped. Review your answer and submit it when ready."
+          : null;
 
   const scoreRows = evaluation
     ? [
@@ -609,7 +705,12 @@ export function InterviewLab() {
     : [];
 
   return (
-    <section id="interview" className={styles.section} aria-labelledby="interview-title">
+    <section
+      id="interview"
+      ref={sectionRef}
+      className={styles.section}
+      aria-labelledby="interview-title"
+    >
       <div className={styles.leafShadows} aria-hidden="true" />
       <div className={styles.inner}>
         <div className={styles.copy}>
@@ -622,8 +723,8 @@ export function InterviewLab() {
             Improve.
           </h2>
           <p className={styles.body}>
-            Simulate real interview scenarios with dynamic questioning, branching
-            paths, and rubric-based feedback.
+            Simulate real interview scenarios with dynamic questioning,
+            branching paths, and rubric-based feedback.
           </p>
           <button
             id="interview-start"
@@ -631,15 +732,13 @@ export function InterviewLab() {
             className={`${styles.practice} btn btnOutline`}
             onClick={() => {
               begin("voice");
-              document
-                .getElementById("interview-card")
-                ?.scrollIntoView({
-                  behavior: window.matchMedia("(prefers-reduced-motion: reduce)")
-                    .matches
-                    ? "auto"
-                    : "smooth",
-                  block: "center",
-                });
+              document.getElementById("interview-card")?.scrollIntoView({
+                behavior: window.matchMedia("(prefers-reduced-motion: reduce)")
+                  .matches
+                  ? "auto"
+                  : "smooth",
+                block: "center",
+              });
             }}
           >
             Practice Interviews
@@ -694,11 +793,17 @@ export function InterviewLab() {
                 aria-hidden="true"
               />
               <div>
-                <span className={styles.cardKicker}>Product design interview</span>
+                <span className={styles.cardKicker}>
+                  Product design interview
+                </span>
                 <h3 className={styles.cardTitle}>{interviewCase.prompt}</h3>
               </div>
             </div>
-            <span className={styles.timer} role="timer" aria-label={`${formatTime(secondsLeft)} remaining`}>
+            <span
+              className={styles.timer}
+              role="timer"
+              aria-label={`${formatTime(secondsLeft)} remaining`}
+            >
               <Clock3 size={12} strokeWidth={1.7} aria-hidden="true" />
               {formatTime(secondsLeft)}
             </span>
@@ -706,7 +811,9 @@ export function InterviewLab() {
 
           <p className={styles.context}>{interviewCase.context}</p>
 
-          <div className={`${styles.waveStage} ${mode === "text" ? styles.waveCollapsed : ""}`}>
+          <div
+            className={`${styles.waveStage} ${mode === "text" ? styles.waveCollapsed : ""}`}
+          >
             <canvas ref={waveRef} className={styles.wave} aria-hidden="true" />
             <div className={styles.levelRow}>
               <span className={styles.levelLabel}>
@@ -716,9 +823,9 @@ export function InterviewLab() {
                     ? "Written mode"
                     : phase === "live" && dictation === "starting"
                       ? "Connecting"
-                    : phase === "idle"
-                      ? "Ready"
-                      : "Session complete"}
+                      : phase === "idle"
+                        ? "Ready"
+                        : "Session complete"}
               </span>
               <div
                 className={styles.levelTrack}
@@ -742,7 +849,9 @@ export function InterviewLab() {
                 onClick={() => begin("voice")}
               >
                 <Mic size={17} strokeWidth={1.8} aria-hidden="true" />
-                {dictation === "unsupported" ? "Voice unavailable" : "Start with voice"}
+                {dictation === "unsupported"
+                  ? "Voice unavailable"
+                  : "Start with voice"}
               </button>
               <label className={styles.consent}>
                 <input
@@ -751,9 +860,9 @@ export function InterviewLab() {
                   onChange={(event) => setVoiceConsent(event.target.checked)}
                 />
                 <span>
-                  Voice typing uses your browser&apos;s speech service, which may
-                  send audio to its provider. PMForge does not record or store
-                  audio.
+                  Voice typing uses your browser&apos;s speech service, which
+                  may send audio to its provider. PMForge does not record or
+                  store audio.
                 </span>
               </label>
               <button
@@ -772,7 +881,11 @@ export function InterviewLab() {
           ) : (
             <>
               <div className={styles.modeRow}>
-                <div className={styles.modeTabs} role="group" aria-label="Answer mode">
+                <div
+                  className={styles.modeTabs}
+                  role="group"
+                  aria-label="Answer mode"
+                >
                   <button
                     type="button"
                     className={`${styles.modeTab} ${mode === "voice" ? styles.modeOn : ""}`}
@@ -829,13 +942,19 @@ export function InterviewLab() {
                       }
                     }}
                   >
-                    {[...new Set([speechLanguage, "en-US", "en-GB", "es-ES", "fr-FR"])].map(
-                      (language) => (
-                        <option key={language} value={language}>
-                          {language}
-                        </option>
-                      ),
-                    )}
+                    {[
+                      ...new Set([
+                        speechLanguage,
+                        "en-US",
+                        "en-GB",
+                        "es-ES",
+                        "fr-FR",
+                      ]),
+                    ].map((language) => (
+                      <option key={language} value={language}>
+                        {language}
+                      </option>
+                    ))}
                   </select>
                 </label>
               ) : null}
@@ -883,7 +1002,10 @@ export function InterviewLab() {
               ) : null}
 
               <div className={styles.answerWrap}>
-                <label htmlFor="interview-answer" className={styles.answerLabel}>
+                <label
+                  htmlFor="interview-answer"
+                  className={styles.answerLabel}
+                >
                   Your answer
                   <span>
                     {answer.trim().length} chars · {MIN_CHARS} minimum
@@ -989,17 +1111,16 @@ export function InterviewLab() {
             {evaluation ? (
               <>
                 <div className={styles.previewScore}>
-                  <strong>{evaluation.overall}</strong>
-                  <span>
-                    / 100
-                    <small>{evaluation.band}</small>
-                  </span>
+                  <strong style={{ fontSize: "2rem" }}>
+                    {readinessBand(evaluation.overall)}
+                  </strong>
+                  <span>Provisional band</span>
                 </div>
                 <ul>
                   {scoreRows.map((row, index) => (
                     <li key={`${row.id}-${index}`}>
                       <span>{row.label}</span>
-                      <strong>{row.score}/4</strong>
+                      <strong>{readinessBand(row.score * 25)}</strong>
                     </li>
                   ))}
                 </ul>
@@ -1055,21 +1176,25 @@ export function InterviewLab() {
       </div>
 
       {evaluation ? (
-        <div className={styles.results} ref={resultsRef} id="interview-feedback">
+        <div
+          className={styles.results}
+          ref={resultsRef}
+          id="interview-feedback"
+        >
           <div className={styles.resultsInner}>
             <div className={styles.resultsHead}>
               <div>
                 <p className="eyebrow">Rubric feedback</p>
                 <h3 className={`${styles.resultsTitle} display`}>
-                  {evaluation.band}.
+                  {readinessBand(evaluation.overall)}.
                 </h3>
-                <p className={styles.methodNote}>
-                  Deterministic local rubric · no model evaluated this answer.
-                </p>
+                <p className={styles.methodNote}>{RUBRIC_LIMIT}</p>
               </div>
               <div className={styles.scoreDial}>
-                <strong>{evaluation.overall}</strong>
-                <span>/100</span>
+                <strong style={{ fontSize: "1rem" }}>
+                  {readinessBand(evaluation.overall)}
+                </strong>
+                <span>Provisional</span>
               </div>
             </div>
 
@@ -1078,7 +1203,8 @@ export function InterviewLab() {
                 {evaluation.criteria.map((criterion) => {
                   const linked =
                     activePivot !== null &&
-                    interviewCase.pivots[activePivot].criterion === criterion.id;
+                    interviewCase.pivots[activePivot].criterion ===
+                      criterion.id;
                   return (
                     <details
                       key={criterion.id}
@@ -1087,26 +1213,31 @@ export function InterviewLab() {
                       }`}
                     >
                       <summary>
-                        <span className={styles.criterionLabel}>{criterion.label}</span>
+                        <span className={styles.criterionLabel}>
+                          {criterion.label}
+                        </span>
                         <span
                           className={styles.dots}
-                          aria-label={`${criterion.score} out of 4`}
+                          aria-label={readinessBand(criterion.score * 25)}
                         >
                           {[0, 1, 2, 3].map((index) => (
                             <i
                               key={index}
-                              data-on={index < criterion.score ? "true" : "false"}
+                              data-on={
+                                index < criterion.score ? "true" : "false"
+                              }
                             />
                           ))}
                         </span>
                         <span className={styles.criterionScore}>
-                          {criterion.score}/4
+                          {readinessBand(criterion.score * 25)}
                         </span>
                       </summary>
                       <div className={styles.criterionBody}>
                         <p>{criterion.feedback}</p>
                         <p className={styles.criterionPrompt}>
-                          <strong>Interviewer might ask:</strong> {criterion.prompt}
+                          <strong>Interviewer might ask:</strong>{" "}
+                          {criterion.prompt}
                         </p>
                       </div>
                     </details>
@@ -1116,7 +1247,9 @@ export function InterviewLab() {
 
               <div className={styles.findings}>
                 <div className={styles.finding}>
-                  <span className={styles.findingLabel}>Strength, in your words</span>
+                  <span className={styles.findingLabel}>
+                    Strength, in your words
+                  </span>
                   <blockquote>&ldquo;{evaluation.strength}&rdquo;</blockquote>
                 </div>
                 <div className={styles.finding}>
@@ -1126,7 +1259,9 @@ export function InterviewLab() {
                   <p>{evaluation.improvement}</p>
                 </div>
                 <div className={styles.finding}>
-                  <span className={styles.findingLabel}>A stronger outline</span>
+                  <span className={styles.findingLabel}>
+                    A stronger outline
+                  </span>
                   <ol>
                     {evaluation.outline.map((line) => (
                       <li key={line}>{line}</li>
@@ -1147,12 +1282,31 @@ export function InterviewLab() {
                     className="btn btnOutline btnSm"
                     onClick={copyFeedback}
                   >
-                    <ClipboardCopy size={13} strokeWidth={1.7} aria-hidden="true" />
-                    {copied ? "Copied" : copyFailed ? "Copy failed" : "Copy feedback"}
+                    <ClipboardCopy
+                      size={13}
+                      strokeWidth={1.7}
+                      aria-hidden="true"
+                    />
+                    {copied
+                      ? "Copied"
+                      : copyFailed
+                        ? "Copy failed"
+                        : "Copy feedback"}
                   </button>
-                  <button type="button" className={styles.resetLink} onClick={reset}>
+                  <button
+                    type="button"
+                    className={styles.resetLink}
+                    onClick={reset}
+                  >
                     Reset session
                   </button>
+                  <Link
+                    href="/signup?intent=save&src=interview-demo&next=%2Fapp%2Fpractice"
+                    className="btn btnOutline btnSm"
+                  >
+                    Save this attempt & try the full bank
+                    <ArrowRight size={14} aria-hidden="true" />
+                  </Link>
                 </div>
                 <p className={styles.copyStatus} role="status">
                   {copied
@@ -1168,8 +1322,9 @@ export function InterviewLab() {
               </div>
             </div>
             <p className="srOnly" aria-live="polite">
-              Feedback ready. Overall {evaluation.overall} out of 100,{" "}
-              {evaluation.band}. Most important gap: {evaluation.missing.label}.
+              Feedback ready. Provisional band:{" "}
+              {readinessBand(evaluation.overall)}. Most important gap:{" "}
+              {evaluation.missing.label}.
             </p>
           </div>
         </div>
@@ -1182,17 +1337,36 @@ export function InterviewLab() {
         description="Four checks turn your written answer into a consistent practice score."
         size="md"
         footer={
-          <button type="button" className="btn btnPrimary btnSm" onClick={closeRubric}>
+          <button
+            type="button"
+            className="btn btnPrimary btnSm"
+            onClick={closeRubric}
+          >
             Back to my feedback
           </button>
         }
       >
         <div className={styles.rubricDialog}>
-          <p><strong>Frame the problem.</strong> Name the user, the friction, and the evidence that makes it worth solving.</p>
-          <p><strong>Make a reasoned choice.</strong> Separate facts from assumptions and compare realistic alternatives.</p>
-          <p><strong>Define impact.</strong> Connect a measurable user outcome to a business result, with a guardrail.</p>
-          <p><strong>Show your judgment.</strong> Surface risks, state what you would not do, and set a review point.</p>
-          <p>The rubric is deterministic and runs in this browser. It is practice feedback, not a hiring score.</p>
+          <p>
+            <strong>Frame the problem.</strong> Name the user, the friction, and
+            the evidence that makes it worth solving.
+          </p>
+          <p>
+            <strong>Make a reasoned choice.</strong> Separate facts from
+            assumptions and compare realistic alternatives.
+          </p>
+          <p>
+            <strong>Define impact.</strong> Connect a measurable user outcome to
+            a business result, with a guardrail.
+          </p>
+          <p>
+            <strong>Show your judgment.</strong> Surface risks, state what you
+            would not do, and set a review point.
+          </p>
+          <p>
+            The rubric is deterministic and runs in this browser. It is practice
+            feedback, not a hiring score.
+          </p>
         </div>
       </Dialog>
 
@@ -1200,9 +1374,7 @@ export function InterviewLab() {
         {phase === "live" && secondsLeft === 0
           ? "Time is up. Finish your written answer and submit."
           : ""}
-        {micState === "granted"
-          ? "Browser speech recognition is active."
-          : ""}
+        {micState === "granted" ? "Browser speech recognition is active." : ""}
       </p>
     </section>
   );

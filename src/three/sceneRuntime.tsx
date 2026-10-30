@@ -6,7 +6,10 @@ import { useFrame, useThree } from "@react-three/fiber";
 /** Keep the pixel-ratio ladder inside the art-direction budget. */
 export type DprBounds = { min: number; max: number };
 
-export function resolveDprBounds(mobile: boolean, reducedMotion: boolean): DprBounds {
+export function resolveDprBounds(
+  mobile: boolean,
+  reducedMotion: boolean,
+): DprBounds {
   if (reducedMotion) return { min: 1, max: mobile ? 1.25 : 1.5 };
   return { min: 1, max: mobile ? 1.25 : 1.75 };
 }
@@ -31,7 +34,8 @@ export function useInitialDpr(max: number, min = 1) {
     if (typeof window === "undefined") return min;
     const device = window.devicePixelRatio || 1;
     const cores = navigator.hardwareConcurrency ?? 8;
-    const memory = (navigator as Navigator & { deviceMemory?: number }).deviceMemory ?? 8;
+    const memory =
+      (navigator as Navigator & { deviceMemory?: number }).deviceMemory ?? 8;
     const midTier = cores <= 4 || memory <= 4;
     const ceiling = midTier ? Math.min(max, 1.25) : max;
     return Math.max(min, Math.min(device, ceiling));
@@ -138,13 +142,42 @@ export function AdaptiveDpr({
  * renders one frame whenever the scene's externally-driven inputs change or
  * the frameloop becomes enabled again.
  */
-export function FrameLoopBridge({ watch }: { watch?: string | number | boolean }) {
+export function FrameLoopBridge({
+  watch,
+}: {
+  watch?: string | number | boolean;
+}) {
   const frameloop = useThree((state) => state.frameloop);
   const invalidate = useThree((state) => state.invalidate);
 
   useEffect(() => {
     invalidate();
   }, [frameloop, invalidate, watch]);
+
+  return null;
+}
+
+/**
+ * Scroll-driven state lives outside React so a scroll event never re-renders a
+ * scene tree. When a section changes that state it asks the active canvas for
+ * exactly one frame; a "never" scene ignores it, and a continuously running
+ * scene simply receives it on its next frame.
+ */
+const sceneInvalidators = new Map<string, () => void>();
+
+export function invalidateScene(id: string) {
+  sceneInvalidators.get(id)?.();
+}
+
+export function SceneInvalidationBridge({ id }: { id: string }) {
+  const invalidate = useThree((state) => state.invalidate);
+  useEffect(() => {
+    sceneInvalidators.set(id, invalidate);
+    return () => {
+      if (sceneInvalidators.get(id) === invalidate)
+        sceneInvalidators.delete(id);
+    };
+  }, [id, invalidate]);
 
   return null;
 }

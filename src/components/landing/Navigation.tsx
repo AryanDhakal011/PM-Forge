@@ -26,7 +26,7 @@ const HOME_ANCHORS: Record<string, string> = {
   "Interview Prep": "#interview",
   Projects: "#projects",
   Tools: "#career",
-  Resources: "#blueprint",
+  Resources: "/resources",
 };
 
 type SearchItem = {
@@ -70,7 +70,7 @@ const resourceIndex: SearchItem[] = [
   {
     label: "Interview question bank",
     detail: "Prompts, pivots, and what a strong answer includes.",
-    href: "/resources#questions",
+    href: "/questions",
     kind: "Resource",
   },
   {
@@ -92,12 +92,16 @@ export function Navigation() {
   const onHome = pathname === "/";
   const sectionId = useActiveSectionId();
   const [scrolled, setScrolled] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
+  const progressRef = useRef<HTMLSpanElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [signedIn, setSignedIn] = useState(false);
-  const [indicator, setIndicator] = useState({ left: 0, width: 0, visible: false });
+  const [indicator, setIndicator] = useState({
+    left: 0,
+    width: 0,
+    visible: false,
+  });
   const menuRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const linksRef = useRef<HTMLElement>(null);
@@ -126,7 +130,9 @@ export function Navigation() {
   useEffect(() => {
     const readProfile = () => {
       try {
-        setSignedIn(Boolean(window.localStorage.getItem("pmforge.user")));
+        setSignedIn(
+          Boolean(window.localStorage.getItem("pmforge.product.identity")),
+        );
       } catch {
         setSignedIn(false);
       }
@@ -134,23 +140,53 @@ export function Navigation() {
     readProfile();
     window.addEventListener("storage", readProfile);
     window.addEventListener("pmforge:progress", readProfile);
+    window.addEventListener("pmforge:identity", readProfile);
     return () => {
       window.removeEventListener("storage", readProfile);
       window.removeEventListener("pmforge:progress", readProfile);
+      window.removeEventListener("pmforge:identity", readProfile);
     };
   }, [pathname]);
 
   useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 24);
-      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-      setScrollProgress(
-        scrollable > 0 ? Math.max(0, Math.min(1, window.scrollY / scrollable)) : 0,
-      );
+    let frame = 0;
+    let scrollable = 0;
+    let compact = false;
+    const measure = () => {
+      scrollable = document.documentElement.scrollHeight - window.innerHeight;
     };
-    onScroll();
+    const paint = () => {
+      frame = 0;
+      const next = window.scrollY > 24;
+      if (next !== compact) {
+        compact = next;
+        setScrolled(next);
+      }
+      const progress =
+        scrollable > 0
+          ? Math.max(0, Math.min(1, window.scrollY / scrollable))
+          : 0;
+      if (progressRef.current)
+        progressRef.current.style.transform = `scaleX(${progress})`;
+    };
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(paint);
+    };
+    measure();
+    paint();
+    const observer = new ResizeObserver(() => {
+      measure();
+      onScroll();
+    });
+    observer.observe(document.body);
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("resize", measure);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", measure);
+      observer.disconnect();
+      if (frame) cancelAnimationFrame(frame);
+    };
   }, []);
 
   useEffect(() => {
@@ -204,7 +240,9 @@ export function Navigation() {
       }
       if (event.key !== "Tab" || !panel) return;
       const focusable = [
-        ...panel.querySelectorAll<HTMLElement>("a[href], button:not([disabled])"),
+        ...panel.querySelectorAll<HTMLElement>(
+          "a[href], button:not([disabled])",
+        ),
       ];
       if (focusable.length === 0) return;
       const first = focusable[0];
@@ -250,7 +288,9 @@ export function Navigation() {
     if (!trimmed) return searchItems.slice(0, 7);
     return searchItems
       .filter((item) =>
-        `${item.label} ${item.detail} ${item.kind}`.toLowerCase().includes(trimmed),
+        `${item.label} ${item.detail} ${item.kind}`
+          .toLowerCase()
+          .includes(trimmed),
       )
       .slice(0, 8);
   }, [query, searchItems]);
@@ -283,7 +323,7 @@ export function Navigation() {
         {onHome ? (
           <span
             className={styles.progress}
-            style={{ transform: `scaleX(${scrollProgress})` }}
+            ref={progressRef}
             aria-hidden="true"
           />
         ) : null}
@@ -297,7 +337,11 @@ export function Navigation() {
             <Logo />
           </Link>
 
-          <nav ref={linksRef} className={styles.links} aria-label="Primary navigation">
+          <nav
+            ref={linksRef}
+            className={styles.links}
+            aria-label="Primary navigation"
+          >
             <span
               className={styles.spy}
               data-visible={indicator.visible}
@@ -311,7 +355,7 @@ export function Navigation() {
               const key = NAV_KEYS[link.label] ?? link.label;
               const active = isActive(link.label);
               const href = onHome
-                ? HOME_ANCHORS[link.label] ?? link.href
+                ? (HOME_ANCHORS[link.label] ?? link.href)
                 : link.href;
               return (
                 <Link
@@ -345,8 +389,8 @@ export function Navigation() {
               <Search size={18} strokeWidth={1.7} aria-hidden="true" />
             </button>
             {signedIn ? (
-              <Link href="/dashboard" className={`${styles.account} btn btnSm`}>
-                Your workspace
+              <Link href="/app" className={`${styles.account} btn btnSm`}>
+                Open app
               </Link>
             ) : (
               <>
@@ -403,7 +447,7 @@ export function Navigation() {
               <Link
                 key={link.label}
                 href={
-                  onHome ? HOME_ANCHORS[link.label] ?? link.href : link.href
+                  onHome ? (HOME_ANCHORS[link.label] ?? link.href) : link.href
                 }
                 className={styles.mobileLink}
                 onClick={() => setMenuOpen(false)}
@@ -441,7 +485,8 @@ export function Navigation() {
             )}
           </div>
           <p className={styles.mobileNote}>
-            A flight simulator for product judgment. Practice the decisions that matter.
+            A flight simulator for product judgment. Practice the decisions that
+            matter.
           </p>
         </div>
       ) : null}

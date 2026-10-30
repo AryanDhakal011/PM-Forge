@@ -37,7 +37,9 @@ html[data-reduced-motion="true"] .hero {
   position: absolute;
   left: var(--edge);
   top: 42%;
-  transform: translateY(-47%);
+  /* The headline settles a few pixels as the story resolves; it never leaves
+     the reading position. */
+  transform: translateY(calc(-47% + var(--calm, 0) * -10px));
   width: min(calc(48% - var(--edge)), 800px);
   z-index: 5;
   padding-top: 2rem;
@@ -79,6 +81,18 @@ html[data-reduced-motion="true"] .hero {
 .headline em {
   font-style: normal;
   color: var(--green-ink);
+}
+
+/* Typography carries the story: the claim gets underlined only once the
+   evidence has resolved. No scale, no colour flash. */
+@media (min-width: 1024px) {
+  .headline em {
+    padding-bottom: 0.05em;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: calc(var(--calm, 0) * 100%) 2px;
+  }
 }
 
 .lede {
@@ -145,6 +159,7 @@ html[data-reduced-motion="true"] .hero {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(243, 235, 221, 0.25), transparent 24%);
+  opacity: calc(1 - var(--calm, 0) * 0.4);
   pointer-events: none;
 }
 
@@ -164,7 +179,7 @@ html[data-reduced-motion="true"] .hero {
   font-size: clamp(1.2rem, 1.75vw, 1.7rem);
   line-height: 1;
   color: var(--terra-dark);
-  opacity: 0.9;
+  opacity: calc(0.9 - var(--calm, 0) * 0.38);
   white-space: nowrap;
 }
 
@@ -182,26 +197,26 @@ html[data-reduced-motion="true"] .hero {
 .annA {
   top: 15%;
   right: 3.5%;
-  transform: rotate(3deg);
+  transform: rotate(3deg) translateY(calc(var(--calm, 0) * -8px));
 }
 
 .annB {
   top: 27%;
   right: 23%;
-  transform: rotate(-2deg);
+  transform: rotate(-2deg) translateY(calc(var(--calm, 0) * -5px));
 }
 
 .annC {
   top: 38%;
   right: 6%;
-  transform: rotate(2deg);
+  transform: rotate(2deg) translateY(calc(var(--calm, 0) * -10px));
 }
 
 .annD {
   bottom: 35%;
   left: 3%;
   right: auto;
-  transform: rotate(-3deg);
+  transform: rotate(-3deg) translateY(calc(var(--calm, 0) * -6px));
 }
 
 .inspectCard {
@@ -396,6 +411,17 @@ html[data-reduced-motion="true"] .hero {
 
 .deskEdge {
   display: none;
+}
+
+@media (min-width: 1024px) {
+  .trust {
+    transform: translateY(calc(var(--calm, 0) * -4px));
+  }
+}
+
+/* Keep the settled composition when motion is reduced, without a trigger. */
+html[data-reduced-motion="true"] .hero {
+  --calm: 1;
 }
 
 @keyframes inspectIn {
@@ -607,3 +633,6 @@ html[data-reduced-motion="true"] .hero {
     min-height: 300px;
   }
 }
+
+/* Pseudo-elements explicitly inherit only from their bound painted object. */
+.scene::after{--calm:inherit}

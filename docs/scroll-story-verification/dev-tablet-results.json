@@ -1,0 +1,1005 @@
+{
+  "capturedAt": "2026-10-29T07:38:36.738Z",
+  "runs": [
+    {
+      "name": "tablet",
+      "width": 800,
+      "height": 766,
+      "reduced": false,
+      "loaderDone": "true",
+      "sections": [
+        {
+          "id": "hero",
+          "top": 0,
+          "height": 1346.546875,
+          "calm": "0.000",
+          "stage": null
+        },
+        {
+          "id": "signal",
+          "top": 1466.546875,
+          "height": 2192.703125,
+          "calm": "0.000",
+          "stage": null
+        },
+        {
+          "id": "learning",
+          "top": 3930.515625,
+          "height": 1301.84375,
+          "calm": "1.000",
+          "stage": null
+        },
+        {
+          "id": "projects",
+          "top": 5352.359375,
+          "height": 2452.390625,
+          "calm": "1.000",
+          "stage": null
+        },
+        {
+          "id": "interview",
+          "top": 8406.15625,
+          "height": 1393.765625,
+          "calm": "1.000",
+          "stage": null
+        },
+        {
+          "id": "career",
+          "top": 10918.703125,
+          "height": 2141.609375,
+          "calm": "0.000",
+          "stage": null
+        },
+        {
+          "id": "blueprint",
+          "top": 13060.3125,
+          "height": 1017.703125,
+          "calm": "1.000",
+          "stage": null
+        }
+      ],
+      "samples": [
+        {
+          "id": "hero",
+          "scrollY": 0,
+          "draws": {
+            "hero": 3740
+          },
+          "fps": 60.3,
+          "medianMs": 16.69999999999891,
+          "p95Ms": 16.900000000001455,
+          "contexts": 1,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": true,
+            "signal": false,
+            "learning": false
+          },
+          "perf": {
+            "capturedAt": 10282,
+            "viewport": {
+              "width": 800,
+              "height": 766,
+              "dpr": 1.25
+            },
+            "navigation": {
+              "domContentLoaded": 275,
+              "loadEventEnd": 620,
+              "documentTransferKB": 26
+            },
+            "loader": {
+              "doneAt": 4775,
+              "variant": null
+            },
+            "js": {
+              "scriptCount": 31,
+              "transferKB": 1716,
+              "styleTransferKB": 40
+            },
+            "canvases": 3,
+            "webglCanvases": 1,
+            "trackedWebGLScenes": 1,
+            "activeScenes": [
+              "hero"
+            ],
+            "longTasks": {
+              "count": 6,
+              "totalMs": 2749,
+              "maxMs": 2247
+            },
+            "scenes": {
+              "hero": {
+                "dpr": 1.25,
+                "firstFrameAt": 3869.699999999255,
+                "mountedAt": 1614.0999999996275,
+                "frameloop": "always",
+                "calls": 62,
+                "triangles": 15558,
+                "points": 48,
+                "lines": 0,
+                "geometries": 63,
+                "textures": 22,
+                "programs": 22,
+                "fps": 60.1,
+                "frameMs": 16.6,
+                "initMs": 2256,
+                "firstFrameMs": 3870
+              }
+            }
+          }
+        },
+        {
+          "id": "signal",
+          "scrollY": 2180,
+          "draws": {
+            "hero": 0,
+            "signal": 421
+          },
+          "fps": 60.1,
+          "medianMs": 16.69999999999891,
+          "p95Ms": 16.899999999999636,
+          "contexts": 2,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": true,
+            "learning": false
+          },
+          "perf": {
+            "capturedAt": 13630,
+            "viewport": {
+              "width": 800,
+              "height": 766,
+              "dpr": 1.25
+            },
+            "navigation": {
+              "domContentLoaded": 275,
+              "loadEventEnd": 620,
+              "documentTransferKB": 26
+            },
+            "loader": {
+              "doneAt": 4775,
+              "variant": null
+            },
+            "js": {
+              "scriptCount": 33,
+              "transferKB": 1782,
+              "styleTransferKB": 40
+            },
+            "canvases": 4,
+            "webglCanvases": 2,
+            "trackedWebGLScenes": 2,
+            "activeScenes": [
+              "signal"
+            ],
+            "longTasks": {
+              "count": 8,
+              "totalMs": 3294,
+              "maxMs": 2247
+            },
+            "scenes": {
+              "hero": {
+                "dpr": 1.25,
+                "firstFrameAt": 3869.699999999255,
+                "mountedAt": 1614.0999999996275,
+                "frameloop": "never",
+                "calls": 62,
+                "triangles": 15558,
+                "points": 48,
+                "lines": 0,
+                "geometries": 63,
+                "textures": 22,
+                "programs": 22,
+                "fps": 60.1,
+                "frameMs": 16.6,
+                "initMs": 2256,
+                "firstFrameMs": 3870
+              },
+              "signal": {
+                "dpr": 1.25,
+                "firstFrameAt": 11263.800000000745,
+                "mountedAt": 10776.099999999627,
+                "frameloop": "always",
+                "calls": 7,
+                "triangles": 8464,
+                "points": 0,
+                "lines": 0,
+                "geometries": 19,
+                "textures": 4,
+                "programs": 7,
+                "fps": 60,
+                "frameMs": 16.7,
+                "initMs": 488,
+                "firstFrameMs": 11264
+              }
+            }
+          }
+        },
+        {
+          "id": "learning",
+          "scrollY": 4198,
+          "draws": {
+            "hero": 0,
+            "signal": 0,
+            "learning": 903
+          },
+          "fps": 60.2,
+          "medianMs": 16.69999999999891,
+          "p95Ms": 16.80000000000291,
+          "contexts": 3,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": false,
+            "learning": true
+          },
+          "perf": {
+            "capturedAt": 18246,
+            "viewport": {
+              "width": 800,
+              "height": 766,
+              "dpr": 1.25
+            },
+            "navigation": {
+              "domContentLoaded": 275,
+              "loadEventEnd": 620,
+              "documentTransferKB": 26
+            },
+            "loader": {
+              "doneAt": 4775,
+              "variant": null
+            },
+            "js": {
+              "scriptCount": 34,
+              "transferKB": 1790,
+              "styleTransferKB": 40
+            },
+            "canvases": 5,
+            "webglCanvases": 3,
+            "trackedWebGLScenes": 3,
+            "activeScenes": [
+              "learning"
+            ],
+            "longTasks": {
+              "count": 11,
+              "totalMs": 4667,
+              "maxMs": 2247
+            },
+            "scenes": {
+              "hero": {
+                "dpr": 1.25,
+                "firstFrameAt": 3869.699999999255,
+                "mountedAt": 1614.0999999996275,
+                "frameloop": "never",
+                "calls": 62,
+                "triangles": 15558,
+                "points": 48,
+                "lines": 0,
+                "geometries": 63,
+                "textures": 22,
+                "programs": 22,
+                "fps": 60.1,
+                "frameMs": 16.6,
+                "initMs": 2256,
+                "firstFrameMs": 3870
+              },
+              "signal": {
+                "dpr": 1.25,
+                "firstFrameAt": 11263.800000000745,
+                "mountedAt": 10776.099999999627,
+                "frameloop": "never",
+                "calls": 7,
+                "triangles": 8464,
+                "points": 0,
+                "lines": 0,
+                "geometries": 19,
+                "textures": 4,
+                "programs": 7,
+                "fps": 60,
+                "frameMs": 16.7,
+                "initMs": 488,
+                "firstFrameMs": 11264
+              },
+              "learning": {
+                "dpr": 1.25,
+                "firstFrameAt": 16231.5,
+                "mountedAt": 14989.400000000373,
+                "frameloop": "always",
+                "calls": 15,
+                "triangles": 7296,
+                "points": 0,
+                "lines": 120,
+                "geometries": 27,
+                "textures": 14,
+                "programs": 8,
+                "fps": 60,
+                "frameMs": 16.7,
+                "initMs": 1242,
+                "firstFrameMs": 16232
+              }
+            }
+          }
+        },
+        {
+          "id": "projects",
+          "scrollY": 6196,
+          "draws": {
+            "hero": 0,
+            "signal": 0,
+            "learning": 0
+          },
+          "fps": 60.2,
+          "medianMs": 16.69999999999709,
+          "p95Ms": 17.200000000000728,
+          "contexts": 3,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": false,
+            "learning": false
+          },
+          "perf": {
+            "capturedAt": 28863,
+            "viewport": {
+              "width": 800,
+              "height": 766,
+              "dpr": 1.25
+            },
+            "navigation": {
+              "domContentLoaded": 275,
+              "loadEventEnd": 620,
+              "documentTransferKB": 26
+            },
+            "loader": {
+              "doneAt": 4775,
+              "variant": null
+            },
+            "js": {
+              "scriptCount": 34,
+              "transferKB": 1790,
+              "styleTransferKB": 40
+            },
+            "canvases": 5,
+            "webglCanvases": 3,
+            "trackedWebGLScenes": 3,
+            "activeScenes": [],
+            "longTasks": {
+              "count": 12,
+              "totalMs": 4724,
+              "maxMs": 2247
+            },
+            "scenes": {
+              "hero": {
+                "dpr": 1.25,
+                "firstFrameAt": 3869.699999999255,
+                "mountedAt": 1614.0999999996275,
+                "frameloop": "never",
+                "calls": 62,
+                "triangles": 15558,
+                "points": 48,
+                "lines": 0,
+                "geometries": 63,
+                "textures": 22,
+                "programs": 22,
+                "fps": 60.1,
+                "frameMs": 16.6,
+                "initMs": 2256,
+                "firstFrameMs": 3870
+              },
+              "signal": {
+                "dpr": 1.25,
+                "firstFrameAt": 11263.800000000745,
+                "mountedAt": 10776.099999999627,
+                "frameloop": "never",
+                "calls": 7,
+                "triangles": 8464,
+                "points": 0,
+                "lines": 0,
+                "geometries": 19,
+                "textures": 4,
+                "programs": 7,
+                "fps": 60,
+                "frameMs": 16.7,
+                "initMs": 488,
+                "firstFrameMs": 11264
+              },
+              "learning": {
+                "dpr": 1.25,
+                "firstFrameAt": 16231.5,
+                "mountedAt": 14989.400000000373,
+                "frameloop": "never",
+                "calls": 15,
+                "triangles": 7296,
+                "points": 0,
+                "lines": 120,
+                "geometries": 27,
+                "textures": 14,
+                "programs": 8,
+                "fps": 60,
+                "frameMs": 16.7,
+                "initMs": 1242,
+                "firstFrameMs": 16232
+              }
+            }
+          }
+        },
+        {
+          "id": "interview",
+          "scrollY": 8720,
+          "draws": {
+            "hero": 0,
+            "signal": 0,
+            "learning": 0
+          },
+          "fps": 60.3,
+          "medianMs": 16.69999999999709,
+          "p95Ms": 17.5,
+          "contexts": 3,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": false,
+            "learning": false
+          },
+          "perf": {
+            "capturedAt": 32645,
+            "viewport": {
+              "width": 800,
+              "height": 766,
+              "dpr": 1.25
+            },
+            "navigation": {
+              "domContentLoaded": 275,
+              "loadEventEnd": 620,
+              "documentTransferKB": 26
+            },
+            "loader": {
+              "doneAt": 4775,
+              "variant": null
+            },
+            "js": {
+              "scriptCount": 34,
+              "transferKB": 1790,
+              "styleTransferKB": 40
+            },
+            "canvases": 5,
+            "webglCanvases": 3,
+            "trackedWebGLScenes": 3,
+            "activeScenes": [],
+            "longTasks": {
+              "count": 12,
+              "totalMs": 4724,
+              "maxMs": 2247
+            },
+            "scenes": {
+              "hero": {
+                "dpr": 1.25,
+                "firstFrameAt": 3869.699999999255,
+                "mountedAt": 1614.0999999996275,
+                "frameloop": "never",
+                "calls": 62,
+                "triangles": 15558,
+                "points": 48,
+                "lines": 0,
+                "geometries": 63,
+                "textures": 22,
+                "programs": 22,
+                "fps": 60.1,
+                "frameMs": 16.6,
+                "initMs": 2256,
+                "firstFrameMs": 3870
+              },
+              "signal": {
+                "dpr": 1.25,
+                "firstFrameAt": 11263.800000000745,
+                "mountedAt": 10776.099999999627,
+                "frameloop": "never",
+                "calls": 7,
+                "triangles": 8464,
+                "points": 0,
+                "lines": 0,
+                "geometries": 19,
+                "textures": 4,
+                "programs": 7,
+                "fps": 60,
+                "frameMs": 16.7,
+                "initMs": 488,
+                "firstFrameMs": 11264
+              },
+              "learning": {
+                "dpr": 1.25,
+                "firstFrameAt": 16231.5,
+                "mountedAt": 14989.400000000373,
+                "frameloop": "never",
+                "calls": 15,
+                "triangles": 7296,
+                "points": 0,
+                "lines": 120,
+                "geometries": 27,
+                "textures": 14,
+                "programs": 8,
+                "fps": 60,
+                "frameMs": 16.7,
+                "initMs": 1242,
+                "firstFrameMs": 16232
+              }
+            }
+          }
+        },
+        {
+          "id": "career",
+          "scrollY": 9566,
+          "draws": {
+            "hero": 0,
+            "signal": 0,
+            "learning": 0
+          },
+          "fps": 60.3,
+          "medianMs": 16.69999999999709,
+          "p95Ms": 17.19999999999709,
+          "contexts": 3,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": false,
+            "learning": false
+          },
+          "perf": {
+            "capturedAt": 38061,
+            "viewport": {
+              "width": 800,
+              "height": 766,
+              "dpr": 1.25
+            },
+            "navigation": {
+              "domContentLoaded": 275,
+              "loadEventEnd": 620,
+              "documentTransferKB": 26
+            },
+            "loader": {
+              "doneAt": 4775,
+              "variant": null
+            },
+            "js": {
+              "scriptCount": 34,
+              "transferKB": 1790,
+              "styleTransferKB": 40
+            },
+            "canvases": 5,
+            "webglCanvases": 3,
+            "trackedWebGLScenes": 3,
+            "activeScenes": [],
+            "longTasks": {
+              "count": 13,
+              "totalMs": 4796,
+              "maxMs": 2247
+            },
+            "scenes": {
+              "hero": {
+                "dpr": 1.25,
+                "firstFrameAt": 3869.699999999255,
+                "mountedAt": 1614.0999999996275,
+                "frameloop": "never",
+                "calls": 62,
+                "triangles": 15558,
+                "points": 48,
+                "lines": 0,
+                "geometries": 63,
+                "textures": 22,
+                "programs": 22,
+                "fps": 60.1,
+                "frameMs": 16.6,
+                "initMs": 2256,
+                "firstFrameMs": 3870
+              },
+              "signal": {
+                "dpr": 1.25,
+                "firstFrameAt": 11263.800000000745,
+                "mountedAt": 10776.099999999627,
+                "frameloop": "never",
+                "calls": 7,
+                "triangles": 8464,
+                "points": 0,
+                "lines": 0,
+                "geometries": 19,
+                "textures": 4,
+                "programs": 7,
+                "fps": 60,
+                "frameMs": 16.7,
+                "initMs": 488,
+                "firstFrameMs": 11264
+              },
+              "learning": {
+                "dpr": 1.25,
+                "firstFrameAt": 16231.5,
+                "mountedAt": 14989.400000000373,
+                "frameloop": "never",
+                "calls": 15,
+                "triangles": 7296,
+                "points": 0,
+                "lines": 120,
+                "geometries": 27,
+                "textures": 14,
+                "programs": 8,
+                "fps": 60,
+                "frameMs": 16.7,
+                "initMs": 1242,
+                "firstFrameMs": 16232
+              }
+            }
+          }
+        },
+        {
+          "id": "blueprint",
+          "scrollY": 13186,
+          "draws": {
+            "hero": 0,
+            "signal": 0,
+            "learning": 0
+          },
+          "fps": 60.5,
+          "medianMs": 16.69999999999709,
+          "p95Ms": 17.19999999999709,
+          "contexts": 3,
+          "overflow": false,
+          "sceneVisibility": {
+            "hero": false,
+            "signal": false,
+            "learning": false
+          },
+          "perf": {
+            "capturedAt": 41394,
+            "viewport": {
+              "width": 800,
+              "height": 766,
+              "dpr": 1.25
+            },
+            "navigation": {
+              "domContentLoaded": 275,
+              "loadEventEnd": 620,
+              "documentTransferKB": 26
+            },
+            "loader": {
+              "doneAt": 4775,
+              "variant": null
+            },
+            "js": {
+              "scriptCount": 34,
+              "transferKB": 1790,
+              "styleTransferKB": 40
+            },
+            "canvases": 5,
+            "webglCanvases": 3,
+            "trackedWebGLScenes": 3,
+            "activeScenes": [],
+            "longTasks": {
+              "count": 14,
+              "totalMs": 4874,
+              "maxMs": 2247
+            },
+            "scenes": {
+              "hero": {
+                "dpr": 1.25,
+                "firstFrameAt": 3869.699999999255,
+                "mountedAt": 1614.0999999996275,
+                "frameloop": "never",
+                "calls": 62,
+                "triangles": 15558,
+                "points": 48,
+                "lines": 0,
+                "geometries": 63,
+                "textures": 22,
+                "programs": 22,
+                "fps": 60.1,
+                "frameMs": 16.6,
+                "initMs": 2256,
+                "firstFrameMs": 3870
+              },
+              "signal": {
+                "dpr": 1.25,
+                "firstFrameAt": 11263.800000000745,
+                "mountedAt": 10776.099999999627,
+                "frameloop": "never",
+                "calls": 7,
+                "triangles": 8464,
+                "points": 0,
+                "lines": 0,
+                "geometries": 19,
+                "textures": 4,
+                "programs": 7,
+                "fps": 60,
+                "frameMs": 16.7,
+                "initMs": 488,
+                "firstFrameMs": 11264
+              },
+              "learning": {
+                "dpr": 1.25,
+                "firstFrameAt": 16231.5,
+                "mountedAt": 14989.400000000373,
+                "frameloop": "never",
+                "calls": 15,
+                "triangles": 7296,
+                "points": 0,
+                "lines": 120,
+                "geometries": 27,
+                "textures": 14,
+                "programs": 8,
+                "fps": 60,
+                "frameMs": 16.7,
+                "initMs": 1242,
+                "firstFrameMs": 16232
+              }
+            }
+          }
+        }
+      ],
+      "signalBefore": false,
+      "signalSelected": {
+        "top": 1466.546875,
+        "height": 2343.96875,
+        "calm": "1.000",
+        "stage": null
+      },
+      "signalJustified": true,
+      "signalAfterResize": {
+        "top": 1466.546875,
+        "height": 2343.96875,
+        "calm": "1.000",
+        "stage": null
+      },
+      "learningProgress": [
+        {
+          "progress": 0,
+          "top": 3930.515625,
+          "height": 1301.84375,
+          "calm": "0.000",
+          "stage": null
+        },
+        {
+          "progress": 0.5,
+          "top": 3930.515625,
+          "height": 1301.84375,
+          "calm": "0.481",
+          "stage": null
+        },
+        {
+          "progress": 1,
+          "top": 3930.515625,
+          "height": 1301.84375,
+          "calm": "1.000",
+          "stage": null
+        }
+      ],
+      "overlap": {
+        "draws": {
+          "hero": 0,
+          "signal": 423,
+          "learning": 906
+        },
+        "fps": 60.4,
+        "medianMs": 16.700000000000728,
+        "p95Ms": 16.900000000001455,
+        "contexts": 3,
+        "overflow": false,
+        "sceneVisibility": {
+          "hero": false,
+          "signal": true,
+          "learning": true
+        },
+        "perf": {
+          "capturedAt": 25529,
+          "viewport": {
+            "width": 800,
+            "height": 766,
+            "dpr": 1.25
+          },
+          "navigation": {
+            "domContentLoaded": 275,
+            "loadEventEnd": 620,
+            "documentTransferKB": 26
+          },
+          "loader": {
+            "doneAt": 4775,
+            "variant": null
+          },
+          "js": {
+            "scriptCount": 34,
+            "transferKB": 1790,
+            "styleTransferKB": 40
+          },
+          "canvases": 5,
+          "webglCanvases": 3,
+          "trackedWebGLScenes": 3,
+          "activeScenes": [
+            "signal",
+            "learning"
+          ],
+          "longTasks": {
+            "count": 11,
+            "totalMs": 4667,
+            "maxMs": 2247
+          },
+          "scenes": {
+            "hero": {
+              "dpr": 1.25,
+              "firstFrameAt": 3869.699999999255,
+              "mountedAt": 1614.0999999996275,
+              "frameloop": "never",
+              "calls": 62,
+              "triangles": 15558,
+              "points": 48,
+              "lines": 0,
+              "geometries": 63,
+              "textures": 22,
+              "programs": 22,
+              "fps": 60.1,
+              "frameMs": 16.6,
+              "initMs": 2256,
+              "firstFrameMs": 3870
+            },
+            "signal": {
+              "dpr": 1.25,
+              "firstFrameAt": 11263.800000000745,
+              "mountedAt": 10776.099999999627,
+              "frameloop": "always",
+              "calls": 7,
+              "triangles": 8464,
+              "points": 0,
+              "lines": 0,
+              "geometries": 19,
+              "textures": 4,
+              "programs": 7,
+              "fps": 60,
+              "frameMs": 16.7,
+              "initMs": 488,
+              "firstFrameMs": 11264
+            },
+            "learning": {
+              "dpr": 1.25,
+              "firstFrameAt": 16231.5,
+              "mountedAt": 14989.400000000373,
+              "frameloop": "always",
+              "calls": 15,
+              "triangles": 7296,
+              "points": 0,
+              "lines": 120,
+              "geometries": 27,
+              "textures": 14,
+              "programs": 8,
+              "fps": 60,
+              "frameMs": 16.7,
+              "initMs": 1242,
+              "firstFrameMs": 16232
+            }
+          }
+        }
+      },
+      "projectWritten": "true",
+      "interviewLive": "live",
+      "interviewAfter": {
+        "phase": "review",
+        "feedback": true,
+        "timer": "1:59"
+      },
+      "counters": [
+        {
+          "expected": "10",
+          "actual": "10"
+        },
+        {
+          "expected": "1",
+          "actual": "1"
+        },
+        {
+          "expected": "82",
+          "actual": "82"
+        }
+      ],
+      "returnToHero": {
+        "draws": {
+          "hero": 3756,
+          "signal": 0,
+          "learning": 0
+        },
+        "fps": 60.4,
+        "medianMs": 16.69999999999709,
+        "p95Ms": 16.900000000001455,
+        "contexts": 3,
+        "overflow": false,
+        "sceneVisibility": {
+          "hero": true,
+          "signal": false,
+          "learning": false
+        },
+        "perf": {
+          "capturedAt": 44729,
+          "viewport": {
+            "width": 800,
+            "height": 766,
+            "dpr": 1.25
+          },
+          "navigation": {
+            "domContentLoaded": 275,
+            "loadEventEnd": 620,
+            "documentTransferKB": 26
+          },
+          "loader": {
+            "doneAt": 4775,
+            "variant": null
+          },
+          "js": {
+            "scriptCount": 34,
+            "transferKB": 1790,
+            "styleTransferKB": 40
+          },
+          "canvases": 5,
+          "webglCanvases": 3,
+          "trackedWebGLScenes": 3,
+          "activeScenes": [
+            "hero"
+          ],
+          "longTasks": {
+            "count": 14,
+            "totalMs": 4874,
+            "maxMs": 2247
+          },
+          "scenes": {
+            "hero": {
+              "dpr": 1.25,
+              "firstFrameAt": 3869.699999999255,
+              "mountedAt": 1614.0999999996275,
+              "frameloop": "always",
+              "calls": 62,
+              "triangles": 15558,
+              "points": 48,
+              "lines": 0,
+              "geometries": 63,
+              "textures": 22,
+              "programs": 22,
+              "fps": 60,
+              "frameMs": 16.7,
+              "initMs": 2256,
+              "firstFrameMs": 3870
+            },
+            "signal": {
+              "dpr": 1.25,
+              "firstFrameAt": 11263.800000000745,
+              "mountedAt": 10776.099999999627,
+              "frameloop": "never",
+              "calls": 7,
+              "triangles": 8464,
+              "points": 0,
+              "lines": 0,
+              "geometries": 19,
+              "textures": 4,
+              "programs": 7,
+              "fps": 60,
+              "frameMs": 16.7,
+              "initMs": 488,
+              "firstFrameMs": 11264
+            },
+            "learning": {
+              "dpr": 1.25,
+              "firstFrameAt": 16231.5,
+              "mountedAt": 14989.400000000373,
+              "frameloop": "never",
+              "calls": 15,
+              "triangles": 7296,
+              "points": 0,
+              "lines": 120,
+              "geometries": 27,
+              "textures": 14,
+              "programs": 8,
+              "fps": 60,
+              "frameMs": 16.7,
+              "initMs": 1242,
+              "firstFrameMs": 16232
+            }
+          }
+        }
+      },
+      "errors": []
+    }
+  ],
+  "failures": []
+}

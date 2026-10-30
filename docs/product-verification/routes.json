@@ -1,0 +1,183 @@
+{
+  "at": "2026-10-30T00:42:36.833Z",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/app",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/app/practice",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/app/progress",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/app/history",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/app/bookmarks",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/app/portfolio",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/app/portfolio/new",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/app/settings",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/app/account",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/onboarding",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/login",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/signup",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/questions",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "check": "public catalogue is present without JavaScript",
+      "pass": true
+    },
+    {
+      "path": "/questions?category=root-cause&level=easy",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "check": "public GET filters render three RCA easy articles",
+      "pass": true
+    },
+    {
+      "path": "/frameworks",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/how-it-works",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/content-policy",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/help",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/changelog",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/contribute",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/offline",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/maintenance",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/auth/error",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/terms",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/credits",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/dashboard",
+      "status": 308,
+      "location": "/app",
+      "pass": true
+    },
+    {
+      "path": "/practice",
+      "status": 308,
+      "location": "/app/practice",
+      "pass": true
+    },
+    {
+      "path": "/learn",
+      "status": 307,
+      "location": "/resources",
+      "pass": true
+    },
+    {
+      "path": "/app/bookmarks",
+      "status": 308,
+      "location": "/app/practice?view=saved",
+      "pass": true
+    },
+    {
+      "path": "/app/history",
+      "status": 308,
+      "location": "/app/progress?tab=history",
+      "pass": true
+    },
+    {
+      "check": "unknown question returns 404",
+      "status": 404,
+      "pass": true
+    }
+  ]
+}

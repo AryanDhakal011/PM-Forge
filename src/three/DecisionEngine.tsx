@@ -30,6 +30,7 @@ import {
   AdaptiveDpr,
   FirstFrameReady,
   FrameLoopBridge,
+  SceneInvalidationBridge,
   SceneMetricsProbe,
   resolveDprBounds,
   resolveDprCeiling,
@@ -288,6 +289,7 @@ function Scene({
   const leavesRef = useRef<THREE.InstancedMesh>(null);
   const wiresRef = useRef<THREE.InstancedMesh>(null);
   const smoothed = useRef(0);
+  const calm = useRef(reducedMotion ? 0.86 : 0);
   const smoothedPointer = useRef({ x: 0, y: 0 });
   const shadowProgress = useRef(-1);
   const [coreHover, setCoreHover] = useState(false);
@@ -389,9 +391,15 @@ function Scene({
   useFrame((state, delta) => {
     const time = state.clock.elapsedTime;
     const target = reducedMotion ? 0.82 : scrollState.hero;
+    const targetCalm = reducedMotion ? 0.86 : scrollState.heroCalm;
     smoothed.current += (target - smoothed.current) * Math.min(1, delta * 3.2);
+    calm.current += (targetCalm - calm.current) * Math.min(1, delta * 3.2);
     const p = smoothed.current;
     const eased = easeInOut(p);
+    const resolved = calm.current;
+    // As the decision resolves, the evidence stops drifting. This is the
+    // physical read of "the desk settling", not an extra idle animation.
+    const unrest = 1 - resolved;
 
     if (!reducedMotion) {
       smoothedPointer.current.x += (pointer.x - smoothedPointer.current.x) * 0.06;
@@ -409,10 +417,12 @@ function Scene({
       worldRef.current.rotation.x = -py * 0.015;
     }
 
+    // The view settles toward a more frontal, centred composition as the
+    // instrument resolves. Pointer parallax stays the dominant offset.
     camera.position.z = 7.45 - eased * 0.22;
-    camera.position.x = px * 0.1;
-    camera.position.y = 1.04 + py * 0.06;
-    camera.lookAt(0.25, 0.15, 0);
+    camera.position.x = px * 0.1 + resolved * 0.07;
+    camera.position.y = 1.04 + py * 0.06 + resolved * 0.04;
+    camera.lookAt(0.25 - resolved * 0.05, 0.15 + resolved * 0.02, 0);
 
     if (dialNeedleRef.current) {
       const tremor = reducedMotion ? 0 : Math.sin(time * 2.1) * 0.026;
@@ -436,8 +446,9 @@ function Scene({
       if (!node) return;
       const delay = index * 0.02;
       const local = Math.min(1, Math.max(0, (eased - delay) / (1 - delay || 1)));
-      const sway = reducedMotion ? 0 : Math.sin(time * 0.45 + index * 1.7) * 0.018;
-      const swaySlow = reducedMotion ? 0 : Math.cos(time * 0.31 + index * 0.9) * 0.01;
+      const drift = reducedMotion ? 0 : 1 + unrest * 0.75;
+      const sway = reducedMotion ? 0 : Math.sin(time * 0.45 + index * 1.7) * 0.014 * drift;
+      const swaySlow = reducedMotion ? 0 : Math.cos(time * 0.31 + index * 0.9) * 0.008 * drift;
       node.position.set(
         THREE.MathUtils.lerp(item.chaos[0], item.slot[0], local) + sway,
         THREE.MathUtils.lerp(item.chaos[1], item.slot[1], local) + swaySlow,
@@ -447,7 +458,7 @@ function Scene({
       node.rotation.y = THREE.MathUtils.lerp(item.chaosRotation[1], item.slotRotation[1], local);
       node.rotation.z =
         THREE.MathUtils.lerp(item.chaosRotation[2], item.slotRotation[2], local) +
-        (reducedMotion ? 0 : Math.sin(time * 0.34 + index) * 0.012);
+        (reducedMotion ? 0 : Math.sin(time * 0.34 + index) * 0.01 * drift);
 
       if (item.falls && p > 0.55) {
         const fall = Math.min(1, (p - 0.55) / 0.2);
@@ -492,6 +503,7 @@ function Scene({
   return (
     <group ref={worldRef}>
       <FrameLoopBridge watch={reducedMotion ? coreHover : undefined} />
+      <SceneInvalidationBridge id="hero" />
       <FirstFrameReady onReady={onReady} />
       <SceneMetricsProbe id="hero" />
       <fog attach="fog" args={["#f3ebdd", 8.5, 16]} />
@@ -604,6 +616,7 @@ function Scene({
         >
           <DecisionInstrument
             reducedMotion={reducedMotion}
+            progressRef={calm}
             hovering={coreHover}
           />
         </group>

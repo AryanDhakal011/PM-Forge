@@ -1,0 +1,199 @@
+{
+  "at": "2026-10-30T00:42:25.005Z",
+  "checks": [
+    {
+      "label": "five primary workspace destinations",
+      "pass": true
+    },
+    {
+      "label": "storage and account menus replace repeated guest notices",
+      "pass": true
+    },
+    {
+      "label": "63 named scenario beads in the fallback",
+      "pass": true
+    },
+    {
+      "label": "single instrument context stops drawing at idle",
+      "pass": true,
+      "details": {
+        "idleDraws": 0,
+        "contexts": 1
+      }
+    },
+    {
+      "label": "coverage table uses shared seven by three data",
+      "pass": true
+    },
+    {
+      "label": "Today no overflow at 1920",
+      "pass": true
+    },
+    {
+      "label": "Today no overflow at 1440",
+      "pass": true
+    },
+    {
+      "label": "Today no overflow at 768",
+      "pass": true
+    },
+    {
+      "label": "Today no overflow at 390",
+      "pass": true
+    },
+    {
+      "label": "Today no overflow at 320",
+      "pass": true
+    },
+    {
+      "label": "sidebar choice survives navigation",
+      "pass": true
+    },
+    {
+      "label": "recommended order starts with one Easy scenario from each room",
+      "pass": true,
+      "details": [
+        "Root Cause Analysis",
+        "Product Sense",
+        "Market Strategy",
+        "Execution & Metrics",
+        "Estimation",
+        "AI & Technical",
+        "Behavioral"
+      ]
+    },
+    {
+      "label": "custom filters and category multiselect",
+      "pass": true
+    },
+    {
+      "label": "empty and small Saved lists omit filters",
+      "pass": true
+    },
+    {
+      "label": "legacy Bookmarks redirects to Practice Saved",
+      "pass": true
+    },
+    {
+      "label": "legacy History redirects to Progress History",
+      "pass": true
+    },
+    {
+      "label": "Progress uses real constellation and first-win without diagnostics",
+      "pass": true
+    },
+    {
+      "label": "diagnostics available only through explicit Developer mode",
+      "pass": true
+    },
+    {
+      "label": "fresh project posters are honest and the workspace takes walnut palette",
+      "pass": true
+    },
+    {
+      "label": "twelve distinct mission illustrations",
+      "pass": true
+    },
+    {
+      "label": "Projects no overflow at 1920",
+      "pass": true
+    },
+    {
+      "label": "Projects no overflow at 1440",
+      "pass": true
+    },
+    {
+      "label": "Projects no overflow at 768",
+      "pass": true
+    },
+    {
+      "label": "Projects no overflow at 390",
+      "pass": true
+    },
+    {
+      "label": "Projects no overflow at 320",
+      "pass": true
+    },
+    {
+      "label": "list view preserves all 63",
+      "pass": true
+    },
+    {
+      "label": "map has every brief as a named link",
+      "pass": true
+    },
+    {
+      "label": "command palette traps focus",
+      "pass": true
+    },
+    {
+      "label": "reduced motion retains full SVG coverage without WebGL",
+      "pass": true
+    },
+    {
+      "label": "Preferences and following container do not overlap at 1440",
+      "pass": true,
+      "details": {
+        "fieldsetBottom": 638.5625,
+        "nextTop": 672.640625,
+        "childrenFit": true,
+        "overflow": false
+      }
+    },
+    {
+      "label": "Preferences and following container do not overlap at 768",
+      "pass": true,
+      "details": {
+        "fieldsetBottom": 592.15625,
+        "nextTop": 624.15625,
+        "childrenFit": true,
+        "overflow": false
+      }
+    },
+    {
+      "label": "Preferences and following container do not overlap at 390",
+      "pass": true,
+      "details": {
+        "fieldsetBottom": 604.578125,
+        "nextTop": 636.578125,
+        "childrenFit": true,
+        "overflow": false
+      }
+    },
+    {
+      "label": "Preferences and following container do not overlap at 320",
+      "pass": true,
+      "details": {
+        "fieldsetBottom": 613.703125,
+        "nextTop": 645.703125,
+        "childrenFit": true,
+        "overflow": false
+      }
+    },
+    {
+      "label": "no browser runtime errors",
+      "pass": true,
+      "details": []
+    }
+  ],
+  "errors": [],
+  "instrument": {
+    "idleDraws": 0,
+    "contexts": 1
+  },
+  "firstCategories": [
+    "Root Cause Analysis",
+    "Product Sense",
+    "Market Strategy",
+    "Execution & Metrics",
+    "Estimation",
+    "AI & Technical",
+    "Behavioral"
+  ],
+  "footer": {
+    "fieldsetBottom": 613.703125,
+    "nextTop": 645.703125,
+    "childrenFit": true,
+    "overflow": false
+  }
+}

@@ -1,0 +1,92 @@
+.root {
+  position: relative;
+  min-height: 380px;
+  width: 100%;
+  isolation: isolate;
+}
+.drawing {
+  width: 100%;
+  height: 320px;
+  position: relative;
+}
+.drawing > svg {
+  width: 100%;
+  height: 100%;
+}
+.canvas {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 320px;
+  background: radial-gradient(ellipse at 50% 38%, #385f49, #193b2a 80%);
+  z-index: 1;
+}
+.canvas[data-ready="false"] {
+  opacity: 0;
+  pointer-events: none;
+}
+.caption {
+  min-height: 48px;
+  padding: 0 20px;
+  text-align: center;
+  color: #e5e4cc;
+  font-size: 0.8125rem;
+  position: relative;
+  z-index: 2;
+}
+.next {
+  font: 1.5rem var(--font-hand);
+  color: #dbcc9b;
+}
+.legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0 10px;
+  padding: 0 8px;
+  position: relative;
+  z-index: 2;
+}
+.legend a {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 0.8125rem;
+  min-height: 44px;
+  text-decoration: none;
+  color: #eee9da;
+}
+.legend i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.legend span {
+  opacity: 0.75;
+}
+.root[data-first-light="true"] {
+  animation: firstlight 1.6s ease-out 1;
+}
+@keyframes firstlight {
+  40% {
+    filter: brightness(1.35);
+  }
+}
+@media (max-width: 450px) {
+  .drawing {
+    height: 280px;
+  }
+  .root {
+    min-height: 350px;
+  }
+  .legend {
+    gap: 0 8px;
+  }
+}
+
+.root:focus-within .canvas {
+  visibility: hidden;
+}
+.drawing a:focus-visible circle:last-child {
+  stroke: #fffdf1;
+  stroke-width: 4px;
+}

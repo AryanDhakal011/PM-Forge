@@ -1,0 +1,553 @@
+# PMFORGE — REAL WORLD PROJECTS HANDOFF (v1)
+## Multi-stage simulations, compounding decisions, persistent state, entrance sequences, 12 living case studies, narrative engine, debrief laboratory
+
+Document date: 29 October 2026
+Audience: Claude Code (implementer) and the founder (reviewer)
+Parent documents: PM_Forge_Master_Handoff_v2 ("Master v2"), PM_Forge_Interview_Section_Handoff_v1 ("Interview handoff"), PMForge_Product_Bridge_Handoff_v1 ("Product Bridge")
+Status: FINAL for build of the Real World Projects module. This document is authoritative for everything under /app/projects and the public /projects overview.
+
+---
+
+# 0. WHAT THIS DOCUMENT DECIDES
+
+## 0.1 Precedence
+1. For Real World Projects routes, screens, state engine, narrative rules, entrance sequences and the 12 project blueprints, this document is authoritative.
+2. Interview Studio (single-session, deterministic rubric scoring) remains governed by the Interview handoff. Real World Projects deliberately break the "one correct path" contract.
+3. Visual direction continues the warm "Tactile Product Studio" (cream, terracotta, sage, brass, walnut). Each project also carries its own distinct palette and atmosphere that overrides the studio base only while the user is inside that project.
+4. Accounts, auth gating, app shell, progress/history/bookmarks patterns and security rules from Product Bridge still apply. Real World Projects are gated behind a signed-in account exactly like Interview runs.
+
+## 0.2 One-sentence definition
+A signed-in user selects a high-stakes living case study from a gallery of 12 recurring battles, enters a multi-chapter simulation whose state persists across stages, makes irreversible trade-offs under messy conflicting data, watches the world react in real time (fracturing dashboards, shifting stakeholder avatars, changing constraints), and finishes with a logic-trace debrief that maps their decisions to a PM archetype and offers a full replay path.
+
+## 0.3 Core difference from Interview Studio
+| Dimension              | Interview Studio                          | Real World Projects                                      |
+|------------------------|-------------------------------------------|----------------------------------------------------------|
+| Session shape          | Single question, 8–25 min                 | Multi-chapter campaign, 45–75 min total                  |
+| State                  | Stateless between questions               | Persistent across chapters; butterfly effect             |
+| Goal                   | Defensible answer against a rubric        | Navigate a project whose outcome is shaped by your trail |
+| Scoring                | Deterministic rubric bands                | Archetype mapping + consequence trace (no single score)  |
+| Data quality           | Clean, labelled REAL / SIMULATED          | Intentionally messy, conflicting, incomplete             |
+| Failure mode           | Soft traps you can see in replay          | Physical world reactions (fracture, predatory avatar)    |
+| Replay                 | Retry from a blamed decision              | Full alternate timeline from any chapter                 |
+
+---
+
+# 1. DECISIONS (record in docs/DECISIONS.md)
+
+| ID  | Decision                                                                 | Reason |
+|-----|--------------------------------------------------------------------------|--------|
+| R1  | Real World Projects live under /app/projects. Public overview at /projects (Soon → full in this module) | Matches Product Bridge route map and "Soon" honesty |
+| R2  | Every project is a fixed 3-chapter structure with a hard state engine (no free-form LLM plot) | Prevents narrative drift; AI only delivers authored scenes |
+| R3  | State variables are small, explicit and numeric (trust, revenue, stability, runway, political capital, etc.). Choices only mutate these via authored rules | Traceability and replayability |
+| R4  | No level gating. All 12 projects are open. The system recommends based on target role and weakest Interview dimensions | Same philosophy as Interview (D7) |
+| R5  | Debrief is a laboratory, not a grade. It shows the exact chain: decision → state change → world reaction → later constraint | Turns experience into instinct training |
+| R6  | Entrance sequences are mandatory and short (8–14 s). They change the visual language so the user feels the rules have shifted from classroom to war room | Psychological contract break |
+| R7  | Pacing comes from decision weight and visible consequence, never from forced timers or artificial pressure | Avoids speed-run and stalled-momentum failure modes |
+| R8  | Ambiguity must create meaningful trade-offs, never arbitrary gotchas. A sound choice never explodes only because information was withheld | Preserves agency and learning |
+| R9  | Projects are "recurring battles", not one-off topics. Users can re-run the same project months later and face the same pressure with new eyes | Long-term skill memory |
+| R10 | Local-first drafts of in-progress chapters; full state syncs to D1 on chapter lock and on exit | Matches Product Bridge D8 |
+
+---
+
+# 2. ROUTE MAP (additions to Product Bridge §2)
+
+| Path                              | Namespace | Auth    | Purpose                                      | Status |
+|-----------------------------------|-----------|---------|----------------------------------------------|--------|
+| /projects                         | Public    | no      | Gallery overview + "how it works"            | MVP    |
+| /app/projects                     | App       | session | Project gallery (12 cards)                   | MVP    |
+| /app/projects/[projectId]         | App       | session | Project landing + start / resume             | MVP    |
+| /app/projects/[projectId]/c/[ch]   | App       | session | Chapter brief + decision surface             | MVP    |
+| /app/projects/[projectId]/run/[id] | App       | session | Active simulation (state machine)            | MVP    |
+| /app/projects/debrief/[runId]     | App       | session | Logic-trace debrief + archetype + replay     | MVP    |
+
+Project IDs (stable):
+sacred-no, silent-churn, feature-factory, ghost-metric, pivot-point, legacy-fracture, shadow-roadmap, trojan-horse, invisible-wall, deadlock, public-fracture, last-mile.
+
+Legacy: /tools and /app/career still redirect or show Soon until this module ships fully.
+
+---
+
+# 3. ENTRANCE SEQUENCES (the psychological contract break)
+
+When the user clicks "Enter Project" the screen does not simply navigate. It performs a short, authored transition that tells the story of the domain before the first brief appears. These sequences are the visual language shift from sterile classroom (Interview) to messy war room.
+
+Global rules for all entrances:
+- Duration 8–14 s, skippable after 2.5 s (Skip appears top-right).
+- Reduced motion: cross-fade to the first brief only (300 ms).
+- WebGL / CSS hybrid; one context rule still holds.
+- Sound and haptics remain off by default.
+- Sequence ends by settling into the chapter-1 brief card with a soft paper land.
+
+## 3.1 Category-agnostic Real World entrance (gallery → any project)
+A warm studio desk dissolves into a dark war-room table. Papers scatter, a single brass pin drops and sticks, the camera pulls back just enough to show the room is larger and dirtier than the Interview studio. Text: "The map draws itself while you walk."
+
+## 3.2 Per-project entrance sequences (authoritative)
+
+**Root Cause Analysis flavour (used by Silent Churn, Legacy Fracture, Ghost Metric)**
+Screen begins as a perfect humming system. Suddenly fractures race across the surface into a web of errors. Evidence panels snap into silhouette. A camera zooms deep into one fracture of circuit where a single anomaly pulses red. That pulse becomes the first brief.
+
+**Product Sense flavour (used by Pivot Point, Trojan Horse)**
+Chaotic cloud of floating user complaints. They snap into sharp focus, resolve into a polished blueprint that then tears at one corner. Motion stays brief so the screen remains readable.
+
+**Market Strategy flavour (used by Sacred No, Shadow Roadmap)**
+A city unfolds. Camera moves closer. An eight-digit grid overlays the city with competitor territory shifting in real time. Several potential entry points flicker, leaving the best move undecided until the user makes the first play.
+
+**Execution & Metrics flavour (used by Feature Factory, Public Fracture)**
+Matrix dashboard of scrolling data freezes and segments into a clean high-contrast dashboard. One metric begins to trend sharply downward, signalling the crisis about to be solved.
+
+**Estimation flavour (scale shift)**
+A single ordinary object fills the frame. Camera pulls back further and further until that object is lost inside a massive humming grid of skyscrapers stretching to the horizon. The user must now figure out the scale of the machine they have entered.
+
+**AI & Technical flavour (used by Invisible Wall)**
+You enter a void orbit. A simple line of code evolves into a shimmering multi-layered neural network. One connection turns opaque and static, creating the bottleneck that must be cleared.
+
+**Behavioral flavour (used by Deadlock, Last Mile)**
+You enter a silent void that shatters into a gallery of floating glass fragments, each reflecting a distorted professional scene. As you move forward the shards gravitate toward the centre and snap together into a single clear reflection of a silhouette standing tall. Vibe shifts from scattered memories to total ownership.
+
+These sequences are implemented once as reusable timeline factories in lib/motion/projectEntrances.ts and parameterised by projectId.
+
+---
+
+# 4. HOW THE SIMULATION WORKS
+
+## 4.1 Structure of every project
+1. Gallery card → Project landing (identity, stakes, estimated time, "Start" / "Resume")
+2. Chapter 1 brief → Decision surface → Consequence reaction → State update
+3. Chapter 2 brief (constraints now altered by Chapter 1) → Decision → Reaction → State update
+4. Chapter 3 brief (further constrained) → Decision → Final world reaction
+5. Project debrief (logic trace + archetype + full replay paths)
+
+Each chapter ≈ 12–18 min. Total campaign 45–75 min. Users may pause between chapters; state is frozen and resumed exactly.
+
+## 4.2 Hard state engine (anti-drift)
+- A project declares 4–7 numeric variables (0–100 or currency units) at the start.
+- Every authored choice carries a delta vector against those variables plus optional flags (e.g. "exposed_old_guard", "built_coalition").
+- Scene triggers are pure threshold rules: "if trust < 40 and revenue_delta < 0 → play scene X".
+- The AI / narrative layer never invents plot. It only selects and delivers the pre-authored scene that matches the current state signature.
+- Representative path tests (minimum 5 golden paths + 3 edge paths per project) must pass before a project is marked production-ready.
+
+## 4.3 Decision surface patterns
+- Ranked options (drag or ↑↓)
+- Forced trade-off (two good things, pick one)
+- Investigation depth vs time (more data burns clock)
+- Framing choice (how you present the same fact)
+- Ally selection
+- Rollback vs isolate
+- Instant kill vs phase-out
+
+Every surface must leave the user feeling the weight before they confirm. Confirmation is never a single click on a green button; it is a deliberate "Lock decision" action that triggers the consequence animation.
+
+## 4.4 Visible consequence language
+- Dashboard physically fractures into a web of errors
+- Stakeholder avatar dims, leans forward, or plays a predatory micro-animation
+- Music / ambient tone shifts (optional, off by default)
+- Trust / stability / runway meters move in real time with residual trails
+- Papers on the desk rearrange or catch fire (metaphorical)
+- Clock hands jump or slow
+
+These are not decorative rewards. They are the direct, authored result of the specific choice just locked.
+
+## 4.5 Pacing rules
+- Rhythm: set-up → choice → consequence → recovery / new constraint
+- No forced pauses longer than 1.8 s
+- Optional "Recap so far" drawer always available
+- Replay of any previous chapter decision is available from the debrief and (lightly) mid-run
+- If a user is speed-running, the consequence animations still play at full weight; they cannot be skipped on first playthrough of a chapter
+
+## 4.6 Narrative resonance test (mandatory before shipping a beat)
+For every emotional or world reaction ask:
+"Would this reaction still make sense if the user's specific choice were removed?"
+If yes → the beat is unearned → cut or rewrite so agency is preserved.
+
+---
+
+# 5. PROJECT GALLERY & LANDING
+
+## 5.1 /app/projects gallery
+- 12 large cards in a responsive grid (3 × 4 desktop, 2-col tablet, 1-col mobile)
+- Each card: project title, one-line stakes, palette swatch, estimated time, status (New / In progress / Completed with archetype chip), "Enter" action
+- Header: "12 living case studies · Your decisions persist · The map draws itself"
+- Filter chips: All · High pressure · Corporate · Technical · Crisis · Political
+- Recommended card is marked once (based on Interview weakest dimensions + target role)
+
+## 5.2 Project landing (/app/projects/[projectId])
+- Full identity block: title, setting, vibe sentence, palette description
+- "What you will practice" (3 skills)
+- "How it differs from Interview" short paragraph
+- Chapter map (locked until previous is complete)
+- Start / Resume / View last debrief
+- Estimated total time and "You can pause between chapters"
+
+---
+
+# 6. THE TWELVE PROJECTS (COMPLETE BLUEPRINTS)
+
+Each blueprint follows the same template so implementation is mechanical.
+
+---
+
+### PROJECT 01 — THE SACRED NO
+**ID:** sacred-no
+**Setting:** Seed-stage startup, high-pressure bordering on panic
+**Palette:** Neon greens + deep black that pulses with city energy
+**Core skill:** Saying no under founder pressure without destroying the relationship
+**State variables:** founder_trust (0-100), product_stability (0-100), runway_weeks, board_confidence, political_capital
+
+**Chapter 1 — Midnight Request**
+CEO drops a feature that will float the app and destroy performance right before the board meeting.
+UI literally vibrates.
+Choice: Accept the feature / Decline cleanly / Decline with a data-backed alternative.
+If yes → absolute time visually slows; next scene the CEO avatar lies, screams, dims; music shifts predatory.
+If perfect "no" + alternative → rare golden-glow animation.
+
+**Chapter 2 — Stakeholder Squeeze**
+Head of Sales tries to horse-trade.
+Creative edge: a live stability meter that fluctuates based on wording. The more you hedge, the more it jitters.
+If you were soft in Chapter 1 you start already on defence.
+
+**Chapter 3 — Boardroom Verdict**
+Final map of protected reactions. If you said yes earlier the product crashes during the demo and the screen physically fractures into a web of errors.
+
+**Debrief archetypes:** Diplomat · Wall · Data-backed Guardian
+Replay paths show how a different Chapter-1 no would have changed the board reaction.
+
+---
+
+### PROJECT 02 — THE SILENT CHURN
+**ID:** silent-churn
+**Setting:** Legacy insurance corporate
+**Palette:** Deep navy + muted charcoal (sterile, imposing)
+**Core skill:** Finding the quiet leak and building consensus under cautious executives
+**State variables:** client_trust, investigation_depth_spent, consensus_score, recovery_speed, executive_scepticism
+
+**Chapter 1 — Quiet**
+High-value clients are slipping away. First move: choose investigation depth. More data burns more clock, shrinking the window before quarterly review.
+GSAP: slow oppressive crawl of spreadsheets that subtly shift colour as anomalies appear.
+
+**Chapter 2 — Consensus Gauntlet**
+Pitch findings to a committee of five cautious executives.
+Build coalition behind the scenes vs present a bold singular theory to the whole group.
+Bypassing coalition does not auto-fail but makes executives more defensive.
+
+**Chapter 3 — Increment Win**
+Deploy the solution. Trust meter fills slowly. If you built consensus the meter starts higher, but churn never vanishes instantly — it slows in a realistic recovery curve.
+
+**Debrief archetypes:** Diplomat (coalition) · Disruptor (bold theory)
+Replay jumps back to the gauntlet.
+
+---
+
+### PROJECT 03 — THE FEATURE FACTORY
+**ID:** feature-factory
+**Setting:** Rocket-obsessed growth company
+**Palette:** Electric violet + slate grey (cold, industrial futurism)
+**Core skill:** Velocity vs reliability under a flashing-dashboard culture
+**State variables:** short_term_win, reliability_debt, eng_lead_trust, political_capital, board_visibility
+
+**Chapter 1**
+Head of Product pushes a dashboard that looks great in demo but does not track retention. Conflicting engagement data + rolling deadline.
+Push feature to hit date → short-term win + reliability issues surface.
+Insist on metric fix → launch delayed + trust deficit with already-burnt-out Eng Lead.
+
+**Chapter 2 — Debt Collector**
+Critical system failure. If you shipped the dashboard the failure is harder to diagnose (noisy data). CEO breathes down your neck. System may be stable but you have less political capital to negotiate extra resources.
+
+**Chapter 3 — Zenith Review**
+Present quarterly impact. High-visibility fragile growth vs slower steady progress.
+
+**Debrief archetypes:** Velocity Junkie · Stabilizer
+
+---
+
+### PROJECT 04 — THE GHOST METRIC
+**ID:** ghost-metric
+**Setting:** AI infrastructure firm that worships a single massive growth metric
+**Palette:** Iridescent white + deep amber (blindingly clean optical illusion)
+**Core skill:** Auditing the North Star that is actually a ghost
+**State variables:** audit_depth, cto_trust, fix_speed, team_exhaustion, board_mandate
+
+**Chapter 1 — The Mirage**
+Audit growth data. Choose which raw logs to cross-reference. Full logs reveal the ghost but burn time before the board meeting. Skip → miss the leak and move forward with a false promise.
+
+**Chapter 2 — The Truth**
+Present the ghost metric to the CTO. Drop the bomb directly vs frame as "metric evolution".
+Direct → defensive reaction, future data treated with scepticism.
+Evolution framing → peace kept but actual fix delayed.
+
+**Chapter 3 — Realignment**
+Implement new honest metric. Outcome depends on earlier friction: smooth-but-slow transition vs quick mandate + exhausted team.
+
+**Debrief archetypes:** Truth Teller · Strategist
+
+---
+
+### PROJECT 05 — THE PIVOT POINT
+**ID:** pivot-point
+**Setting:** Clinical / health-tech tension
+**Palette:** Sterile white + sharp teal (high-stakes operating room)
+**Core skill:** Triage under budget vs outcome trade-offs
+**State variables:** patient_impact, budget_strain, cmo_support, board_scepticism, resource_crisis
+
+**Chapter 1 — Triage Dilemma**
+Audit patient outcome reports against operational budget. Double down on high-cost high-success recovery tool for few patients vs pivot to lower-cost accessibility model. Choice sets the baseline for everything after.
+
+**Chapter 2 — CMO Standoff**
+Take findings to Chief Medical Officer. High-cost route → CMO supportive, board sceptical of scale. Accessibility route → CMO pushes back on quality dip; you must bridge the trust gap with evidence.
+
+**Chapter 3 — Patient Pivot**
+Deploy. Not win/loss — pure trade-off. High-cost = life-changing for few + strained budget. Accessibility = more people saved + resource crisis triggered.
+
+**Debrief archetypes:** Specialist · Humanitarian
+
+---
+
+### PROJECT 06 — THE LEGACY FRACTURE
+**ID:** legacy-fracture
+**Setting:** Logistics company still running on dusty grandeur
+**Palette:** Deep gold + faded parchment (museum that is still trying to run a business)
+**Core skill:** Modernising without declaring war on the old guard
+**State variables:** old_guard_trust, board_mandate_speed, budget_security, migration_friction, fleet_health
+
+**Chapter 1 — Gilded Line**
+Audit legacy routing software against actual delivery logs. Expose systemic failures to the board immediately vs spend two weeks quietly building a proof-of-concept.
+Expose now → immediate mandate but burns relationship with the people who built the system.
+POC route → veterans’ trust secured but risk of budget pulled before you can show the solution.
+
+**Chapter 2 — Coalition War**
+Pick allies: operational managers feeling the daily pain vs finance team focused on long-term cost of failure.
+Ops route → faster ground-level option, less executive air cover.
+Finance route → budget instantly, but grassroots insurgency from people actually using the software.
+
+**Chapter 3 — Great Migration**
+Overnight switch (triumphant rebirth or catastrophic blackout that freezes the fleet) vs slow phased migration (safer but creates a two-speed company and daily political battle between old and new systems).
+
+**Debrief archetypes:** Architect · Diplomat · Insurgent
+
+---
+
+### PROJECT 07 — THE SHADOW ROADMAP
+**ID:** shadow-roadmap
+**Setting:** Espionage-chic product organisation
+**Palette:** Midnight chrome + dark white (cold, clinical)
+**Core skill:** Navigating hidden agendas and political liability
+**State variables:** architect_ally, vp_trust, inner_circle_status, fix_speed, political_liability
+
+**Chapter 1 — The Spread**
+Audit encrypted slack channels against the official company roadmap. Confront the lead architect privately vs bring the discrepancy straight to the VP of Product.
+Private → possible secret ally who helps navigate bureaucracy, but risk of linking your discovery to the people who want to hide it.
+
+**Chapter 2**
+Use the intel to secure resources. Frame official roadmap as strategic evolution vs call out the errors as critical risk.
+Evolution → stay in inner circle, slower actual fix.
+Direct → faster technical win, marked as political liability.
+
+**Chapter 3 — The Reveal**
+Present true state of the product to the board. Political game gives air cover for radical change but you are viewed as just another company man. Truth-teller path gives implicit trust but burns the bridges needed to execute the role.
+
+**Debrief archetypes:** Insider · Whistleblower
+
+---
+
+### PROJECT 08 — THE TROJAN HORSE
+**ID:** trojan-horse
+**Setting:** Hyper-growth consumer company
+**Palette:** Gold + neon pink (permanent victory party)
+**Core skill:** Distinguishing accidental growth engines from expensive bugs
+**State variables:** growth_rate, burn_rate, partner_segment_health, user_sentiment, app_store_rating
+
+**Chapter 1 — Golden Spike**
+Audit referral engine after massive user surge. Users are getting double rewards for circular referrals — driving growth but draining the bank.
+Kill the bug instantly → public backlash from users who see it as a feature.
+Phase it out slowly → keeps the peace but continues the bleed.
+
+**Chapter 2**
+Discover the glitch is also accidentally powering a legitimate high-value partner segment. Treat as bug to be fixed vs formalise as feature.
+Formalise → saves the partner but institutionalises an expensive inefficiency.
+Fix → cleans the books but alienates the most profitable channel.
+
+**Chapter 3**
+Deploy final version. Move too fast to fix → coordinated user revolt tanks App Store rating. Wait too long → burn rate hits critical threshold and forces a desperate unplanned funding round.
+
+**Debrief archetypes:** Pragmatist · Purist · Partner Guardian
+
+---
+
+### PROJECT 09 — THE INVISIBLE WALL
+**ID:** invisible-wall
+**Setting:** Stealth-mode AI lab
+**Palette:** Foggy grey + stark fluorescent white (high-security airport terminal at 3 a.m.)
+**Core skill:** Detecting deliberate throttles and deciding safety vs capability
+**State variables:** velocity, architect_trust, system_stability, competitive_edge, founding_member_trust
+
+**Chapter 1**
+Audit access logs against the model. Every time you close in on a breakthrough a hidden process throttles compute. Build a secret workaround vs flag the anomaly to the Lead Architect.
+Secret fix keeps momentum but exposure risk if the system is audited. Flagging brings you into the loop but slows velocity to a crawl.
+
+**Chapter 2 — Shadow Lead**
+Discover the sabotage is deliberate — a kill-switch installed by a founding member to prevent the AI from hitting a dangerous capability threshold. Dismantle the switch to prove the product’s power vs integrate it as a safety feature.
+
+**Chapter 3 — The Breach**
+If you dismantled it the system becomes erratic and unpredictable under load. If you integrated it the product is stable but loses the very edge that made it competitive.
+
+**Debrief archetypes:** Guardian · Optimizer
+
+---
+
+### PROJECT 10 — THE DEADLOCK
+**ID:** deadlock
+**Setting:** Hardware + software robotics company
+**Palette:** Searing orange + deep industrial teal (boiler room about to blow)
+**Core skill:** Breaking cross-team stalemates with transparent data
+**State variables:** robotics_resentment, software_resentment, runway_remaining, prototype_readiness, team_alignment
+
+**Chapter 1**
+Robotics team wants maximum autonomy; software team demands strict safety overrides. Side with one team to get a prototype out the door vs force a pivot that delays the build but aligns requirements.
+Siding creates a resentment loop that stalls future sprints. Pivot secures foundation but burns remaining runway.
+
+**Chapter 2 — Evidence Breach**
+Surface validated performance data to both teams simultaneously. Making the trade transparent forces a data-driven compromise that settles the deadlock but risks a temporary trust dip as both teams realise their initial assumptions were wrong.
+
+**Chapter 3 — First Run**
+Robot finally deployed. Aligned compromise design is stable but lacks the wow factor. Bold autonomy is impressive but requires constant expensive supervision.
+
+**Debrief archetypes:** Mediator · Decider
+
+---
+
+### PROJECT 11 — THE PUBLIC FRACTURE
+**ID:** public-fracture
+**Setting:** Consumer prestige brand
+**Palette:** Emergency crimson + clinical silver (high damage-control)
+**Core skill:** Crisis communication under stock-price and user-trust pressure
+**State variables:** user_loyalty, media_headline_risk, support_load, stock_pressure, long_term_trust
+
+**Chapter 1 — First Spark**
+Surge of reports that the latest firmware is breaking devices. Immediate total rollback vs keep system live while isolating the specific hardware revision.
+Total rollback stops bleeding but triggers massive PR panic about stability. Isolate keeps majority online but leaves affected users in the dark longer.
+
+**Chapter 2 — War Room**
+Coordinate response: technical triage + communication strategy. Brutally transparent about the issue vs carefully hedged language to protect stock price.
+Transparency earns long-term respect from power users but gives media a cleaner headline. Hedge contains panic but leaves support team fighting a tide of confused customers.
+
+**Chapter 3 — Trust Audit**
+Deploy final remediation. Containment + transparency → slow recovery + loyal base. Narrative priority → faster fix + lingering trust tax (users hesitant to update for months).
+
+**Debrief archetypes:** Truth Teller · Firefighter
+
+---
+
+### PROJECT 12 — THE LAST MILE
+**ID:** last-mile
+**Setting:** Courier / delivery platform during a monsoon that has put half the city underwater
+**Palette:** Rain-washed asphalt + caution-tape yellow (disaster-zone command centre)
+**Core skill:** Balancing three constituencies (couriers, restaurants, customers) under crisis
+**State variables:** courier_safety, restaurant_loyalty, customer_trust, daily_active_users, financial_pressure
+
+**Chapter 1 — The Surge**
+Live delivery heat maps show half the fleet stranded in flooded zones. Pause all orders in affected wards vs implement dynamic surge pricing (raise courier pay, keep platform moving for those who can pay).
+Pause protects people but kills DAU and leaves thousands without service. Surge keeps platform alive but risks overworked couriers, dangerous conditions and a PR narrative of price-gouging during a crisis.
+
+**Chapter 2 — The Rebellion**
+Wave of cancellations from partners who cannot staff shifts. Automatically refund customers and penalise restaurants for downtime vs absorb the losses yourself to maintain partner loyalty.
+Refund keeps reputation intact but puts immense financial pressure on small businesses already struggling. Absorb protects margins but creates massive backlog of frustrated customers and support-ticket spike.
+
+**Chapter 3 — Recovery**
+Water recedes; get the city back online. Prioritise courier safety → loyal fleet but restaurants still fuming. Customer trust depends entirely on how transparent you were during the blackout.
+Debrief does not slot into one clean box; it maps the tension between the three groups and lets you replay communication cadence during the freeze.
+
+**Debrief focus:** Multi-stakeholder tension map rather than single archetype.
+
+---
+
+# 7. DEBRIEF LABORATORY
+
+After Chapter 3 the user lands in a calm paper surface (return to studio aesthetic).
+
+Contents:
+1. One-sentence outcome of the project given the path taken.
+2. Logic trace: expandable timeline of every locked decision → exact state delta → world reaction that followed → how that reaction constrained the next chapter.
+3. Archetype chip(s) with plain-language definition.
+4. "What lever would change the trajectory?" — three concrete alternate decisions the user can jump to.
+5. Full replay launcher (starts a new run with the chosen branch already selected).
+6. Export of the decision log (JSON + readable Markdown).
+7. Link back to Interview Studio questions that train the weakest dimension revealed by this run.
+
+No numeric score. No leaderboard. The value is the traceability.
+
+---
+
+# 8. APP SHELL INTEGRATION
+
+- Projects appears in the left rail under Interview (or in the "Coming" group until this module is live, then moves up).
+- During an active chapter the shell collapses to focus mode exactly as Interview runs do (Exit, autosave indicator, Goal Pin that now shows the current chapter stakes).
+- Progress constellation gains a second layer: completed projects appear as larger nodes with the archetype colour.
+- History table gains a Project filter and shows chapter count + final archetype.
+- Bookmarks can save a project or a specific chapter decision point.
+
+---
+
+# 9. SECURITY, PRIVACY & DATA
+
+- All rules from Product Bridge §9 apply.
+- Project state and decision logs are treated as sensitive user data (same as Interview runs).
+- Answer-text / free-form notes remain opt-in for sync.
+- No third-party narrative APIs that could leak the state machine.
+- Golden-path test suite runs in CI so a bad content change cannot ship a contradictory plot.
+
+---
+
+# 10. OPTIMISATION & MOTION NOTES
+
+- Entrance sequences share the same GSAP + WebGL budget rules as the main loader (Product Bridge §7–§8).
+- Consequence animations are short (0.6–1.4 s) and must not drop below 30 fps on mid-range Android.
+- Project assets (palettes, stakeholder avatars, fracture overlays) are lazy-loaded per projectId.
+- Reduced-motion path for every entrance and every consequence is mandatory.
+
+---
+
+# 11. QA ADDITIONS (append to Product Bridge §11)
+
+## M. Real World Projects
+- [ ] QA-M01 — All 12 gallery cards render with correct palette and status
+- [ ] QA-M02 — Entrance sequence plays once, is skippable, respects reduced motion
+- [ ] QA-M03 — Chapter state persists across reload and across devices after sync
+- [ ] QA-M04 — Locking a decision produces the exact authored consequence and state delta
+- [ ] QA-M05 — No narrative drift: every scene matches a threshold rule
+- [ ] QA-M06 — Debrief logic trace is accurate for at least 5 golden paths per project
+- [ ] QA-M07 — Replay from any chapter decision creates a coherent alternate timeline
+- [ ] QA-M08 — Pause between chapters freezes state correctly
+- [ ] QA-M09 — Focus-mode shell works identically to Interview runs
+- [ ] QA-M10 — Archetype mapping is deterministic given the same decision vector
+- [ ] QA-M11 — Ambiguity never produces an arbitrary explosion of a sound choice
+- [ ] QA-M12 — Mobile chapter surfaces remain usable; no hover-only information
+
+---
+
+# 12. BUILD ORDER FOR THIS MODULE
+
+1. Hard state engine + decision surface primitives + local persistence.
+2. Project gallery + landing pages + route skeleton.
+3. One complete project (recommend Sacred No) end-to-end including entrance, three chapters, debrief and replay.
+4. Remaining eleven projects using the same primitives.
+5. Progress / History / Bookmarks integration.
+6. Full QA-M suite + content golden-path tests.
+7. Public /projects overview page (honesty about what is live).
+
+Definition of done: a user can enter any of the 12 projects, complete all three chapters with visible consequences, receive a truthful logic-trace debrief, and replay an alternate path, all while the state engine never invents plot and never loses a decision.
+
+---
+
+# 13. FINAL PRINCIPLES (never violate)
+
+1. The map draws itself while you walk.
+2. Early small decisions snowball; that is the point.
+3. Feed intentionally messy, conflicting data.
+4. Consequences are physical and authored, never decorative.
+5. Debrief is a laboratory for the user’s own instincts.
+6. Ambiguity creates trade-offs, never gotchas.
+7. AI delivers the script; it does not write the plot.
+8. Pacing lives in the weight of the choice, not in forced timers.
+9. Every emotional beat must be earned by the user’s specific action.
+10. The visual language change on entry is the contract that the rules have shifted.
+
+This is the complete handoff for Real World Projects. Implement against it.

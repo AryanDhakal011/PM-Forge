@@ -1,0 +1,1208 @@
+[
+  {
+    "id": "EST-E-1",
+    "title": "Is a flagship phone store on Durbar Marg worth the rent?",
+    "level": "easy",
+    "minutes": 8,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A retailer weighs a premium-phone flagship / Demand is unknown but rent is fixed / Defend a monthly range and a sign-or-not call.",
+      "Scenario and goal": "Leadership wants a lease decision this week. Goal pin: does monthly demand cover the break-even of 125 phones?",
+      "Artifacts": "R A1 Kathmandu district population 2,041,587 (S14). S A2 store economics: fixed cost NPR 1,500,000/month; margin NPR 12,000 per phone; break-even 125. S A3 locked 1: premium-buyer replacement cycle about 3 years. S A4 locked 2: a single flagship typically captures 3% to 8% of area premium buyers.",
+      "Run": "RF 3 MCQ (unit = phones per month; why segment before applying a rate; what a replacement cycle does to monthly demand) → Clarify (time window; capture share) → Logic path choice (population→adults→premium→cycle→capture / flat 1% / count competitors) → Dials (adults, premium share, cycle, capture) → Pushback if capture > 8% or premium > 12% → Decision claim (sign / pilot / do not sign) → Reflect.",
+      "Trap": "Top-down shortcut → choosing \"flat 1% of population\" at the logic-path step.",
+      "Defensible": "P1 sign if capture ≥ 4.2% is credible (accepts rent risk); P2 pilot or shorter lease first (accepts delay); P3 shop-in-shop instead (accepts weaker brand control).",
+      "Reference trace": "2,041,587 × 65% = 1.33M adults; × 8% = 106k premium; ÷ 3 years ÷ 12 = 2,950/month; capture 5% = about 148 vs break-even 125 (1.18×); break-even capture = 125 ÷ 2,950 = 4.2%; range 89 to 236.",
+      "Pump": "\"Replace one flat rate with a chain of two or three observable rates, then check which link moves the decision most.\"",
+      "Retry seeds": "rent and margin vary (NPR 1.2M to 1.8M; margin NPR 11k to 13k). Optional conflicting-source card (S15) shows two household device-access figures that define \"phone\" differently; resolution: use premium-segment share, not device access."
+    }
+  },
+  {
+    "id": "EST-E-2",
+    "title": "How many Quick Pay uses per week should we buy capacity for?",
+    "level": "easy",
+    "minutes": 8,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A payments feature launches next month / Demand depends on who can use it / Defend one contract tier.",
+      "Scenario and goal": "PM for a finance app launching \"Quick Pay\". Goal: choose the payment-partner tier (Tier S up to 30,000 uses/week; Tier L up to 100,000/week with a higher minimum).",
+      "Artifacts": "S A1 1.2M monthly active users; weekly actives are 55% of MAU. S A2 locked 1: 35% of weekly actives transact in-app each week. S A3 locked 2: last two feature launches reached 4% and 6% adoption in 30 days. S A4 tier price sheet.",
+      "Run": "RF 3 MCQ (correct denominator for adoption; difference between users and uses; why 30-day adoption is not steady state) → Clarify the audience → Decomposition by activity level (heavy/medium/light transactors) → Dials (adoption, uses per user per week = 1.8) → Pushback if adoption > 9% (\"last launches reached 4–6%\") → Decision.",
+      "Trap": "Wrong-denominator trap → applying adoption to all MAU.",
+      "Defensible": "P1 Tier S with an upgrade clause (accepts a capacity-breach risk); P2 Tier L if the user argues adoption above 7.2% with evidence (accepts paying for unused capacity).",
+      "Reference trace": "1.2M × 55% = 660k; × 35% = 231k transactors; at 12% adoption = 27.7k users × 1.8 = 49.9k uses/week; at 5% = 11.6k × 1.8 = 20.8k. Tier S suffices while adoption ≤ 30,000 ÷ (1.8 × 231,000) = 7.2%.",
+      "Pump": "\"Name the population before you name the rate; the denominator decides the order of magnitude.\"",
+      "Retry seeds": "MAU 0.9M to 1.6M; prior adoption history 3–8%."
+    }
+  },
+  {
+    "id": "EST-E-3",
+    "title": "How many support agents for launch-day chat?",
+    "level": "easy",
+    "minutes": 9,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A help chat launches inside the app / Chats are not people; agents handle several at once / Defend a staffing number.",
+      "Scenario and goal": "PM launching in-app help chat. Goal: staffing for launch day without long queues.",
+      "Artifacts": "S A1 400,000 daily active users. S A2 locked 1: 0.6% of daily actives contact support on a normal day; launch week runs 1.5× normal; 70% of contacts choose chat. S A3 locked 2: average handle time 9 minutes; each agent handles 3 chats at once; 80% occupancy; 8-hour shift. S A4 locked 2: 40% of chats arrive in the 3 busiest hours.",
+      "Run": "RF 3 MCQ (concurrency vs handle time; what occupancy means; why peaks matter) → Decomposition (volume → workload minutes → agents; or volume → peak-hour → agents) → Dials → Pushback if peak ignored → Decision (a staffing range and a trigger to add agents).",
+      "Trap": "Unit-mixing → dividing chats per day by chats per agent without concurrency and occupancy.",
+      "Defensible": "P1 staff to the peak hour (about 21 agents) with flex; P2 staff to the daily workload (about 20) plus on-call surge pool; each accepts overstaff vs queue risk.",
+      "Reference trace": "400k × 0.6% = 2,400; × 1.5 = 3,600; × 70% = 2,520 chats/day; workload 2,520 × 9 = 22,680 chat-minutes; capacity per agent = 480 × 0.8 × 3 = 1,152; agents = 22,680 ÷ 1,152 = 19.7 ≈ 20. Peak: 2,520 × 40% ÷ 3 = 336 chats/hour; one agent handles 60 × 0.8 × 3 ÷ 9 = 16 chats/hour; 336 ÷ 16 = 21.",
+      "Pump": "\"Convert counts into workload minutes before dividing by capacity.\"",
+      "Retry seeds": "contact rate 0.4–0.9%; concurrency 2–4."
+    }
+  },
+  {
+    "id": "EST-M-1",
+    "title": "Rainstorm in New York: how many extra drivers to incentivise?",
+    "level": "medium",
+    "minutes": 14,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "Rain raises demand and slows every trip / Normal-day productivity no longer holds / Defend an extra-driver number that keeps waits under 10 minutes.",
+      "Scenario and goal": "Ops PM at a ride-hail app. A storm hits the Manhattan core at 6 pm. Goal: keep average wait under 10 minutes by incentivising driver supply.",
+      "Artifacts": "R A1 NYC high-volume FHV trips Jan 2026: 22,108,438 (about 713k/day) (S13). R A2 average citywide wait 5.4 min (S13). S A3 core zone gets 35% of trips; the evening peak hour is 7% of a day; each driver completes 1.6 trips/hour normally. S A4 CONFLICT: traffic API says speeds fall 35%; fleet telematics says 20% (resolution: telematics sample is highway-heavy; use the midpoint ≈ 27% for city streets) locked 2. S A5 locked 2: past storms raised requests +35% to +55% (mean +42%); surge priced at 1.8× cut requests 18–25%. S A6 locked 2: 8% of drivers log off in heavy rain.",
+      "Run": "Branch: which constraint binds first (demand surge / slower trips / driver exits) → Dials with sources → Calculator → Probe: \"Your two speed sources disagree; which do you trust?\" → Pushback if no demand-shaping lever considered (\"incentives alone recruit only part of the need\") → Decision: extra drivers plus two non-driver levers.",
+      "Trap": "Average-day trap → using 1.6 trips/hour and today's supply during the storm.",
+      "Defensible": "P1 incentivise about 2,600–3,000 drivers plus pooled-ride nudges and honest ETAs; P2 incentivise more (about 5,000+) and accept cost; P3 accept longer waits in outer zones to protect the core.",
+      "Reference trace": "baseline peak-hour trips in the zone = 713,175 × 7% × 35% = 17,473; drivers = 17,473 ÷ 1.6 = 10,921. Storm: requests × 1.42 = 24,812; surge cuts 22% → 19,353; speed −27% → trips per driver = 1.6 ÷ (1 ÷ 0.73) = 1.17; drivers after exits = 10,921 × 0.92 = 10,047; need 19,353 ÷ 1.17 = 16,541; gap = 6,494. Incentives typically recruit 40% of the gap within 45 minutes ≈ 2,600; rest is demand-shaping and wait tolerance.",
+      "Pump": "\"Re-derive every productivity rate under the shock; never reuse the normal-day rate.\"",
+      "Retry seeds": "share of trips 30–40%; speeds −20% to −35%."
+    }
+  },
+  {
+    "id": "EST-M-2",
+    "title": "Ticket on-sale: how fast should the waiting room admit fans?",
+    "level": "medium",
+    "minutes": 14,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A show with 10,000 seats goes on sale at noon / Two teams disagree on demand and the payment limit is fixed / Defend an admission rate and a message to fans.",
+      "Scenario and goal": "Ticketing PM. Goal: sell out without payment failures or fans seeing a broken checkout.",
+      "Artifacts": "S A1 10,000 seats; 2 tickets per order on average. S A2 CONFLICT: marketing says 250,000 interested; CRM shows 60,000 verified fans (resolution: marketing counts all email opens; use verified fans × show-up rate 55% ≈ 33,000 arrivals, plus a bot allowance) locked 1. S A3 payment provider limit 40 authorisations/second; target ≤ 70% (28/s) locked 2. S A4 45% of admitted users attempt payment; 1.3 authorisation calls per attempt; 80% succeed locked 2. S A5 seat hold 5 minutes.",
+      "Run": "Branch: protect payment limit / protect fairness / protect speed → Dials → Probe: \"A bot farm sends 40,000 requests; what do you change?\" → Pushback if admit rate pushes authorisations over 28/s → Decision: admission rate, the message shown at queue positions beyond the likely sell-out point, and an anti-bot step.",
+      "Trap": "Average-day trap variant (treating arrival as steady rather than a spike; or sizing to marketing's 250,000).",
+      "Defensible": "P1 admit about 40–48/s with honest \"sold out likely beyond position ~14,000\" message; P2 lottery for fairness (accepts weaker demand-signal); P3 slower admit with longer hold (accepts a longer sell-out time).",
+      "Reference trace": "orders needed = 10,000 ÷ 2 = 5,000; orders per admitted user = 0.45 × 0.80 = 0.36; admitted needed = 5,000 ÷ 0.36 = 13,889; authorisations/s = admit/s × 0.45 × 1.3 = 0.585 × admit/s; max admit = 28 ÷ 0.585 = 47.9/s; sell-out time = 13,889 ÷ 47.9 = 290 s ≈ 4.8 minutes.",
+      "Pump": "\"Find the binding limit first, then size everything else to it.\"",
+      "Retry seeds": "seats 6,000–15,000; provider limit 30–60/s."
+    }
+  },
+  {
+    "id": "EST-M-3",
+    "title": "Tihar week: do we have enough riders for sweets and gifts?",
+    "level": "medium",
+    "minutes": 14,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "Festival demand compresses into two days / Last year's two numbers disagree / Defend a rider plan.",
+      "Scenario and goal": "PM at a delivery app in Kathmandu Valley. Goal: enough riders for festival gift orders without paying for idle capacity.",
+      "Artifacts": "R A1 Kathmandu district population 2,041,587; national average household size ≈ 4.4 (S14) → about 464,000 households. S A2 CONFLICT: ops dashboard shows 9,400 festival orders last year; finance shows 7,100 net of cancellations (24.5% cancelled; resolution: finance excludes cancelled orders; plan capacity on gross) locked 1. S A3 growth +35% year on year locked 2. S A4 60% of orders fall in two peak days; 55% of a day's orders land in a 4-hour window locked 2. S A5 a rider completes 2.2 orders/hour in festival traffic; normal active riders at that hour 600, down 35% in festival week locked 2.",
+      "Run": "Branch: top-down (households × adoption) vs bottom-up (last year × growth) → Dials → Triangulate (the two routes must be reconciled) → Probe: \"Your top-down gives 19,500 orders; last year plus growth gives about 12,700. Which do you trust?\" → Pushback → Decision: riders to guarantee, cap rules for peak slots.",
+      "Trap": "Single-route trap (committing to one unchecked estimate).",
+      "Defensible": "P1 calibrate to ~13,000 orders and guarantee about 60–80 riders as a buffer; P2 plan for 19,500 and over-staff; P3 cap slots and shift delivery windows.",
+      "Reference trace": "top-down at 3% share: 464k × 3% × 1.4 = 19.5k; calibrated at 2%: 9,280 households × 1.4 = 13.0k vs bottom-up 9,400 × 1.35 = 12.7k. Peak: 13.0k × 60% ÷ 2 = 3.9k/day; × 55% = 2,145 per 4 hours = 536/hour → riders needed 536 ÷ 2.2 = 244 vs supply 600 × 0.65 = 390 (1.6×). At 19.5k the need would be 366 vs 390 (1.07×), so the decision flips on calibration.",
+      "Pump": "\"Estimate twice by two routes; resolve the gap before committing.\"",
+      "Retry seeds": "growth 20–50%; festival rider drop 25–45%."
+    }
+  },
+  {
+    "id": "EST-H-1",
+    "title": "Terminal outage: where do 60 manual agents go?",
+    "level": "hard",
+    "minutes": 22,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "Check-in systems fail and the terminal must run manually / Every stage depends on the stage before it / Defend where limited staff go.",
+      "Scenario and goal": "Duty PM at a simulated airport terminal (inspired by the September 2025 check-in outages at European airports, S22; all numbers simulated). Goal: maximise passengers who depart within three hours without a terminal gridlock.",
+      "Artifacts": "S A1 next 3 hours: 36 departures, 7,200 passengers; 55% already hold a boarding pass; 3,240 need manual check-in; 60% have bags (1,944). S A2 60 agents; 12 passengers per agent-hour (check-in plus bag tag) → 720/hour; 2,160 in 3 hours (66.7% of need). S A3 security cap 2,400/hour. S A4 bag-drop closes at departure −60 min; gate closes −20 min; manual boarding takes about 2× as long (gates open 20 min earlier). S A5 locked 2: 20 retail and ground staff could be trained in 40 minutes (taking them away costs those desks). S A6 locked 2: flight clusters: peak hour holds 3,100 passengers.",
+      "Run": "Branch 1: allocate agents across (early flights / late flights / assisted passengers) → Branch 2: security staging → Branch 3: staff training or not → PIVOT: \"Security throughput drops to 1,800/hour; the fast lane relied on the same system\" → Probe 1: \"Why move agents from check-in?\" → Probe 2: \"Which flights do you hold on the ground?\" → Pushback if capacity > 100% assumed → Decision: allocation, holds, comms, kill criteria.",
+      "Trap": "Isolated-variable trap → optimising check-in only while security becomes the binding stage.",
+      "Defensible": "P1 re-allocate agents to security and boarding assist after the pivot and ground-hold the latest flights; P2 keep check-in strong and add paper-pass priority for tight connections; P3 request a controlled departure slot shift (accepts airline cost).",
+      "Reference trace": "serial stages: check-in 720/h, security 2,400/h, then 1,800/h after the pivot; 3 hours × 1,800 = 5,400 of 7,200 passengers (75%), so about 9 of 36 flights cannot clear security in the window whatever check-in does; agents beyond the check-in need of 3,240 passengers do not help; the binding stage becomes security.",
+      "Pump": "\"Name every serial stage and its capacity before assigning scarce people to any of them.\"",
+      "Retry seeds": "agents 45–75; security drop to 1,500–2,000/hour."
+    }
+  },
+  {
+    "id": "EST-H-2",
+    "title": "Results day: web, SMS or phone, which will break first?",
+    "level": "hard",
+    "minutes": 22,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "Exam results go live at 10:00 / If one channel slows, people move to another / Defend where to spend 48 hours of engineering.",
+      "Scenario and goal": "PM at an exam authority (fictional) publishing national results. Goal: no channel collapse in the first 30 minutes.",
+      "Artifacts": "S A1 480,000 students; 70% check in the first 30 minutes (336,000). S A2 web capacity 2,000 requests/second; each visit makes 6 requests. S A3 SMS gateway 150 messages/second; retries double the load. S A4 phone lines 400; average call 90 seconds. S A5 locked 2: if web latency exceeds 5 seconds, 40% of users switch to SMS and 15% to phone. S A6 locked 2: a static lookup page on a CDN can serve results from sharded files (no database). S A7 locked 3: ministry insists on one simultaneous release.",
+      "Run": "Branch 1: predict first failure (web / SMS / phone) → Branch 2: allocate effort (static results shards / SMS throttling / phone deflection / communications) → PIVOT: \"Ministry insists on exactly 10:00 for everyone; the staged release is cancelled\" → Probe: \"What do you tell people whose SMS is delayed?\" → Probe: \"What do you cut if you lose two engineers?\" → Pushback → Decision: sequence, monitoring thresholds, and public messaging.",
+      "Trap": "Isolated-variable trap → fixing the web channel and ignoring where the overflow lands.",
+      "Defensible": "P1 static CDN lookup so most users never touch the origin, plus SMS rate-limit and queue; P2 staged release by roll-number range (accepts political friction); P3 cap SMS to one result per number and deflect phone entirely.",
+      "Reference trace": "average = 336,000 ÷ 1,800 = 187 users/s; first-minutes peak ≈ 3× = 560/s; web load = 560 × 6 = 3,360 req/s vs 2,000 (1.68× over); overflow to SMS = 40% × 560 = 224/s (retries make about 450/s) vs 150/s; phone 15% × 560 = 84 calls/s vs 400 ÷ 90 = 4.4 calls/s. Phone cannot absorb overflow; web overload cascades into SMS then phone.",
+      "Pump": "\"Trace where each failure sends its users before you decide what to harden.\"",
+      "Retry seeds": "students 300,000–700,000; peak multiplier 2–4."
+    }
+  },
+  {
+    "id": "EST-H-3",
+    "title": "The festival exodus: charging capacity on a highway corridor",
+    "level": "hard",
+    "minutes": 22,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "Thousands of EVs leave the city in one day / The grid connection, not the number of chargers, sets the limit / Defend a policy for who charges, when and for how long.",
+      "Scenario and goal": "PM for a charging network (simulated). Goal: maximise served sessions on the peak day without queues that make drivers abandon.",
+      "Artifacts": "S A1 a corridor station with 10 fast chargers (120 kW each) on a 1.2 MW grid connection. S A2 locked 1: 1,800 EVs pass in the 10-hour peak; 35% need a charge (630 sessions); average 30 kWh. S A3 locked 2: waits above 40 minutes make 50% of drivers skip the station. S A4 locked 2: a 500 kWh rentable battery pack adds about 17 sessions. S A5 locked 2: pricing by time of day can shift 15% of sessions to off-peak. S A6 locked 3: grid upgrade quote: 9 months.",
+      "Run": "Branch 1: more chargers vs session-energy cap vs reservations → Branch 2: pricing → PIVOT: \"Two chargers go offline (power sharing now caps at 8 chargers × 120 kW = 960 kW)\" → Probe: \"Why not just add chargers?\" → Probe: \"Who loses when you cap sessions at 20 kWh?\" → Pushback → Decision with kill-criteria and communication.",
+      "Trap": "Isolated-variable trap → adding chargers when the grid limit binds.",
+      "Defensible": "P1 cap sessions at ~20 kWh with reservations and off-peak incentives; P2 rent a battery pack and add time-of-day pricing; P3 accept lower service and publish honest wait times.",
+      "Reference trace": "energy needed = 630 × 30 = 18.9 MWh; energy available = 1.2 MW × 10 h = 12 MWh (63%); max sessions at 30 kWh = 400; at 20 kWh = 600 (95% of 630); after the pivot: 0.96 MW × 10 h = 9.6 MWh = 320 sessions at 30 kWh or 480 at 20 kWh. Adding chargers raises nothing once power is shared.",
+      "Pump": "\"Compare energy needed with energy deliverable before touching any other variable.\"",
+      "Retry seeds": "grid 0.9–1.5 MW; sessions 500–800."
+    }
+  },
+  {
+    "id": "RCA-E-1",
+    "title": "Sign-ups dropped 12% after the app update",
+    "level": "easy",
+    "minutes": 8,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A key metric fell right after a release / The cheapest check is whether the number is even real / Defend your first action.",
+      "Scenario and goal": "StreamNest (fictional subscription streamer; practice context Netflix-style) saw weekly sign-ups fall 12% the week after app v7.4. Goal: decide whether to roll back the UI.",
+      "Artifacts": "S dashboard: client event \"signup_complete\" 41,000 → 36,080 (−12%). Locked cards: E1(1) server-side billing sign-ups 40,600 → 40,900 (flat); E2(1) by platform (client events): iOS 17,000 → 17,100; Android 17,500 → 12,580 (−28%); Web 6,500 → 6,400; E3(1) Android by app version/OS: event fire-rate 99% → 61% on Android 14 devices running v7.4; E4(2) release notes: analytics SDK upgraded in v7.4; E5(2) competitor promotions: none (red herring); E6(2) funnel tap-through on new UI: unchanged (red herring).",
+      "Run": "RF 3 MCQ (client vs server metric; what a segment is; why verify before fixing) → clarify metric/timeframe → evidence → rank hypotheses (tracking bug / UI regression / seasonality / competitor) → diagnosis → next action.",
+      "Trap": "Hypothesis trap → choosing \"roll back the UI\" before verifying the metric.",
+      "Defensible": "P1 do not roll back; hotfix tracking; add a client-versus-server reconciliation alert; P2 pause the staged rollout expansion for 24 hours while verifying (accepts a short delay).",
+      "Reference trace": "server-side flat → the loss is in measurement, not users; Android −28% while iOS flat points to a platform-specific event failure; fire-rate 61% on one OS confirms; cost 3 tokens.",
+      "Pump": "\"Compare two independent measures of the same event before assuming behavior changed.\"",
+      "Retry seeds": "affected OS and size of drop vary; a seed where the server-side number also falls."
+    }
+  },
+  {
+    "id": "RCA-E-2",
+    "title": "New seller activations fell 15%",
+    "level": "easy",
+    "minutes": 8,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A funnel shrank without any visible change / The loss is at one step / Defend where you look first.",
+      "Scenario and goal": "SellMate (fictional marketplace) weekly new-seller activations fell from 12,000 to 10,200 (−15%). Goal: find the broken step and pick a fix.",
+      "Artifacts": "S funnel: 30,000 starts/week (flat) × phone-verify completion 62.0% → 52.7% × listing completion 64.5% (flat). Locked: E1(1) funnel by step: only \"verify phone\" fell; E2(1) verify completion by carrier: A 71% → 70%, B 60% → 31%, C 52% → 51% (starts: A 40%, B 30%, C 30%); E3(2) SMS vendor delivery logs: carrier B delivery rate 96% → 41%; E4(1) by device/OS: flat (red herring); E5(1) app releases in window: none; E6(2) listing quality: flat (red herring).",
+      "Run": "RF 3 MCQ → clarify → evidence → rank → diagnosis (single point of failure) → next action (restore verification for carrier B; success measure).",
+      "Trap": "Hypothesis trap → blaming the onboarding UI or pricing.",
+      "Defensible": "P1 route carrier B through a backup SMS provider; P2 offer voice or email verification fallback temporarily; P3 both (accepts higher fraud exposure with email-only).",
+      "Reference trace": "weighted verify completion: before 0.4×71 + 0.3×60 + 0.3×52 = 62.0; after 0.4×70 + 0.3×31 + 0.3×51 = 52.6; the drop is carrier B only.",
+      "Pump": "\"Slice by the dimension that explains where the step fails, not by the one that is easiest to pull.\"",
+      "Retry seeds": "carrier shares and which carrier fails."
+    }
+  },
+  {
+    "id": "RCA-E-3",
+    "title": "Add-to-cart conversion fell after the layout refresh",
+    "level": "easy",
+    "minutes": 9,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "Overall conversion fell 9% after a redesign / Most segments look fine / Defend what you check second.",
+      "Scenario and goal": "CartWise (fictional retailer) search-to-cart conversion fell from 4.00% to 3.64%. Goal: find the segment and decide on a targeted fix.",
+      "Artifacts": "S device mix and conversion: phone 50% (3.6% → 3.6%), desktop 25% (5.0% → 5.0%), tablet 25% (3.8% → 2.36%). Locked: E1(1) by device (above); E2(1) tablet by orientation: portrait (40% of tablet) 3.8% → 3.8%; landscape (60%) 3.8% → 1.4%; E3(2) scroll depth: median scroll to the add-to-cart button 0.9 → 1.6 screens on tablet landscape; E4(2) 5% holdout on the old layout: tablet landscape 3.7%; E5(1) search relevance: unchanged (red herring); E6(2) payment errors: flat (red herring).",
+      "Run": "RF 3 MCQ → clarify → evidence → rank → diagnosis → next action (targeted hotfix vs full rollback vs test).",
+      "Trap": "Hypothesis trap → blaming search relevance.",
+      "Defensible": "P1 hotfix a sticky add-to-cart bar for tablet landscape; P2 roll back the layout for tablet landscape only; P3 keep the layout and run a test (accepts continuing loss).",
+      "Reference trace": "0.5×3.6 + 0.25×5.0 + 0.25×2.36 = 3.64; tablet landscape carries the whole drop; button pushed below the fold.",
+      "Pump": "\"Keep slicing until one segment explains the whole change.\"",
+      "Retry seeds": "affected breakpoint and conversion levels."
+    }
+  },
+  {
+    "id": "RCA-M-1",
+    "title": "Search conversion fell while crash rates spiked",
+    "level": "medium",
+    "minutes": 14,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "Two alarms are ringing at once / The louder one may not be the bigger one / Defend which problem gets the first fix.",
+      "Scenario and goal": "ShopSphere (fictional marketplace; practice context Amazon-style) saw overall conversion fall from 3.20% to 3.00% while the crash rate rose. Goal: find the main driver of revenue loss and sequence the fixes.",
+      "Artifacts": "S locked cards: E1(1) crash-affected sessions 0.4% → 2.1% of sessions; E2(2) cohort split: crash-affected conversion 0.8%; non-crash conversion 3.05% (was 3.20%); E3(2) zero-result searches 2.1% → 9.4% of queries; sessions with ≥1 zero-result convert 1.1% vs 3.4% without; E4(1) deploy log: search index v18 Tuesday (stale inventory sync); SDK update Wednesday; E5(2) revenue decomposition: crashes explain about 25% of the conversion drop, search about 75%; E6(1) traffic mix and pricing: flat (red herrings).",
+      "Run": "Branch 1: rank hypotheses → evidence → cohort comparison (users who did not crash) → PROBE \"The crash graph is the one leadership is watching; why not fix it first?\" → PUSHBACK if search is ranked below crash without cohort evidence → diagnosis with sequencing.",
+      "Trap": "Loudest-signal trap → fixating on crash rate.",
+      "Defensible": "P1 repair search first, hotfix crashes in parallel; P2 hotfix crashes first because it is a 4-hour fix, then search (accepts delaying the larger lever by hours); both need the cohort comparison.",
+      "Reference trace": "crash share of drop = 2.1% × (3.20 − 0.80) = 0.050 of 0.20 points (25%); non-crash sessions explain the rest (0.979 × (3.20 − 3.047) = 0.15, 75%).",
+      "Pump": "\"Compare users who experienced the loud problem with users who did not before assigning blame.\"",
+      "Retry seeds": "crash and zero-result magnitudes swap in one seed."
+    }
+  },
+  {
+    "id": "RCA-M-2",
+    "title": "Delivery times rose three minutes yet every city got faster",
+    "level": "medium",
+    "minutes": 14,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "The average moved against the trend in each part / A new part joined the average / Defend what you will and will not change.",
+      "Scenario and goal": "DashRide (fictional delivery app). Average delivery time rose 30.4 → 33.4 minutes and refunds rose. Goal: decide whether to roll back recent platform changes.",
+      "Artifacts": "S locked: E1(1) overall time 30.4 → 33.4; E2(1) by city: A 28 → 27; B 34 → 33; C (launched this quarter) 52; E3(2) order mix: before A 60%, B 40%; after A 50%, B 32%, C 18%; E4(2) refund rate by city: A 1.0%, B 1.2%, C 4.5% (overall 1.1% → 1.7%); E5(2) courier density: C 0.8 couriers per km² vs 2.1 and 1.9; E6(2) dispatch algorithm test (10% holdout): no difference (red herring).",
+      "Run": "Branch: confirm the metric, then cut by city → PROBE \"Leadership wants the dispatch change rolled back; defend or reverse\" → PUSHBACK if the aggregate average is used for the decision → diagnosis → next action.",
+      "Trap": "Loudest-signal trap (aggregate edition): trusting the blended average.",
+      "Defensible": "P1 keep the platform change; fix City C operations (courier incentives, tighter delivery radius); P2 pause marketing in City C until courier density improves; P3 add a mix-adjusted KPI for leadership.",
+      "Reference trace": "before 0.6×28 + 0.4×34 = 30.4; after 0.5×27 + 0.32×33 + 0.18×52 = 33.42; mix shift, not degradation.",
+      "Pump": "\"Whenever an average moves, ask which groups entered or left it.\"",
+      "Retry seeds": "city shares and launch city size."
+    }
+  },
+  {
+    "id": "RCA-M-3",
+    "title": "Daily users are up 8% but week-one retention is down",
+    "level": "medium",
+    "minutes": 14,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "Growth and retention disagree / A product change shipped the same week / Defend what caused each movement.",
+      "Scenario and goal": "Chirp (fictional social app). DAU +8%; day-7 retention 31.0% → 24.4%. Goal: decide whether to revert last week's feed-ranking change.",
+      "Artifacts": "S locked: E1(1) retention by acquisition channel: organic 31% → 31%; promo channel 12%; E2(1) new-user mix: promo 0% → 35%; E3(2) feed-ranking experiment (10% holdout): D7 31.0% vs 30.8% (no difference); E4(1) notification volume: flat; E5(2) crash and latency: flat; E6(2) promo cost per install and quality notes.",
+      "Run": "Branch 1 rank hypotheses → evidence → PROBE \"The feed change is the most recent; why not revert?\" → PUSHBACK if acting before the channel split → diagnosis + next action.",
+      "Trap": "Loudest-signal trap → blaming the most recent product change.",
+      "Defensible": "P1 keep the feed change; report cohorts by channel; add a channel-quality guardrail; P2 cap the promo channel until onboarding for promo users is fixed.",
+      "Reference trace": "blended D7 = 0.65 × 31% + 0.35 × 12% = 24.35%.",
+      "Pump": "\"Check who is in the metric before checking what changed in the product.\"",
+      "Retry seeds": "promo share and promo retention."
+    }
+  },
+  {
+    "id": "RCA-H-1",
+    "title": "Drivers are leaving slowly in six cities",
+    "level": "hard",
+    "minutes": 22,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A slow decline with several suspects / The system is working as designed / Defend a cause only after you have a control.",
+      "Scenario and goal": "RideKo (fictional ride-hail; practice context Uber-style). 90-day driver retention fell gradually over three months across six cities. A redesigned payout screen shipped to a random 50% of drivers. Goal: decide between a UI rollback and a deeper incentive change.",
+      "Artifacts": "S locked (10 tokens): E1(1) 90-day retention trend; E2(3) treatment vs control: control 61.0% → 58.9% (−2.1); treatment 61.2% → 55.6% (−5.6); E3(2) competitor bonus cities (one third of drivers): control −3.4; other cities control −1.45; E4(1) fuel price index +11%: affects all; E5(1) support tickets \"where is my bonus\": 3× in treatment; E6(2) treatment drivers who opened the earnings-detail tab: −3.0 vs −7.4 who did not (selection bias warning); E7(1) tenure mix: flat.",
+      "Run": "Branch 1 hypotheses → Branch 2 evidence path → PIVOT \"The control group's data shows a 3-week lag in the competitor cities\" → PROBE \"How do you separate competitor effect from the screen?\" → PROBE \"Roll back or restructure?\" → PUSHBACK on causal claims without control → decision with success measure.",
+      "Trap": "Convenient-cause trap → blaming the latest change (or the competitor) without a control.",
+      "Defensible": "P1 fix the screen to show bonus accrual in real time and add a targeted incentive in the two competitor cities; P2 roll back the screen as a safe baseline while redesigning; P3 restructure incentives so bonus appears in the trip view (accepts a bigger change).",
+      "Reference trace": "screen effect = −5.6 − (−2.1) = −3.5 points; competitor effect ≈ −3.4 − (−1.45) = −1.95 points in those cities; fuel is absorbed by the control baseline; the earnings-tab card is a clue, not proof.",
+      "Pump": "\"Use the group that never saw the change to size the effect before choosing the fix.\"",
+      "Retry seeds": "effect sizes and competitor-city share."
+    }
+  },
+  {
+    "id": "RCA-H-2",
+    "title": "Customer satisfaction is sliding while resolution times improve",
+    "level": "hard",
+    "minutes": 22,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "One metric improved and another decays slowly / Automation changed who reaches a human / Defend the cause and what you will not \"fix\".",
+      "Scenario and goal": "HelpDesk (fictional support platform). CSAT fell 4.44 → 4.26 over four months; resolution time improved 14.0 → 9.5 hours. A support bot launched in month two and reports 38% containment. Goal: diagnose and recommend.",
+      "Artifacts": "S locked: E1(1) CSAT trend; E2(2) CSAT by complexity: simple 4.65 (stable), complex 3.70 (stable); E3(2) complex-ticket share 22% → 41%; E4(2) bot containment 38% reported; 30% of \"contained\" chats recontact within 48 hours; E5(2) new-agent cohort (under 90 days) CSAT 4.0 vs 4.5 (partial factor); E6(1) refund policy change: flat (red herring); E7(1) seasonal sale volume: modest.",
+      "Run": "Branch 1 hypotheses → Branch 2 evidence → PIVOT \"Finance tells you the bot saves $210k per quarter; leadership wants it expanded\" → PROBE \"Do you switch the bot off?\" → PROBE \"What would you report instead of CSAT?\" → decision.",
+      "Trap": "Convenient-cause trap → blaming agent training or the bot itself.",
+      "Defensible": "P1 keep the bot; report CSAT by complexity and recontact-adjusted containment; invest in complex-ticket handling; P2 narrow the bot's scope until recontact falls; P3 add a handoff-quality guardrail.",
+      "Reference trace": "blended CSAT before 0.78 × 4.65 + 0.22 × 3.70 = 4.44; after 0.59 × 4.65 + 0.41 × 3.70 = 4.26; true containment = 38% × (1 − 0.30) = 26.6%.",
+      "Pump": "\"Check whether the group being measured changed before deciding the experience changed.\"",
+      "Retry seeds": "share of complex tickets and recontact rate."
+    }
+  },
+  {
+    "id": "RCA-H-3",
+    "title": "Revenue per paying user is eroding by 7%",
+    "level": "hard",
+    "minutes": 22,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A revenue ratio slides with four suspects / Some causes are healthy / Defend which to act on and which to leave alone.",
+      "Scenario and goal": "NoteWise (fictional SaaS). Average revenue per paying user (ARPPU) fell from $14.20 to $13.21 in five months. Goal: decide what to fix.",
+      "Artifacts": "S locked: E1(1) ARPPU trend; E2(3) price-volume-mix decomposition: FX −$0.28; plan mix −$0.31; promotions −$0.25; seat contraction −$0.15 (sum −$0.99); E3(1) FX: two markets bill in EUR and GBP; E4(1) plan mix: annual share 22% → 34%; E5(2) 12-month retention: annual 84% vs monthly 61%; E6(2) promotion redemptions: legacy 40%-off code still active; E7(2) seat contraction: concentrated in teams over 20 seats.",
+      "Run": "Branch 1 hypotheses → Branch 2 evidence → PIVOT \"The CFO wants ARPPU back to $14.20 by quarter end\" → PROBE \"Which of these causes is actually bad?\" → PROBE \"What metric replaces ARPPU?\" → decision.",
+      "Trap": "Single-cause trap → treating every decline as a problem or naming one cause.",
+      "Defensible": "P1 act on promotion leakage and seat contraction; accept FX and annual-plan mix; P2 add a cohort-LTV view alongside ARPPU; P3 renegotiate currency pricing (accepts customer friction).",
+      "Reference trace": "14.20 − 13.21 = 0.99 = 0.28 + 0.31 + 0.25 + 0.15; annual mix lowers ARPPU but raises retention (84% vs 61%), so it is partly healthy.",
+      "Pump": "\"Decompose the movement into parts before judging whether it is good or bad.\"",
+      "Retry seeds": "component sizes; a seed where mix shift is harmful."
+    }
+  },
+  {
+    "id": "STR-E-1",
+    "title": "Students churn at re-verification: cut price or something else?",
+    "level": "easy",
+    "minutes": 9,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A discounted tier loses members at one moment / More than one cause is hiding in the churn / Defend which lever you pull.",
+      "Scenario and goal": "Streamly (fictional music service; Spotify's published student rules, S23, are the real structure: up to 4 years, re-verify every 12 months, plan converts afterwards). Goal: raise revenue from the student tier.",
+      "Artifacts": "S student price $5.99 vs standard $11.99 (illustrative, not current Spotify pricing). S student base 1.0M. S churn by tenure: about 1.2% per month, spiking to 22% at the 12-month re-verification. S locked: E1(1) exit survey of re-verification churners: lapsed re-verification (could not or did not verify) 41%, price 24%, graduated 21%, switched service 14%; E2(2) test: a $4.99 price cut reduces spike churn by 2.5 points; E3(2) cost to serve and ARPU by tier; E4(1) competitor student pricing (similar).",
+      "Run": "RF 3 MCQ (retention vs revenue, why timing of churn matters, what a segment-level lever is) → clarify the goal → evidence → options (cut price / add a value feature / smooth re-verification and add a graduation offer / do nothing) → decision with trade-off.",
+      "Trap": "Discount reflex → cutting price without testing which cause drives churn.",
+      "Defensible": "P1 fix re-verification friction (reminders, grace period) plus a graduation offer; P2 a value-add bundle with a test (accepts delay and build cost); P3 a targeted price cut only for price-cited churners (accepts leakage).",
+      "Reference trace": "spike churners = 220,000; lapsed re-verification = 41% = about 90,000; saving half = 45,000 users × $71.88/year = $3.24M with no price cost. Price cut to $4.99: 25,000 users saved × $59.88 = $1.50M, but 805,000 retained users × $12 = $9.66M lost.",
+      "Pump": "\"Split the churn by cause before choosing a lever.\"",
+      "Retry seeds": "share of lapsed verification 25–50%; price elasticity."
+    }
+  },
+  {
+    "id": "STR-E-2",
+    "title": "When should the paywall appear?",
+    "level": "easy",
+    "minutes": 9,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "One decision, three timings / A high conversion rate can hide a small audience / Defend an overall result, not a flattering percentage.",
+      "Scenario and goal": "LinguaLoop (fictional language app). Goal: raise free-to-paid conversion with one lever: paywall timing.",
+      "Artifacts": "S locked: E1(1) Day-1 paywall: shown to 100%; conversion 4.1%; D30 retention 18%; E2(1) After lesson 3: 62% reach it; conversion among them 9.0%; D30 retention 22%; E3(1) After a 7-day streak: 31% reach it; conversion among them 14.0%; E4(2) revenue per paid user is equal across options; E5(2) support cost differences: none.",
+      "Run": "RF 3 MCQ (conditional vs overall rate; denominator; what retention tells you) → clarify goal → evidence → decision with trade-off and a test plan.",
+      "Trap": "Generic growth answer → picking the highest conversion percentage (14.0%) without the audience size.",
+      "Defensible": "P1 after lesson 3 (overall 5.58%); P2 a hybrid: soft prompt at lesson 3, hard paywall after the streak (accepts complexity); P3 stay Day-1 for a revenue floor (accepts lower retention).",
+      "Reference trace": "overall conversion: Day-1 4.1%; lesson 3: 0.62 × 9.0% = 5.58%; streak: 0.31 × 14.0% = 4.34%.",
+      "Pump": "\"Multiply the rate by the share of people who ever see it.\"",
+      "Retry seeds": "reach and conversion values."
+    }
+  },
+  {
+    "id": "STR-E-3",
+    "title": "Raise the take rate for new sellers?",
+    "level": "easy",
+    "minutes": 9,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A fee increase helps this quarter / Supply today is tomorrow's top sellers / Defend a fee decision with a number and a risk.",
+      "Scenario and goal": "BazaarKo (fictional marketplace). Goal: raise revenue by adjusting the take rate for new sellers from 10% to 12%.",
+      "Artifacts": "S competitor take rates 8%, 12%, 15%. S new sellers generate 18% of GMV. S locked: E1(1) a 2-point increase cut new-seller activation by 9% in a limited test; E2(2) 55% of top-5% sellers began in the last two years; E3(1) top 5% of sellers produce 40% of GMV; E4(2) seller survey: fee fairness ranks below payout speed.",
+      "Run": "RF 3 MCQ → clarify goal (this quarter vs year) → evidence → options (raise for all new / raise with tiers by GMV / keep and improve payout speed) → decision.",
+      "Trap": "Generic growth answer → raising fees because competitors charge more.",
+      "Defensible": "P1 tiered take rate (accepts complexity); P2 keep 10% for new sellers and add paid services (accepts slower revenue); P3 raise to 12% with a grace period for the first 90 days.",
+      "Reference trace": "baseline revenue = 0.82 × 10% + 0.18 × 10% = 10.0% of GMV; after: new-seller GMV 0.18 × 0.91 = 0.1638; revenue = 0.082 + 0.1638 × 12% = 10.17% of GMV (+1.7%). The gain is small against a pipeline risk (55% of tomorrow's top sellers are today's new sellers).",
+      "Pump": "\"Put the gain and the long-term risk in the same units.\"",
+      "Retry seeds": "activation drop 5–15%."
+    }
+  },
+  {
+    "id": "STR-M-1",
+    "title": "A rival adds a concierge: match, copy or pivot?",
+    "level": "medium",
+    "minutes": 14,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A competitor changed the luxury offer / Demand data points two ways / Defend a position, not a reaction.",
+      "Scenario and goal": "StayLoft (fictional rental platform; practice context Airbnb-style). Luxury share fell from 31% to 28% in a quarter after a rival launched a curated concierge service. Goal: protect luxury profitability for the next year.",
+      "Artifacts": "S luxury is 22% of GMV; luxury bookings −4.5% quarter on quarter; S rival price premium +12%; rival NPS 62 vs ours 48; S locked: E1(2) search data: itinerary and concierge queries on luxury listings +60%; conversion from those searches 1.8% vs 3.1% overall; E2(2) cancellations 9.5% vs 6.1% a year ago; E3(2) unit economics: average luxury booking $2,400; take 14% = $336; concierge partner cost $85 per booking; test uplift in conversion +0.9 point; E4(2) host survey: 40% of top hosts would offer concierge-lite for a fee; E5(1) rival coverage: 6 destinations only.",
+      "Run": "Branch 1 goal clarification (share vs profit) → Branch 2 evidence order → Branch 3 position (match price / concierge layer / pivot segment) → PROBE \"The rival covers six destinations; where do you not compete?\" → PUSHBACK if copying the rival fully → decision.",
+      "Trap": "Copycat trap → matching the rival feature for feature.",
+      "Defensible": "P1 concierge-lite via hosts in the top destinations (accepts quality variance); P2 pivot to long-stay luxury (accepts smaller TAM); P3 hold price, fix cancellations first (accepts share loss).",
+      "Reference trace": "concierge adds $85 cost to a $336 take (25%); at a +0.9-point conversion uplift on a 1.8% base (+50% relative) the economics are favourable only in destinations where the rival is present; sequence by overlap.",
+      "Pump": "\"Show why the lever works in this market, not just that it exists.\"",
+      "Retry seeds": "rival coverage and partner cost vary."
+    }
+  },
+  {
+    "id": "STR-M-2",
+    "title": "Launching a streamer where local telcos own distribution",
+    "level": "medium",
+    "minutes": 14,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A global service enters a market with strong gatekeepers / Payment and language limit the obvious route / Defend a segment and a route to them.",
+      "Scenario and goal": "StreamNest (fictional) enters Country N. Goal: the clarification phase decides: raw subscriber growth or early profitability.",
+      "Artifacts": "S two telcos hold 88% of mobile subscriptions; S 18% of adults have a card, 62% use a mobile wallet; S 70% of viewing is local-language; S locked: E1(2) telco bundle wholesale ARPU $0.35/month vs direct price $2.00; E2(2) local competitor churn 6%/month; E3(2) piracy share of viewing 45%; E4(2) sports and local-film rights costs; E5(1) wallet integration time: 10 weeks; E6(2) price sensitivity test: $1 plan converts 3× the $2 plan.",
+      "Run": "Branch 1 goal → Branch 2 evidence order (what you pull first is scored) → Branch 3 route (telco bundle / wallet-direct mobile-only plan / local partner) → PROBE \"A telco asks for exclusivity; do you accept?\" → PUSHBACK on generic \"localise and market\" → decision with trade-off.",
+      "Trap": "Generic growth answer → \"aggressive marketing and localisation\".",
+      "Defensible": "P1 mobile-only wallet plan targeted at a segment, with a limited telco pilot; P2 telco bundle for reach (accepts low ARPU and dependence); P3 niche land grab in one language or genre (accepts small scale).",
+      "Reference trace": "telco route trades $2.00 for $0.35 (−82.5%) but removes the 18% card barrier; wallet route addresses 62%.",
+      "Pump": "\"Name the constraint that makes your lever work here and nowhere else.\"",
+      "Retry seeds": "card and wallet shares; telco exclusivity terms."
+    }
+  },
+  {
+    "id": "STR-M-3",
+    "title": "An AI-native rival is winning the mid-market",
+    "level": "medium",
+    "minutes": 14,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A new rival wins one tier of customers / The incumbent's strengths sit in another tier / Defend where to fight.",
+      "Scenario and goal": "TaskForge (fictional project-management SaaS). Mid-market win rate fell from 33% to 22% against an AI-native rival offering a free tier. Goal: protect growth for the next two quarters.",
+      "Artifacts": "S mid-market (10–200 seats): ARPA $9k, 46% of new ARR; enterprise ARPA $85k with a stable 41% win rate; S locked: E1(2) win/loss: 38% of lost deals cite price and AI automation; E2(2) integrations and compliance requirements appear in 70% of enterprise wins; E3(2) AI feature build: 4 months, $1.2M; E4(2) rival free tier converts 4% to paid; E5(1) our free-trial conversion 11%.",
+      "Run": "Branch 1 goal → Branch 2 evidence → Branch 3 position (build AI features broadly / unbundle a freemium tier / defend enterprise and moat) → PROBE \"What if the free tier removes your price premium?\" → decision.",
+      "Trap": "Copycat trap → feature parity chase.",
+      "Defensible": "P1 ship two targeted automations for the mid-market and defend enterprise; P2 freemium tier (accepts margin dilution); P3 retreat upmarket (accepts losing 46% of new ARR).",
+      "Reference trace": "expected new ARR at risk = 46% of new ARR; price-and-AI lost deals 38%; targeted automations cost less than the full build.",
+      "Pump": "\"State what you will deliberately not build.\"",
+      "Retry seeds": "win rates and costs."
+    }
+  },
+  {
+    "id": "STR-H-1",
+    "title": "AI answers help users and starve publishers",
+    "level": "hard",
+    "minutes": 22,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A feature that users like weakens the sources it relies on / Three pressures cannot all be satisfied / Defend a sequence and what you give up.",
+      "Scenario and goal": "AskLens (fictional search product; practice context Google-style). AI answers improve user satisfaction but reduce clicks to publishers. Goal: choose a strategy that balances user value, publisher health and regulatory pressure.",
+      "Artifacts": "R A1 Pew Research Center (S16): users clicked a traditional result in 8% of visits with an AI summary vs 15% without; clicked a cited source in 1% of visits; ended the session 26% vs 16% (the company in that study disputed the method). S internal: publisher referral traffic −18% on AI-answer queries; satisfaction +9 points; regulator inquiry opened. S locked: E1(2) high-value queries (health, finance, news) = 14% of volume but 40% of publisher revenue; E2(2) test: inline citation redesign raises source clicks from 1% to 4% at −1 point satisfaction; E3(2) licence-pool cost estimate; E4(2) throttled rollout lets you gather ecosystem data in 8 weeks; E5(3) regulator timeline: 6 months.",
+      "Run": "Branch 1 goal → Branch 2 evidence → PIVOT \"A large publisher group threatens to block your crawler\" → PROBE \"What would make you limit AI answers?\" → PROBE \"Why not just pay?\" → PUSHBACK on single-lever answers → decision with sequencing and kill-criteria.",
+      "Trap": "Ecosystem blindness (false binary: maximise answers or protect publishers).",
+      "Defensible": "P1 redesign citations plus limit AI answers on high-value queries; P2 throttle rollout and gather ecosystem data (accepts delay and regulator risk); P3 a licensing programme with usage-based payment (accepts cost).",
+      "Reference trace": "high-value queries are 14% of volume and 40% of publisher revenue, so limiting only there protects the most revenue with the smallest user-value loss; citations at 4% clicks are still far below the 15% non-AI baseline.",
+      "Pump": "\"Show the sequence: which move buys information, which buys goodwill, which buys time.\"",
+      "Retry seeds": "share of high-value queries; regulator timeline."
+    }
+  },
+  {
+    "id": "STR-H-2",
+    "title": "A minimum-pay rule hits the biggest market",
+    "level": "hard",
+    "minutes": 22,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A rule raises the cost of the core market / Every response changes demand, supply or politics / Defend a package, not a single move.",
+      "Scenario and goal": "RideKo (fictional) faces a minimum driver-pay rule in Country R (fictional) that raises cost per trip by 14%. Country R is 38% of revenue and 44% of profit. Goal: keep a viable business there.",
+      "Artifacts": "S locked: E1(2) price elasticity −0.9; E2(2) driver supply responds to pay: +10% pay brings +6% supply; E3(2) rival Mobo is not yet subject to the rule; E4(2) low-density hours and zones lose money under the rule; E5(3) investors expect profit growth; E6(2) rider wait times already 6.5 minutes in suburbs.",
+      "Run": "Branch 1 goal → Branch 2 evidence → PIVOT \"The rule extends to bonuses; incentive budgets now count toward the minimum\" → PROBE \"Do you raise fares 14%?\" → PROBE \"Which zones do you exit?\" → decision with kill-criteria.",
+      "Trap": "False binary → \"comply fully\" vs \"exit\".",
+      "Defensible": "P1 partial fare rise, trim low-density service, reallocate incentives; P2 absorb cost for a year to defend share (accepts profit hit); P3 narrow service to the most profitable zones (accepts reach loss).",
+      "Reference trace": "a 14% cost rise passed through at elasticity −0.9 implies about −12.6% volume if fully passed to price; partial pass-through plus zone trimming balances profit and volume.",
+      "Pump": "\"Compute the effect of each lever on volume and profit before ranking them.\"",
+      "Retry seeds": "elasticity and share of profit."
+    }
+  },
+  {
+    "id": "STR-H-3",
+    "title": "A wallet's three growth paths all depend on one another",
+    "level": "hard",
+    "minutes": 22,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "Three attractive moves require each other / A fee cap shrinks the margin on all of them / Defend the order of moves.",
+      "Scenario and goal": "FinWallet (fictional super-app wallet). Goal: choose the next 12 months among lending, merchant payments and bill pay.",
+      "Artifacts": "S locked: E1(2) merchant fee cap 0.5%; average merchant processes $2,400/month → $12 revenue; acquisition cost $38 → payback 3.2 months; E2(2) lending licence takes 9–12 months and needs merchant cash-flow data; E3(2) bill pay drives frequency (weekly use) but margin near zero; E4(2) partner bank concentration: 70% of float with one bank; E5(3) regulator may tighten wallet-to-wallet transfer rules; E6(2) churn of merchants without lending: 3%/month.",
+      "Run": "Branch 1 goal (growth vs profit) → Branch 2 evidence → PIVOT \"The partner bank raises its fee by 30%\" → PROBE \"What do you stop doing?\" → PROBE \"How do you avoid depending on one bank?\" → decision with sequence.",
+      "Trap": "False binary / ecosystem blindness → choosing one path in isolation.",
+      "Defensible": "P1 merchant payments first, bill pay as an acquisition hook, lending prepared on merchant data (sequenced); P2 bill pay first for frequency (accepts delayed profit); P3 apply for the lending licence immediately in parallel (accepts focus risk).",
+      "Reference trace": "payback 38 ÷ 12 = 3.2 months supports merchant acquisition; lending requires merchant data and 9–12 months, so the sequencing dependency drives the order.",
+      "Pump": "\"Draw the dependency between moves; the order often matters more than the choice.\"",
+      "Retry seeds": "fee cap and bank terms."
+    }
+  },
+  {
+    "id": "AIT-E-1",
+    "title": "Live translation: three seconds or instant?",
+    "level": "easy",
+    "minutes": 9,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A traveller needs a reply now / Quality and speed pull in opposite directions / Defend the choice and how you would prove it works.",
+      "Scenario and goal": "PM for a travel translation feature. Goal: pick the model setup for tourists in short conversations.",
+      "Artifacts": "S Model A (large): 94% semantic accuracy, 3.0 s median response. Model B (distilled): 88% accuracy, 0.4 s. S locked: E1(1) test with 40 tourists: sessions with replies slower than 1.5 s were abandoned 38% vs 9%; E2(1) phrase categories: menus and directions 80% of use; medical or pharmacy phrases 5%; E3(2) error severity: menus S3; directions S2; medical S1; E4(2) cost per 1,000 translations: A $1.80, B $0.30.",
+      "Run": "RF 3 MCQ (latency vs throughput; what a median hides; why error severity matters) → clarify user → component drop (A, B, or B plus verify-with-A for S1 categories) → define test (metric, threshold) → decision.",
+      "Trap": "Tech-first trap → choosing the large model because it is more accurate.",
+      "Defensible": "P1 B by default with a \"double-check\" action routed to A for S1 phrases; P2 B only with a clear accuracy disclaimer (accepts S1 exposure); P3 A with streaming partial output to hide latency (accepts cost).",
+      "Reference trace": "abandonment 38% vs 9% beyond 1.5 s; 88% accuracy on S2/S3 categories is acceptable; test: task-completion rate, repeat-ask rate, error-report rate; threshold: repeat-ask ≤ 15%.",
+      "Pump": "\"Translate a user's patience into a latency number before choosing a model.\"",
+      "Retry seeds": "accuracy gap and latency values."
+    }
+  },
+  {
+    "id": "AIT-E-2",
+    "title": "A shop assistant whose answers change hourly",
+    "level": "easy",
+    "minutes": 9,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "Stock levels change every hour / The assistant should talk like the brand / Defend how it gets its facts.",
+      "Scenario and goal": "PM for a retail chat assistant that answers \"is this in stock at my store?\". Goal: choose between retrieval and fine-tuning for stock facts.",
+      "Artifacts": "S fine-tune run costs $4,000 and takes 2 days; inventory changes every hour; S retrieval via the inventory API adds 250 ms and $0.002 per question; S locked: E1(1) brand tone guide exists (200 examples); E2(1) wrong-stock answers produce store visits that fail: complaint cost $6 per incident; E3(2) 15% of questions are about policy (returns), which changes monthly; E4(2) API reliability 99.5%.",
+      "Run": "RF 3 MCQ → clarify user need → component drop (retrieval for stock / fine-tune for tone / both) → define evaluation (accuracy on stock questions; stale-answer rate) → decision.",
+      "Trap": "Tech-first trap → fine-tuning facts that change faster than the training cycle.",
+      "Defensible": "P1 retrieval for stock and policy; light tone via system prompt; P2 small tone fine-tune plus retrieval (accepts cost); P3 retrieval with a fallback message when the API fails.",
+      "Reference trace": "stock changes hourly vs a 2-day fine-tune cycle → stale; retrieval gives fresh facts; evaluation: stale-answer rate < 1% on a 300-question set; fallback when API is down (0.5% of time).",
+      "Pump": "\"Match how fast the fact changes to how fast the system can learn.\"",
+      "Retry seeds": "change frequency and API reliability."
+    }
+  },
+  {
+    "id": "AIT-E-3",
+    "title": "On-device or cloud for tagging kids' photos?",
+    "level": "easy",
+    "minutes": 9,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "Photos of children are sensitive / Phones differ widely in power / Defend where the model runs.",
+      "Scenario and goal": "PM for a family photo app adding auto-tagging. Goal: choose on-device or cloud inference.",
+      "Artifacts": "S cloud model 91% accuracy; on-device 82%; battery drain 3% per 100 photos on-device; older phones (30% of users) run it 4× slower; S locked: E1(1) survey: 71% of parents say they would not upload children's photos to a new cloud feature; E2(1) tag errors: wrong name tags rated annoying not harmful; E3(2) cloud cost $0.40 per 1,000 photos; E4(2) regulatory view: children's data triggers stricter consent rules.",
+      "Run": "RF 3 MCQ → clarify → component drop (on-device / cloud / hybrid with opt-in) → define test (accuracy threshold, battery, opt-in rate) → decision.",
+      "Trap": "Tech-first trap → choosing the more accurate cloud model despite the dominant privacy requirement.",
+      "Defensible": "P1 on-device default with opt-in cloud boost; P2 on-device only for children's albums; P3 cloud with explicit consent (accepts adoption loss).",
+      "Reference trace": "dominant requirement = privacy; accuracy 82% on a low-severity task is acceptable; battery 3% per 100 photos implies batch charging-time processing.",
+      "Pump": "\"Let the single dominant user requirement break the tie.\"",
+      "Retry seeds": "privacy survey figure and accuracy gap."
+    }
+  },
+  {
+    "id": "AIT-M-1",
+    "title": "A medical scribe with a hard safety floor",
+    "level": "medium",
+    "minutes": 15,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "Speed and cost are limited, errors in some fields are not / \"1% error\" means different things / Defend a configuration and how you will prove it.",
+      "Scenario and goal": "PM for a clinical note scribe. Constraint: at most 1% error on critical medications; budget $0.25 per visit; note ready within 8 seconds. Goal: choose the cheapest, fastest configuration that stays under the safety floor.",
+      "Artifacts": "R published studies show error rates depend on how they are counted: sentence-level hallucination 1.47% and omission 3.45% in one framework (S19); one audit found about one note in three with a verified failure (S20); omission is the most common type (S21). S configurations: A large model, full note: 0.6% medication error, 14 s, $0.42; B mid-size model + structured medication extraction + clinician confirmation: 0.9% before confirmation, 6 s, $0.18; C small model: 2.4%, 2 s, $0.05. S locked: E1(2) clinician confirmation: 85% of clinicians confirm; confirmation catches 90% of errors; E2(2) audit sample: 900 medication mentions; E3(2) severity: wrong dose S1; omitted allergy S1; wording S3.",
+      "Run": "Branch 1 define \"error\" (per entity, per sentence, per note) → Branch 2 configuration → Branch 3 validation plan → PROBE \"How many tests do you need to claim under 1%?\" → PUSHBACK if aggregate error is used → decision with hallucination budget by section.",
+      "Trap": "Average-metric trap → one aggregate error rate that hides critical medications.",
+      "Defensible": "P1 configuration B with mandatory confirmation for medications and allergies; P2 A for medication sections only, B for narrative (accepts complexity); P3 C for draft with full human edit (accepts clinician workload).",
+      "Reference trace": "B net error = 0.9% × (1 − 0.85 × 0.90) = 0.9% × 0.235 = 0.21% (still 0.5% if only 50% confirm); A fails cost ($0.42 > $0.25) and latency (14 s > 8 s); C fails safety (2.4%). Rule of three: 0 errors in n trials supports an upper bound of about 3/n, so to support under 1% you need about 300 error-free medication mentions.",
+      "Pump": "\"Define the error unit and population before you argue about the rate.\"",
+      "Retry seeds": "confirmation rates and costs."
+    }
+  },
+  {
+    "id": "AIT-M-2",
+    "title": "A support copilot with three goals fighting",
+    "level": "medium",
+    "minutes": 15,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "Cost, speed and quality sit in tension / Customer data must not leak / Defend a routing design.",
+      "Scenario and goal": "PM for a support copilot that drafts replies. Goals: cost under $0.30 per ticket, reply drafts within 4 seconds (p95), and CSAT not lower than today.",
+      "Artifacts": "S 60% simple tickets, 40% complex; S models: large $0.12 per ticket with p95 5.5 s; small $0.02 with p95 1.8 s; router $0.005, misroutes 8% of complex tickets to the small model; S locked: E1(2) PII appears in 22% of tickets; E2(2) refunds above $100 require human approval; E3(2) pilot: small-model drafts on complex tickets cut CSAT by 0.4; E4(1) streaming reply display makes 5.5 s feel faster.",
+      "Run": "Branch 1 routing design → Branch 2 guardrails → Branch 3 evaluation → PROBE \"What happens to misrouted tickets?\" → PUSHBACK if redaction is missing → decision.",
+      "Trap": "Tech-first trap → picking the biggest model for everything or the cheapest for everything.",
+      "Defensible": "P1 router plus PII redaction before the model plus human approval for refunds; P2 small model first with escalate-on-low-confidence (accepts latency); P3 large for all complex tickets with streaming (accepts cost).",
+      "Reference trace": "blended cost = 0.6 × 0.02 + 0.4 × 0.12 + 0.005 = $0.065 (well under $0.30); misroutes = 0.4 × 8% = 3.2% of tickets; budget is not binding, quality and privacy are.",
+      "Pump": "\"Find which constraint actually binds before optimising the others.\"",
+      "Retry seeds": "share of complex tickets; misroute rate."
+    }
+  },
+  {
+    "id": "AIT-M-3",
+    "title": "Search relevance with a 300 ms budget",
+    "level": "medium",
+    "minutes": 15,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A smarter ranker is slower and costlier / Many queries repeat / Defend where the smart part runs.",
+      "Scenario and goal": "PM for an e-commerce search. Goal: improve relevance within p95 latency of 300 ms and sensible cost.",
+      "Artifacts": "S retrieval p95 120 ms; cross-encoder rerank of top 30 adds 90 ms and +4.1% NDCG at $0.08 per 1,000 queries; LLM rerank adds 900 ms and +6.3% NDCG at $2.10 per 1,000; S locked: E1(2) top 20% of queries produce 65% of traffic; E2(2) catalogue changes daily; E3(2) users abandon above 2 s; E4(1) A/B test capacity: 2 weeks.",
+      "Run": "Branch 1 option (cross-encoder / LLM / hybrid) → Branch 2 caching strategy → Branch 3 test plan → PROBE \"How do you ship the LLM benefit without the latency?\" → decision.",
+      "Trap": "Tech-first trap → LLM rerank on every query.",
+      "Defensible": "P1 precompute LLM reranks for head queries daily and use the cross-encoder online for the tail; P2 cross-encoder only (accepts smaller uplift); P3 LLM rerank asynchronously for tail with later refresh (accepts complexity).",
+      "Reference trace": "hybrid uplift = 0.65 × 6.3% + 0.35 × 4.1% = 5.53%; online latency 120 + 90 = 210 ms (< 300); online cost 0.35 × $0.08 = $0.028 per 1,000 plus offline batch.",
+      "Pump": "\"Move expensive work off the request path when many requests repeat.\"",
+      "Retry seeds": "head/tail split and latencies."
+    }
+  },
+  {
+    "id": "AIT-H-1",
+    "title": "The assistant is inventing fees in one region",
+    "level": "hard",
+    "minutes": 24,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A fix in one place can break another / Money statements are high-severity / Defend isolation vs rollback and a shutdown rule.",
+      "Scenario and goal": "PayPilot (fictional fintech assistant). Goal: stop wrong-fee statements without wrecking the rest of the product.",
+      "Artifacts": "S Region R: 6.2% of fee answers wrong (1,840 audited); elsewhere 0.4% (9,200 audited); 38 complaints per day; regulator notification threshold: material misstatement to 100 or more customers in 72 hours; S locked: E1(2) cause: Region R fee table updated yesterday; retrieval index stale; E2(2) larger model reduces Region R errors to 1.1% but adds 2.1 s p95 latency and 3.1× cost globally; E3(2) deterministic fee lookup (no model) for fee questions: 2 engineer-days; E4(2) rollback of the global version loses two new features and the fix for another bug; E5(2) 11% of Region R users who saw a wrong fee proceeded with a transfer; E6(2) monitoring: a judge model can grade fee answers on a rolling sample.",
+      "Run": "Branch 1 isolate/rollback/larger model → Branch 2 segment priority → PIVOT \"The larger model deploy shows latency spikes in all regions and support queues double\" → PROBE \"Where is the auto-shutdown threshold and why?\" → PROBE \"Who do you notify, and when?\" → PUSHBACK on a global fix for a local fault → decision with thresholds.",
+      "Trap": "Fix-forward cascade trap → a global model swap for a regional data fault.",
+      "Defensible": "P1 feature-flag Region R, route fee questions to deterministic lookup globally, fix the index; P2 roll back the global version (accepts feature loss); P3 isolate and keep the larger model only for Region R (accepts cost there).",
+      "Reference trace": "fault is data staleness; deterministic lookup removes the model from the risky path; auto-shutdown: if wrong-fee rate ≥ 1.5% over a rolling 200-answer audit sample in any region (about 4× the 0.4% baseline and below the point where the notification threshold is reached), switch that region to deterministic lookup and page on-call; notification clock: 72 hours.",
+      "Pump": "\"Fix the layer where the fault lives; keep the blast radius equal to the damage radius.\"",
+      "Retry seeds": "error rates and cost multipliers."
+    }
+  },
+  {
+    "id": "AIT-H-2",
+    "title": "An agent that can spend money",
+    "level": "hard",
+    "minutes": 24,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "An assistant can act, not only answer / Some actions can be undone, some cannot / Defend which actions need a human.",
+      "Scenario and goal": "BookBuddy (fictional travel agent). Goal: set the autonomy policy for an agent that can search, hold, message vendors and purchase.",
+      "Artifacts": "S 50,000 purchases attempted per day; 12% of sessions touch untrusted web pages; red-team: 3 of 200 injected pages (1.5%) triggered an unauthorised action; S locked: E1(2) action reversibility: search and hold (reversible, 15-minute hold); purchase under $200 (refundable 24 h); purchase over $200 (non-refundable for 40% of airline tickets); E2(2) average ticket $320; 30% of unauthorised actions are purchases; E3(2) confirmation steps reduce conversion by 6% each; E4(2) allow-listed domains reduce injection exposure by 80%; E5(2) cost of a human confirmation: $0.04.",
+      "Run": "Branch 1 autonomy tiers → Branch 2 mitigations → PIVOT \"A new attack bypasses the allow-list in a test\" → PROBE \"Which action never runs without a human?\" → PROBE \"What is your acceptable loss per day?\" → decision with a monitoring rule.",
+      "Trap": "Tech-first trap → maximising autonomy because the demo is impressive.",
+      "Defensible": "P1 tiers by reversibility and value: free autonomy for search and hold, confirmation for non-refundable or over $50, plus allow-lists and an action log; P2 confirm every purchase (accepts conversion loss); P3 limit to fares with free cancellation (accepts a smaller catalogue).",
+      "Reference trace": "unmitigated unauthorised actions per day = 50,000 × 12% × 1.5% = 90; purchases 27; expected exposure = 27 × $320 × 40% non-refundable = about $3,456 per day; allow-lists cut exposure by 80%; confirmation on non-refundable purchases removes most of the remainder.",
+      "Pump": "\"Tie each action's autonomy to how reversible it is and how much it can cost.\"",
+      "Retry seeds": "injection rate; share non-refundable."
+    }
+  },
+  {
+    "id": "AIT-H-3",
+    "title": "Monday 8 a.m.: 10,000 clinicians at once",
+    "level": "hard",
+    "minutes": 24,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "The system is built for fewer users than will arrive / Not every part of a note is equally risky / Defend what you degrade and what you protect.",
+      "Scenario and goal": "The medical scribe from AIT-M-1 launches to a health network. Capacity at full quality: 6,500 concurrent sessions; expected peak 10,000. Goal: decide the degrade policy.",
+      "Artifacts": "S locked: E1(2) note sections: medications and allergies (S1), assessment and plan (S2), narrative history (S2/S3), billing suggestions (advisory); E2(2) smaller model handles narrative with 3% acceptable edit rate; E3(2) async note finalisation allowed within 10 minutes; E4(2) queueing: wait over 90 s makes clinicians abandon; E5(2) retrieval of clinic templates vs fine-tune for tone; E6(2) hallucination budget workshop outcomes from clinicians.",
+      "Run": "Branch 1 degrade vs queue vs outage → Branch 2 hallucination budget by section → PIVOT \"The template retrieval service fails at 8:10\" → PROBE \"Retrieval or fine-tuning for clinic style?\" → PROBE \"What is your kill-switch?\" → decision with thresholds.",
+      "Trap": "Tech-first trap / fix-forward cascade → buying capacity or a bigger model instead of protecting what matters.",
+      "Defensible": "P1 keep full quality for S1 sections, route narrative to a smaller model, finalise asynchronously; P2 queue with an honest wait time for non-urgent clinics (accepts abandonment); P3 staged rollout by clinic (accepts delay).",
+      "Reference trace": "demand/capacity = 10,000 ÷ 6,500 = 1.54×; moving narrative (about 60% of load, assumed) to a model costing a third as much brings load under capacity; template style by retrieval because templates change quarterly; kill-switch: medication-section error rate in sampled audits above the budget triggers deterministic form entry.",
+      "Pump": "\"Degrade the part with the lowest severity first, and say so out loud.\"",
+      "Retry seeds": "peak and capacity values."
+    }
+  },
+  {
+    "id": "BEH-E-1",
+    "title": "You disagreed with a designer about feature placement",
+    "level": "easy",
+    "minutes": 9,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "Two good ideas, one screen / The disagreement is about users, not people / Be ready to say exactly what you did and what you learned.",
+      "Scene": "A design review. The designer wants the \"Share\" button moved into a menu. You believe it will reduce use. Choices: A) ask to look at usage data together first; B) propose a quick test of both placements; C) go with the designer and revisit later.",
+      "Story prompt": "\"Tell me about a time you disagreed with a designer or an engineer about how something should work.\"",
+      "Probes by scene choice": "A → \"What data did you look at and what did it say?\"; B → \"How did you decide the test was fair?\"; C → \"What made you let it go, and what happened?\" Standard: \"What did you say first?\" \"What did you learn about working with them?\"",
+      "Signals": "one clear disagreement; the user's own moves; evidence used; a result; a learning applied later.",
+      "Trap": "We-washing → every action stated as \"we\".",
+      "Defensible stories": "resolved by data; by a test; by a compromise; by deferring with a defined review date.",
+      "Reference trace (shape, not a script)": "situation with stakes (launch in 3 weeks) → \"I asked for the click data on Share by placement\" → \"I proposed a 5% test\" → result: share rate 7.8% vs 6.1% → \"I now ask for the decision criterion before debating options\".",
+      "Pump": "\"Describe the first sentence you said to the designer, word for word.\"",
+      "Retry": "same prompt with a different scene (the disagreement is with an engineer)."
+    }
+  },
+  {
+    "id": "BEH-E-2",
+    "title": "You learned something fast to ship something",
+    "level": "easy",
+    "minutes": 9,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A deadline with a knowledge gap / Show how you closed the gap / Say what you did, not what the team did.",
+      "Scene": "Monday morning: a launch depends on a payments rule you do not understand. Choices: A) book time with the payments lead; B) read the policy and draft a summary; C) ask your manager to reassign.",
+      "Story prompt": "\"Tell me about a time you had to learn something quickly to deliver.\"",
+      "Probes": "\"What did you do in the first 24 hours?\" \"How did you know you understood it?\" \"Who did you check with?\" \"What would you do differently?\"",
+      "Signals": "concrete learning actions; validation of understanding; delivery outcome; reuse of the learning.",
+      "Trap": "We-washing.",
+      "Defensible stories": "mentor-led learning; self-study with expert review; scoping down to what was learnable.",
+      "Reference trace": "\"I listed what I did not know (3 items) → asked the payments lead for 30 minutes → wrote a one-page summary and had them correct it → launched on time; I now keep a 'rules I rely on' page.\"",
+      "Pump": "\"Name the single question that unblocked you and who answered it.\"",
+      "Retry": "the knowledge gap is technical rather than regulatory."
+    }
+  },
+  {
+    "id": "BEH-E-3",
+    "title": "Customer feedback changed your decision",
+    "level": "easy",
+    "minutes": 9,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "You had a plan; a customer disagreed / Evidence beats opinion / Show what you did with the feedback.",
+      "Scene": "A customer call reveals that your feature is confusing. Choices: A) ask to see them use it; B) check usage data for the same pattern; C) note it and move on.",
+      "Story prompt": "\"Tell me about a time customer feedback changed what you were going to do.\"",
+      "Probes": "\"How many customers, and how did you know it was not one voice?\" \"What did you change?\" \"What was the result?\"",
+      "Signals": "validation beyond a single anecdote; a decision change; a measured result.",
+      "Trap": "We-washing / generic story.",
+      "Defensible stories": "data-confirmed change; test-then-change; deciding not to change after validation (also valid).",
+      "Reference trace": "\"Three calls and a usage check showed 40% abandoned at step 2; I proposed removing the step; completion went from 52% to 61%; I now pair every anecdote with a count.\"",
+      "Pump": "\"State how you separated one loud customer from a pattern.\"",
+      "Retry": "feedback comes from an internal sales team."
+    }
+  },
+  {
+    "id": "BEH-M-1",
+    "title": "Stability versus the hard date",
+    "level": "medium",
+    "minutes": 15,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "Two legitimate goals collide / No outcome satisfies both fully / Be honest about what each side gave up.",
+      "Scene": "Release meeting: engineering wants two more weeks for stability; the business has a promised date. Choices: A) ship on time with a reduced scope; B) delay and renegotiate; C) ship on time and plan a hotfix window.",
+      "Story prompt": "\"Tell me about a time you had to balance engineering's need for stability with a business deadline.\"",
+      "Probes": "\"What exactly did you trade away?\" \"How did each side react?\" \"What would you have done with one more week?\" \"Who was slightly unhappy and why?\"",
+      "Signals": "trade-off named; explicit cost; imperfect outcome accepted; communication of the decision; learning.",
+      "Trap": "Tidy resolution → \"everyone was happy\".",
+      "Defensible stories": "scope cut; staged rollout; delayed date with a negotiated commitment; hotfix plan.",
+      "Reference trace": "\"Defined the must-have path → cut 2 of 5 features → agreed a feature-flagged rollout to 10% → date kept; engineering was unhappy about the flag overhead; retrospective shortened the next release checklist.\"",
+      "Pump": "\"Say what each side lost, in one sentence each.\"",
+      "Retry": "the conflict is between design quality and a date."
+    }
+  },
+  {
+    "id": "BEH-M-2",
+    "title": "Saying no to a senior stakeholder's idea",
+    "level": "medium",
+    "minutes": 15,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A senior person wants something you think is wrong for the product / Tone and evidence both matter / Show what you did, not just what you believed.",
+      "Scene": "An executive asks you to add a feature to the roadmap this quarter. Choices: A) ask what outcome they want and offer options; B) present data against it; C) agree and quietly deprioritise.",
+      "Story prompt": "\"Tell me about a time you pushed back on a senior stakeholder.\"",
+      "Probes": "\"What did you say?\" \"What did they do?\" \"What did the relationship look like afterwards?\" \"What did it cost you?\"",
+      "Signals": "respectful challenge; alternative offered; evidence; commit after decision; honest cost.",
+      "Trap": "Tidy resolution (or hero narrative: \"I proved them wrong\").",
+      "Defensible stories": "reframing to outcomes; testing a small version; escalating with a trade-off table.",
+      "Reference trace": "\"Asked for the outcome behind the request → showed that 3 other items moved the same metric more → proposed a smaller pilot → agreed; later results were mixed; I now bring a trade-off table to such conversations.\"",
+      "Pump": "\"Quote the sentence where you stated your concern.\"",
+      "Retry": "stakeholder is a customer-facing leader."
+    }
+  },
+  {
+    "id": "BEH-M-3",
+    "title": "A dependency slipped and two teams wanted different things",
+    "level": "medium",
+    "minutes": 15,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "You depend on a team you do not manage / Both teams have good reasons / Show influence without authority.",
+      "Scene": "Another team's API will be late. Your team wants to wait; theirs wants to change the contract. Choices: A) escalate; B) propose an interim solution; C) ask both for a shared goal meeting.",
+      "Story prompt": "\"Tell me about a time you had to influence a team you did not manage.\"",
+      "Probes": "\"What did you offer them?\" \"What did you give up?\" \"How did you know they agreed?\"",
+      "Signals": "understanding the other team's constraint; a concrete proposal; follow-through; an imperfect compromise.",
+      "Trap": "Tidy resolution.",
+      "Defensible stories": "interim shim; contract change with versioning; scope staging.",
+      "Reference trace": "\"Mapped both teams' deadlines → proposed a versioned contract with a two-week shim → got sign-off in writing → shipped two weeks late; documented a dependency checklist.\"",
+      "Pump": "\"Say what the other team needed that you had not known.\"",
+      "Retry": "the dependency is a vendor."
+    }
+  },
+  {
+    "id": "BEH-H-1",
+    "title": "The project is failing in front of the board",
+    "level": "hard",
+    "minutes": 22,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A high-stakes room and bad news / You own the outcome whatever the cause / Show what you said, what you chose and what you recorded.",
+      "Scene": "10 p.m. before a board review: a flagship project is three months late and over budget. Choices: A) present the truth with a recovery plan; B) ask for a delay to the meeting; C) present a rosy status and fix it quietly.",
+      "Story prompt": "\"Tell me about a time a project you led was failing and you had to tell leadership.\"",
+      "Probes": "\"What exactly did you tell them?\" \"What option did you reject, and why?\" \"What did it cost you personally?\" \"What did you document?\"",
+      "Signals": "ownership; trade-off communicated; options presented; a recovery or an honest stop; a written learning.",
+      "Trap": "Hero/blame narrative → blaming others or a flawless rescue.",
+      "Defensible stories": "restructured scope; stopped the project; secured a smaller deliverable; handed over with a post-mortem.",
+      "Reference trace": "\"I wrote the three options with costs → told leadership which I recommended and why → cut scope by 40% → delivered a smaller version; I wrote a post-mortem naming my own estimation mistake.\"",
+      "Pump": "\"Describe the moment you realised it was drifting, and the first thing you told the team.\"",
+      "Retry": "the project failed rather than recovered."
+    }
+  },
+  {
+    "id": "BEH-H-2",
+    "title": "An incident harmed users and you owned the response",
+    "level": "hard",
+    "minutes": 22,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "Something you shipped hurt people / Speed and honesty compete / Show your decisions in the first hour.",
+      "Scene": "A release exposes some users' data in a feed. Choices: A) disable the feature at once and notify; B) investigate first, then decide; C) patch silently.",
+      "Story prompt": "\"Tell me about a time your product caused harm or a serious incident and what you did.\"",
+      "Probes": "\"What did you decide in the first hour?\" \"Who did you tell and when?\" \"What did you stop doing afterwards?\" \"How did you know it was fixed?\"",
+      "Signals": "rapid containment; honest communication; ownership; measured recovery; systemic fix.",
+      "Trap": "Hero/blame narrative or a sanitised story.",
+      "Defensible stories": "disclose first; contain first then disclose within a defined window (both can be justified with the trade-off).",
+      "Reference trace": "\"I pulled the feature within 20 minutes → drafted the notice with legal → told affected users within 24 hours → added a pre-release privacy check; 0 repeat incidents in two quarters.\"",
+      "Pump": "\"State the first action and the time it took.\"",
+      "Retry": "the incident was a pricing mistake rather than a privacy one."
+    }
+  },
+  {
+    "id": "BEH-H-3",
+    "title": "You found your own number was wrong after presenting it",
+    "level": "hard",
+    "minutes": 22,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A mistake of yours is already in the room / Admitting it early costs less than late / Show what you did and what you changed.",
+      "Scene": "Two days after a leadership review you discover a metric you presented was overstated. Choices: A) tell leadership now with the corrected number; B) wait for the next review; C) correct it quietly in the dashboard.",
+      "Story prompt": "\"Tell me about a time you made a significant mistake in your work and what you did about it.\"",
+      "Probes": "\"Who did you tell first?\" \"What was the effect of the correction?\" \"What changed in how you work?\" \"What did you do about trust?\"",
+      "Signals": "ownership; speed; transparency; consequences accepted; process change.",
+      "Trap": "Polished lie → a trivial mistake presented as a failure, or a perfect recovery.",
+      "Defensible stories": "immediate disclosure; disclosure after verifying (with a short window); correction with a visible log.",
+      "Reference trace": "\"I verified the error in 2 hours → emailed my lead and the exec with the corrected figure and cause → the decision was delayed a week; I added a reconciliation check to the dashboard.\"",
+      "Pump": "\"Describe the sentence you used to disclose the mistake.\"",
+      "Retry": "the mistake belonged to a teammate and you owned the communication."
+    }
+  },
+  {
+    "id": "PS-E-1",
+    "title": "Finding items in a huge grocery store",
+    "level": "easy",
+    "minutes": 9,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "Shoppers lose time in a big store / One friction, one group / Defend one solution and one measurable result.",
+      "Scenario and goal": "PM at a grocery chain (fictional \"FreshMart\"). Goal: reduce the time shoppers spend searching for an item.",
+      "Artifacts": "S store 38,000 sq ft; 28,000 items; observed average time to find an unfamiliar item 6.5 minutes (50 shoppers); S locked: E1(1) shopper types: weekly stock-up 55%, quick trip 30%, senior 15%; E2(1) quotes: \"I walk past it twice\"; \"staff are always busy\"; E3(2) 22% of shoppers give up on an item per trip; E4(2) staff on the floor: 1 per 6,000 sq ft; E5(2) 70% of shoppers have the store app installed.",
+      "Run": "RF 3 MCQ (friction vs symptom; what a good metric looks like; why one group first) → scope persona (weekly stock-up shopper) → validate friction → idea board (in-aisle location markers / app item locator / staff paging / loyalty points / AR navigation) → kill one → metric (average time to find an item) and a test → claim.",
+      "Trap": "Solution-first trap → jumping to AR navigation before validating the friction.",
+      "Defensible": "P1 app item locator plus aisle markers (accepts app dependency); P2 shelf labels and staff paging (accepts staff load); P3 a simple printed map at entrances for seniors.",
+      "Reference trace": "persona = stock-up shopper; friction = unfamiliar locations plus no help; metric: median time to find an item (6.5 → under 4 minutes) in test stores vs control; guardrail: basket size does not fall.",
+      "Pump": "\"State the friction as something you could observe on a camera.\"",
+      "Retry seeds": "persona and store size."
+    }
+  },
+  {
+    "id": "PS-E-2",
+    "title": "Parents keep returning kids' clothes",
+    "level": "easy",
+    "minutes": 9,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "Returns are high for one category / The reason is more specific than \"fit\" / Defend a feature and the number that proves it.",
+      "Scenario and goal": "PM at an online kids' apparel shop. Return rate is 31%. Goal: cut returns without raising prices.",
+      "Artifacts": "S return reasons: wrong size 46%, quality 18%, changed mind 20%, other 16%; S locked: E1(1) parents buy one size up 57% of the time; E2(1) growth between ordering and wearing: 6 weeks average; E3(2) size charts differ across brands; E4(2) returns cost $9 each; E5(2) 62% shop on mobile.",
+      "Run": "RF 3 MCQ → scope persona (first-time parent of a toddler / parent of a 6–10 year old / gift buyer) → validate → ideas (size recommender using birthdate and height / free returns / reviews with child height / chat assistant / loyalty points) → kill one → metric (size-related return rate) → claim.",
+      "Trap": "Solution-first trap → building a chatbot.",
+      "Defensible": "P1 size recommender by age and height with brand mapping; P2 \"size up\" prompts and growth-aware suggestions; P3 reviews that show child height.",
+      "Reference trace": "size reasons are 46% of 31% = 14.3% of orders; halving gives −7.1 points; test: holdout by region; guardrail: conversion does not fall.",
+      "Pump": "\"Tie the metric to the exact return reason you target.\"",
+      "Retry seeds": "reasons mix."
+    }
+  },
+  {
+    "id": "PS-E-3",
+    "title": "New gym members stop after three weeks",
+    "level": "easy",
+    "minutes": 9,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "Motivation fades when the next step is unclear / A common reason hides behind \"lack of time\" / Defend a feature and its proof.",
+      "Scenario and goal": "PM for a fitness app. Goal: improve four-week retention of new users.",
+      "Artifacts": "S four-week retention 24%; S locked: E1(1) lapsed users survey: \"didn't know what to do\" 52%, time 21%, cost 12%, injury 8%, other 7%; E2(1) users with a plan: retention 41%; E3(2) 70% of lapsed users stopped on a day with no scheduled workout; E4(2) average session 28 minutes; E5(2) coach messages: 4% open.",
+      "Run": "RF 3 MCQ → persona (beginner / returning athlete / casual walker) → validate → ideas (next-workout suggestion / streak badges / social challenges / coach chat / AI plans) → kill → metric → claim.",
+      "Trap": "Solution-first trap → gamification before the friction.",
+      "Defensible": "P1 a clear next-workout card with 3 options; P2 a short onboarding plan; P3 a coach prompt only when the user is stuck.",
+      "Reference trace": "52% cite not knowing what to do; plan users retain 41% vs 24% (selection bias noted); metric: four-week retention of users who start a plan; guardrail: completion not just starts.",
+      "Pump": "\"Choose the idea that attacks the largest named reason, then check the reason is real.\"",
+      "Retry seeds": "survey mix."
+    }
+  },
+  {
+    "id": "PS-M-1",
+    "title": "A first IKEA visit for a new homeowner",
+    "level": "medium",
+    "minutes": 15,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A big, maze-like store intimidates first-time buyers / The goal is feeling capable, not feature use / Defend how you will know anxiety dropped.",
+      "Scenario and goal": "PM at a home-furnishing retailer (fictional \"NestHouse\"). Goal: make the first visit less intimidating for new homeowners.",
+      "Artifacts": "S three floors, one-way path; S locked: E1(2) 8 interviews: \"I don't know where to start\"; \"I can't picture it at home\"; \"I forgot the measurements\"; E2(2) 38% leave without buying the main item; E3(2) staff cannot help with room planning; E4(2) app has a floor plan but 9% use it; E5(2) returns of bulky items 14%; E6(2) 60% of visitors arrive with an unplanned list.",
+      "Run": "Branch 1 define friction (wayfinding / planning / commitment anxiety) → Branch 2 persona → idea board (pre-visit room planner / guided route by list / \"starter kit\" bundles / in-store planning kiosks / AI chat) → kill one → metric (a verified measure of reduced anxiety: 3-question confidence pulse plus list completion) → PROBE \"How would you know the guide is not just another thing to look at?\" → claim.",
+      "Trap": "Assumed user trap → assuming wayfinding is the problem without validating.",
+      "Defensible": "P1 pre-visit planner plus a guided route; P2 starter bundles for first-time buyers (accepts less choice); P3 in-store planning kiosks with staff (accepts cost).",
+      "Reference trace": "friction = not knowing where to start and forgetting measurements; metric: confidence pulse +1 point (5-point scale) and list completion 60% → 80%; test: A/B by visit week; guardrail: time in store.",
+      "Pump": "\"Say how you would measure the feeling, not just the clicks.\"",
+      "Retry seeds": "friction mix."
+    }
+  },
+  {
+    "id": "PS-M-2",
+    "title": "First-time riders and the intercity bus",
+    "level": "medium",
+    "minutes": 15,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "People avoid what feels unreliable / The anxiety is about the unknown at the stop / Defend a solution and the proof it helps.",
+      "Scenario and goal": "PM for a bus booking app (fictional \"SawariGo\") on a long-distance route. Goal: increase repeat bookings among first-time riders.",
+      "Artifacts": "S first-time riders 62% of bookings; repeat rate 18%; S locked: E1(2) interviews: \"I did not know where the bus stops\"; \"no live location\"; \"I paid cash because I did not trust the app\"; E2(2) 27% of first-time riders contact support on departure day; E3(1) 35% travel with luggage and children; E4(2) mobile network gaps on the route; E5(2) refunds take 7 days.",
+      "Run": "Branch 1 define friction → persona (solo first-timer / family / elderly) → ideas (boarding-point photo and pin / live location with offline fallback / SMS reminder with driver number / digital refunds in 24 hours / rewards points) → kill one → metric (repeat booking within 60 days and departure-day contact rate) → claim.",
+      "Trap": "Assumed user trap → designing for always-on connectivity.",
+      "Defensible": "P1 boarding-point guide with offline fallback; P2 SMS driver contact; P3 faster refunds.",
+      "Reference trace": "connectivity gaps imply offline-first design; metric pair: contact rate −30%, repeat rate 18% → 24%.",
+      "Pump": "\"Test your solution against the worst phone and the worst signal.\"",
+      "Retry seeds": "route and connectivity."
+    }
+  },
+  {
+    "id": "PS-M-3",
+    "title": "A telehealth app for adults over 45",
+    "level": "medium",
+    "minutes": 15,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A first video visit fails often / The reason may be confidence, not technology / Defend how you will know it helps.",
+      "Scenario and goal": "PM for a telehealth app. 34% of first appointments fail to connect. Goal: raise first-visit completion among adults 45+.",
+      "Artifacts": "S locked: E1(2) failures: permissions/camera 41%, wrong link or time 23%, audio problems 18%, gave up waiting 18%; E2(2) 64% use a phone browser; E3(2) older users call support 3× more often; E4(2) clinician no-show wait: 10 minutes; E5(2) caregiver helps in 20% of visits.",
+      "Run": "Branch 1 friction → persona → ideas (pre-visit tech check / one-tap join link with SMS / caregiver invite / phone-call fallback / video tutorial) → kill one → metric (first-visit completion; confidence pulse) → PROBE \"What does a clinician lose with your design?\" → claim.",
+      "Trap": "Assumed user trap → assuming every user installs an app.",
+      "Defensible": "P1 one-tap SMS link plus pre-visit check; P2 phone fallback; P3 caregiver invite.",
+      "Reference trace": "permissions 41% + wrong link 23% = 64% addressable by the pre-visit check and SMS link; target completion 66% → 80%.",
+      "Pump": "\"Match each idea to the share of failures it actually removes.\"",
+      "Retry seeds": "failure mix."
+    }
+  },
+  {
+    "id": "PS-H-1",
+    "title": "How older residents of Tokyo move through the transit system",
+    "level": "hard",
+    "minutes": 22,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A very large group, a very complex system / \"Elderly\" is not one user / Defend who you serve, what you build, and how you measure independence.",
+      "Scenario and goal": "PM at a transit-tech company (fictional). Goal: define an audience, a problem and a product vision that improves older residents' independence.",
+      "Artifacts": "R Japan's 65+ share is 29.4% of the population (2025 census, S18); the ministry estimates 29.6% or about 36.2 million people. S locked: E1(2) interviews: station complexity; fear of mistakes at gates; elevator locations hard to find; transfers under time pressure; E2(2) segment sizes: active 65–74 (12.5% of the population) vs 75+ (16.8%); E3(2) smartphone use differs sharply by age; E4(2) station staff availability; E5(2) women outnumber men in the 65+ group.",
+      "Run": "Branch 1 define audience (choose or define) → Branch 2 problem framing → idea board → PROBE \"Why this group first?\" → KILL-YOUR-DARLING → PIVOT \"Operator allows one change only\" → metric of independence (trips made without assistance; avoided trips; confidence) → claim.",
+      "Trap": "Laundry-list trap → listing ten features for \"the elderly\".",
+      "Defensible": "P1 audience 75+ living alone, single-trip confidence aid; P2 audience 65–74 active commuters, transfer planning; P3 caregiver-linked assistance (accepts a smaller user base).",
+      "Reference trace": "independence measures: share of trips taken without help; trips avoided because of fear; self-reported confidence; each is verifiable by a diary panel.",
+      "Pump": "\"Narrow the audience until a single sentence describes their worst moment.\"",
+      "Retry seeds": "segment and operator constraint."
+    }
+  },
+  {
+    "id": "PS-H-2",
+    "title": "Designing for first-time flyers",
+    "level": "hard",
+    "minutes": 22,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A wide-open space with many easy ideas / A good product feels coherent / Defend what you cut as much as what you build.",
+      "Scenario and goal": "PM at an airline or airport app (fictional). Goal: design a travel experience for first-time flyers.",
+      "Artifacts": "S locked: E1(2) 3 personas: nervous solo adult, family with kids, older traveller visiting relatives; E2(2) biggest frictions by persona: documents and airport procedures, boarding and gate changes, what to expect at security; E3(2) first-timers' no-show rate 3× higher; E4(2) average airport dwell 2.4 hours; E5(2) app adoption 28%; E6(2) staff capacity: limited.",
+      "Run": "Branch 1 audience → Branch 2 friction validation → idea board (checklist, step-by-step journey, live gate guide, buddy chat, rewards, AI travel assistant, kiosk, SMS nudges) → KILL → PROBE \"What would you not build, and for whom?\" → metric (on-time arrival at gate; confidence pulse; support contacts) → claim.",
+      "Trap": "Feature-factory trap → a laundry list instead of a coherent product.",
+      "Defensible": "P1 a single \"what happens next\" journey card with notifications; P2 a staff-assisted first-timer lane (accepts staff cost); P3 SMS-first guidance (accepts less rich).",
+      "Reference trace": "persona = nervous solo adult; friction = fear of the unknown at security and gates; core: next-step card + proactive nudges; killed: rewards and chat.",
+      "Pump": "\"Say what unites your features; if nothing does, cut until something does.\"",
+      "Retry seeds": "persona and adoption."
+    }
+  },
+  {
+    "id": "PS-H-3",
+    "title": "Fair price information for a farmers' cooperative",
+    "level": "hard",
+    "minutes": 22,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "Information gaps hurt one side of a market / The users have limited phones and time / Defend who benefits first and how you will know.",
+      "Scenario and goal": "PM at an agri-tech start-up in Nepal (fictional). Goal: design a product that helps smallholder farmers in a cooperative get fairer prices, and measure impact on their income.",
+      "Artifacts": "S cooperative of 600 farmers; 41% have feature phones only; S farm-gate prices are on average 28% below the wholesale market price (assumed illustrative); S locked: E1(2) interviews: farmers learn prices by word of mouth; middlemen offer the same price to all; E2(2) transport costs: a shared truck costs NPR 9,000 per trip; E3(2) literacy: 35% prefer voice; E4(2) mobile coverage: patchy in two villages; E5(2) the cooperative has a manager who negotiates; E6(2) one bad harvest erodes trust in any new tool.",
+      "Run": "Branch 1 define the user (farmer / cooperative manager / both) → Branch 2 friction → ideas (SMS price alerts / voice IVR / shared transport booking / grading and quality certificates / app marketplace) → KILL → PROBE \"What if only the middleman uses it?\" → metric of income (price realised vs wholesale benchmark; share of produce sold above the farm-gate average) → claim.",
+      "Trap": "Laundry-list trap / assumed user trap → an app marketplace for farmers without smartphones.",
+      "Defensible": "P1 SMS/voice price alerts for the cooperative plus manager dashboard; P2 shared transport booking to cut costs; P3 grading to earn a premium (accepts slower impact).",
+      "Reference trace": "audience = cooperative manager plus farmers via voice/SMS; metric = realised price vs benchmark over a season; guardrail = no increase in farmer costs.",
+      "Pump": "\"Choose the channel your least-connected user actually uses.\"",
+      "Retry seeds": "share with feature phones and price gap."
+    }
+  },
+  {
+    "id": "EXE-E-1",
+    "title": "Daily actives fell 10% in three weeks",
+    "level": "easy",
+    "minutes": 9,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A headline metric is down / Not every user group moved / Defend the metric you track to know recovery and the next step.",
+      "Scenario and goal": "FitPulse (fictional fitness app). DAU 480,000 → 432,000 in three weeks. Goal: pick the success metric, a guardrail and one measurable next step.",
+      "Artifacts": "S dashboard; locked: E1(1) DAU by cohort: core users 365,000 → 365,000 (flat); January-challenge cohort 115,000 → 67,000; E2(1) same period last year: −8% with the same cohort pattern; E3(1) platform and region: flat (red herring); E4(2) lapsed challenge users (not active 14+ days): 48,000; E5(2) campaign history: opt-out rate 1.8% per re-engagement campaign.",
+      "Run": "RF 3 MCQ (DAU vs retention; cohort effects; what a guardrail is) → clarify → evidence → Metric Tree (primary + guardrail) → experiment card → claim.",
+      "Trap": "Vanity recovery → restoring the DAU number with broad push notifications.",
+      "Defensible": "P1 target the 48,000 lapsed challenge users with a restart plan and a 10% holdout; P2 do nothing and track core-user retention (accepts the seasonal decline); P3 improve onboarding for the next cohort (accepts delay).",
+      "Reference trace": "decline is entirely the challenge cohort (115k → 67k = −48k); primary metric: 14-day reactivation rate of lapsed challenge users; guardrails: notification opt-out ≤ 2.5% and completed workouts per reactivated user; success: +4,800 reactivated (10%) vs holdout.",
+      "Pump": "\"Break the headline into groups before choosing what to recover.\"",
+      "Retry seeds": "cohort sizes and seasonal baseline."
+    }
+  },
+  {
+    "id": "EXE-E-2",
+    "title": "How to prove \"Save for later\" works",
+    "level": "easy",
+    "minutes": 9,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A new feature needs a success metric before launch / Counting saves is easy and weak / Defend a metric, a guardrail and a test.",
+      "Scenario and goal": "PM for a shopping app launching \"Save for later\". Goal: define success and a test.",
+      "Artifacts": "S locked: E1(1) pilot: 3.1 saves per user per week; E2(1) 6% of saved items are purchased within 14 days; E3(2) baseline checkout conversion of eligible users: 3.0%; eligible users 8,000 per day; E4(2) risk: users save instead of buying; E5(2) return rate baseline 12%.",
+      "Run": "RF 3 MCQ → clarify → evidence → Metric Tree → experiment card (arms, sample, duration) → claim.",
+      "Trap": "Vanity recovery (vanity metric) → \"number of saves\" as the primary metric.",
+      "Defensible": "P1 primary: purchases from saved items within 14 days per exposed user; guardrail: overall checkout conversion; P2 primary: 28-day revenue per eligible user (accepts a longer wait).",
+      "Reference trace": "detect +0.3 points on a 3.0% base: n ≈ 15.7 × 0.03 × 0.97 ÷ 0.003² = 50,763 per arm; 4,000 users/day/arm → 12.7 days → run 14 days; guardrail: conversion not down more than 0.1 point.",
+      "Pump": "\"Choose the metric that would still look good if saves were only a place to forget things.\"",
+      "Retry seeds": "baseline and traffic."
+    }
+  },
+  {
+    "id": "EXE-E-3",
+    "title": "More orders: how will you know it is healthy?",
+    "level": "easy",
+    "minutes": 9,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A growth number can rise for the wrong reason / The growth is one part of the picture / Defend the metric and the guardrail.",
+      "Scenario and goal": "PM at a food-delivery app. Goal: increase orders per user.",
+      "Artifacts": "S locked: E1(1) total orders +9% month on month; active users +9% (promo acquisition); orders per active user 2.1 (flat); E2(1) cancellation rate 6.0% → 7.5% at peak hours; E3(2) late deliveries 11%; E4(2) reorder behavior: 38% of orders are repeat of a past order; E5(2) test capacity: 3 weeks.",
+      "Run": "RF 3 MCQ → clarify → evidence → Metric Tree → experiment card → claim.",
+      "Trap": "Vanity recovery → celebrating total orders.",
+      "Defensible": "P1 a one-tap reorder test with primary orders per active user per week and guardrails on lateness and cancellations; P2 a free-delivery threshold test (accepts margin cost).",
+      "Reference trace": "total orders rose because of more users, not more orders per user; target +0.15 orders per user per week; stop rule: late deliveries above 12% or cancellations above 6.5%.",
+      "Pump": "\"Divide a total by the right population before you celebrate.\"",
+      "Retry seeds": "growth mix."
+    }
+  },
+  {
+    "id": "EXE-M-1",
+    "title": "Notifications lift daily actives and uninstalls",
+    "level": "medium",
+    "minutes": 15,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A growth metric and a health metric disagree / Different users react differently / Defend the balance and the test.",
+      "Scenario and goal": "PingPal (fictional social app). A new notification strategy raised DAU 2.00M → 2.16M (+8%); weekly uninstalls rose 10,000 → 13,840. Goal: find the sweet spot between growth and annoyance.",
+      "Artifacts": "S locked: E1(1) DAU by segment: light users 0.50M → 0.58M (+16%); heavy users 1.50M → 1.58M (+5%); E2(2) weekly uninstall rate: light 0.50% → 1.10% (base 800k); heavy 0.50% → 0.42% (base 1.2M); E3(1) notifications per day: light 2.1 → 4.6; heavy 2.1 → 2.4; E4(2) notification disable rate: light 3% → 9%; E5(2) 28-day retention for new users: −2.5 points; E6(1) crash and releases: flat (red herring).",
+      "Run": "Branch 1 segment → Branch 2 choose a primary retention metric and guardrail → experiment card (arms: 2.1, 3, 4.6 per day for light users) → PROBE \"Who actually drives the uninstalls?\" → PUSHBACK if the aggregate DAU is the success metric → claim.",
+      "Trap": "Primary-metric tunnel → optimising DAU.",
+      "Defensible": "P1 cap light-user notification frequency at about 3 per day with adaptive relevance; P2 keep volume for heavy users only; P3 roll back and test relevance not frequency.",
+      "Reference trace": "uninstalls: light 800,000 × 1.10% = 8,800; heavy 1.2M × 0.42% = 5,040 → 13,840 (0.69% of 2.0M); the increase is from light users who receive 4.6 notifications a day.",
+      "Pump": "\"Find which segment drives the guardrail breach before changing the lever.\"",
+      "Retry seeds": "segment sizes."
+    }
+  },
+  {
+    "id": "EXE-M-2",
+    "title": "Raise checkout conversion by 5%",
+    "level": "medium",
+    "minutes": 15,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A numeric target and a tempting shortcut / Customers notice hidden costs / Defend how you hit the goal without hurting trust.",
+      "Scenario and goal": "BuyLane (fictional retailer). Goal: raise checkout conversion from 3.00% to 3.15% (+5%).",
+      "Artifacts": "R Baymard reports about 70% average cart abandonment and extra costs as the leading reason (reported 39% to 48% depending on the survey year) (S17); S locked: E1(1) funnel by device: mobile abandons 31% at the payment step; E2(1) by region: Region B abandons 41% after seeing shipping fees; E3(2) experiment results: Variant H (hide shipping until the last step): conversion +6.2%, 30-day repeat purchase −9%, \"unexpected fee\" tickets +45%, chargebacks +0.3 points; Variant S (show a shipping estimate in the cart plus free-shipping progress): conversion +4.1%, repeat flat, tickets −8%; Variant G (guest checkout): +3.4%; E4(2) support cost per ticket $4.20; E5(2) average order value $62.",
+      "Run": "Branch 1 find the failure point (cut by device and region) → Branch 2 pick variants → PROBE \"Variant H beats your goal; why not ship it?\" → PUSHBACK if no guardrail is named → experiment card with decision rule → claim.",
+      "Trap": "Metric tunnel → shipping Variant H.",
+      "Defensible": "P1 Variant S plus G combined, test with guardrails on repeat purchase and tickets; P2 Variant S only; P3 Variant H with a long holdout and kill rule (accepts risk).",
+      "Reference trace": "H hits the goal (+6.2%) but erodes trust (repeat −9%); S +4.1% and G +3.4% together plausibly exceed +5% without harming repeat; guardrails: repeat purchase, fee tickets, chargebacks.",
+      "Pump": "\"Name a metric that would reveal the damage your fix could cause.\"",
+      "Retry seeds": "variant effects."
+    }
+  },
+  {
+    "id": "EXE-M-3",
+    "title": "A referral program with suspicious signups",
+    "level": "medium",
+    "minutes": 15,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "Signups rose but quality is unclear / Rewards change behavior / Defend what you reward and how you test it.",
+      "Scenario and goal": "PM for a finance app's referral program. Goal: grow activated users at a sustainable cost.",
+      "Artifacts": "S locked: E1(1) referral signups 40,000 per month at $4 each ($160,000); E2(1) 7-day activation: referred 18% vs organic 41%; E3(2) self-referral and duplicate-device rate 14%; E4(2) pilot of \"pay on activation $12\": signups 28,000; activation 35%; E5(2) support cost per fraud case $18; E6(2) test capacity: 4 weeks.",
+      "Run": "Branch 1 define the primary metric (signups / activated users / revenue) → Branch 2 guardrails → experiment card (control vs pay-on-activation; holdout) → PROBE \"How do you separate fraud from real referrals?\" → claim.",
+      "Trap": "Metric tunnel → rewarding signups.",
+      "Defensible": "P1 pay on activation with fraud checks; P2 tiered reward (small at signup, larger at activation); P3 cap rewards per user.",
+      "Reference trace": "current cost per activated user = $160,000 ÷ (40,000 × 18% = 7,200) = $22.2; pilot: 28,000 × 35% = 9,800 activated; 9,800 × $12 = $117,600 → $12.0 per activated user.",
+      "Pump": "\"Reward the behavior you want to see after the signup.\"",
+      "Retry seeds": "activation rates and rewards."
+    }
+  },
+  {
+    "id": "EXE-H-1",
+    "title": "Watch time is at a record, but is it healthy?",
+    "level": "hard",
+    "minutes": 22,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "The tracked metric looks perfect / The quiet metric may be failing / Defend a test that can show it.",
+      "Scenario and goal": "StreamNest (fictional) watch time is at an all-time high (+9% year on year). Goal: decide whether to test an algorithm that promotes content diversity.",
+      "Artifacts": "S locked: E1(1) 90-day retention flat; monthly churn 2.4% → 2.7%; E2(2) diversity index (distinct genres per user per month) 4.1 → 3.2; top 5% of titles' share of viewing 31% → 44%; E3(2) at equal watch time, users with ≤2 genres churn 3.4% vs 1.9% for 5+ genres (confounding warning); E4(2) exit survey: \"nothing new to watch\" up 11 points; E5(2) experiment capacity: one test with a 5% holdout for 12 weeks; E6(2) leadership target: watch time must not fall more than 3%.",
+      "Run": "Branch 1 test whether the tracked metric predicts the outcome → Branch 2 design (primary: 90-day retention and churn; guardrail: watch time ≥ −3%) → PIVOT \"Quarter-end: leadership wants the watch-time record kept\" → PROBE \"Why would more diversity be better?\" → PROBE \"How long do you run it?\" → PUSHBACK on causal claims from E3 → claim with stop rules.",
+      "Trap": "Silent-metric blindness → optimising watch time only.",
+      "Defensible": "P1 12-week holdout with retention as primary and watch time as guardrail; P2 a smaller diversity nudge first (accepts slower learning); P3 survey-first to verify demand (accepts weaker evidence).",
+      "Reference trace": "E3 is correlational (heavy single-genre viewers may differ); the test breaks the confound by randomising; need a retention effect size: with churn ~2.4% a difference of 0.3 points over 12 weeks; stop rule if watch time falls more than 3%.",
+      "Pump": "\"Ask whether the metric you celebrate predicts the outcome you need.\"",
+      "Retry seeds": "diversity values and churn."
+    }
+  },
+  {
+    "id": "EXE-H-2",
+    "title": "Active users are up 22%; is anyone new actually there?",
+    "level": "hard",
+    "minutes": 22,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "AI products attract automated usage / Activity is not the same as people / Defend what counts as an active user.",
+      "Scenario and goal": "ChatNook (fictional AI assistant). Weekly active users 1.00M → 1.22M; events +61%. Goal: decide the right metric and a safe fix.",
+      "Artifacts": "S locked: E1(2) a labelled sample of 2,000 sessions: automated traffic share of new events 52%; E2(2) automation signals: fixed-interval requests, API-key traffic, no UI events; E3(2) retention of human users flat; revenue per active user −9%; E4(2) some automation is legitimate (paying API customers, 8% of revenue); E5(2) classifier precision 0.92 and recall 0.81 on the sample; E6(2) new events 24.4M: of which 52% automated = 12.7M; E7(2) leadership: a board slide uses WAU.",
+      "Run": "Branch 1 validate the metric → Branch 2 redefine (human WAU; automation tracked separately) → PIVOT \"A big customer's automation was misclassified as human and complains\" → PROBE \"How do you treat legitimate automation?\" → PROBE \"What do you tell the board?\" → experiment/validation card → claim.",
+      "Trap": "Silent-metric blindness → celebrating raw WAU.",
+      "Defensible": "P1 report human WAU and automated usage separately; improve the classifier with a labelled audit; P2 define \"verified human sessions\" with a UI-event requirement (accepts undercount); P3 add per-account labelling for API customers.",
+      "Reference trace": "new events 24.4M × 52% = 12.7M automated; precision 0.92 means about 8% of \"automated\" labels are humans; validation plan: monthly relabelled audit of 1,000 sessions; guardrail: false-positive rate on paying accounts under 1%.",
+      "Pump": "\"Define who is counted before you count.\"",
+      "Retry seeds": "automated share and classifier performance."
+    }
+  },
+  {
+    "id": "EXE-H-3",
+    "title": "The test says +3% revenue; retention says otherwise",
+    "level": "hard",
+    "minutes": 22,
+    "status": "draft",
+    "version": 1,
+    "fields": {
+      "Primer": "A short test and a long-term effect disagree / A novelty effect can inflate early results / Defend a ship decision under quarter-end pressure.",
+      "Scenario and goal": "PM at a subscription product. A four-week pricing-page test shows revenue per user +3.0%; 28-day retention is 36.0% vs 37.2%. Goal: decide whether to ship.",
+      "Artifacts": "S locked: E1(1) sample 120,000 per arm; E2(2) retention difference SE about 0.2 points (the −1.2 points is statistically clear); revenue lift CI ±1.8%; E3(2) new vs returning users: effect concentrated in new users; E4(2) week-by-week lift: +5.1%, +3.6%, +2.4%, +1.1% (declining); E5(2) projection: if the retention loss persists, six-month revenue = 1.03 × (1 − 1.2/37.2) = 0.997; E6(2) leadership: quarter-end target needs +2%.",
+      "Run": "Branch 1 interpret → Branch 2 options (ship / extend / ship to 50% with holdout / kill) → PIVOT \"Finance offers one more week only\" → PROBE \"What would you do with a 5% long-term holdout?\" → PROBE \"What if leadership ships anyway?\" → decision rule and stop criteria.",
+      "Trap": "Short-term tunnel → shipping on revenue alone.",
+      "Defensible": "P1 extend the test with a 5% long-term holdout and a pre-agreed rule; P2 ship to 50% with kill criteria (accepts risk); P3 redesign the page to avoid the retention loss (accepts delay).",
+      "Reference trace": "lift decays week by week (novelty effect); retention relative loss 1.2 ÷ 37.2 = 3.2%; 1.03 × 0.968 = 0.997 → about −0.3% if persistent; decision hinges on persistence, so measure it.",
+      "Pump": "\"Project the short-term effect forward with the retention it costs.\"",
+      "Retry seeds": "lift decay shape and retention gap."
+    }
+  }
+]

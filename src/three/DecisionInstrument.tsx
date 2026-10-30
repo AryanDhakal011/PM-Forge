@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, type RefObject } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import { FrameLoopBridge } from "./sceneRuntime";
@@ -25,12 +25,15 @@ const RING_COLORS = ["#a58152", "#96744c", "#b08c5e"];
 export type DecisionInstrumentProps = {
   reducedMotion: boolean;
   progress?: number;
+  /** Scroll-driven sections pass a ref so state changes never re-render. */
+  progressRef?: RefObject<number>;
   hovering?: boolean;
 };
 
 export function DecisionInstrument({
   reducedMotion,
   progress = 0,
+  progressRef,
   hovering = false,
 }: DecisionInstrumentProps) {
   const coreRef = useRef<THREE.Mesh>(null);
@@ -61,8 +64,11 @@ export function DecisionInstrument({
 
   useEffect(() => () => coreGeometry.dispose(), [coreGeometry]);
 
-  useFrame((_, delta) => {
-    const resolved = THREE.MathUtils.clamp(progress, 0, 1);
+  useFrame((state, delta) => {
+    const time = state.clock.elapsedTime;
+    const value = progressRef ? progressRef.current : progress;
+    const resolved = THREE.MathUtils.clamp(value, 0, 1);
+    const unrest = 1 - resolved;
     const smoothing = 1 - Math.exp(-delta * 2.2);
 
     if (coreRef.current) {
@@ -74,6 +80,10 @@ export function DecisionInstrument({
           THREE.MathUtils.damp(coreRef.current.scale.x, targetScale, 3.2, delta),
         );
         coreRef.current.rotation.y += delta * 0.18;
+        // Unresolved state sits fractionally off its own axis; it settles as
+        // the story resolves instead of looping forever.
+        coreRef.current.rotation.z = Math.sin(time * 0.23) * 0.045 * unrest;
+        coreRef.current.position.x = Math.sin(time * 0.19) * 0.012 * unrest;
       }
     }
 
@@ -93,8 +103,15 @@ export function DecisionInstrument({
       if (!ring) return;
       const start = RING_START[index];
       const end = RING_END[index];
-      const targetX = THREE.MathUtils.lerp(start.x, end.x, resolved);
-      const targetY = THREE.MathUtils.lerp(start.y, end.y, resolved);
+      // Wobble is present only while the rings are unresolved, so the final
+      // state reads as an aligned instrument rather than a running animation.
+      const wobble = reducedMotion ? 0 : 0.022 * unrest;
+      const targetX =
+        THREE.MathUtils.lerp(start.x, end.x, resolved) +
+        Math.sin(time * 0.23 + index * 1.7) * wobble;
+      const targetY =
+        THREE.MathUtils.lerp(start.y, end.y, resolved) +
+        Math.cos(time * 0.19 + index * 1.1) * wobble;
       const targetZ = THREE.MathUtils.lerp(start.z, end.z, resolved);
       if (reducedMotion) {
         ring.rotation.set(targetX, targetY, targetZ);

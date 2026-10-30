@@ -4,14 +4,25 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { ArrowDown, ArrowRight, BookOpen, BriefcaseBusiness, Target } from "lucide-react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {
+  ArrowDown,
+  ArrowRight,
+  BookOpen,
+  BriefcaseBusiness,
+  Target,
+} from "lucide-react";
 import { useSettings } from "@/components/providers/SettingsProvider";
 import { useWebGLSupport } from "@/hooks/useWebGLSupport";
 import { scrollState } from "@/lib/scrollState";
+import {
+  ensureScrollTrigger,
+  resolveCalm,
+  setCalmVar,
+  bindStoryTargets,
+} from "@/lib/scrollStory";
 import { markLandingSceneReady } from "@/lib/landingSceneReadiness";
 import { useSceneActivity } from "@/three/sceneLifecycle";
+import { invalidateScene } from "@/three/sceneRuntime";
 import { track } from "@/lib/analytics";
 import { Magnetic } from "@/components/ui/Magnetic";
 import { HeroPoster } from "./HeroPoster";
@@ -35,10 +46,7 @@ export function Hero() {
   const [justified, setJustified] = useState(false);
   const [inspected, setInspected] = useState<Inspected>(null);
   const router = useRouter();
-  const markHeroReady = useCallback(
-    () => markLandingSceneReady("hero"),
-    [],
-  );
+  const markHeroReady = useCallback(() => markLandingSceneReady("hero"), []);
 
   useEffect(() => {
     if (webgl === false) markHeroReady();
@@ -47,38 +55,56 @@ export function Hero() {
   useEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
+    bindStoryTargets(
+      section,
+      "--calm",
+      `.${styles.copy},.${styles.headline} em,.${styles.scene},.${styles.annotation},.${styles.annA},.${styles.annB},.${styles.annC},.${styles.annD},.${styles.trust}`,
+    );
 
     if (reducedMotion) {
       scrollState.hero = 0.86;
+      scrollState.heroCalm = 0.86;
+      scrollState.calm = 0.86;
+      setCalmVar(section, 0.86);
       setJustified(true);
+      // Reduced motion keeps the scene on demand; one invalidation presents
+      // the settled state without starting a loop.
+      invalidateScene("hero");
       return;
     }
 
-    gsap.registerPlugin(ScrollTrigger);
+    const ScrollTrigger = ensureScrollTrigger();
+
+    const apply = (progress: number) => {
+      const calm = resolveCalm(progress);
+      scrollState.hero = progress;
+      scrollState.heroCalm = calm;
+      scrollState.calm = calm;
+      setCalmVar(section, calm);
+      setJustified(progress > 0.88);
+      // State changed; ask for one frame. No ticker, no loop.
+      invalidateScene("hero");
+    };
+
     const trigger = ScrollTrigger.create({
       trigger: section,
       start: "top top",
       end: "bottom bottom",
-      onUpdate: (self) => {
-        scrollState.hero = self.progress;
-        const next = self.progress > 0.88;
-        setJustified((current) => {
-          if (current === next) return current;
-          return next;
-        });
-      },
+      invalidateOnRefresh: true,
+      onUpdate: (self) => apply(self.progress),
+      onRefresh: (self) => apply(self.progress),
     });
 
-    return () => trigger.kill();
+    // Scroll restoration can mount the page mid-hero.
+    apply(trigger.progress);
+
+    return () => {
+      trigger.kill();
+    };
   }, [reducedMotion]);
 
   const handleEnter = (event: React.MouseEvent<HTMLAnchorElement>) => {
     track("hero_enter_click");
-    const signedIn = window.localStorage.getItem("pmforge.user");
-    if (signedIn) {
-      event.preventDefault();
-      router.push("/dashboard");
-    }
   };
 
   return (

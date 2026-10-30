@@ -1,0 +1,209 @@
+{
+  "at": "2026-10-30T00:32:07.197Z",
+  "checks": [
+    {
+      "label": "Signal product CTA remains visible at the desktop pin threshold",
+      "pass": true,
+      "details": {
+        "top": 482.359375,
+        "bottom": 533.859375,
+        "right": 451.296875,
+        "width": 261.359375,
+        "viewport": [
+          1440,
+          860
+        ]
+      }
+    },
+    {
+      "label": "landing Enter opens a real entry modal",
+      "pass": true
+    },
+    {
+      "label": "desktop instrument stops rendering at idle",
+      "pass": true,
+      "details": {
+        "idleDrawsOver2s": 0,
+        "canvases": 1,
+        "jsEncodedBytes": 2452241
+      }
+    },
+    {
+      "label": "desktop has no overflow",
+      "pass": true
+    },
+    {
+      "label": "shared coverage table preserves instrument data",
+      "pass": true
+    },
+    {
+      "label": "library URL filters show exactly 3 RCA easy questions",
+      "pass": true
+    },
+    {
+      "label": "pause state survives reload",
+      "pass": true
+    },
+    {
+      "label": "guided first run has remaining time",
+      "pass": true
+    },
+    {
+      "label": "spoken synthesis timer counts down",
+      "pass": true
+    },
+    {
+      "label": "expert trace hidden before reflection",
+      "pass": true
+    },
+    {
+      "label": "feedback has evidence-backed bands without precise scores",
+      "pass": true
+    },
+    {
+      "label": "guided feedback → reflection → expert gate",
+      "pass": true
+    },
+    {
+      "label": "first debrief offers account, persistent storage, and export",
+      "pass": true
+    },
+    {
+      "label": "user-authored HTML remains inert",
+      "pass": true
+    },
+    {
+      "label": "completed session updates progress",
+      "pass": true
+    },
+    {
+      "label": "finished reflection hides first-win and internal metrics from Progress",
+      "pass": true
+    },
+    {
+      "label": "session-one debrief and reflection activation is measured in Developer mode",
+      "pass": true
+    },
+    {
+      "label": "run state survives page reload",
+      "pass": true
+    },
+    {
+      "label": "mobile has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "label": "mobile instrument uses a still drawing",
+      "pass": true
+    },
+    {
+      "label": "tablet has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "label": "dark theme works",
+      "pass": true
+    },
+    {
+      "label": "reduced motion has no WebGL instrument",
+      "pass": true
+    },
+    {
+      "label": "server workspace rejects unauthenticated access",
+      "pass": true
+    },
+    {
+      "label": "no browser runtime exceptions or console errors",
+      "pass": true,
+      "details": []
+    }
+  ],
+  "errors": [],
+  "signalEntry": {
+    "top": 482.359375,
+    "bottom": 533.859375,
+    "right": 451.296875,
+    "width": 261.359375,
+    "viewport": [
+      1440,
+      860
+    ]
+  },
+  "signalLayout": {
+    "scrollY": 3979,
+    "htmlClass": "js-ready loader-failed lenis lenis-scrolling",
+    "attrs": {},
+    "chain": [
+      {
+        "tag": "DIV",
+        "class": "O8UzlW_sticky",
+        "position": "sticky",
+        "overflow": "hidden",
+        "transform": "none",
+        "top": 0,
+        "height": 860
+      },
+      {
+        "tag": "SECTION",
+        "class": "O8UzlW_section  O8UzlW_resolved",
+        "position": "relative",
+        "overflow": "clip visible",
+        "transform": "none",
+        "top": -1270,
+        "height": 2150
+      },
+      {
+        "tag": "DIV",
+        "class": "wallRun",
+        "position": "relative",
+        "overflow": "visible",
+        "transform": "none",
+        "top": -1399,
+        "height": 2279
+      },
+      {
+        "tag": "MAIN",
+        "class": "",
+        "position": "static",
+        "overflow": "visible",
+        "transform": "none",
+        "top": -3979,
+        "height": 10819.25
+      },
+      {
+        "tag": "BODY",
+        "class": "",
+        "position": "static",
+        "overflow": "clip visible",
+        "transform": "none",
+        "top": -3979,
+        "height": 11636.171875
+      },
+      {
+        "tag": "HTML",
+        "class": "js-ready loader-failed lenis lenis-scrolling",
+        "position": "static",
+        "overflow": "auto",
+        "transform": "none",
+        "top": -3979,
+        "height": 11636.171875
+      }
+    ]
+  },
+  "homePerformance": {
+    "idleDrawsOver2s": 0,
+    "canvases": 1,
+    "jsEncodedBytes": 2452241
+  },
+  "runPath": "/app/run/8d7de48a-9397-4379-8a99-45312942edb2",
+  "api": {
+    "me": {
+      "user": null
+    },
+    "workspace": 401,
+    "config": {
+      "google": false,
+      "github": false
+    }
+  }
+}
