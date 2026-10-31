@@ -95,6 +95,7 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
   }, [pathname, collapsed, loading, profile?.id, reducedMotion]);
   const isDeadlock =
     pathname === "/app/projects/deadlock" ||
+    pathname === "/app/projects/sacred-no" ||
     /^\/app\/projects\/deadlock\/(play|debrief)\//.test(pathname);
   const isRun =
     pathname.startsWith("/app/run/") ||
@@ -122,7 +123,7 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
     window.addEventListener("pmforge:theme", update);
     let prefixAt = 0;
     const key = (event: KeyboardEvent) => {
-      if (window.location.pathname.startsWith("/app/projects/deadlock")) return;
+      if (window.location.pathname.startsWith("/app/projects/deadlock") || window.location.pathname === "/app/projects/sacred-no") return;
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
         event.preventDefault();
         setSearchOpen((o) => !o);

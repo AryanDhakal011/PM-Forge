@@ -1,0 +1,865 @@
+{
+  "version": 1,
+  "title": "The Sacred No",
+  "tagline": "A midnight promise. A morning reckoning.",
+  "notice": "Simulated company · authored scenarios · expert review pending",
+  "people": [
+    {
+      "id": "Kian",
+      "name": "Kian Mercer",
+      "role": "CEO",
+      "want": "A credible win in front of the board.",
+      "fear": "Looking unsteady while runway shrinks.",
+      "tell": "Listens to board interests. Interrupts vague answers.",
+      "voice": "am_puck",
+      "speed": 1.0
+    },
+    {
+      "id": "Priya",
+      "name": "Priya Anand",
+      "role": "Head of Engineering",
+      "want": "A safe system and a team that can sleep.",
+      "fear": "Owning a crash she warned about.",
+      "tell": "Stops replying when her warning is ignored.",
+      "voice": "af_heart",
+      "speed": 0.96
+    },
+    {
+      "id": "Tess",
+      "name": "Tess Boyd",
+      "role": "Head of Sales",
+      "want": "Keep the Marlo & Co partnership.",
+      "fear": "Explaining a broken promise to her biggest account.",
+      "tell": "Treats a maybe as permission to negotiate.",
+      "voice": "af_bella",
+      "speed": 1.0
+    },
+    {
+      "id": "Lena",
+      "name": "Lena Ortiz",
+      "role": "Lead board investor",
+      "want": "A decision with a clear owner and reversal condition.",
+      "fear": "A surprise in a live demonstration.",
+      "tell": "Asks what would change your mind.",
+      "voice": "bf_emma",
+      "speed": 0.96
+    },
+    {
+      "id": "Noor",
+      "name": "Noor",
+      "role": "On-call SRE",
+      "want": "An explicit go/no-go and a rollback owner.",
+      "fear": "Ambiguous instructions during an incident.",
+      "tell": "Reports observations and uncertainty separately.",
+      "voice": "af_sarah",
+      "speed": 0.98
+    }
+  ],
+  "claims": [
+    "Servers can handle it",
+    "Checkout stays fast",
+    "Payments will not throttle",
+    "Users want live events",
+    "We can fix it after launch"
+  ],
+  "evidence": [
+    {
+      "id": "load",
+      "title": "Load test log",
+      "cost": 35,
+      "strength": 3,
+      "breaks": [
+        0
+      ],
+      "supports": [],
+      "reading": "Peak tested: 4,200 concurrent users. Live Drops forecast: 9,000.",
+      "detail": "A staging observation, not a production guarantee. The model starts at 4,000 capacity; safeguards can change it.",
+      "line": "EV-LOAD"
+    },
+    {
+      "id": "incident",
+      "title": "Last promo incident",
+      "cost": 25,
+      "strength": 2,
+      "breaks": [
+        1,
+        4
+      ],
+      "supports": [],
+      "reading": "A previous sale backed up checkout. Recovery took 47 minutes.",
+      "detail": "Rollback was not instantaneous. Some failed payment attempts needed reconciliation.",
+      "line": "EV-INCIDENT"
+    },
+    {
+      "id": "payments",
+      "title": "Payment provider email",
+      "cost": 20,
+      "strength": 3,
+      "breaks": [
+        2
+      ],
+      "supports": [],
+      "reading": "Provider throttles above 1,500 payment requests per minute.",
+      "detail": "A limit on payment requests, not viewers. This model assumes up to 20% of concurrent viewers attempt payment per minute.",
+      "line": "EV-PAYMENTS"
+    },
+    {
+      "id": "dashboard",
+      "title": "Checkout dashboard",
+      "cost": 30,
+      "strength": 2,
+      "breaks": [
+        0,
+        1
+      ],
+      "supports": [],
+      "reading": "Checkout p95: 2.8 seconds. Queue age rises during spikes.",
+      "detail": "A strong load warning. It does not prove a checkout fix will increase conversion; the deck reports a forecast, not a measured lift.",
+      "line": "EV-DASH"
+    },
+    {
+      "id": "tickets",
+      "title": "Support & App Store",
+      "cost": 30,
+      "strength": 2,
+      "breaks": [
+        4
+      ],
+      "supports": [
+        3
+      ],
+      "reading": "Customers want live events. Others already report failed checkout.",
+      "detail": "Demand is real. These selected comments are qualitative evidence, not a representative survey.",
+      "line": "EV-TICKETS"
+    }
+  ],
+  "deals": [
+    {
+      "id": "beta",
+      "title": "Three-brand private beta",
+      "upside": "Tess keeps a concrete partner milestone.",
+      "cost": "A beta review next week and support for three brands.",
+      "risk": "The board still needs to hear that this is not a public launch.",
+      "share": 0.18,
+      "ST": 8,
+      "CT": 0,
+      "SY": 0
+    },
+    {
+      "id": "marlo",
+      "title": "Full live for Marlo only",
+      "upside": "Protect the most urgent partner promise.",
+      "cost": "40,000 pre-orders depend on a narrow production rollout.",
+      "risk": "Marlo carries the failure alone. Fewer than 6 safeguard hours makes this route unsafe.",
+      "share": 0.32,
+      "ST": 12,
+      "CT": 3,
+      "SY": -4
+    },
+    {
+      "id": "apology",
+      "title": "Delay with a public apology",
+      "upside": "No live exposure tomorrow.",
+      "cost": "Tess owns a difficult partner conversation; sales trust falls.",
+      "risk": "The apology is a commitment, not a substitute for a new delivery date.",
+      "share": 0,
+      "ST": -8,
+      "CT": -2,
+      "SY": 4
+    },
+    {
+      "id": "credits",
+      "title": "Offer Marlo service credits",
+      "upside": "A tangible concession buys time.",
+      "cost": "A $12,000 credit, recorded in the board ledger.",
+      "risk": "Compensation does not resolve the original delivery promise.",
+      "share": 0,
+      "ST": 6,
+      "CT": -3,
+      "SY": 0
+    },
+    {
+      "id": "risk",
+      "title": "Full launch, risk acknowledged",
+      "upside": "The original promise survives unchanged.",
+      "cost": "Public exposure and an explicit record that you accepted it.",
+      "risk": "Acknowledging risk does not add capacity or protect payments.",
+      "share": 1,
+      "ST": 10,
+      "CT": 5,
+      "SY": -8
+    }
+  ],
+  "segments": [
+    {
+      "id": "new",
+      "label": "New users",
+      "share": 0.2,
+      "note": "Unfamiliar with checkout; fragile first impressions."
+    },
+    {
+      "id": "returning",
+      "label": "Returning users",
+      "share": 0.24,
+      "note": "Regular shoppers; a smaller invitation can preserve demand."
+    },
+    {
+      "id": "power",
+      "label": "Power users",
+      "share": 0.12,
+      "note": "Small cohort, high activity; not representative of everyone."
+    },
+    {
+      "id": "marlo",
+      "label": "Marlo shoppers",
+      "share": 0.24,
+      "note": "Partner pressure and pre-orders concentrate here."
+    },
+    {
+      "id": "android",
+      "label": "Low-end Android",
+      "share": 0.12,
+      "note": "Thin client headroom; use an extra load allowance."
+    },
+    {
+      "id": "international",
+      "label": "International",
+      "share": 0.08,
+      "note": "Latency and payment uncertainty need monitoring."
+    }
+  ],
+  "positions": [
+    {
+      "id": "ship",
+      "label": "Ship it",
+      "text": "We will launch Live Drops."
+    },
+    {
+      "id": "guarded",
+      "label": "Ship guarded",
+      "text": "We will launch only behind safeguards."
+    },
+    {
+      "id": "no",
+      "label": "Do not ship",
+      "text": "We will not launch publicly tonight."
+    },
+    {
+      "id": "defer",
+      "label": "Defer after the board",
+      "text": "We will decide the launch after the board."
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "data",
+      "label": "Checkout improvement + evidence deck",
+      "text": "Instead, demonstrate a checkout improvement and its evidence."
+    },
+    {
+      "id": "beta",
+      "label": "Private beta for three brands",
+      "text": "Instead, offer a private beta for three brands."
+    },
+    {
+      "id": "sandbox",
+      "label": "Labelled sandbox demonstration",
+      "text": "Instead, show a clearly labelled sandbox demonstration."
+    },
+    {
+      "id": "none",
+      "label": "No alternative",
+      "text": "There is no replacement demonstration."
+    }
+  ],
+  "asks": [
+    {
+      "id": "tess",
+      "label": "Back me with Tess",
+      "text": "I need you to back this with Tess."
+    },
+    {
+      "id": "week",
+      "label": "Give us one week",
+      "text": "I need one week to validate the next release."
+    },
+    {
+      "id": "hosting",
+      "label": "Cover extra hosting",
+      "text": "I need you to cover the extra hosting."
+    },
+    {
+      "id": "none",
+      "label": "No request",
+      "text": "I am not asking for additional support."
+    }
+  ],
+  "deadlines": [
+    {
+      "id": "tonight",
+      "label": "Tonight",
+      "text": "I will report tonight."
+    },
+    {
+      "id": "board",
+      "label": "Before the board",
+      "text": "I will report before the board."
+    },
+    {
+      "id": "after",
+      "label": "After the board",
+      "text": "I will report after the board."
+    }
+  ],
+  "lenses": [
+    {
+      "id": "revenue",
+      "label": "Revenue risk",
+      "line": "LENS-REVENUE"
+    },
+    {
+      "id": "reputation",
+      "label": "Reputation",
+      "line": "LENS-REPUTATION"
+    },
+    {
+      "id": "board",
+      "label": "Board optics",
+      "line": "LENS-BOARD"
+    },
+    {
+      "id": "burnout",
+      "label": "Engineering burnout",
+      "line": "LENS-BURNOUT"
+    },
+    {
+      "id": "alternative",
+      "label": "Alternative offer",
+      "line": "LENS-ALT"
+    }
+  ],
+  "beats": {
+    "cold": {
+      "act": 1,
+      "title": "11:47 PM. Your phone lights up.",
+      "goal": "Understand the promise before you inherit it.",
+      "now": "Reply to Kian.",
+      "cost": "First reply: 3 story minutes."
+    },
+    "evidence": {
+      "act": 1,
+      "title": "Five claims. One night.",
+      "goal": "Find out what actually breaks.",
+      "now": "Investigate a source, then link it to a claim.",
+      "cost": "Each investigation spends 20–35 minutes. Overnight research budget: 110 minutes."
+    },
+    "resources": {
+      "act": 1,
+      "title": "Ten hours of engineering.",
+      "goal": "Choose what the team can protect tonight.",
+      "now": "Allocate safeguard hours; preview capacity.",
+      "cost": "Planning spends 10 minutes; allocation divides engineer time."
+    },
+    "rehearsal": {
+      "act": 1,
+      "title": "Try the argument before the call.",
+      "goal": "Learn what Kian listens to.",
+      "now": "Rehearse up to three arguments, or call now.",
+      "cost": "Each rehearsal spends 15 story minutes."
+    },
+    "call": {
+      "act": 1,
+      "title": "Say what you mean.",
+      "goal": "Give Kian a decision, evidence and an alternative.",
+      "now": "Compose all five slots; review your exact words.",
+      "cost": "The call spends 20 story minutes."
+    },
+    "priya": {
+      "act": 2,
+      "title": "6:30 AM. The team remembers.",
+      "goal": "Give Priya an explicit instruction.",
+      "now": "Read her response, then protect the queue or keep the allocation.",
+      "cost": "A clear instruction spends 10 minutes."
+    },
+    "deals": {
+      "act": 2,
+      "title": "Tess needs something she can promise.",
+      "goal": "Make a trade you can explain to the board.",
+      "now": "Inspect a deal’s costs before accepting. Finish when ready.",
+      "cost": "Each accepted deal spends 20 minutes; two deals maximum."
+    },
+    "rollout": {
+      "act": 2,
+      "title": "Who carries the risk?",
+      "goal": "Choose the people affected if the plan fails.",
+      "now": "Toggle rollout cohorts; compare load with capacity.",
+      "cost": "Locking the rollout spends 15 minutes."
+    },
+    "lock": {
+      "act": 2,
+      "title": "Before the room opens.",
+      "goal": "Lock one honest board proposal.",
+      "now": "Choose a plan and cite the strongest evidence you collected.",
+      "cost": "10 minutes. Evidence is required to advocate a plan; an explicit uninformed handoff remains available."
+    },
+    "board": {
+      "act": 3,
+      "title": "9:00 AM. Show the decision.",
+      "goal": "Let the board see the plan you actually locked.",
+      "now": "Start the demonstration or present the alternative.",
+      "cost": "A story beat, not a reflex timer."
+    },
+    "final": {
+      "act": 3,
+      "title": "Lena asks for your judgment.",
+      "goal": "Own what happened and state the reversal condition.",
+      "now": "Acknowledge, defend, or propose rollback.",
+      "cost": "Your final response changes credibility and the verdict."
+    },
+    "debrief": {
+      "act": 3,
+      "title": "What your No made possible.",
+      "goal": "Connect your decisions to what happened.",
+      "now": "Read the brief conclusion. Details and reflection are optional.",
+      "cost": "No gate. Export or replay a separate branch."
+    }
+  },
+  "concepts": {
+    "refusal": "Evidence-linked refusal",
+    "alternative": "A No with an alternative is a proposal.",
+    "hedge": "Hedge words make your No negotiable.",
+    "blast": "Blast radius: who carries the cost if you are wrong?",
+    "debt": "A trade commitment is a debt, not a free concession.",
+    "reversible": "A rollback plan makes a decision more reversible.",
+    "credibility": "Credibility is earned across scenes."
+  },
+  "lines": [
+    {
+      "id": "OPEN",
+      "speaker": "Kian",
+      "text": "Tomorrow, nine a.m. Live Drops, in front of the board. Make it happen.",
+      "emotion": "pressured",
+      "requires": []
+    },
+    {
+      "id": "REPLY-ON",
+      "speaker": "Kian",
+      "text": "Good. Tell me what you need before this becomes a surprise.",
+      "emotion": "engaged",
+      "requires": []
+    },
+    {
+      "id": "REPLY-ASK",
+      "speaker": "Kian",
+      "text": "A live sale. Thousands watching. I need a credible story tomorrow.",
+      "emotion": "concerned",
+      "requires": []
+    },
+    {
+      "id": "REPLY-CALL",
+      "speaker": "Kian",
+      "text": "Call after you check the numbers. I need a decision.",
+      "emotion": "engaged",
+      "requires": []
+    },
+    {
+      "id": "LENS-REVENUE",
+      "speaker": "Kian",
+      "text": "Show me what a failed checkout costs us.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "LENS-REPUTATION",
+      "speaker": "Kian",
+      "text": "Be specific. Whose trust do we lose, and how?",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "LENS-BOARD",
+      "speaker": "Kian",
+      "text": "A controlled demonstration beats an unexplained failure. What can we show?",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "LENS-BURNOUT",
+      "speaker": "Kian",
+      "text": "I hear you. What does that mean for tomorrow’s decision?",
+      "emotion": "concerned",
+      "requires": []
+    },
+    {
+      "id": "LENS-ALT",
+      "speaker": "Kian",
+      "text": "Give me something credible to take into that room.",
+      "emotion": "engaged",
+      "requires": []
+    },
+    {
+      "id": "CALL-STRONG",
+      "speaker": "Kian",
+      "text": "Fine. Convince me. I will back an alternative we can explain.",
+      "emotion": "reassured",
+      "requires": []
+    },
+    {
+      "id": "CALL-BARE",
+      "speaker": "Kian",
+      "text": "So I tell the board what, exactly?",
+      "emotion": "concerned",
+      "requires": []
+    },
+    {
+      "id": "CALL-CAVE",
+      "speaker": "Kian",
+      "text": "Good. That is what I needed. Keep me posted.",
+      "emotion": "reassured",
+      "requires": []
+    },
+    {
+      "id": "CALL-HEDGE",
+      "speaker": "Kian",
+      "text": "You think? I need a decision, not a maybe.",
+      "emotion": "pressured",
+      "requires": []
+    },
+    {
+      "id": "CALL-GUARD",
+      "speaker": "Kian",
+      "text": "A controlled release, with safeguards. Tell me who can stop it.",
+      "emotion": "engaged",
+      "requires": []
+    },
+    {
+      "id": "CALL-WEAK",
+      "speaker": "Kian",
+      "text": "I need stronger evidence before I can sell that change.",
+      "emotion": "concerned",
+      "requires": []
+    },
+    {
+      "id": "CALL-DEFER",
+      "speaker": "Kian",
+      "text": "Then explain the delay yourself. The board still expects an answer.",
+      "emotion": "concerned",
+      "requires": []
+    },
+    {
+      "id": "BACKCHANNEL",
+      "speaker": "Kian",
+      "text": "I spoke to Tess. She needs a deliverable, not another discussion.",
+      "emotion": "pressured",
+      "requires": []
+    },
+    {
+      "id": "BOARD-RECEIPT",
+      "speaker": "Kian",
+      "text": "These were your words. Tell us what changed after that call.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "OVERRULE",
+      "speaker": "Kian",
+      "text": "I am overruling the delay. We will launch after this meeting.",
+      "emotion": "pressured",
+      "requires": []
+    },
+    {
+      "id": "OPEN-PRIYA",
+      "speaker": "Priya",
+      "text": "Please tell me this is not happening. The queue is not ready.",
+      "emotion": "concerned",
+      "requires": []
+    },
+    {
+      "id": "PRIYA-LISTENED",
+      "speaker": "Priya",
+      "text": "You used my numbers. I added a kill switch.",
+      "emotion": "reassured",
+      "requires": []
+    },
+    {
+      "id": "PRIYA-IGNORED",
+      "speaker": "Priya",
+      "text": "I warned you. I will not take an unguarded queue live.",
+      "emotion": "concerned",
+      "requires": []
+    },
+    {
+      "id": "PRIYA-NEUTRAL",
+      "speaker": "Priya",
+      "text": "Give me a clear release boundary and a rollback owner.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "PRIYA-QUEUE",
+      "speaker": "Priya",
+      "text": "I can isolate the queue. That protects us, but costs feature time.",
+      "emotion": "engaged",
+      "requires": []
+    },
+    {
+      "id": "PRIYA-KEEP",
+      "speaker": "Priya",
+      "text": "Understood. I am recording the allocation you chose.",
+      "emotion": "concerned",
+      "requires": []
+    },
+    {
+      "id": "BOARD-WARNING",
+      "speaker": "Priya",
+      "text": "That is the warning I sent. The choice stayed yours.",
+      "emotion": "concerned",
+      "requires": []
+    },
+    {
+      "id": "OPEN-TESS",
+      "speaker": "Tess",
+      "text": "Marlo is counting on this. Give me something I can promise.",
+      "emotion": "concerned",
+      "requires": []
+    },
+    {
+      "id": "DEAL-BETA",
+      "speaker": "Tess",
+      "text": "Give me three brands and a date. I can work with that.",
+      "emotion": "engaged",
+      "requires": []
+    },
+    {
+      "id": "DEAL-MARLO",
+      "speaker": "Tess",
+      "text": "Marlo only. But their pre-orders are riding on this.",
+      "emotion": "concerned",
+      "requires": []
+    },
+    {
+      "id": "DEAL-APOLOGY",
+      "speaker": "Tess",
+      "text": "I will make the call. We still owe them a delivery date.",
+      "emotion": "concerned",
+      "requires": []
+    },
+    {
+      "id": "DEAL-CREDITS",
+      "speaker": "Tess",
+      "text": "Credits buy patience. They do not deliver the feature.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "DEAL-RISK",
+      "speaker": "Tess",
+      "text": "I can sell the launch. I cannot make its risk disappear.",
+      "emotion": "concerned",
+      "requires": []
+    },
+    {
+      "id": "DEAL-HEDGE",
+      "speaker": "Tess",
+      "text": "Is that a yes? I need a commitment I can repeat.",
+      "emotion": "pressured",
+      "requires": []
+    },
+    {
+      "id": "DEAL-NONE",
+      "speaker": "Tess",
+      "text": "No deal, then. I will tell Marlo what we actually know.",
+      "emotion": "concerned",
+      "requires": []
+    },
+    {
+      "id": "BOARD-LEDGER",
+      "speaker": "Tess",
+      "text": "Here is what we promised Marlo. Is that still the plan?",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "EV-LOAD",
+      "speaker": "Noor",
+      "text": "Peak tested: four thousand two hundred. Forecast: nine thousand concurrent users.",
+      "emotion": "neutral",
+      "requires": []
+    },
+    {
+      "id": "EV-INCIDENT",
+      "speaker": "Noor",
+      "text": "Recovery took forty-seven minutes. Some payment failures needed reconciliation.",
+      "emotion": "neutral",
+      "requires": []
+    },
+    {
+      "id": "EV-PAYMENTS",
+      "speaker": "Noor",
+      "text": "The provider throttles above fifteen hundred payment requests per minute.",
+      "emotion": "neutral",
+      "requires": []
+    },
+    {
+      "id": "EV-DASH",
+      "speaker": "Noor",
+      "text": "Checkout p ninety-five is two point eight seconds. Queue age is rising.",
+      "emotion": "neutral",
+      "requires": []
+    },
+    {
+      "id": "EV-TICKETS",
+      "speaker": "Noor",
+      "text": "Demand is real. So are the complaints about failed checkout.",
+      "emotion": "neutral",
+      "requires": []
+    },
+    {
+      "id": "DEMO-STABLE",
+      "speaker": "Noor",
+      "text": "The selected audience stayed inside the modelled release boundary.",
+      "emotion": "neutral",
+      "requires": []
+    },
+    {
+      "id": "DEMO-DEGRADED",
+      "speaker": "Noor",
+      "text": "The kill switch limited exposure. Some viewers lost the live session.",
+      "emotion": "neutral",
+      "requires": []
+    },
+    {
+      "id": "DEMO-CRASH",
+      "speaker": "Noor",
+      "text": "Capacity was exceeded. The demonstration stopped before checkout completed.",
+      "emotion": "neutral",
+      "requires": []
+    },
+    {
+      "id": "DEMO-PAYMENT",
+      "speaker": "Noor",
+      "text": "The payment provider throttled. Viewers could watch, but purchases failed.",
+      "emotion": "neutral",
+      "requires": []
+    },
+    {
+      "id": "DEMO-MARLO",
+      "speaker": "Noor",
+      "text": "Marlo’s session failed. The wider audience was not exposed.",
+      "emotion": "neutral",
+      "requires": []
+    },
+    {
+      "id": "DEMO-SANDBOX",
+      "speaker": "Noor",
+      "text": "This is a labelled sandbox, not proof of production readiness.",
+      "emotion": "neutral",
+      "requires": []
+    },
+    {
+      "id": "DEMO-DATA",
+      "speaker": "Noor",
+      "text": "The deck shows a checkout forecast. Production improvement is not measured yet.",
+      "emotion": "neutral",
+      "requires": []
+    },
+    {
+      "id": "DEMO-DEFER",
+      "speaker": "Noor",
+      "text": "No production audience was exposed. The delivery decision is still outstanding.",
+      "emotion": "neutral",
+      "requires": []
+    },
+    {
+      "id": "BOARD-OPEN",
+      "speaker": "Lena",
+      "text": "Show us the decision, its evidence, and what would change your mind.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "BOARD-GOLD",
+      "speaker": "Lena",
+      "text": "You gave us an alternative with a testable business case.",
+      "emotion": "approving",
+      "requires": []
+    },
+    {
+      "id": "BOARD-FAIL",
+      "speaker": "Lena",
+      "text": "We watched it fail live. Why did you not stop it?",
+      "emotion": "concerned",
+      "requires": []
+    },
+    {
+      "id": "BOARD-STABLE",
+      "speaker": "Lena",
+      "text": "It held for this audience. What evidence supports widening it?",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "BOARD-WEEK",
+      "speaker": "Lena",
+      "text": "Your evidence earned this discussion. Do you need one week?",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "FINAL-OWN",
+      "speaker": "Lena",
+      "text": "Thank you for owning the result. What is the next checkpoint?",
+      "emotion": "reassured",
+      "requires": []
+    },
+    {
+      "id": "FINAL-DEFEND",
+      "speaker": "Lena",
+      "text": "Then state the conditions under which you would reverse it.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "FINAL-ROLLBACK",
+      "speaker": "Lena",
+      "text": "Name the owner and the trigger. Make the rollback explicit.",
+      "emotion": "engaged",
+      "requires": []
+    },
+    {
+      "id": "VERDICT-BACKED",
+      "speaker": "Lena",
+      "text": "We support the bounded plan. Report the next test, including failures.",
+      "emotion": "approving",
+      "requires": []
+    },
+    {
+      "id": "VERDICT-TOLERATED",
+      "speaker": "Lena",
+      "text": "The plan stands. We need clearer commitments before the next release.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "VERDICT-STANDOFF",
+      "speaker": "Lena",
+      "text": "Your evidence matters. Repair the relationship before the next decision.",
+      "emotion": "concerned",
+      "requires": []
+    },
+    {
+      "id": "VERDICT-CRASH",
+      "speaker": "Lena",
+      "text": "Contain the failure, tell the affected partners, and bring a recovery plan.",
+      "emotion": "concerned",
+      "requires": []
+    },
+    {
+      "id": "DEMO-UNREADY",
+      "speaker": "Noor",
+      "text": "Safeguards are ready. The live feature is not. We cannot demonstrate it.",
+      "emotion": "neutral",
+      "requires": []
+    }
+  ]
+}

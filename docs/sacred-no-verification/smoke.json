@@ -1,0 +1,171 @@
+{
+  "at": "2026-10-31T08:45:42.983Z",
+  "checks": [
+    {
+      "label": "entrance fits 390px",
+      "pass": true
+    },
+    {
+      "label": "entrance fits 320px",
+      "pass": true
+    },
+    {
+      "label": "role is clear before first reply",
+      "pass": true
+    },
+    {
+      "label": "cold fits 390px",
+      "pass": true
+    },
+    {
+      "label": "cold fits 320px",
+      "pass": true
+    },
+    {
+      "label": "relevant evidence breaks a claim",
+      "pass": true
+    },
+    {
+      "label": "evidence fits 390px",
+      "pass": true
+    },
+    {
+      "label": "evidence fits 320px",
+      "pass": true
+    },
+    {
+      "label": "call fits 390px",
+      "pass": true
+    },
+    {
+      "label": "call fits 320px",
+      "pass": true
+    },
+    {
+      "label": "strong refusal returns a specific Priya callback",
+      "pass": true
+    },
+    {
+      "label": "accepted trade exposes its debt",
+      "pass": true
+    },
+    {
+      "label": "at most one WebGL context surface",
+      "pass": true
+    },
+    {
+      "label": "coverage shader renders actual draw calls",
+      "pass": true
+    },
+    {
+      "label": "rollout fits 390px",
+      "pass": true
+    },
+    {
+      "label": "rollout fits 320px",
+      "pass": true
+    },
+    {
+      "label": "board remembers accepted deal",
+      "pass": true
+    },
+    {
+      "label": "board fits 390px",
+      "pass": true
+    },
+    {
+      "label": "board fits 320px",
+      "pass": true
+    },
+    {
+      "label": "alternative never pretends forecast is measured",
+      "pass": true
+    },
+    {
+      "label": "detailed debrief starts collapsed",
+      "pass": true
+    },
+    {
+      "label": "debrief remains interactive",
+      "pass": true
+    },
+    {
+      "label": "debrief fits 390px",
+      "pass": true
+    },
+    {
+      "label": "debrief fits 320px",
+      "pass": true
+    },
+    {
+      "label": "reload restores the completed run with a recap",
+      "pass": true
+    },
+    {
+      "label": "replay creates a new branch URL",
+      "pass": true
+    },
+    {
+      "label": "original remains completed after branch",
+      "pass": true
+    },
+    {
+      "label": "failure names the release boundary that was exceeded",
+      "pass": true
+    },
+    {
+      "label": "failure fits 390px",
+      "pass": true
+    },
+    {
+      "label": "failure fits 320px",
+      "pass": true
+    },
+    {
+      "label": "unsafe route reaches a causal crash conclusion",
+      "pass": true
+    },
+    {
+      "label": "cave-in is remembered in the outcome pattern",
+      "pass": true
+    },
+    {
+      "label": "Kian preview plays",
+      "pass": true
+    },
+    {
+      "label": "Priya preview plays",
+      "pass": true
+    },
+    {
+      "label": "Tess preview plays",
+      "pass": true
+    },
+    {
+      "label": "Lena preview plays",
+      "pass": true
+    },
+    {
+      "label": "Noor preview plays",
+      "pass": true
+    },
+    {
+      "label": "keyboard focus stays inside settings dialog",
+      "pass": true
+    },
+    {
+      "label": "blocked recording leaves captions and completed scene intact",
+      "pass": true
+    },
+    {
+      "label": "system reduced motion suppresses spectacle",
+      "pass": true
+    },
+    {
+      "label": "zero browser exceptions",
+      "pass": true,
+      "details": []
+    }
+  ],
+  "errors": []
+}

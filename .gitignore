@@ -60,3 +60,8 @@ docs/deadlock-v2-verification/*.log
 !docs/deadlock-v2-verification/event-popup-silent.png
 !docs/deadlock-v2-verification/review-silent.png
 !docs/deadlock-v2-verification/debrief-silent.png
+
+# Sacred No review captures; keep representative desktop and mobile screens.
+docs/sacred-no-verification/*-mobile.png
+!docs/sacred-no-verification/evidence-mobile.png
+!docs/sacred-no-verification/rollout-mobile.png

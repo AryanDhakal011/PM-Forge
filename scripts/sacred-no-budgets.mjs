@@ -1,0 +1,15 @@
+import {readFileSync,readdirSync,statSync,writeFileSync,mkdirSync} from "node:fs";
+import {runInNewContext} from "node:vm";
+import {gzipSync} from "node:zlib";
+const context={globalThis:{}};
+runInNewContext(readFileSync('.next/server/app/app/projects/sacred-no/page_client-reference-manifest.js','utf8'),context);
+const manifest=Object.values(context.globalThis.__RSC_MANIFEST)[0];
+const root=Object.entries(manifest.clientModules).find(([key])=>key.includes('/sacred-no/SacredNoExperience.tsx'))?.[1];
+if(!root)throw Error('Sacred No boundary not found.');
+const boundary=[...new Set(root.chunks)];
+const size=path=>gzipSync(readFileSync('.next/'+path.replace(/^\/_next\//,''))).length;
+const chunks=readdirSync('.next/static/chunks').filter(f=>f.endsWith('.js'));
+const lazy=chunks.filter(f=>{const s=readFileSync('.next/static/chunks/'+f,'utf8');return s.includes('single particle field')||s.includes('WebGLRenderer:');}).map(f=>'/_next/static/chunks/'+f).filter(f=>!boundary.includes(f));
+const report={at:new Date().toISOString(),buildId:readFileSync('.next/BUILD_ID','utf8').trim(),method:'Gzip of client-reference dependency boundary; lazy coverage/Three chunks identified by source signatures. Excludes unrelated Next bootstrap and CSS. This is not a cold-page transfer or frame-time guarantee.',boundaryGzipBytes:boundary.reduce((n,f)=>n+size(f),0),lazyCoverageGzipBytes:lazy.reduce((n,f)=>n+size(f),0),castBytes:statSync('public/sacred-no/cast-v1.webp').size,audioBytes:readdirSync('public/sacred-no/audio').filter(f=>f.endsWith('.mp3')).reduce((n,f)=>n+statSync('public/sacred-no/audio/'+f).size,0),boundary,lazy};
+report.checks={boundaryAtMost350KB:report.boundaryGzipBytes<=350*1024,lazyAtMost250KB:report.lazyCoverageGzipBytes<=250*1024};
+mkdirSync('docs/sacred-no-verification',{recursive:true});writeFileSync('docs/sacred-no-verification/budgets.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));if(Object.values(report.checks).some(x=>!x))process.exitCode=1;

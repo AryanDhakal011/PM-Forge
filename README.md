@@ -57,3 +57,5 @@ Scenario numbers are simulated. Scenarios remain drafts until independently revi
 Set `NEXT_PUBLIC_SITE_URL` to the deployment origin. The default local origin is `http://localhost:3001`. The stack is Next.js 16.4.3, React 19.3.1, Three.js 0.182.0, R3F, drei, GSAP, Dexie and CSS Modules.
 
 See [product MVP](PRODUCT-MVP-REPORT.md), [projects](docs/REAL-WORLD-PROJECTS-REPORT.md), [workspace corrections](docs/WORKSPACE-CORRECTIONS.md), and [asset provenance](docs/ASSET_MANIFEST.md). Older implementation reports describe earlier landing prototypes.
+
+The Sacred No now has a dedicated playable simulation at `/app/projects/sacred-no`: a midnight message, evidence-linked refusal, stakeholder commitments, rollout modelling, a board consequence and a short receipt-based conclusion. It includes a static illustrated cast and 61 recorded lines, local save/resume/export and replay forks. See [Sacred No implementation and verification](docs/SACRED-NO.md). Run `npm run test:sacred-no`; the production build also validates its dialogue references and recording coverage. These project logs remain device-local and are not included in account sync.

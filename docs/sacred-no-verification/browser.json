@@ -1,0 +1,482 @@
+{
+  "at": "2026-10-31T08:42:29.714Z",
+  "checks": [
+    {
+      "label": "entrance fits 390px",
+      "pass": true
+    },
+    {
+      "label": "entrance fits 320px",
+      "pass": true
+    },
+    {
+      "label": "role is clear before first reply",
+      "pass": true
+    },
+    {
+      "label": "cold fits 390px",
+      "pass": true
+    },
+    {
+      "label": "cold fits 320px",
+      "pass": true
+    },
+    {
+      "label": "relevant evidence breaks a claim",
+      "pass": true
+    },
+    {
+      "label": "evidence fits 390px",
+      "pass": true
+    },
+    {
+      "label": "evidence fits 320px",
+      "pass": true
+    },
+    {
+      "label": "call fits 390px",
+      "pass": true
+    },
+    {
+      "label": "call fits 320px",
+      "pass": true
+    },
+    {
+      "label": "strong refusal returns a specific Priya callback",
+      "pass": true
+    },
+    {
+      "label": "accepted trade exposes its debt",
+      "pass": true
+    },
+    {
+      "label": "at most one WebGL context surface",
+      "pass": true
+    },
+    {
+      "label": "coverage shader renders actual draw calls",
+      "pass": true
+    },
+    {
+      "label": "rollout fits 390px",
+      "pass": true
+    },
+    {
+      "label": "rollout fits 320px",
+      "pass": true
+    },
+    {
+      "label": "board remembers accepted deal",
+      "pass": true
+    },
+    {
+      "label": "board fits 390px",
+      "pass": true
+    },
+    {
+      "label": "board fits 320px",
+      "pass": true
+    },
+    {
+      "label": "alternative never pretends forecast is measured",
+      "pass": true
+    },
+    {
+      "label": "detailed debrief starts collapsed",
+      "pass": true
+    },
+    {
+      "label": "debrief remains interactive",
+      "pass": true
+    },
+    {
+      "label": "debrief fits 390px",
+      "pass": true
+    },
+    {
+      "label": "debrief fits 320px",
+      "pass": true
+    },
+    {
+      "label": "reload restores the completed run with a recap",
+      "pass": true
+    },
+    {
+      "label": "replay creates a new branch URL",
+      "pass": true
+    },
+    {
+      "label": "original remains completed after branch",
+      "pass": true
+    },
+    {
+      "label": "failure names the release boundary that was exceeded",
+      "pass": true
+    },
+    {
+      "label": "failure fits 390px",
+      "pass": true
+    },
+    {
+      "label": "failure fits 320px",
+      "pass": true
+    },
+    {
+      "label": "unsafe route reaches a causal crash conclusion",
+      "pass": true
+    },
+    {
+      "label": "cave-in is remembered in the outcome pattern",
+      "pass": true
+    },
+    {
+      "label": "Kian preview plays",
+      "pass": true
+    },
+    {
+      "label": "Priya preview plays",
+      "pass": true
+    },
+    {
+      "label": "Tess preview plays",
+      "pass": true
+    },
+    {
+      "label": "Lena preview plays",
+      "pass": true
+    },
+    {
+      "label": "Noor preview plays",
+      "pass": true
+    },
+    {
+      "label": "keyboard focus stays inside settings dialog",
+      "pass": true
+    },
+    {
+      "label": "blocked recording leaves captions and completed scene intact",
+      "pass": true
+    },
+    {
+      "label": "system reduced motion suppresses spectacle",
+      "pass": true
+    },
+    {
+      "label": "all recorded MP3s play to ended",
+      "pass": true
+    },
+    {
+      "label": "zero browser exceptions",
+      "pass": true,
+      "details": []
+    }
+  ],
+  "errors": [],
+  "audio": [
+    {
+      "id": "OPEN",
+      "played": true,
+      "duration": 5.014671
+    },
+    {
+      "id": "REPLY-ON",
+      "played": true,
+      "duration": 3.279342
+    },
+    {
+      "id": "REPLY-ASK",
+      "played": true,
+      "duration": 4.814014
+    },
+    {
+      "id": "REPLY-CALL",
+      "played": true,
+      "duration": 3.36
+    },
+    {
+      "id": "LENS-REVENUE",
+      "played": true,
+      "duration": 2.346667
+    },
+    {
+      "id": "LENS-REPUTATION",
+      "played": true,
+      "duration": 2.831338
+    },
+    {
+      "id": "LENS-BOARD",
+      "played": true,
+      "duration": 4.956667
+    },
+    {
+      "id": "LENS-BURNOUT",
+      "played": true,
+      "duration": 3.25068
+    },
+    {
+      "id": "LENS-ALT",
+      "played": true,
+      "duration": 2.959342
+    },
+    {
+      "id": "CALL-STRONG",
+      "played": true,
+      "duration": 3.805351
+    },
+    {
+      "id": "CALL-BARE",
+      "played": true,
+      "duration": 2.208685
+    },
+    {
+      "id": "CALL-CAVE",
+      "played": true,
+      "duration": 2.659297
+    },
+    {
+      "id": "CALL-HEDGE",
+      "played": true,
+      "duration": 2.477347
+    },
+    {
+      "id": "CALL-GUARD",
+      "played": true,
+      "duration": 4.107347
+    },
+    {
+      "id": "CALL-WEAK",
+      "played": true,
+      "duration": 3.451338
+    },
+    {
+      "id": "CALL-DEFER",
+      "played": true,
+      "duration": 4.261338
+    },
+    {
+      "id": "BACKCHANNEL",
+      "played": true,
+      "duration": 4.123333
+    },
+    {
+      "id": "BOARD-RECEIPT",
+      "played": true,
+      "duration": 3.702018
+    },
+    {
+      "id": "OVERRULE",
+      "played": true,
+      "duration": 3.844671
+    },
+    {
+      "id": "OPEN-PRIYA",
+      "played": true,
+      "duration": 3.702018
+    },
+    {
+      "id": "PRIYA-LISTENED",
+      "played": true,
+      "duration": 2.984014
+    },
+    {
+      "id": "PRIYA-IGNORED",
+      "played": true,
+      "duration": 3.656667
+    },
+    {
+      "id": "PRIYA-NEUTRAL",
+      "played": true,
+      "duration": 3.403333
+    },
+    {
+      "id": "PRIYA-QUEUE",
+      "played": true,
+      "duration": 4.325351
+    },
+    {
+      "id": "PRIYA-KEEP",
+      "played": true,
+      "duration": 3.57
+    },
+    {
+      "id": "BOARD-WARNING",
+      "played": true,
+      "duration": 3.326667
+    },
+    {
+      "id": "OPEN-TESS",
+      "played": true,
+      "duration": 3.826009
+    },
+    {
+      "id": "DEAL-BETA",
+      "played": true,
+      "duration": 3.453311
+    },
+    {
+      "id": "DEAL-MARLO",
+      "played": true,
+      "duration": 3.696667
+    },
+    {
+      "id": "DEAL-APOLOGY",
+      "played": true,
+      "duration": 3.463333
+    },
+    {
+      "id": "DEAL-CREDITS",
+      "played": true,
+      "duration": 3.42068
+    },
+    {
+      "id": "DEAL-RISK",
+      "played": true,
+      "duration": 3.751973
+    },
+    {
+      "id": "DEAL-HEDGE",
+      "played": true,
+      "duration": 3.232676
+    },
+    {
+      "id": "DEAL-NONE",
+      "played": true,
+      "duration": 3.730635
+    },
+    {
+      "id": "BOARD-LEDGER",
+      "played": true,
+      "duration": 3.559977
+    },
+    {
+      "id": "EV-LOAD",
+      "played": true,
+      "duration": 5.539977
+    },
+    {
+      "id": "EV-INCIDENT",
+      "played": true,
+      "duration": 5.447347
+    },
+    {
+      "id": "EV-PAYMENTS",
+      "played": true,
+      "duration": 4.167347
+    },
+    {
+      "id": "EV-DASH",
+      "played": true,
+      "duration": 4.967959
+    },
+    {
+      "id": "EV-TICKETS",
+      "played": true,
+      "duration": 3.87
+    },
+    {
+      "id": "DEMO-STABLE",
+      "played": true,
+      "duration": 4.050635
+    },
+    {
+      "id": "DEMO-DEGRADED",
+      "played": true,
+      "duration": 4.423333
+    },
+    {
+      "id": "DEMO-CRASH",
+      "played": true,
+      "duration": 5.064671
+    },
+    {
+      "id": "DEMO-PAYMENT",
+      "played": true,
+      "duration": 4.655351
+    },
+    {
+      "id": "DEMO-MARLO",
+      "played": true,
+      "duration": 4.24263
+    },
+    {
+      "id": "DEMO-SANDBOX",
+      "played": true,
+      "duration": 4.050635
+    },
+    {
+      "id": "DEMO-DATA",
+      "played": true,
+      "duration": 4.841338
+    },
+    {
+      "id": "DEMO-DEFER",
+      "played": true,
+      "duration": 5.20263
+    },
+    {
+      "id": "BOARD-OPEN",
+      "played": true,
+      "duration": 3.979977
+    },
+    {
+      "id": "BOARD-GOLD",
+      "played": true,
+      "duration": 3.442018
+    },
+    {
+      "id": "BOARD-FAIL",
+      "played": true,
+      "duration": 3.219297
+    },
+    {
+      "id": "BOARD-STABLE",
+      "played": true,
+      "duration": 4.104671
+    },
+    {
+      "id": "BOARD-WEEK",
+      "played": true,
+      "duration": 3.751973
+    },
+    {
+      "id": "FINAL-OWN",
+      "played": true,
+      "duration": 3.665351
+    },
+    {
+      "id": "FINAL-DEFEND",
+      "played": true,
+      "duration": 3.261293
+    },
+    {
+      "id": "FINAL-ROLLBACK",
+      "played": true,
+      "duration": 3.878685
+    },
+    {
+      "id": "VERDICT-BACKED",
+      "played": true,
+      "duration": 4.67263
+    },
+    {
+      "id": "VERDICT-TOLERATED",
+      "played": true,
+      "duration": 4.263968
+    },
+    {
+      "id": "VERDICT-STANDOFF",
+      "played": true,
+      "duration": 4.56263
+    },
+    {
+      "id": "VERDICT-CRASH",
+      "played": true,
+      "duration": 4.316667
+    },
+    {
+      "id": "DEMO-UNREADY",
+      "played": true,
+      "duration": 4.702018
+    }
+  ]
+}

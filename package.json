@@ -2,7 +2,7 @@
   "name": "pmforge",
   "version": "1.0.0",
   "private": true,
-  "description": "PMForge — a practice platform for product decisions.",
+  "description": "PMForge \u00e2\u20ac\u201d a practice platform for product decisions.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,7 +11,9 @@
     "launch:check": "node --env-file-if-exists=.env.local scripts/check-launch.mjs",
     "test": "node --import tsx --test tests/interview-engine.test.ts tests/calibration.test.ts tests/projects.test.ts && node --conditions=react-server --import tsx --test tests/account-server.test.ts",
     "test:deadlock": "node --import tsx --test tests/deadlock.test.ts tests/deadlock-v2.test.ts tests/deadlock-refinements.test.ts",
-    "deadlock:sim": "node --import tsx scripts/deadlock-sim.ts"
+    "deadlock:sim": "node --import tsx scripts/deadlock-sim.ts",
+    "prebuild": "node --import tsx scripts/check-sacred-no.ts",
+    "test:sacred-no": "node --import tsx --test tests/sacred-no.test.ts"
   },
   "dependencies": {
     "@fontsource/barlow-condensed": "^5.3.0",

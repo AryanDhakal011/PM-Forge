@@ -1,11 +1,13 @@
 /* Only static assets and anonymous app shells are cached. Never APIs/auth/RSC. */
-const CACHE = "pmforge-offline-v4";
+const CACHE = "pmforge-offline-v5";
 const staticAsset = (url) =>
   url.origin === self.location.origin &&
   (url.pathname.startsWith("/_next/static/") ||
     url.pathname.startsWith("/deadlock/fonts/") ||
     url.pathname.startsWith("/deadlock/characters/") ||
-    url.pathname.startsWith("/deadlock/audio/"));
+    url.pathname.startsWith("/deadlock/audio/") ||
+    url.pathname.startsWith("/sacred-no/audio/") ||
+    url.pathname === "/sacred-no/cast-v1.webp");
 self.addEventListener("install", (event) =>
   event.waitUntil(
     caches
@@ -35,6 +37,10 @@ self.addEventListener("activate", (event) =>
   ),
 );
 self.addEventListener("message", (event) => {
+  if (event.data?.type === "CACHE_SACRED_SHELL") {
+    event.waitUntil(caches.open(CACHE).then(cache => Promise.allSettled(["/app/projects/sacred-no", "/sacred-no/cast-v1.webp"].map(url => cache.add(url)))));
+    return;
+  }
   if (event.data?.type === "CACHE_DEADLOCK_SHELL") {
     event.waitUntil(
       caches
@@ -119,6 +125,7 @@ self.addEventListener("fetch", (event) => {
             (url.pathname.startsWith("/app/projects/deadlock")
               ? await cache.match("/app/projects/deadlock")
               : null) ||
+            (url.pathname === "/app/projects/sacred-no" ? await cache.match("/app/projects/sacred-no") : null) ||
             (await cache.match("/offline")) ||
             Response.error()
           );

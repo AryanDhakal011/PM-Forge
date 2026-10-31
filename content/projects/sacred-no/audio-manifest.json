@@ -1,0 +1,617 @@
+{
+  "version": 1,
+  "provider": "Kokoro-82M v1.0 / kokoro-onnx 0.6.1",
+  "directionLimit": "Emotion tags direct pace and pauses; this model has no native acted-emotion control.",
+  "lines": {
+    "OPEN": {
+      "file": "/sacred-no/audio/OPEN.mp3",
+      "signature": "81a309481f69cd2aa97bb6d1b374b3b5d2f7e60606b7e80bbb182a108c62698d",
+      "caption": "Tomorrow, nine a.m. Live Drops, in front of the board. Make it happen.",
+      "speaker": "Kian",
+      "voice": "am_puck",
+      "emotion": "pressured",
+      "speed": 0.98,
+      "duration": 5.015
+    },
+    "REPLY-ON": {
+      "file": "/sacred-no/audio/REPLY-ON.mp3",
+      "signature": "1cbac46a45dcdc7d807b90cfab9afbcf9cbf5ae5f163b9f3034dffc22c8d17dd",
+      "caption": "Good. Tell me what you need before this becomes a surprise.",
+      "speaker": "Kian",
+      "voice": "am_puck",
+      "emotion": "engaged",
+      "speed": 1.0,
+      "duration": 3.279
+    },
+    "REPLY-ASK": {
+      "file": "/sacred-no/audio/REPLY-ASK.mp3",
+      "signature": "8925ae3c0ae749878278a95ab7fe50408d8542dff1efc0fd2f0fc84657dbffbc",
+      "caption": "A live sale. Thousands watching. I need a credible story tomorrow.",
+      "speaker": "Kian",
+      "voice": "am_puck",
+      "emotion": "concerned",
+      "speed": 0.98,
+      "duration": 4.814
+    },
+    "REPLY-CALL": {
+      "file": "/sacred-no/audio/REPLY-CALL.mp3",
+      "signature": "0eeb44ea80fec25b2b0be7a42d249669edfd41e56efee43e8fd9ecd4f1319bd5",
+      "caption": "Call after you check the numbers. I need a decision.",
+      "speaker": "Kian",
+      "voice": "am_puck",
+      "emotion": "engaged",
+      "speed": 1.0,
+      "duration": 3.36
+    },
+    "LENS-REVENUE": {
+      "file": "/sacred-no/audio/LENS-REVENUE.mp3",
+      "signature": "66dded4a3d3386759091b04fe7c5d7c47cf02b3365de6149b2a6c48eb01e9fd8",
+      "caption": "Show me what a failed checkout costs us.",
+      "speaker": "Kian",
+      "voice": "am_puck",
+      "emotion": "thinking",
+      "speed": 0.98,
+      "duration": 2.347
+    },
+    "LENS-REPUTATION": {
+      "file": "/sacred-no/audio/LENS-REPUTATION.mp3",
+      "signature": "a9b4d1259fc32e61e5a09348afcbabbb043a9d96e3c0f8ddea9a1d767b5cea0c",
+      "caption": "Be specific. Whose trust do we lose, and how?",
+      "speaker": "Kian",
+      "voice": "am_puck",
+      "emotion": "thinking",
+      "speed": 0.98,
+      "duration": 2.831
+    },
+    "LENS-BOARD": {
+      "file": "/sacred-no/audio/LENS-BOARD.mp3",
+      "signature": "9e3eb40041299889b37ea41c6e4b4e27bb2bdf27375a9a43c97bdf9699d8f68c",
+      "caption": "A controlled demonstration beats an unexplained failure. What can we show?",
+      "speaker": "Kian",
+      "voice": "am_puck",
+      "emotion": "thinking",
+      "speed": 0.98,
+      "duration": 4.957
+    },
+    "LENS-BURNOUT": {
+      "file": "/sacred-no/audio/LENS-BURNOUT.mp3",
+      "signature": "a2b364ef0ad3e7e9367a3e42fa93094af7b1c6b27b05b0d2f7b2bc4ff027f6f5",
+      "caption": "I hear you. What does that mean for tomorrow\u2019s decision?",
+      "speaker": "Kian",
+      "voice": "am_puck",
+      "emotion": "concerned",
+      "speed": 0.98,
+      "duration": 3.251
+    },
+    "LENS-ALT": {
+      "file": "/sacred-no/audio/LENS-ALT.mp3",
+      "signature": "2fa8c3186a049228b8d52edbdf4dd46d2a21196acf65f79a80b706fa5f82f13e",
+      "caption": "Give me something credible to take into that room.",
+      "speaker": "Kian",
+      "voice": "am_puck",
+      "emotion": "engaged",
+      "speed": 1.0,
+      "duration": 2.959
+    },
+    "CALL-STRONG": {
+      "file": "/sacred-no/audio/CALL-STRONG.mp3",
+      "signature": "1f2b94383a62d3a570b3a67cb2df64d3f9335268652f5b23ecc14e5e5c0bbb96",
+      "caption": "Fine. Convince me. I will back an alternative we can explain.",
+      "speaker": "Kian",
+      "voice": "am_puck",
+      "emotion": "reassured",
+      "speed": 1.0,
+      "duration": 3.805
+    },
+    "CALL-BARE": {
+      "file": "/sacred-no/audio/CALL-BARE.mp3",
+      "signature": "a635ccc3a106a008b5abe7f040773474e862b01c92930ab95d7779ae5d5b39d3",
+      "caption": "So I tell the board what, exactly?",
+      "speaker": "Kian",
+      "voice": "am_puck",
+      "emotion": "concerned",
+      "speed": 0.98,
+      "duration": 2.209
+    },
+    "CALL-CAVE": {
+      "file": "/sacred-no/audio/CALL-CAVE.mp3",
+      "signature": "b03018084570547beb75caf56d4f4190f1aef7250c87239e9f14e66bb90dfa92",
+      "caption": "Good. That is what I needed. Keep me posted.",
+      "speaker": "Kian",
+      "voice": "am_puck",
+      "emotion": "reassured",
+      "speed": 1.0,
+      "duration": 2.659
+    },
+    "CALL-HEDGE": {
+      "file": "/sacred-no/audio/CALL-HEDGE.mp3",
+      "signature": "f6271114ba96cf906910bbbf788871d52d1531aa9238fd07d2374ee62339334f",
+      "caption": "You think? I need a decision, not a maybe.",
+      "speaker": "Kian",
+      "voice": "am_puck",
+      "emotion": "pressured",
+      "speed": 0.98,
+      "duration": 2.477
+    },
+    "CALL-GUARD": {
+      "file": "/sacred-no/audio/CALL-GUARD.mp3",
+      "signature": "b34ad6ef024a3652983ed61c23e1b5299cc4121508da5b0ac9ce70930c9cee45",
+      "caption": "A controlled release, with safeguards. Tell me who can stop it.",
+      "speaker": "Kian",
+      "voice": "am_puck",
+      "emotion": "engaged",
+      "speed": 1.0,
+      "duration": 4.107
+    },
+    "CALL-WEAK": {
+      "file": "/sacred-no/audio/CALL-WEAK.mp3",
+      "signature": "ee4d1589ec499ab76b4c803b184a002c753366b1a06bcccfed083a5e34f88490",
+      "caption": "I need stronger evidence before I can sell that change.",
+      "speaker": "Kian",
+      "voice": "am_puck",
+      "emotion": "concerned",
+      "speed": 0.98,
+      "duration": 3.451
+    },
+    "CALL-DEFER": {
+      "file": "/sacred-no/audio/CALL-DEFER.mp3",
+      "signature": "895f9766a6d5f6f5941622fd750f4a15ea7ef88f491bc09ae5231224b0d126ec",
+      "caption": "Then explain the delay yourself. The board still expects an answer.",
+      "speaker": "Kian",
+      "voice": "am_puck",
+      "emotion": "concerned",
+      "speed": 0.98,
+      "duration": 4.261
+    },
+    "BACKCHANNEL": {
+      "file": "/sacred-no/audio/BACKCHANNEL.mp3",
+      "signature": "bd546826cac322052b29a0a0612cc84578c5d0eb694590dfb86b70ec3e39e95a",
+      "caption": "I spoke to Tess. She needs a deliverable, not another discussion.",
+      "speaker": "Kian",
+      "voice": "am_puck",
+      "emotion": "pressured",
+      "speed": 0.98,
+      "duration": 4.123
+    },
+    "BOARD-RECEIPT": {
+      "file": "/sacred-no/audio/BOARD-RECEIPT.mp3",
+      "signature": "60ceaa2ce9da4d8bbed1ebe06d282432197252df86017a3441b6a56dc09b466d",
+      "caption": "These were your words. Tell us what changed after that call.",
+      "speaker": "Kian",
+      "voice": "am_puck",
+      "emotion": "thinking",
+      "speed": 0.98,
+      "duration": 3.702
+    },
+    "OVERRULE": {
+      "file": "/sacred-no/audio/OVERRULE.mp3",
+      "signature": "9dbb3166b356212405fe0431847e0074fb69fc3b045b8375b8bd2189b2d3b6ee",
+      "caption": "I am overruling the delay. We will launch after this meeting.",
+      "speaker": "Kian",
+      "voice": "am_puck",
+      "emotion": "pressured",
+      "speed": 0.98,
+      "duration": 3.845
+    },
+    "OPEN-PRIYA": {
+      "file": "/sacred-no/audio/OPEN-PRIYA.mp3",
+      "signature": "23f2854ea9bab711327eba21fd8031923134ef6fcde9617ca6894ed7b8320e83",
+      "caption": "Please tell me this is not happening. The queue is not ready.",
+      "speaker": "Priya",
+      "voice": "af_heart",
+      "emotion": "concerned",
+      "speed": 0.94,
+      "duration": 3.702
+    },
+    "PRIYA-LISTENED": {
+      "file": "/sacred-no/audio/PRIYA-LISTENED.mp3",
+      "signature": "d9fbd8a93dd5d04124d6cbeef0dd7bfd98a3caabbab6e63a250f286f6abfbb2c",
+      "caption": "You used my numbers. I added a kill switch.",
+      "speaker": "Priya",
+      "voice": "af_heart",
+      "emotion": "reassured",
+      "speed": 0.96,
+      "duration": 2.984
+    },
+    "PRIYA-IGNORED": {
+      "file": "/sacred-no/audio/PRIYA-IGNORED.mp3",
+      "signature": "43198aa7465ebb3ee95cf4846ca58a4da1fd60ed0a052a6c0615233a44f83326",
+      "caption": "I warned you. I will not take an unguarded queue live.",
+      "speaker": "Priya",
+      "voice": "af_heart",
+      "emotion": "concerned",
+      "speed": 0.94,
+      "duration": 3.657
+    },
+    "PRIYA-NEUTRAL": {
+      "file": "/sacred-no/audio/PRIYA-NEUTRAL.mp3",
+      "signature": "fb304692b2ee73912f23f66a04eb54e7757ee0267043812c444977bba7f1ff31",
+      "caption": "Give me a clear release boundary and a rollback owner.",
+      "speaker": "Priya",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 3.403
+    },
+    "PRIYA-QUEUE": {
+      "file": "/sacred-no/audio/PRIYA-QUEUE.mp3",
+      "signature": "a26e1deef79b5023dbee9d4892df4920c95f55a1e9de7b15b56699df30d641af",
+      "caption": "I can isolate the queue. That protects us, but costs feature time.",
+      "speaker": "Priya",
+      "voice": "af_heart",
+      "emotion": "engaged",
+      "speed": 0.96,
+      "duration": 4.325
+    },
+    "PRIYA-KEEP": {
+      "file": "/sacred-no/audio/PRIYA-KEEP.mp3",
+      "signature": "1d8b5ebfdf82b259cc4d25f7950b00a33e41e6e00b5b326c4cc2710dc6e3fd92",
+      "caption": "Understood. I am recording the allocation you chose.",
+      "speaker": "Priya",
+      "voice": "af_heart",
+      "emotion": "concerned",
+      "speed": 0.94,
+      "duration": 3.57
+    },
+    "BOARD-WARNING": {
+      "file": "/sacred-no/audio/BOARD-WARNING.mp3",
+      "signature": "17c0d9bf67032b2755a93832b4f75758b27fd371f80b84039edcb205c50d6a3d",
+      "caption": "That is the warning I sent. The choice stayed yours.",
+      "speaker": "Priya",
+      "voice": "af_heart",
+      "emotion": "concerned",
+      "speed": 0.94,
+      "duration": 3.327
+    },
+    "OPEN-TESS": {
+      "file": "/sacred-no/audio/OPEN-TESS.mp3",
+      "signature": "0e6ef937d99f3a354eac0f691128e387188a8708531a887721fb37c8b41ce720",
+      "caption": "Marlo is counting on this. Give me something I can promise.",
+      "speaker": "Tess",
+      "voice": "af_bella",
+      "emotion": "concerned",
+      "speed": 0.98,
+      "duration": 3.826
+    },
+    "DEAL-BETA": {
+      "file": "/sacred-no/audio/DEAL-BETA.mp3",
+      "signature": "7926365a2514cb79518ac1d4ce18b12d52ca1e0d0555c6f601d0310fc077e949",
+      "caption": "Give me three brands and a date. I can work with that.",
+      "speaker": "Tess",
+      "voice": "af_bella",
+      "emotion": "engaged",
+      "speed": 1.0,
+      "duration": 3.453
+    },
+    "DEAL-MARLO": {
+      "file": "/sacred-no/audio/DEAL-MARLO.mp3",
+      "signature": "7b76080c42f0365d27ff1864487a875310c1acf72bf56aedad61ea05d8dc0a23",
+      "caption": "Marlo only. But their pre-orders are riding on this.",
+      "speaker": "Tess",
+      "voice": "af_bella",
+      "emotion": "concerned",
+      "speed": 0.98,
+      "duration": 3.697
+    },
+    "DEAL-APOLOGY": {
+      "file": "/sacred-no/audio/DEAL-APOLOGY.mp3",
+      "signature": "d4a3e6d6fbf9da89565ffb300d46aa9e685e8b5e3987a6559b72b47efd1de81b",
+      "caption": "I will make the call. We still owe them a delivery date.",
+      "speaker": "Tess",
+      "voice": "af_bella",
+      "emotion": "concerned",
+      "speed": 0.98,
+      "duration": 3.463
+    },
+    "DEAL-CREDITS": {
+      "file": "/sacred-no/audio/DEAL-CREDITS.mp3",
+      "signature": "788cbdb427a23c26f807355c9b5d919abaf67dfac2adad230809a90f8892849f",
+      "caption": "Credits buy patience. They do not deliver the feature.",
+      "speaker": "Tess",
+      "voice": "af_bella",
+      "emotion": "thinking",
+      "speed": 0.98,
+      "duration": 3.421
+    },
+    "DEAL-RISK": {
+      "file": "/sacred-no/audio/DEAL-RISK.mp3",
+      "signature": "c4e2e71b54e9e72acd1f940b888e8ddb806565644e61e2c9fd908df63ded45a6",
+      "caption": "I can sell the launch. I cannot make its risk disappear.",
+      "speaker": "Tess",
+      "voice": "af_bella",
+      "emotion": "concerned",
+      "speed": 0.98,
+      "duration": 3.752
+    },
+    "DEAL-HEDGE": {
+      "file": "/sacred-no/audio/DEAL-HEDGE.mp3",
+      "signature": "1a401c8478f5832e4abc571cc6d8fa8998635a36a786b435a9275e4d38424e25",
+      "caption": "Is that a yes? I need a commitment I can repeat.",
+      "speaker": "Tess",
+      "voice": "af_bella",
+      "emotion": "pressured",
+      "speed": 0.98,
+      "duration": 3.233
+    },
+    "DEAL-NONE": {
+      "file": "/sacred-no/audio/DEAL-NONE.mp3",
+      "signature": "242fa5934a12f7271dd7196fb2cdecbfeb6486b4991d69ae793d9f7e693813c6",
+      "caption": "No deal, then. I will tell Marlo what we actually know.",
+      "speaker": "Tess",
+      "voice": "af_bella",
+      "emotion": "concerned",
+      "speed": 0.98,
+      "duration": 3.731
+    },
+    "BOARD-LEDGER": {
+      "file": "/sacred-no/audio/BOARD-LEDGER.mp3",
+      "signature": "16e9b7634c66fd8d0ab6c6661d37fc71ae666501ceda61279c34403e6ebb9267",
+      "caption": "Here is what we promised Marlo. Is that still the plan?",
+      "speaker": "Tess",
+      "voice": "af_bella",
+      "emotion": "thinking",
+      "speed": 0.98,
+      "duration": 3.56
+    },
+    "EV-LOAD": {
+      "file": "/sacred-no/audio/EV-LOAD.mp3",
+      "signature": "b75e88cc8eb994b32d1d793a22adac88d19f99dc5c4d5f1a708c5e993ff6f45d",
+      "caption": "Peak tested: four thousand two hundred. Forecast: nine thousand concurrent users.",
+      "speaker": "Noor",
+      "voice": "af_sarah",
+      "emotion": "neutral",
+      "speed": 0.98,
+      "duration": 5.54
+    },
+    "EV-INCIDENT": {
+      "file": "/sacred-no/audio/EV-INCIDENT.mp3",
+      "signature": "61486e9cd9ad351a8bbd104e54dd179ea990cf0367eef479de08b016b10f3d16",
+      "caption": "Recovery took forty-seven minutes. Some payment failures needed reconciliation.",
+      "speaker": "Noor",
+      "voice": "af_sarah",
+      "emotion": "neutral",
+      "speed": 0.98,
+      "duration": 5.447
+    },
+    "EV-PAYMENTS": {
+      "file": "/sacred-no/audio/EV-PAYMENTS.mp3",
+      "signature": "573bcea01fff93077020045a618e325f2e004373e51b05e2755675c60fb0445b",
+      "caption": "The provider throttles above fifteen hundred payment requests per minute.",
+      "speaker": "Noor",
+      "voice": "af_sarah",
+      "emotion": "neutral",
+      "speed": 0.98,
+      "duration": 4.167
+    },
+    "EV-DASH": {
+      "file": "/sacred-no/audio/EV-DASH.mp3",
+      "signature": "be0d184801d80c2711d244faf57410eafa6c10aecb04d498372491ba701c9472",
+      "caption": "Checkout p ninety-five is two point eight seconds. Queue age is rising.",
+      "speaker": "Noor",
+      "voice": "af_sarah",
+      "emotion": "neutral",
+      "speed": 0.98,
+      "duration": 4.968
+    },
+    "EV-TICKETS": {
+      "file": "/sacred-no/audio/EV-TICKETS.mp3",
+      "signature": "eed54452b7c274ad172b16eef2ea2c9429c3854c31b446d4ae56bd5714a6cce8",
+      "caption": "Demand is real. So are the complaints about failed checkout.",
+      "speaker": "Noor",
+      "voice": "af_sarah",
+      "emotion": "neutral",
+      "speed": 0.98,
+      "duration": 3.87
+    },
+    "DEMO-STABLE": {
+      "file": "/sacred-no/audio/DEMO-STABLE.mp3",
+      "signature": "2d7e40abdaaa4bd5dd1b4eb5203c00f56e26ccb9b7324d447d9db8f6644135bc",
+      "caption": "The selected audience stayed inside the modelled release boundary.",
+      "speaker": "Noor",
+      "voice": "af_sarah",
+      "emotion": "neutral",
+      "speed": 0.98,
+      "duration": 4.051
+    },
+    "DEMO-DEGRADED": {
+      "file": "/sacred-no/audio/DEMO-DEGRADED.mp3",
+      "signature": "364118f0657ac3fbf8d53499daf420fb15b59c794d7e402d2a88e99706a8ebf6",
+      "caption": "The kill switch limited exposure. Some viewers lost the live session.",
+      "speaker": "Noor",
+      "voice": "af_sarah",
+      "emotion": "neutral",
+      "speed": 0.98,
+      "duration": 4.423
+    },
+    "DEMO-CRASH": {
+      "file": "/sacred-no/audio/DEMO-CRASH.mp3",
+      "signature": "deb83a659645b7b029623cd9ce74ed2aa56d29deacd40896825ac225761654ba",
+      "caption": "Capacity was exceeded. The demonstration stopped before checkout completed.",
+      "speaker": "Noor",
+      "voice": "af_sarah",
+      "emotion": "neutral",
+      "speed": 0.98,
+      "duration": 5.065
+    },
+    "DEMO-PAYMENT": {
+      "file": "/sacred-no/audio/DEMO-PAYMENT.mp3",
+      "signature": "8cd642f48b6d930a5889f1476711cd01ebded5efdb135f913e559eded405cb2b",
+      "caption": "The payment provider throttled. Viewers could watch, but purchases failed.",
+      "speaker": "Noor",
+      "voice": "af_sarah",
+      "emotion": "neutral",
+      "speed": 0.98,
+      "duration": 4.655
+    },
+    "DEMO-MARLO": {
+      "file": "/sacred-no/audio/DEMO-MARLO.mp3",
+      "signature": "781b8e341c29c0dbcf39bd0fde30be7be8b9156bd47dc2ee6317878c5d008752",
+      "caption": "Marlo\u2019s session failed. The wider audience was not exposed.",
+      "speaker": "Noor",
+      "voice": "af_sarah",
+      "emotion": "neutral",
+      "speed": 0.98,
+      "duration": 4.243
+    },
+    "DEMO-SANDBOX": {
+      "file": "/sacred-no/audio/DEMO-SANDBOX.mp3",
+      "signature": "9d8d1c9776c7f00c9fd402cadeb74354d5f4bcfccbf51a6d45c223a73aed934b",
+      "caption": "This is a labelled sandbox, not proof of production readiness.",
+      "speaker": "Noor",
+      "voice": "af_sarah",
+      "emotion": "neutral",
+      "speed": 0.98,
+      "duration": 4.051
+    },
+    "DEMO-DATA": {
+      "file": "/sacred-no/audio/DEMO-DATA.mp3",
+      "signature": "f3c54ce945c060b569ed4a870ea602045e6492109be1ec59b16e5899df374a94",
+      "caption": "The deck shows a checkout forecast. Production improvement is not measured yet.",
+      "speaker": "Noor",
+      "voice": "af_sarah",
+      "emotion": "neutral",
+      "speed": 0.98,
+      "duration": 4.841
+    },
+    "DEMO-DEFER": {
+      "file": "/sacred-no/audio/DEMO-DEFER.mp3",
+      "signature": "ded17e8fbd43297589507e55f48a6f201c483e9f2ddf166350f601ab13a102f1",
+      "caption": "No production audience was exposed. The delivery decision is still outstanding.",
+      "speaker": "Noor",
+      "voice": "af_sarah",
+      "emotion": "neutral",
+      "speed": 0.98,
+      "duration": 5.203
+    },
+    "BOARD-OPEN": {
+      "file": "/sacred-no/audio/BOARD-OPEN.mp3",
+      "signature": "7c14145361f910a68b215038602ad8b5be31c80c9a9d3750cabbb67503652ce2",
+      "caption": "Show us the decision, its evidence, and what would change your mind.",
+      "speaker": "Lena",
+      "voice": "bf_emma",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 3.98
+    },
+    "BOARD-GOLD": {
+      "file": "/sacred-no/audio/BOARD-GOLD.mp3",
+      "signature": "2075b148297111b6c7872d80b5c8669cfeab96bf94d861bb79cb0844ff2ce6b2",
+      "caption": "You gave us an alternative with a testable business case.",
+      "speaker": "Lena",
+      "voice": "bf_emma",
+      "emotion": "approving",
+      "speed": 0.96,
+      "duration": 3.442
+    },
+    "BOARD-FAIL": {
+      "file": "/sacred-no/audio/BOARD-FAIL.mp3",
+      "signature": "31b973c35337d3e84ec56ad1a855d63c2a19fe4f9ed3aa3badabe76eaeaf8883",
+      "caption": "We watched it fail live. Why did you not stop it?",
+      "speaker": "Lena",
+      "voice": "bf_emma",
+      "emotion": "concerned",
+      "speed": 0.94,
+      "duration": 3.219
+    },
+    "BOARD-STABLE": {
+      "file": "/sacred-no/audio/BOARD-STABLE.mp3",
+      "signature": "67bc4d1cfdddf519d3aea957b8b81a3a07ec106f2f2a5b1c9c14edb08b14e0ed",
+      "caption": "It held for this audience. What evidence supports widening it?",
+      "speaker": "Lena",
+      "voice": "bf_emma",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.105
+    },
+    "BOARD-WEEK": {
+      "file": "/sacred-no/audio/BOARD-WEEK.mp3",
+      "signature": "f4b2f7805f973b5171d78fe2c6435ab4496eb0f470793441fa9f155ba5228e81",
+      "caption": "Your evidence earned this discussion. Do you need one week?",
+      "speaker": "Lena",
+      "voice": "bf_emma",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 3.752
+    },
+    "FINAL-OWN": {
+      "file": "/sacred-no/audio/FINAL-OWN.mp3",
+      "signature": "b525a6729458b9fbc6a8658bfa1efd0c90e23ce03d09bc6b5194bf94247421aa",
+      "caption": "Thank you for owning the result. What is the next checkpoint?",
+      "speaker": "Lena",
+      "voice": "bf_emma",
+      "emotion": "reassured",
+      "speed": 0.96,
+      "duration": 3.665
+    },
+    "FINAL-DEFEND": {
+      "file": "/sacred-no/audio/FINAL-DEFEND.mp3",
+      "signature": "513ae604f777aeb23ec681a1d63fa33b05dbf6ee5e2d2fe448eb12b500c14254",
+      "caption": "Then state the conditions under which you would reverse it.",
+      "speaker": "Lena",
+      "voice": "bf_emma",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 3.261
+    },
+    "FINAL-ROLLBACK": {
+      "file": "/sacred-no/audio/FINAL-ROLLBACK.mp3",
+      "signature": "cd01c486f1d7c175c149a6339145466d9374b95f84377029d161e1aff7f88744",
+      "caption": "Name the owner and the trigger. Make the rollback explicit.",
+      "speaker": "Lena",
+      "voice": "bf_emma",
+      "emotion": "engaged",
+      "speed": 0.96,
+      "duration": 3.879
+    },
+    "VERDICT-BACKED": {
+      "file": "/sacred-no/audio/VERDICT-BACKED.mp3",
+      "signature": "0fcaff20bcd7c20dff7e479b2e0ef3f48c358a17f3d482c8244f6660d4114245",
+      "caption": "We support the bounded plan. Report the next test, including failures.",
+      "speaker": "Lena",
+      "voice": "bf_emma",
+      "emotion": "approving",
+      "speed": 0.96,
+      "duration": 4.673
+    },
+    "VERDICT-TOLERATED": {
+      "file": "/sacred-no/audio/VERDICT-TOLERATED.mp3",
+      "signature": "8c3077285e3a28a7d9d4c9aaa87a1e9ea75303aa6d6fed8e107b9f1d14d8773f",
+      "caption": "The plan stands. We need clearer commitments before the next release.",
+      "speaker": "Lena",
+      "voice": "bf_emma",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.264
+    },
+    "VERDICT-STANDOFF": {
+      "file": "/sacred-no/audio/VERDICT-STANDOFF.mp3",
+      "signature": "0ef1b762d624e9834ec2d59ef2dc9f6a5e074836346f42e4a4f63c19ac4af71e",
+      "caption": "Your evidence matters. Repair the relationship before the next decision.",
+      "speaker": "Lena",
+      "voice": "bf_emma",
+      "emotion": "concerned",
+      "speed": 0.94,
+      "duration": 4.563
+    },
+    "VERDICT-CRASH": {
+      "file": "/sacred-no/audio/VERDICT-CRASH.mp3",
+      "signature": "51c1151c47ae5c665309de4fa9bfa2a6aa1ec8d850d0e974dba6e259112923cc",
+      "caption": "Contain the failure, tell the affected partners, and bring a recovery plan.",
+      "speaker": "Lena",
+      "voice": "bf_emma",
+      "emotion": "concerned",
+      "speed": 0.94,
+      "duration": 4.317
+    },
+    "DEMO-UNREADY": {
+      "file": "/sacred-no/audio/DEMO-UNREADY.mp3",
+      "signature": "2a5f4caacdcd0a55f0ffc909e8f4c07850cf09ee2f9f6e1269a4592cc88480d8",
+      "caption": "Safeguards are ready. The live feature is not. We cannot demonstrate it.",
+      "speaker": "Noor",
+      "voice": "af_sarah",
+      "emotion": "neutral",
+      "speed": 0.98,
+      "duration": 4.702
+    }
+  }
+}
