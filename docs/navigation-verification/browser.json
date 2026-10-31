@@ -1,1566 +1,1566 @@
 {
-  "at": "2026-10-31T13:38:48.177Z",
-  "base": "http://localhost:3001",
+  "at": "2026-10-31T14:34:29.641Z",
+  "base": "http://localhost:3002",
   "http": [
     {
       "path": "/app",
       "status": 200,
-      "url": "http://localhost:3001/app"
+      "url": "http://localhost:3002/app"
     },
     {
       "path": "/app/bookmarks",
       "status": 200,
-      "url": "http://localhost:3001/app/practice?view=saved"
+      "url": "http://localhost:3002/app/practice?view=saved"
     },
     {
       "path": "/",
       "status": 200,
-      "url": "http://localhost:3001/"
-    },
-    {
-      "path": "/app/portfolio/00000000-0000-4000-8000-000000000000",
-      "status": 200,
-      "url": "http://localhost:3001/app/portfolio/00000000-0000-4000-8000-000000000000"
+      "url": "http://localhost:3002/"
     },
     {
       "path": "/about",
       "status": 200,
-      "url": "http://localhost:3001/about"
-    },
-    {
-      "path": "/app/practice",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice"
-    },
-    {
-      "path": "/app/portfolio",
-      "status": 200,
-      "url": "http://localhost:3001/app/portfolio"
-    },
-    {
-      "path": "/app/account",
-      "status": 200,
-      "url": "http://localhost:3001/app/account"
+      "url": "http://localhost:3002/about"
     },
     {
       "path": "/app/history",
       "status": 200,
-      "url": "http://localhost:3001/app/progress?tab=history"
+      "url": "http://localhost:3002/app/progress?tab=history"
     },
     {
-      "path": "/app/portfolio/new",
+      "path": "/app/account",
       "status": 200,
-      "url": "http://localhost:3001/app/portfolio/new"
+      "url": "http://localhost:3002/app/account"
+    },
+    {
+      "path": "/app/portfolio",
+      "status": 200,
+      "url": "http://localhost:3002/app/portfolio"
+    },
+    {
+      "path": "/app/practice",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice"
+    },
+    {
+      "path": "/app/portfolio/00000000-0000-4000-8000-000000000000",
+      "status": 200,
+      "url": "http://localhost:3002/app/portfolio/00000000-0000-4000-8000-000000000000"
     },
     {
       "path": "/app/practice/ait-e-3-on-device-or-cloud-for-tagging-kids-photos",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ait-e-3-on-device-or-cloud-for-tagging-kids-photos"
-    },
-    {
-      "path": "/app/practice/ait-h-1-the-assistant-is-inventing-fees-in-one-region",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/ait-h-1-the-assistant-is-inventing-fees-in-one-region"
-    },
-    {
-      "path": "/app/practice/ait-e-1-live-translation-three-seconds-or-instant",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/ait-e-1-live-translation-three-seconds-or-instant"
+      "url": "http://localhost:3002/app/practice/ait-e-3-on-device-or-cloud-for-tagging-kids-photos"
     },
     {
       "path": "/app/practice/ait-e-2-a-shop-assistant-whose-answers-change-hourly",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ait-e-2-a-shop-assistant-whose-answers-change-hourly"
+      "url": "http://localhost:3002/app/practice/ait-e-2-a-shop-assistant-whose-answers-change-hourly"
     },
     {
-      "path": "/app/practice/ait-h-2-an-agent-that-can-spend-money",
+      "path": "/app/practice/ait-e-1-live-translation-three-seconds-or-instant",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ait-h-2-an-agent-that-can-spend-money"
+      "url": "http://localhost:3002/app/practice/ait-e-1-live-translation-three-seconds-or-instant"
+    },
+    {
+      "path": "/app/portfolio/new",
+      "status": 200,
+      "url": "http://localhost:3002/app/portfolio/new"
+    },
+    {
+      "path": "/app/practice/ait-h-1-the-assistant-is-inventing-fees-in-one-region",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/ait-h-1-the-assistant-is-inventing-fees-in-one-region"
     },
     {
       "path": "/app/practice/ait-h-3-monday-8-a-m-10-000-clinicians-at-once",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ait-h-3-monday-8-a-m-10-000-clinicians-at-once"
+      "url": "http://localhost:3002/app/practice/ait-h-3-monday-8-a-m-10-000-clinicians-at-once"
     },
     {
       "path": "/app/practice/ait-m-1-a-medical-scribe-with-a-hard-safety-floor",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ait-m-1-a-medical-scribe-with-a-hard-safety-floor"
+      "url": "http://localhost:3002/app/practice/ait-m-1-a-medical-scribe-with-a-hard-safety-floor"
     },
     {
       "path": "/app/practice/ait-m-2-a-support-copilot-with-three-goals-fighting",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ait-m-2-a-support-copilot-with-three-goals-fighting"
+      "url": "http://localhost:3002/app/practice/ait-m-2-a-support-copilot-with-three-goals-fighting"
+    },
+    {
+      "path": "/app/practice/ait-h-2-an-agent-that-can-spend-money",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/ait-h-2-an-agent-that-can-spend-money"
     },
     {
       "path": "/app/practice/ait-m-3-search-relevance-with-a-300-ms-budget",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ait-m-3-search-relevance-with-a-300-ms-budget"
+      "url": "http://localhost:3002/app/practice/ait-m-3-search-relevance-with-a-300-ms-budget"
     },
     {
       "path": "/app/practice/beh-e-1-you-disagreed-with-a-designer-about-feature-placement",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/beh-e-1-you-disagreed-with-a-designer-about-feature-placement"
-    },
-    {
-      "path": "/app/practice/beh-e-3-customer-feedback-changed-your-decision",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/beh-e-3-customer-feedback-changed-your-decision"
+      "url": "http://localhost:3002/app/practice/beh-e-1-you-disagreed-with-a-designer-about-feature-placement"
     },
     {
       "path": "/app/practice/beh-h-1-the-project-is-failing-in-front-of-the-board",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/beh-h-1-the-project-is-failing-in-front-of-the-board"
+      "url": "http://localhost:3002/app/practice/beh-h-1-the-project-is-failing-in-front-of-the-board"
+    },
+    {
+      "path": "/app/practice/beh-e-3-customer-feedback-changed-your-decision",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/beh-e-3-customer-feedback-changed-your-decision"
     },
     {
       "path": "/app/practice/beh-e-2-you-learned-something-fast-to-ship-something",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/beh-e-2-you-learned-something-fast-to-ship-something"
+      "url": "http://localhost:3002/app/practice/beh-e-2-you-learned-something-fast-to-ship-something"
     },
     {
       "path": "/app/practice/beh-h-2-an-incident-harmed-users-and-you-owned-the-response",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/beh-h-2-an-incident-harmed-users-and-you-owned-the-response"
+      "url": "http://localhost:3002/app/practice/beh-h-2-an-incident-harmed-users-and-you-owned-the-response"
     },
     {
       "path": "/app/practice/beh-h-3-you-found-your-own-number-was-wrong-after-presenting-it",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/beh-h-3-you-found-your-own-number-was-wrong-after-presenting-it"
-    },
-    {
-      "path": "/app/practice/beh-m-2-saying-no-to-a-senior-stakeholder-s-idea",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/beh-m-2-saying-no-to-a-senior-stakeholder-s-idea"
-    },
-    {
-      "path": "/app/practice/beh-m-3-a-dependency-slipped-and-two-teams-wanted-different-things",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/beh-m-3-a-dependency-slipped-and-two-teams-wanted-different-things"
+      "url": "http://localhost:3002/app/practice/beh-h-3-you-found-your-own-number-was-wrong-after-presenting-it"
     },
     {
       "path": "/app/practice/beh-m-1-stability-versus-the-hard-date",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/beh-m-1-stability-versus-the-hard-date"
+      "url": "http://localhost:3002/app/practice/beh-m-1-stability-versus-the-hard-date"
+    },
+    {
+      "path": "/app/practice/beh-m-3-a-dependency-slipped-and-two-teams-wanted-different-things",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/beh-m-3-a-dependency-slipped-and-two-teams-wanted-different-things"
+    },
+    {
+      "path": "/app/practice/beh-m-2-saying-no-to-a-senior-stakeholder-s-idea",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/beh-m-2-saying-no-to-a-senior-stakeholder-s-idea"
     },
     {
       "path": "/app/practice/est-e-1-is-a-flagship-phone-store-on-durbar-marg-worth-the-rent",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/est-e-1-is-a-flagship-phone-store-on-durbar-marg-worth-the-rent"
+      "url": "http://localhost:3002/app/practice/est-e-1-is-a-flagship-phone-store-on-durbar-marg-worth-the-rent"
     },
     {
       "path": "/app/practice/est-e-3-how-many-support-agents-for-launch-day-chat",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/est-e-3-how-many-support-agents-for-launch-day-chat"
-    },
-    {
-      "path": "/app/practice/est-h-1-terminal-outage-where-do-60-manual-agents-go",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/est-h-1-terminal-outage-where-do-60-manual-agents-go"
-    },
-    {
-      "path": "/app/practice/est-e-2-how-many-quick-pay-uses-per-week-should-we-buy-capacity-for",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/est-e-2-how-many-quick-pay-uses-per-week-should-we-buy-capacity-for"
+      "url": "http://localhost:3002/app/practice/est-e-3-how-many-support-agents-for-launch-day-chat"
     },
     {
       "path": "/app/practice/est-h-3-the-festival-exodus-charging-capacity-on-a-highway-corridor",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/est-h-3-the-festival-exodus-charging-capacity-on-a-highway-corridor"
+      "url": "http://localhost:3002/app/practice/est-h-3-the-festival-exodus-charging-capacity-on-a-highway-corridor"
+    },
+    {
+      "path": "/app/practice/est-h-1-terminal-outage-where-do-60-manual-agents-go",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/est-h-1-terminal-outage-where-do-60-manual-agents-go"
+    },
+    {
+      "path": "/app/practice/est-e-2-how-many-quick-pay-uses-per-week-should-we-buy-capacity-for",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/est-e-2-how-many-quick-pay-uses-per-week-should-we-buy-capacity-for"
     },
     {
       "path": "/app/practice/est-h-2-results-day-web-sms-or-phone-which-will-break-first",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/est-h-2-results-day-web-sms-or-phone-which-will-break-first"
+      "url": "http://localhost:3002/app/practice/est-h-2-results-day-web-sms-or-phone-which-will-break-first"
     },
     {
       "path": "/app/practice/est-m-1-rainstorm-in-new-york-how-many-extra-drivers-to-incentivise",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/est-m-1-rainstorm-in-new-york-how-many-extra-drivers-to-incentivise"
-    },
-    {
-      "path": "/app/practice/est-m-3-tihar-week-do-we-have-enough-riders-for-sweets-and-gifts",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/est-m-3-tihar-week-do-we-have-enough-riders-for-sweets-and-gifts"
+      "url": "http://localhost:3002/app/practice/est-m-1-rainstorm-in-new-york-how-many-extra-drivers-to-incentivise"
     },
     {
       "path": "/app/practice/est-m-2-ticket-on-sale-how-fast-should-the-waiting-room-admit-fans",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/est-m-2-ticket-on-sale-how-fast-should-the-waiting-room-admit-fans"
+      "url": "http://localhost:3002/app/practice/est-m-2-ticket-on-sale-how-fast-should-the-waiting-room-admit-fans"
     },
     {
-      "path": "/app/practice/exe-e-2-how-to-prove-save-for-later-works",
+      "path": "/app/practice/est-m-3-tihar-week-do-we-have-enough-riders-for-sweets-and-gifts",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/exe-e-2-how-to-prove-save-for-later-works"
+      "url": "http://localhost:3002/app/practice/est-m-3-tihar-week-do-we-have-enough-riders-for-sweets-and-gifts"
     },
     {
       "path": "/app/practice/exe-e-1-daily-actives-fell-10-in-three-weeks",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/exe-e-1-daily-actives-fell-10-in-three-weeks"
+      "url": "http://localhost:3002/app/practice/exe-e-1-daily-actives-fell-10-in-three-weeks"
+    },
+    {
+      "path": "/app/practice/exe-e-2-how-to-prove-save-for-later-works",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/exe-e-2-how-to-prove-save-for-later-works"
     },
     {
       "path": "/app/practice/exe-e-3-more-orders-how-will-you-know-it-is-healthy",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/exe-e-3-more-orders-how-will-you-know-it-is-healthy"
+      "url": "http://localhost:3002/app/practice/exe-e-3-more-orders-how-will-you-know-it-is-healthy"
     },
     {
       "path": "/app/practice/exe-h-1-watch-time-is-at-a-record-but-is-it-healthy",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/exe-h-1-watch-time-is-at-a-record-but-is-it-healthy"
+      "url": "http://localhost:3002/app/practice/exe-h-1-watch-time-is-at-a-record-but-is-it-healthy"
     },
     {
       "path": "/app/practice/exe-h-2-active-users-are-up-22-is-anyone-new-actually-there",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/exe-h-2-active-users-are-up-22-is-anyone-new-actually-there"
+      "url": "http://localhost:3002/app/practice/exe-h-2-active-users-are-up-22-is-anyone-new-actually-there"
     },
     {
       "path": "/app/practice/exe-h-3-the-test-says-3-revenue-retention-says-otherwise",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/exe-h-3-the-test-says-3-revenue-retention-says-otherwise"
+      "url": "http://localhost:3002/app/practice/exe-h-3-the-test-says-3-revenue-retention-says-otherwise"
     },
     {
       "path": "/app/practice/exe-m-1-notifications-lift-daily-actives-and-uninstalls",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/exe-m-1-notifications-lift-daily-actives-and-uninstalls"
+      "url": "http://localhost:3002/app/practice/exe-m-1-notifications-lift-daily-actives-and-uninstalls"
     },
     {
       "path": "/app/practice/exe-m-2-raise-checkout-conversion-by-5",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/exe-m-2-raise-checkout-conversion-by-5"
-    },
-    {
-      "path": "/app/practice/ps-e-1-finding-items-in-a-huge-grocery-store",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/ps-e-1-finding-items-in-a-huge-grocery-store"
+      "url": "http://localhost:3002/app/practice/exe-m-2-raise-checkout-conversion-by-5"
     },
     {
       "path": "/app/practice/exe-m-3-a-referral-program-with-suspicious-signups",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/exe-m-3-a-referral-program-with-suspicious-signups"
+      "url": "http://localhost:3002/app/practice/exe-m-3-a-referral-program-with-suspicious-signups"
+    },
+    {
+      "path": "/app/practice/ps-e-1-finding-items-in-a-huge-grocery-store",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/ps-e-1-finding-items-in-a-huge-grocery-store"
     },
     {
       "path": "/app/practice/ps-e-2-parents-keep-returning-kids-clothes",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ps-e-2-parents-keep-returning-kids-clothes"
+      "url": "http://localhost:3002/app/practice/ps-e-2-parents-keep-returning-kids-clothes"
     },
     {
       "path": "/app/practice/ps-e-3-new-gym-members-stop-after-three-weeks",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ps-e-3-new-gym-members-stop-after-three-weeks"
-    },
-    {
-      "path": "/app/practice/ps-h-1-how-older-residents-of-tokyo-move-through-the-transit-system",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/ps-h-1-how-older-residents-of-tokyo-move-through-the-transit-system"
-    },
-    {
-      "path": "/app/practice/ps-h-3-fair-price-information-for-a-farmers-cooperative",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/ps-h-3-fair-price-information-for-a-farmers-cooperative"
+      "url": "http://localhost:3002/app/practice/ps-e-3-new-gym-members-stop-after-three-weeks"
     },
     {
       "path": "/app/practice/ps-h-2-designing-for-first-time-flyers",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ps-h-2-designing-for-first-time-flyers"
+      "url": "http://localhost:3002/app/practice/ps-h-2-designing-for-first-time-flyers"
     },
     {
-      "path": "/app/practice/ps-m-1-a-first-ikea-visit-for-a-new-homeowner",
+      "path": "/app/practice/ps-h-1-how-older-residents-of-tokyo-move-through-the-transit-system",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ps-m-1-a-first-ikea-visit-for-a-new-homeowner"
-    },
-    {
-      "path": "/app/practice/ps-m-2-first-time-riders-and-the-intercity-bus",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/ps-m-2-first-time-riders-and-the-intercity-bus"
-    },
-    {
-      "path": "/app/practice/rca-e-2-new-seller-activations-fell-15",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/rca-e-2-new-seller-activations-fell-15"
+      "url": "http://localhost:3002/app/practice/ps-h-1-how-older-residents-of-tokyo-move-through-the-transit-system"
     },
     {
       "path": "/app/practice/rca-e-1-sign-ups-dropped-12-after-the-app-update",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/rca-e-1-sign-ups-dropped-12-after-the-app-update"
+      "url": "http://localhost:3002/app/practice/rca-e-1-sign-ups-dropped-12-after-the-app-update"
+    },
+    {
+      "path": "/app/practice/ps-h-3-fair-price-information-for-a-farmers-cooperative",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/ps-h-3-fair-price-information-for-a-farmers-cooperative"
+    },
+    {
+      "path": "/app/practice/ps-m-1-a-first-ikea-visit-for-a-new-homeowner",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/ps-m-1-a-first-ikea-visit-for-a-new-homeowner"
+    },
+    {
+      "path": "/app/practice/ps-m-2-first-time-riders-and-the-intercity-bus",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/ps-m-2-first-time-riders-and-the-intercity-bus"
     },
     {
       "path": "/app/practice/ps-m-3-a-telehealth-app-for-adults-over-45",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ps-m-3-a-telehealth-app-for-adults-over-45"
+      "url": "http://localhost:3002/app/practice/ps-m-3-a-telehealth-app-for-adults-over-45"
     },
     {
       "path": "/app/practice/rca-e-3-add-to-cart-conversion-fell-after-the-layout-refresh",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/rca-e-3-add-to-cart-conversion-fell-after-the-layout-refresh"
-    },
-    {
-      "path": "/app/practice/rca-h-1-drivers-are-leaving-slowly-in-six-cities",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/rca-h-1-drivers-are-leaving-slowly-in-six-cities"
+      "url": "http://localhost:3002/app/practice/rca-e-3-add-to-cart-conversion-fell-after-the-layout-refresh"
     },
     {
       "path": "/app/practice/rca-h-2-customer-satisfaction-is-sliding-while-resolution-times-improve",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/rca-h-2-customer-satisfaction-is-sliding-while-resolution-times-improve"
+      "url": "http://localhost:3002/app/practice/rca-h-2-customer-satisfaction-is-sliding-while-resolution-times-improve"
+    },
+    {
+      "path": "/app/practice/rca-h-1-drivers-are-leaving-slowly-in-six-cities",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/rca-h-1-drivers-are-leaving-slowly-in-six-cities"
+    },
+    {
+      "path": "/app/practice/rca-e-2-new-seller-activations-fell-15",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/rca-e-2-new-seller-activations-fell-15"
     },
     {
       "path": "/app/practice/rca-h-3-revenue-per-paying-user-is-eroding-by-7",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/rca-h-3-revenue-per-paying-user-is-eroding-by-7"
+      "url": "http://localhost:3002/app/practice/rca-h-3-revenue-per-paying-user-is-eroding-by-7"
     },
     {
       "path": "/app/practice/rca-m-1-search-conversion-fell-while-crash-rates-spiked",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/rca-m-1-search-conversion-fell-while-crash-rates-spiked"
-    },
-    {
-      "path": "/app/practice/rca-m-2-delivery-times-rose-three-minutes-yet-every-city-got-faster",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/rca-m-2-delivery-times-rose-three-minutes-yet-every-city-got-faster"
+      "url": "http://localhost:3002/app/practice/rca-m-1-search-conversion-fell-while-crash-rates-spiked"
     },
     {
       "path": "/app/practice/rca-m-3-daily-users-are-up-8-but-week-one-retention-is-down",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/rca-m-3-daily-users-are-up-8-but-week-one-retention-is-down"
+      "url": "http://localhost:3002/app/practice/rca-m-3-daily-users-are-up-8-but-week-one-retention-is-down"
+    },
+    {
+      "path": "/app/practice/rca-m-2-delivery-times-rose-three-minutes-yet-every-city-got-faster",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/rca-m-2-delivery-times-rose-three-minutes-yet-every-city-got-faster"
     },
     {
       "path": "/app/practice/str-e-1-students-churn-at-re-verification-cut-price-or-something-else",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/str-e-1-students-churn-at-re-verification-cut-price-or-something-else"
-    },
-    {
-      "path": "/app/practice/str-e-3-raise-the-take-rate-for-new-sellers",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/str-e-3-raise-the-take-rate-for-new-sellers"
-    },
-    {
-      "path": "/app/practice/str-h-1-ai-answers-help-users-and-starve-publishers",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/str-h-1-ai-answers-help-users-and-starve-publishers"
+      "url": "http://localhost:3002/app/practice/str-e-1-students-churn-at-re-verification-cut-price-or-something-else"
     },
     {
       "path": "/app/practice/str-e-2-when-should-the-paywall-appear",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/str-e-2-when-should-the-paywall-appear"
+      "url": "http://localhost:3002/app/practice/str-e-2-when-should-the-paywall-appear"
+    },
+    {
+      "path": "/app/practice/str-h-1-ai-answers-help-users-and-starve-publishers",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/str-h-1-ai-answers-help-users-and-starve-publishers"
+    },
+    {
+      "path": "/app/practice/str-e-3-raise-the-take-rate-for-new-sellers",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/str-e-3-raise-the-take-rate-for-new-sellers"
     },
     {
       "path": "/app/practice/str-h-2-a-minimum-pay-rule-hits-the-biggest-market",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/str-h-2-a-minimum-pay-rule-hits-the-biggest-market"
-    },
-    {
-      "path": "/app/progress",
-      "status": 200,
-      "url": "http://localhost:3001/app/progress"
-    },
-    {
-      "path": "/app/projects",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects"
+      "url": "http://localhost:3002/app/practice/str-h-2-a-minimum-pay-rule-hits-the-biggest-market"
     },
     {
       "path": "/app/practice/str-h-3-a-wallet-s-three-growth-paths-all-depend-on-one-another",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/str-h-3-a-wallet-s-three-growth-paths-all-depend-on-one-another"
+      "url": "http://localhost:3002/app/practice/str-h-3-a-wallet-s-three-growth-paths-all-depend-on-one-another"
+    },
+    {
+      "path": "/app/progress",
+      "status": 200,
+      "url": "http://localhost:3002/app/progress"
+    },
+    {
+      "path": "/app/projects",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects"
     },
     {
       "path": "/app/practice/str-m-1-a-rival-adds-a-concierge-match-copy-or-pivot",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/str-m-1-a-rival-adds-a-concierge-match-copy-or-pivot"
-    },
-    {
-      "path": "/app/practice/str-m-2-launching-a-streamer-where-local-telcos-own-distribution",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/str-m-2-launching-a-streamer-where-local-telcos-own-distribution"
-    },
-    {
-      "path": "/app/practice/str-m-3-an-ai-native-rival-is-winning-the-mid-market",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/str-m-3-an-ai-native-rival-is-winning-the-mid-market"
+      "url": "http://localhost:3002/app/practice/str-m-1-a-rival-adds-a-concierge-match-copy-or-pivot"
     },
     {
       "path": "/app/projects/deadlock/c/1",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/deadlock/c/1"
+      "url": "http://localhost:3002/app/projects/deadlock/c/1"
     },
     {
       "path": "/app/projects/deadlock/c/2",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/deadlock/c/2"
+      "url": "http://localhost:3002/app/projects/deadlock/c/2"
+    },
+    {
+      "path": "/app/practice/str-m-2-launching-a-streamer-where-local-telcos-own-distribution",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/str-m-2-launching-a-streamer-where-local-telcos-own-distribution"
+    },
+    {
+      "path": "/app/practice/str-m-3-an-ai-native-rival-is-winning-the-mid-market",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/str-m-3-an-ai-native-rival-is-winning-the-mid-market"
     },
     {
       "path": "/app/projects/deadlock/c/3",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/deadlock/c/3"
+      "url": "http://localhost:3002/app/projects/deadlock/c/3"
     },
     {
       "path": "/app/projects/deadlock/debrief/00000000-0000-4000-8000-000000000000",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/deadlock/debrief/00000000-0000-4000-8000-000000000000"
-    },
-    {
-      "path": "/app/projects/deadlock/play/00000000-0000-4000-8000-000000000000",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/deadlock/play/00000000-0000-4000-8000-000000000000"
-    },
-    {
-      "path": "/app/projects/deadlock/run/00000000-0000-4000-8000-000000000000",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/deadlock/run/00000000-0000-4000-8000-000000000000"
-    },
-    {
-      "path": "/app/projects/debrief/00000000-0000-4000-8000-000000000000",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/debrief/00000000-0000-4000-8000-000000000000"
-    },
-    {
-      "path": "/app/projects/feature-factory/c/1",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/feature-factory/c/1"
-    },
-    {
-      "path": "/app/projects/feature-factory/c/2",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/feature-factory/c/2"
-    },
-    {
-      "path": "/app/projects/feature-factory/c/3",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/feature-factory/c/3"
+      "url": "http://localhost:3002/app/projects/deadlock/debrief/00000000-0000-4000-8000-000000000000"
     },
     {
       "path": "/app/projects/feature-factory",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/feature-factory"
+      "url": "http://localhost:3002/app/projects/feature-factory"
     },
     {
-      "path": "/app/projects/feature-factory/run/00000000-0000-4000-8000-000000000000",
+      "path": "/app/projects/deadlock/play/00000000-0000-4000-8000-000000000000",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/feature-factory/run/00000000-0000-4000-8000-000000000000"
+      "url": "http://localhost:3002/app/projects/deadlock/play/00000000-0000-4000-8000-000000000000"
     },
     {
-      "path": "/app/projects/ghost-metric/c/1",
+      "path": "/app/projects/deadlock/run/00000000-0000-4000-8000-000000000000",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/ghost-metric/c/1"
+      "url": "http://localhost:3002/app/projects/deadlock/run/00000000-0000-4000-8000-000000000000"
     },
     {
-      "path": "/app/projects/ghost-metric/c/2",
+      "path": "/app/projects/debrief/00000000-0000-4000-8000-000000000000",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/ghost-metric/c/2"
+      "url": "http://localhost:3002/app/projects/debrief/00000000-0000-4000-8000-000000000000"
     },
     {
-      "path": "/app/projects/ghost-metric/c/3",
+      "path": "/app/projects/feature-factory/c/1",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/ghost-metric/c/3"
-    },
-    {
-      "path": "/app/projects/ghost-metric/run/00000000-0000-4000-8000-000000000000",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/ghost-metric/run/00000000-0000-4000-8000-000000000000"
-    },
-    {
-      "path": "/app/projects/deadlock",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/deadlock"
-    },
-    {
-      "path": "/app/projects/invisible-wall/c/1",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/invisible-wall/c/1"
-    },
-    {
-      "path": "/app/projects/invisible-wall/c/2",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/invisible-wall/c/2"
-    },
-    {
-      "path": "/app/projects/invisible-wall/c/3",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/invisible-wall/c/3"
-    },
-    {
-      "path": "/app/projects/invisible-wall/run/00000000-0000-4000-8000-000000000000",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/invisible-wall/run/00000000-0000-4000-8000-000000000000"
-    },
-    {
-      "path": "/app/projects/last-mile/c/1",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/last-mile/c/1"
-    },
-    {
-      "path": "/app/projects/last-mile/c/2",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/last-mile/c/2"
-    },
-    {
-      "path": "/app/projects/last-mile/c/3",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/last-mile/c/3"
+      "url": "http://localhost:3002/app/projects/feature-factory/c/1"
     },
     {
       "path": "/app/projects/ghost-metric",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/ghost-metric"
+      "url": "http://localhost:3002/app/projects/ghost-metric"
+    },
+    {
+      "path": "/app/projects/feature-factory/c/2",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/feature-factory/c/2"
+    },
+    {
+      "path": "/app/projects/feature-factory/c/3",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/feature-factory/c/3"
+    },
+    {
+      "path": "/app/projects/feature-factory/run/00000000-0000-4000-8000-000000000000",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/feature-factory/run/00000000-0000-4000-8000-000000000000"
+    },
+    {
+      "path": "/app/projects/ghost-metric/c/1",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/ghost-metric/c/1"
+    },
+    {
+      "path": "/app/projects/ghost-metric/c/2",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/ghost-metric/c/2"
+    },
+    {
+      "path": "/app/projects/deadlock",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/deadlock"
+    },
+    {
+      "path": "/app/projects/ghost-metric/c/3",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/ghost-metric/c/3"
+    },
+    {
+      "path": "/app/projects/ghost-metric/run/00000000-0000-4000-8000-000000000000",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/ghost-metric/run/00000000-0000-4000-8000-000000000000"
+    },
+    {
+      "path": "/app/projects/invisible-wall/c/1",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/invisible-wall/c/1"
+    },
+    {
+      "path": "/app/projects/invisible-wall/c/2",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/invisible-wall/c/2"
+    },
+    {
+      "path": "/app/projects/invisible-wall/c/3",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/invisible-wall/c/3"
+    },
+    {
+      "path": "/app/projects/invisible-wall/run/00000000-0000-4000-8000-000000000000",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/invisible-wall/run/00000000-0000-4000-8000-000000000000"
+    },
+    {
+      "path": "/app/projects/last-mile/c/1",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/last-mile/c/1"
+    },
+    {
+      "path": "/app/projects/last-mile/c/2",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/last-mile/c/2"
+    },
+    {
+      "path": "/app/projects/last-mile/c/3",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/last-mile/c/3"
     },
     {
       "path": "/app/projects/last-mile/run/00000000-0000-4000-8000-000000000000",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/last-mile/run/00000000-0000-4000-8000-000000000000"
-    },
-    {
-      "path": "/app/projects/invisible-wall",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/invisible-wall"
+      "url": "http://localhost:3002/app/projects/last-mile/run/00000000-0000-4000-8000-000000000000"
     },
     {
       "path": "/app/projects/legacy-fracture/c/1",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/legacy-fracture/c/1"
+      "url": "http://localhost:3002/app/projects/legacy-fracture/c/1"
     },
     {
       "path": "/app/projects/legacy-fracture/c/2",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/legacy-fracture/c/2"
+      "url": "http://localhost:3002/app/projects/legacy-fracture/c/2"
     },
     {
       "path": "/app/projects/legacy-fracture/c/3",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/legacy-fracture/c/3"
+      "url": "http://localhost:3002/app/projects/legacy-fracture/c/3"
     },
     {
       "path": "/app/projects/legacy-fracture/run/00000000-0000-4000-8000-000000000000",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/legacy-fracture/run/00000000-0000-4000-8000-000000000000"
+      "url": "http://localhost:3002/app/projects/legacy-fracture/run/00000000-0000-4000-8000-000000000000"
     },
     {
-      "path": "/app/projects/last-mile",
+      "path": "/app/projects/invisible-wall",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/last-mile"
+      "url": "http://localhost:3002/app/projects/invisible-wall"
     },
     {
       "path": "/app/projects/pivot-point/c/1",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/pivot-point/c/1"
+      "url": "http://localhost:3002/app/projects/pivot-point/c/1"
+    },
+    {
+      "path": "/app/projects/last-mile",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/last-mile"
     },
     {
       "path": "/app/projects/pivot-point/c/2",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/pivot-point/c/2"
+      "url": "http://localhost:3002/app/projects/pivot-point/c/2"
     },
     {
       "path": "/app/projects/pivot-point/c/3",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/pivot-point/c/3"
+      "url": "http://localhost:3002/app/projects/pivot-point/c/3"
     },
     {
       "path": "/app/projects/pivot-point/run/00000000-0000-4000-8000-000000000000",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/pivot-point/run/00000000-0000-4000-8000-000000000000"
-    },
-    {
-      "path": "/app/projects/legacy-fracture",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/legacy-fracture"
+      "url": "http://localhost:3002/app/projects/pivot-point/run/00000000-0000-4000-8000-000000000000"
     },
     {
       "path": "/app/projects/public-fracture/c/1",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/public-fracture/c/1"
+      "url": "http://localhost:3002/app/projects/public-fracture/c/1"
     },
     {
       "path": "/app/projects/public-fracture/c/2",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/public-fracture/c/2"
+      "url": "http://localhost:3002/app/projects/public-fracture/c/2"
     },
     {
-      "path": "/app/projects/public-fracture/c/3",
+      "path": "/app/projects/legacy-fracture",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/public-fracture/c/3"
-    },
-    {
-      "path": "/app/projects/public-fracture/run/00000000-0000-4000-8000-000000000000",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/public-fracture/run/00000000-0000-4000-8000-000000000000"
+      "url": "http://localhost:3002/app/projects/legacy-fracture"
     },
     {
       "path": "/app/projects/sacred-no",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/sacred-no"
+      "url": "http://localhost:3002/app/projects/sacred-no"
+    },
+    {
+      "path": "/app/projects/public-fracture/c/3",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/public-fracture/c/3"
+    },
+    {
+      "path": "/app/projects/public-fracture/run/00000000-0000-4000-8000-000000000000",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/public-fracture/run/00000000-0000-4000-8000-000000000000"
     },
     {
       "path": "/app/projects/sacred-no/c/1",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/sacred-no/c/1"
-    },
-    {
-      "path": "/app/projects/pivot-point",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/pivot-point"
+      "url": "http://localhost:3002/app/projects/sacred-no/c/1"
     },
     {
       "path": "/app/projects/sacred-no/c/2",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/sacred-no/c/2"
+      "url": "http://localhost:3002/app/projects/sacred-no/c/2"
     },
     {
       "path": "/app/projects/sacred-no/c/3",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/sacred-no/c/3"
+      "url": "http://localhost:3002/app/projects/sacred-no/c/3"
+    },
+    {
+      "path": "/app/projects/pivot-point",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/pivot-point"
     },
     {
       "path": "/app/projects/sacred-no/run/00000000-0000-4000-8000-000000000000",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/sacred-no/run/00000000-0000-4000-8000-000000000000"
+      "url": "http://localhost:3002/app/projects/sacred-no/run/00000000-0000-4000-8000-000000000000"
     },
     {
       "path": "/app/projects/shadow-roadmap/c/1",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/shadow-roadmap/c/1"
-    },
-    {
-      "path": "/app/projects/public-fracture",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/public-fracture"
+      "url": "http://localhost:3002/app/projects/shadow-roadmap/c/1"
     },
     {
       "path": "/app/projects/shadow-roadmap/c/2",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/shadow-roadmap/c/2"
+      "url": "http://localhost:3002/app/projects/shadow-roadmap/c/2"
     },
     {
       "path": "/app/projects/shadow-roadmap/c/3",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/shadow-roadmap/c/3"
-    },
-    {
-      "path": "/app/projects/shadow-roadmap/run/00000000-0000-4000-8000-000000000000",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/shadow-roadmap/run/00000000-0000-4000-8000-000000000000"
-    },
-    {
-      "path": "/app/projects/silent-churn/c/1",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/silent-churn/c/1"
-    },
-    {
-      "path": "/app/projects/silent-churn/c/2",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/silent-churn/c/2"
-    },
-    {
-      "path": "/app/projects/silent-churn/c/3",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/silent-churn/c/3"
+      "url": "http://localhost:3002/app/projects/shadow-roadmap/c/3"
     },
     {
       "path": "/app/projects/silent-churn",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/silent-churn"
+      "url": "http://localhost:3002/app/projects/silent-churn"
+    },
+    {
+      "path": "/app/projects/public-fracture",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/public-fracture"
+    },
+    {
+      "path": "/app/projects/shadow-roadmap/run/00000000-0000-4000-8000-000000000000",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/shadow-roadmap/run/00000000-0000-4000-8000-000000000000"
+    },
+    {
+      "path": "/app/projects/silent-churn/c/1",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/silent-churn/c/1"
+    },
+    {
+      "path": "/app/projects/silent-churn/c/2",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/silent-churn/c/2"
+    },
+    {
+      "path": "/app/projects/silent-churn/c/3",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/silent-churn/c/3"
     },
     {
       "path": "/app/projects/silent-churn/run/00000000-0000-4000-8000-000000000000",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/silent-churn/run/00000000-0000-4000-8000-000000000000"
+      "url": "http://localhost:3002/app/projects/silent-churn/run/00000000-0000-4000-8000-000000000000"
     },
     {
       "path": "/app/projects/trojan-horse/c/1",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/trojan-horse/c/1"
+      "url": "http://localhost:3002/app/projects/trojan-horse/c/1"
     },
     {
       "path": "/app/projects/trojan-horse/c/2",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/trojan-horse/c/2"
+      "url": "http://localhost:3002/app/projects/trojan-horse/c/2"
     },
     {
       "path": "/app/projects/trojan-horse/c/3",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/trojan-horse/c/3"
+      "url": "http://localhost:3002/app/projects/trojan-horse/c/3"
     },
     {
       "path": "/app/projects/trojan-horse/run/00000000-0000-4000-8000-000000000000",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/trojan-horse/run/00000000-0000-4000-8000-000000000000"
-    },
-    {
-      "path": "/app/projects/shadow-roadmap",
-      "status": 200,
-      "url": "http://localhost:3001/app/projects/shadow-roadmap"
+      "url": "http://localhost:3002/app/projects/trojan-horse/run/00000000-0000-4000-8000-000000000000"
     },
     {
       "path": "/app/run/00000000-0000-4000-8000-000000000000",
       "status": 200,
-      "url": "http://localhost:3001/app/run/00000000-0000-4000-8000-000000000000"
-    },
-    {
-      "path": "/app/run/00000000-0000-4000-8000-000000000000/debrief",
-      "status": 200,
-      "url": "http://localhost:3001/app/run/00000000-0000-4000-8000-000000000000/debrief"
+      "url": "http://localhost:3002/app/run/00000000-0000-4000-8000-000000000000"
     },
     {
       "path": "/app/settings",
       "status": 200,
-      "url": "http://localhost:3001/app/settings"
+      "url": "http://localhost:3002/app/settings"
+    },
+    {
+      "path": "/app/projects/shadow-roadmap",
+      "status": 200,
+      "url": "http://localhost:3002/app/projects/shadow-roadmap"
+    },
+    {
+      "path": "/app/run/00000000-0000-4000-8000-000000000000/debrief",
+      "status": 200,
+      "url": "http://localhost:3002/app/run/00000000-0000-4000-8000-000000000000/debrief"
     },
     {
       "path": "/app/projects/trojan-horse",
       "status": 200,
-      "url": "http://localhost:3001/app/projects/trojan-horse"
-    },
-    {
-      "path": "/auth/callback",
-      "status": 200,
-      "url": "http://localhost:3001/auth/callback"
+      "url": "http://localhost:3002/app/projects/trojan-horse"
     },
     {
       "path": "/auth/error",
       "status": 200,
-      "url": "http://localhost:3001/auth/error"
+      "url": "http://localhost:3002/auth/error"
     },
     {
-      "path": "/career",
+      "path": "/auth/callback",
       "status": 200,
-      "url": "http://localhost:3001/app/portfolio"
+      "url": "http://localhost:3002/auth/callback"
     },
     {
       "path": "/changelog",
       "status": 200,
-      "url": "http://localhost:3001/changelog"
+      "url": "http://localhost:3002/changelog"
+    },
+    {
+      "path": "/career",
+      "status": 200,
+      "url": "http://localhost:3002/app/portfolio"
     },
     {
       "path": "/content-policy",
       "status": 200,
-      "url": "http://localhost:3001/content-policy"
-    },
-    {
-      "path": "/contribute",
-      "status": 200,
-      "url": "http://localhost:3001/contribute"
+      "url": "http://localhost:3002/content-policy"
     },
     {
       "path": "/credits",
       "status": 200,
-      "url": "http://localhost:3001/credits"
-    },
-    {
-      "path": "/dashboard",
-      "status": 200,
-      "url": "http://localhost:3001/app"
+      "url": "http://localhost:3002/credits"
     },
     {
       "path": "/frameworks",
       "status": 200,
-      "url": "http://localhost:3001/frameworks"
+      "url": "http://localhost:3002/frameworks"
+    },
+    {
+      "path": "/contribute",
+      "status": 200,
+      "url": "http://localhost:3002/contribute"
+    },
+    {
+      "path": "/dashboard",
+      "status": 200,
+      "url": "http://localhost:3002/app"
     },
     {
       "path": "/frameworks/ai-product-management",
       "status": 200,
-      "url": "http://localhost:3001/frameworks/ai-product-management"
+      "url": "http://localhost:3002/frameworks/ai-product-management"
     },
     {
       "path": "/frameworks/customer-discovery",
       "status": 200,
-      "url": "http://localhost:3001/frameworks/customer-discovery"
+      "url": "http://localhost:3002/frameworks/customer-discovery"
     },
     {
       "path": "/frameworks/data-and-experimentation",
       "status": 200,
-      "url": "http://localhost:3001/frameworks/data-and-experimentation"
-    },
-    {
-      "path": "/frameworks/foundation-and-product-strategy",
-      "status": 200,
-      "url": "http://localhost:3001/frameworks/foundation-and-product-strategy"
+      "url": "http://localhost:3002/frameworks/data-and-experimentation"
     },
     {
       "path": "/frameworks/execution-and-delivery",
       "status": 200,
-      "url": "http://localhost:3001/frameworks/execution-and-delivery"
+      "url": "http://localhost:3002/frameworks/execution-and-delivery"
+    },
+    {
+      "path": "/frameworks/foundation-and-product-strategy",
+      "status": 200,
+      "url": "http://localhost:3002/frameworks/foundation-and-product-strategy"
     },
     {
       "path": "/frameworks/job-ready",
       "status": 200,
-      "url": "http://localhost:3001/frameworks/job-ready"
-    },
-    {
-      "path": "/frameworks/prioritization-and-decision-making",
-      "status": 200,
-      "url": "http://localhost:3001/frameworks/prioritization-and-decision-making"
-    },
-    {
-      "path": "/frameworks/stakeholder-leadership",
-      "status": 200,
-      "url": "http://localhost:3001/frameworks/stakeholder-leadership"
+      "url": "http://localhost:3002/frameworks/job-ready"
     },
     {
       "path": "/help",
       "status": 200,
-      "url": "http://localhost:3001/help"
+      "url": "http://localhost:3002/help"
     },
     {
-      "path": "/learn/ai-product-management",
+      "path": "/frameworks/prioritization-and-decision-making",
       "status": 200,
-      "url": "http://localhost:3001/frameworks/ai-product-management"
+      "url": "http://localhost:3002/frameworks/prioritization-and-decision-making"
     },
     {
       "path": "/frameworks/technical-fluency",
       "status": 200,
-      "url": "http://localhost:3001/frameworks/technical-fluency"
+      "url": "http://localhost:3002/frameworks/technical-fluency"
     },
     {
-      "path": "/learn/customer-discovery",
+      "path": "/frameworks/stakeholder-leadership",
       "status": 200,
-      "url": "http://localhost:3001/frameworks/customer-discovery"
-    },
-    {
-      "path": "/learn/data-and-experimentation",
-      "status": 200,
-      "url": "http://localhost:3001/frameworks/data-and-experimentation"
-    },
-    {
-      "path": "/learn/execution-and-delivery",
-      "status": 200,
-      "url": "http://localhost:3001/frameworks/execution-and-delivery"
+      "url": "http://localhost:3002/frameworks/stakeholder-leadership"
     },
     {
       "path": "/frameworks/ui-ux-collaboration",
       "status": 200,
-      "url": "http://localhost:3001/frameworks/ui-ux-collaboration"
+      "url": "http://localhost:3002/frameworks/ui-ux-collaboration"
+    },
+    {
+      "path": "/learn/ai-product-management",
+      "status": 200,
+      "url": "http://localhost:3002/frameworks/ai-product-management"
+    },
+    {
+      "path": "/learn/customer-discovery",
+      "status": 200,
+      "url": "http://localhost:3002/frameworks/customer-discovery"
+    },
+    {
+      "path": "/learn/data-and-experimentation",
+      "status": 200,
+      "url": "http://localhost:3002/frameworks/data-and-experimentation"
+    },
+    {
+      "path": "/learn/execution-and-delivery",
+      "status": 200,
+      "url": "http://localhost:3002/frameworks/execution-and-delivery"
     },
     {
       "path": "/learn/foundation-and-product-strategy",
       "status": 200,
-      "url": "http://localhost:3001/frameworks/foundation-and-product-strategy"
+      "url": "http://localhost:3002/frameworks/foundation-and-product-strategy"
     },
     {
       "path": "/learn/job-ready",
       "status": 200,
-      "url": "http://localhost:3001/frameworks/job-ready"
+      "url": "http://localhost:3002/frameworks/job-ready"
     },
     {
       "path": "/learn/prioritization-and-decision-making",
       "status": 200,
-      "url": "http://localhost:3001/frameworks/prioritization-and-decision-making"
+      "url": "http://localhost:3002/frameworks/prioritization-and-decision-making"
     },
     {
       "path": "/learn/stakeholder-leadership",
       "status": 200,
-      "url": "http://localhost:3001/frameworks/stakeholder-leadership"
-    },
-    {
-      "path": "/how-it-works",
-      "status": 200,
-      "url": "http://localhost:3001/how-it-works"
+      "url": "http://localhost:3002/frameworks/stakeholder-leadership"
     },
     {
       "path": "/learn/technical-fluency",
       "status": 200,
-      "url": "http://localhost:3001/frameworks/technical-fluency"
+      "url": "http://localhost:3002/frameworks/technical-fluency"
     },
     {
       "path": "/learn/ui-ux-collaboration",
       "status": 200,
-      "url": "http://localhost:3001/frameworks/ui-ux-collaboration"
+      "url": "http://localhost:3002/frameworks/ui-ux-collaboration"
     },
     {
       "path": "/login",
       "status": 200,
-      "url": "http://localhost:3001/login"
+      "url": "http://localhost:3002/login"
     },
     {
       "path": "/onboarding",
       "status": 200,
-      "url": "http://localhost:3001/onboarding"
+      "url": "http://localhost:3002/onboarding"
+    },
+    {
+      "path": "/how-it-works",
+      "status": 200,
+      "url": "http://localhost:3002/how-it-works"
     },
     {
       "path": "/practice/ait-e-1-live-translation-three-seconds-or-instant",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ait-e-1-live-translation-three-seconds-or-instant"
+      "url": "http://localhost:3002/app/practice/ait-e-1-live-translation-three-seconds-or-instant"
     },
     {
       "path": "/practice/ait-e-2-a-shop-assistant-whose-answers-change-hourly",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ait-e-2-a-shop-assistant-whose-answers-change-hourly"
-    },
-    {
-      "path": "/practice/ait-e-3-on-device-or-cloud-for-tagging-kids-photos",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/ait-e-3-on-device-or-cloud-for-tagging-kids-photos"
-    },
-    {
-      "path": "/maintenance",
-      "status": 200,
-      "url": "http://localhost:3001/maintenance"
-    },
-    {
-      "path": "/learn",
-      "status": 200,
-      "url": "http://localhost:3001/resources"
+      "url": "http://localhost:3002/app/practice/ait-e-2-a-shop-assistant-whose-answers-change-hourly"
     },
     {
       "path": "/offline",
       "status": 200,
-      "url": "http://localhost:3001/offline"
+      "url": "http://localhost:3002/offline"
+    },
+    {
+      "path": "/maintenance",
+      "status": 200,
+      "url": "http://localhost:3002/maintenance"
+    },
+    {
+      "path": "/practice/ait-e-3-on-device-or-cloud-for-tagging-kids-photos",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/ait-e-3-on-device-or-cloud-for-tagging-kids-photos"
     },
     {
       "path": "/practice/ait-h-1-the-assistant-is-inventing-fees-in-one-region",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ait-h-1-the-assistant-is-inventing-fees-in-one-region"
-    },
-    {
-      "path": "/practice/ait-h-3-monday-8-a-m-10-000-clinicians-at-once",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/ait-h-3-monday-8-a-m-10-000-clinicians-at-once"
-    },
-    {
-      "path": "/practice/ait-h-2-an-agent-that-can-spend-money",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/ait-h-2-an-agent-that-can-spend-money"
-    },
-    {
-      "path": "/practice/ait-m-1-a-medical-scribe-with-a-hard-safety-floor",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/ait-m-1-a-medical-scribe-with-a-hard-safety-floor"
+      "url": "http://localhost:3002/app/practice/ait-h-1-the-assistant-is-inventing-fees-in-one-region"
     },
     {
       "path": "/practice",
       "status": 200,
-      "url": "http://localhost:3001/app/practice"
+      "url": "http://localhost:3002/app/practice"
+    },
+    {
+      "path": "/practice/ait-h-2-an-agent-that-can-spend-money",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/ait-h-2-an-agent-that-can-spend-money"
+    },
+    {
+      "path": "/practice/ait-h-3-monday-8-a-m-10-000-clinicians-at-once",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/ait-h-3-monday-8-a-m-10-000-clinicians-at-once"
+    },
+    {
+      "path": "/practice/ait-m-1-a-medical-scribe-with-a-hard-safety-floor",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/ait-m-1-a-medical-scribe-with-a-hard-safety-floor"
     },
     {
       "path": "/practice/ait-m-2-a-support-copilot-with-three-goals-fighting",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ait-m-2-a-support-copilot-with-three-goals-fighting"
+      "url": "http://localhost:3002/app/practice/ait-m-2-a-support-copilot-with-three-goals-fighting"
     },
     {
       "path": "/practice/ait-m-3-search-relevance-with-a-300-ms-budget",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ait-m-3-search-relevance-with-a-300-ms-budget"
+      "url": "http://localhost:3002/app/practice/ait-m-3-search-relevance-with-a-300-ms-budget"
     },
     {
       "path": "/practice/beh-e-1-you-disagreed-with-a-designer-about-feature-placement",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/beh-e-1-you-disagreed-with-a-designer-about-feature-placement"
+      "url": "http://localhost:3002/app/practice/beh-e-1-you-disagreed-with-a-designer-about-feature-placement"
     },
     {
       "path": "/practice/beh-e-2-you-learned-something-fast-to-ship-something",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/beh-e-2-you-learned-something-fast-to-ship-something"
+      "url": "http://localhost:3002/app/practice/beh-e-2-you-learned-something-fast-to-ship-something"
     },
     {
       "path": "/practice/beh-e-3-customer-feedback-changed-your-decision",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/beh-e-3-customer-feedback-changed-your-decision"
+      "url": "http://localhost:3002/app/practice/beh-e-3-customer-feedback-changed-your-decision"
     },
     {
       "path": "/practice/beh-h-1-the-project-is-failing-in-front-of-the-board",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/beh-h-1-the-project-is-failing-in-front-of-the-board"
+      "url": "http://localhost:3002/app/practice/beh-h-1-the-project-is-failing-in-front-of-the-board"
     },
     {
       "path": "/practice/beh-h-2-an-incident-harmed-users-and-you-owned-the-response",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/beh-h-2-an-incident-harmed-users-and-you-owned-the-response"
+      "url": "http://localhost:3002/app/practice/beh-h-2-an-incident-harmed-users-and-you-owned-the-response"
     },
     {
       "path": "/practice/beh-h-3-you-found-your-own-number-was-wrong-after-presenting-it",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/beh-h-3-you-found-your-own-number-was-wrong-after-presenting-it"
+      "url": "http://localhost:3002/app/practice/beh-h-3-you-found-your-own-number-was-wrong-after-presenting-it"
     },
     {
       "path": "/practice/beh-m-1-stability-versus-the-hard-date",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/beh-m-1-stability-versus-the-hard-date"
+      "url": "http://localhost:3002/app/practice/beh-m-1-stability-versus-the-hard-date"
     },
     {
       "path": "/practice/beh-m-2-saying-no-to-a-senior-stakeholder-s-idea",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/beh-m-2-saying-no-to-a-senior-stakeholder-s-idea"
+      "url": "http://localhost:3002/app/practice/beh-m-2-saying-no-to-a-senior-stakeholder-s-idea"
     },
     {
       "path": "/practice/beh-m-3-a-dependency-slipped-and-two-teams-wanted-different-things",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/beh-m-3-a-dependency-slipped-and-two-teams-wanted-different-things"
+      "url": "http://localhost:3002/app/practice/beh-m-3-a-dependency-slipped-and-two-teams-wanted-different-things"
     },
     {
-      "path": "/practice/est-e-2-how-many-quick-pay-uses-per-week-should-we-buy-capacity-for",
+      "path": "/learn",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/est-e-2-how-many-quick-pay-uses-per-week-should-we-buy-capacity-for"
+      "url": "http://localhost:3002/resources"
     },
     {
       "path": "/practice/est-e-1-is-a-flagship-phone-store-on-durbar-marg-worth-the-rent",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/est-e-1-is-a-flagship-phone-store-on-durbar-marg-worth-the-rent"
+      "url": "http://localhost:3002/app/practice/est-e-1-is-a-flagship-phone-store-on-durbar-marg-worth-the-rent"
+    },
+    {
+      "path": "/practice/est-e-2-how-many-quick-pay-uses-per-week-should-we-buy-capacity-for",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/est-e-2-how-many-quick-pay-uses-per-week-should-we-buy-capacity-for"
     },
     {
       "path": "/practice/est-e-3-how-many-support-agents-for-launch-day-chat",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/est-e-3-how-many-support-agents-for-launch-day-chat"
+      "url": "http://localhost:3002/app/practice/est-e-3-how-many-support-agents-for-launch-day-chat"
     },
     {
       "path": "/practice/est-h-1-terminal-outage-where-do-60-manual-agents-go",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/est-h-1-terminal-outage-where-do-60-manual-agents-go"
+      "url": "http://localhost:3002/app/practice/est-h-1-terminal-outage-where-do-60-manual-agents-go"
     },
     {
       "path": "/practice/est-h-2-results-day-web-sms-or-phone-which-will-break-first",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/est-h-2-results-day-web-sms-or-phone-which-will-break-first"
+      "url": "http://localhost:3002/app/practice/est-h-2-results-day-web-sms-or-phone-which-will-break-first"
     },
     {
       "path": "/practice/est-h-3-the-festival-exodus-charging-capacity-on-a-highway-corridor",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/est-h-3-the-festival-exodus-charging-capacity-on-a-highway-corridor"
+      "url": "http://localhost:3002/app/practice/est-h-3-the-festival-exodus-charging-capacity-on-a-highway-corridor"
     },
     {
       "path": "/practice/est-m-1-rainstorm-in-new-york-how-many-extra-drivers-to-incentivise",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/est-m-1-rainstorm-in-new-york-how-many-extra-drivers-to-incentivise"
+      "url": "http://localhost:3002/app/practice/est-m-1-rainstorm-in-new-york-how-many-extra-drivers-to-incentivise"
     },
     {
       "path": "/practice/est-m-2-ticket-on-sale-how-fast-should-the-waiting-room-admit-fans",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/est-m-2-ticket-on-sale-how-fast-should-the-waiting-room-admit-fans"
+      "url": "http://localhost:3002/app/practice/est-m-2-ticket-on-sale-how-fast-should-the-waiting-room-admit-fans"
     },
     {
       "path": "/practice/est-m-3-tihar-week-do-we-have-enough-riders-for-sweets-and-gifts",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/est-m-3-tihar-week-do-we-have-enough-riders-for-sweets-and-gifts"
+      "url": "http://localhost:3002/app/practice/est-m-3-tihar-week-do-we-have-enough-riders-for-sweets-and-gifts"
     },
     {
       "path": "/practice/exe-e-1-daily-actives-fell-10-in-three-weeks",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/exe-e-1-daily-actives-fell-10-in-three-weeks"
+      "url": "http://localhost:3002/app/practice/exe-e-1-daily-actives-fell-10-in-three-weeks"
     },
     {
       "path": "/practice/exe-e-2-how-to-prove-save-for-later-works",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/exe-e-2-how-to-prove-save-for-later-works"
+      "url": "http://localhost:3002/app/practice/exe-e-2-how-to-prove-save-for-later-works"
     },
     {
       "path": "/practice/exe-e-3-more-orders-how-will-you-know-it-is-healthy",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/exe-e-3-more-orders-how-will-you-know-it-is-healthy"
+      "url": "http://localhost:3002/app/practice/exe-e-3-more-orders-how-will-you-know-it-is-healthy"
     },
     {
       "path": "/practice/exe-h-1-watch-time-is-at-a-record-but-is-it-healthy",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/exe-h-1-watch-time-is-at-a-record-but-is-it-healthy"
+      "url": "http://localhost:3002/app/practice/exe-h-1-watch-time-is-at-a-record-but-is-it-healthy"
     },
     {
       "path": "/practice/exe-h-2-active-users-are-up-22-is-anyone-new-actually-there",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/exe-h-2-active-users-are-up-22-is-anyone-new-actually-there"
+      "url": "http://localhost:3002/app/practice/exe-h-2-active-users-are-up-22-is-anyone-new-actually-there"
     },
     {
       "path": "/practice/exe-h-3-the-test-says-3-revenue-retention-says-otherwise",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/exe-h-3-the-test-says-3-revenue-retention-says-otherwise"
+      "url": "http://localhost:3002/app/practice/exe-h-3-the-test-says-3-revenue-retention-says-otherwise"
     },
     {
       "path": "/practice/exe-m-1-notifications-lift-daily-actives-and-uninstalls",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/exe-m-1-notifications-lift-daily-actives-and-uninstalls"
+      "url": "http://localhost:3002/app/practice/exe-m-1-notifications-lift-daily-actives-and-uninstalls"
     },
     {
       "path": "/practice/exe-m-2-raise-checkout-conversion-by-5",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/exe-m-2-raise-checkout-conversion-by-5"
+      "url": "http://localhost:3002/app/practice/exe-m-2-raise-checkout-conversion-by-5"
     },
     {
       "path": "/practice/exe-m-3-a-referral-program-with-suspicious-signups",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/exe-m-3-a-referral-program-with-suspicious-signups"
+      "url": "http://localhost:3002/app/practice/exe-m-3-a-referral-program-with-suspicious-signups"
     },
     {
       "path": "/practice/ps-e-1-finding-items-in-a-huge-grocery-store",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ps-e-1-finding-items-in-a-huge-grocery-store"
+      "url": "http://localhost:3002/app/practice/ps-e-1-finding-items-in-a-huge-grocery-store"
     },
     {
       "path": "/practice/ps-e-2-parents-keep-returning-kids-clothes",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ps-e-2-parents-keep-returning-kids-clothes"
+      "url": "http://localhost:3002/app/practice/ps-e-2-parents-keep-returning-kids-clothes"
     },
     {
       "path": "/practice/ps-e-3-new-gym-members-stop-after-three-weeks",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ps-e-3-new-gym-members-stop-after-three-weeks"
+      "url": "http://localhost:3002/app/practice/ps-e-3-new-gym-members-stop-after-three-weeks"
     },
     {
       "path": "/practice/ps-h-1-how-older-residents-of-tokyo-move-through-the-transit-system",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ps-h-1-how-older-residents-of-tokyo-move-through-the-transit-system"
+      "url": "http://localhost:3002/app/practice/ps-h-1-how-older-residents-of-tokyo-move-through-the-transit-system"
     },
     {
       "path": "/practice/ps-h-2-designing-for-first-time-flyers",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ps-h-2-designing-for-first-time-flyers"
+      "url": "http://localhost:3002/app/practice/ps-h-2-designing-for-first-time-flyers"
     },
     {
       "path": "/practice/ps-h-3-fair-price-information-for-a-farmers-cooperative",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ps-h-3-fair-price-information-for-a-farmers-cooperative"
+      "url": "http://localhost:3002/app/practice/ps-h-3-fair-price-information-for-a-farmers-cooperative"
     },
     {
       "path": "/practice/ps-m-1-a-first-ikea-visit-for-a-new-homeowner",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ps-m-1-a-first-ikea-visit-for-a-new-homeowner"
+      "url": "http://localhost:3002/app/practice/ps-m-1-a-first-ikea-visit-for-a-new-homeowner"
     },
     {
       "path": "/practice/ps-m-2-first-time-riders-and-the-intercity-bus",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ps-m-2-first-time-riders-and-the-intercity-bus"
+      "url": "http://localhost:3002/app/practice/ps-m-2-first-time-riders-and-the-intercity-bus"
     },
     {
       "path": "/practice/ps-m-3-a-telehealth-app-for-adults-over-45",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/ps-m-3-a-telehealth-app-for-adults-over-45"
+      "url": "http://localhost:3002/app/practice/ps-m-3-a-telehealth-app-for-adults-over-45"
     },
     {
       "path": "/practice/rca-e-1-sign-ups-dropped-12-after-the-app-update",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/rca-e-1-sign-ups-dropped-12-after-the-app-update"
+      "url": "http://localhost:3002/app/practice/rca-e-1-sign-ups-dropped-12-after-the-app-update"
     },
     {
       "path": "/practice/rca-e-2-new-seller-activations-fell-15",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/rca-e-2-new-seller-activations-fell-15"
+      "url": "http://localhost:3002/app/practice/rca-e-2-new-seller-activations-fell-15"
     },
     {
       "path": "/practice/rca-e-3-add-to-cart-conversion-fell-after-the-layout-refresh",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/rca-e-3-add-to-cart-conversion-fell-after-the-layout-refresh"
+      "url": "http://localhost:3002/app/practice/rca-e-3-add-to-cart-conversion-fell-after-the-layout-refresh"
     },
     {
       "path": "/practice/rca-h-1-drivers-are-leaving-slowly-in-six-cities",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/rca-h-1-drivers-are-leaving-slowly-in-six-cities"
+      "url": "http://localhost:3002/app/practice/rca-h-1-drivers-are-leaving-slowly-in-six-cities"
     },
     {
       "path": "/practice/rca-h-2-customer-satisfaction-is-sliding-while-resolution-times-improve",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/rca-h-2-customer-satisfaction-is-sliding-while-resolution-times-improve"
+      "url": "http://localhost:3002/app/practice/rca-h-2-customer-satisfaction-is-sliding-while-resolution-times-improve"
     },
     {
       "path": "/practice/rca-h-3-revenue-per-paying-user-is-eroding-by-7",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/rca-h-3-revenue-per-paying-user-is-eroding-by-7"
+      "url": "http://localhost:3002/app/practice/rca-h-3-revenue-per-paying-user-is-eroding-by-7"
     },
     {
       "path": "/practice/rca-m-1-search-conversion-fell-while-crash-rates-spiked",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/rca-m-1-search-conversion-fell-while-crash-rates-spiked"
+      "url": "http://localhost:3002/app/practice/rca-m-1-search-conversion-fell-while-crash-rates-spiked"
     },
     {
       "path": "/practice/rca-m-2-delivery-times-rose-three-minutes-yet-every-city-got-faster",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/rca-m-2-delivery-times-rose-three-minutes-yet-every-city-got-faster"
+      "url": "http://localhost:3002/app/practice/rca-m-2-delivery-times-rose-three-minutes-yet-every-city-got-faster"
     },
     {
       "path": "/practice/rca-m-3-daily-users-are-up-8-but-week-one-retention-is-down",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/rca-m-3-daily-users-are-up-8-but-week-one-retention-is-down"
+      "url": "http://localhost:3002/app/practice/rca-m-3-daily-users-are-up-8-but-week-one-retention-is-down"
     },
     {
       "path": "/practice/str-e-1-students-churn-at-re-verification-cut-price-or-something-else",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/str-e-1-students-churn-at-re-verification-cut-price-or-something-else"
+      "url": "http://localhost:3002/app/practice/str-e-1-students-churn-at-re-verification-cut-price-or-something-else"
     },
     {
       "path": "/practice/str-e-2-when-should-the-paywall-appear",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/str-e-2-when-should-the-paywall-appear"
+      "url": "http://localhost:3002/app/practice/str-e-2-when-should-the-paywall-appear"
     },
     {
       "path": "/practice/str-e-3-raise-the-take-rate-for-new-sellers",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/str-e-3-raise-the-take-rate-for-new-sellers"
-    },
-    {
-      "path": "/practice/str-h-2-a-minimum-pay-rule-hits-the-biggest-market",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/str-h-2-a-minimum-pay-rule-hits-the-biggest-market"
-    },
-    {
-      "path": "/practice/str-h-3-a-wallet-s-three-growth-paths-all-depend-on-one-another",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/str-h-3-a-wallet-s-three-growth-paths-all-depend-on-one-another"
+      "url": "http://localhost:3002/app/practice/str-e-3-raise-the-take-rate-for-new-sellers"
     },
     {
       "path": "/practice/str-h-1-ai-answers-help-users-and-starve-publishers",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/str-h-1-ai-answers-help-users-and-starve-publishers"
+      "url": "http://localhost:3002/app/practice/str-h-1-ai-answers-help-users-and-starve-publishers"
     },
     {
-      "path": "/practice/str-m-1-a-rival-adds-a-concierge-match-copy-or-pivot",
+      "path": "/practice/str-h-2-a-minimum-pay-rule-hits-the-biggest-market",
       "status": 200,
-      "url": "http://localhost:3001/app/practice/str-m-1-a-rival-adds-a-concierge-match-copy-or-pivot"
-    },
-    {
-      "path": "/practice/str-m-2-launching-a-streamer-where-local-telcos-own-distribution",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/str-m-2-launching-a-streamer-where-local-telcos-own-distribution"
-    },
-    {
-      "path": "/practice/str-m-3-an-ai-native-rival-is-winning-the-mid-market",
-      "status": 200,
-      "url": "http://localhost:3001/app/practice/str-m-3-an-ai-native-rival-is-winning-the-mid-market"
-    },
-    {
-      "path": "/questions",
-      "status": 200,
-      "url": "http://localhost:3001/questions"
+      "url": "http://localhost:3002/app/practice/str-h-2-a-minimum-pay-rule-hits-the-biggest-market"
     },
     {
       "path": "/privacy",
       "status": 200,
-      "url": "http://localhost:3001/privacy"
+      "url": "http://localhost:3002/privacy"
+    },
+    {
+      "path": "/practice/str-h-3-a-wallet-s-three-growth-paths-all-depend-on-one-another",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/str-h-3-a-wallet-s-three-growth-paths-all-depend-on-one-another"
+    },
+    {
+      "path": "/practice/str-m-1-a-rival-adds-a-concierge-match-copy-or-pivot",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/str-m-1-a-rival-adds-a-concierge-match-copy-or-pivot"
+    },
+    {
+      "path": "/practice/str-m-2-launching-a-streamer-where-local-telcos-own-distribution",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/str-m-2-launching-a-streamer-where-local-telcos-own-distribution"
+    },
+    {
+      "path": "/practice/str-m-3-an-ai-native-rival-is-winning-the-mid-market",
+      "status": 200,
+      "url": "http://localhost:3002/app/practice/str-m-3-an-ai-native-rival-is-winning-the-mid-market"
+    },
+    {
+      "path": "/questions",
+      "status": 200,
+      "url": "http://localhost:3002/questions"
     },
     {
       "path": "/projects",
       "status": 200,
-      "url": "http://localhost:3001/projects"
+      "url": "http://localhost:3002/projects"
     },
     {
       "path": "/questions/ait-e-3-on-device-or-cloud-for-tagging-kids-photos",
       "status": 200,
-      "url": "http://localhost:3001/questions/ait-e-3-on-device-or-cloud-for-tagging-kids-photos"
-    },
-    {
-      "path": "/questions/ait-e-2-a-shop-assistant-whose-answers-change-hourly",
-      "status": 200,
-      "url": "http://localhost:3001/questions/ait-e-2-a-shop-assistant-whose-answers-change-hourly"
+      "url": "http://localhost:3002/questions/ait-e-3-on-device-or-cloud-for-tagging-kids-photos"
     },
     {
       "path": "/questions/ait-e-1-live-translation-three-seconds-or-instant",
       "status": 200,
-      "url": "http://localhost:3001/questions/ait-e-1-live-translation-three-seconds-or-instant"
+      "url": "http://localhost:3002/questions/ait-e-1-live-translation-three-seconds-or-instant"
+    },
+    {
+      "path": "/questions/ait-e-2-a-shop-assistant-whose-answers-change-hourly",
+      "status": 200,
+      "url": "http://localhost:3002/questions/ait-e-2-a-shop-assistant-whose-answers-change-hourly"
     },
     {
       "path": "/questions/ait-h-1-the-assistant-is-inventing-fees-in-one-region",
       "status": 200,
-      "url": "http://localhost:3001/questions/ait-h-1-the-assistant-is-inventing-fees-in-one-region"
-    },
-    {
-      "path": "/questions/ait-h-2-an-agent-that-can-spend-money",
-      "status": 200,
-      "url": "http://localhost:3001/questions/ait-h-2-an-agent-that-can-spend-money"
+      "url": "http://localhost:3002/questions/ait-h-1-the-assistant-is-inventing-fees-in-one-region"
     },
     {
       "path": "/questions/ait-h-3-monday-8-a-m-10-000-clinicians-at-once",
       "status": 200,
-      "url": "http://localhost:3001/questions/ait-h-3-monday-8-a-m-10-000-clinicians-at-once"
-    },
-    {
-      "path": "/questions/ait-m-3-search-relevance-with-a-300-ms-budget",
-      "status": 200,
-      "url": "http://localhost:3001/questions/ait-m-3-search-relevance-with-a-300-ms-budget"
+      "url": "http://localhost:3002/questions/ait-h-3-monday-8-a-m-10-000-clinicians-at-once"
     },
     {
       "path": "/questions/ait-m-1-a-medical-scribe-with-a-hard-safety-floor",
       "status": 200,
-      "url": "http://localhost:3001/questions/ait-m-1-a-medical-scribe-with-a-hard-safety-floor"
+      "url": "http://localhost:3002/questions/ait-m-1-a-medical-scribe-with-a-hard-safety-floor"
+    },
+    {
+      "path": "/questions/ait-h-2-an-agent-that-can-spend-money",
+      "status": 200,
+      "url": "http://localhost:3002/questions/ait-h-2-an-agent-that-can-spend-money"
     },
     {
       "path": "/questions/ait-m-2-a-support-copilot-with-three-goals-fighting",
       "status": 200,
-      "url": "http://localhost:3001/questions/ait-m-2-a-support-copilot-with-three-goals-fighting"
+      "url": "http://localhost:3002/questions/ait-m-2-a-support-copilot-with-three-goals-fighting"
     },
     {
-      "path": "/questions/beh-e-1-you-disagreed-with-a-designer-about-feature-placement",
+      "path": "/questions/ait-m-3-search-relevance-with-a-300-ms-budget",
       "status": 200,
-      "url": "http://localhost:3001/questions/beh-e-1-you-disagreed-with-a-designer-about-feature-placement"
-    },
-    {
-      "path": "/questions/beh-h-1-the-project-is-failing-in-front-of-the-board",
-      "status": 200,
-      "url": "http://localhost:3001/questions/beh-h-1-the-project-is-failing-in-front-of-the-board"
-    },
-    {
-      "path": "/questions/beh-h-2-an-incident-harmed-users-and-you-owned-the-response",
-      "status": 200,
-      "url": "http://localhost:3001/questions/beh-h-2-an-incident-harmed-users-and-you-owned-the-response"
-    },
-    {
-      "path": "/questions/beh-e-3-customer-feedback-changed-your-decision",
-      "status": 200,
-      "url": "http://localhost:3001/questions/beh-e-3-customer-feedback-changed-your-decision"
+      "url": "http://localhost:3002/questions/ait-m-3-search-relevance-with-a-300-ms-budget"
     },
     {
       "path": "/questions/beh-e-2-you-learned-something-fast-to-ship-something",
       "status": 200,
-      "url": "http://localhost:3001/questions/beh-e-2-you-learned-something-fast-to-ship-something"
+      "url": "http://localhost:3002/questions/beh-e-2-you-learned-something-fast-to-ship-something"
+    },
+    {
+      "path": "/questions/beh-e-3-customer-feedback-changed-your-decision",
+      "status": 200,
+      "url": "http://localhost:3002/questions/beh-e-3-customer-feedback-changed-your-decision"
+    },
+    {
+      "path": "/questions/beh-e-1-you-disagreed-with-a-designer-about-feature-placement",
+      "status": 200,
+      "url": "http://localhost:3002/questions/beh-e-1-you-disagreed-with-a-designer-about-feature-placement"
+    },
+    {
+      "path": "/questions/beh-h-1-the-project-is-failing-in-front-of-the-board",
+      "status": 200,
+      "url": "http://localhost:3002/questions/beh-h-1-the-project-is-failing-in-front-of-the-board"
+    },
+    {
+      "path": "/questions/beh-h-2-an-incident-harmed-users-and-you-owned-the-response",
+      "status": 200,
+      "url": "http://localhost:3002/questions/beh-h-2-an-incident-harmed-users-and-you-owned-the-response"
     },
     {
       "path": "/questions/beh-h-3-you-found-your-own-number-was-wrong-after-presenting-it",
       "status": 200,
-      "url": "http://localhost:3001/questions/beh-h-3-you-found-your-own-number-was-wrong-after-presenting-it"
+      "url": "http://localhost:3002/questions/beh-h-3-you-found-your-own-number-was-wrong-after-presenting-it"
     },
     {
       "path": "/questions/beh-m-3-a-dependency-slipped-and-two-teams-wanted-different-things",
       "status": 200,
-      "url": "http://localhost:3001/questions/beh-m-3-a-dependency-slipped-and-two-teams-wanted-different-things"
-    },
-    {
-      "path": "/questions/beh-m-1-stability-versus-the-hard-date",
-      "status": 200,
-      "url": "http://localhost:3001/questions/beh-m-1-stability-versus-the-hard-date"
-    },
-    {
-      "path": "/questions/est-e-1-is-a-flagship-phone-store-on-durbar-marg-worth-the-rent",
-      "status": 200,
-      "url": "http://localhost:3001/questions/est-e-1-is-a-flagship-phone-store-on-durbar-marg-worth-the-rent"
+      "url": "http://localhost:3002/questions/beh-m-3-a-dependency-slipped-and-two-teams-wanted-different-things"
     },
     {
       "path": "/questions/beh-m-2-saying-no-to-a-senior-stakeholder-s-idea",
       "status": 200,
-      "url": "http://localhost:3001/questions/beh-m-2-saying-no-to-a-senior-stakeholder-s-idea"
+      "url": "http://localhost:3002/questions/beh-m-2-saying-no-to-a-senior-stakeholder-s-idea"
+    },
+    {
+      "path": "/questions/beh-m-1-stability-versus-the-hard-date",
+      "status": 200,
+      "url": "http://localhost:3002/questions/beh-m-1-stability-versus-the-hard-date"
+    },
+    {
+      "path": "/questions/est-e-1-is-a-flagship-phone-store-on-durbar-marg-worth-the-rent",
+      "status": 200,
+      "url": "http://localhost:3002/questions/est-e-1-is-a-flagship-phone-store-on-durbar-marg-worth-the-rent"
     },
     {
       "path": "/questions/est-e-2-how-many-quick-pay-uses-per-week-should-we-buy-capacity-for",
       "status": 200,
-      "url": "http://localhost:3001/questions/est-e-2-how-many-quick-pay-uses-per-week-should-we-buy-capacity-for"
-    },
-    {
-      "path": "/questions/est-h-1-terminal-outage-where-do-60-manual-agents-go",
-      "status": 200,
-      "url": "http://localhost:3001/questions/est-h-1-terminal-outage-where-do-60-manual-agents-go"
-    },
-    {
-      "path": "/questions/est-h-3-the-festival-exodus-charging-capacity-on-a-highway-corridor",
-      "status": 200,
-      "url": "http://localhost:3001/questions/est-h-3-the-festival-exodus-charging-capacity-on-a-highway-corridor"
-    },
-    {
-      "path": "/questions/est-h-2-results-day-web-sms-or-phone-which-will-break-first",
-      "status": 200,
-      "url": "http://localhost:3001/questions/est-h-2-results-day-web-sms-or-phone-which-will-break-first"
+      "url": "http://localhost:3002/questions/est-e-2-how-many-quick-pay-uses-per-week-should-we-buy-capacity-for"
     },
     {
       "path": "/questions/est-e-3-how-many-support-agents-for-launch-day-chat",
       "status": 200,
-      "url": "http://localhost:3001/questions/est-e-3-how-many-support-agents-for-launch-day-chat"
+      "url": "http://localhost:3002/questions/est-e-3-how-many-support-agents-for-launch-day-chat"
     },
     {
-      "path": "/questions/est-m-1-rainstorm-in-new-york-how-many-extra-drivers-to-incentivise",
+      "path": "/questions/est-h-1-terminal-outage-where-do-60-manual-agents-go",
       "status": 200,
-      "url": "http://localhost:3001/questions/est-m-1-rainstorm-in-new-york-how-many-extra-drivers-to-incentivise"
+      "url": "http://localhost:3002/questions/est-h-1-terminal-outage-where-do-60-manual-agents-go"
+    },
+    {
+      "path": "/questions/est-h-2-results-day-web-sms-or-phone-which-will-break-first",
+      "status": 200,
+      "url": "http://localhost:3002/questions/est-h-2-results-day-web-sms-or-phone-which-will-break-first"
+    },
+    {
+      "path": "/questions/est-h-3-the-festival-exodus-charging-capacity-on-a-highway-corridor",
+      "status": 200,
+      "url": "http://localhost:3002/questions/est-h-3-the-festival-exodus-charging-capacity-on-a-highway-corridor"
     },
     {
       "path": "/questions/est-m-2-ticket-on-sale-how-fast-should-the-waiting-room-admit-fans",
       "status": 200,
-      "url": "http://localhost:3001/questions/est-m-2-ticket-on-sale-how-fast-should-the-waiting-room-admit-fans"
+      "url": "http://localhost:3002/questions/est-m-2-ticket-on-sale-how-fast-should-the-waiting-room-admit-fans"
+    },
+    {
+      "path": "/questions/est-m-1-rainstorm-in-new-york-how-many-extra-drivers-to-incentivise",
+      "status": 200,
+      "url": "http://localhost:3002/questions/est-m-1-rainstorm-in-new-york-how-many-extra-drivers-to-incentivise"
     },
     {
       "path": "/questions/est-m-3-tihar-week-do-we-have-enough-riders-for-sweets-and-gifts",
       "status": 200,
-      "url": "http://localhost:3001/questions/est-m-3-tihar-week-do-we-have-enough-riders-for-sweets-and-gifts"
-    },
-    {
-      "path": "/questions/exe-e-1-daily-actives-fell-10-in-three-weeks",
-      "status": 200,
-      "url": "http://localhost:3001/questions/exe-e-1-daily-actives-fell-10-in-three-weeks"
+      "url": "http://localhost:3002/questions/est-m-3-tihar-week-do-we-have-enough-riders-for-sweets-and-gifts"
     },
     {
       "path": "/questions/exe-e-2-how-to-prove-save-for-later-works",
       "status": 200,
-      "url": "http://localhost:3001/questions/exe-e-2-how-to-prove-save-for-later-works"
+      "url": "http://localhost:3002/questions/exe-e-2-how-to-prove-save-for-later-works"
     },
     {
-      "path": "/questions/exe-e-3-more-orders-how-will-you-know-it-is-healthy",
+      "path": "/questions/exe-e-1-daily-actives-fell-10-in-three-weeks",
       "status": 200,
-      "url": "http://localhost:3001/questions/exe-e-3-more-orders-how-will-you-know-it-is-healthy"
+      "url": "http://localhost:3002/questions/exe-e-1-daily-actives-fell-10-in-three-weeks"
     },
     {
       "path": "/questions/exe-h-1-watch-time-is-at-a-record-but-is-it-healthy",
       "status": 200,
-      "url": "http://localhost:3001/questions/exe-h-1-watch-time-is-at-a-record-but-is-it-healthy"
+      "url": "http://localhost:3002/questions/exe-h-1-watch-time-is-at-a-record-but-is-it-healthy"
     },
     {
       "path": "/questions/exe-h-2-active-users-are-up-22-is-anyone-new-actually-there",
       "status": 200,
-      "url": "http://localhost:3001/questions/exe-h-2-active-users-are-up-22-is-anyone-new-actually-there"
-    },
-    {
-      "path": "/questions/exe-m-1-notifications-lift-daily-actives-and-uninstalls",
-      "status": 200,
-      "url": "http://localhost:3001/questions/exe-m-1-notifications-lift-daily-actives-and-uninstalls"
+      "url": "http://localhost:3002/questions/exe-h-2-active-users-are-up-22-is-anyone-new-actually-there"
     },
     {
       "path": "/questions/exe-h-3-the-test-says-3-revenue-retention-says-otherwise",
       "status": 200,
-      "url": "http://localhost:3001/questions/exe-h-3-the-test-says-3-revenue-retention-says-otherwise"
+      "url": "http://localhost:3002/questions/exe-h-3-the-test-says-3-revenue-retention-says-otherwise"
     },
     {
-      "path": "/questions/exe-m-2-raise-checkout-conversion-by-5",
+      "path": "/questions/exe-m-1-notifications-lift-daily-actives-and-uninstalls",
       "status": 200,
-      "url": "http://localhost:3001/questions/exe-m-2-raise-checkout-conversion-by-5"
+      "url": "http://localhost:3002/questions/exe-m-1-notifications-lift-daily-actives-and-uninstalls"
+    },
+    {
+      "path": "/questions/exe-e-3-more-orders-how-will-you-know-it-is-healthy",
+      "status": 200,
+      "url": "http://localhost:3002/questions/exe-e-3-more-orders-how-will-you-know-it-is-healthy"
     },
     {
       "path": "/questions/exe-m-3-a-referral-program-with-suspicious-signups",
       "status": 200,
-      "url": "http://localhost:3001/questions/exe-m-3-a-referral-program-with-suspicious-signups"
+      "url": "http://localhost:3002/questions/exe-m-3-a-referral-program-with-suspicious-signups"
     },
     {
       "path": "/questions/ps-e-1-finding-items-in-a-huge-grocery-store",
       "status": 200,
-      "url": "http://localhost:3001/questions/ps-e-1-finding-items-in-a-huge-grocery-store"
+      "url": "http://localhost:3002/questions/ps-e-1-finding-items-in-a-huge-grocery-store"
     },
     {
       "path": "/questions/ps-e-2-parents-keep-returning-kids-clothes",
       "status": 200,
-      "url": "http://localhost:3001/questions/ps-e-2-parents-keep-returning-kids-clothes"
+      "url": "http://localhost:3002/questions/ps-e-2-parents-keep-returning-kids-clothes"
     },
     {
       "path": "/questions/ps-e-3-new-gym-members-stop-after-three-weeks",
       "status": 200,
-      "url": "http://localhost:3001/questions/ps-e-3-new-gym-members-stop-after-three-weeks"
+      "url": "http://localhost:3002/questions/ps-e-3-new-gym-members-stop-after-three-weeks"
+    },
+    {
+      "path": "/questions/exe-m-2-raise-checkout-conversion-by-5",
+      "status": 200,
+      "url": "http://localhost:3002/questions/exe-m-2-raise-checkout-conversion-by-5"
     },
     {
       "path": "/questions/ps-h-1-how-older-residents-of-tokyo-move-through-the-transit-system",
       "status": 200,
-      "url": "http://localhost:3001/questions/ps-h-1-how-older-residents-of-tokyo-move-through-the-transit-system"
+      "url": "http://localhost:3002/questions/ps-h-1-how-older-residents-of-tokyo-move-through-the-transit-system"
     },
     {
       "path": "/questions/ps-h-2-designing-for-first-time-flyers",
       "status": 200,
-      "url": "http://localhost:3001/questions/ps-h-2-designing-for-first-time-flyers"
+      "url": "http://localhost:3002/questions/ps-h-2-designing-for-first-time-flyers"
     },
     {
       "path": "/questions/ps-h-3-fair-price-information-for-a-farmers-cooperative",
       "status": 200,
-      "url": "http://localhost:3001/questions/ps-h-3-fair-price-information-for-a-farmers-cooperative"
+      "url": "http://localhost:3002/questions/ps-h-3-fair-price-information-for-a-farmers-cooperative"
     },
     {
       "path": "/questions/ps-m-1-a-first-ikea-visit-for-a-new-homeowner",
       "status": 200,
-      "url": "http://localhost:3001/questions/ps-m-1-a-first-ikea-visit-for-a-new-homeowner"
+      "url": "http://localhost:3002/questions/ps-m-1-a-first-ikea-visit-for-a-new-homeowner"
     },
     {
       "path": "/questions/ps-m-2-first-time-riders-and-the-intercity-bus",
       "status": 200,
-      "url": "http://localhost:3001/questions/ps-m-2-first-time-riders-and-the-intercity-bus"
+      "url": "http://localhost:3002/questions/ps-m-2-first-time-riders-and-the-intercity-bus"
     },
     {
       "path": "/questions/ps-m-3-a-telehealth-app-for-adults-over-45",
       "status": 200,
-      "url": "http://localhost:3001/questions/ps-m-3-a-telehealth-app-for-adults-over-45"
-    },
-    {
-      "path": "/questions/rca-e-1-sign-ups-dropped-12-after-the-app-update",
-      "status": 200,
-      "url": "http://localhost:3001/questions/rca-e-1-sign-ups-dropped-12-after-the-app-update"
+      "url": "http://localhost:3002/questions/ps-m-3-a-telehealth-app-for-adults-over-45"
     },
     {
       "path": "/questions/rca-e-2-new-seller-activations-fell-15",
       "status": 200,
-      "url": "http://localhost:3001/questions/rca-e-2-new-seller-activations-fell-15"
-    },
-    {
-      "path": "/questions/rca-e-3-add-to-cart-conversion-fell-after-the-layout-refresh",
-      "status": 200,
-      "url": "http://localhost:3001/questions/rca-e-3-add-to-cart-conversion-fell-after-the-layout-refresh"
+      "url": "http://localhost:3002/questions/rca-e-2-new-seller-activations-fell-15"
     },
     {
       "path": "/questions/rca-h-1-drivers-are-leaving-slowly-in-six-cities",
       "status": 200,
-      "url": "http://localhost:3001/questions/rca-h-1-drivers-are-leaving-slowly-in-six-cities"
+      "url": "http://localhost:3002/questions/rca-h-1-drivers-are-leaving-slowly-in-six-cities"
+    },
+    {
+      "path": "/questions/rca-e-3-add-to-cart-conversion-fell-after-the-layout-refresh",
+      "status": 200,
+      "url": "http://localhost:3002/questions/rca-e-3-add-to-cart-conversion-fell-after-the-layout-refresh"
+    },
+    {
+      "path": "/questions/rca-e-1-sign-ups-dropped-12-after-the-app-update",
+      "status": 200,
+      "url": "http://localhost:3002/questions/rca-e-1-sign-ups-dropped-12-after-the-app-update"
     },
     {
       "path": "/questions/rca-h-2-customer-satisfaction-is-sliding-while-resolution-times-improve",
       "status": 200,
-      "url": "http://localhost:3001/questions/rca-h-2-customer-satisfaction-is-sliding-while-resolution-times-improve"
+      "url": "http://localhost:3002/questions/rca-h-2-customer-satisfaction-is-sliding-while-resolution-times-improve"
     },
     {
       "path": "/questions/rca-h-3-revenue-per-paying-user-is-eroding-by-7",
       "status": 200,
-      "url": "http://localhost:3001/questions/rca-h-3-revenue-per-paying-user-is-eroding-by-7"
+      "url": "http://localhost:3002/questions/rca-h-3-revenue-per-paying-user-is-eroding-by-7"
     },
     {
       "path": "/questions/rca-m-1-search-conversion-fell-while-crash-rates-spiked",
       "status": 200,
-      "url": "http://localhost:3001/questions/rca-m-1-search-conversion-fell-while-crash-rates-spiked"
+      "url": "http://localhost:3002/questions/rca-m-1-search-conversion-fell-while-crash-rates-spiked"
     },
     {
       "path": "/questions/rca-m-2-delivery-times-rose-three-minutes-yet-every-city-got-faster",
       "status": 200,
-      "url": "http://localhost:3001/questions/rca-m-2-delivery-times-rose-three-minutes-yet-every-city-got-faster"
+      "url": "http://localhost:3002/questions/rca-m-2-delivery-times-rose-three-minutes-yet-every-city-got-faster"
     },
     {
       "path": "/questions/rca-m-3-daily-users-are-up-8-but-week-one-retention-is-down",
       "status": 200,
-      "url": "http://localhost:3001/questions/rca-m-3-daily-users-are-up-8-but-week-one-retention-is-down"
+      "url": "http://localhost:3002/questions/rca-m-3-daily-users-are-up-8-but-week-one-retention-is-down"
     },
     {
       "path": "/questions/str-e-1-students-churn-at-re-verification-cut-price-or-something-else",
       "status": 200,
-      "url": "http://localhost:3001/questions/str-e-1-students-churn-at-re-verification-cut-price-or-something-else"
-    },
-    {
-      "path": "/questions/str-e-3-raise-the-take-rate-for-new-sellers",
-      "status": 200,
-      "url": "http://localhost:3001/questions/str-e-3-raise-the-take-rate-for-new-sellers"
+      "url": "http://localhost:3002/questions/str-e-1-students-churn-at-re-verification-cut-price-or-something-else"
     },
     {
       "path": "/questions/str-e-2-when-should-the-paywall-appear",
       "status": 200,
-      "url": "http://localhost:3001/questions/str-e-2-when-should-the-paywall-appear"
+      "url": "http://localhost:3002/questions/str-e-2-when-should-the-paywall-appear"
     },
     {
-      "path": "/questions/str-h-2-a-minimum-pay-rule-hits-the-biggest-market",
+      "path": "/questions/str-e-3-raise-the-take-rate-for-new-sellers",
       "status": 200,
-      "url": "http://localhost:3001/questions/str-h-2-a-minimum-pay-rule-hits-the-biggest-market"
+      "url": "http://localhost:3002/questions/str-e-3-raise-the-take-rate-for-new-sellers"
     },
     {
       "path": "/questions/str-h-1-ai-answers-help-users-and-starve-publishers",
       "status": 200,
-      "url": "http://localhost:3001/questions/str-h-1-ai-answers-help-users-and-starve-publishers"
+      "url": "http://localhost:3002/questions/str-h-1-ai-answers-help-users-and-starve-publishers"
+    },
+    {
+      "path": "/questions/str-h-2-a-minimum-pay-rule-hits-the-biggest-market",
+      "status": 200,
+      "url": "http://localhost:3002/questions/str-h-2-a-minimum-pay-rule-hits-the-biggest-market"
     },
     {
       "path": "/reset.html",
       "status": 200,
-      "url": "http://localhost:3001/reset.html"
+      "url": "http://localhost:3002/reset.html"
     },
     {
       "path": "/resources",
       "status": 200,
-      "url": "http://localhost:3001/resources"
-    },
-    {
-      "path": "/questions/str-h-3-a-wallet-s-three-growth-paths-all-depend-on-one-another",
-      "status": 200,
-      "url": "http://localhost:3001/questions/str-h-3-a-wallet-s-three-growth-paths-all-depend-on-one-another"
-    },
-    {
-      "path": "/questions/str-m-1-a-rival-adds-a-concierge-match-copy-or-pivot",
-      "status": 200,
-      "url": "http://localhost:3001/questions/str-m-1-a-rival-adds-a-concierge-match-copy-or-pivot"
+      "url": "http://localhost:3002/resources"
     },
     {
       "path": "/signup",
       "status": 200,
-      "url": "http://localhost:3001/signup"
+      "url": "http://localhost:3002/signup"
     },
     {
       "path": "/terms",
       "status": 200,
-      "url": "http://localhost:3001/terms"
+      "url": "http://localhost:3002/terms"
+    },
+    {
+      "path": "/questions/str-h-3-a-wallet-s-three-growth-paths-all-depend-on-one-another",
+      "status": 200,
+      "url": "http://localhost:3002/questions/str-h-3-a-wallet-s-three-growth-paths-all-depend-on-one-another"
+    },
+    {
+      "path": "/questions/str-m-1-a-rival-adds-a-concierge-match-copy-or-pivot",
+      "status": 200,
+      "url": "http://localhost:3002/questions/str-m-1-a-rival-adds-a-concierge-match-copy-or-pivot"
     },
     {
       "path": "/questions/str-m-2-launching-a-streamer-where-local-telcos-own-distribution",
       "status": 200,
-      "url": "http://localhost:3001/questions/str-m-2-launching-a-streamer-where-local-telcos-own-distribution"
+      "url": "http://localhost:3002/questions/str-m-2-launching-a-streamer-where-local-telcos-own-distribution"
     },
     {
       "path": "/questions/str-m-3-an-ai-native-rival-is-winning-the-mid-market",
       "status": 200,
-      "url": "http://localhost:3001/questions/str-m-3-an-ai-native-rival-is-winning-the-mid-market"
+      "url": "http://localhost:3002/questions/str-m-3-an-ai-native-rival-is-winning-the-mid-market"
     },
     {
       "path": "/tools",
       "status": 200,
-      "url": "http://localhost:3001/app/progress"
+      "url": "http://localhost:3002/app/progress"
     }
   ],
   "assets": [
@@ -1570,7 +1570,7 @@
       "type": "text/css; charset=UTF-8"
     },
     {
-      "path": "/_next/static/chunks/2nukpg0b6gpej.css",
+      "path": "/_next/static/chunks/2qg-ehqpklp88.css",
       "status": 200,
       "type": "text/css; charset=UTF-8"
     },
@@ -1605,7 +1605,7 @@
       "type": "application/javascript; charset=UTF-8"
     },
     {
-      "path": "/_next/static/chunks/3dh95nd-p2hd8.js",
+      "path": "/_next/static/chunks/2pqt4mte5l6i_.js",
       "status": 200,
       "type": "application/javascript; charset=UTF-8"
     },
@@ -1635,7 +1635,12 @@
       "type": "application/javascript; charset=UTF-8"
     },
     {
-      "path": "/_next/static/chunks/3b4_61lm5q1_m.js",
+      "path": "/_next/static/chunks/0gp1qfse1_3up.js",
+      "status": 200,
+      "type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "path": "/_next/static/chunks/0acf-ixvp15zy.js",
       "status": 200,
       "type": "application/javascript; charset=UTF-8"
     },
@@ -1650,22 +1655,17 @@
       "type": "application/javascript; charset=UTF-8"
     },
     {
-      "path": "/_next/static/chunks/0acf-ixvp15zy.js",
-      "status": 200,
-      "type": "application/javascript; charset=UTF-8"
-    },
-    {
       "path": "/_next/static/chunks/18jxa_wnt61ff.js",
       "status": 200,
       "type": "application/javascript; charset=UTF-8"
     },
     {
-      "path": "/_next/static/chunks/1x94vgycfjpvn.js",
+      "path": "/_next/static/chunks/3turhxjmadcn-.js",
       "status": 200,
       "type": "application/javascript; charset=UTF-8"
     },
     {
-      "path": "/_next/static/chunks/32s8o-74n7n-h.js",
+      "path": "/_next/static/chunks/3_egvju6l-u7c.js",
       "status": 200,
       "type": "application/javascript; charset=UTF-8"
     },
@@ -1675,7 +1675,7 @@
       "type": "application/javascript; charset=UTF-8"
     },
     {
-      "path": "/_next/static/chunks/426tbl33bz6lk.css",
+      "path": "/_next/static/chunks/3v9541oms33jn.css",
       "status": 200,
       "type": "text/css; charset=UTF-8"
     },
@@ -1690,7 +1690,7 @@
       "type": "text/css; charset=UTF-8"
     },
     {
-      "path": "/_next/static/chunks/2wm1fn6uxycq4.js",
+      "path": "/_next/static/chunks/0f9vyd016z1v1.js",
       "status": 200,
       "type": "application/javascript; charset=UTF-8"
     },
@@ -1705,7 +1705,7 @@
       "type": "application/javascript; charset=UTF-8"
     },
     {
-      "path": "/_next/static/chunks/1j48uaose2xqu.js",
+      "path": "/_next/static/chunks/35982eedy-_8n.js",
       "status": 200,
       "type": "application/javascript; charset=UTF-8"
     },
@@ -1715,7 +1715,17 @@
       "type": "application/javascript; charset=UTF-8"
     },
     {
-      "path": "/_next/static/chunks/2qx9x96xwk40k.js",
+      "path": "/_next/static/chunks/06p5a30h7icyi.css",
+      "status": 200,
+      "type": "text/css; charset=UTF-8"
+    },
+    {
+      "path": "/_next/static/chunks/17yt4na1vq39_.js",
+      "status": 200,
+      "type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "path": "/_next/static/chunks/2_sy0hpi2wcm2.js",
       "status": 200,
       "type": "application/javascript; charset=UTF-8"
     },
@@ -1730,17 +1740,12 @@
       "type": "application/javascript; charset=UTF-8"
     },
     {
-      "path": "/_next/static/chunks/3u2hme89rbjvy.js",
+      "path": "/_next/static/chunks/2qx9x96xwk40k.js",
       "status": 200,
       "type": "application/javascript; charset=UTF-8"
     },
     {
-      "path": "/_next/static/chunks/2_sy0hpi2wcm2.js",
-      "status": 200,
-      "type": "application/javascript; charset=UTF-8"
-    },
-    {
-      "path": "/_next/static/chunks/2n5acl1c82vra.js",
+      "path": "/_next/static/chunks/26tbmgjq2pdiv.js",
       "status": 200,
       "type": "application/javascript; charset=UTF-8"
     },
@@ -1750,7 +1755,7 @@
       "type": "application/javascript; charset=UTF-8"
     },
     {
-      "path": "/_next/static/chunks/3z5m5nehf5sge.js",
+      "path": "/_next/static/chunks/1_s1je1y9n9n3.js",
       "status": 200,
       "type": "application/javascript; charset=UTF-8"
     },
@@ -1770,7 +1775,7 @@
       "type": "text/css; charset=UTF-8"
     },
     {
-      "path": "/_next/static/chunks/2f5er1uttbkbz.js",
+      "path": "/_next/static/chunks/1h-nozv6-7ebw.js",
       "status": 200,
       "type": "application/javascript; charset=UTF-8"
     },
@@ -1780,24 +1785,34 @@
       "type": "application/javascript; charset=UTF-8"
     },
     {
-      "path": "/_next/static/chunks/27zwd-96884r0.js",
+      "path": "/_next/static/chunks/3c8b6rapor04g.js",
       "status": 200,
       "type": "application/javascript; charset=UTF-8"
     },
     {
-      "path": "/_next/static/chunks/3nll351duh3zm.js",
+      "path": "/_next/static/chunks/1egern11ml8tf.js",
       "status": 200,
       "type": "application/javascript; charset=UTF-8"
     },
     {
-      "path": "/_next/static/chunks/0yasos933_89p.js",
+      "path": "/_next/static/chunks/2ecipovj8or7d.js",
       "status": 200,
       "type": "application/javascript; charset=UTF-8"
     },
     {
-      "path": "/_next/static/chunks/1r8vpsueo7946.css",
+      "path": "/_next/static/chunks/0qqk38qdo9j2o.js",
       "status": 200,
-      "type": "text/css; charset=UTF-8"
+      "type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "path": "/_next/static/chunks/23zst_dlwyq3k.js",
+      "status": 200,
+      "type": "application/javascript; charset=UTF-8"
+    },
+    {
+      "path": "/_next/static/chunks/35xrlgxd8-f0a.js",
+      "status": 200,
+      "type": "application/javascript; charset=UTF-8"
     },
     {
       "path": "/_next/static/chunks/2_q-bnj2gxqx9.js",
@@ -1805,22 +1820,22 @@
       "type": "application/javascript; charset=UTF-8"
     },
     {
-      "path": "/_next/static/chunks/3jwol5-llmudj.js",
+      "path": "/_next/static/chunks/1ks6-jaw8us0l.js",
       "status": 200,
       "type": "application/javascript; charset=UTF-8"
     },
     {
-      "path": "/_next/static/chunks/2_pr4an69gles.js",
+      "path": "/_next/static/chunks/3i_k3mh4t2luk.js",
       "status": 200,
       "type": "application/javascript; charset=UTF-8"
     },
     {
-      "path": "/_next/static/chunks/00hnedesy7lrp.js",
+      "path": "/_next/static/chunks/24p8-vzj0_-_7.js",
       "status": 200,
       "type": "application/javascript; charset=UTF-8"
     },
     {
-      "path": "/_next/static/chunks/285ilsk_8zbsi.js",
+      "path": "/_next/static/chunks/2xsxyprh2k079.js",
       "status": 200,
       "type": "application/javascript; charset=UTF-8"
     },
@@ -2548,7 +2563,7 @@
       "url": "/app/projects/ghost-metric",
       "loads": 90,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nBack to projects\nLIVING CASE STUDY\nRoot Cause Analysis\nThe Gho",
+      "text": "Skip to content\nPMFORGE / FIELD SIMULATION\nSkip entrance →\nFIELD NOTE / 01\nA partial signal.\nFIELD NOTE / 02\nA promise already made.\nFIELD NOTE / 03\nA constraint that stays.\n✦\nTHE GHOST METRIC\nA perfect number. An imperf",
       "failed": false
     },
     {
@@ -4300,7 +4315,7 @@
       "url": "/reset.html",
       "loads": 309,
       "unexpectedReloads": 0,
-      "text": "PMFORGE / LOCAL TESTING & RECOVERY\nA clean desk.\nA fresh start.\n\nThis page works independently of the workspace and its JavaScript bundles.\n\nCurrent site: http://localhost:3001. Browser storage is separate for ports 3001",
+      "text": "PMFORGE / LOCAL TESTING & RECOVERY\nA clean desk.\nA fresh start.\n\nThis page works independently of the workspace and its JavaScript bundles.\n\nCurrent site: http://localhost:3002. Browser storage is separate for ports 3001",
       "failed": false
     },
     {
@@ -4336,115 +4351,115 @@
       "failed": false
     },
     {
-      "path": "/app/projects",
-      "url": "/app/projects",
+      "path": "/",
+      "url": "/",
       "loads": 314,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "text": "Skip to content\nPMFORGE\nCLICK OR PRESS ANY KEY TO SKIP\nPMForge ready\nPMForge\nHome\nModules\nInterview Prep\nProjects\nTools\nResources\nOpen app\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto ju",
       "failed": false
     },
     {
-      "path": "/app/projects",
-      "url": "/app/projects",
+      "path": "/",
+      "url": "/",
       "loads": 315,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "text": "Skip to content\nPMForge ready\nPMForge\nHome\nModules\nInterview Prep\nProjects\nTools\nResources\nOpen app\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto justified decisions.\n\nReal-world scenario",
       "failed": false
     },
     {
-      "path": "/app/projects",
-      "url": "/app/projects",
+      "path": "/",
+      "url": "/",
       "loads": 316,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "text": "Skip to content\nPMForge ready\nPMForge\nHome\nModules\nInterview Prep\nProjects\nTools\nResources\nOpen app\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto justified decisions.\n\nReal-world scenario",
       "failed": false
     },
     {
-      "path": "/app/projects",
-      "url": "/app/projects",
+      "path": "/",
+      "url": "/",
       "loads": 317,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "text": "Skip to content\nPMForge ready\nPMForge\nHome\nModules\nInterview Prep\nProjects\nTools\nResources\nOpen app\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto justified decisions.\n\nReal-world scenario",
       "failed": false
     },
     {
-      "path": "/app/projects",
-      "url": "/app/projects",
+      "path": "/",
+      "url": "/",
       "loads": 318,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "text": "Skip to content\nPMForge ready\nPMForge\nHome\nModules\nInterview Prep\nProjects\nTools\nResources\nOpen app\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto justified decisions.\n\nReal-world scenario",
       "failed": false
     },
     {
-      "path": "/app/projects",
-      "url": "/app/projects",
+      "path": "/",
+      "url": "/",
       "loads": 319,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "text": "Skip to content\nPMForge ready\nPMForge\nHome\nModules\nInterview Prep\nProjects\nTools\nResources\nOpen app\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto justified decisions.\n\nReal-world scenario",
       "failed": false
     },
     {
-      "path": "/app/projects",
-      "url": "/app/projects",
+      "path": "/",
+      "url": "/",
       "loads": 320,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "text": "Skip to content\nPMForge ready\nPMForge\nHome\nModules\nInterview Prep\nProjects\nTools\nResources\nOpen app\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto justified decisions.\n\nReal-world scenario",
       "failed": false
     },
     {
-      "path": "/app/projects",
-      "url": "/app/projects",
+      "path": "/",
+      "url": "/",
       "loads": 321,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "text": "Skip to content\nPMFORGE\nCLICK OR PRESS ANY KEY TO SKIP\nLoading PMForge\nPMForge\nHome\nModules\nInterview Prep\nProjects\nTools\nResources\nOpen app\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto ",
       "failed": false
     },
     {
-      "path": "/app/projects",
-      "url": "/app/projects",
+      "path": "/",
+      "url": "/",
       "loads": 322,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "text": "Skip to content\nPMForge ready\nPMForge\nHome\nModules\nInterview Prep\nProjects\nTools\nResources\nOpen app\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto justified decisions.\n\nReal-world scenario",
       "failed": false
     },
     {
-      "path": "/app/projects",
-      "url": "/app/projects",
+      "path": "/",
+      "url": "/",
       "loads": 323,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "text": "Skip to content\nPMForge ready\nPMForge\nHome\nModules\nInterview Prep\nProjects\nTools\nResources\nOpen app\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto justified decisions.\n\nReal-world scenario",
       "failed": false
     },
     {
-      "path": "/app/projects",
-      "url": "/app/projects",
+      "path": "/",
+      "url": "/",
       "loads": 324,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "text": "Skip to content\nPMForge ready\nPMForge\nHome\nModules\nInterview Prep\nProjects\nTools\nResources\nOpen app\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto justified decisions.\n\nReal-world scenario",
       "failed": false
     },
     {
-      "path": "/app/projects",
-      "url": "/app/projects",
+      "path": "/",
+      "url": "/",
       "loads": 325,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "text": "Skip to content\nPMFORGE\nCLICK OR PRESS ANY KEY TO SKIP\nPMForge ready\nPMForge\nHome\nModules\nInterview Prep\nProjects\nTools\nResources\nOpen app\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto ju",
       "failed": false
     },
     {
-      "path": "/app/projects",
-      "url": "/app/projects",
+      "path": "/",
+      "url": "/",
       "loads": 326,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "text": "Skip to content\nPMForge ready\nPMForge\nHome\nModules\nInterview Prep\nProjects\nTools\nResources\nOpen app\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto justified decisions.\n\nReal-world scenario",
       "failed": false
     },
     {
-      "path": "/app/practice",
-      "url": "/app/practice",
+      "path": "/",
+      "url": "/",
       "loads": 327,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nPractice\nOn this device\nFind a scenario\n⌘ K\nFind your next challenge.\n\n63 specific situations. Seven ways ",
+      "text": "Skip to content\nPMForge ready\nPMForge\nHome\nModules\nInterview Prep\nProjects\nTools\nResources\nOpen app\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto justified decisions.\n\nReal-world scenario",
       "failed": false
     },
     {
@@ -4452,39 +4467,39 @@
       "url": "/",
       "loads": 328,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nPMFORGE\nCLICK OR PRESS ANY KEY TO SKIP\nLoading PMForge\nPMForge\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto justified decisions.\n\nReal-world scenarios. Interactive practi",
+      "text": "Skip to content\nPMFORGE\nCLICK OR PRESS ANY KEY TO SKIP\nPMForge ready\nPMForge\nHome\nModules\nInterview Prep\nProjects\nTools\nResources\nOpen app\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto ju",
       "failed": false
     },
     {
-      "path": "/app",
-      "url": "/app",
+      "path": "/",
+      "url": "/",
       "loads": 329,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nToday\nOn this device\nMake room for a better decision.\n\nYou don’t need all the answers. Just a better next question.\n\nOn your desk today\nSign-ups dropped 12% after the app update\n\nTwo numbers disagree afte",
+      "text": "Skip to content\nPMForge ready\nPMForge\nHome\nModules\nInterview Prep\nProjects\nTools\nResources\nOpen app\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto justified decisions.\n\nReal-world scenario",
       "failed": false
     },
     {
-      "path": "/app/practice",
-      "url": "/app/practice",
+      "path": "/",
+      "url": "/",
       "loads": 330,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nPractice\nOn this device\nFind your next challenge.\n\n63 specific situations. Seven ways to exercise your judgment.\n\nScenarios are drafts until reviewed by product experts. Company numbers are simulated for ",
+      "text": "Skip to content\nPMFORGE\nCLICK OR PRESS ANY KEY TO SKIP\nPMForge ready\nPMForge\nHome\nModules\nInterview Prep\nProjects\nTools\nResources\nOpen app\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto ju",
       "failed": false
     },
     {
-      "path": "/app/projects",
-      "url": "/app/projects",
+      "path": "/",
+      "url": "/",
       "loads": 331,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nProjects\nOn this device\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThree chapters. Decisions that stay with you. Enter a company under pressure, make a tradeoff, and watch the next room inh",
+      "text": "Skip to content\nPMFORGE\nCLICK OR PRESS ANY KEY TO SKIP\nPMForge ready\nPMForge\nHome\nModules\nInterview Prep\nProjects\nTools\nResources\nOpen app\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto ju",
       "failed": false
     },
     {
-      "path": "/app/settings",
-      "url": "/app/settings",
+      "path": "/",
+      "url": "/",
       "loads": 332,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nSettings\nOn this device\nSettle into your workspace.\n\nSmall preferences. Clear data controls. Everything with an obvious way back.\n\nYour practice profile\nRevisit setup ↗\nFirst name\nTarget role\nAspiring PM\n",
+      "text": "Skip to content\nPMForge ready\nPMForge\nHome\nModules\nInterview Prep\nProjects\nTools\nResources\nOpen app\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto justified decisions.\n\nReal-world scenario",
       "failed": false
     },
     {
@@ -4492,23 +4507,23 @@
       "url": "/",
       "loads": 333,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nPMFORGE\nCLICK OR PRESS ANY KEY TO SKIP\nPMForge ready\nPMForge\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto justified decisions.\n\nReal-world scenarios. Interactive practice",
+      "text": "Skip to content\nPMForge ready\nPMForge\nHome\nModules\nInterview Prep\nProjects\nTools\nResources\nOpen app\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto justified decisions.\n\nReal-world scenario",
       "failed": false
     },
     {
-      "path": "/app",
-      "url": "/app",
+      "path": "/",
+      "url": "/",
       "loads": 334,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nToday\nOn this device\nMake room for a better decision.\n\nYou don’t need all the answers. Just a better next question.\n\nOn your desk today\nSign-ups dropped 12% after the app update\n\nTwo numbers disagree afte",
+      "text": "Skip to content\nPMForge ready\nPMForge\nHome\nModules\nInterview Prep\nProjects\nTools\nResources\nOpen app\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto justified decisions.\n\nReal-world scenario",
       "failed": false
     },
     {
-      "path": "/app/practice",
-      "url": "/app/practice",
+      "path": "/app/projects",
+      "url": "/app/projects",
       "loads": 335,
       "unexpectedReloads": 0,
-      "text": "Skip to content\nPractice\nOn this device\nFind your next challenge.\n\n63 specific situations. Seven ways to exercise your judgment.\n\nScenarios are drafts until reviewed by product experts. Company numbers are simulated for ",
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
       "failed": false
     },
     {
@@ -4516,13 +4531,181 @@
       "url": "/app/projects",
       "loads": 336,
       "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "failed": false
+    },
+    {
+      "path": "/app/projects",
+      "url": "/app/projects",
+      "loads": 337,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "failed": false
+    },
+    {
+      "path": "/app/projects",
+      "url": "/app/projects",
+      "loads": 338,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "failed": false
+    },
+    {
+      "path": "/app/projects",
+      "url": "/app/projects",
+      "loads": 339,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "failed": false
+    },
+    {
+      "path": "/app/projects",
+      "url": "/app/projects",
+      "loads": 340,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "failed": false
+    },
+    {
+      "path": "/app/projects",
+      "url": "/app/projects",
+      "loads": 341,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "failed": false
+    },
+    {
+      "path": "/app/projects",
+      "url": "/app/projects",
+      "loads": 342,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "failed": false
+    },
+    {
+      "path": "/app/projects",
+      "url": "/app/projects",
+      "loads": 343,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "failed": false
+    },
+    {
+      "path": "/app/projects",
+      "url": "/app/projects",
+      "loads": 344,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "failed": false
+    },
+    {
+      "path": "/app/projects",
+      "url": "/app/projects",
+      "loads": 345,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "failed": false
+    },
+    {
+      "path": "/app/projects",
+      "url": "/app/projects",
+      "loads": 346,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "failed": false
+    },
+    {
+      "path": "/app/projects",
+      "url": "/app/projects",
+      "loads": 347,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "failed": false
+    },
+    {
+      "path": "/app/practice",
+      "url": "/app/practice",
+      "loads": 348,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nPractice\nOn this device\nFind a scenario\n⌘ K\nFind your next challenge.\n\n63 specific situations. Seven ways ",
+      "failed": false
+    },
+    {
+      "path": "/",
+      "url": "/",
+      "loads": 349,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMFORGE\nCLICK OR PRESS ANY KEY TO SKIP\nPMForge ready\nPMForge\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto justified decisions.\n\nReal-world scenarios. Interactive practice",
+      "failed": false
+    },
+    {
+      "path": "/app",
+      "url": "/app",
+      "loads": 350,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nToday\nOn this device\nMake room for a better decision.\n\nYou don’t need all the answers. Just a better next question.\n\nOn your desk today\nSign-ups dropped 12% after the app update\n\nTwo numbers disagree afte",
+      "failed": false
+    },
+    {
+      "path": "/app/practice",
+      "url": "/app/practice",
+      "loads": 351,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPractice\nOn this device\nFind your next challenge.\n\n63 specific situations. Seven ways to exercise your judgment.\n\nScenarios are drafts until reviewed by product experts. Company numbers are simulated for ",
+      "failed": false
+    },
+    {
+      "path": "/app/projects",
+      "url": "/app/projects",
+      "loads": 352,
+      "unexpectedReloads": 0,
       "text": "Skip to content\nProjects\nOn this device\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThree chapters. Decisions that stay with you. Enter a company under pressure, make a tradeoff, and watch the next room inh",
       "failed": false
     },
     {
       "path": "/app/settings",
       "url": "/app/settings",
-      "loads": 337,
+      "loads": 353,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nSettings\nOn this device\nSettle into your workspace.\n\nSmall preferences. Clear data controls. Everything with an obvious way back.\n\nYour practice profile\nRevisit setup ↗\nFirst name\nTarget role\nAspiring PM\n",
+      "failed": false
+    },
+    {
+      "path": "/",
+      "url": "/",
+      "loads": 354,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge ready\nPMForge\n\nPRODUCT MANAGER LEARNING PLATFORM\n\nMaster the mess.\nTurn chaotic signals\ninto justified decisions.\n\nReal-world scenarios. Interactive practice. Structured feedback. Everything you n",
+      "failed": false
+    },
+    {
+      "path": "/app",
+      "url": "/app",
+      "loads": 355,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nToday\nOn this device\nMake room for a better decision.\n\nYou don’t need all the answers. Just a better next question.\n\nOn your desk today\nSign-ups dropped 12% after the app update\n\nTwo numbers disagree afte",
+      "failed": false
+    },
+    {
+      "path": "/app/practice",
+      "url": "/app/practice",
+      "loads": 356,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPractice\nOn this device\nFind your next challenge.\n\n63 specific situations. Seven ways to exercise your judgment.\n\nScenarios are drafts until reviewed by product experts. Company numbers are simulated for ",
+      "failed": false
+    },
+    {
+      "path": "/app/projects",
+      "url": "/app/projects",
+      "loads": 357,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nProjects\nOn this device\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThree chapters. Decisions that stay with you. Enter a company under pressure, make a tradeoff, and watch the next room inh",
+      "failed": false
+    },
+    {
+      "path": "/app/settings",
+      "url": "/app/settings",
+      "loads": 358,
       "unexpectedReloads": 0,
       "text": "Skip to content\nSettings\nOn this device\nSettle into your workspace.\n\nSmall preferences. Clear data controls. Everything with an obvious way back.\n\nYour practice profile\nRevisit setup ↗\nFirst name\nTarget role\nAspiring PM\n",
       "failed": false
@@ -4563,6 +4746,126 @@
       "path": "/app",
       "clicked": true,
       "url": "/app",
+      "pass": true
+    },
+    {
+      "path": "/",
+      "clicked": true,
+      "url": "/",
+      "pass": true
+    },
+    {
+      "path": "/resources",
+      "clicked": true,
+      "url": "/resources",
+      "pass": true
+    },
+    {
+      "path": "/app",
+      "clicked": true,
+      "url": "/app",
+      "pass": true
+    },
+    {
+      "path": "/signup?intent=enter",
+      "clicked": true,
+      "url": "/app",
+      "pass": true
+    },
+    {
+      "path": "/frameworks",
+      "clicked": true,
+      "url": "/frameworks",
+      "pass": true
+    },
+    {
+      "path": "/projects",
+      "clicked": true,
+      "url": "/projects",
+      "pass": true
+    },
+    {
+      "path": "/career",
+      "clicked": true,
+      "url": "/app/portfolio",
+      "pass": true
+    },
+    {
+      "path": "/app/practice",
+      "clicked": true,
+      "url": "/app/practice",
+      "pass": true
+    },
+    {
+      "path": "/app/practice/rca-e-1-sign-ups-dropped-12-after-the-app-update",
+      "clicked": true,
+      "url": "/app/practice/rca-e-1-sign-ups-dropped-12-after-the-app-update",
+      "pass": true
+    },
+    {
+      "path": "/signup?intent=portfolio&src=career-board&next=%2Fapp%2Fportfolio",
+      "clicked": true,
+      "url": "/app/portfolio",
+      "pass": true
+    },
+    {
+      "path": "/signup?intent=start-learning",
+      "clicked": true,
+      "url": "/app",
+      "pass": true
+    },
+    {
+      "path": "/#signal",
+      "clicked": true,
+      "url": "/",
+      "pass": true
+    },
+    {
+      "path": "/practice",
+      "clicked": true,
+      "url": "/app/practice",
+      "pass": true
+    },
+    {
+      "path": "/learn",
+      "clicked": true,
+      "url": "/resources",
+      "pass": true
+    },
+    {
+      "path": "/#projects",
+      "clicked": true,
+      "url": "/",
+      "pass": true
+    },
+    {
+      "path": "/help",
+      "clicked": true,
+      "url": "/help",
+      "pass": true
+    },
+    {
+      "path": "/about",
+      "clicked": true,
+      "url": "/about",
+      "pass": true
+    },
+    {
+      "path": "/privacy",
+      "clicked": true,
+      "url": "/privacy",
+      "pass": true
+    },
+    {
+      "path": "/terms",
+      "clicked": true,
+      "url": "/terms",
+      "pass": true
+    },
+    {
+      "path": "/credits",
+      "clicked": true,
+      "url": "/credits",
       "pass": true
     },
     {

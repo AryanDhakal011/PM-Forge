@@ -47,9 +47,7 @@ import {
   conversationPreferences,
   type ConversationPlan,
 } from "@/lib/sacred-no/conversations";
-const Arrival = dynamic(() => import("@/components/projects/Entrance"), {
-  ssr: false,
-});
+import Arrival from "@/components/projects/Entrance";
 const arrivalProject = {
   id: "sacred-no",
   title: "The Sacred No",
@@ -729,7 +727,7 @@ export default function SacredNoExperience() {
             />
           ))}
       </div>
-      {loaded && arrival && (
+      {arrival && (
         <Arrival
           project={arrivalProject}
           onDone={() => setArrival(false)}

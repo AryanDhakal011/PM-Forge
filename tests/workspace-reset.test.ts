@@ -95,7 +95,8 @@ test("full reset removes PMForge test data and databases only, and signs out fir
   const r = await simulate(true);
   assert.equal(r.data.has("pmforge.product.identity"), false);
   assert.equal(r.data.get("unrelated-app"), "keep");
-  assert.equal(r.deleted.length, 3);
+  assert.equal(r.deleted.length, 4);
+  assert.ok(r.deleted.includes("pmforge-ghost-metric-v1"));
   assert.ok(!r.deleted.includes("unrelated-db"));
   assert.deepEqual(r.cacheDeleted, ["pmforge-offline-v5"]);
   assert.equal(r.requests[0], "/api/auth/sign-out");

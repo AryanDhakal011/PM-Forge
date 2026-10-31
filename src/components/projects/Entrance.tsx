@@ -70,6 +70,7 @@ export default function Entrance({
     <div
       ref={root}
       className={s.entrance}
+      data-calm={reducedMotion || calm}
       role="dialog"
       aria-modal="true"
       aria-label={`Entering ${project.title}`}

@@ -12,7 +12,8 @@
     "test": "node --import tsx --test tests/interview-engine.test.ts tests/calibration.test.ts tests/projects.test.ts tests/workspace-reset.test.ts && node --conditions=react-server --import tsx --test tests/account-server.test.ts",
     "test:deadlock": "node --import tsx --test tests/deadlock.test.ts tests/deadlock-v2.test.ts tests/deadlock-refinements.test.ts",
     "deadlock:sim": "node --import tsx scripts/deadlock-sim.ts",
-    "prebuild": "node --import tsx scripts/check-sacred-no.ts",
+    "prebuild": "node --import tsx scripts/check-sacred-no.ts && node --import tsx scripts/check-ghost-metric.ts",
+    "test:ghost-metric": "node --import tsx --test tests/ghost-metric.test.ts",
     "test:sacred-no": "node --import tsx --test tests/sacred-no.test.ts tests/sacred-no-conversations.test.ts"
   },
   "dependencies": {

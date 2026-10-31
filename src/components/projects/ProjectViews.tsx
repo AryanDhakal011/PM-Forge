@@ -164,6 +164,11 @@ export function ProjectGallery({
     const { listRuns } = await import("@/lib/sacred-no/storage");
     return listRuns(profile.id);
   }, [profile?.id]) || [];
+  const ghostRuns = useLiveQuery(async () => {
+    if (!profile) return [];
+    const { listRuns } = await import("@/lib/ghost-metric/storage");
+    return listRuns(profile.id);
+  }, [profile?.id]) || [];
   const { runs: interviews } = useWorkspaceData();
   const [filters, setFilters] = useState<string[]>([]);
   const [sort, setSort] = useState("recommended");
@@ -329,7 +334,7 @@ export function ProjectGallery({
                   Case {String(projects.indexOf(p) + 1).padStart(2, "0")} /{" "}
                   {categoryNames[p.category] || p.category}
                 </span>
-                {["deadlock", "sacred-no"].includes(p.id) ? (
+                {["deadlock", "sacred-no", "ghost-metric"].includes(p.id) ? (
                   <span title="Playable simulation prototype">
                     LIVE · PROTOTYPE
                   </span>
@@ -346,8 +351,8 @@ export function ProjectGallery({
               </p>
               {!publicView && (
                 <span className={s.cardStatus}>
-                  {["deadlock", "sacred-no"].includes(p.id) ? (
-                    deadlockRuns.length ? (
+                  {["deadlock", "sacred-no", "ghost-metric"].includes(p.id) ? (
+                    (p.id === "deadlock" ? deadlockRuns : p.id === "sacred-no" ? sacredRuns : ghostRuns).length ? (
                       "Saved simulation · continue your run"
                     ) : (
                       "Playable prototype · three distinct chapter loops"
@@ -382,7 +387,7 @@ export function ProjectGallery({
               )}
               <div className={s.cardFoot}>
                 <span>
-                  {["deadlock", "sacred-no"].includes(p.id) ? "About 40 minutes" : "45–75 min"} ·{" "}
+                  {["deadlock", "sacred-no", "ghost-metric"].includes(p.id) ? "About 40 minutes" : "45–75 min"} ·{" "}
                   {p.tags[0]}
                 </span>
                 <Link
@@ -390,7 +395,7 @@ export function ProjectGallery({
                   aria-label={`Open ${p.title}`}
                   href={`/app/projects/${p.id}`}
                 >
-                  {(p.id === "deadlock" ? deadlockRuns.length > 0 : p.id === "sacred-no" ? sacredRuns.length > 0 : !!open)
+                  {(p.id === "deadlock" ? deadlockRuns.length > 0 : p.id === "sacred-no" ? sacredRuns.length > 0 : p.id === "ghost-metric" ? ghostRuns.length > 0 : !!open)
                     ? "Resume"
                     : "Enter project"}{" "}
                   <ArrowRight size={13} style={{ display: "inline" }} />

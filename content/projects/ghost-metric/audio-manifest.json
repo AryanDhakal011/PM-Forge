@@ -1,0 +1,947 @@
+{
+  "version": 1,
+  "provider": "Kokoro-82M v1.0 / kokoro-onnx 0.6.1",
+  "directionLimit": "Emotion tags direct pace and pauses; this model has no native acted-emotion control.",
+  "lines": {
+    "opening-0": {
+      "file": "/ghost-metric/audio/opening-0.mp3",
+      "signature": "72a8311e4dd117dc914c4c5aa3dc1965846852fa62858bc73090878a2d6972f8",
+      "caption": "Three hundred and forty percent. Let\u2019s celebrate that.",
+      "speaker": "Elena",
+      "voice": "af_bella",
+      "emotion": "approving",
+      "speed": 0.95,
+      "duration": 3.603
+    },
+    "opening-1": {
+      "file": "/ghost-metric/audio/opening-1.mp3",
+      "signature": "bd43148321313ab90fef0894f4ad1483fd695a460571420e592e85e60a15f3e3",
+      "caption": "Can you look at something? It\u2019s probably nothing.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 2.943
+    },
+    "unit-0": {
+      "file": "/ghost-metric/audio/unit-0.mp3",
+      "signature": "e37f82f302f2ea9850ca0c81fb5174d001b46562e8a62c229c7a36dbbec8ba6b",
+      "caption": "Before we compare numbers, what counts as one call?",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 3.318
+    },
+    "unitYes-0": {
+      "file": "/ghost-metric/audio/unitYes-0.mp3",
+      "signature": "0ada5fe2ce5d9bedd74d661ed2a9ce0611bbb74ada9cb9d5c837c28cc4eb9760",
+      "caption": "That is how AMC counts it. Is it new demand, though?",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 3.561
+    },
+    "unitNo-0": {
+      "file": "/ghost-metric/audio/unitNo-0.mp3",
+      "signature": "34153a1e0b81fce3f9eeb9c4c743cfcda368bad45a139ceb645fb3e6aaffd415",
+      "caption": "That distinction matters. Let\u2019s see whether the pipeline makes it.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "approving",
+      "speed": 0.96,
+      "duration": 3.806
+    },
+    "audit-0": {
+      "file": "/ghost-metric/audio/audit-0.mp3",
+      "signature": "c6fc4496c52cccb2f311da48cb27bf59faedd641c4491adc9e017a49291da140",
+      "caption": "Billing and the dashboard disagree. I need your help checking why.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.116
+    },
+    "audit-1": {
+      "file": "/ghost-metric/audio/audit-1.mp3",
+      "signature": "fbaf2d643d8440e72a98386025b66b1eee4638a1f1e95e41d082682b897cb632",
+      "caption": "If you find a discrepancy, send me the query.",
+      "speaker": "Ravi",
+      "voice": "bm_george",
+      "emotion": "neutral",
+      "speed": 0.97,
+      "duration": 3.603
+    },
+    "audit-2": {
+      "file": "/ghost-metric/audio/audit-2.mp3",
+      "signature": "8d46edc14db15b0881a521aab8010fa0f0e163fb479ab2928c71c5611f96af95",
+      "caption": "Good quarter. My team has already committed to the next target.",
+      "speaker": "Marcus",
+      "voice": "am_michael",
+      "emotion": "approving",
+      "speed": 1,
+      "duration": 4.411
+    },
+    "gateway-0": {
+      "file": "/ghost-metric/audio/gateway-0.mp3",
+      "signature": "5cda241e5203e6d422e769b4cdda2deb9275d1c9578bb65dd443cb0c631cdf6e",
+      "caption": "Same request ID. Four entries. We still need the total.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.177
+    },
+    "billing-0": {
+      "file": "/ghost-metric/audio/billing-0.mp3",
+      "signature": "84c60fef1452b048b6370086db54cd4c87b8b643899c85e5133c488d8e12e371",
+      "caption": "Calls grew much faster than revenue. That does not explain why.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.277
+    },
+    "sdk-0": {
+      "file": "/ghost-metric/audio/sdk-0.mp3",
+      "signature": "03cd35d8fe7126699e07d8f063217dacc0b71100275916f64b0bff32950753b3",
+      "caption": "Those are response chunks. They should not represent separate customer requests.",
+      "speaker": "Ravi",
+      "voice": "bm_george",
+      "emotion": "thinking",
+      "speed": 0.95,
+      "duration": 5.331
+    },
+    "cohorts-0": {
+      "file": "/ghost-metric/audio/cohorts-0.mp3",
+      "signature": "1487219d6ebbb2167749c55cb3541d450d79960426f41fad68040e0f979ad162",
+      "caption": "There is real growth here. Enterprise fine-tuning looks different.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "approving",
+      "speed": 0.96,
+      "duration": 4.019
+    },
+    "tags-0": {
+      "file": "/ghost-metric/audio/tags-0.mp3",
+      "signature": "522b1ec91b7d9c904e1eca6c67696da76a13af6e5edb61926b18c6be35a71055",
+      "caption": "Health checks are definitely internal. Orbitly needs an account-level check.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.884
+    },
+    "tickets-0": {
+      "file": "/ghost-metric/audio/tickets-0.mp3",
+      "signature": "34fed6037ad3082ef940c65445c5011d42e9aaa6a6514c09976c4a51207e15e5",
+      "caption": "A customer waiting longer can make our activity number look better.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.106
+    },
+    "retryJoin-0": {
+      "file": "/ghost-metric/audio/retryJoin-0.mp3",
+      "signature": "d6cac794fc783a84f2527ed7a39832b1b6ba9c69a093a475a155dd39571b42ac",
+      "caption": "After deduplication, retries explain three million extra counted calls daily.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 5.673
+    },
+    "partnerJoin-0": {
+      "file": "/ghost-metric/audio/partnerJoin-0.mp3",
+      "signature": "4f824803bdbd3d5545a073325cb7183fe1af261a0ef7787ec5cc0f31e83bd0b5",
+      "caption": "The account list confirms Orbitly. Seven hundred thousand daily test events.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 5.063
+    },
+    "billingJoin-0": {
+      "file": "/ghost-metric/audio/billingJoin-0.mp3",
+      "signature": "a41ed010af1e1d972b9394c7cc1b10afa63d43b88e79a5fdeaba98f0b471e453",
+      "caption": "Forty-one percent have no matching billing event in this sample.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.083
+    },
+    "wrongJoin-0": {
+      "file": "/ghost-metric/audio/wrongJoin-0.mp3",
+      "signature": "e6ca43c64ca3d76ddcd3f33bf0042d7c090600e93803a0570b1884ee87927434",
+      "caption": "A customer ID and request ID describe different things. They cannot match.",
+      "speaker": "Ravi",
+      "voice": "bm_george",
+      "emotion": "neutral",
+      "speed": 0.97,
+      "duration": 5.959
+    },
+    "estimate-0": {
+      "file": "/ghost-metric/audio/estimate-0.mp3",
+      "signature": "08354f5f3dde8925aa432d73d602fa132dcc2fadff13a81a5cb974522cb70bc1",
+      "caption": "What can you defend? Give a range, not just a confident point.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.101
+    },
+    "calibrated-0": {
+      "file": "/ghost-metric/audio/calibrated-0.mp3",
+      "signature": "bb12bf6dea600eb9b3d3d1dacf6f06c1dfcfe3783d595fb6145d3fbb09835644",
+      "caption": "You left room for what we have not verified. Keep that range.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "approving",
+      "speed": 0.96,
+      "duration": 3.881
+    },
+    "estimated-0": {
+      "file": "/ghost-metric/audio/estimated-0.mp3",
+      "signature": "9eaf54703d63e4dfcd1b948c299f3b7e3fe6c8f96d70932c89111c0fe22ab49c",
+      "caption": "Your estimate is recorded. We will test it against the full audit.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 4.095
+    },
+    "carry-0": {
+      "file": "/ghost-metric/audio/carry-0.mp3",
+      "signature": "aa63a5945faf9b7add146972173f9ca32fa9269accc95aae737438520ee92492",
+      "caption": "The board pack closes soon. Do we have a concern to raise?",
+      "speaker": "Elena",
+      "voice": "af_bella",
+      "emotion": "neutral",
+      "speed": 0.95,
+      "duration": 3.911
+    },
+    "now-0": {
+      "file": "/ghost-metric/audio/now-0.mp3",
+      "signature": "dd083858388e58f95d78e04e5a12c98b7da63fe0449576473834a27574630039",
+      "caption": "Then bring the evidence. I need to know what changes today.",
+      "speaker": "Elena",
+      "voice": "af_bella",
+      "emotion": "thinking",
+      "speed": 0.9299999999999999,
+      "duration": 3.944
+    },
+    "verify-0": {
+      "file": "/ghost-metric/audio/verify-0.mp3",
+      "signature": "4894fb8508b42d900393769cdedca4a02c40b59012cf2a815ed222411c81b8d2",
+      "caption": "One targeted check. We will have less time to prepare the conversation.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.553
+    },
+    "quiet-0": {
+      "file": "/ghost-metric/audio/quiet-0.mp3",
+      "signature": "542d908cde7d618206f7bc6ff7b6fdd38e5def0c852599f687f1a5f1880d6159",
+      "caption": "Can I tell the board it\u2019s solid?",
+      "speaker": "Elena",
+      "voice": "af_bella",
+      "emotion": "thinking",
+      "speed": 0.9299999999999999,
+      "duration": 1.935
+    },
+    "promiseConfident-0": {
+      "file": "/ghost-metric/audio/promiseConfident-0.mp3",
+      "signature": "e83f71b405094d252bbb9b6889f7d6813623f284887dab387bbd7c41950f94fb",
+      "caption": "All right. I will carry that wording into the board meeting.",
+      "speaker": "Elena",
+      "voice": "af_bella",
+      "emotion": "neutral",
+      "speed": 0.95,
+      "duration": 3.641
+    },
+    "promiseQualified-0": {
+      "file": "/ghost-metric/audio/promiseQualified-0.mp3",
+      "signature": "10e77a2c18d23f8f47e9f2e6b2bdfb0c63f0a16beb4172c639b783825b6e9e27",
+      "caption": "Understood. I will call it provisional, not verified demand.",
+      "speaker": "Elena",
+      "voice": "af_bella",
+      "emotion": "thinking",
+      "speed": 0.9299999999999999,
+      "duration": 4.27
+    },
+    "promiseEvasive-0": {
+      "file": "/ghost-metric/audio/promiseEvasive-0.mp3",
+      "signature": "c961dea9ed2f9535c7f0515e21af22b2aed3a688dc3bc3912c6b6a3a14a778fe",
+      "caption": "That does not answer my question. I still need a defensible statement.",
+      "speaker": "Elena",
+      "voice": "af_bella",
+      "emotion": "thinking",
+      "speed": 0.9299999999999999,
+      "duration": 4.679
+    },
+    "stakeholders-0": {
+      "file": "/ghost-metric/audio/stakeholders-0.mp3",
+      "signature": "7b23f1ae7d67769414f75c8bfcd48c44134b9de946d05e309cb24ed1289b4509",
+      "caption": "Who needs to hear this from you before the room hears it?",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 3.277
+    },
+    "tellRavi-0": {
+      "file": "/ghost-metric/audio/tellRavi-0.mp3",
+      "signature": "3b32ee08dab0ac0b180540a23acca12c60a1de4c83756009e7aae983a6c1ed46",
+      "caption": "Show me the unit and the joining key. Then your conclusion.",
+      "speaker": "Ravi",
+      "voice": "bm_george",
+      "emotion": "thinking",
+      "speed": 0.95,
+      "duration": 4.551
+    },
+    "tellMarcus-0": {
+      "file": "/ghost-metric/audio/tellMarcus-0.mp3",
+      "signature": "8559b3452927f6e08ac23ef70d0ae2372bf3c3e7da6aa06156bb543a7552f695",
+      "caption": "Help me understand what happens to the targets we already agreed.",
+      "speaker": "Marcus",
+      "voice": "am_michael",
+      "emotion": "thinking",
+      "speed": 0.98,
+      "duration": 4.383
+    },
+    "tellElena-0": {
+      "file": "/ghost-metric/audio/tellElena-0.mp3",
+      "signature": "c844719fe5d4a5aab028c9191552707f846b028dbe67cd9e67a8220991ff2e29",
+      "caption": "Tell me what is certain, what is estimated, and what you need.",
+      "speaker": "Elena",
+      "voice": "af_bella",
+      "emotion": "thinking",
+      "speed": 0.9299999999999999,
+      "duration": 3.854
+    },
+    "tellJoyce-0": {
+      "file": "/ghost-metric/audio/tellJoyce-0.mp3",
+      "signature": "f22ea483f5ebe1ee5d16e8780a42ffd240d436b9e518d72984e3dcd9c3802af4",
+      "caption": "I can walk through the sources with you. Keep the uncertainty visible.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "approving",
+      "speed": 0.96,
+      "duration": 4.041
+    },
+    "slides-0": {
+      "file": "/ghost-metric/audio/slides-0.mp3",
+      "signature": "af82844b7e67bf78ea15eb6b5dbd01cd2dc4d6612adbb5c234abbcac42cfb4b1",
+      "caption": "Three slides. What changed, what supports it, and your decision request.",
+      "speaker": "Elena",
+      "voice": "af_bella",
+      "emotion": "neutral",
+      "speed": 0.95,
+      "duration": 4.939
+    },
+    "headlineWrong-0": {
+      "file": "/ghost-metric/audio/headlineWrong-0.mp3",
+      "signature": "dd2cc99305994b91c0d295154a991c83ee9343832e5a6d222311ddc13bd67630",
+      "caption": "So my metric is wrong. Send me the query.",
+      "speaker": "Ravi",
+      "voice": "bm_george",
+      "emotion": "annoyed",
+      "speed": 0.97,
+      "duration": 3.344
+    },
+    "headlineLimits-0": {
+      "file": "/ghost-metric/audio/headlineLimits-0.mp3",
+      "signature": "fcc07ef5f975661ee766b10064339ba6af69cbedefa0dd8a6df86a12570dd9d2",
+      "caption": "That is a fair question. Show me what it cannot distinguish.",
+      "speaker": "Ravi",
+      "voice": "bm_george",
+      "emotion": "thinking",
+      "speed": 0.95,
+      "duration": 4.307
+    },
+    "headlineCustomers-0": {
+      "file": "/ghost-metric/audio/headlineCustomers-0.mp3",
+      "signature": "340014c938f490f77b969d52033b1806ba50802890be856ab087869eb3165220",
+      "caption": "If customers got more value, show me where. I can use that.",
+      "speaker": "Marcus",
+      "voice": "am_michael",
+      "emotion": "thinking",
+      "speed": 0.98,
+      "duration": 4.542
+    },
+    "headlineCost-0": {
+      "file": "/ghost-metric/audio/headlineCost-0.mp3",
+      "signature": "6ed048a644ad386fc88a187c4262e31211f5c6be388ff301791bdbc9e20ee091",
+      "caption": "Which spending decision would change if we accepted your estimate?",
+      "speaker": "Elena",
+      "voice": "af_bella",
+      "emotion": "thinking",
+      "speed": 0.9299999999999999,
+      "duration": 4.156
+    },
+    "headlineNew-0": {
+      "file": "/ghost-metric/audio/headlineNew-0.mp3",
+      "signature": "8a735ce35565e097ab50f6ce56591cb06b1cc72250c9b2211d5b3041491b1b79",
+      "caption": "A replacement needs a definition. A nicer chart will not be enough.",
+      "speaker": "Ravi",
+      "voice": "bm_george",
+      "emotion": "thinking",
+      "speed": 0.95,
+      "duration": 5.16
+    },
+    "slideEvidence-0": {
+      "file": "/ghost-metric/audio/slideEvidence-0.mp3",
+      "signature": "979fb065e728dcea67ad38472533d81bb91178a84a0d61d48b5062a9d0003adf",
+      "caption": "Keep the source beside the claim. Let them check the same rows.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 3.903
+    },
+    "slideAsk-0": {
+      "file": "/ghost-metric/audio/slideAsk-0.mp3",
+      "signature": "5774a4561e06033a0144d4332f7f1b4e11f515c5d945618c2a81b55b43dc343f",
+      "caption": "What decision do you want from us before we leave this room?",
+      "speaker": "Elena",
+      "voice": "af_bella",
+      "emotion": "neutral",
+      "speed": 0.95,
+      "duration": 3.632
+    },
+    "direct-0": {
+      "file": "/ghost-metric/audio/direct-0.mp3",
+      "signature": "6973f4541be0986520af838d397402adbc2449c0593737deedb00b0520417404",
+      "caption": "I would have preferred this conversation before the executive meeting.",
+      "speaker": "Ravi",
+      "voice": "bm_george",
+      "emotion": "annoyed",
+      "speed": 0.97,
+      "duration": 4.541
+    },
+    "privateFirst-0": {
+      "file": "/ghost-metric/audio/privateFirst-0.mp3",
+      "signature": "161d271f5683883bcde196844ef6fff4fc6a65594efc0f75af5d7e4a06e5fdc6",
+      "caption": "Wait. This request ID repeats. Why didn\u2019t I see that?",
+      "speaker": "Ravi",
+      "voice": "bm_george",
+      "emotion": "approving",
+      "speed": 0.97,
+      "duration": 4.473
+    },
+    "privateNoProof-0": {
+      "file": "/ghost-metric/audio/privateNoProof-0.mp3",
+      "signature": "0efe4778014738a66cdad40ecba4324d24e52e70a5e78bbd0f56aa3c8d2c50fc",
+      "caption": "Let\u2019s check the definition together. We do not have a quantified cause yet.",
+      "speaker": "Ravi",
+      "voice": "bm_george",
+      "emotion": "thinking",
+      "speed": 0.95,
+      "duration": 4.999
+    },
+    "evolution-0": {
+      "file": "/ghost-metric/audio/evolution-0.mp3",
+      "signature": "739bf1a3d85933b835ac5d886f33da2700374105fbbe670a377fad953778c675",
+      "caption": "Metric version two. We can work it into the next planning cycle.",
+      "speaker": "Ravi",
+      "voice": "bm_george",
+      "emotion": "neutral",
+      "speed": 0.97,
+      "duration": 4.497
+    },
+    "dataRoom-0": {
+      "file": "/ghost-metric/audio/dataRoom-0.mp3",
+      "signature": "bcf31cf6de302c0c140d2dff62eccb8795e98f27d25533430ba15f6e9a6c3c1e",
+      "caption": "I read the data room. Why didn\u2019t you talk to me?",
+      "speaker": "Elena",
+      "voice": "af_bella",
+      "emotion": "thinking",
+      "speed": 0.9299999999999999,
+      "duration": 3.099
+    },
+    "leak-0": {
+      "file": "/ghost-metric/audio/leak-0.mp3",
+      "signature": "dbd87cf3356a5ac00add4e5fb5b3bf6590fe40c88272bc039495ae15ab01090e",
+      "caption": "I heard about this on Slack. I should have heard it from you.",
+      "speaker": "Marcus",
+      "voice": "am_michael",
+      "emotion": "annoyed",
+      "speed": 1,
+      "duration": 3.923
+    },
+    "informed-0": {
+      "file": "/ghost-metric/audio/informed-0.mp3",
+      "signature": "db390164036d32282bfa12fac7baa4466e962706173b84aefa71acfb8f81dfbe",
+      "caption": "Thanks for telling me before the room. I can prepare the target discussion.",
+      "speaker": "Marcus",
+      "voice": "am_michael",
+      "emotion": "neutral",
+      "speed": 1,
+      "duration": 5.075
+    },
+    "delay-0": {
+      "file": "/ghost-metric/audio/delay-0.mp3",
+      "signature": "3707a031c2f7b82d3ff8de67e59073bb40ca5d598c4c279404d4a653c040a391",
+      "caption": "While we wait, infrastructure is still scaling against the old number.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.147
+    },
+    "metric-0": {
+      "file": "/ghost-metric/audio/metric-0.mp3",
+      "signature": "b05af5963a7bfc12e83be018f102d9a16e0731e9c858003e34433f9df15f9f27",
+      "caption": "Let\u2019s write exactly what one unit means. Someone else must reproduce it.",
+      "speaker": "Ravi",
+      "voice": "bm_george",
+      "emotion": "thinking",
+      "speed": 0.95,
+      "duration": 5.311
+    },
+    "metric-1": {
+      "file": "/ghost-metric/audio/metric-1.mp3",
+      "signature": "5359aba3e4d25a85201e452968dd6d24d1a787f1866d815d4f1fe1777e650bcf",
+      "caption": "Keep the quality signal beside the growth signal.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 3.029
+    },
+    "redteam-0": {
+      "file": "/ghost-metric/audio/redteam-0.mp3",
+      "signature": "4e91d86ba19731938153864093e5ffeb0cf919dccee74ceba9cbaeefa21c9034",
+      "caption": "Imagine I have a target to hit. Where could I inflate this?",
+      "speaker": "Marcus",
+      "voice": "am_michael",
+      "emotion": "thinking",
+      "speed": 0.98,
+      "duration": 4.317
+    },
+    "loopholeDedupe-0": {
+      "file": "/ghost-metric/audio/loopholeDedupe-0.mp3",
+      "signature": "346d85bf7c7de91e252fd9db0be2ed1cc24f95d4ac8b4305d79af827d43f8b7c",
+      "caption": "You count repeated completions. Retries can still increase the number.",
+      "speaker": "Marcus",
+      "voice": "am_michael",
+      "emotion": "neutral",
+      "speed": 1,
+      "duration": 4.754
+    },
+    "loopholeTags-0": {
+      "file": "/ghost-metric/audio/loopholeTags-0.mp3",
+      "signature": "74135a166f759687e740b832ecc15a94a9c6c009ce3a58d0aed091deb1929b31",
+      "caption": "Rename a traffic tag and the same internal account gets counted again.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.563
+    },
+    "loopholeStreams-0": {
+      "file": "/ghost-metric/audio/loopholeStreams-0.mp3",
+      "signature": "0286b00332226250518769f3b909b2e090fa386889e9d79d181129a25342eaf0",
+      "caption": "You still count each chunk. Longer answers become artificial growth.",
+      "speaker": "Ravi",
+      "voice": "bm_george",
+      "emotion": "thinking",
+      "speed": 0.95,
+      "duration": 5.234
+    },
+    "loopholeSegments-0": {
+      "file": "/ghost-metric/audio/loopholeSegments-0.mp3",
+      "signature": "f7cb717e60eb669fe73a15cca62d3fa73486ab0823efe30f3002097adb6421b5",
+      "caption": "The total hides which customers grew. Show the cohort breakdown beside it.",
+      "speaker": "Marcus",
+      "voice": "am_michael",
+      "emotion": "neutral",
+      "speed": 1,
+      "duration": 5.124
+    },
+    "loopholeQuality-0": {
+      "file": "/ghost-metric/audio/loopholeQuality-0.mp3",
+      "signature": "bc3294153460fe27cc8af342952a1d80a30e71163b48e423e60bad1ad8ff339c",
+      "caption": "We can increase volume while latency worsens. Where is the stop condition?",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.958
+    },
+    "fixed-0": {
+      "file": "/ghost-metric/audio/fixed-0.mp3",
+      "signature": "e2d34b2b06f6f2b989c2af1050e5a667491dfc6b0a938c0c972072b720b211a1",
+      "caption": "That closes this route. Let\u2019s see what the remaining definition allows.",
+      "speaker": "Ravi",
+      "voice": "bm_george",
+      "emotion": "approving",
+      "speed": 0.97,
+      "duration": 4.947
+    },
+    "clean-0": {
+      "file": "/ghost-metric/audio/clean-0.mp3",
+      "signature": "2419ab1c026197c3152869138b2133ad2bd2514ebfb16479317b000509595619",
+      "caption": "No authored exploit remains. That is a test result, not a guarantee.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "approving",
+      "speed": 0.96,
+      "duration": 4.699
+    },
+    "secondSource-0": {
+      "file": "/ghost-metric/audio/secondSource-0.mp3",
+      "signature": "2f95cb3d09250bc10e2dfd40fc3b464f772b25aaca856b0f4e3b61666bb584fc",
+      "caption": "I need an independent source before I sign off on another definition.",
+      "speaker": "Ravi",
+      "voice": "bm_george",
+      "emotion": "thinking",
+      "speed": 0.95,
+      "duration": 5.063
+    },
+    "secondConfirmed-0": {
+      "file": "/ghost-metric/audio/secondConfirmed-0.mp3",
+      "signature": "0f24507ef64eb2396fc18a010077b9d576a6e3becabcc78993b51fd9353b2832",
+      "caption": "The independent check agrees with the source you cited. I can sign that.",
+      "speaker": "Ravi",
+      "voice": "bm_george",
+      "emotion": "approving",
+      "speed": 0.97,
+      "duration": 5.309
+    },
+    "secondLimited-0": {
+      "file": "/ghost-metric/audio/secondLimited-0.mp3",
+      "signature": "b100ae733b92af309905039d8b4a3958ced588111ce9a7bb9f618ecad20dc449",
+      "caption": "That check limits the claim. Let\u2019s carry the uncertainty into the boardroom.",
+      "speaker": "Ravi",
+      "voice": "bm_george",
+      "emotion": "thinking",
+      "speed": 0.95,
+      "duration": 5.287
+    },
+    "rolloutSlow-0": {
+      "file": "/ghost-metric/audio/rolloutSlow-0.mp3",
+      "signature": "91e327445694b48b2a49b00902807100268d81f22f4ced6f59fd3bb38b4ea3f7",
+      "caption": "Three weeks to migrate safely. We can publish both definitions during that time.",
+      "speaker": "Ravi",
+      "voice": "bm_george",
+      "emotion": "neutral",
+      "speed": 0.97,
+      "duration": 5.533
+    },
+    "rolloutMandate-0": {
+      "file": "/ghost-metric/audio/rolloutMandate-0.mp3",
+      "signature": "831ce29a72e791bcffd889fa35213e5c02e200e5b90bf994daac52467a4048c8",
+      "caption": "We cannot keep publishing this. Start the change today.",
+      "speaker": "Elena",
+      "voice": "af_bella",
+      "emotion": "thinking",
+      "speed": 0.9299999999999999,
+      "duration": 3.605
+    },
+    "rolloutNormal-0": {
+      "file": "/ghost-metric/audio/rolloutNormal-0.mp3",
+      "signature": "7456a0390d6536f8ea28813aa291d5cce814cc8ec214a6f2479c37a79d7daffc",
+      "caption": "We have a definition. Now give people time to replace their dashboards.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 4.551
+    },
+    "fatigueOne-0": {
+      "file": "/ghost-metric/audio/fatigueOne-0.mp3",
+      "signature": "400710e10e125d20566d9893bc2fe395d5f741636304ff32ff3e6e16c6295126",
+      "caption": "The team has rebuilt this twice. They need one agreed definition.",
+      "speaker": "Ravi",
+      "voice": "bm_george",
+      "emotion": "annoyed",
+      "speed": 0.97,
+      "duration": 4.935
+    },
+    "fatigueTwo-0": {
+      "file": "/ghost-metric/audio/fatigueTwo-0.mp3",
+      "signature": "41c0560de82b315e00408b1e7d1f3ff82d9ef20e94fccd6d922381c68d43171e",
+      "caption": "A fast mandate does not remove the migration work. Who covers it?",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.457
+    },
+    "compounds-0": {
+      "file": "/ghost-metric/audio/compounds-0.mp3",
+      "signature": "86467180234469c47757ce55ebf510fface0004be82fd66b754528b9500955a6",
+      "caption": "The scale-up is live. A customer left after another timeout.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.277
+    },
+    "compounds-1": {
+      "file": "/ghost-metric/audio/compounds-1.mp3",
+      "signature": "dbb323df929a51e01984cb539532be10a22f885229dbbfbda1e07369a41a45e8",
+      "caption": "An outside analyst is asking how we counted the growth.",
+      "speaker": "Elena",
+      "voice": "af_bella",
+      "emotion": "thinking",
+      "speed": 0.9299999999999999,
+      "duration": 3.783
+    },
+    "board-0": {
+      "file": "/ghost-metric/audio/board-0.mp3",
+      "signature": "23a183cdcf76b315b7612a72b2d8945fd03d223cff47369ded7fdcf60fa66239",
+      "caption": "What would you stake your reputation on?",
+      "speaker": "Anders",
+      "voice": "bm_lewis",
+      "emotion": "neutral",
+      "speed": 0.94,
+      "duration": 2.876
+    },
+    "promiseReturn-0": {
+      "file": "/ghost-metric/audio/promiseReturn-0.mp3",
+      "signature": "45d2b9e4f839472db764458da5da4503d91783968d0c13e5d20ce431bd22b092",
+      "caption": "You told us it was solid. What changed after that statement?",
+      "speaker": "Anders",
+      "voice": "bm_lewis",
+      "emotion": "thinking",
+      "speed": 0.9199999999999999,
+      "duration": 4.274
+    },
+    "qualifiedReturn-0": {
+      "file": "/ghost-metric/audio/qualifiedReturn-0.mp3",
+      "signature": "dcfabb9cc7e04fc3e6a83a91e00e808f6355c865dea0f8cf0db05f69ce3a0b68",
+      "caption": "You called the number provisional. What can you now confirm?",
+      "speaker": "Anders",
+      "voice": "bm_lewis",
+      "emotion": "neutral",
+      "speed": 0.94,
+      "duration": 3.879
+    },
+    "evasiveReturn-0": {
+      "file": "/ghost-metric/audio/evasiveReturn-0.mp3",
+      "signature": "4b17138cd19f72d04d657714863758275d51b8730ba80cbe994168678a29bc90",
+      "caption": "You avoided a commitment. What can you put on the record now?",
+      "speaker": "Anders",
+      "voice": "bm_lewis",
+      "emotion": "thinking",
+      "speed": 0.9199999999999999,
+      "duration": 4.231
+    },
+    "boardClean-0": {
+      "file": "/ghost-metric/audio/boardClean-0.mp3",
+      "signature": "e9ab02e9606d1bac4063d2e950bef7ee94618bfcd1436f21df11f21280f804ad",
+      "caption": "A smaller claim I can reproduce is better than a larger mystery.",
+      "speaker": "Anders",
+      "voice": "bm_lewis",
+      "emotion": "approving",
+      "speed": 0.94,
+      "duration": 4.755
+    },
+    "boardWeak-0": {
+      "file": "/ghost-metric/audio/boardWeak-0.mp3",
+      "signature": "10d7e75e8af7c7ebe7e11f45cb1e88d323e1989d65cc5db59b2d743bb682ad04",
+      "caption": "The replacement still has known counting gaps. Why should we adopt it?",
+      "speaker": "Anders",
+      "voice": "bm_lewis",
+      "emotion": "thinking",
+      "speed": 0.9199999999999999,
+      "duration": 4.819
+    },
+    "own-0": {
+      "file": "/ghost-metric/audio/own-0.mp3",
+      "signature": "afc57857ee88b084ef9118ada0ccd7b4243de470029062d7ed3ab673c2fefcd2",
+      "caption": "We will correct the record, including how we got here.",
+      "speaker": "Elena",
+      "voice": "af_bella",
+      "emotion": "thinking",
+      "speed": 0.9299999999999999,
+      "duration": 3.314
+    },
+    "blame-0": {
+      "file": "/ghost-metric/audio/blame-0.mp3",
+      "signature": "800d2ae10596a891645495204be8ec6c845daf4fddb06c3575f5f6c08bc29cd8",
+      "caption": "The pipeline needs fixing. Blame does not give us a better definition.",
+      "speaker": "Ravi",
+      "voice": "bm_george",
+      "emotion": "annoyed",
+      "speed": 0.97,
+      "duration": 4.819
+    },
+    "bury-0": {
+      "file": "/ghost-metric/audio/bury-0.mp3",
+      "signature": "47c6654921663b40f7e1472d7c2badaf89cd2267a898b698eb1201e5339bb47c",
+      "caption": "Leaving the old number in place does not resolve the discrepancy.",
+      "speaker": "Anders",
+      "voice": "bm_lewis",
+      "emotion": "annoyed",
+      "speed": 0.94,
+      "duration": 4.497
+    },
+    "reveal-0": {
+      "file": "/ghost-metric/audio/reveal-0.mp3",
+      "signature": "4548b649ba4ffe6763a44fb3742d88c760aa39f7990fc37fd5af2ee82edb418b",
+      "caption": "Forty percent real growth. Still good. Not three hundred and forty.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 4.521
+    },
+    "reflection-0": {
+      "file": "/ghost-metric/audio/reflection-0.mp3",
+      "signature": "e2a4ec9ed77715210944f5e56be2f01020e11fe866a480cda2ba502a6d2e4043",
+      "caption": "Next time, which question will you ask before publishing a number?",
+      "speaker": "Anders",
+      "voice": "bm_lewis",
+      "emotion": "thinking",
+      "speed": 0.9199999999999999,
+      "duration": 4.284
+    },
+    "resume-0": {
+      "file": "/ghost-metric/audio/resume-0.mp3",
+      "signature": "546f925fa847f52828c301618d1cf4426915b9304364652eecbb142b372f9eca",
+      "caption": "Your sources and decisions are here. Pick up where you left off.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 3.934
+    },
+    "guideAudit-0": {
+      "file": "/ghost-metric/audio/guideAudit-0.mp3",
+      "signature": "094c87740d67bc760e6774cc3d8a0b96fb69f0357ef23fbe890774e29fc249c3",
+      "caption": "Open one drawer. You can inspect its rows before deciding what to join.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 4.809
+    },
+    "guideJoin-0": {
+      "file": "/ghost-metric/audio/guideJoin-0.mp3",
+      "signature": "8369a41ca528d5bceb2d244d63a54bc412b3539fbd8cf5684bed41a722fe79aa",
+      "caption": "Select the source, destination, and the column that identifies the same thing.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 5.255
+    },
+    "guideRange-0": {
+      "file": "/ghost-metric/audio/guideRange-0.mp3",
+      "signature": "dd167e620dbedc32d8dd8ee8d7716906f7c3be7f217742e968c797dcefaa6508",
+      "caption": "Your low and high bounds should describe the uncertainty you actually have.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 4.691
+    },
+    "guideSlides-0": {
+      "file": "/ghost-metric/audio/guideSlides-0.mp3",
+      "signature": "e5d16f5dd6d3dd831bc5c37852fab3ecfba00f10d2bb141bd9088957b0dac9c0",
+      "caption": "One headline, the sources behind it, and one clear ask.",
+      "speaker": "Elena",
+      "voice": "af_bella",
+      "emotion": "neutral",
+      "speed": 0.95,
+      "duration": 3.953
+    },
+    "guideMetric-0": {
+      "file": "/ghost-metric/audio/guideMetric-0.mp3",
+      "signature": "4893d38a5d5f507867fd51764b45caaab2655b4b0fe0afdb655fbae5593bb7db",
+      "caption": "The counting rule matters as much as the unit you choose.",
+      "speaker": "Ravi",
+      "voice": "bm_george",
+      "emotion": "neutral",
+      "speed": 0.97,
+      "duration": 4.361
+    },
+    "guideRedteam-0": {
+      "file": "/ghost-metric/audio/guideRedteam-0.mp3",
+      "signature": "8400f621678d00b6b52659881d42fe16cf7c71929f71498cfb187732e3a35303",
+      "caption": "I will try the rules as written. No secret tricks.",
+      "speaker": "Marcus",
+      "voice": "am_michael",
+      "emotion": "neutral",
+      "speed": 1,
+      "duration": 3.74
+    },
+    "guideCase-0": {
+      "file": "/ghost-metric/audio/guideCase-0.mp3",
+      "signature": "f5ad424b57d7d04bce132f08ba960fd2153e59035a8a22b9f1b150b00b99e093",
+      "caption": "The case file keeps your words beside what happened next.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 3.519
+    },
+    "guidePeople-0": {
+      "file": "/ghost-metric/audio/guidePeople-0.mp3",
+      "signature": "008b49a9d7c06ffacc942c97072418cb0a965575645dc83656bf0a653d551840",
+      "caption": "Their concerns are different. A correct number still needs a human conversation.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 5.063
+    },
+    "guardrail-0": {
+      "file": "/ghost-metric/audio/guardrail-0.mp3",
+      "signature": "2714cca9e7d7518cb460a4c76d32725d2578511ef0ede8c87d95aed7ebc58fd7",
+      "caption": "A completion is not useful if the customer waited too long for it.",
+      "speaker": "Ravi",
+      "voice": "bm_george",
+      "emotion": "thinking",
+      "speed": 0.95,
+      "duration": 5.065
+    },
+    "accountControl-0": {
+      "file": "/ghost-metric/audio/accountControl-0.mp3",
+      "signature": "489a9436e97bcc37ddcef138c6ae872e07e7d43761ca7aa5c77fbe13ce6fdf10",
+      "caption": "Accounts are a stronger boundary than labels anyone can rename.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "approving",
+      "speed": 0.96,
+      "duration": 4.063
+    },
+    "noAsk-0": {
+      "file": "/ghost-metric/audio/noAsk-0.mp3",
+      "signature": "d14d122649af02621ab67d46cf87db100daafe7656f10fc9028e7cbd4f650ab3",
+      "caption": "We discussed the data, but nobody agreed to change the plan.",
+      "speaker": "Elena",
+      "voice": "af_bella",
+      "emotion": "thinking",
+      "speed": 0.9299999999999999,
+      "duration": 4.092
+    },
+    "paused-0": {
+      "file": "/ghost-metric/audio/paused-0.mp3",
+      "signature": "91b5fdbfc290d7a725430e6043ca208a899587bd8676ee6fb8896da090e31850",
+      "caption": "Nothing moves while you are away. Your choices are already saved.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 4.147
+    },
+    "farewell-0": {
+      "file": "/ghost-metric/audio/farewell-0.mp3",
+      "signature": "285dcf6c4d8ecd231531a1c981646cd6053d5d02d609520731ffc377e9ebbd22",
+      "caption": "Keep the question. What, exactly, did we count?",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "approving",
+      "speed": 0.96,
+      "duration": 3.209
+    }
+  }
+}

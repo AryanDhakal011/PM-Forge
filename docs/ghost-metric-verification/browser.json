@@ -1,0 +1,212 @@
+{
+  "at": "2026-10-31T14:38:30.053Z",
+  "base": "http://localhost:3004",
+  "http": [],
+  "assets": [],
+  "pages": [
+    {
+      "path": "/app",
+      "url": "/app",
+      "loads": 1,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nYour next good decision\nEnter PMForge.\n\nReal scenarios. Decisions you can defend. A practice space that remembers where you left off.\n\nG\nContinue with Google\nOther sign-in options\n\nAccounts aren’t",
+      "failed": false
+    },
+    {
+      "path": "/app/projects/sacred-no",
+      "url": "/app/projects/sacred-no",
+      "loads": 2,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMFORGE / FIELD SIMULATION\nSkip entrance →\nFIELD NOTE / 01\nA partial signal.\nFIELD NOTE / 02\nA promise already made.\nFIELD NOTE / 03\nA constraint that stays.\n✦\nTHE SACRED NO\nA promise already made.\n\nNow d",
+      "failed": false
+    },
+    {
+      "path": "/app/projects",
+      "url": "/app/projects",
+      "loads": 3,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThre",
+      "failed": false
+    },
+    {
+      "path": "/app/projects/ghost-metric?run=7223b9b8-0209-4add-b8c2-022837a5af53",
+      "url": "/app/projects/ghost-metric?run=7223b9b8-0209-4add-b8c2-022837a5af53",
+      "loads": 5,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMFORGE / FIELD SIMULATION\nSkip entrance →\nFIELD NOTE / 01\nA partial signal.\nFIELD NOTE / 02\nA promise already made.\nFIELD NOTE / 03\nA constraint that stays.\n✦\nTHE GHOST METRIC\nA perfect number. An imperf",
+      "failed": false
+    },
+    {
+      "path": "/app/projects/ghost-metric",
+      "url": "/app/projects/ghost-metric",
+      "loads": 6,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMFORGE / FIELD SIMULATION\nSkip entrance →\nFIELD NOTE / 01\nA partial signal.\nFIELD NOTE / 02\nA promise already made.\nFIELD NOTE / 03\nA constraint that stays.\n✦\nTHE GHOST METRIC\nA perfect number. An imperf",
+      "failed": false
+    },
+    {
+      "path": "/app/projects/ghost-metric",
+      "url": "/app/projects/ghost-metric",
+      "loads": 7,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\n← Projects\nPMFORGE / THE GHOST METRIC\nGuide\nSettings\n\nAPERTURE CLOUD · A SIMULATED COMPANY · CASE 04\n\nThe Ghost\nMetric.\n\nEveryone is celebrating the number.\nYou’re the one who has to trust it.\n\nYou are th",
+      "failed": false
+    },
+    {
+      "path": "/app/projects/ghost-metric?run=00000000-0000-4000-8000-000000000000",
+      "url": "/app/projects/ghost-metric?run=00000000-0000-4000-8000-000000000000",
+      "loads": 8,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\n← Projects\nPMFORGE / THE GHOST METRIC\nGuide\nSettings\nThis run is not saved for this workspace. Return to the project and start a new audit. Try again Back to project\n\nAPERTURE CLOUD · A SIMULATED COMPANY ",
+      "failed": false
+    }
+  ],
+  "clicks": [],
+  "errors": [],
+  "checks": [
+    {
+      "label": "Sacred No initial rendered frames are fully covered by entrance",
+      "pass": true
+    },
+    {
+      "label": "entry fits 390px",
+      "pass": true
+    },
+    {
+      "label": "entry fits 320px",
+      "pass": true
+    },
+    {
+      "label": "sequential opening dialogue is foregrounded",
+      "pass": true
+    },
+    {
+      "label": "captions wait for an intentional advance",
+      "pass": true
+    },
+    {
+      "label": "prerendered Elena recording plays after sound gesture",
+      "pass": true
+    },
+    {
+      "label": "pause preserves the current spoken line",
+      "pass": true
+    },
+    {
+      "label": "keyboard focus stays within the conversation",
+      "pass": true
+    },
+    {
+      "label": "blocked audio presents a caption-friendly fallback",
+      "pass": true
+    },
+    {
+      "label": "audio failure leaves manual advance available",
+      "pass": true
+    },
+    {
+      "label": "conversation fits 390px",
+      "pass": true
+    },
+    {
+      "label": "conversation fits 320px",
+      "pass": true
+    },
+    {
+      "label": "audit fits 390px",
+      "pass": true
+    },
+    {
+      "label": "audit fits 320px",
+      "pass": true
+    },
+    {
+      "label": "dragging a request column quantifies retries",
+      "pass": true
+    },
+    {
+      "label": "account join confirms Orbitly mass",
+      "pass": true
+    },
+    {
+      "label": "one shared WebGL surface",
+      "pass": true
+    },
+    {
+      "label": "correct all-customer definition models forty percent real growth",
+      "pass": true
+    },
+    {
+      "label": "metric fits 390px",
+      "pass": true
+    },
+    {
+      "label": "metric fits 320px",
+      "pass": true
+    },
+    {
+      "label": "no promise callback exists when no promise was made",
+      "pass": true
+    },
+    {
+      "label": "complete anatomy appears at the reveal",
+      "pass": true
+    },
+    {
+      "label": "debrief fits 390px",
+      "pass": true
+    },
+    {
+      "label": "debrief fits 320px",
+      "pass": true
+    },
+    {
+      "label": "reflection survives reload",
+      "pass": true
+    },
+    {
+      "label": "replay creates a separate branch URL",
+      "pass": true
+    },
+    {
+      "label": "original remains completed after branch",
+      "pass": true
+    },
+    {
+      "label": "Ghost Metric back navigation restores the original run",
+      "pass": true
+    },
+    {
+      "label": "Ghost Metric forward navigation restores the second run",
+      "pass": true
+    },
+    {
+      "label": "board replays the actual Day 1 promise",
+      "pass": true
+    },
+    {
+      "label": "skipping evidence leads to a causal crisis conclusion",
+      "pass": true
+    },
+    {
+      "label": "Ghost Metric initial frames have no entrance gap",
+      "pass": true
+    },
+    {
+      "label": "reduced motion uses an immediate quiet entrance",
+      "pass": true
+    },
+    {
+      "label": "reduced-entry fits 390px",
+      "pass": true
+    },
+    {
+      "label": "reduced-entry fits 320px",
+      "pass": true
+    },
+    {
+      "label": "missing-run recovery clears the query and returns to the entry",
+      "pass": true
+    }
+  ]
+}

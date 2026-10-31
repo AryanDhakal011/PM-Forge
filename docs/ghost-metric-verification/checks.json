@@ -1,0 +1,146 @@
+[
+  {
+    "label": "Sacred No initial rendered frames are fully covered by entrance",
+    "pass": true
+  },
+  {
+    "label": "entry fits 390px",
+    "pass": true
+  },
+  {
+    "label": "entry fits 320px",
+    "pass": true
+  },
+  {
+    "label": "sequential opening dialogue is foregrounded",
+    "pass": true
+  },
+  {
+    "label": "captions wait for an intentional advance",
+    "pass": true
+  },
+  {
+    "label": "prerendered Elena recording plays after sound gesture",
+    "pass": true
+  },
+  {
+    "label": "pause preserves the current spoken line",
+    "pass": true
+  },
+  {
+    "label": "keyboard focus stays within the conversation",
+    "pass": true
+  },
+  {
+    "label": "blocked audio presents a caption-friendly fallback",
+    "pass": true
+  },
+  {
+    "label": "audio failure leaves manual advance available",
+    "pass": true
+  },
+  {
+    "label": "conversation fits 390px",
+    "pass": true
+  },
+  {
+    "label": "conversation fits 320px",
+    "pass": true
+  },
+  {
+    "label": "audit fits 390px",
+    "pass": true
+  },
+  {
+    "label": "audit fits 320px",
+    "pass": true
+  },
+  {
+    "label": "dragging a request column quantifies retries",
+    "pass": true
+  },
+  {
+    "label": "account join confirms Orbitly mass",
+    "pass": true
+  },
+  {
+    "label": "one shared WebGL surface",
+    "pass": true
+  },
+  {
+    "label": "correct all-customer definition models forty percent real growth",
+    "pass": true
+  },
+  {
+    "label": "metric fits 390px",
+    "pass": true
+  },
+  {
+    "label": "metric fits 320px",
+    "pass": true
+  },
+  {
+    "label": "no promise callback exists when no promise was made",
+    "pass": true
+  },
+  {
+    "label": "complete anatomy appears at the reveal",
+    "pass": true
+  },
+  {
+    "label": "debrief fits 390px",
+    "pass": true
+  },
+  {
+    "label": "debrief fits 320px",
+    "pass": true
+  },
+  {
+    "label": "reflection survives reload",
+    "pass": true
+  },
+  {
+    "label": "replay creates a separate branch URL",
+    "pass": true
+  },
+  {
+    "label": "original remains completed after branch",
+    "pass": true
+  },
+  {
+    "label": "Ghost Metric back navigation restores the original run",
+    "pass": true
+  },
+  {
+    "label": "Ghost Metric forward navigation restores the second run",
+    "pass": true
+  },
+  {
+    "label": "board replays the actual Day 1 promise",
+    "pass": true
+  },
+  {
+    "label": "skipping evidence leads to a causal crisis conclusion",
+    "pass": true
+  },
+  {
+    "label": "Ghost Metric initial frames have no entrance gap",
+    "pass": true
+  },
+  {
+    "label": "reduced motion uses an immediate quiet entrance",
+    "pass": true
+  },
+  {
+    "label": "reduced-entry fits 390px",
+    "pass": true
+  },
+  {
+    "label": "reduced-entry fits 320px",
+    "pass": true
+  },
+  {
+    "label": "missing-run recovery clears the query and returns to the entry",
+    "pass": true
+  }
+]

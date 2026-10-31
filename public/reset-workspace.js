@@ -78,6 +78,7 @@
           "pmforge-workspace-v1",
           "pmforge-deadlock-v1",
           "pmforge-sacred-no-v1",
+          "pmforge-ghost-metric-v1",
         ];
         const listed = indexedDB.databases ? await indexedDB.databases() : [];
         const names = [

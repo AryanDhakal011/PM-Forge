@@ -20,7 +20,7 @@ try{
  ws.onmessage=e=>{const m=JSON.parse(e.data);if(m.id){const p=pending.get(m.id);pending.delete(m.id);m.error?p?.reject(Error(JSON.stringify(m.error))):p?.resolve(m.result);}if(m.method==='Runtime.exceptionThrown')report.errors.push(m.params.exceptionDetails.exception?.description||m.params.exceptionDetails.text);};
  const send=(method,params={})=>new Promise((resolve,reject)=>{const id=++seq;pending.set(id,{resolve,reject});ws.send(JSON.stringify({id,method,params}));});
  const ev=async expression=>{const r=await send('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw Error(r.exceptionDetails.exception?.description||r.exceptionDetails.text);return r.result.value;};
- await send('Page.enable');await send('Runtime.enable');await send('Page.addScriptToEvaluateOnNewDocument',{source:"sessionStorage.__qaLoads=String(Number(sessionStorage.__qaLoads||0)+1)"});
+ await send('Page.enable');await send('Runtime.enable');await send('Page.addScriptToEvaluateOnNewDocument',{source:"try { sessionStorage.__qaLoads=String(Number(sessionStorage.__qaLoads||0)+1) } catch {}"});
  await send('Emulation.setDeviceMetricsOverride',{width:1440,height:960,deviceScaleFactor:1,mobile:false});
  const state=()=>ev(`({url:location.pathname+location.search,text:document.body.innerText,loads:Number(sessionStorage.__qaLoads),ready:document.readyState,links:[...document.querySelectorAll('a[href]')].map(a=>({href:a.getAttribute('href'),text:a.textContent.trim()}))})`);
  async function settle(){for(let i=0;i<60;i++){try{const s=await state();if(s.ready==='complete'&&s.text.length>30&&!s.text.includes('Opening your workspace'))return s;}catch{}await wait(150);}return state();}
