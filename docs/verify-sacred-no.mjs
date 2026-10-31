@@ -89,7 +89,18 @@ try {
         (await evaluate("document.body.innerText.slice(-1800)")),
     );
   };
+  async function drainConversation(){
+    const skip=await evaluate("[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='Skip entrance →')?.textContent");
+    if(skip){await evaluate("[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='Skip entrance →').click()");await wait(400);}
+    for(let i=0;i<8;i++){
+      const result=await evaluate(`(()=>{const box=document.querySelector('[data-team-conversation]');if(!box)return 'done';if([...box.querySelectorAll('button')].some(b=>b.textContent.trim()==='On it.'))return 'reply';const b=box.querySelector('button[class*=primary]');if(!b||b.disabled)return 'busy';b.click();return 'next';})()`);
+      if(result==='done'||result==='reply')return;
+      await wait(250);
+    }
+    throw Error('Conversation did not finish');
+  }
   const click = async (text) => {
+    await drainConversation();
     await until(
       `Array.from(document.querySelectorAll('button,a,summary')).some(e=>e.textContent.trim().includes(${JSON.stringify(text)})&&!e.disabled)`,
       `button ${text}`,
@@ -132,6 +143,7 @@ try {
   });
 
   const clickSel = async (selector) => {
+    await drainConversation();
     await until(
       `!!document.querySelector(${JSON.stringify(selector)})&&!document.querySelector(${JSON.stringify(selector)}).disabled`,
       "control " + selector,
@@ -155,22 +167,25 @@ try {
   const trustedClick=async(text)=>{const point=await evaluate(`(()=>{const e=[...document.querySelectorAll('button,a,summary')].find(e=>e.textContent.includes(${JSON.stringify(text)})&&!e.disabled);e.scrollIntoView({block:'center'});const r=e.getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2}})()`);await send('Input.dispatchMouseEvent',{type:'mousePressed',...point,button:'left',clickCount:1});await send('Input.dispatchMouseEvent',{type:'mouseReleased',...point,button:'left',clickCount:1});await wait(400);};
   const body=()=>evaluate('document.body.innerText');
   const has=async(text)=>until(`document.body.innerText.toLowerCase().includes(${JSON.stringify(text.toLowerCase())})`,text);
-  const mobile=async(name)=>{for(const width of [390,320]){await send('Emulation.setDeviceMetricsOverride',{width,height:860,deviceScaleFactor:1,mobile:true});await wait(250);check(await evaluate('document.documentElement.scrollWidth<=innerWidth+1'),`${name} fits ${width}px`);if(width===390)await screenshot(name+'-mobile');}await send('Emulation.setDeviceMetricsOverride',{width:1440,height:960,deviceScaleFactor:1,mobile:false});};
+  const mobile=async(name)=>{for(const width of [390,320]){await send('Emulation.setDeviceMetricsOverride',{width,height:860,deviceScaleFactor:1,mobile:true});await wait(250);check(await evaluate('document.documentElement.scrollWidth<=innerWidth+1 && [...document.querySelectorAll(\"[role=dialog]\")].every(d=>d.scrollWidth<=d.clientWidth+1)'),`${name} fits ${width}px including dialog`);if(width===390)await screenshot(name+'-mobile');}await send('Emulation.setDeviceMetricsOverride',{width:1440,height:960,deviceScaleFactor:1,mobile:false});};
   const setInput=async(selector,value)=>{await evaluate(`(()=>{const e=document.querySelector(${JSON.stringify(selector)});Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set.call(e,${JSON.stringify(value)});e.dispatchEvent(new Event('input',{bubbles:true}));e.dispatchEvent(new Event('change',{bubbles:true}));})()`);await wait(200);};
-  const articleButton=async(title,text)=>{await evaluate(`(()=>{const a=[...document.querySelectorAll('main article')].find(e=>e.querySelector('h2,h3')?.textContent===${JSON.stringify(title)});const b=[...a.querySelectorAll('button')].find(e=>e.textContent.includes(${JSON.stringify(text)}));b.click()})()`);await wait(350);};
+  const articleButton=async(title,text)=>{await drainConversation();await evaluate(`(()=>{const a=[...document.querySelectorAll('main article')].find(e=>e.querySelector('h2,h3')?.textContent===${JSON.stringify(title)});const b=[...a.querySelectorAll('button')].find(e=>e.textContent.includes(${JSON.stringify(text)}));b.click()})()`);await wait(350);};
   await navigate('/app');await click('Try without an account');await click('Skip setup');
   await navigate('/app/projects');await until("!!document.querySelector('#project-sacred-no a')",'project card');
-  await clickSel('#project-sacred-no a');await has('Open the message');await screenshot('entrance');await mobile('entrance');
-  await click('Open the message');await has('Your phone lights up');check((await body()).includes('You are Head of Product'),'role is clear before first reply');await screenshot('cold');await mobile('cold');
-  await click('Walk me through');await has('Five claims');
+  await clickSel('#project-sacred-no a');await has('Open the message');await until("!!document.querySelector('[aria-label=\"Entering The Sacred No\"]')",'trademark entrance');check(await evaluate("[...document.querySelectorAll('button')].some(b=>b.textContent.includes('Skip entrance'))"),'trademark entrance is immediately skippable');await wait(5200);await screenshot('trademark-entrance');await screenshot('entrance');await mobile('entrance');
+  await click('Open the message');await has('Your phone lights up');await until("!!document.querySelector('[data-team-conversation]')",'opening conversation');check(await evaluate("document.querySelector('[data-team-conversation]')?.dataset.lineId==='OPEN'"),'Kian opens the sequential conversation');await wait(700);check(await evaluate("document.querySelector('[data-team-conversation]')?.dataset.lineId==='OPEN'"),'captions-only dialogue waits for Next');await screenshot('dialogue-opening');await evaluate("[...document.querySelectorAll('[data-team-conversation] button')].find(b=>b.textContent.includes('Pause / leave')).click()");await has('Paused');await click('Continue →');check(await evaluate("document.querySelector('[data-team-conversation]')?.dataset.lineId==='OPEN'"),'pause resumes the same conversation line');await trustedClick('Sound on');await until("window.__audioEvents.some(e=>e.type==='playing'&&e.src.includes('/OPEN.mp3'))",'opening recording plays');check(await evaluate("document.activeElement.matches('[data-conversation-next]')||document.activeElement.closest('[data-team-conversation]')!==null"),'conversation controls receive keyboard focus');await evaluate("document.querySelector('[data-team-conversation] input[type=checkbox]').click()");await wait(250);check(await evaluate("document.querySelector('[data-team-conversation]')?.dataset.lineId==='OPEN'"),'auto-advance waits while recording is playing');await evaluate("(()=>{const a=window.__audioInstances.at(-1);a.currentTime=Math.max(0,a.duration-.08)})()");await until("document.querySelector('[data-team-conversation]')?.dataset.lineId==='OPEN-PRIYA'",'actual audio ended advances exactly one line');check(true,'actual audio ended advances the conversation');await evaluate("document.querySelector('[data-team-conversation] input[type=checkbox]').click()");check((await body()).includes('You are Head of Product'),'role is clear before first reply');await screenshot('cold');await mobile('cold');
+  await click('Walk me through');await has('Five claims');check(await evaluate("!!document.querySelector('[data-team-conversation]')"),'reply triggers immediate foreground guidance');await screenshot('dialogue-guide');
   await articleButton('Load test log','Investigate');await articleButton('Checkout dashboard','Investigate');
   await articleButton('Load test log','Select to test');await click('Servers can handle it');await articleButton('Checkout dashboard','Select to test');await click('Checkout stays fast');
   check((await body()).includes('CHALLENGED'),'relevant evidence breaks a claim');await screenshot('evidence');await mobile('evidence');
   await click('Choose the engineering');await setInput('input[type=range]','6');await click('Reserve this allocation');
   await click('Board optics');await has('A controlled demonstration');await click('Call Kian now');
+  await click('Next: Because');await drainConversation();
   await evaluate(`(()=>{for(const l of document.querySelectorAll('fieldset label')){if(l.textContent.includes('Load test log')||l.textContent.includes('Checkout dashboard'))l.querySelector('input')?.click();}})()`);await wait(250);
+  await click('Next: Instead');await click('Next: Your ask');await click('Next: Checkpoint');await click('Next: Tone & review');await drainConversation();
+  check(await evaluate("document.querySelector('[data-call-step]')?.dataset.callStep==='5'"),'call builder presents one guided part at a time');
   await screenshot('call');await mobile('call');await click('Review before saying it');await has('Your exact words become a receipt');await click('Say it');await has('6:30 AM');
-  check((await body()).includes('You used my numbers'),'strong refusal returns a specific Priya callback');
+  await evaluate("document.querySelector('[data-team-conversation] button[class*=primary]').click()");await wait(250);check(await evaluate("document.querySelector('[data-team-conversation]')?.dataset.lineId==='PRIYA-LISTENED'"),'strong refusal returns a specific spoken Priya callback');
   await click('Isolate the queue');await has('Tess needs something');
   await articleButton('Three-brand private beta','Inspect the cost');await articleButton('Three-brand private beta','Accept commitment');
   check((await body()).includes('A beta review next week'),'accepted trade exposes its debt');await click('Finish negotiation');await has('Who carries the risk');
@@ -178,7 +193,7 @@ try {
   check(await evaluate("document.querySelectorAll('canvas').length<=1"),'at most one WebGL context surface');check(await evaluate("window.__pmProductDraws>0"),'coverage shader renders actual draw calls');await screenshot('rollout');await mobile('rollout');
   await click('Lock this exposure');await has('Before the room opens');await click('Review and lock');await click('Lock it');await has('9:00 AM. Show');
   check((await body()).includes('Three-brand private beta'),'board remembers accepted deal');await screenshot('board');await mobile('board');await click('Present the alternative');await has('Lena asks');
-  check((await body()).includes('forecast'),'alternative never pretends forecast is measured');await screenshot('result');await click('Acknowledge the result');await has('Your run, in brief');
+  check((await body()).includes('forecast'),'alternative never pretends forecast is measured');await screenshot('result');await click('Acknowledge the result');await has('Your run, in brief');await drainConversation();
   check(await evaluate("document.querySelectorAll('main details')[0]?.open===false"),'detailed debrief starts collapsed');check(await evaluate("document.querySelectorAll('main button').length>0"),'debrief remains interactive');await screenshot('debrief');await mobile('debrief');
   const originalURL=await evaluate('location.href');
   await send('Page.reload');await has('Previously, at Kettle');await click('Continue →');await has('Your run, in brief');check(true,'reload restores the completed run with a recap');
@@ -186,12 +201,12 @@ try {
   check(await evaluate('location.href')!==originalURL,'replay creates a new branch URL');await navigate(new URL(originalURL).pathname+new URL(originalURL).search);await has('Previously, at Kettle');await click('Continue →');await has('Your run, in brief');check(true,'original remains completed after branch');
   await click('Start a new night');await has('Your phone lights up');await click('On it.');await has('Five claims');
   await articleButton('Load test log','Investigate');await click('Choose the engineering');await click('Reserve this allocation');await click('Call Kian now');
-  await select('main select','ship');await click('Review before saying it');await click('Say it');await has('The team remembers');await click('Keep the current allocation');
+  await click('Ship it');await click('Next: Because');await click('Next: Instead');await click('Next: Your ask');await click('Next: Checkpoint');await click('Next: Tone & review');await click('Review before saying it');await click('Say it');await has('The team remembers');await click('Keep the current allocation');
   await articleButton('Full launch, risk acknowledged','Inspect the cost');await articleButton('Full launch, risk acknowledged','Accept commitment');await click('Finish negotiation');
   await click('Lock this exposure');await click('Review and lock');await click('Lock it');await click('Start the demonstration');await has('The promise met its limit');
   check((await body()).includes('payment provider')||(await body()).includes('Forecast load'),'failure names the release boundary that was exceeded');await screenshot('failure');await mobile('failure');await click('Propose rollback');await has('Your run, in brief');
   check((await body()).includes('The live promise exceeded'),'unsafe route reaches a causal crash conclusion');await click('Explore your decisions');check((await body()).includes('The Echo'),'cave-in is remembered in the outcome pattern');
-  await click('Settings');await evaluate(`(()=>{const l=[...document.querySelectorAll('[role=dialog] label')].find(e=>e.textContent.includes('Sound + captions'));l.querySelector('input').click()})()`);await wait(200);
+  await click('Settings');await evaluate(`(()=>{const l=[...document.querySelectorAll('[role=dialog] label')].find(e=>e.textContent.includes('Sound + captions'));if(!l.querySelector('input').checked)l.querySelector('input').click()})()`);await wait(200);
   for(const speaker of ['Kian','Priya','Tess','Lena','Noor']){await trustedClick('Preview '+speaker);await wait(450);check(await evaluate("window.__audioEvents.some(e=>e.type==='playing')"),speaker+' preview plays');}
   await send('Input.dispatchKeyEvent',{type:'keyDown',key:'Tab',code:'Tab',windowsVirtualKeyCode:9});await send('Input.dispatchKeyEvent',{type:'keyUp',key:'Tab',code:'Tab',windowsVirtualKeyCode:9});check(await evaluate("!!document.activeElement.closest('[role=dialog]')"),'keyboard focus stays inside settings dialog');
   await send('Network.setBypassServiceWorker',{bypass:true});await send('Network.setCacheDisabled',{cacheDisabled:true});await send('Network.setBlockedURLs',{urls:['*sacred-no/audio/OPEN.mp3*']});await trustedClick('Preview Kian');await until("document.body.innerText.includes('Recording unavailable')||document.body.innerText.includes('Tap Replay')",'audio failure recovery');check(await evaluate("document.querySelector('[data-sacred-scene]')?.dataset.sacredScene==='debrief'"),'blocked recording leaves captions and completed scene intact');await send('Network.setBlockedURLs',{urls:[]});

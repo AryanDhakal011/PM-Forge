@@ -65,3 +65,4 @@ docs/deadlock-v2-verification/*.log
 docs/sacred-no-verification/*-mobile.png
 !docs/sacred-no-verification/evidence-mobile.png
 !docs/sacred-no-verification/rollout-mobile.png
+!docs/sacred-no-verification/cold-mobile.png

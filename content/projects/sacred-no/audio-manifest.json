@@ -612,6 +612,216 @@
       "emotion": "neutral",
       "speed": 0.98,
       "duration": 4.702
+    },
+    "G-EVIDENCE": {
+      "file": "/sacred-no/audio/G-EVIDENCE.mp3",
+      "signature": "1c4d1e2016911b5388d0580960203dcb913f57a1de88838d9be29b6cbc243fc3",
+      "caption": "Before you answer him, find out which promises the system can keep.",
+      "speaker": "Priya",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.264
+    },
+    "G-LINK": {
+      "file": "/sacred-no/audio/G-LINK.mp3",
+      "signature": "ec700b36780b36f99094ce8b1882b04763f3ef1db819e196f12b8c956c94b51b",
+      "caption": "Open a source. Select it, then tap the claim it actually tests.",
+      "speaker": "Noor",
+      "voice": "af_sarah",
+      "emotion": "thinking",
+      "speed": 0.96,
+      "duration": 4.442
+    },
+    "G-HOURS": {
+      "file": "/sacred-no/audio/G-HOURS.mp3",
+      "signature": "09c2c525843b7bed8aec1782a0fc28c9996107c27d00e03169c7569c29f0859f",
+      "caption": "Split ten engineer-hours. Safeguards help, but the feature still needs building.",
+      "speaker": "Priya",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 5.181
+    },
+    "G-REHEARSE": {
+      "file": "/sacred-no/audio/G-REHEARSE.mp3",
+      "signature": "fa3288a35c1f59dc26d3dc9901292cdd3b3bea0dda0548b75dcbfa7a88f9c7c6",
+      "caption": "Try an argument here. This rehearsal does not commit you to anything.",
+      "speaker": "Priya",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.329
+    },
+    "G-CALL": {
+      "file": "/sacred-no/audio/G-CALL.mp3",
+      "signature": "d0b629d398947e1c81a645938c47d9906b3afb99f56888fa22f1693c80609f48",
+      "caption": "I will help you build the answer. First, choose a clear position.",
+      "speaker": "Priya",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.157
+    },
+    "G-CALL-EVIDENCE": {
+      "file": "/sacred-no/audio/G-CALL-EVIDENCE.mp3",
+      "signature": "a1b3f75935872fced54db21034d23b74ff3cd84cc572098502ebd42f68757f6a",
+      "caption": "Then connect your evidence and offer something Kian can take to the board.",
+      "speaker": "Priya",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.5
+    },
+    "G-MORNING": {
+      "file": "/sacred-no/audio/G-MORNING.mp3",
+      "signature": "9a75ba8a56ee6b854ed00acb79793ac3faf92d8fdc26b61bd3ee3f2b5d14a926",
+      "caption": "Give me one clear instruction: isolate the queue, or keep the current allocation.",
+      "speaker": "Priya",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 5.395
+    },
+    "G-DEALS": {
+      "file": "/sacred-no/audio/G-DEALS.mp3",
+      "signature": "9e439a61d37ad5b659636af1e03067649101bd4eee881fc3ac742107defcb01a",
+      "caption": "Read what each promise costs. Then tell me what you can commit to.",
+      "speaker": "Tess",
+      "voice": "af_bella",
+      "emotion": "engaged",
+      "speed": 1.0,
+      "duration": 4.135
+    },
+    "G-ROLLOUT": {
+      "file": "/sacred-no/audio/G-ROLLOUT.mp3",
+      "signature": "df23eaa2a42e3917511dad98722533f75243a9dd956b84ffa9c9596bdc4caa47",
+      "caption": "Choose the audience. A smaller release still has payments and people at risk.",
+      "speaker": "Noor",
+      "voice": "af_sarah",
+      "emotion": "thinking",
+      "speed": 0.96,
+      "duration": 4.83
+    },
+    "G-LOCK": {
+      "file": "/sacred-no/audio/G-LOCK.mp3",
+      "signature": "ecae38ea6933084a3a4117832d86c7bf71f74a75e5703037c8165b6bef97393c",
+      "caption": "Check the plan, evidence, and partner promises together. Then lock the proposal.",
+      "speaker": "Priya",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 5.412
+    },
+    "G-FINAL": {
+      "file": "/sacred-no/audio/G-FINAL.mp3",
+      "signature": "613a2678c90c7e027a82f211e12cbdb59e9a5faae725ed11bcba5021e7416ca6",
+      "caption": "Own the result. Tell us what you will do next, and who decides.",
+      "speaker": "Lena",
+      "voice": "bf_emma",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.019
+    },
+    "G-DEBRIEF": {
+      "file": "/sacred-no/audio/G-DEBRIEF.mp3",
+      "signature": "22d09ccdd57c35421e4b47ac847850a0a1aa6991df7a8341f4bd3e6281769eee",
+      "caption": "Start with what your choices caused. You can inspect the full record later.",
+      "speaker": "Lena",
+      "voice": "bf_emma",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.691
+    },
+    "G-POSITION": {
+      "file": "/sacred-no/audio/G-POSITION.mp3",
+      "signature": "503d33b1db09f693fe541d17457299e3c7d740e5f6d7efbe8c92c51bfbe4d1db",
+      "caption": "What are you actually recommending? Choose that first.",
+      "speaker": "Priya",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 3.305
+    },
+    "G-BECAUSE": {
+      "file": "/sacred-no/audio/G-BECAUSE.mp3",
+      "signature": "169cfa919b37c3a4615f4994954919fbd1c196f7a91b33400133a216bf2391cf",
+      "caption": "Which findings support that recommendation? Choose up to two sources you investigated.",
+      "speaker": "Priya",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 5.76
+    },
+    "G-INSTEAD": {
+      "file": "/sacred-no/audio/G-INSTEAD.mp3",
+      "signature": "2868f070376e8986a3b8f9617848f5895ce42ee9b63ed34bf8185bb81d062727",
+      "caption": "If we change the launch, what can Kian show instead?",
+      "speaker": "Priya",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 3.477
+    },
+    "G-ASK": {
+      "file": "/sacred-no/audio/G-ASK.mp3",
+      "signature": "39d645dcf17d83ec03fb16a370103726201227d69d9dd1baffb1de5ea7ff5edb",
+      "caption": "What do you need from him to make that alternative real?",
+      "speaker": "Priya",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 3.445
+    },
+    "G-WHEN": {
+      "file": "/sacred-no/audio/G-WHEN.mp3",
+      "signature": "7f1acd109ddd63f72cf9a18971ee0dbf5ecac7c03aadb6a6bab50848b99be331",
+      "caption": "Give him a checkpoint. When will you report back?",
+      "speaker": "Priya",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 3.005
+    },
+    "G-TONE": {
+      "file": "/sacred-no/audio/G-TONE.mp3",
+      "signature": "5ec53d4dbba02b50c8d00c26184f8a2b98837f6e3545535a5df1e25b5e535389",
+      "caption": "Now choose your tone. Warm can still be clear. Hedged can become permission.",
+      "speaker": "Priya",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.948
+    },
+    "G-LINK-BREAK": {
+      "file": "/sacred-no/audio/G-LINK-BREAK.mp3",
+      "signature": "a7854e5372f20d660d9a4de845831f2d2c0929fd8e01f7728422417ea0aeda9a",
+      "caption": "That evidence challenges the claim. The finding is saved in your case file.",
+      "speaker": "Noor",
+      "voice": "af_sarah",
+      "emotion": "thinking",
+      "speed": 0.96,
+      "duration": 4.786
+    },
+    "G-LINK-SUPPORT": {
+      "file": "/sacred-no/audio/G-LINK-SUPPORT.mp3",
+      "signature": "affb266be2fb3ee6722eadd77b30e317213c60abc81602790cce2b75955a065f",
+      "caption": "That supports the claim. Demand matters, even when the release is risky.",
+      "speaker": "Noor",
+      "voice": "af_sarah",
+      "emotion": "thinking",
+      "speed": 0.96,
+      "duration": 4.605
+    },
+    "G-LINK-MISS": {
+      "file": "/sacred-no/audio/G-LINK-MISS.mp3",
+      "signature": "37f874ca4ef1b472dadd0b3b1ce62d825aa4a4a4f84f0037d09b514b4736526c",
+      "caption": "That source does not test this claim. Try a different connection.",
+      "speaker": "Noor",
+      "voice": "af_sarah",
+      "emotion": "thinking",
+      "speed": 0.96,
+      "duration": 3.987
     }
   }
 }

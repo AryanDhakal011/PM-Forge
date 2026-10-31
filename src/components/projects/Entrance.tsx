@@ -33,19 +33,25 @@ const scenes: Record<string, [string, string]> = {
 export default function Entrance({
   project,
   onDone,
+  skipImmediately = false,
+  calm = false,
+  copy,
 }: {
-  project: Project;
+  project: Pick<Project, "id" | "category" | "title">;
   onDone: () => void;
+  skipImmediately?: boolean;
+  calm?: boolean;
+  copy?: [string, string];
 }) {
   const root = useRef<HTMLDivElement>(null),
     done = useRef(onDone);
   done.current = onDone;
   const { reducedMotion } = useSettings();
-  const [skip, setSkip] = useState(false);
+  const [skip, setSkip] = useState(skipImmediately);
   useEffect(() => {
     const before = document.activeElement as HTMLElement | null;
     root.current?.focus();
-    if (reducedMotion) {
+    if (reducedMotion || calm) {
       const t = setTimeout(() => done.current(), 300);
       return () => clearTimeout(t);
     }
@@ -58,8 +64,8 @@ export default function Entrance({
       timeline.kill();
       if (before?.isConnected) before.focus();
     };
-  }, [project.id, project.category, reducedMotion]);
-  const lines = scenes[project.category] || scenes.strategy;
+  }, [project.id, project.category, reducedMotion, calm]);
+  const lines = copy || scenes[project.category] || scenes.strategy;
   return (
     <div
       ref={root}

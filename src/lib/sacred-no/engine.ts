@@ -159,7 +159,7 @@ export function sentence(d: Draft) {
   const evidence = d.evidence
     .map((id) => byId(content.evidence, id).reading)
     .join(" ");
-  return `${prefix}${position} ${evidence || "I have not linked evidence."} ${byId(content.alternatives, d.alternative).text} ${byId(content.asks, d.ask).text} ${byId(content.deadlines, d.deadline).text}`;
+  return `${prefix}${d.tone === "hedged" ? position[0].toLowerCase() + position.slice(1) : position} ${evidence || "I have not linked evidence."} ${byId(content.alternatives, d.alternative).text} ${byId(content.asks, d.ask).text} ${byId(content.deadlines, d.deadline).text}`;
 }
 export function projection(s: State, segments = s.segments) {
   const share = Math.min(
@@ -316,7 +316,11 @@ export function reduce(previous: State, action: Action): State {
             : "Contradicts this claim; the strand breaks."
           : "Useful context, but it does not test this claim.",
         "refusal",
-        e.line,
+        relevant
+          ? e.supports.includes(action.claim)
+            ? "G-LINK-SUPPORT"
+            : "G-LINK-BREAK"
+          : "G-LINK-MISS",
       );
       break;
     }
@@ -780,5 +784,15 @@ export function lintContent() {
   }
   for (const e of content.evidence)
     ensure(ids.has(e.line), `Missing evidence dialogue ${e.line}`);
+  for (const [scene, conversation] of Object.entries(content.conversations)) {
+    ensure(scene in content.beats, `Unknown conversation scene ${scene}`);
+    ensure(
+      conversation.lines.length > 0 && conversation.lines.length <= 3,
+      `Conversation budget exceeded for ${scene}`,
+    );
+    for (const id of conversation.lines)
+      ensure(ids.has(id), `Missing guide recording ${id}`);
+    ensure(conversation.task.length > 0, `Missing task guidance for ${scene}`);
+  }
   return true;
 }

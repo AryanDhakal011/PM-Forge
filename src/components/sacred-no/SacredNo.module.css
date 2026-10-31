@@ -1935,4 +1935,427 @@
   color: #d6e8dc;
 }
 
-.game[data-day=true] .topActions .caseCue{color:#6b4815;border-color:#9a702e;background:#fff7db}
+.game[data-day="true"] .topActions .caseCue {
+  color: #6b4815;
+  border-color: #9a702e;
+  background: #fff7db;
+}
+
+/* Foreground conversations: one speaker and one move at a time. */
+.teamConversation {
+  gap: 20px;
+  padding: 28px 32px;
+  background:
+    radial-gradient(ellipse at top left, #264c3255, transparent 65%), #0d1711;
+  color: #d6e8dc;
+  min-height: 400px;
+}
+.conversationHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid #35513d;
+  padding-bottom: 12px;
+}
+.conversationHead .textButton {
+  color: #a9c7b0;
+  white-space: nowrap;
+}
+.conversationLine {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 26px;
+  align-items: start;
+  padding: 10px 0;
+}
+.conversationLine h2 {
+  font-size: 1.8rem;
+  color: #eaf5e9;
+  margin-bottom: 4px;
+}
+.conversationLine small {
+  color: #a8c2ae;
+  font-size: 0.73rem;
+}
+.teamConversation .spokenLine {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.5;
+  color: #f2f5e8;
+  margin-top: 18px;
+  min-height: 90px;
+  max-width: 36ch;
+}
+.conversationProgress {
+  display: flex;
+  gap: 8px;
+}
+.conversationProgress i {
+  height: 3px;
+  flex: 1;
+  background: #294432;
+}
+.conversationProgress i[data-done="true"] {
+  background: #6cff9b;
+}
+.nextTask {
+  padding: 16px 18px;
+  border-left: 2px solid #6cff9b;
+  background: #1b3223;
+}
+.nextTask > small {
+  font:
+    0.6rem var(--font-mono),
+    monospace;
+  color: #8df7aa;
+  letter-spacing: 0.12em;
+}
+.nextTask > p {
+  font-size: 0.86rem;
+  margin-top: 6px;
+  max-width: 65ch;
+}
+.conversationControls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.conversationControls > .primary {
+  margin-right: auto;
+  min-width: 210px;
+}
+.conversationControls .quickReplies {
+  width: 100%;
+  margin: 0;
+}
+.teamConversation .check {
+  padding: 0;
+  font-size: 0.73rem;
+  color: #b9cfbd;
+}
+.teamConversation > small {
+  font-size: 0.68rem;
+  color: #9db6a4;
+}
+.teamConversation[data-speaking="true"]
+  .conversationProgress
+  i[data-done="true"] {
+  box-shadow: 0 0 10px #6cff9b66;
+}
+.messageReplay {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  width: 100%;
+  background: transparent;
+  color: inherit;
+  border: 1px solid var(--line);
+  padding: 14px 18px;
+  border-radius: 6px;
+  text-align: left;
+  margin: 20px 0;
+}
+.messageReplay .portrait {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+}
+.messageReplay > span:last-child {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.2rem;
+}
+.messageReplay small {
+  display: block;
+  font:
+    0.68rem/1.5 var(--font-body),
+    sans-serif;
+  margin-top: 4px;
+  color: var(--muted);
+}
+.coldReady {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 24px;
+  padding: 25px 20px 50px;
+  border: 1px solid var(--line);
+  background: radial-gradient(ellipse, #28473477, transparent 75%);
+  border-radius: 8px;
+}
+.coldReady h2 {
+  max-width: 20ch;
+  font-size: 2.4rem;
+}
+.coldReady p {
+  max-width: 45ch;
+  color: var(--muted);
+}
+.playbackChoice {
+  display: grid;
+  gap: 8px;
+}
+.playbackChoice button {
+  min-height: 40px;
+  font-size: 0.75rem !important;
+}
+.taskSpotlight {
+  outline: 3px solid var(--signal) !important;
+  outline-offset: 6px;
+  box-shadow: 0 0 0 10px #6cff9b18;
+}
+.callComposer {
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #0d1a12;
+  padding: 24px;
+}
+.callSteps {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 18px;
+}
+.callSteps button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  background: none;
+  border: 0;
+  color: var(--muted);
+  font-size: 0.62rem !important;
+  padding: 6px 2px;
+  line-height: 1.4;
+}
+.callSteps button span {
+  border: 1px solid #45614e;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  font:
+    0.65rem var(--font-mono),
+    monospace;
+}
+.callSteps button[aria-current="step"] {
+  color: var(--signal);
+}
+.callSteps button[aria-current="step"] span {
+  background: var(--signal);
+  color: #082815;
+  border-color: var(--signal);
+}
+.composerQuestion {
+  margin: 24px 0;
+}
+.composerQuestion small {
+  color: #86bf96;
+  font:
+    0.6rem/1.5 var(--font-mono),
+    monospace;
+  letter-spacing: 0.07em;
+}
+.composerQuestion h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+.composerQuestion p {
+  font-size: 0.84rem;
+  color: var(--muted);
+  max-width: 60ch;
+}
+.composerOptions {
+  display: grid;
+  gap: 12px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.composerOptions legend {
+  font-size: 0.72rem;
+  color: var(--muted);
+  padding-bottom: 12px;
+}
+.composerOption {
+  border: 1px solid #365440;
+  border-radius: 5px;
+  background: #15271b;
+  color: #d6e8dc;
+  padding: 18px;
+  text-align: left;
+  display: grid;
+  gap: 5px;
+}
+.composerOption strong {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.composerOption > span {
+  font-size: 0.76rem;
+  color: #a7c2ae;
+}
+.composerOption[aria-pressed="true"] {
+  border-color: #6cff9b;
+  box-shadow: inset 3px 0 #6cff9b;
+  background: #21422c;
+}
+.composerEvidence {
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+  background: #15271b;
+  border: 1px solid #365440;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.composerEvidence input {
+  accent-color: #6cff9b;
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.composerEvidence span {
+  display: grid;
+  gap: 6px;
+}
+.composerEvidence b {
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+.composerEvidence small {
+  font-size: 0.75rem;
+  color: #a7c2ae;
+}
+.callComposer .actionBar {
+  margin-bottom: 0;
+}
+.game[data-day="true"] .taskSpotlight {
+  outline-color: #27643d !important;
+}
+@media (max-width: 700px) {
+  .teamConversation {
+    padding: 22px 18px;
+    gap: 16px;
+    min-height: 0;
+  }
+  .conversationHead {
+    align-items: flex-start;
+  }
+  .conversationHead .eyebrow {
+    font-size: 0.53rem;
+  }
+  .conversationHead .textButton {
+    font-size: 0.65rem !important;
+  }
+  .conversationLine {
+    grid-template-columns: 76px 1fr;
+    gap: 16px;
+  }
+  .conversationLine .portrait[data-large="true"] {
+    width: 76px;
+    height: 76px;
+    min-width: 76px;
+  }
+  .conversationLine h2 {
+    font-size: 1.3rem;
+  }
+  .conversationLine small {
+    font-size: 0.61rem;
+  }
+  .teamConversation .spokenLine {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-top: 14px;
+    min-height: 0;
+  }
+  .conversationControls > .primary {
+    width: 100%;
+    min-width: 0;
+    margin-right: 0;
+  }
+  .conversationControls > .button {
+    flex: 1;
+    min-width: 0;
+    font-size: 0.72rem !important;
+  }
+  .nextTask {
+    padding: 12px 14px;
+  }
+  .nextTask > p {
+    font-size: 0.78rem;
+  }
+  .callComposer {
+    padding: 18px 14px;
+  }
+  .callSteps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 5px;
+  }
+  .callSteps button {
+    flex-direction: row;
+    text-align: left;
+    gap: 6px;
+    font-size: 0.58rem !important;
+  }
+  .callSteps button span {
+    flex-shrink: 0;
+  }
+  .composerQuestion h2 {
+    font-size: 1.7rem;
+  }
+  .composerOption,
+  .composerEvidence {
+    padding: 15px;
+  }
+  .coldReady h2 {
+    font-size: 2rem;
+  }
+  .callComposer .actionBar {
+    gap: 12px;
+  }
+  .playbackChoice {
+    width: 100%;
+  }
+}
+
+.conversationLine > div {
+  min-width: 0;
+}
+@media (max-width: 700px) {
+  .conversationLine > div {
+    display: contents;
+  }
+  .conversationLine > .portrait {
+    grid-column: 1;
+    grid-row: 1/3;
+  }
+  .conversationLine h2,
+  .conversationLine small {
+    grid-column: 2;
+  }
+  .teamConversation .spokenLine {
+    grid-column: 1/-1;
+    width: 100%;
+    max-width: none;
+    margin-top: 4px;
+    min-width: 0;
+  }
+  .conversationLine h2 {
+    align-self: end;
+  }
+  .conversationLine small {
+    align-self: start;
+  }
+}
+
+.game [aria-label="Entering The Sacred No"] h1 {
+  text-align: center;
+}

@@ -15,6 +15,7 @@ type DialogProps = {
   footer?: React.ReactNode;
   placement?: "center" | "bottom";
   dismissible?: boolean;
+  initialFocus?: string;
 };
 
 export function Dialog({
@@ -27,6 +28,7 @@ export function Dialog({
   footer,
   placement = "center",
   dismissible = true,
+  initialFocus,
 }: DialogProps) {
   const panelRef = useRef<HTMLDivElement>(null);
   const restoreRef = useRef<HTMLElement | null>(null);
@@ -47,6 +49,9 @@ export function Dialog({
         "input:not([disabled]), select:not([disabled]), textarea:not([disabled])",
       );
       const focusable =
+        (initialFocus
+          ? panelRef.current?.querySelector<HTMLElement>(initialFocus)
+          : null) ??
         field ??
         panelRef.current?.querySelector<HTMLElement>(
           "button, [href], [tabindex]:not([tabindex='-1'])",
@@ -84,7 +89,7 @@ export function Dialog({
       document.body.classList.remove("no-scroll");
       restoreRef.current?.focus?.();
     };
-  }, [open, dismissible]);
+  }, [open, dismissible, initialFocus]);
 
   if (!open || typeof document === "undefined") return null;
 

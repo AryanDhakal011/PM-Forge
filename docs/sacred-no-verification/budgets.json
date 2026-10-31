@@ -1,24 +1,25 @@
 {
-  "at": "2026-10-31T08:46:20.690Z",
-  "buildId": "e3_fQN-DTX8hwdNTreOMY",
+  "at": "2026-10-31T12:20:31.268Z",
+  "buildId": "Rg3FLOvxyhv__kyQeuXQx",
   "method": "Gzip of client-reference dependency boundary; lazy coverage/Three chunks identified by source signatures. Excludes unrelated Next bootstrap and CSS. This is not a cold-page transfer or frame-time guarantee.",
-  "boundaryGzipBytes": 240197,
+  "boundaryGzipBytes": 246796,
   "lazyCoverageGzipBytes": 180979,
   "castBytes": 215876,
-  "audioBytes": 2893472,
+  "audioBytes": 4023503,
   "boundary": [
-    "/_next/static/chunks/03yhj2-a49nls.js",
+    "/_next/static/chunks/2lm9hziozm92t.js",
     "/_next/static/chunks/3dh95nd-p2hd8.js",
     "/_next/static/chunks/34k3wq8i73w1w.js",
     "/_next/static/chunks/2yhk9aeug-aqs.js",
     "/_next/static/chunks/3qx02_6--t5rb.js",
     "/_next/static/chunks/2m0_zqka9ts1o.js",
-    "/_next/static/chunks/1ww5dzoo5ckaq.js",
+    "/_next/static/chunks/3b4_61lm5q1_m.js",
     "/_next/static/chunks/0zoetdzyhnyl-.js",
     "/_next/static/chunks/38kogmg_8p45n.js",
     "/_next/static/chunks/0acf-ixvp15zy.js",
-    "/_next/static/chunks/19ywed780gys7.js",
-    "/_next/static/chunks/1711xnadjn37n.js"
+    "/_next/static/chunks/27zwd-96884r0.js",
+    "/_next/static/chunks/3nll351duh3zm.js",
+    "/_next/static/chunks/0yasos933_89p.js"
   ],
   "lazy": [
     "/_next/static/chunks/24xfqfrdb-req.js",

@@ -40,6 +40,21 @@ import {
   type Run,
 } from "@/lib/sacred-no/storage";
 import { useVoice } from "./useVoice";
+import TeamConversation from "./TeamConversation";
+import CallComposer, { callSteps } from "./CallComposer";
+import {
+  conversationFor,
+  conversationPreferences,
+  type ConversationPlan,
+} from "@/lib/sacred-no/conversations";
+const Arrival = dynamic(() => import("@/components/projects/Entrance"), {
+  ssr: false,
+});
+const arrivalProject = {
+  id: "sacred-no",
+  title: "The Sacred No",
+  category: "strategy",
+};
 import s from "./SacredNo.module.css";
 const BlastField = dynamic(() => import("./BlastField"), {
   ssr: false,
@@ -150,9 +165,21 @@ export default function SacredNoExperience() {
     mutation = useRef(false),
     proSeen = useRef(new Set<string>()),
     seenCoach = useRef(new Set<string>());
+  const [dialogue, setDialogue] = useState<ConversationPlan | null>(null),
+    [arrival, setArrival] = useState(true),
+    [callStep, setCallStep] = useState(0);
+  const shownScenes = useRef(new Set<string>()),
+    conversationSerial = useRef(0);
   const state = useMemo(() => (run ? replay(run.events) : initial()), [run]),
     beat = content.beats[state.scene],
-    paused = !!panel || !!receiptId || confirmCall || confirmLock || !!preview;
+    effectsPaused =
+      !!panel ||
+      !!receiptId ||
+      confirmCall ||
+      confirmLock ||
+      !!preview ||
+      arrival,
+    paused = effectsPaused || !!dialogue;
   const voice = useVoice(sound, paused),
     last = state.receipts.at(-1),
     quiet = calm || reducedMotion;
@@ -176,9 +203,9 @@ export default function SacredNoExperience() {
       );
       setSound(prefs.sound === true);
       setCalm(prefs.calm === true);
-      setAutoPlay(prefs.autoPlay === true);
+      setAutoPlay(conversationPreferences(prefs).autoPlay);
       setLargeText(prefs.largeText === true);
-      setGuides(prefs.guides !== false);
+      setGuides(conversationPreferences(prefs).guides);
     } catch {}
   }, []);
   useEffect(() => {
@@ -186,7 +213,14 @@ export default function SacredNoExperience() {
     try {
       localStorage.setItem(
         "pmforge.sacred.prefs.v1",
-        JSON.stringify({ sound, calm, autoPlay, largeText, guides }),
+        JSON.stringify({
+          conversationVersion: 2,
+          sound,
+          calm,
+          autoPlay,
+          largeText,
+          guides,
+        }),
       );
     } catch {}
   }, [sound, calm, autoPlay, largeText, guides, loaded]);
@@ -203,8 +237,10 @@ export default function SacredNoExperience() {
         const current = id ? await loadRun(id, owner) : null;
         if (!active) return;
         setRun(current);
+        setDialogue(null);
         setNote(current?.note || "");
         if (current) {
+          setArrival(false);
           const st = replay(current.events);
           setHours(st.SG);
           setSegments(st.segments);
@@ -326,17 +362,16 @@ export default function SacredNoExperience() {
     return () => clearTimeout(t);
   }, [run?.revision]);
   useEffect(() => {
-    if (autoPlay && sound && !paused && run) voice.play(state.lastLine);
-  }, [run?.revision, autoPlay, sound, paused]);
-  useEffect(() => {
     const targets = [
       stage.current,
       ...Array.from(
         root.current?.querySelectorAll("[data-spectacle],[data-shard]") || [],
       ),
     ].filter(Boolean);
-    gsap.getTweensOf(targets).forEach((t) => (paused ? t.pause() : t.resume()));
-  }, [paused]);
+    gsap
+      .getTweensOf(targets)
+      .forEach((t) => (effectsPaused ? t.pause() : t.resume()));
+  }, [effectsPaused]);
   useEffect(() => {
     if (!run?.parentId) {
       setOriginal(null);
@@ -355,7 +390,7 @@ export default function SacredNoExperience() {
   useEffect(() => {
     if (
       !sound ||
-      paused ||
+      effectsPaused ||
       !run ||
       state.effect === "none" ||
       lastSfx.current === `${run.id}:${run.revision}`
@@ -394,7 +429,67 @@ export default function SacredNoExperience() {
     } catch {
       void ctx?.close();
     }
-  }, [run?.revision, sound, paused]);
+  }, [run?.revision, sound, effectsPaused]);
+  function present(plan: Omit<ConversationPlan, "key">) {
+    voice.stop();
+    setDialogue(
+      plan.ids.length
+        ? {
+            ...plan,
+            key: `${run?.id || "new"}:${++conversationSerial.current}`,
+          }
+        : null,
+    );
+  }
+  function focusTask() {
+    setDialogue(null);
+    requestAnimationFrame(() => {
+      const selectors: Record<string, string> = {
+        evidence: `.${s.evidenceGrid} button:not(:disabled)`,
+        resources: 'input[type="range"]',
+        rehearsal: `.${s.lensGrid} button:not(:disabled)`,
+        call: `[data-call-step] .${s.composerOption},[data-call-step] input`,
+        priya: `.${s.resource} .${s.quickReplies} button`,
+        deals: `.${s.dealGrid} .${s.textButton}`,
+        rollout: `.${s.segmentGrid} input`,
+        lock: `.${s.paper} select`,
+        board: `.${s.paper} button`,
+        final: `.${s.quickReplies} button`,
+        debrief: `.${s.conclusion}`,
+      };
+      const link =
+        dialogue?.ids.includes("G-LINK") && state.scene === "evidence";
+      const target =
+        (link
+          ? stage.current?.querySelector<HTMLElement>(
+              "[data-claim-board] button:not(:disabled)",
+            )
+          : null) ||
+        stage.current?.querySelector<HTMLElement>(
+          selectors[state.scene] || "button:not(:disabled)",
+        ) ||
+        stage.current;
+      if (!target) return;
+      if (!target.matches("button,input,select,a")) target.tabIndex = -1;
+      target.scrollIntoView({
+        block: "center",
+        behavior: quiet ? "instant" : "smooth",
+      });
+      target.focus({ preventScroll: true });
+      target.classList.add(s.taskSpotlight);
+      setTimeout(() => target.classList.remove(s.taskSpotlight), 2400);
+    });
+  }
+  useEffect(() => {
+    if (!run || !loaded || effectsPaused || dialogue) return;
+    const key = `${run.id}:${state.scene}`;
+    if (shownScenes.current.has(key)) return;
+    shownScenes.current.add(key);
+    present(conversationFor(state, undefined, guides));
+  }, [run?.id, state.scene, loaded, effectsPaused, dialogue, guides]);
+  useEffect(() => {
+    setCallStep(0);
+  }, [run?.id, state.scene]);
   function telemetry(name: string, detail: Record<string, unknown> = {}) {
     try {
       const key = `pmforge.sacred.analytics.v1:${owner}`;
@@ -454,6 +549,8 @@ export default function SacredNoExperience() {
         setLockPosition(nextState.plan === "ship" ? "guarded" : nextState.plan);
       }
       if (action.type === "LOCK") setConfirmLock(false);
+      shownScenes.current.add(`${run.id}:${nextState.scene}`);
+      present(conversationFor(nextState, action, guides));
     } catch (e) {
       setError(
         e instanceof Error
@@ -474,6 +571,7 @@ export default function SacredNoExperience() {
       await saveRun(r);
       history.pushState(null, "", `?run=${r.id}`);
       setRun(r);
+      setDialogue(null);
       setNote("");
       setDraft(defaultDraft);
       setPanel(null);
@@ -533,6 +631,19 @@ export default function SacredNoExperience() {
     }
   }
   const open = (next: typeof panel) => {
+    if (next === "help") {
+      const plan = conversationFor(state);
+      present(
+        state.scene === "call"
+          ? {
+              ...plan,
+              ids: [callSteps[callStep].line],
+              task: callSteps[callStep].help,
+            }
+          : plan,
+      );
+      return;
+    }
     voice.stop();
     setPanel(next);
     if (next === "case" || next === "evidence")
@@ -540,8 +651,12 @@ export default function SacredNoExperience() {
     if (next === "pause") telemetry("pause");
   };
   const speak = (id: string) => {
-    setVoiceId(id);
-    voice.play(id);
+    present({
+      ...conversationFor(state),
+      title: "Your team · conversation",
+      ids: [id],
+      reply: false,
+    });
   };
   const chooseEvidence = (id: string) =>
     setDraft((d) => ({
@@ -564,36 +679,6 @@ export default function SacredNoExperience() {
         !callStrong &&
         ["no", "guarded"].includes(draft.position));
   const lookup = (id: string) => content.evidence.find((e) => e.id === id);
-  const reaction = (
-    <div className={s.reaction} key={line.id}>
-      <Portrait
-        person={line.speaker}
-        mood={
-          line.emotion === "concerned"
-            ? "annoyed"
-            : line.emotion === "approving" || line.emotion === "reassured"
-              ? "approving"
-              : "thinking"
-        }
-      />
-      <div>
-        <small>
-          {line.speaker}{" "}
-          <span>
-            · {content.people.find((p) => p.id === line.speaker)?.role}
-          </span>
-        </small>
-        <p>{line.text}</p>
-        <button
-          className={s.textButton}
-          disabled={!sound || busy}
-          onClick={() => voice.play(line.id)}
-        >
-          {voice.playing ? "Replay recording" : "▶ Play voice note"}
-        </button>
-      </div>
-    </div>
-  );
   const selectedReceipt = state.receipts.find((r) => r.id === receiptId);
   const major = state.receipts.filter((r) =>
     [
@@ -614,6 +699,13 @@ export default function SacredNoExperience() {
       ref={root}
       className={s.game}
       data-sacred-scene={state.scene}
+      style={
+        {
+          "--case-bg": "#07090a",
+          "--case-ink": "#d6e8dc",
+          "--case-accent": "#6cff9b",
+        } as CSSProperties
+      }
       data-calm={quiet}
       data-large={largeText}
       data-day={["board", "final", "debrief"].includes(state.scene) && !!run}
@@ -637,7 +729,19 @@ export default function SacredNoExperience() {
             />
           ))}
       </div>
-      <header className={s.topbar}>
+      {loaded && arrival && (
+        <Arrival
+          project={arrivalProject}
+          onDone={() => setArrival(false)}
+          skipImmediately
+          calm={quiet}
+          copy={[
+            "A promise already made.",
+            "Now decide what you can stand behind.",
+          ]}
+        />
+      )}
+      <header className={s.topbar} inert={arrival}>
         <Link href="/app/projects" onClick={() => telemetry("exit")}>
           ← Projects
         </Link>
@@ -692,11 +796,11 @@ export default function SacredNoExperience() {
         </div>
       )}
       {!loaded ? (
-        <main className={s.entrance}>
+        <main className={s.entrance} inert={arrival}>
           <p>Opening your workspace…</p>
         </main>
       ) : !run ? (
-        <main className={s.entrance}>
+        <main className={s.entrance} inert={arrival}>
           <div className={s.entryCopy}>
             <p className={s.eyebrow}>
               KETTLE · A FICTIONAL STARTUP · PROJECT 02
@@ -724,9 +828,26 @@ export default function SacredNoExperience() {
               <Button primary onClick={() => void start()}>
                 Open the message ↗
               </Button>
-              <Button onClick={() => setSound(!sound)}>
-                {sound ? "Sound + captions" : "Captions only"}
-              </Button>
+              <div
+                className={s.playbackChoice}
+                role="group"
+                aria-label="Conversation playback"
+              >
+                <button
+                  className={sound ? s.primary : s.button}
+                  aria-pressed={sound}
+                  onClick={() => setSound(true)}
+                >
+                  Hear the team · sound + captions
+                </button>
+                <button
+                  className={!sound ? s.primary : s.button}
+                  aria-pressed={!sound}
+                  onClick={() => setSound(false)}
+                >
+                  Read captions only
+                </button>
+              </div>
             </div>
             <small>
               {content.notice}. About 40 minutes intended; actual play time is
@@ -870,74 +991,21 @@ export default function SacredNoExperience() {
                 </div>
               )}
               {state.scene === "cold" && (
-                <>
-                  <div className={s.roleCard}>
-                    <small>YOUR ROLE</small>
-                    <p>You are Head of Product. You own what ships.</p>
-                    <p>
-                      Kian can overrule you. Evidence and relationships are your
-                      levers.
-                    </p>
-                  </div>
-                  {reaction}
-                  <div className={s.quickReplies}>
-                    {(
-                      [
-                        ["on", "On it."],
-                        ["ask", "Walk me through what you promised."],
-                        ["call", "Call me."],
-                      ] as const
-                    ).map(([reply, label]) => (
-                      <Button
-                        key={reply}
-                        primary={reply === "ask"}
-                        onClick={() => void commit({ type: "REPLY", reply })}
-                      >
-                        {label}
-                      </Button>
-                    ))}
-                  </div>
-                  <div className={s.incoming}>
-                    <div>
-                      <Portrait person="Priya" />
-                      <p>
-                        <b>Priya · needs a safe release</b>
-                        <span>
-                          {
-                            content.lines.find((l) => l.id === "OPEN-PRIYA")
-                              ?.text
-                          }
-                        </span>
-                        <button
-                          className={s.textButton}
-                          onClick={() => speak("OPEN-PRIYA")}
-                          disabled={!sound}
-                        >
-                          ▶ Voice note
-                        </button>
-                      </p>
-                    </div>
-                    <div>
-                      <Portrait person="Tess" />
-                      <p>
-                        <b>Tess · needs a partner promise</b>
-                        <span>
-                          {
-                            content.lines.find((l) => l.id === "OPEN-TESS")
-                              ?.text
-                          }
-                        </span>
-                        <button
-                          className={s.textButton}
-                          onClick={() => speak("OPEN-TESS")}
-                          disabled={!sound}
-                        >
-                          ▶ Voicemail
-                        </button>
-                      </p>
-                    </div>
-                  </div>
-                </>
+                <div className={s.coldReady}>
+                  <span className={s.eyebrow}>INCOMING / KIAN MERCER</span>
+                  <Portrait person="Kian" large />
+                  <h2>A promise has already left the room.</h2>
+                  <p>
+                    You are Head of Product. Hear what the team needs, then
+                    choose your reply.
+                  </p>
+                  <Button
+                    primary
+                    onClick={() => present(conversationFor(state))}
+                  >
+                    Answer the incoming message →
+                  </Button>
+                </div>
               )}
               {state.scene === "evidence" && (
                 <>
@@ -1170,91 +1238,24 @@ export default function SacredNoExperience() {
                       </h2>
                     </div>
                   </div>
-                  <div className={s.builder}>
-                    <Choice
-                      label="1 / Position"
-                      value={draft.position}
-                      options={content.positions}
-                      onChange={(position) =>
-                        setDraft({ ...draft, position: position as Position })
-                      }
-                    />
-                    <fieldset>
-                      <legend>2 / Because · up to two collected sources</legend>
-                      {state.inspected.length ? (
-                        state.inspected.map((id) => (
-                          <label className={s.check} key={id}>
-                            <input
-                              type="checkbox"
-                              checked={draft.evidence.includes(id)}
-                              onChange={() => chooseEvidence(id)}
-                              disabled={
-                                !draft.evidence.includes(id) &&
-                                draft.evidence.length >= 2
-                              }
-                            />
-                            {lookup(id)?.title}
-                          </label>
-                        ))
-                      ) : (
-                        <p>
-                          No evidence collected. That gap will remain in your
-                          answer.
-                        </p>
-                      )}
-                    </fieldset>
-                    <Choice
-                      label="3 / Instead"
-                      value={draft.alternative}
-                      options={content.alternatives}
-                      onChange={(alternative) =>
-                        setDraft({
-                          ...draft,
-                          alternative: alternative as Draft["alternative"],
-                        })
-                      }
-                    />
-                    <Choice
-                      label="4 / I need from you"
-                      value={draft.ask}
-                      options={content.asks}
-                      onChange={(ask) => setDraft({ ...draft, ask })}
-                    />
-                    <Choice
-                      label="5 / By when"
-                      value={draft.deadline}
-                      options={content.deadlines}
-                      onChange={(deadline) => setDraft({ ...draft, deadline })}
-                    />
-                    <TonePicker
-                      value={draft.tone}
-                      onChange={(tone) => setDraft({ ...draft, tone })}
-                    />
-                  </div>
-                  <div className={s.sentence}>
-                    <span className={s.eyebrow}>YOUR EXACT WORDS</span>
-                    <p>{sentence(draft)}</p>
-                  </div>
-                  <div className={s.previewPips}>
-                    <span aria-hidden="true">
-                      {callCave
-                        ? "● ○ ○"
-                        : callStrong && draft.alternative !== "none"
-                          ? "● ● ●"
-                          : "● ● ○"}
-                    </span>
-                    <p>
-                      {callCave
-                        ? "He may hear an unguarded promise."
-                        : callStrong && draft.alternative !== "none"
-                          ? "A decision with relevant evidence and a replacement."
-                          : "There is a gap he can push on."}{" "}
-                      Preview, not a guaranteed outcome.
-                    </p>
-                  </div>
-                  <Button primary onClick={() => setConfirmCall(true)}>
-                    Review before saying it →
-                  </Button>
+                  <CallComposer
+                    draft={draft}
+                    inspected={state.inspected}
+                    step={callStep}
+                    busy={busy}
+                    onChange={setDraft}
+                    onReview={() => setConfirmCall(true)}
+                    onStep={(step) => {
+                      setCallStep(step);
+                      present({
+                        ...conversationFor(state),
+                        ids: [callSteps[step].line],
+                        task: callSteps[step].help,
+                        finish: "Show me this part",
+                        reply: false,
+                      });
+                    }}
+                  />
                 </>
               )}
               {state.scene === "priya" && (
@@ -1860,23 +1861,17 @@ export default function SacredNoExperience() {
                   </small>
                 </>
               )}
-              {run && state.scene !== "cold" && state.scene !== "debrief" && (
-                <section
-                  className={s.responseArea}
-                  aria-label="Latest response"
-                  aria-live="polite"
-                >
-                  {reaction}
-                  {last && (
-                    <button
-                      className={s.because}
-                      onClick={() => setReceiptId(last.id)}
-                    >
-                      Because: {last.because} <span>See {last.id} ↗</span>
-                    </button>
-                  )}
-                </section>
-              )}
+              {run &&
+                state.scene !== "cold" &&
+                state.scene !== "debrief" &&
+                last && (
+                  <button
+                    className={s.textButton}
+                    onClick={() => speak(last.line)}
+                  >
+                    ↻ Reopen the team’s latest response
+                  </button>
+                )}
               {voice.status && (
                 <p role="status" className={s.muted}>
                   {voice.status}
@@ -1984,6 +1979,22 @@ export default function SacredNoExperience() {
           <p>{content.concepts[pro as keyof typeof content.concepts]}</p>
           <button onClick={() => setPro("")}>Dismiss</button>
         </div>
+      )}
+      {dialogue && run && (
+        <TeamConversation
+          key={dialogue.key}
+          plan={dialogue}
+          sound={sound}
+          autoAdvance={autoPlay}
+          paused={effectsPaused}
+          calm={quiet}
+          busy={busy}
+          onSound={() => setSound((value) => !value)}
+          onAutoAdvance={setAutoPlay}
+          onPause={() => open("pause")}
+          onDone={focusTask}
+          onReply={(reply) => void commit({ type: "REPLY", reply })}
+        />
       )}
       <Dialog
         open={!!panel}
@@ -2109,7 +2120,7 @@ export default function SacredNoExperience() {
                   checked={autoPlay}
                   onChange={(e) => setAutoPlay(e.target.checked)}
                 />
-                Play response recordings automatically after my choices
+                Advance conversations after the recording finishes
               </label>
               <label className={s.check}>
                 <input
@@ -2524,7 +2535,6 @@ function Capacity({ state }: { state: State }) {
 function Message({
   person,
   id,
-  sound,
   onPlay,
 }: {
   person: string;
@@ -2533,22 +2543,16 @@ function Message({
   onPlay: (id: string) => void;
 }) {
   return (
-    <div className={s.message}>
+    <button className={s.messageReplay} onClick={() => onPlay(id)}>
       <Portrait person={person} />
-      <div>
+      <span>
+        Speak with {person}
         <small>
-          {person} / {content.people.find((p) => p.id === person)?.role}
+          {content.people.find((p) => p.id === person)?.role} · reopen
+          conversation ↗
         </small>
-        <p>{content.lines.find((l) => l.id === id)?.text}</p>
-        <button
-          className={s.textButton}
-          disabled={!sound}
-          onClick={() => onPlay(id)}
-        >
-          ▶ Play voice note
-        </button>
-      </div>
-    </div>
+      </span>
+    </button>
   );
 }
 function ReceiptCallback(

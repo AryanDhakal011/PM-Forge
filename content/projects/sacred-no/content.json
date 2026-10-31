@@ -860,6 +860,257 @@
       "text": "Safeguards are ready. The live feature is not. We cannot demonstrate it.",
       "emotion": "neutral",
       "requires": []
+    },
+    {
+      "id": "G-EVIDENCE",
+      "speaker": "Priya",
+      "text": "Before you answer him, find out which promises the system can keep.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "G-LINK",
+      "speaker": "Noor",
+      "text": "Open a source. Select it, then tap the claim it actually tests.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "G-HOURS",
+      "speaker": "Priya",
+      "text": "Split ten engineer-hours. Safeguards help, but the feature still needs building.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "G-REHEARSE",
+      "speaker": "Priya",
+      "text": "Try an argument here. This rehearsal does not commit you to anything.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "G-CALL",
+      "speaker": "Priya",
+      "text": "I will help you build the answer. First, choose a clear position.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "G-CALL-EVIDENCE",
+      "speaker": "Priya",
+      "text": "Then connect your evidence and offer something Kian can take to the board.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "G-MORNING",
+      "speaker": "Priya",
+      "text": "Give me one clear instruction: isolate the queue, or keep the current allocation.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "G-DEALS",
+      "speaker": "Tess",
+      "text": "Read what each promise costs. Then tell me what you can commit to.",
+      "emotion": "engaged",
+      "requires": []
+    },
+    {
+      "id": "G-ROLLOUT",
+      "speaker": "Noor",
+      "text": "Choose the audience. A smaller release still has payments and people at risk.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "G-LOCK",
+      "speaker": "Priya",
+      "text": "Check the plan, evidence, and partner promises together. Then lock the proposal.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "G-FINAL",
+      "speaker": "Lena",
+      "text": "Own the result. Tell us what you will do next, and who decides.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "G-DEBRIEF",
+      "speaker": "Lena",
+      "text": "Start with what your choices caused. You can inspect the full record later.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "G-POSITION",
+      "speaker": "Priya",
+      "text": "What are you actually recommending? Choose that first.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "G-BECAUSE",
+      "speaker": "Priya",
+      "text": "Which findings support that recommendation? Choose up to two sources you investigated.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "G-INSTEAD",
+      "speaker": "Priya",
+      "text": "If we change the launch, what can Kian show instead?",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "G-ASK",
+      "speaker": "Priya",
+      "text": "What do you need from him to make that alternative real?",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "G-WHEN",
+      "speaker": "Priya",
+      "text": "Give him a checkpoint. When will you report back?",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "G-TONE",
+      "speaker": "Priya",
+      "text": "Now choose your tone. Warm can still be clear. Hedged can become permission.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "G-LINK-BREAK",
+      "speaker": "Noor",
+      "text": "That evidence challenges the claim. The finding is saved in your case file.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "G-LINK-SUPPORT",
+      "speaker": "Noor",
+      "text": "That supports the claim. Demand matters, even when the release is risky.",
+      "emotion": "thinking",
+      "requires": []
+    },
+    {
+      "id": "G-LINK-MISS",
+      "speaker": "Noor",
+      "text": "That source does not test this claim. Try a different connection.",
+      "emotion": "thinking",
+      "requires": []
     }
-  ]
+  ],
+  "conversations": {
+    "cold": {
+      "title": "Reply to the promise",
+      "lines": [
+        "OPEN",
+        "OPEN-PRIYA",
+        "OPEN-TESS"
+      ],
+      "finish": "Choose your reply",
+      "task": "Kian wants a board win. Priya needs safety. Tess needs a partner promise."
+    },
+    "evidence": {
+      "title": "Test the promise",
+      "lines": [
+        "G-EVIDENCE",
+        "G-LINK"
+      ],
+      "finish": "Show me the sources",
+      "task": "Open a source below. Then select its card and tap the claim it tests."
+    },
+    "resources": {
+      "title": "Give engineering a boundary",
+      "lines": [
+        "G-HOURS"
+      ],
+      "finish": "Set the allocation",
+      "task": "Move the safeguard slider. Watch capacity and the feature hours left."
+    },
+    "rehearsal": {
+      "title": "Try it before the real call",
+      "lines": [
+        "G-REHEARSE"
+      ],
+      "finish": "Try an argument",
+      "task": "Choose an argument to hear Kian’s rehearsal response. You can also skip rehearsal."
+    },
+    "call": {
+      "title": "Build your answer with Priya",
+      "lines": [
+        "G-CALL",
+        "G-CALL-EVIDENCE"
+      ],
+      "finish": "Compose the first sentence",
+      "task": "Choose one part at a time. Review the complete answer before saying it."
+    },
+    "priya": {
+      "title": "A clear instruction for Priya",
+      "lines": [
+        "G-MORNING"
+      ],
+      "finish": "Make the engineering call",
+      "task": "Choose queue isolation or keep the allocation. The earlier promise is in your receipt."
+    },
+    "deals": {
+      "title": "Negotiate with Tess",
+      "lines": [
+        "OPEN-TESS",
+        "G-DEALS"
+      ],
+      "finish": "Show me her offers",
+      "task": "Open a deal’s cost, then accept or keep negotiating. You can refuse every deal."
+    },
+    "rollout": {
+      "title": "Make the blast radius concrete",
+      "lines": [
+        "G-ROLLOUT"
+      ],
+      "finish": "Choose the audience",
+      "task": "Toggle cohorts below. Compare forecast viewers AND payment attempts with their limits."
+    },
+    "lock": {
+      "title": "One honest board proposal",
+      "lines": [
+        "G-LOCK"
+      ],
+      "finish": "Review the proposal",
+      "task": "Choose a plan, cite collected evidence, and check the commitments you cannot erase."
+    },
+    "board": {
+      "title": "The board is ready",
+      "lines": [
+        "BOARD-RECEIPT",
+        "BOARD-OPEN"
+      ],
+      "finish": "Present the plan",
+      "task": "Start the demonstration or present your alternative. Your actual commitments determine what happens."
+    },
+    "final": {
+      "title": "Make the last call",
+      "lines": [
+        "G-FINAL"
+      ],
+      "finish": "Answer the board",
+      "task": "Own the result, defend it with a reversal condition, or name a rollback owner."
+    },
+    "debrief": {
+      "title": "Your choices, made visible",
+      "lines": [
+        "G-DEBRIEF"
+      ],
+      "finish": "Read my conclusion",
+      "task": "Read the three causal links first. Reflection and the detailed trace are optional."
+    }
+  }
 }

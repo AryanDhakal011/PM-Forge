@@ -17,7 +17,7 @@ export function useVoice(sound: boolean, paused: boolean) {
     setPlaying(false);
   }, []);
   const play = useCallback(
-    (id: string) => {
+    (id: string, onEnded?: () => void) => {
       stop();
       if (!sound) {
         setStatus("Sound is off. Captions remain available.");
@@ -35,6 +35,7 @@ export function useVoice(sound: boolean, paused: boolean) {
         if (g === generation.current) {
           setPlaying(false);
           setStatus("");
+          onEnded?.();
         }
       };
       a.onerror = () => {

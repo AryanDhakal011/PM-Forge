@@ -1,12 +1,40 @@
 {
-  "at": "2026-10-31T08:42:29.714Z",
+  "at": "2026-10-31T12:13:37.002Z",
   "checks": [
     {
-      "label": "entrance fits 390px",
+      "label": "trademark entrance is immediately skippable",
       "pass": true
     },
     {
-      "label": "entrance fits 320px",
+      "label": "entrance fits 390px including dialog",
+      "pass": true
+    },
+    {
+      "label": "entrance fits 320px including dialog",
+      "pass": true
+    },
+    {
+      "label": "Kian opens the sequential conversation",
+      "pass": true
+    },
+    {
+      "label": "captions-only dialogue waits for Next",
+      "pass": true
+    },
+    {
+      "label": "pause resumes the same conversation line",
+      "pass": true
+    },
+    {
+      "label": "conversation controls receive keyboard focus",
+      "pass": true
+    },
+    {
+      "label": "auto-advance waits while recording is playing",
+      "pass": true
+    },
+    {
+      "label": "actual audio ended advances the conversation",
       "pass": true
     },
     {
@@ -14,11 +42,15 @@
       "pass": true
     },
     {
-      "label": "cold fits 390px",
+      "label": "cold fits 390px including dialog",
       "pass": true
     },
     {
-      "label": "cold fits 320px",
+      "label": "cold fits 320px including dialog",
+      "pass": true
+    },
+    {
+      "label": "reply triggers immediate foreground guidance",
       "pass": true
     },
     {
@@ -26,23 +58,27 @@
       "pass": true
     },
     {
-      "label": "evidence fits 390px",
+      "label": "evidence fits 390px including dialog",
       "pass": true
     },
     {
-      "label": "evidence fits 320px",
+      "label": "evidence fits 320px including dialog",
       "pass": true
     },
     {
-      "label": "call fits 390px",
+      "label": "call builder presents one guided part at a time",
       "pass": true
     },
     {
-      "label": "call fits 320px",
+      "label": "call fits 390px including dialog",
       "pass": true
     },
     {
-      "label": "strong refusal returns a specific Priya callback",
+      "label": "call fits 320px including dialog",
+      "pass": true
+    },
+    {
+      "label": "strong refusal returns a specific spoken Priya callback",
       "pass": true
     },
     {
@@ -58,11 +94,11 @@
       "pass": true
     },
     {
-      "label": "rollout fits 390px",
+      "label": "rollout fits 390px including dialog",
       "pass": true
     },
     {
-      "label": "rollout fits 320px",
+      "label": "rollout fits 320px including dialog",
       "pass": true
     },
     {
@@ -70,11 +106,11 @@
       "pass": true
     },
     {
-      "label": "board fits 390px",
+      "label": "board fits 390px including dialog",
       "pass": true
     },
     {
-      "label": "board fits 320px",
+      "label": "board fits 320px including dialog",
       "pass": true
     },
     {
@@ -90,11 +126,11 @@
       "pass": true
     },
     {
-      "label": "debrief fits 390px",
+      "label": "debrief fits 390px including dialog",
       "pass": true
     },
     {
-      "label": "debrief fits 320px",
+      "label": "debrief fits 320px including dialog",
       "pass": true
     },
     {
@@ -114,11 +150,11 @@
       "pass": true
     },
     {
-      "label": "failure fits 390px",
+      "label": "failure fits 390px including dialog",
       "pass": true
     },
     {
-      "label": "failure fits 320px",
+      "label": "failure fits 320px including dialog",
       "pass": true
     },
     {
@@ -477,6 +513,111 @@
       "id": "DEMO-UNREADY",
       "played": true,
       "duration": 4.702018
+    },
+    {
+      "id": "G-EVIDENCE",
+      "played": true,
+      "duration": 4.263968
+    },
+    {
+      "id": "G-LINK",
+      "played": true,
+      "duration": 4.441973
+    },
+    {
+      "id": "G-HOURS",
+      "played": true,
+      "duration": 5.181293
+    },
+    {
+      "id": "G-REHEARSE",
+      "played": true,
+      "duration": 4.329342
+    },
+    {
+      "id": "G-CALL",
+      "played": true,
+      "duration": 4.157302
+    },
+    {
+      "id": "G-CALL-EVIDENCE",
+      "played": true,
+      "duration": 4.5
+    },
+    {
+      "id": "G-MORNING",
+      "played": true,
+      "duration": 5.394626
+    },
+    {
+      "id": "G-DEALS",
+      "played": true,
+      "duration": 4.134671
+    },
+    {
+      "id": "G-ROLLOUT",
+      "played": true,
+      "duration": 4.83
+    },
+    {
+      "id": "G-LOCK",
+      "played": true,
+      "duration": 5.411973
+    },
+    {
+      "id": "G-FINAL",
+      "played": true,
+      "duration": 4.018639
+    },
+    {
+      "id": "G-DEBRIEF",
+      "played": true,
+      "duration": 4.690635
+    },
+    {
+      "id": "G-POSITION",
+      "played": true,
+      "duration": 3.305351
+    },
+    {
+      "id": "G-BECAUSE",
+      "played": true,
+      "duration": 5.76
+    },
+    {
+      "id": "G-INSTEAD",
+      "played": true,
+      "duration": 3.477347
+    },
+    {
+      "id": "G-ASK",
+      "played": true,
+      "duration": 3.444671
+    },
+    {
+      "id": "G-WHEN",
+      "played": true,
+      "duration": 3.005306
+    },
+    {
+      "id": "G-TONE",
+      "played": true,
+      "duration": 4.948005
+    },
+    {
+      "id": "G-LINK-BREAK",
+      "played": true,
+      "duration": 4.786009
+    },
+    {
+      "id": "G-LINK-SUPPORT",
+      "played": true,
+      "duration": 4.605306
+    },
+    {
+      "id": "G-LINK-MISS",
+      "played": true,
+      "duration": 3.986644
     }
   ]
 }
