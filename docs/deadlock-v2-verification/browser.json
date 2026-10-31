@@ -1,6 +1,18 @@
 {
-  "at": "2026-10-30T18:58:43.707Z",
+  "at": "2026-10-31T05:26:03.186Z",
   "checks": [
+    {
+      "label": "all twelve project cards have a full-surface native link",
+      "pass": true
+    },
+    {
+      "label": "clicking the card title opens project-deadlock",
+      "pass": true
+    },
+    {
+      "label": "clicking the card title opens project-sacred-no",
+      "pass": true
+    },
     {
       "label": "intro-silent fits 390px",
       "pass": true,
@@ -66,6 +78,22 @@
       }
     },
     {
+      "label": "portraits remain static without facial overlays",
+      "pass": true
+    },
+    {
+      "label": "footage shortcut shows the actual crossing and explains the concern",
+      "pass": true
+    },
+    {
+      "label": "new evidence highlights the case file",
+      "pass": true
+    },
+    {
+      "label": "case file opens collected evidence",
+      "pass": true
+    },
+    {
       "label": "discovery appears immediately without a pin screen",
       "pass": true
     },
@@ -107,6 +135,10 @@
     },
     {
       "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "team reaction names the actual plan before explaining the response",
       "pass": true
     },
     {
@@ -190,6 +222,14 @@
       "pass": true
     },
     {
+      "label": "debrief opens with a brief conclusion and keeps chapter assessments collapsed",
+      "pass": true
+    },
+    {
+      "label": "decision trail remains available on demand",
+      "pass": true
+    },
+    {
       "label": "final debrief reuses three chapter review cards",
       "pass": true
     },
@@ -211,6 +251,22 @@
     },
     {
       "label": "sound all nine introductions and seven briefing lines appear exactly in order",
+      "pass": true
+    },
+    {
+      "label": "portraits remain static without facial overlays",
+      "pass": true
+    },
+    {
+      "label": "footage shortcut shows the actual crossing and explains the concern",
+      "pass": true
+    },
+    {
+      "label": "new evidence highlights the case file",
+      "pass": true
+    },
+    {
+      "label": "case file opens collected evidence",
       "pass": true
     },
     {
@@ -239,6 +295,10 @@
     },
     {
       "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "team reaction names the actual plan before explaining the response",
       "pass": true
     },
     {
@@ -290,6 +350,14 @@
       "pass": true
     },
     {
+      "label": "debrief opens with a brief conclusion and keeps chapter assessments collapsed",
+      "pass": true
+    },
+    {
+      "label": "decision trail remains available on demand",
+      "pass": true
+    },
+    {
       "label": "final debrief reuses three chapter review cards",
       "pass": true
     },
@@ -326,7 +394,7 @@
       "pass": true
     },
     {
-      "label": "all 185 pre-rendered audio files decode and play to ended",
+      "label": "all 191 pre-rendered audio files decode and play to ended",
       "pass": true
     },
     {
@@ -395,12 +463,12 @@
     },
     {
       "id": "INT-03",
-      "duration": 5.988005,
+      "duration": 5.593333,
       "played": true
     },
     {
       "id": "INT-04",
-      "duration": 7.337347,
+      "duration": 8.383265,
       "played": true
     },
     {
@@ -410,22 +478,22 @@
     },
     {
       "id": "INT-06",
-      "duration": 5.287959,
+      "duration": 6.119977,
       "played": true
     },
     {
       "id": "INT-07",
-      "duration": 2.806009,
+      "duration": 4.453333,
       "played": true
     },
     {
       "id": "INT-08",
-      "duration": 1.315306,
+      "duration": 2.292676,
       "played": true
     },
     {
       "id": "INT-09",
-      "duration": 3.168685,
+      "duration": 5.866667,
       "played": true
     },
     {
@@ -475,12 +543,12 @@
     },
     {
       "id": "GUIDE-CONSEQUENCE1",
-      "duration": 4.188685,
+      "duration": 6.503968,
       "played": true
     },
     {
       "id": "GUIDE-DATA",
-      "duration": 3.945556,
+      "duration": 6.605351,
       "played": true
     },
     {
@@ -505,7 +573,7 @@
     },
     {
       "id": "DISC-E1",
-      "duration": 3.06068,
+      "duration": 8.238005,
       "played": true
     },
     {
@@ -530,27 +598,27 @@
     },
     {
       "id": "MISMATCH-DEV-1",
-      "duration": 5.281338,
+      "duration": 4.285147,
       "played": true
     },
     {
       "id": "MISMATCH-DEV-2",
-      "duration": 2.963333,
+      "duration": 5.257347,
       "played": true
     },
     {
       "id": "MISMATCH-DEV-3",
-      "duration": 3.182018,
+      "duration": 4.045351,
       "played": true
     },
     {
       "id": "MISMATCH-DEV-4",
-      "duration": 4.061338,
+      "duration": 5.191338,
       "played": true
     },
     {
       "id": "MISMATCH-DEV-5",
-      "duration": 2.477347,
+      "duration": 4.254626,
       "played": true
     },
     {
@@ -595,12 +663,12 @@
     },
     {
       "id": "MATCH-DEV-1",
-      "duration": 3.304671,
+      "duration": 4.071338,
       "played": true
     },
     {
       "id": "MATCH-DEV-2",
-      "duration": 2.088685,
+      "duration": 3.545351,
       "played": true
     },
     {
@@ -625,7 +693,7 @@
     },
     {
       "id": "EVENT-2",
-      "duration": 2.578639,
+      "duration": 8.444014,
       "played": true
     },
     {
@@ -635,7 +703,7 @@
     },
     {
       "id": "EVENT-4",
-      "duration": 2.652676,
+      "duration": 9.623311,
       "played": true
     },
     {
@@ -645,7 +713,37 @@
     },
     {
       "id": "LETTER-01",
-      "duration": 8.40263,
+      "duration": 10.179342,
+      "played": true
+    },
+    {
+      "id": "EVIDENCE-SPEED-1",
+      "duration": 5.322018,
+      "played": true
+    },
+    {
+      "id": "EVIDENCE-SPEED-2",
+      "duration": 3.446009,
+      "played": true
+    },
+    {
+      "id": "EVIDENCE-RECOVERY-1",
+      "duration": 3.762698,
+      "played": true
+    },
+    {
+      "id": "EVIDENCE-RECOVERY-2",
+      "duration": 3.458685,
+      "played": true
+    },
+    {
+      "id": "EVIDENCE-LEARNING-1",
+      "duration": 3.649297,
+      "played": true
+    },
+    {
+      "id": "EVIDENCE-LEARNING-2",
+      "duration": 4.062018,
       "played": true
     },
     {
@@ -655,7 +753,7 @@
     },
     {
       "id": "CO-02",
-      "duration": 5.167347,
+      "duration": 7.287302,
       "played": true
     },
     {
@@ -680,12 +778,12 @@
     },
     {
       "id": "FW-01a",
-      "duration": 3.966009,
+      "duration": 6.192676,
       "played": true
     },
     {
       "id": "FW-01b",
-      "duration": 3.083515,
+      "duration": 4.21,
       "played": true
     },
     {
@@ -695,12 +793,12 @@
     },
     {
       "id": "FW-02b",
-      "duration": 2.195351,
+      "duration": 5.118005,
       "played": true
     },
     {
       "id": "FW-03a",
-      "duration": 3.198005,
+      "duration": 6.808005,
       "played": true
     },
     {
@@ -740,7 +838,7 @@
     },
     {
       "id": "FW-08",
-      "duration": 2.302018,
+      "duration": 6.968005,
       "played": true
     },
     {
@@ -755,7 +853,7 @@
     },
     {
       "id": "T-R-DEV",
-      "duration": 2.945306,
+      "duration": 7.31068,
       "played": true
     },
     {
@@ -770,12 +868,12 @@
     },
     {
       "id": "T-S-DEV",
-      "duration": 2.705964,
+      "duration": 7.076009,
       "played": true
     },
     {
       "id": "T-B-DEV",
-      "duration": 3.113333,
+      "duration": 6.27263,
       "played": true
     },
     {
@@ -785,7 +883,7 @@
     },
     {
       "id": "T-D-DEV",
-      "duration": 2.680635,
+      "duration": 4.919977,
       "played": true
     },
     {
@@ -810,7 +908,7 @@
     },
     {
       "id": "T-EV-NONE",
-      "duration": 1.383311,
+      "duration": 4.34068,
       "played": true
     },
     {
@@ -825,27 +923,27 @@
     },
     {
       "id": "C1-ALIGNED",
-      "duration": 4.281338,
+      "duration": 8.052676,
       "played": true
     },
     {
       "id": "C1-ROBOTICS",
-      "duration": 3.746667,
+      "duration": 9.736667,
       "played": true
     },
     {
       "id": "C1-SOFTWARE",
-      "duration": 3.089342,
+      "duration": 8.595351,
       "played": true
     },
     {
       "id": "C1-STALLED",
-      "duration": 3.379342,
+      "duration": 8.647596,
       "played": true
     },
     {
       "id": "C1-MIXED",
-      "duration": 2.994014,
+      "duration": 8.883333,
       "played": true
     },
     {
@@ -870,7 +968,7 @@
     },
     {
       "id": "O2-S1",
-      "duration": 3.695964,
+      "duration": 7.443333,
       "played": true
     },
     {
@@ -895,22 +993,22 @@
     },
     {
       "id": "O2-14",
-      "duration": 2.878005,
+      "duration": 6.247959,
       "played": true
     },
     {
       "id": "O2-15",
-      "duration": 1.576667,
+      "duration": 4.723968,
       "played": true
     },
     {
       "id": "O2-16",
-      "duration": 1.211338,
+      "duration": 5.792676,
       "played": true
     },
     {
       "id": "S-D1-DEV",
-      "duration": 3.048685,
+      "duration": 5.008639,
       "played": true
     },
     {
@@ -920,7 +1018,7 @@
     },
     {
       "id": "S-D2-DEV",
-      "duration": 2.948005,
+      "duration": 7.977302,
       "played": true
     },
     {
@@ -935,17 +1033,17 @@
     },
     {
       "id": "S-D3-INES",
-      "duration": 4.706009,
+      "duration": 9.276009,
       "played": true
     },
     {
       "id": "S-D3-DEV",
-      "duration": 2.28068,
+      "duration": 7.605306,
       "played": true
     },
     {
       "id": "S-D4-DEV",
-      "duration": 2.216667,
+      "duration": 6.871338,
       "played": true
     },
     {
@@ -965,12 +1063,12 @@
     },
     {
       "id": "S-VETO-R",
-      "duration": 3.518005,
+      "duration": 7.129977,
       "played": true
     },
     {
       "id": "S-VETO-S",
-      "duration": 2.261338,
+      "duration": 5.116009,
       "played": true
     },
     {
@@ -990,7 +1088,7 @@
     },
     {
       "id": "F-ACC-DEV",
-      "duration": 1.491338,
+      "duration": 5.48678,
       "played": true
     },
     {
@@ -1005,17 +1103,17 @@
     },
     {
       "id": "F-REJ-DEV-1",
-      "duration": 2.60068,
+      "duration": 7.548005,
       "played": true
     },
     {
       "id": "F-REJ-DEV-2",
-      "duration": 2.558005,
+      "duration": 7.481338,
       "played": true
     },
     {
       "id": "F-REJ-DEV-3",
-      "duration": 2.792676,
+      "duration": 8.051293,
       "played": true
     },
     {
@@ -1045,7 +1143,7 @@
     },
     {
       "id": "F-PUSH-DEV",
-      "duration": 1.555351,
+      "duration": 6.714671,
       "played": true
     },
     {
@@ -1090,17 +1188,17 @@
     },
     {
       "id": "RN-E1-FAST",
-      "duration": 1.982018,
+      "duration": 5.816009,
       "played": true
     },
     {
       "id": "RN-E1-SLOW",
-      "duration": 1.939342,
+      "duration": 5.16068,
       "played": true
     },
     {
       "id": "RN-E2-H1",
-      "duration": 3.085351,
+      "duration": 4.636667,
       "played": true
     },
     {
@@ -1135,12 +1233,12 @@
     },
     {
       "id": "RN-INT-SLOW",
-      "duration": 1.64068,
+      "duration": 5.764626,
       "played": true
     },
     {
       "id": "RN-INT-TAKE",
-      "duration": 1.53263,
+      "duration": 5.806009,
       "played": true
     },
     {
@@ -1150,17 +1248,17 @@
     },
     {
       "id": "RN-E3-MAN",
-      "duration": 1.683333,
+      "duration": 6.260635,
       "played": true
     },
     {
       "id": "RN-E3-ASS",
-      "duration": 1.305351,
+      "duration": 6.151338,
       "played": true
     },
     {
       "id": "RN-E3-AUTO",
-      "duration": 1.576667,
+      "duration": 7.166667,
       "played": true
     },
     {
@@ -1175,12 +1273,12 @@
     },
     {
       "id": "RN-E4-ALW",
-      "duration": 2.497302,
+      "duration": 6.801338,
       "played": true
     },
     {
       "id": "RN-E4-UNC",
-      "duration": 2.464671,
+      "duration": 7.718685,
       "played": true
     },
     {
@@ -1200,7 +1298,7 @@
     },
     {
       "id": "EN-02",
-      "duration": 3.806009,
+      "duration": 6.980635,
       "played": true
     },
     {
@@ -1210,12 +1308,12 @@
     },
     {
       "id": "EN-F1",
-      "duration": 4.327959,
+      "duration": 6.118685,
       "played": true
     },
     {
       "id": "EN-F2",
-      "duration": 2.716667,
+      "duration": 7.785556,
       "played": true
     },
     {
@@ -1230,7 +1328,7 @@
     },
     {
       "id": "EN-G2",
-      "duration": 3.419342,
+      "duration": 8.514671,
       "played": true
     },
     {
@@ -1240,12 +1338,12 @@
     },
     {
       "id": "EN-G4",
-      "duration": 1.19,
+      "duration": 5.770635,
       "played": true
     },
     {
       "id": "EN-W1",
-      "duration": 3.557302,
+      "duration": 6.710635,
       "played": true
     },
     {
@@ -1255,7 +1353,7 @@
     },
     {
       "id": "EN-W3",
-      "duration": 1.191293,
+      "duration": 5.86,
       "played": true
     },
     {
@@ -1265,7 +1363,7 @@
     },
     {
       "id": "EN-B1",
-      "duration": 3.410635,
+      "duration": 7.618685,
       "played": true
     },
     {
@@ -1275,7 +1373,7 @@
     },
     {
       "id": "EN-S1",
-      "duration": 2.625964,
+      "duration": 7.811678,
       "played": true
     },
     {
@@ -1295,7 +1393,7 @@
     },
     {
       "id": "T-EV-SUP-DEV",
-      "duration": 2.003333,
+      "duration": 4.979977,
       "played": true
     },
     {

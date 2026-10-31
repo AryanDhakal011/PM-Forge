@@ -169,6 +169,15 @@ export const audioManifest = z
         caption: z.string().optional(),
         expression: z.string().optional(),
         emotion: z.string().optional(),
+        emotionTag: z.string().optional(),
+        signature: z.string().optional(),
+        delivery: z
+          .object({
+            speed: z.number(),
+            sentencePause: z.number(),
+            clausePause: z.number(),
+          })
+          .optional(),
         duration: z.number().optional(),
         envelope: z.array(z.number()).optional(),
       }),

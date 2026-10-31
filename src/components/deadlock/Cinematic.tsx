@@ -4,6 +4,7 @@ import { endings, experience, line } from "@/lib/deadlock/content";
 import { has } from "@/lib/deadlock/engine";
 import { Arm, Avatar } from "./Stage";
 import { Conversation } from "./Conversation";
+import { TeamResponse } from "./RunConclusion";
 import type { SceneProps } from "./runtime";
 import s from "./Deadlock.module.css";
 const roomLine = {
@@ -41,7 +42,7 @@ export default function Cinematic(
     eyebrow = briefing ? "THE CASE · HALYARD ROBOTICS" : "WELCOME TO THE TEAM";
   } else if (scene === "consequence1") {
     ids = [roomLine[state.room]];
-    title = "A decision changes the room.";
+    title = "How the team reacted to your plan.";
     eyebrow = "CHAPTER 1 · THE TEAM RESPONDS";
   } else if (scene === "opening2") {
     ids = opening[state.room];
@@ -82,6 +83,7 @@ export default function Cinematic(
         <p className={s.kicker}>{eyebrow}</p>
         <h2>{title}</h2>
       </header>
+      {scene === "consequence1" && <TeamResponse state={state} />}
       {scene === "intro" && !briefing && (
         <div className={s.teamStrip}>
           {["Mara", "Dev", "Ines"].map((person) => (
@@ -131,7 +133,7 @@ export default function Cinematic(
               ? "Show me the lab →"
               : "What is the case? →"
             : scene === "ending"
-              ? "Review this run →"
+              ? "See your conclusion →"
               : "Review and continue →"
         }
       />

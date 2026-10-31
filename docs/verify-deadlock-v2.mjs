@@ -12,7 +12,6 @@ const browser = spawn(
     `--user-data-dir=${mkdtempSync(join(tmpdir(), "pmf-mvp-"))}`,
     "--no-first-run",
     "--enable-unsafe-swiftshader",
-    "--hide-scrollbars",
     "about:blank",
   ],
   { stdio: "ignore", windowsHide: true },
@@ -21,7 +20,7 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 let ws;
 const report = { at: new Date().toISOString(), checks: [], errors: [] };
 const smoke = process.env.DEADLOCK_FAST_SMOKE === "1";
-const previewOnly=process.env.DEADLOCK_PREVIEW_ONLY==='1';
+const previewOnly = process.env.DEADLOCK_PREVIEW_ONLY === "1";
 try {
   let target;
   for (let i = 0; i < 50; i++) {
@@ -272,17 +271,100 @@ try {
   await navigate("/app");
   await click("Try without an account");
   await click("Skip setup");
-  report.modes = [];
-  if(previewOnly){
-    await navigate('/app/projects/deadlock');await evaluate("localStorage.setItem('pmforge.deadlock.settings.v1',JSON.stringify({mode:'silent',voice:'off',characters:true,skipGuides:true}))");await navigate('/app/projects/deadlock');await click('SETTINGS');
-    check(await evaluate(`!document.querySelector('[role=dialog]').innerText.includes('DEVICE VOICE')`),'legacy device voice control is removed');
-    for(const [speaker,id] of [['Mara','INT-01'],['Dev','INT-03'],['Ines','INT-05']]){
-      await evaluate(`{const b=[...document.querySelectorAll('button')].find(e=>e.textContent.trim()==='Preview ${speaker}');b.dataset.previewTarget='yes'}`);await trustedClick('[data-preview-target=yes]');await until(`document.documentElement.dataset.deadlockSpeaker==='${speaker}'&&window.__audioEvents.some(e=>e.type==='playing'&&e.src.includes('${id}'))`,'recorded '+speaker+' preview');check(true,speaker+' preview plays its own recording while captions-only is selected');await evaluate(`document.querySelector('[data-preview-target=yes]').removeAttribute('data-preview-target')`);
-    }
-    await clickSel('[aria-label="Close dialog"]');check(await evaluate("JSON.parse(localStorage.getItem('pmforge.deadlock.settings.v1')).mode==='silent'"),'auditioning does not change the selected playback mode');
-    await evaluate(`{const b=[...document.querySelectorAll('button')].find(e=>e.textContent.includes('Sound + captions'));b.click()}`);await trustedClick('[data-enter-lab]');await scene('intro');await until(`document.documentElement.dataset.deadlockSpeaker==='Mara'`,'sound works with migrated off preference');check(true,'old device voice off preference cannot block the recorded cast');
+  await navigate("/app/projects");
+  await until(
+    `document.querySelectorAll('article[id^="project-"]').length===12`,
+    "project cards ready",
+  );
+  const gallery = await evaluate(
+    `Array.from(document.querySelectorAll('article[id^="project-"]')).map(card=>{const a=card.querySelector('a'),p=getComputedStyle(a,'::after');return {id:card.id,href:a.getAttribute('href'),full:p.position==='absolute'&&Math.abs(parseFloat(p.width)-card.clientWidth)<2&&Math.abs(parseFloat(p.height)-card.clientHeight)<2}})`,
+  );
+  check(
+    gallery.length === 12 && gallery.every((c) => c.full),
+    "all twelve project cards have a full-surface native link",
+  );
+  for (const card of [
+    gallery.find((c) => c.id === "project-deadlock"),
+    gallery.find((c) => c.id !== "project-deadlock"),
+  ]) {
+    await navigate("/app/projects");
+    await trustedClick("#" + card.id + " h2");
+    await until(
+      `location.pathname===${JSON.stringify(card.href)}`,
+      "whole card navigation",
+    );
+    check(true, "clicking the card title opens " + card.id);
   }
-  for (const mode of previewOnly?[]:smoke ? ["silent"] : ["silent", "sound"]) {
+  report.modes = [];
+  if (previewOnly) {
+    await navigate("/app/projects/deadlock");
+    await evaluate(
+      "localStorage.setItem('pmforge.deadlock.settings.v1',JSON.stringify({mode:'silent',voice:'off',characters:true,skipGuides:true}))",
+    );
+    await navigate("/app/projects/deadlock");
+    await click("SETTINGS");
+    check(
+      await evaluate(
+        `!document.querySelector('[role=dialog]').innerText.includes('DEVICE VOICE')`,
+      ),
+      "legacy device voice control is removed",
+    );
+    for (const [speaker, id] of [
+      ["Mara", "INT-01"],
+      ["Dev", "INT-03"],
+      ["Ines", "INT-05"],
+      ["Theo", "EN-S1"],
+      ["Northgate", "LETTER-01"],
+    ]) {
+      await evaluate(
+        `{const b=[...document.querySelectorAll('button')].find(e=>e.textContent.trim()==='Preview ${speaker}');b.dataset.previewTarget='yes'}`,
+      );
+      await trustedClick("[data-preview-target=yes]");
+      await until(
+        `document.documentElement.dataset.deadlockSpeaker==='${speaker}'&&window.__audioEvents.some(e=>e.type==='playing'&&e.src.includes('${id}'))`,
+        "recorded " + speaker + " preview",
+      );
+      check(
+        await evaluate(
+          `new URL(window.__audioInstances.findLast(a=>a.src.includes('${id}')).src).searchParams.get('v')?.length===12`,
+        ),
+        speaker + " preview uses its versioned recording URL",
+      );
+      check(
+        true,
+        speaker +
+          " preview plays its own recording while captions-only is selected",
+      );
+      await evaluate(
+        `document.querySelector('[data-preview-target=yes]').removeAttribute('data-preview-target')`,
+      );
+    }
+    await clickSel('[aria-label="Close dialog"]');
+    check(
+      await evaluate(
+        "JSON.parse(localStorage.getItem('pmforge.deadlock.settings.v1')).mode==='silent'",
+      ),
+      "auditioning does not change the selected playback mode",
+    );
+    await evaluate(
+      `{const b=[...document.querySelectorAll('button')].find(e=>e.textContent.includes('Sound + captions'));b.click()}`,
+    );
+    await trustedClick("[data-enter-lab]");
+    await scene("intro");
+    await until(
+      `document.documentElement.dataset.deadlockSpeaker==='Mara'`,
+      "sound works with migrated off preference",
+    );
+    check(
+      true,
+      "old device voice off preference cannot block the recorded cast",
+    );
+  }
+  for (const mode of previewOnly
+    ? []
+    : smoke
+      ? ["silent"]
+      : ["silent", "sound"]) {
     await navigate("/app/projects/deadlock");
     await evaluate(
       `localStorage.setItem('pmforge.deadlock.settings.v1',JSON.stringify({mode:'${mode}',autoAdvance:false,skipGuides:false}))`,
@@ -368,15 +450,41 @@ try {
         " all nine introductions and seven briefing lines appear exactly in order",
     );
     await clickSel("[data-object=E1]");
+    await click("Show the near-miss");
     await snapshots("evidence-" + mode);
-    await click("0:47 · inspect");
+    check(
+      await evaluate(
+        `document.querySelectorAll('[class*="mouth"],[class*="eyelid"]').length===0`,
+      ),
+      "portraits remain static without facial overlays",
+    );
+    check(
+      await evaluate(
+        `document.querySelector('[role=dialog]').innerText.includes('A technician crosses within 0.4 m')`,
+      ),
+      "footage shortcut shows the actual crossing and explains the concern",
+    );
+    await click("Save this finding");
     await until(
       `!document.querySelector('[role=dialog]')`,
       "discovery auto closes",
     );
     await responses();
     check(
-      await evaluate(`document.body.innerText.includes('near-miss at 0:47')`),
+      await evaluate(`!!document.querySelector('[data-evidence-cue="true"]')`),
+      "new evidence highlights the case file",
+    );
+    await click("▤ CASE FILE");
+    await until(`!!document.querySelector('[role=dialog]')`, "case file");
+    check(
+      await evaluate(
+        `document.querySelector('[role=dialog]').innerText.includes('Demo footage')`,
+      ),
+      "case file opens collected evidence",
+    );
+    await clickSel('[aria-label="Close dialog"]');
+    check(
+      await evaluate(`document.body.innerText.includes('At 0:47')`),
       "discovery appears immediately without a pin screen",
     );
     await clickSel('[aria-label="Lab zones"] button:nth-child(3)');
@@ -435,6 +543,12 @@ try {
     await scene("consequence1");
     await responses();
     await guide();
+    check(
+      await evaluate(
+        `!!document.querySelector('[aria-label="Your choices and the team response"]')`,
+      ),
+      "team reaction names the actual plan before explaining the response",
+    );
     await sceneConversation();
     await until(
       `!!document.querySelector('[data-review="1"]')`,
@@ -496,7 +610,10 @@ try {
           "event " + event + " is strictly watch-only",
         );
         await next("[role=dialog] [data-dialogue-id]");
-        await wait(3600);
+        await until(
+          `document.querySelector('[data-deadlock]').dataset.scene==='ending'||!!document.querySelector('section[aria-label="Team response"]')`,
+          "watch moment completes",
+        );
         await responses();
         if (event === 1) await click("Next event →");
       } else {
@@ -509,13 +626,22 @@ try {
     await scene("ending");
     await guide();
     await sceneConversation();
-    await until(
-      `!!document.querySelector('[data-review="3"]')`,
-      "chapter three review",
-    );
-    await click("Continue →");
     await scene("debrief");
     await guide();
+    check(
+      await evaluate(
+        `!!document.querySelector('[aria-label="Your run in brief"]')&&!document.querySelector('details:has([data-review])').open`,
+      ),
+      "debrief opens with a brief conclusion and keeps chapter assessments collapsed",
+    );
+    await clickSel("details:has([data-review]) > summary");
+    check(
+      await evaluate(
+        `document.querySelector('details:has([data-review])').open`,
+      ),
+      "decision trail remains available on demand",
+    );
+    await clickSel("details:has([data-review]) > summary");
     check(
       await evaluate(`document.querySelectorAll('[data-review]').length===3`),
       "final debrief reuses three chapter review cards",
@@ -523,7 +649,7 @@ try {
     await screenshot("debrief-" + mode);
     report.modes.push({ mode, observed, complete: true });
   }
-  if (!smoke&&!previewOnly) {
+  if (!smoke && !previewOnly) {
     // Returning players can suppress guides without losing the manual help action.
     await clickSel('[aria-label="Open step guide"]');
     await until(
@@ -646,9 +772,9 @@ try {
       `(async()=>{const manifest=${JSON.stringify(JSON.parse(readFileSync("content/projects/deadlock/audio-manifest.json", "utf8")))};const results=[];for(const [id,entry] of Object.entries(manifest.lines)){const a=new Audio(entry.file);a.volume=.01;const result=await new Promise(resolve=>{const timeout=setTimeout(()=>resolve({id,error:'timeout'}),7000);a.onerror=()=>{clearTimeout(timeout);resolve({id,error:'media error'})};a.onloadedmetadata=()=>{a.currentTime=Math.max(0,a.duration-.08);a.play().catch(e=>{clearTimeout(timeout);resolve({id,error:String(e)})})};a.onended=()=>{clearTimeout(timeout);resolve({id,duration:a.duration,played:true})}});a.pause();a.removeAttribute('src');a.load();results.push(result)}return results})()`,
     );
     check(
-      report.audio.length === 185 &&
+      report.audio.length === 191 &&
         report.audio.every((a) => a.played && a.duration > 0),
-      "all 185 pre-rendered audio files decode and play to ended",
+      "all 191 pre-rendered audio files decode and play to ended",
     );
   }
   check(
@@ -663,7 +789,10 @@ try {
   process.exitCode = 1;
 } finally {
   writeFileSync(
-    join(out, previewOnly?'voices.json':smoke ? "smoke.json" : "browser.json"),
+    join(
+      out,
+      previewOnly ? "voices.json" : smoke ? "smoke.json" : "browser.json",
+    ),
     JSON.stringify(report, null, 2),
   );
   ws?.close();

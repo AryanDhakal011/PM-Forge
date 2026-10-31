@@ -10,9 +10,9 @@
   {
     "id": "CO-02",
     "speaker": "Dev",
-    "text": "TERN-1 does 94% of picks on its own. Don't cap it. — D.",
+    "text": "TERN-1 handles ninety-four percent of picks on its own. I want Northgate to see what that autonomy can do.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -50,17 +50,17 @@
   {
     "id": "FW-01a",
     "speaker": "Dev",
-    "text": "Ninety-four percent, hands off. Nobody has ever done that.",
+    "text": "Most of the picks worked without help. The part we need to examine is where a person came too close.",
     "condition": "after H1 opened",
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "FW-01b",
     "speaker": "Ines",
-    "text": "That's the one I flagged. Point four meters.",
+    "text": "That's the crossing I flagged: forty centimetres from the moving arm.",
     "condition": "H1 and the red marker was found",
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -74,17 +74,17 @@
   {
     "id": "FW-02b",
     "speaker": "Dev",
-    "text": "Bench tests. Not the demo.",
+    "text": "Those were bench tests, so let's be careful about treating them as the full demonstration.",
     "condition": "H2 opened and E1 inspected",
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "FW-03a",
     "speaker": "Dev",
-    "text": "Capping speed kills the demo. Obviously.",
+    "text": "I'm concerned a speed cap will slow the demonstration too much. We need to understand that trade-off.",
     "condition": "H3 frozen",
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -146,9 +146,9 @@
   {
     "id": "FW-08",
     "speaker": "Dev",
-    "text": "You only looked at Ines's side.",
+    "text": "The incident log matters. I'd also like us to look at how the robot performed before we choose a direction.",
     "condition": "only software evidence inspected (E2, E4) and lock reached",
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -170,9 +170,9 @@
   {
     "id": "T-R-DEV",
     "speaker": "Dev",
-    "text": "Good. {thing} stays in. That's the demo.",
+    "text": "That keeps the autonomous behavior I wanted to demonstrate. We need to explain how the safeguards fit around it.",
     "condition": "lane → ROBOTICS",
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -194,17 +194,17 @@
   {
     "id": "T-S-DEV",
     "speaker": "Dev",
-    "text": "So the demo gets a leash. Great.",
+    "text": "I understand the safety argument. I'm concerned about how much autonomy we'll be able to show with that choice.",
     "condition": "lane → SOFTWARE",
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "T-B-DEV",
     "speaker": "Dev",
-    "text": "Fine. Show me the version that doesn't gut it.",
+    "text": "I'm open to a compromise. Let's make sure it still gives Northgate something useful to evaluate.",
     "condition": "lane → BRIDGE",
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -218,9 +218,9 @@
   {
     "id": "T-D-DEV",
     "speaker": "Dev",
-    "text": "We're not deciding? The clock is.",
+    "text": "Leaving this open makes the build harder to plan. When are we going to settle it?",
     "condition": "lane → DEFER",
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -258,9 +258,9 @@
   {
     "id": "T-EV-NONE",
     "speaker": "Mara",
-    "text": "Based on what?",
+    "text": "What did the evidence tell you? You can check your case file before you commit.",
     "condition": "no evidence",
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -282,41 +282,41 @@
   {
     "id": "C1-ALIGNED",
     "speaker": "Mara",
-    "text": "Two lanes with real agreements. It cost weeks. It's a start.",
+    "text": "The compromises give both leads a place in the plan. They've cost us time, but we now have a direction they can work on together.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "C1-ROBOTICS",
     "speaker": "Mara",
-    "text": "Dev's flying. Ines isn't speaking. That won't last.",
+    "text": "You backed Dev on most of the arguments. His plan moves forward, but Ines still has safety concerns. We need to address those before the demonstration.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "C1-SOFTWARE",
     "speaker": "Mara",
-    "text": "Ines can sleep. Dev is packing a box.",
+    "text": "You backed Ines on most of the arguments. The safeguards stay, but Dev feels sidelined. We need him involved in the next decision.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "C1-STALLED",
     "speaker": "Mara",
-    "text": "We decided not to decide. Finance noticed.",
+    "text": "Several arguments are still unresolved. The team cannot build around an incomplete plan, and the delay will cost us more runway.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "C1-MIXED",
     "speaker": "Mara",
-    "text": "Half a plan. Both of them still watching you.",
+    "text": "You've split the decisions between the two leads. They still need a shared reason to trust the plan. Next, give them the same evidence to work from.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -354,9 +354,9 @@
   {
     "id": "O2-S1",
     "speaker": "Dev",
-    "text": "I've got another offer. Show me you're not building a leash.",
+    "text": "I've been considering another role. I'd like to stay involved here, but I need to see a plan that uses the work we've done.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -394,33 +394,33 @@
   {
     "id": "O2-14",
     "speaker": "Dev",
-    "text": "Fine. I'm here. Don't make me regret it.",
+    "text": "Thanks for calling me back. Walk me through the evidence so I can understand the build you're proposing.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "O2-15",
     "speaker": "Dev",
-    "text": "Okay. Show me.",
+    "text": "All right, show me the test results. I want to understand what they change.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "O2-16",
     "speaker": "Dev",
-    "text": "I'm done.",
+    "text": "I don't think we're making room for the robotics concerns. I'm going to step out for now.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "S-D1-DEV",
     "speaker": "Dev",
-    "text": "Six percent? I told everyone thirty.",
+    "text": "So the cap costs six percent of throughput, not thirty. That changes the trade-off.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -434,9 +434,9 @@
   {
     "id": "S-D2-DEV",
     "speaker": "Dev",
-    "text": "Eighty-one. I was wrong about unattended.",
+    "text": "Unattended accuracy is eighty-one percent. I expected better than that. We need a way to check unfamiliar objects.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -458,25 +458,25 @@
   {
     "id": "S-D3-INES",
     "speaker": "Ines",
-    "text": "Point two two with the curtain. I'd sign that. Not at one-point-two.",
+    "text": "With the curtain, the robot stops in twenty-two centimetres at one metre per second. That's inside our forty-centimetre limit. The faster setting isn't.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "S-D3-DEV",
     "speaker": "Dev",
-    "text": "So one-point-zero is real.",
+    "text": "Then one metre per second is a practical option. We keep most of the throughput and stay inside that measured margin.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "S-D4-DEV",
     "speaker": "Dev",
-    "text": "The jams aren't the interlock.",
+    "text": "So the interlock isn't what's causing the jams. We should focus on the calibration and recovery behavior.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -506,17 +506,17 @@
   {
     "id": "S-VETO-R",
     "speaker": "Dev",
-    "text": "Recovery stays auto. I'm not negotiating that.",
+    "text": "I'd like to keep automatic recovery in the build. If we change it, I need evidence that the alternative will work.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "S-VETO-S",
     "speaker": "Ines",
-    "text": "The cap stays at point five.",
+    "text": "The speed cap stays at half a metre per second until we've addressed the safety concern.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -546,9 +546,9 @@
   {
     "id": "F-ACC-DEV",
     "speaker": "Dev",
-    "text": "I can ship that.",
+    "text": "That gives us enough autonomy to show what the robot can do. My team can build this.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -570,25 +570,25 @@
   {
     "id": "F-REJ-DEV-1",
     "speaker": "Dev",
-    "text": "That speed makes the demo look timid.",
+    "text": "At that speed, I'm not confident we can demonstrate the value of autonomous sorting. Can we reconsider the cap?",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "F-REJ-DEV-2",
     "speaker": "Dev",
-    "text": "I'm not hand-holding every jam.",
+    "text": "Manual recovery means someone has to clear every jam. I'd like the prototype to handle more of that itself.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "F-REJ-DEV-3",
     "speaker": "Dev",
-    "text": "Confirming everything defeats the point.",
+    "text": "If an operator confirms every object, we lose much of the benefit of learning. Can we make those checks more selective?",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -634,9 +634,9 @@
   {
     "id": "F-PUSH-DEV",
     "speaker": "Dev",
-    "text": "Fine. Your call.",
+    "text": "I don't agree with that choice, but I understand you're moving ahead. I'll make sure my concerns are documented.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -706,25 +706,25 @@
   {
     "id": "RN-E1-FAST",
     "speaker": "Dev",
-    "text": "Look at that cycle time.",
+    "text": "That's the cycle time I was hoping for. The robot is keeping the tray moving without help.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "RN-E1-SLOW",
     "speaker": "Dev",
-    "text": "It's slow, but it's clean.",
+    "text": "It's slower than I wanted, but the movement is controlled and the tray is still progressing.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "RN-E2-H1",
     "speaker": "CONTROL",
-    "text": "Event two. A technician at point four meters.",
+    "text": "A technician has crossed into the cell, forty centimetres from the moving arm.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -778,17 +778,17 @@
   {
     "id": "RN-INT-SLOW",
     "speaker": "Dev",
-    "text": "Slowing it. Fine.",
+    "text": "We've slowed the arm to handle this step safely. The interruption will be visible to Northgate.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "RN-INT-TAKE",
     "speaker": "Dev",
-    "text": "Taking the stick.",
+    "text": "An operator is handling this step now. We'll need to be clear with Northgate about that support.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -802,25 +802,25 @@
   {
     "id": "RN-E3-MAN",
     "speaker": "Dev",
-    "text": "Clearing it by hand.",
+    "text": "The arm is waiting while someone clears the jam. That's the manual recovery setting we chose.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "RN-E3-ASS",
     "speaker": "Dev",
-    "text": "One tap.",
+    "text": "One confirmation from the operator, and the recovery starts. The robot can take it from here.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "RN-E3-AUTO",
     "speaker": "Dev",
-    "text": "It cleared itself.",
+    "text": "The robot cleared the jam without an operator stepping in. That's the recovery behavior I wanted to demonstrate.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -842,17 +842,17 @@
   {
     "id": "RN-E4-ALW",
     "speaker": "Dev",
-    "text": "Prompt on screen. Confirm.",
+    "text": "The robot is asking the operator to confirm this object. With this setting, it will ask on every pick.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "RN-E4-UNC",
     "speaker": "Dev",
-    "text": "It asked once. Only once.",
+    "text": "It asked for help on the unfamiliar object, then continued. It doesn't have to interrupt the operator on every pick.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -882,9 +882,9 @@
   {
     "id": "EN-02",
     "speaker": "Theo",
-    "text": "We'll pause the demo. Call me when there's something to see.",
+    "text": "I think we should postpone the demonstration. Let me know when the prototype is ready for us to evaluate.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -898,17 +898,17 @@
   {
     "id": "EN-F1",
     "speaker": "Nadia",
-    "text": "Override response failed at point four meters. I can't sign this.",
+    "text": "The override failed with a technician forty centimetres away. I can't sign off on that demonstration.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "EN-F2",
     "speaker": "Theo",
-    "text": "I can't take this to my partners.",
+    "text": "I can't recommend this version to my partners after what we just saw. We need to understand the failure before we go further.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -930,9 +930,9 @@
   {
     "id": "EN-G2",
     "speaker": "Theo",
-    "text": "I came for the demo. I'm staying for the team.",
+    "text": "The demonstration was convincing. What gives me confidence is that the team can explain the trade-offs and stand behind the same build.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -946,17 +946,17 @@
   {
     "id": "EN-G4",
     "speaker": "Dev",
-    "text": "You too.",
+    "text": "We both changed the plan once we saw the results. It helped to work from the same evidence.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
     "id": "EN-W1",
     "speaker": "Theo",
-    "text": "It's remarkable. How many people does it take to run?",
+    "text": "There's impressive work here. Before we go further, how much supervision would this need in one of our warehouses?",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -970,9 +970,9 @@
   {
     "id": "EN-W3",
     "speaker": "Dev",
-    "text": "For now.",
+    "text": "That level of supervision isn't where I want the product to end up. We still have work to do.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -986,9 +986,9 @@
   {
     "id": "EN-B1",
     "speaker": "Theo",
-    "text": "It works if someone holds its hand all day.",
+    "text": "I can see that it works with the team helping. I need to know whether it can handle a normal shift without that level of support.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -1002,9 +1002,9 @@
   {
     "id": "EN-S1",
     "speaker": "Theo",
-    "text": "Solid. Safe. Not a story.",
+    "text": "This looks dependable. The next question for us is whether it creates enough value to justify putting it into a warehouse.",
     "condition": null,
-    "source": "handoff §17",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {
@@ -1034,9 +1034,9 @@
   {
     "id": "T-EV-SUP-DEV",
     "speaker": "Dev",
-    "text": "Okay. That's not nothing.",
+    "text": "That finding helps me understand the decision. I can work with that evidence.",
     "condition": "SUPPORT evidence; losing lead, or Mara for bridge/defer",
-    "source": "handoff §17.3",
+    "source": "User-directed dialogue refinement, 2026-10-31",
     "audio": null
   },
   {

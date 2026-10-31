@@ -41,9 +41,9 @@
       "title": "The room reacts",
       "speaker": "Ines",
       "line": "GUIDE-CONSEQUENCE1",
-      "goal": "Understand how the team took your plan.",
+      "goal": "See how each lead reacted to your three decisions.",
       "doThis": "Read the response, review the consequences, then continue.",
-      "watch": "Who is still in the room? Who is no longer listening?"
+      "watch": "The choices and the resulting team response are listed on this screen. Their frustration can change without either lead having signed off on the final build."
     },
     "data": {
       "title": "The projector",
@@ -82,14 +82,14 @@
       "speaker": "Mara",
       "line": "GUIDE-DEBRIEF",
       "goal": "Connect your decisions to their consequences.",
-      "doThis": "Read the reviews, inspect your trace, or fork an earlier decision and compare the results.",
+      "doThis": "Read the short conclusion first. Open the decision trail only if you want chapter notes, exact numbers, or another attempt.",
       "watch": "Your original stays intact. Export this run to keep a backup."
     }
   },
   "evidence": {
     "E1": {
-      "instruction": "This is footage from our best demo. Drag the timeline to the red marker at 0:47, then click that moment.",
-      "discovery": "The numbers look great, but there is a near-miss at 0:47 that never made the highlight video.",
+      "instruction": "Review a one-minute reconstruction of the demo. Drag to the marked moment to see what went wrong, or select “Show the near-miss”.",
+      "discovery": "At 0:47, a technician crossed forty centimetres from the moving arm. That near-miss was left out of the highlight video.",
       "line": "DISC-E1"
     },
     "E2": {
@@ -185,16 +185,16 @@
     {
       "id": "INT-03",
       "speaker": "Dev",
-      "text": "Dev! Robotics Lead. I build the part where people say, wait, it did that on its own?",
+      "text": "I'm Dev, I lead robotics. My team builds the robot's movement and autonomy.",
       "expression": "neutral",
-      "emotion": "energetic"
+      "emotion": "engaged"
     },
     {
       "id": "INT-04",
       "speaker": "Dev",
-      "text": "TERN-1 sorts a full tray in under a minute. Slow it down and you're showing Northgate a very expensive shelf.",
+      "text": "We've got it sorting full trays without help. I want Northgate to see that progress, and I know the safety concerns need an answer.",
       "expression": "neutral",
-      "emotion": "conversational"
+      "emotion": "engaged"
     },
     {
       "id": "INT-05",
@@ -206,28 +206,28 @@
     {
       "id": "INT-06",
       "speaker": "Ines",
-      "text": "I'd also like everyone to keep all ten fingers through the demo. Call me old fashioned.",
+      "text": "I want us to demonstrate the robot without putting anyone at risk. We need to know exactly how it stops.",
       "expression": "neutral",
       "emotion": "conversational"
     },
     {
       "id": "INT-07",
       "speaker": "Dev",
-      "text": "Nobody is losing fingers, Ines.",
+      "text": "I hear you. I just don't want us to lose what makes the prototype useful.",
       "expression": "neutral",
-      "emotion": "conversational"
+      "emotion": "engaged"
     },
     {
       "id": "INT-08",
       "speaker": "Ines",
-      "text": "Not yet.",
+      "text": "Then let's look at the tests together.",
       "expression": "annoyed",
       "emotion": "conversational"
     },
     {
       "id": "INT-09",
       "speaker": "Mara",
-      "text": "And that is the meeting I have every single day.",
+      "text": "That's where you come in. Help us turn that disagreement into a plan we can both stand behind.",
       "expression": "neutral",
       "emotion": "dry"
     },
@@ -297,16 +297,16 @@
     {
       "id": "GUIDE-CONSEQUENCE1",
       "speaker": "Ines",
-      "text": "That's how the team took it. This mood follows us into the next chapter.",
+      "text": "You've settled the three arguments. This next screen shows how Dev and Ines reacted to the choices you just made.",
       "expression": "thinking",
       "emotion": "conversational"
     },
     {
       "id": "GUIDE-DATA",
       "speaker": "Dev",
-      "text": "Four sets of numbers. Pick what we show, and in what order.",
+      "text": "We have four sets of test results. Choose which ones we show the team, and we'll work through what they mean.",
       "expression": "thinking",
-      "emotion": "conversational"
+      "emotion": "engaged"
     },
     {
       "id": "GUIDE-FORGE",
@@ -339,9 +339,9 @@
     {
       "id": "DISC-E1",
       "speaker": "Dev",
-      "text": "Okay. That is not in the highlight video.",
-      "expression": "annoyed",
-      "emotion": "conversational"
+      "text": "The robot kept moving as someone crossed its path. We need to understand the stopping margin before we show this to Northgate.",
+      "expression": "thinking",
+      "emotion": "concerned"
     },
     {
       "id": "DISC-E2",
@@ -374,37 +374,37 @@
     {
       "id": "MISMATCH-DEV-1",
       "speaker": "Dev",
-      "text": "I want to like this, I really do. But it's answering a question nobody asked.",
-      "expression": "annoyed",
-      "emotion": "conversational"
+      "text": "I see why you picked that. How does it support this particular setting?",
+      "expression": "thinking",
+      "emotion": "concerned"
     },
     {
       "id": "MISMATCH-DEV-2",
       "speaker": "Dev",
-      "text": "That's like bringing a parachute to a bake sale.",
-      "expression": "annoyed",
-      "emotion": "conversational"
+      "text": "That tells us something useful, but it doesn't answer the question we're deciding here.",
+      "expression": "thinking",
+      "emotion": "concerned"
     },
     {
       "id": "MISMATCH-DEV-3",
       "speaker": "Dev",
-      "text": "Interesting! Unrelated, but interesting.",
-      "expression": "annoyed",
-      "emotion": "conversational"
+      "text": "Let's keep that for the other argument. What do we have for this one?",
+      "expression": "thinking",
+      "emotion": "concerned"
     },
     {
       "id": "MISMATCH-DEV-4",
       "speaker": "Dev",
-      "text": "Is that a clue or a fun fact? I can't use a fun fact.",
-      "expression": "annoyed",
-      "emotion": "conversational"
+      "text": "I'm not seeing the connection yet. Which part of that evidence supports the choice?",
+      "expression": "thinking",
+      "emotion": "concerned"
     },
     {
       "id": "MISMATCH-DEV-5",
       "speaker": "Dev",
-      "text": "Right instinct, wrong exhibit.",
-      "expression": "annoyed",
-      "emotion": "conversational"
+      "text": "The evidence matters. We just need to match it to the right decision.",
+      "expression": "thinking",
+      "emotion": "concerned"
     },
     {
       "id": "MISMATCH-INES-1",
@@ -465,16 +465,16 @@
     {
       "id": "MATCH-DEV-1",
       "speaker": "Dev",
-      "text": "Okay, that one lands. I hate that it lands.",
+      "text": "That makes sense. The result gives me a reason to reconsider.",
       "expression": "approving",
-      "emotion": "conversational"
+      "emotion": "reassured"
     },
     {
       "id": "MATCH-DEV-2",
       "speaker": "Dev",
-      "text": "Fine. That changes things.",
+      "text": "All right. That's something we can build a decision around.",
       "expression": "approving",
-      "emotion": "conversational"
+      "emotion": "reassured"
     },
     {
       "id": "MATCH-INES-1",
@@ -507,7 +507,7 @@
     {
       "id": "EVENT-2",
       "speaker": "Ines",
-      "text": "This is the moment I was worried about.",
+      "text": "A technician has stepped into the robot's path, forty centimetres away. The arm is still moving. Do we trust its stopping margin, or step in?",
       "expression": "annoyed",
       "emotion": "conversational"
     },
@@ -521,9 +521,9 @@
     {
       "id": "EVENT-4",
       "speaker": "Dev",
-      "text": "New object. Let's see if it asks.",
+      "text": "An unfamiliar object is on the belt. Your confirmation setting decides whether the robot asks for help or tries to identify it alone.",
       "expression": "thinking",
-      "emotion": "conversational"
+      "emotion": "engaged"
     },
     {
       "id": "EVENT-5",
@@ -535,9 +535,65 @@
     {
       "id": "LETTER-01",
       "speaker": "Northgate",
-      "text": "We want a demonstration of autonomous operation. Our safety auditor requires documented override compliance.",
+      "text": "For the demonstration, we need to see TERN-1 work independently. We also need a documented way for a person to override it. Both are required.",
       "expression": "neutral",
       "emotion": "formal"
+    },
+    {
+      "id": "EVIDENCE-SPEED-1",
+      "speaker": "Mara",
+      "text": "What did you find that supports this speed? Your case file has the evidence you collected.",
+      "expression": "thinking",
+      "emotion": "curious"
+    },
+    {
+      "id": "EVIDENCE-SPEED-2",
+      "speaker": "Mara",
+      "text": "Which observation makes you comfortable with that speed?",
+      "expression": "thinking",
+      "emotion": "curious"
+    },
+    {
+      "id": "EVIDENCE-RECOVERY-1",
+      "speaker": "Mara",
+      "text": "Which incident or test supports this recovery approach?",
+      "expression": "thinking",
+      "emotion": "curious"
+    },
+    {
+      "id": "EVIDENCE-RECOVERY-2",
+      "speaker": "Mara",
+      "text": "What did the evidence tell you about clearing a jam safely?",
+      "expression": "thinking",
+      "emotion": "curious"
+    },
+    {
+      "id": "EVIDENCE-LEARNING-1",
+      "speaker": "Mara",
+      "text": "What supports how often the robot should ask for confirmation?",
+      "expression": "thinking",
+      "emotion": "curious"
+    },
+    {
+      "id": "EVIDENCE-LEARNING-2",
+      "speaker": "Mara",
+      "text": "Which finding helps us balance accuracy against interruptions?",
+      "expression": "thinking",
+      "emotion": "curious"
     }
-  ]
+  ],
+  "evidencePrompts": {
+    "speed": [
+      "EVIDENCE-SPEED-1",
+      "EVIDENCE-SPEED-2"
+    ],
+    "recovery": [
+      "EVIDENCE-RECOVERY-1",
+      "EVIDENCE-RECOVERY-2"
+    ],
+    "learning": [
+      "EVIDENCE-LEARNING-1",
+      "EVIDENCE-LEARNING-2"
+    ]
+  }
 }

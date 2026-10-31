@@ -1,8 +1,24 @@
 {
-  "at": "2026-10-30T19:08:52.636Z",
+  "at": "2026-10-31T05:37:19.093Z",
   "checks": [
     {
+      "label": "all twelve project cards have a full-surface native link",
+      "pass": true
+    },
+    {
+      "label": "clicking the card title opens project-deadlock",
+      "pass": true
+    },
+    {
+      "label": "clicking the card title opens project-sacred-no",
+      "pass": true
+    },
+    {
       "label": "legacy device voice control is removed",
+      "pass": true
+    },
+    {
+      "label": "Mara preview uses its versioned recording URL",
       "pass": true
     },
     {
@@ -10,11 +26,35 @@
       "pass": true
     },
     {
+      "label": "Dev preview uses its versioned recording URL",
+      "pass": true
+    },
+    {
       "label": "Dev preview plays its own recording while captions-only is selected",
       "pass": true
     },
     {
+      "label": "Ines preview uses its versioned recording URL",
+      "pass": true
+    },
+    {
       "label": "Ines preview plays its own recording while captions-only is selected",
+      "pass": true
+    },
+    {
+      "label": "Theo preview uses its versioned recording URL",
+      "pass": true
+    },
+    {
+      "label": "Theo preview plays its own recording while captions-only is selected",
+      "pass": true
+    },
+    {
+      "label": "Northgate preview uses its versioned recording URL",
+      "pass": true
+    },
+    {
+      "label": "Northgate preview plays its own recording while captions-only is selected",
       "pass": true
     },
     {

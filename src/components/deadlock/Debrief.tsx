@@ -14,6 +14,7 @@ import {
 import type { DeadlockState, SavedRun } from "@/lib/deadlock/types";
 import s from "./Deadlock.module.css";
 import { ReviewCard } from "./Coaching";
+import { RunConclusion } from "./RunConclusion";
 const labels = {
   rob: "Robotics resentment",
   sw: "Software resentment",
@@ -88,10 +89,10 @@ export default function Debrief({
   });
   return (
     <>
-      <header className={s.sceneHead}>
+      <header className={`${s.sceneHead} ${s.debriefIntro}`}>
         <div>
-          <p className={s.kicker}>Debrief · The Trace Laboratory</p>
-          <h2>The room remembers.</h2>
+          <p className={s.kicker}>Debrief · Your conclusion</p>
+          <h2>What your decisions led to.</h2>
         </div>
         <div className={s.row}>
           <button
@@ -105,235 +106,248 @@ export default function Debrief({
           </Link>
         </div>
       </header>
-      <div className={s.spread}>
-        <div className={s.archetype}>
-          <span>{state.ending} · SIMULATED</span>
-          <strong>THE {state.archetype}</strong>
-        </div>
-        <p className={s.muted} data-beat>
-          {debrief.archetypes[state.archetype || "PRAGMATIST"]}
-        </p>
-      </div>
-      <p data-beat>{debrief.copy}</p>
-      <div className={s.reviewStack}>
-        {[1, 2, 3].map((chapter) => {
-          const marker =
-            chapter === 1
-              ? "consequence1"
-              : chapter === 2
-                ? "consequence2"
-                : "ending";
-          const at = run.events.findIndex(
-            (e) => e.type === "ACK_SCENE" && e.scene === marker,
-          );
-          const snapshot = at >= 0 ? replay(run.events.slice(0, at)) : state;
-          return (
-            <ReviewCard key={chapter} chapter={chapter} state={snapshot} />
-          );
-        })}
-      </div>
-      <div className={s.tabs} role="tablist" aria-label="Debrief views">
-        {["trace", "levers", "compare"].map((t) => (
-          <button
-            key={t}
-            role="tab"
-            id={`dl-tab-${t}`}
-            aria-controls={`dl-panel-${t}`}
-            aria-selected={tab === t}
-            onClick={() => setTab(t)}
-          >
-            THE {t.toUpperCase()}
-          </button>
-        ))}
-      </div>
-      {tab === "trace" && (
-        <div role="tabpanel" id="dl-panel-trace" aria-labelledby="dl-tab-trace">
-          <div className={s.traceBoard}>
-            {trace.map((t) => (
-              <article
-                key={t.seq}
-                className={s.traceCard}
-                style={{
-                  opacity: selected !== null && selected !== t.seq ? 0.7 : 1,
-                }}
-                onMouseEnter={() => setSelected(t.seq)}
-                onMouseLeave={() => setSelected(null)}
-                onFocus={() => setSelected(t.seq)}
-              >
-                <span className={s.kicker} style={{ color: "#765c25" }}>
-                  CHAPTER {t.chapter} · EVENT {t.seq}
-                </span>
-                <h3>{t.title}</h3>
-                {t.assumption && (
-                  <>
-                    <span className={s.chainArrow}>↓</span>
-                    <p>
-                      You acted on:{" "}
-                      {
-                        board.assumptions.find((a) => a.id === t.assumption)
-                          ?.text
-                      }
-                    </p>
-                  </>
-                )}
-                <span className={s.chainArrow}>↓</span>
-                <p>{t.why}</p>
-                <span className={s.chainArrow}>↓</span>
-                <p>{t.constraint}</p>
-                <div className={s.badges}>
-                  {Object.entries(t.badges).map(([key, value]) => (
-                    <span key={key}>
-                      {value === null ? "—" : value ? "✓" : "×"}{" "}
-                      {key === "heard"
-                        ? "BOTH SIDES HEARD"
-                        : key === "tradeoff"
-                          ? "TRADE-OFF NAMED"
-                          : key === "evidence"
-                            ? "EVIDENCE-LINKED"
-                            : "ADAPTED"}
-                    </span>
-                  ))}
-                </div>
-                <button
-                  className={s.linkButton}
-                  style={{ color: "#503f23" }}
-                  aria-expanded={expanded === t.seq}
-                  onClick={() => setExpanded(expanded === t.seq ? null : t.seq)}
-                >
-                  EXACT NUMBERS ↓
-                </button>
-                {expanded === t.seq && (
-                  <>
-                    <div className={s.ledger}>
-                      {ledgerKeys
-                        .filter((k) => t.before[k] !== t.after[k])
-                        .map((k) => (
-                          <div key={k}>
-                            <span>{labels[k]}</span>
-                            <span>
-                              {t.before[k]} → {t.after[k]} (
-                              {t.after[k] - t.before[k] > 0 ? "+" : ""}
-                              {t.after[k] - t.before[k]})
-                            </span>
-                          </div>
-                        ))}
-                    </div>
-                    <button
-                      className={s.linkButton}
-                      style={{ color: "#503f23" }}
-                      disabled={busy}
-                      onClick={() => void fork(t.seq)}
-                    >
-                      REPLAY FROM HERE ↗
-                    </button>
-                  </>
-                )}
-              </article>
-            ))}
+      <RunConclusion state={state} />
+      <details className={s.decisionDetails}>
+        <summary>
+          Explore the decision trail, chapter notes and alternate paths
+        </summary>
+        <div className={s.spread}>
+          <div className={s.archetype}>
+            <span>{state.ending} · SIMULATED</span>
+            <strong>THE {state.archetype}</strong>
           </div>
-        </div>
-      )}
-      {tab === "levers" && (
-        <div
-          role="tabpanel"
-          id="dl-panel-levers"
-          aria-labelledby="dl-tab-levers"
-        >
-          <p className={s.muted} style={{ marginBottom: 20 }}>
-            Each outcome below was checked by replaying this log with one
-            changed decision.
+          <p className={s.muted} data-beat>
+            {debrief.archetypes[state.archetype || "PRAGMATIST"]}
           </p>
-          <div className={s.leverGrid}>
-            {levers.length ? (
-              levers.map((l) => (
-                <article key={l.seq} className={s.leverCard}>
-                  <p className={s.kicker}>PULL THIS LEVER · EVENT {l.seq}</p>
-                  <h3>{l.label}</h3>
+        </div>
+        <p data-beat>{debrief.copy}</p>
+        <div className={s.reviewStack}>
+          {[1, 2, 3].map((chapter) => {
+            const marker =
+              chapter === 1
+                ? "consequence1"
+                : chapter === 2
+                  ? "consequence2"
+                  : "ending";
+            const at = run.events.findIndex(
+              (e) => e.type === "ACK_SCENE" && e.scene === marker,
+            );
+            const snapshot = at >= 0 ? replay(run.events.slice(0, at)) : state;
+            return (
+              <ReviewCard key={chapter} chapter={chapter} state={snapshot} />
+            );
+          })}
+        </div>
+        <div className={s.tabs} role="tablist" aria-label="Debrief views">
+          {["trace", "levers", "compare"].map((t) => (
+            <button
+              key={t}
+              role="tab"
+              id={`dl-tab-${t}`}
+              aria-controls={`dl-panel-${t}`}
+              aria-selected={tab === t}
+              onClick={() => setTab(t)}
+            >
+              THE {t.toUpperCase()}
+            </button>
+          ))}
+        </div>
+        {tab === "trace" && (
+          <div
+            role="tabpanel"
+            id="dl-panel-trace"
+            aria-labelledby="dl-tab-trace"
+          >
+            <div className={s.traceBoard}>
+              {trace.map((t) => (
+                <article
+                  key={t.seq}
+                  className={s.traceCard}
+                  style={{
+                    opacity: selected !== null && selected !== t.seq ? 0.7 : 1,
+                  }}
+                  onMouseEnter={() => setSelected(t.seq)}
+                  onMouseLeave={() => setSelected(null)}
+                  onFocus={() => setSelected(t.seq)}
+                >
+                  <span className={s.kicker} style={{ color: "#765c25" }}>
+                    CHAPTER {t.chapter} · EVENT {t.seq}
+                  </span>
+                  <h3>{t.title}</h3>
+                  {t.assumption && (
+                    <>
+                      <span className={s.chainArrow}>↓</span>
+                      <p>
+                        You acted on:{" "}
+                        {
+                          board.assumptions.find((a) => a.id === t.assumption)
+                            ?.text
+                        }
+                      </p>
+                    </>
+                  )}
+                  <span className={s.chainArrow}>↓</span>
+                  <p>{t.why}</p>
+                  <span className={s.chainArrow}>↓</span>
+                  <p>{t.constraint}</p>
+                  <div className={s.badges}>
+                    {Object.entries(t.badges).map(([key, value]) => (
+                      <span key={key}>
+                        {value === null ? "—" : value ? "✓" : "×"}{" "}
+                        {key === "heard"
+                          ? "BOTH SIDES HEARD"
+                          : key === "tradeoff"
+                            ? "TRADE-OFF NAMED"
+                            : key === "evidence"
+                              ? "EVIDENCE-LINKED"
+                              : "ADAPTED"}
+                      </span>
+                    ))}
+                  </div>
+                  <button
+                    className={s.linkButton}
+                    style={{ color: "#503f23" }}
+                    aria-expanded={expanded === t.seq}
+                    onClick={() =>
+                      setExpanded(expanded === t.seq ? null : t.seq)
+                    }
+                  >
+                    EXACT NUMBERS ↓
+                  </button>
+                  {expanded === t.seq && (
+                    <>
+                      <div className={s.ledger}>
+                        {ledgerKeys
+                          .filter((k) => t.before[k] !== t.after[k])
+                          .map((k) => (
+                            <div key={k}>
+                              <span>{labels[k]}</span>
+                              <span>
+                                {t.before[k]} → {t.after[k]} (
+                                {t.after[k] - t.before[k] > 0 ? "+" : ""}
+                                {t.after[k] - t.before[k]})
+                              </span>
+                            </div>
+                          ))}
+                      </div>
+                      <button
+                        className={s.linkButton}
+                        style={{ color: "#503f23" }}
+                        disabled={busy}
+                        onClick={() => void fork(t.seq)}
+                      >
+                        REPLAY FROM HERE ↗
+                      </button>
+                    </>
+                  )}
+                </article>
+              ))}
+            </div>
+          </div>
+        )}
+        {tab === "levers" && (
+          <div
+            role="tabpanel"
+            id="dl-panel-levers"
+            aria-labelledby="dl-tab-levers"
+          >
+            <p className={s.muted} style={{ marginBottom: 20 }}>
+              Each outcome below was checked by replaying this log with one
+              changed decision.
+            </p>
+            <div className={s.leverGrid}>
+              {levers.length ? (
+                levers.map((l) => (
+                  <article key={l.seq} className={s.leverCard}>
+                    <p className={s.kicker}>PULL THIS LEVER · EVENT {l.seq}</p>
+                    <h3>{l.label}</h3>
+                    <p data-beat>
+                      The recorded continuation would reach {l.ending}.
+                      {l.shift >= 15
+                        ? ` A key variable moves by ${l.shift}.`
+                        : ""}
+                    </p>
+                    <small>
+                      In the fork, you make the choice and play forward
+                      yourself.
+                    </small>
+                    <button
+                      className={s.brassButton}
+                      disabled={busy}
+                      onClick={() => void fork(l.seq)}
+                    >
+                      REPLAY FROM HERE
+                    </button>
+                  </article>
+                ))
+              ) : (
+                <article className={s.leverCard}>
+                  <h3>No big regrets. Try the other archetypes?</h3>
                   <p data-beat>
-                    The recorded continuation would reach {l.ending}.
-                    {l.shift >= 15
-                      ? ` A key variable moves by ${l.shift}.`
-                      : ""}
+                    No single valid substitution changed the ending or moved a
+                    key variable by 15. Try a different sequence from the table.
                   </p>
-                  <small>
-                    In the fork, you make the choice and play forward yourself.
-                  </small>
                   <button
                     className={s.brassButton}
-                    disabled={busy}
-                    onClick={() => void fork(l.seq)}
+                    onClick={() => {
+                      const e = run.events.find((e) => e.type === "SOCKET");
+                      if (e) void fork(e.seq);
+                    }}
                   >
-                    REPLAY FROM HERE
+                    EXPLORE ANOTHER PATH
                   </button>
                 </article>
-              ))
-            ) : (
-              <article className={s.leverCard}>
-                <h3>No big regrets. Try the other archetypes?</h3>
-                <p data-beat>
-                  No single valid substitution changed the ending or moved a key
-                  variable by 15. Try a different sequence from the table.
-                </p>
+              )}
+            </div>
+          </div>
+        )}
+        {tab === "compare" && (
+          <div
+            role="tabpanel"
+            id="dl-panel-compare"
+            aria-labelledby="dl-tab-compare"
+          >
+            <div className={s.row} style={{ marginBottom: 20 }}>
+              {branches.map((b) => (
                 <button
-                  className={s.brassButton}
-                  onClick={() => {
-                    const e = run.events.find((e) => e.type === "SOCKET");
-                    if (e) void fork(e.seq);
-                  }}
+                  key={b.id}
+                  className={s.button}
+                  onClick={() => setOther(b)}
                 >
-                  EXPLORE ANOTHER PATH
+                  {b.id === run.parentId ? "ORIGINAL" : `FORK AT ${b.forkSeq}`}
                 </button>
-              </article>
+              ))}
+            </div>
+            {other ? (
+              <>
+                <div className={s.compare}>
+                  <Comparison
+                    run={run}
+                    title={run.parentId ? "THIS FORK" : "THIS RUN"}
+                  />
+                  <Comparison
+                    run={other}
+                    title={other.id === run.parentId ? "ORIGINAL" : "FORK"}
+                  />
+                </div>
+                <div className={s.runResult}>
+                  <h3>DIFFERING DECISIONS</h3>
+                  {decisionDifferences(run, other).map((text, i) => (
+                    <p key={i} className={s.muted}>
+                      {text}
+                    </p>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <p className={s.muted}>
+                Create a fork from a trace card or lever. The original log stays
+                intact.
+              </p>
             )}
           </div>
-        </div>
-      )}
-      {tab === "compare" && (
-        <div
-          role="tabpanel"
-          id="dl-panel-compare"
-          aria-labelledby="dl-tab-compare"
-        >
-          <div className={s.row} style={{ marginBottom: 20 }}>
-            {branches.map((b) => (
-              <button
-                key={b.id}
-                className={s.button}
-                onClick={() => setOther(b)}
-              >
-                {b.id === run.parentId ? "ORIGINAL" : `FORK AT ${b.forkSeq}`}
-              </button>
-            ))}
-          </div>
-          {other ? (
-            <>
-              <div className={s.compare}>
-                <Comparison
-                  run={run}
-                  title={run.parentId ? "THIS FORK" : "THIS RUN"}
-                />
-                <Comparison
-                  run={other}
-                  title={other.id === run.parentId ? "ORIGINAL" : "FORK"}
-                />
-              </div>
-              <div className={s.runResult}>
-                <h3>DIFFERING DECISIONS</h3>
-                {decisionDifferences(run, other).map((text, i) => (
-                  <p key={i} className={s.muted}>
-                    {text}
-                  </p>
-                ))}
-              </div>
-            </>
-          ) : (
-            <p className={s.muted}>
-              Create a fork from a trace card or lever. The original log stays
-              intact.
-            </p>
-          )}
-        </div>
-      )}
+        )}
+      </details>
       <label className={s.note}>
         NOTE TO SELF · OPTIONAL
         <input
@@ -347,13 +361,6 @@ export default function Debrief({
           Stored on this device. Never required. Never synced by default.
         </small>
       </label>
-      <div className={s.row}>
-        {Object.keys(debrief.archetypes).map((a) => (
-          <span className={s.muted} key={a}>
-            {a === state.archetype ? "✓" : "◇"} THE {a}
-          </span>
-        ))}
-      </div>
     </>
   );
 }

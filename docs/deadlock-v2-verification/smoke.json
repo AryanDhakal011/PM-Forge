@@ -1,6 +1,18 @@
 {
-  "at": "2026-10-30T19:03:25.807Z",
+  "at": "2026-10-31T05:42:17.874Z",
   "checks": [
+    {
+      "label": "all twelve project cards have a full-surface native link",
+      "pass": true
+    },
+    {
+      "label": "clicking the card title opens project-deadlock",
+      "pass": true
+    },
+    {
+      "label": "clicking the card title opens project-sacred-no",
+      "pass": true
+    },
     {
       "label": "intro-silent fits 390px",
       "pass": true,
@@ -66,6 +78,22 @@
       }
     },
     {
+      "label": "portraits remain static without facial overlays",
+      "pass": true
+    },
+    {
+      "label": "footage shortcut shows the actual crossing and explains the concern",
+      "pass": true
+    },
+    {
+      "label": "new evidence highlights the case file",
+      "pass": true
+    },
+    {
+      "label": "case file opens collected evidence",
+      "pass": true
+    },
+    {
       "label": "discovery appears immediately without a pin screen",
       "pass": true
     },
@@ -107,6 +135,10 @@
     },
     {
       "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "team reaction names the actual plan before explaining the response",
       "pass": true
     },
     {
@@ -187,6 +219,14 @@
     },
     {
       "label": "guide contains goal, action and consequence",
+      "pass": true
+    },
+    {
+      "label": "debrief opens with a brief conclusion and keeps chapter assessments collapsed",
+      "pass": true
+    },
+    {
+      "label": "decision trail remains available on demand",
       "pass": true
     },
     {

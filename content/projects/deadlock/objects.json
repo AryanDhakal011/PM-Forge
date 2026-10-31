@@ -57,8 +57,8 @@
     "label": "An unopened envelope",
     "card": "Northgate needs autonomy AND documented overrides. Both.",
     "letter": [
-      "We want a demonstration of autonomous operation.",
-      "Our safety auditor requires documented override compliance."
+      "For the demonstration, we need to see TERN-1 work independently.",
+      "We also need a documented way for a person to override it. Both are required."
     ],
     "reaction": [
       "FW-05b"

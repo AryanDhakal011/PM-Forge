@@ -77,6 +77,7 @@ export default function FirstRun(props: SceneProps) {
       <div className={s.demoStage}>
         <Arm
           state={state}
+          crossing={eventNo === 2}
           active={phase === "watch" && !props.paused}
           incident={phase === "result" && !!latest?.incident}
         />
@@ -173,7 +174,7 @@ export default function FirstRun(props: SceneProps) {
           <p className={s.pausedBanner}>Time is paused. Take your time.</p>
           <p className={s.eventGoal}>{intro.goal}</p>
           <div className={s.eventIllustration}>
-            <Arm state={state} />
+            <Arm state={state} crossing={eventNo === 2} />
           </div>
           {phase === "brief" && (
             <Conversation

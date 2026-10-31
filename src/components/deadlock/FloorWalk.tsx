@@ -199,6 +199,7 @@ function Inspection({
   state,
   dispatch,
   busy,
+  paused,
   caption,
   onClose,
   onDiscover,
@@ -255,10 +256,25 @@ function Inspection({
       </p>
       {id === "E1" && (
         <>
-          <Arm state={state} active={scrub > 0 && !complete} />
+          <p className={s.kicker}>Demo reconstruction · review the near-miss</p>
+          <Arm
+            state={state}
+            active={scrub > 0 && !paused}
+            crossing={scrub >= 45 && scrub <= 50}
+          />
+          <p className={s.footageObservation} role="status">
+            {scrub >= 45 && scrub <= 50
+              ? "0:47 · A technician crosses within 0.4 m while the arm is still moving. This is the safety concern."
+              : scrub > 50
+                ? "The technician has passed. Move back to 0:47 to review the near-miss."
+                : "The robot is sorting without help. Move toward 0:47 to see the technician enter its path."}
+          </p>
           <label>
-            Demo footage · 0:{Math.floor(scrub).toString().padStart(2, "0")} /
-            1:00
+            Demo footage · {Math.floor(scrub / 60)}:
+            {Math.floor(scrub % 60)
+              .toString()
+              .padStart(2, "0")}{" "}
+            / 1:00
             <input
               type="range"
               aria-label="Scrub demo footage"
@@ -268,7 +284,8 @@ function Inspection({
               value={scrub}
               onChange={(e) => {
                 mark();
-                setScrub(Number(e.target.value));
+                const value = Number(e.target.value);
+                setScrub(value);
               }}
             />
           </label>
@@ -279,12 +296,20 @@ function Inspection({
               onClick={() => {
                 mark();
                 setScrub(47);
-                setMoment(true);
               }}
             >
-              ▲ 0:47 · inspect the red marker
+              Show the near-miss at 0:47 →
             </button>
           </div>
+          {scrub >= 45 && scrub <= 50 && (
+            <button
+              className={s.brassButton}
+              disabled={busy}
+              onClick={() => setMoment(true)}
+            >
+              Save this finding to the case file →
+            </button>
+          )}
           {complete && (
             <p className={s.pattern}>
               FRAME FROZEN · 1.1 m/s · 0.4 m from a person

@@ -159,15 +159,12 @@ export function useAudio(
 ) {
   const nodes = useRef<AudioNodes | null>(null),
     player = useRef<HTMLAudioElement | null>(null),
-    generation = useRef(0),
-    frame = useRef(0);
+    generation = useRef(0);
   const [status, setStatus] = useState("");
   const latest = useRef({ prefs, paused });
   latest.current = { prefs, paused };
-  const clearMouth = () => {
+  const clearSpeaker = () => {
     delete document.documentElement.dataset.deadlockSpeaker;
-    document.documentElement.style.setProperty("--voice-mouth", "0");
-    cancelAnimationFrame(frame.current);
   };
   const stop = () => {
     generation.current++;
@@ -177,7 +174,7 @@ export function useAudio(
       player.current.onerror = null;
       player.current = null;
     }
-    clearMouth();
+    clearSpeaker();
   };
   const unlock = () => {
     if (nodes.current) {
@@ -227,7 +224,7 @@ export function useAudio(
       a.playbackRate = prefs.rate;
       if (paused) {
         a.pause();
-        clearMouth();
+        clearSpeaker();
       } else if (a.paused && !a.ended)
         void a
           .play()
@@ -270,7 +267,10 @@ export function useAudio(
       return;
     }
     const ticket = generation.current,
-      a = new Audio(entry.file);
+      a = new Audio(
+        entry.file +
+          (entry.signature ? "?v=" + entry.signature.slice(0, 12) : ""),
+      );
     player.current = a;
     a.preload = "auto";
     a.volume = p.narration;
@@ -279,7 +279,7 @@ export function useAudio(
     const finish = (played: boolean) => {
       if (finished || ticket !== generation.current) return;
       finished = true;
-      clearMouth();
+      clearSpeaker();
       if (!played)
         setStatus(
           "Audio could not load. Your place is saved; read the caption or Replay.",
@@ -290,20 +290,6 @@ export function useAudio(
     a.onerror = () => finish(false);
     a.onplaying = () => {
       document.documentElement.dataset.deadlockSpeaker = speaker;
-      const tick = () => {
-        if (ticket !== generation.current || a.ended) return;
-        const level =
-          !a.paused && a.volume > 0
-            ? entry.envelope?.[Math.floor(a.currentTime * 20)] || 0
-            : 0;
-        document.documentElement.style.setProperty(
-          "--voice-mouth",
-          level > 0.14 ? "1" : "0",
-        );
-        frame.current = requestAnimationFrame(tick);
-      };
-      cancelAnimationFrame(frame.current);
-      frame.current = requestAnimationFrame(tick);
     };
     if (!latest.current.paused || force)
       void a.play().catch(() => finish(false));

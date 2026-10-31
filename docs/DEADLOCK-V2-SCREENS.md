@@ -12,7 +12,7 @@ Production captures from the actual application, using a disposable guest profil
 
 ## Investigate an object
 
-![Demo footage has a direct instruction and a visible red marker at 0:47.](deadlock-v2-verification/evidence-silent.png)
+![Scrubbing the reconstruction shows the technician close to the moving arm; an explicit action saves the finding.](deadlock-v2-verification/evidence-silent.png)
 
 ## Settle the arguments
 
@@ -24,4 +24,8 @@ Production captures from the actual application, using a disposable guest profil
 
 ## Understand the chapter's consequences
 
-![The chapter review states what the player did, what happened, and what they could try.](deadlock-v2-verification/review-silent.png)
+![The chapter transition gives one short takeaway, with context available on demand.](deadlock-v2-verification/review-silent.png)
+
+## Read the conclusion
+
+![One brief conclusion connects the actual choices to their observed results; detailed chapter notes and replay tools stay collapsed.](deadlock-v2-verification/debrief-silent.png)

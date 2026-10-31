@@ -1577,3 +1577,18 @@
     margin-top: 16px;
   }
 }
+.cardEntry::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  cursor: pointer;
+}
+.card:has(.cardEntry:focus-visible) {
+  outline: 3px solid var(--case-accent);
+  outline-offset: 4px;
+}
+.cardEntry:focus-visible {
+  outline: none;
+}

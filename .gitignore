@@ -59,3 +59,4 @@ docs/deadlock-v2-verification/*.log
 !docs/deadlock-v2-verification/table-silent.png
 !docs/deadlock-v2-verification/event-popup-silent.png
 !docs/deadlock-v2-verification/review-silent.png
+!docs/deadlock-v2-verification/debrief-silent.png

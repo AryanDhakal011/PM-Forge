@@ -343,7 +343,7 @@ export function ProjectGallery({
                 <span className={s.cardStatus}>
                   {p.id === "deadlock" ? (
                     deadlockRuns.length ? (
-                      "Saved simulation · continue on v1.0"
+                      "Saved simulation · continue your run"
                     ) : (
                       "Playable prototype · three distinct chapter loops"
                     )
@@ -380,7 +380,11 @@ export function ProjectGallery({
                   {p.id === "deadlock" ? "About 40 minutes" : "45–75 min"} ·{" "}
                   {p.tags[0]}
                 </span>
-                <Link href={`/app/projects/${p.id}`}>
+                <Link
+                  className={s.cardEntry}
+                  aria-label={`Open ${p.title}`}
+                  href={`/app/projects/${p.id}`}
+                >
                   {(p.id === "deadlock" ? deadlockRuns.length > 0 : !!open)
                     ? "Resume"
                     : "Enter project"}{" "}

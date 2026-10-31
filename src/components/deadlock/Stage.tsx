@@ -380,11 +380,7 @@ function AvatarDrawing({
             ],
           } as React.CSSProperties
         }
-      >
-        <span className={s.mouth} aria-hidden="true" />
-        <span className={s.eyelidLeft} aria-hidden="true" />
-        <span className={s.eyelidRight} aria-hidden="true" />
-      </div>
+      ></div>
       <figcaption>
         <strong>{p.name}</strong>
         <span>{mood === "away" ? "Not in the room" : p.role}</span>
@@ -396,10 +392,12 @@ function ArmDrawing({
   state,
   active = false,
   incident = false,
+  crossing = false,
 }: {
   state: DeadlockState;
   active?: boolean;
   incident?: boolean;
+  crossing?: boolean;
 }) {
   if (state.ending === "QUIET ROOM")
     return (
@@ -529,10 +527,35 @@ function ArmDrawing({
           />
         </g>
       )}
-      <g transform="translate(72 165)" fill="#8a9b93">
+      <g
+        transform={`translate(${crossing ? 480 : 72} 165)`}
+        fill={crossing ? "#efbe8c" : "#8a9b93"}
+      >
         <circle cx="0" cy="-29" r="16" />
         <path d="M-15 0H15L20 68 11 120H1V63H-4L-7 120H-18L-21 66Z" />
       </g>
+      {crossing && (
+        <g aria-hidden="true">
+          <path
+            d="M452 128H393"
+            stroke="#f8bd73"
+            strokeWidth="2"
+            strokeDasharray="4 3"
+          />
+          <text x="473" y="102" fill="#f8d4a4" fontSize="16">
+            Technician crosses
+          </text>
+          <text
+            x="430"
+            y="153"
+            fill="#f8d4a4"
+            fontSize="14"
+            textAnchor="middle"
+          >
+            0.4 m
+          </text>
+        </g>
+      )}
       {state.dials.r === "auto" && (
         <g fill="#c9a24a">
           <path d="M290 27Q318 0 343 27Z" />

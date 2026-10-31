@@ -33,6 +33,11 @@ test("v2 voice coverage: every authored caption has an existing MP3 and amplitud
     const audio = audioManifest.lines[l.id];
     assert.equal(audio.status, "rendered", l.id);
     assert.equal(line(l.id).text, audio.caption, l.id);
+    assert.equal(
+      l.text.replace("{thing}", "The setting"),
+      audio.caption,
+      l.id + " authored script must match its recording",
+    );
     assert.ok(audio.file && existsSync("public" + audio.file), l.id);
     assert.ok(audio.duration! > 0, l.id);
     assert.ok(

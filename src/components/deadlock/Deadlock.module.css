@@ -3653,3 +3653,240 @@
     max-width: 80px;
   }
 }
+/* Quiet portraits, explicit evidence review and one clear ending. */
+.portrait {
+  animation: none;
+}
+.footageObservation {
+  background: #183d36;
+  border-left: 3px solid #dfbd83;
+  padding: 16px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.caseFileNudge {
+  border-color: #edc98b;
+  background: #3b3527;
+  box-shadow: 0 0 0 2px #d6b47536;
+  color: #ffe3b3;
+}
+.evidencePrompt {
+  font: 11px/1.4 var(--font-body);
+  color: #e8c791;
+  max-width: 260px;
+}
+.chapterTakeaway {
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 78ch;
+}
+.chapterNotes {
+  border-top: 1px solid #bcb79e;
+  padding-top: 12px;
+}
+.chapterNotes summary {
+  min-height: 44px;
+  cursor: pointer;
+  color: #425a4b;
+  font-size: 14px;
+  padding: 10px 0;
+}
+.chapterNotes dl {
+  margin-top: 16px;
+}
+.decisionDetails {
+  margin: 24px 0;
+  border: 1px solid #718c774f;
+  border-radius: 12px;
+  background: #102624;
+  padding: 0 24px 24px;
+}
+.decisionDetails:not([open]) {
+  padding-bottom: 0;
+}
+.decisionDetails > summary {
+  padding: 20px 0;
+  min-height: 60px;
+  font-size: 16px;
+  color: #dbc49e;
+  cursor: pointer;
+  line-height: 1.6;
+}
+.conclusion {
+  background: #f0ebdf;
+  color: #223c34;
+  border: 1px solid #d8c8a8;
+  border-radius: 16px;
+  padding: 32px;
+  display: grid;
+  gap: 22px;
+}
+.conclusion .kicker {
+  color: #687354;
+}
+.conclusion h2 {
+  font-size: clamp(27px, 3vw, 40px);
+  line-height: 1.15;
+  max-width: 28ch;
+}
+.conclusionLead {
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 78ch;
+}
+.conclusion h3 {
+  font: 500 20px var(--font-body);
+  letter-spacing: 0;
+}
+.conclusion ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+.conclusion li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 24px minmax(0, 1.4fr);
+  gap: 20px;
+  padding: 20px 0;
+  border-top: 1px solid #b4baa644;
+  align-items: start;
+}
+.conclusion li > strong {
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 500;
+}
+.conclusion li > span {
+  transform: rotate(-90deg);
+  font-size: 20px;
+  color: #687d5e;
+  align-self: center;
+}
+.conclusion li > p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+.conclusion .muted {
+  color: #657261;
+}
+.teamResponse {
+  padding: 22px 24px;
+  border: 1px solid #9cae883b;
+  background: #19352f;
+  border-radius: 12px;
+  display: grid;
+  gap: 18px;
+}
+.teamResponse ul {
+  display: flex;
+  gap: 14px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+.teamResponse li {
+  display: grid;
+  gap: 5px;
+  flex: 1;
+  min-width: 130px;
+  padding: 12px 16px;
+  background: #102924;
+  border-radius: 7px;
+}
+.teamResponse li strong {
+  font-size: 12px;
+  font-weight: 400;
+  color: #bdc9b3;
+  text-transform: capitalize;
+}
+.teamResponse li > span {
+  font-size: 16px;
+  color: #f2d4a6;
+}
+.teamResponse > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 28px;
+}
+.teamResponse p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.game[data-deadlock] > .scene,
+:global([role="dialog"]):has(.game) > :last-child {
+  scrollbar-width: thin;
+  scrollbar-color: #9f9878 #102321;
+}
+.game[data-deadlock] > .scene::-webkit-scrollbar,
+:global([role="dialog"]):has(.game) > :last-child::-webkit-scrollbar {
+  width: 9px;
+}
+.game[data-deadlock] > .scene::-webkit-scrollbar-track,
+:global([role="dialog"]):has(.game) > :last-child::-webkit-scrollbar-track {
+  background: #102321;
+  border-radius: 10px;
+}
+.game[data-deadlock] > .scene::-webkit-scrollbar-thumb,
+:global([role="dialog"]):has(.game) > :last-child::-webkit-scrollbar-thumb {
+  background: #9f9878;
+  border: 2px solid #102321;
+  border-radius: 10px;
+}
+@media (max-width: 767px) {
+  .conclusion {
+    padding: 22px 18px;
+    gap: 18px;
+  }
+  .conclusionLead {
+    font-size: 17px;
+  }
+  .conclusion li {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 18px 0;
+  }
+  .conclusion li > span {
+    transform: none;
+    justify-self: start;
+  }
+  .conclusion li > strong,
+  .conclusion li > p {
+    font-size: 15px;
+  }
+  .decisionDetails {
+    padding-inline: 16px;
+  }
+  .decisionDetails > summary {
+    font-size: 15px;
+  }
+  .teamResponse {
+    padding: 18px;
+  }
+  .teamResponse ul {
+    gap: 8px;
+  }
+  .teamResponse li {
+    padding: 10px 12px;
+    min-width: 110px;
+  }
+  .evidencePrompt {
+    font-size: 10px;
+    max-width: 200px;
+  }
+  .chapterTakeaway {
+    font-size: 16px;
+  }
+}
+.avatar {
+  transition: none;
+}
+.debriefIntro h2 {
+  font-size: 28px;
+}
+.conclusion h2 {
+  font-size: clamp(26px, 2.4vw, 36px);
+  max-width: 48ch;
+}

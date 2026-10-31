@@ -90,6 +90,8 @@ export default function DeadlockExperience() {
     } | null>(null),
     [tier, setTier] = useState("B");
   const [voiceRevision, setVoiceRevision] = useState(0);
+  const [casePrompt, setCasePrompt] = useState("");
+  const casePromptSeen = useRef(new Set<string>());
   const [guide, setGuide] = useState<keyof typeof experience.guides | null>(
       null,
     ),
@@ -194,6 +196,7 @@ export default function DeadlockExperience() {
     setLoading(true);
     setError("");
     setReaction(null);
+    setCasePrompt("");
     setGuide(null);
     setReview(null);
     audioRef.current.stop();
@@ -292,7 +295,21 @@ export default function DeadlockExperience() {
       let lines = reactionFor(next.events.at(-1)!, before, after);
       if (action.type === "INSPECT")
         lines = [{ id: experience.evidence[action.card].line }];
+      if (action.type === "INSPECT")
+        setCasePrompt(
+          "New evidence saved. Open your case file to review the discovery.",
+        );
       lines = lines.map((response) => {
+        if (
+          response.id === "T-EV-NONE" &&
+          (action.type === "SOCKET" || action.type === "ATTACH")
+        )
+          return {
+            id: selectReaction(
+              experience.evidencePrompts[action.lane],
+              spokenLog.current.at(-1)?.id,
+            ),
+          };
         if (!/^T-EV-(SUP|NEU|CON)/.test(response.id)) return response;
         const who = line(response.id).speaker;
         const pool = response.id.includes("-SUP-")
@@ -369,10 +386,19 @@ export default function DeadlockExperience() {
     setGuide(null);
     setVoiceRevision((n) => n + 1);
   };
+  useEffect(() => {
+    if (!runId || !["table", "forge"].includes(state.scene)) return;
+    const key = runId + ":" + state.scene;
+    if (casePromptSeen.current.has(key)) return;
+    casePromptSeen.current.add(key);
+    setCasePrompt(
+      "Your case file holds the evidence you collected. Use it to support this decision.",
+    );
+  }, [runId, state.scene]);
   const advance = (action: Action) => {
     if (
       action.type === "ACK_SCENE" &&
-      ["consequence1", "consequence2", "ending"].includes(action.scene)
+      ["consequence1", "consequence2"].includes(action.scene)
     ) {
       audioRef.current.stop();
       setReaction(null);
@@ -540,6 +566,9 @@ export default function DeadlockExperience() {
     preview: setPreview,
   };
   const isEntry = !runId;
+  const activeCasePrompt = ["ending", "debrief"].includes(state.scene)
+    ? ""
+    : casePrompt;
   return (
     <div
       ref={root}
@@ -698,7 +727,17 @@ export default function DeadlockExperience() {
       ) : (
         <>
           <header className={s.topbar}>
-            <button className={s.button} onClick={() => setCaseOpen(true)}>
+            <button
+              className={`${s.button} ${activeCasePrompt ? s.caseFileNudge : ""}`}
+              data-evidence-cue={!!activeCasePrompt}
+              title={
+                activeCasePrompt || "Review your evidence and case briefing"
+              }
+              onClick={() => {
+                setCasePrompt("");
+                setCaseOpen(true);
+              }}
+            >
               ▤ CASE FILE
             </button>
             <div className={s.brand}>
@@ -730,6 +769,7 @@ export default function DeadlockExperience() {
               <div className={s.orientation}>
                 <StepStrip
                   scene={state.scene}
+                  evidenceHint={activeCasePrompt}
                   onGuide={() =>
                     setGuide(
                       (state.scene in experience.guides
@@ -738,7 +778,9 @@ export default function DeadlockExperience() {
                     )
                   }
                 />
-                <Instruments state={state} preview={preview} calm={calm} />
+                {state.scene !== "debrief" && (
+                  <Instruments state={state} preview={preview} calm={calm} />
+                )}
               </div>
               <main
                 id="main"
@@ -1042,19 +1084,27 @@ export default function DeadlockExperience() {
             </select>
           </label>
           <div className={s.row}>
-            {(["Mara", "Dev", "Ines"] as const).map((speaker, i) => (
-              <button
-                key={speaker}
-                className={s.button}
-                onClick={() => {
-                  const id = ["INT-01", "INT-03", "INT-05"][i];
-                  audio.unlock();
-                  audio.speak(line(id).text, speaker, true, undefined, id);
-                }}
-              >
-                Preview {speaker}
-              </button>
-            ))}
+            {(["Mara", "Dev", "Ines", "Theo", "Northgate"] as const).map(
+              (speaker, i) => (
+                <button
+                  key={speaker}
+                  className={s.button}
+                  onClick={() => {
+                    const id = [
+                      "INT-01",
+                      "INT-03",
+                      "INT-05",
+                      "EN-S1",
+                      "LETTER-01",
+                    ][i];
+                    audio.unlock();
+                    audio.speak(line(id).text, speaker, true, undefined, id);
+                  }}
+                >
+                  Preview {speaker}
+                </button>
+              ),
+            )}
           </div>
         </div>
       </Dialog>

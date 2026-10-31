@@ -1,14 +1,14 @@
 {
-  "at": "2026-10-30T19:09:02.810Z",
-  "buildId": "cCBPYX7f8aSHNzqx2NRr8",
+  "at": "2026-10-31T05:42:28.324Z",
+  "buildId": "DwoqtRrvHOxAjkrUTZ4g9",
   "method": "gzip of the production Deadlock client-reference dependency set plus signature-identified lazy scene chunks. This is a component-boundary budget; unrelated Next runtime/bootstrap scripts are outside this measurement.",
-  "boundaryGzipBytes": 273477,
-  "totalBoundaryAndScenesGzipBytes": 305791,
+  "boundaryGzipBytes": 287873,
+  "totalBoundaryAndScenesGzipBytes": 320777,
   "incrementalChapterGzipBytes": {
-    "chapter1": 12331,
+    "chapter1": 12796,
     "chapter2": 8668,
-    "chapter3": 4654,
-    "debrief": 6661
+    "chapter3": 4673,
+    "debrief": 6767
   },
   "fonts": [
     {
@@ -21,7 +21,7 @@
     }
   ],
   "imagePlateBytes": 0,
-  "recordedAudioBytes": 7391191,
+  "recordedAudioBytes": 10653105,
   "characterAtlasBytes": 236560,
   "assetStatus": "Vector room and robot, generated illustrated character atlas, pre-rendered Kokoro neural MP3 cast; clips load on demand, no model runs in the browser.",
   "files": [
@@ -66,28 +66,28 @@
       "gzipBytes": 31108
     },
     {
-      "file": "/_next/static/chunks/0mmdrspwmdd-0.js",
-      "gzipBytes": 434
+      "file": "/_next/static/chunks/16rbf2dt-ofv6.js",
+      "gzipBytes": 436
     },
     {
-      "file": "/_next/static/chunks/3zxl6ttuu9t1z.js",
-      "gzipBytes": 14440
+      "file": "/_next/static/chunks/3z5m5nehf5sge.js",
+      "gzipBytes": 14532
     },
     {
-      "file": "/_next/static/chunks/2b1-g40kq1eby.js",
-      "gzipBytes": 13814
+      "file": "/_next/static/chunks/13_dvtrft-thi.js",
+      "gzipBytes": 15892
     },
     {
-      "file": "/_next/static/chunks/2y253c09oy8id.js",
-      "gzipBytes": 41542
+      "file": "/_next/static/chunks/0prkfgi3e4v05.js",
+      "gzipBytes": 53766
     },
     {
-      "file": "/_next/static/chunks/0s_moto5eo5c1.js",
-      "gzipBytes": 3349
+      "file": "/_next/static/chunks/063dggjymj6ey.js",
+      "gzipBytes": 3564
     },
     {
-      "file": "/_next/static/chunks/0utl0gm3e6riv.js",
-      "gzipBytes": 3331
+      "file": "/_next/static/chunks/32jjya8ckwo39.js",
+      "gzipBytes": 3581
     },
     {
       "file": "/_next/static/chunks/1ub4txizttm48.js",
@@ -114,26 +114,26 @@
       "gzipBytes": 2467
     },
     {
-      "file": "/_next/static/chunks/1pm973tkck_5t.js",
-      "gzipBytes": 2317
+      "file": "/_next/static/chunks/3ehb6whgstxdc.js",
+      "gzipBytes": 2327
     },
     {
-      "file": "/_next/static/chunks/35b0-47vzxlr2.js",
-      "gzipBytes": 2337
+      "file": "/_next/static/chunks/3fuhx6dlbhsgc.js",
+      "gzipBytes": 2346
     },
     {
-      "file": "/_next/static/chunks/2zprbrbec91uj.js",
-      "gzipBytes": 3320
+      "file": "/_next/static/chunks/29dz0_n9xxcx6.js",
+      "gzipBytes": 3394
     },
     {
-      "file": "/_next/static/chunks/39jon07az-9gk.js",
-      "gzipBytes": 3341
+      "file": "/_next/static/chunks/34gqg40a7ye8g.js",
+      "gzipBytes": 3373
     }
   ],
   "scenes": {
     "floor": [
-      "/_next/static/chunks/0s_moto5eo5c1.js",
-      "/_next/static/chunks/0utl0gm3e6riv.js"
+      "/_next/static/chunks/063dggjymj6ey.js",
+      "/_next/static/chunks/32jjya8ckwo39.js"
     ],
     "table": [
       "/_next/static/chunks/1ub4txizttm48.js",
@@ -148,12 +148,12 @@
       "/_next/static/chunks/3sun4ld0mvetw.js"
     ],
     "run": [
-      "/_next/static/chunks/1pm973tkck_5t.js",
-      "/_next/static/chunks/35b0-47vzxlr2.js"
+      "/_next/static/chunks/3ehb6whgstxdc.js",
+      "/_next/static/chunks/3fuhx6dlbhsgc.js"
     ],
     "debrief": [
-      "/_next/static/chunks/2zprbrbec91uj.js",
-      "/_next/static/chunks/39jon07az-9gk.js"
+      "/_next/static/chunks/29dz0_n9xxcx6.js",
+      "/_next/static/chunks/34gqg40a7ye8g.js"
     ]
   },
   "checks": {

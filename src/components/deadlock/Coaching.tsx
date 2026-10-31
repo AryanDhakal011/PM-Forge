@@ -2,6 +2,7 @@
 import { Dialog } from "@/components/ui/Dialog";
 import { experience } from "@/lib/deadlock/content";
 import { chapterReviews } from "@/lib/deadlock/reviews";
+import { chapterTakeaway } from "@/lib/deadlock/conclusion";
 import type { DeadlockState } from "@/lib/deadlock/types";
 import type { SceneProps } from "./runtime";
 import { Conversation } from "./Conversation";
@@ -14,14 +15,16 @@ export const steps = [
   { title: "Show the evidence", scenes: ["opening2", "data"] },
   { title: "Build the prototype", scenes: ["forge"] },
   { title: "Run the demo", scenes: ["consequence2", "run"] },
-  { title: "Reflect and explore", scenes: ["ending", "debrief"] },
+  { title: "Your conclusion", scenes: ["ending", "debrief"] },
 ];
 export function StepStrip({
   scene,
   onGuide,
+  evidenceHint,
 }: {
   scene: string;
   onGuide: () => void;
+  evidenceHint?: string;
 }) {
   const index = Math.max(
     0,
@@ -32,6 +35,11 @@ export function StepStrip({
       <div>
         <span>Step {index + 1} of 8</span>
         <strong>{steps[index].title}</strong>
+        {evidenceHint && (
+          <small className={s.evidencePrompt}>
+            Evidence in your case file ↑
+          </small>
+        )}
       </div>
       <ol>
         {steps.map((step, i) => (
@@ -125,23 +133,27 @@ export function ReviewCard({
     <article className={s.chapterReview} data-review={chapter}>
       <div className={s.reviewHead}>
         <span className={s.kicker}>CHAPTER {chapter} · REVIEW</span>
-        <strong data-verdict={r.verdict}>{r.verdict}</strong>
+        <strong>Chapter complete</strong>
       </div>
       <h3>{r.title}</h3>
-      <dl>
-        <div>
-          <dt>You did</dt>
-          <dd>{r.did}</dd>
-        </div>
-        <div>
-          <dt>What happened</dt>
-          <dd>{r.happened}</dd>
-        </div>
-        <div>
-          <dt>You could try</dt>
-          <dd>{r.try}</dd>
-        </div>
-      </dl>
+      <p className={s.chapterTakeaway}>{chapterTakeaway(state, chapter)}</p>
+      <details className={s.chapterNotes}>
+        <summary>More context, if you want it</summary>
+        <dl>
+          <div>
+            <dt>You did</dt>
+            <dd>{r.did}</dd>
+          </div>
+          <div>
+            <dt>What happened</dt>
+            <dd>{r.happened}</dd>
+          </div>
+          <div>
+            <dt>You could try</dt>
+            <dd>{r.try}</dd>
+          </div>
+        </dl>
+      </details>
       {(onContinue || onReplay) && (
         <div className={s.row}>
           {onContinue && (
@@ -160,10 +172,6 @@ export function ReviewCard({
           )}
         </div>
       )}
-      <small className={s.muted}>
-        A reading of this chapter’s decisions, not a calibrated assessment of
-        your ability.
-      </small>
     </article>
   );
 }

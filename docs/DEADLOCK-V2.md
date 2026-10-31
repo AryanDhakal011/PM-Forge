@@ -1,6 +1,6 @@
 # Deadlock: the guided, voiced experience
 
-Implements the corrected v2 handoff and the user's six tightenings. This document supersedes the presentation/audio sections of `DEADLOCK_QA.md` and `DEADLOCK_GAPS.md`; their v1 balance report remains historical evidence, not a calibration of v2.
+Implements the corrected v2 handoff and the user's follow-up refinements. See [the latest refinement report](DEADLOCK-REFINEMENTS.md) for the current verification and casting changes. This document supersedes the presentation/audio sections of `DEADLOCK_QA.md` and `DEADLOCK_GAPS.md`; their v1 balance report remains historical evidence, not a calibration of v2.
 
 ## What changed
 
@@ -9,29 +9,30 @@ Implements the corrected v2 handoff and the user's six tightenings. This documen
 - An eight-step strip gives location and purpose. Character-led guides have Goal / Do this / Watch for, Replay, Mute and Got it. A persistent skip-all checkbox suppresses automatic guides; the question-mark button still opens them.
 - One conversation index owns each displayed line and its audio request. Next is explicit. Auto-advance starts OFF and, when enabled, waits for a successful recording's `ended` event plus 600ms. Silent, failed or missing playback cannot trigger auto-advance. Old callbacks and duplicate end events cannot advance a newer line.
 - Speaker name/role appear beside the portrait, separate from the words. Replies stay until the player advances; no guessed speech-duration timers or browser speech remain. Replay restarts the current recording. Pause/tab visibility pause playback, and returning from a guide replays the interrupted current line without resetting the conversation.
-- Five distinct illustrated adults use four expressions: Neutral, Thinking, Annoyed, Approving. The portrait atlas supplies the expressions; small blinks and binary mouth opening use CSS. Mouth opening follows a 20Hz envelope measured from the actual recording, not fake syllables or full lip-sync. Small portraits have an 80px presentation size; the mobile demo gallery wraps.
-- Objects have short, explicit instructions. The footage marker is 0:47. Slack is already frozen so the player can identify the assumptions immediately. Completing the required action saves the card and fires discovery/reaction without a separate pin screen. There is no imposed timer or waiting mini-game; actual user completion times still require playtesting.
+- Five distinct illustrated adults use four static expressions: Neutral, Thinking, Annoyed, Approving. Speaking and blinking overlays have been removed. There is no per-frame facial-animation loop. The mobile gallery preserves readable 80px portraits.
+- Objects have short, explicit instructions. Demo footage is labelled as a reconstruction: moving the timeline shows the technician cross close to the moving arm. A shortcut reaches the same moment; Save this finding explicitly records what the player saw. Other completed object tasks still save their discovery directly.
 - All four table choices remain readable, including the complete Leave for later explanation. A review-before-lock modal lists three choices and metric/resource deltas, with Change something and Lock it.
 - Dataset selection immediately projects the dataset, matching the guide. The prototype has a plain Submit proposal action.
 - Every demo event has an explanation. Events 1 and 5 are watch moments; only 2–4 offer decisions. Each decision explains the current build, evidence/unknowns, token cost, impact loss and supervision. The real engine's risk is used; the UI does not falsely mark every defended 1.0 m/s build unsafe.
-- Three chapter reviews give Strong/Mixed/Weak verdicts, You did / What happened / You could try, and chapter replay. The final debrief reconstructs the earlier chapter snapshots and reuses those cards before the trace and branches. These are decision summaries, not calibrated ability ratings.
+- Chapter transitions give one compact takeaway with optional context. The ending leads directly to one brief conclusion, with at most three choice-to-result links. Detailed chapter notes, traces and replay tools are collapsed until requested; they do not lead the result screen.
 
 ## Shipped voice pack
 
-**185 real MP3 assets**, 44.1kHz mono / 96kbps, approximately 7.39MB total, generated offline using Kokoro-82M v1.0 through kokoro-onnx 0.6.1. Nothing is synthesized in the application and no model weights ship to the browser. Files load by line as needed; the service worker caches full clips rather than incomplete Range fragments. Missing playback leaves captions and Replay available.
+**191 pre-rendered neural MP3 assets**, 44.1kHz mono / 96kbps, approximately 10.65MB total, generated offline using Kokoro-82M v1.0 through kokoro-onnx 0.6.1. Nothing is synthesized in the application and no model weights ship to the browser. Files load by line as needed; the service worker caches full clips rather than incomplete Range fragments. Missing playback leaves captions and Replay available.
 
 | Speaker                        | Neural voice | Production speed |
 | ------------------------------ | ------------ | ---------------- |
 | Mara                           | af_heart     | 0.96             |
-| Dev                            | am_michael   | 1.06             |
+| Dev | am_puck | 1.00 base, directed per line |
 | Ines                           | bf_emma      | 0.96             |
 | Nadia                          | bf_isabella  | 1.00             |
-| Theo / formal Northgate letter | bm_george    | 1.00             |
+| Theo | am_fenrir | 0.98 base, reflective delivery |
+| Northgate letter | af_bella | 0.98 |
 | Facility captions              | af_sarah     | 1.00             |
 
-This is an actual neural recording pack, not a claim of human actors or exact perceived ages. The script's emotion direction is preserved in the manifest; Kokoro does not interpret ElevenLabs emotion tags. Listening/casting approval for the requested mature/dry/energetic performances remains subjective review. The user can audition the real result in Sound + captions.
+This is an actual neural recording pack, not a claim of human actors or exact perceived ages. The script's emotion direction is preserved as one tag per line. For the recast voices it controls offline speed and sentence/clause pauses. Kokoro does not provide native acted-emotion tag control; tags are not spoken aloud. Mara's approved casting and delivery settings are retained. Listening/casting approval for the requested mature/dry/energetic performances remains subjective review. The user can audition the real result in Sound + captions.
 
-`content/projects/deadlock/audio-manifest.json` contains line ID, speaker, exact spoken caption, file, voice, expression, direction, duration and amplitude envelope. The generated MP3s are in `public/deadlock/audio`; a copy of Apache License 2.0 is included. Model provenance: [official model card](https://huggingface.co/hexgrad/Kokoro-82M), [voice characteristics and limitations](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md), [inference implementation](https://github.com/thewh1teagle/kokoro-onnx). The voice documentation explicitly notes weaker short-utterance performance; very short lines need listening review.
+`content/projects/deadlock/audio-manifest.json` contains line ID, speaker, exact spoken caption, file, voice, expression, direction, duration, direction tag, delivery settings and archival amplitude envelope. The generated MP3s are in `public/deadlock/audio`; a copy of Apache License 2.0 is included. Model provenance: [official model card](https://huggingface.co/hexgrad/Kokoro-82M), [voice characteristics and limitations](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md), [inference implementation](https://github.com/thewh1teagle/kokoro-onnx). The voice documentation explicitly notes weaker short-utterance performance; very short lines need listening review.
 
 ## ElevenLabs production path
 
@@ -53,16 +54,16 @@ Playback design is informed by [W3C audio-control guidance](https://www.w3.org/W
 
 ## Verification
 
-Local production verification on 31 October 2026 (Nepal): production build passed; the 13 existing Deadlock tests and four new v2 tests passed; all 47 existing product/account tests passed. The two-mode browser suite records 71 checks, including the complete ordered introductions/briefing, the full scenario in both modes, 320/390px layout checks, guide persistence, actual audio-end timing, duplicate callbacks, keyboard advancement and failure/replay recovery. All 185 audio files were played through to `ended` in Chrome. Exact reports are in `deadlock-v2-verification`.
+Local production verification on 31 October 2026 (Nepal): production build passed; all 22 Deadlock engine/content/refinement tests passed; all 47 existing product/account tests passed. The two-mode browser suite records 88 checks, including the complete ordered introductions/briefing, the full scenario in both modes, 320/390px layout checks, guide persistence, actual audio-end timing, duplicate callbacks, keyboard advancement and failure/replay recovery. All 191 audio files were played through to `ended` in Chrome. Exact reports are in `deadlock-v2-verification`.
 
-Final compressed component-boundary measurement: **305,791 bytes gzip**, with chapter increments **12,331 / 8,668 / 4,654 bytes**, plus **6,661 bytes** for debrief. All five supplied JavaScript budget checks passed. This includes shared dependencies at the Deadlock boundary; it excludes unrelated Next bootstrap scripts and does not represent a full cold-page transfer. Fonts are 37,016 bytes, the character atlas is 236,560 bytes, and the 185 on-demand voice assets total 7,391,191 bytes.
+Final compressed component-boundary measurement: **320,777 bytes gzip**, with chapter increments **12,796 / 8,668 / 4,673 bytes**, plus **6,767 bytes** for debrief. All five supplied JavaScript budget checks passed. This includes shared dependencies at the Deadlock boundary; it excludes unrelated Next bootstrap scripts and does not represent a full cold-page transfer. Fonts are 37,016 bytes, the character atlas is 236,560 bytes, and the 191 on-demand voice assets total 10,653,105 bytes.
 
-A separate short, active-ending sample measured **16.8ms p95 on desktop** and **33.3ms p95 at 390px with 4× CPU throttling**, with zero long tasks in both samples. JS heap estimates were approximately 24.5MB and 20.9MB. These are one-scene browser-emulation samples, not physical-device frame guarantees or total process-memory measurements. The reproducible probe is `docs/verify-deadlock-v2-performance.mjs`.
+A historical sample from the preceding v2 build (not rerun for these refinements) measured **16.8ms p95 on desktop** and **33.3ms p95 at 390px with 4× CPU throttling**, with zero long tasks in both samples. JS heap estimates were approximately 24.5MB and 20.9MB. These are one-scene browser-emulation samples, not physical-device frame guarantees or total process-memory measurements. The reproducible probe is `docs/verify-deadlock-v2-performance.mjs`.
 
-The six requested [screenshots](DEADLOCK-V2-SCREENS.md) are included for review; additional mobile images remain in the local verification directory.
+The current [screenshots](DEADLOCK-V2-SCREENS.md) are included for review; additional mobile images remain in the local verification directory.
 
-After the final copy/settings cleanup, a separate captions-only smoke pass completed 37 checks and refreshed the six screenshots. Seven additional voice-settings checks passed, including all three character previews while captions-only is selected, preserving that selection after auditioning, and starting recorded playback with the legacy device-voice “off” preference. Use `DEADLOCK_FAST_SMOKE=1` or `DEADLOCK_PREVIEW_ONLY=1` with the browser script to reproduce these focused passes; their reports are `smoke.json` and `voices.json`.
+After the final copy/settings cleanup, a separate captions-only smoke pass completed 47 checks and refreshed the seven screenshots. Seventeen additional voice-settings checks passed, including all five cast/letter previews while captions-only is selected, preserving that selection after auditioning, and starting recorded playback with the legacy device-voice “off” preference. Use `DEADLOCK_FAST_SMOKE=1` or `DEADLOCK_PREVIEW_ONLY=1` with the browser script to reproduce these focused passes; their reports are `smoke.json` and `voices.json`.
 
-`npm run test:deadlock` includes the existing engine tests and the new voice coverage, four-expression, non-repeating reaction, guide/review and versioned-cost regressions. `node docs/verify-deadlock-v2.mjs` exercises both modes through the full introduction, briefing and scenario. Reports and screenshots are in `docs/deadlock-v2-verification`; local screenshots are intentionally ignored by Git. Compressed JavaScript and asset sizes are measured by `node scripts/deadlock-budgets.mjs` after a production build.
+`npm run test:deadlock` includes the existing engine tests and the new voice coverage, four-expression, non-repeating reaction, guide/review and versioned-cost regressions. `node docs/verify-deadlock-v2.mjs` exercises both modes through the full introduction, briefing and scenario. Reports and screenshots are in `docs/deadlock-v2-verification`; seven review screenshots are tracked; additional local captures are ignored by Git. Compressed JavaScript and asset sizes are measured by `node scripts/deadlock-budgets.mjs` after a production build.
 
 Physical Safari/iOS/Android, actual screen-reader and subjective cast listening checks, the “goal understood within ten seconds” observation, and real 8–10-second object timings require human/device validation. Browser emulation cannot certify those. Cloud sync and general workspace backup still exclude Deadlock logs; use the in-simulation export.

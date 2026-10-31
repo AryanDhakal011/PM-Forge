@@ -3,14 +3,14 @@
     "id": "Mara",
     "name": "Mara Okafor",
     "role": "Head of Engineering",
-    "voice": "af_nicole",
+    "voice": "af_heart",
     "color": "#c9a24a"
   },
   {
     "id": "Dev",
     "name": "Dev Raman",
     "role": "Robotics Lead",
-    "voice": "am_michael",
+    "voice": "am_puck",
     "color": "#ff9a5b"
   },
   {
@@ -24,7 +24,7 @@
     "id": "Theo",
     "name": "Theo Lindqvist",
     "role": "Northgate Ventures",
-    "voice": "af_sarah",
+    "voice": "am_fenrir",
     "color": "#c9a24a"
   },
   {
@@ -38,7 +38,7 @@
     "id": "CONTROL",
     "name": "CONTROL",
     "role": "Facility system",
-    "voice": "af_heart",
+    "voice": "af_sarah",
     "color": "#e9efea"
   }
 ]
