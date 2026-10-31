@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Start fresh — PMForge</title>
+    <style>
+      body {
+        margin: 0;
+        background: #f3ebdd;
+        color: #173d34;
+        font:
+          16px/1.65 system-ui,
+          sans-serif;
+      }
+      main {
+        max-width: 720px;
+        margin: 8vh auto;
+        padding: 28px;
+      }
+      h1 {
+        font:
+          normal clamp(38px, 7vw, 64px) / 1.1 Georgia,
+          serif;
+      }
+      small {
+        color: #52645b;
+      }
+      section {
+        margin: 24px 0;
+        padding: 22px;
+        border: 1px solid #b7bba9;
+        border-radius: 12px;
+        background: #fff9ed;
+      }
+      button,
+      a.action {
+        display: inline-block;
+        font: inherit;
+        cursor: pointer;
+        border: 1px solid #173d34;
+        background: #173d34;
+        color: #fff9ed;
+        padding: 12px 18px;
+        border-radius: 6px;
+        text-decoration: none;
+        margin: 6px 8px 6px 0;
+      }
+      button.secondary {
+        background: transparent;
+        color: #173d34;
+      }
+      button:disabled {
+        opacity: 0.45;
+        cursor: wait;
+      }
+      :focus-visible {
+        outline: 3px solid #a16b1e;
+        outline-offset: 4px;
+      }
+      #status {
+        white-space: pre-line;
+      }
+      #continue[hidden] {
+        display: none;
+      }
+      .warning {
+        color: #793a21;
+      }
+      code {
+        font-size: 0.85em;
+        overflow-wrap: anywhere;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <small>PMFORGE / LOCAL TESTING & RECOVERY</small>
+      <h1>A clean desk.<br />A fresh start.</h1>
+      <p>
+        This page works independently of the workspace and its JavaScript
+        bundles.
+      </p>
+      <p>
+        Current site: <code id="origin"></code>. Browser storage is separate for
+        ports 3001 and 3002.
+      </p>
+      <section>
+        <h2>Reload without old app files</h2>
+        <p>
+          Remove PMForge’s cached files and offline workers. Your saved practice
+          and project runs stay.
+        </p>
+        <button class="secondary" id="cache">Clear app cache only</button>
+      </section>
+      <section>
+        <h2>Start from zero</h2>
+        <p class="warning">
+          Delete this browser’s local PMForge profiles, interview practice,
+          Deadlock and Sacred No runs, notes, preferences and analytics for this
+          site. Sign out on this device so account sync does not immediately
+          restore the workspace.
+        </p>
+        <p>
+          Your server account and cloud work are not deleted. This does not
+          clear other websites or browser profiles.
+        </p>
+        <button id="fresh">Clear local test data and start fresh</button>
+      </section>
+      <p id="status" role="status" aria-live="polite">
+        Nothing has been cleared yet.
+      </p>
+      <div id="continue" hidden>
+        <a class="action" href="/app">Open a fresh workspace →</a
+        ><a href="/">Back to the landing page</a>
+      </div>
+      <p>
+        <small
+          >Bookmark <a href="/reset.html">this reset page</a> to repeat a clean
+          test. If another PMForge tab blocks deletion, close that tab and retry
+          here.</small
+        >
+      </p>
+    </main>
+    <script src="/reset-workspace.js" defer></script>
+  </body>
+</html>

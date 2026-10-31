@@ -4,10 +4,10 @@ import Link from "next/link";
 import { ArrowRight, RotateCcw } from "lucide-react";
 
 export default function ErrorPage({
-  reset,
+  retry,
 }: {
   error: Error & { digest?: string };
-  reset: () => void;
+  retry: () => void;
 }) {
   return (
     <main
@@ -30,7 +30,9 @@ export default function ErrorPage({
           An unexpected error stopped this view. Your local practice data is
           still in the browser. Try the view again, or head somewhere real.
         </p>
-        <p style={{ maxWidth: "58ch", marginTop: "1rem", color: "var(--muted)" }}>
+        <p
+          style={{ maxWidth: "58ch", marginTop: "1rem", color: "var(--muted)" }}
+        >
           Errors do not clear localStorage. If the problem persists, use the
           help page to reset practice data deliberately.
         </p>
@@ -42,10 +44,13 @@ export default function ErrorPage({
             marginTop: "2rem",
           }}
         >
-          <button type="button" className="btn btnPrimary" onClick={reset}>
+          <button type="button" className="btn btnPrimary" onClick={retry}>
             <RotateCcw size={15} strokeWidth={1.8} aria-hidden="true" />
             Try again
           </button>
+          <a href="/reset.html" className="btn btnOutline">
+            Start fresh / clear local test data
+          </a>
           <Link href="/" className="btn btnOutline">
             Back to the landing page
             <ArrowRight size={16} strokeWidth={1.8} aria-hidden="true" />

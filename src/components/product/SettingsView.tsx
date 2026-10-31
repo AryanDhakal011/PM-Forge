@@ -311,6 +311,7 @@ export function SettingsView() {
                 <RefreshCw size={15} />
                 Retry connection / reload identity
               </button>
+              <a href="/reset.html" className={styles.secondary}>Clear app cache / start a fresh test</a>
               <button className={styles.danger} onClick={() => setReset(true)}>
                 <Trash2 size={15} />
                 Reset this device profile

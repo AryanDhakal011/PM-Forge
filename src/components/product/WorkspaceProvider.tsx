@@ -41,6 +41,8 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     let cancelled = false;
     const load = async () => {
+      setError("");
+      setLoading(true);
       try {
         const local = await getLocalProfile();
         const response = await fetch("/api/me", { cache: "no-store" });
@@ -92,6 +94,20 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
       cancelled = true;
     };
   }, [revision]);
+  useEffect(() => {
+    const changed = (event: StorageEvent) => {
+      if (
+        event.storageArea !== localStorage ||
+        (event.key !== null && event.key !== IDENTITY_KEY)
+      )
+        return;
+      setCurrent(null);
+      initialSync.current = "";
+      setRevision((value) => value + 1);
+    };
+    window.addEventListener("storage", changed);
+    return () => window.removeEventListener("storage", changed);
+  }, []);
   useEffect(() => {
     if (!profile || profile.identity !== "member") return;
     if (!dirty && initialSync.current === profile.id) return;
