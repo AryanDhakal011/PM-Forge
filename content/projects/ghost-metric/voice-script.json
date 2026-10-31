@@ -30,7 +30,7 @@
       "fear": "His work being dismissed.",
       "tell": "Asks for the query before discussing the conclusion.",
       "color": "#647587",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "speed": 0.97
     },
     {
@@ -64,10 +64,346 @@
       "text": "Three hundred and forty percent. Let’s celebrate that."
     },
     {
-      "id": "opening-1",
+      "id": "introElena-0",
+      "speaker": "Elena",
+      "emotion": "approving",
+      "text": "I’m Elena, CEO. We announced three hundred and forty percent growth."
+    },
+    {
+      "id": "introElena-1",
+      "speaker": "Elena",
+      "emotion": "thinking",
+      "text": "Investors expect us to explain what that growth actually means."
+    },
+    {
+      "id": "introRavi-0",
+      "speaker": "Ravi",
+      "emotion": "neutral",
+      "text": "I’m Ravi, CTO. My team built the pipeline and AMC definition."
+    },
+    {
+      "id": "introRavi-1",
+      "speaker": "Ravi",
+      "emotion": "thinking",
+      "text": "If something disagrees, show me the source. We will check it together."
+    },
+    {
+      "id": "introMarcus-0",
+      "speaker": "Marcus",
+      "emotion": "neutral",
+      "text": "Marcus, revenue. Our targets and bonuses use that same number."
+    },
+    {
+      "id": "introMarcus-1",
+      "speaker": "Marcus",
+      "emotion": "thinking",
+      "text": "Tell me early if the definition needs to change."
+    },
+    {
+      "id": "introJoyce-0",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "I’m Joyce, your data platform partner. Billing and AMC don’t quite agree."
+    },
+    {
+      "id": "caseBrief-0",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "You’re our new Platform Growth PM. You own dashboards and the roadmap."
+    },
+    {
+      "id": "caseBrief-1",
       "speaker": "Joyce",
       "emotion": "thinking",
-      "text": "Can you look at something? It’s probably nothing."
+      "text": "In three days, tell the board whether this number represents new demand."
+    },
+    {
+      "id": "caseBrief-2",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "Twelve audit hours buy sources and joins. Unspent hours become presentation prep."
+    },
+    {
+      "id": "caseBrief-3",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "Credibility comes from evidence and honest uncertainty. Start with one sample request."
+    },
+    {
+      "id": "invitation-0",
+      "speaker": "Joyce",
+      "emotion": "thinking",
+      "text": "Now, can you look at something? It’s probably nothing."
+    },
+    {
+      "id": "coachUnit-0",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "One customer request can create several events. Classify the retry, not the customer."
+    },
+    {
+      "id": "coachAudit-0",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "Open a drawer with your audit hours. Inspect its rows, then choose a join."
+    },
+    {
+      "id": "coachAudit-1",
+      "speaker": "Joyce",
+      "emotion": "thinking",
+      "text": "Success means knowing what you proved, and what is still uncertain."
+    },
+    {
+      "id": "coachJoin-0",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "Choose columns that identify the same thing. Confirming any attempt spends one hour."
+    },
+    {
+      "id": "coachJoin-1",
+      "speaker": "Joyce",
+      "emotion": "thinking",
+      "text": "Matched rows can quantify a cause. An empty match tells you why."
+    },
+    {
+      "id": "coachEstimate-0",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "Set a point and a range. Both bounds should reflect your actual uncertainty."
+    },
+    {
+      "id": "coachCarry-0",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "Decide when to raise this. Waiting uses preparation time and has consequences."
+    },
+    {
+      "id": "coachStakeholders-0",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "Choose who hears this first. You can brief others before picking a delivery."
+    },
+    {
+      "id": "coachSlides-0",
+      "speaker": "Elena",
+      "emotion": "neutral",
+      "text": "Give us one headline, sources we can check, and one explicit decision request."
+    },
+    {
+      "id": "coachMetric-0",
+      "speaker": "Ravi",
+      "emotion": "neutral",
+      "text": "Define one unit, its counting rules, and the quality limits beside it."
+    },
+    {
+      "id": "coachRedteam-0",
+      "speaker": "Marcus",
+      "emotion": "neutral",
+      "text": "We test your wording, not your intentions. Close loopholes with three fix hours."
+    },
+    {
+      "id": "coachBoard-0",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "The board remembers your estimate and promises. Review them before answering."
+    },
+    {
+      "id": "coachAuditV2-0",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "Start with one source. Leave enough hours to test how its rows connect."
+    },
+    {
+      "id": "coachAuditV2-1",
+      "speaker": "Joyce",
+      "emotion": "thinking",
+      "text": "Carry what you can defend, not everything you suspect."
+    },
+    {
+      "id": "coachAuditV3-0",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "Pick the drawer most likely to change your mind. Joins cost another hour."
+    },
+    {
+      "id": "coachAuditV3-1",
+      "speaker": "Joyce",
+      "emotion": "thinking",
+      "text": "A smaller, verified claim is useful. You do not need every source."
+    },
+    {
+      "id": "coachAuditV4-0",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "Your budget cannot open everything. Choose a source, inspect it, then cross-check it."
+    },
+    {
+      "id": "coachJoinV2-0",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "Start from this drawer. Select a target describing the same request or account."
+    },
+    {
+      "id": "coachJoinV2-1",
+      "speaker": "Joyce",
+      "emotion": "thinking",
+      "text": "Review the keys before spending your hour."
+    },
+    {
+      "id": "coachJoinV3-0",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "A request ID matches requests. An account ID matches accounts. Pick both sides."
+    },
+    {
+      "id": "coachJoinV4-0",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "Use the chips or keyboard. Nothing is charged until you confirm the join."
+    },
+    {
+      "id": "coachEstimateV2-0",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "How uncertain are you? Choose bounds you can explain from your sources."
+    },
+    {
+      "id": "coachEstimateV3-0",
+      "speaker": "Joyce",
+      "emotion": "thinking",
+      "text": "A precise point can hide uncertainty. Show the range you actually believe."
+    },
+    {
+      "id": "coachUnitV2-0",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "The same request can appear again. Decide whether that adds new customer intent."
+    },
+    {
+      "id": "coachUnitV3-0",
+      "speaker": "Joyce",
+      "emotion": "thinking",
+      "text": "Read the event, then classify it. A repeated attempt is not necessarily new demand."
+    },
+    {
+      "id": "coachCarryV2-0",
+      "speaker": "Joyce",
+      "emotion": "thinking",
+      "text": "Move with evidence, spend time verifying, or accept the consequences of staying quiet."
+    },
+    {
+      "id": "coachCarryV3-0",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "Choose what leaves the audit. You will need time to prepare the conversation."
+    },
+    {
+      "id": "coachBoardV2-0",
+      "speaker": "Joyce",
+      "emotion": "thinking",
+      "text": "Your words are already in the record. Choose a response you can defend."
+    },
+    {
+      "id": "coachBoardV3-0",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "Review the promises and remaining limits. Then put your correction on the record."
+    },
+    {
+      "id": "coachStakeholdersV2-0",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "Who needs this directly from you? Set the order before the room hears."
+    },
+    {
+      "id": "coachStakeholdersV3-0",
+      "speaker": "Joyce",
+      "emotion": "thinking",
+      "text": "The owner, sponsor, and target-holder need different conversations. Choose who comes first."
+    },
+    {
+      "id": "coachSlidesV2-0",
+      "speaker": "Elena",
+      "emotion": "neutral",
+      "text": "Make a claim, show the source, then tell us what decision changes."
+    },
+    {
+      "id": "coachSlidesV3-0",
+      "speaker": "Elena",
+      "emotion": "thinking",
+      "text": "Keep the deck short. Your evidence should lead to a specific ask."
+    },
+    {
+      "id": "coachMetricV2-0",
+      "speaker": "Ravi",
+      "emotion": "neutral",
+      "text": "Someone else should reproduce this number from your wording. Make every boundary explicit."
+    },
+    {
+      "id": "coachMetricV3-0",
+      "speaker": "Ravi",
+      "emotion": "thinking",
+      "text": "What is one unit? What is excluded? What would stop publication?"
+    },
+    {
+      "id": "coachRedteamV2-0",
+      "speaker": "Marcus",
+      "emotion": "thinking",
+      "text": "Imagine I must hit this target. Which rule could I exploit?"
+    },
+    {
+      "id": "coachRedteamV3-0",
+      "speaker": "Marcus",
+      "emotion": "neutral",
+      "text": "Read the definition literally. Patch the controls that matter most."
+    },
+    {
+      "id": "fixedV2-0",
+      "speaker": "Ravi",
+      "emotion": "approving",
+      "text": "That route is closed. Check whether the remaining rules still allow inflation."
+    },
+    {
+      "id": "fixedV3-0",
+      "speaker": "Ravi",
+      "emotion": "approving",
+      "text": "The definition now prevents that. We should test the other boundaries too."
+    },
+    {
+      "id": "fixedV4-0",
+      "speaker": "Ravi",
+      "emotion": "neutral",
+      "text": "One fewer loophole. The updated model follows the rule you just changed."
+    },
+    {
+      "id": "wrongJoinV2-0",
+      "speaker": "Ravi",
+      "emotion": "neutral",
+      "text": "Those identifiers refer to different entities. We spent an hour checking the mismatch."
+    },
+    {
+      "id": "wrongJoinV3-0",
+      "speaker": "Joyce",
+      "emotion": "thinking",
+      "text": "No shared key here. Keep the failed check in the audit trail."
+    },
+    {
+      "id": "wrongJoinV4-0",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "These rows cannot align on that identifier. Try a key describing the same thing."
+    },
+    {
+      "id": "estimatedV2-0",
+      "speaker": "Joyce",
+      "emotion": "neutral",
+      "text": "Your range is saved. We will compare it with the completed audit later."
+    },
+    {
+      "id": "estimatedV3-0",
+      "speaker": "Joyce",
+      "emotion": "thinking",
+      "text": "Keep that uncertainty visible when you present. The record now contains your range."
     },
     {
       "id": "unit-0",

@@ -12,7 +12,375 @@ const script: Record<string, [Person, Line["emotion"], string][]> = {
       "approving",
       "Three hundred and forty percent. Let’s celebrate that.",
     ],
-    ["Joyce", "thinking", "Can you look at something? It’s probably nothing."],
+  ],
+  introElena: [
+    [
+      "Elena",
+      "approving",
+      "I’m Elena, CEO. We announced three hundred and forty percent growth.",
+    ],
+    [
+      "Elena",
+      "thinking",
+      "Investors expect us to explain what that growth actually means.",
+    ],
+  ],
+  introRavi: [
+    [
+      "Ravi",
+      "neutral",
+      "I’m Ravi, CTO. My team built the pipeline and AMC definition.",
+    ],
+    [
+      "Ravi",
+      "thinking",
+      "If something disagrees, show me the source. We will check it together.",
+    ],
+  ],
+  introMarcus: [
+    [
+      "Marcus",
+      "neutral",
+      "Marcus, revenue. Our targets and bonuses use that same number.",
+    ],
+    ["Marcus", "thinking", "Tell me early if the definition needs to change."],
+  ],
+  introJoyce: [
+    [
+      "Joyce",
+      "neutral",
+      "I’m Joyce, your data platform partner. Billing and AMC don’t quite agree.",
+    ],
+  ],
+  caseBrief: [
+    [
+      "Joyce",
+      "neutral",
+      "You’re our new Platform Growth PM. You own dashboards and the roadmap.",
+    ],
+    [
+      "Joyce",
+      "thinking",
+      "In three days, tell the board whether this number represents new demand.",
+    ],
+    [
+      "Joyce",
+      "neutral",
+      "Twelve audit hours buy sources and joins. Unspent hours become presentation prep.",
+    ],
+    [
+      "Joyce",
+      "neutral",
+      "Credibility comes from evidence and honest uncertainty. Start with one sample request.",
+    ],
+  ],
+  invitation: [
+    [
+      "Joyce",
+      "thinking",
+      "Now, can you look at something? It’s probably nothing.",
+    ],
+  ],
+  coachUnit: [
+    [
+      "Joyce",
+      "neutral",
+      "One customer request can create several events. Classify the retry, not the customer.",
+    ],
+  ],
+  coachAudit: [
+    [
+      "Joyce",
+      "neutral",
+      "Open a drawer with your audit hours. Inspect its rows, then choose a join.",
+    ],
+    [
+      "Joyce",
+      "thinking",
+      "Success means knowing what you proved, and what is still uncertain.",
+    ],
+  ],
+  coachJoin: [
+    [
+      "Joyce",
+      "neutral",
+      "Choose columns that identify the same thing. Confirming any attempt spends one hour.",
+    ],
+    [
+      "Joyce",
+      "thinking",
+      "Matched rows can quantify a cause. An empty match tells you why.",
+    ],
+  ],
+  coachEstimate: [
+    [
+      "Joyce",
+      "neutral",
+      "Set a point and a range. Both bounds should reflect your actual uncertainty.",
+    ],
+  ],
+  coachCarry: [
+    [
+      "Joyce",
+      "neutral",
+      "Decide when to raise this. Waiting uses preparation time and has consequences.",
+    ],
+  ],
+  coachStakeholders: [
+    [
+      "Joyce",
+      "neutral",
+      "Choose who hears this first. You can brief others before picking a delivery.",
+    ],
+  ],
+  coachSlides: [
+    [
+      "Elena",
+      "neutral",
+      "Give us one headline, sources we can check, and one explicit decision request.",
+    ],
+  ],
+  coachMetric: [
+    [
+      "Ravi",
+      "neutral",
+      "Define one unit, its counting rules, and the quality limits beside it.",
+    ],
+  ],
+  coachRedteam: [
+    [
+      "Marcus",
+      "neutral",
+      "We test your wording, not your intentions. Close loopholes with three fix hours.",
+    ],
+  ],
+  coachBoard: [
+    [
+      "Joyce",
+      "neutral",
+      "The board remembers your estimate and promises. Review them before answering.",
+    ],
+  ],
+  coachAuditV2: [
+    [
+      "Joyce",
+      "neutral",
+      "Start with one source. Leave enough hours to test how its rows connect.",
+    ],
+    [
+      "Joyce",
+      "thinking",
+      "Carry what you can defend, not everything you suspect.",
+    ],
+  ],
+  coachAuditV3: [
+    [
+      "Joyce",
+      "neutral",
+      "Pick the drawer most likely to change your mind. Joins cost another hour.",
+    ],
+    [
+      "Joyce",
+      "thinking",
+      "A smaller, verified claim is useful. You do not need every source.",
+    ],
+  ],
+  coachAuditV4: [
+    [
+      "Joyce",
+      "neutral",
+      "Your budget cannot open everything. Choose a source, inspect it, then cross-check it.",
+    ],
+  ],
+  coachJoinV2: [
+    [
+      "Joyce",
+      "neutral",
+      "Start from this drawer. Select a target describing the same request or account.",
+    ],
+    ["Joyce", "thinking", "Review the keys before spending your hour."],
+  ],
+  coachJoinV3: [
+    [
+      "Joyce",
+      "neutral",
+      "A request ID matches requests. An account ID matches accounts. Pick both sides.",
+    ],
+  ],
+  coachJoinV4: [
+    [
+      "Joyce",
+      "neutral",
+      "Use the chips or keyboard. Nothing is charged until you confirm the join.",
+    ],
+  ],
+  coachEstimateV2: [
+    [
+      "Joyce",
+      "neutral",
+      "How uncertain are you? Choose bounds you can explain from your sources.",
+    ],
+  ],
+  coachEstimateV3: [
+    [
+      "Joyce",
+      "thinking",
+      "A precise point can hide uncertainty. Show the range you actually believe.",
+    ],
+  ],
+  coachUnitV2: [
+    [
+      "Joyce",
+      "neutral",
+      "The same request can appear again. Decide whether that adds new customer intent.",
+    ],
+  ],
+  coachUnitV3: [
+    [
+      "Joyce",
+      "thinking",
+      "Read the event, then classify it. A repeated attempt is not necessarily new demand.",
+    ],
+  ],
+  coachCarryV2: [
+    [
+      "Joyce",
+      "thinking",
+      "Move with evidence, spend time verifying, or accept the consequences of staying quiet.",
+    ],
+  ],
+  coachCarryV3: [
+    [
+      "Joyce",
+      "neutral",
+      "Choose what leaves the audit. You will need time to prepare the conversation.",
+    ],
+  ],
+  coachBoardV2: [
+    [
+      "Joyce",
+      "thinking",
+      "Your words are already in the record. Choose a response you can defend.",
+    ],
+  ],
+  coachBoardV3: [
+    [
+      "Joyce",
+      "neutral",
+      "Review the promises and remaining limits. Then put your correction on the record.",
+    ],
+  ],
+  coachStakeholdersV2: [
+    [
+      "Joyce",
+      "neutral",
+      "Who needs this directly from you? Set the order before the room hears.",
+    ],
+  ],
+  coachStakeholdersV3: [
+    [
+      "Joyce",
+      "thinking",
+      "The owner, sponsor, and target-holder need different conversations. Choose who comes first.",
+    ],
+  ],
+  coachSlidesV2: [
+    [
+      "Elena",
+      "neutral",
+      "Make a claim, show the source, then tell us what decision changes.",
+    ],
+  ],
+  coachSlidesV3: [
+    [
+      "Elena",
+      "thinking",
+      "Keep the deck short. Your evidence should lead to a specific ask.",
+    ],
+  ],
+  coachMetricV2: [
+    [
+      "Ravi",
+      "neutral",
+      "Someone else should reproduce this number from your wording. Make every boundary explicit.",
+    ],
+  ],
+  coachMetricV3: [
+    [
+      "Ravi",
+      "thinking",
+      "What is one unit? What is excluded? What would stop publication?",
+    ],
+  ],
+  coachRedteamV2: [
+    [
+      "Marcus",
+      "thinking",
+      "Imagine I must hit this target. Which rule could I exploit?",
+    ],
+  ],
+  coachRedteamV3: [
+    [
+      "Marcus",
+      "neutral",
+      "Read the definition literally. Patch the controls that matter most.",
+    ],
+  ],
+  fixedV2: [
+    [
+      "Ravi",
+      "approving",
+      "That route is closed. Check whether the remaining rules still allow inflation.",
+    ],
+  ],
+  fixedV3: [
+    [
+      "Ravi",
+      "approving",
+      "The definition now prevents that. We should test the other boundaries too.",
+    ],
+  ],
+  fixedV4: [
+    [
+      "Ravi",
+      "neutral",
+      "One fewer loophole. The updated model follows the rule you just changed.",
+    ],
+  ],
+  wrongJoinV2: [
+    [
+      "Ravi",
+      "neutral",
+      "Those identifiers refer to different entities. We spent an hour checking the mismatch.",
+    ],
+  ],
+  wrongJoinV3: [
+    [
+      "Joyce",
+      "thinking",
+      "No shared key here. Keep the failed check in the audit trail.",
+    ],
+  ],
+  wrongJoinV4: [
+    [
+      "Joyce",
+      "neutral",
+      "These rows cannot align on that identifier. Try a key describing the same thing.",
+    ],
+  ],
+  estimatedV2: [
+    [
+      "Joyce",
+      "neutral",
+      "Your range is saved. We will compare it with the completed audit later.",
+    ],
+  ],
+  estimatedV3: [
+    [
+      "Joyce",
+      "thinking",
+      "Keep that uncertainty visible when you present. The record now contains your range.",
+    ],
   ],
   unit: [
     [

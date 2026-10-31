@@ -13,7 +13,7 @@
     "test:deadlock": "node --import tsx --test tests/deadlock.test.ts tests/deadlock-v2.test.ts tests/deadlock-refinements.test.ts",
     "deadlock:sim": "node --import tsx scripts/deadlock-sim.ts",
     "prebuild": "node --import tsx scripts/check-sacred-no.ts && node --import tsx scripts/check-ghost-metric.ts",
-    "test:ghost-metric": "node --import tsx --test tests/ghost-metric.test.ts",
+    "test:ghost-metric": "node --import tsx --test tests/ghost-metric.test.ts tests/ghost-metric-presentation.test.ts",
     "test:sacred-no": "node --import tsx --test tests/sacred-no.test.ts tests/sacred-no-conversations.test.ts"
   },
   "dependencies": {

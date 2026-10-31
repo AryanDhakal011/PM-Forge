@@ -24,6 +24,10 @@ manifest={'version':1,'provider':'Kokoro-82M v1.0 / kokoro-onnx 0.6.1','directio
 previous=json.loads((root/'audio-manifest.json').read_text(encoding='utf-8')) if (root/'audio-manifest.json').exists() else {'lines':{}}
 for i,l in enumerate(c['lines']):
  voice,speed=cast[l['speaker']]
+ if voice.startswith('en-'):
+  if previous['lines'].get(l['id'],{}).get('caption')==l['text']:
+   manifest['lines'][l['id']]=previous['lines'][l['id']]
+  continue # Render this regional voice with render-ghost-ravi.py after this pass.
  if l['emotion'] in ['concerned','thinking','pressured']:speed-=.02
  text=l['text'];signature=hashlib.sha256((text+voice+str(speed)).encode()).hexdigest();file=out/(l['id']+'.mp3')
  if file.exists() and previous['lines'].get(l['id'],{}).get('signature')==signature:
@@ -35,4 +39,5 @@ for i,l in enumerate(c['lines']):
  manifest['lines'][l['id']]={'file':'/ghost-metric/audio/'+file.name,'signature':signature,'caption':text,'speaker':l['speaker'],'voice':voice,'emotion':l['emotion'],'speed':speed,'duration':round(len(samples)/sr,3)}
  (root/'audio-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf-8')
  print(f"{i+1}/{len(c['lines'])} {l['id']}",flush=True)
+(root/'audio-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf-8')
 print('COMPLETE',len(manifest['lines']),flush=True)

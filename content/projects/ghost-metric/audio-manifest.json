@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "provider": "Kokoro-82M v1.0 / kokoro-onnx 0.6.1",
+  "provider": "Prerendered Kokoro + Microsoft Indian English neural",
   "directionLimit": "Emotion tags direct pace and pauses; this model has no native acted-emotion control.",
   "lines": {
     "opening-0": {
@@ -13,15 +13,575 @@
       "speed": 0.95,
       "duration": 3.603
     },
-    "opening-1": {
-      "file": "/ghost-metric/audio/opening-1.mp3",
-      "signature": "bd43148321313ab90fef0894f4ad1483fd695a460571420e592e85e60a15f3e3",
-      "caption": "Can you look at something? It\u2019s probably nothing.",
+    "introElena-0": {
+      "file": "/ghost-metric/audio/introElena-0.mp3",
+      "signature": "2b9d8bdb4dcd23c5fee9fccff71eabfefb73f52d50c4e4bed46adcbfe188f231",
+      "caption": "I\u2019m Elena, CEO. We announced three hundred and forty percent growth.",
+      "speaker": "Elena",
+      "voice": "af_bella",
+      "emotion": "approving",
+      "speed": 0.95,
+      "duration": 4.919
+    },
+    "introElena-1": {
+      "file": "/ghost-metric/audio/introElena-1.mp3",
+      "signature": "7a55ce6e2023094a30375b6c7ae5b074f53c0141ec48d1e535f6a47ba5fb3a6a",
+      "caption": "Investors expect us to explain what that growth actually means.",
+      "speaker": "Elena",
+      "voice": "af_bella",
+      "emotion": "thinking",
+      "speed": 0.9299999999999999,
+      "duration": 4.423
+    },
+    "introRavi-0": {
+      "file": "/ghost-metric/audio/introRavi-0.mp3",
+      "signature": "ab7c9e682338ddcada0616dce1a7c3c24f73dbc0c03007e4549d42b0a4a71adc",
+      "caption": "I\u2019m Ravi, CTO. My team built the pipeline and AMC definition.",
+      "speaker": "Ravi",
+      "voice": "en-IN-PrabhatNeural",
+      "emotion": "neutral",
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
+    },
+    "introRavi-1": {
+      "file": "/ghost-metric/audio/introRavi-1.mp3",
+      "signature": "775e530dcd6084e8c7da9ede8878f50f17639e6054005e8849612eefd1b8ac04",
+      "caption": "If something disagrees, show me the source. We will check it together.",
+      "speaker": "Ravi",
+      "voice": "en-IN-PrabhatNeural",
+      "emotion": "thinking",
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
+    },
+    "introMarcus-0": {
+      "file": "/ghost-metric/audio/introMarcus-0.mp3",
+      "signature": "569ba36f4b95a75be67b2d2d86da79a6489956902120e30c7a21023f3a7e813a",
+      "caption": "Marcus, revenue. Our targets and bonuses use that same number.",
+      "speaker": "Marcus",
+      "voice": "am_michael",
+      "emotion": "neutral",
+      "speed": 1,
+      "duration": 4.985
+    },
+    "introMarcus-1": {
+      "file": "/ghost-metric/audio/introMarcus-1.mp3",
+      "signature": "2fcb830fa80352827cdf3083e2a1063f9df9a441a1483f9d5975126757c7f3d7",
+      "caption": "Tell me early if the definition needs to change.",
+      "speaker": "Marcus",
+      "voice": "am_michael",
+      "emotion": "thinking",
+      "speed": 0.98,
+      "duration": 3.561
+    },
+    "introJoyce-0": {
+      "file": "/ghost-metric/audio/introJoyce-0.mp3",
+      "signature": "13675aa71a3d38930d2ec9ffbc6511684a7e18af405341f0462c24b7237dc26f",
+      "caption": "I\u2019m Joyce, your data platform partner. Billing and AMC don\u2019t quite agree.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 5.341
+    },
+    "caseBrief-0": {
+      "file": "/ghost-metric/audio/caseBrief-0.mp3",
+      "signature": "f5c38f91cec5a11a5278e958c7074f3242f028018fec77210c93385c0befa9ff",
+      "caption": "You\u2019re our new Platform Growth PM. You own dashboards and the roadmap.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 4.584
+    },
+    "caseBrief-1": {
+      "file": "/ghost-metric/audio/caseBrief-1.mp3",
+      "signature": "e5fe86ecaa8c37eb85c734e79e7ae21d880d85cdb47fac60ae9bfb05dfd6d44a",
+      "caption": "In three days, tell the board whether this number represents new demand.",
       "speaker": "Joyce",
       "voice": "af_heart",
       "emotion": "thinking",
       "speed": 0.94,
-      "duration": 2.943
+      "duration": 4.287
+    },
+    "caseBrief-2": {
+      "file": "/ghost-metric/audio/caseBrief-2.mp3",
+      "signature": "531077972b56851db06e499f2e106d2c1aa2a6286089ce4dc5ed3b1309a6488b",
+      "caption": "Twelve audit hours buy sources and joins. Unspent hours become presentation prep.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 6.258
+    },
+    "caseBrief-3": {
+      "file": "/ghost-metric/audio/caseBrief-3.mp3",
+      "signature": "012c89a72815ea4e8d4221e1568b62a220a4b116ea6d130c03ed801c9af0d712",
+      "caption": "Credibility comes from evidence and honest uncertainty. Start with one sample request.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 5.927
+    },
+    "invitation-0": {
+      "file": "/ghost-metric/audio/invitation-0.mp3",
+      "signature": "a04e64b112b378191ff85140e7f153dbcec34b5d9f77b41e57006362cf9d4c4a",
+      "caption": "Now, can you look at something? It\u2019s probably nothing.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 3.285
+    },
+    "coachUnit-0": {
+      "file": "/ghost-metric/audio/coachUnit-0.mp3",
+      "signature": "2d714fd9e3c2ba2f9cdac3180b590b1dbe153580237c26953d2dd64be347a57d",
+      "caption": "One customer request can create several events. Classify the retry, not the customer.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 6.025
+    },
+    "coachAudit-0": {
+      "file": "/ghost-metric/audio/coachAudit-0.mp3",
+      "signature": "f4a613f4c2b99f361c9c71cf1773fb1188f38c08526bb3c68cc000c42ef72fe3",
+      "caption": "Open a drawer with your audit hours. Inspect its rows, then choose a join.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 5.191
+    },
+    "coachAudit-1": {
+      "file": "/ghost-metric/audio/coachAudit-1.mp3",
+      "signature": "99521bc77bb8163ad05833a929b263948de4f3248e62548cbea2fc8133068f31",
+      "caption": "Success means knowing what you proved, and what is still uncertain.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 3.893
+    },
+    "coachJoin-0": {
+      "file": "/ghost-metric/audio/coachJoin-0.mp3",
+      "signature": "0195d6c9008c6ace80ba1e1ae8aaf928e6144bb7ed69b676057962914ea8f5ff",
+      "caption": "Choose columns that identify the same thing. Confirming any attempt spends one hour.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 5.545
+    },
+    "coachJoin-1": {
+      "file": "/ghost-metric/audio/coachJoin-1.mp3",
+      "signature": "e7fc7330996c1e36ee12059243700f980f435bcf5aa680a8eb5dc347fb46238e",
+      "caption": "Matched rows can quantify a cause. An empty match tells you why.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.362
+    },
+    "coachEstimate-0": {
+      "file": "/ghost-metric/audio/coachEstimate-0.mp3",
+      "signature": "ddd985f35512bc33034880d5e9817c3138c8a01911622cdd58fc740e2c88595d",
+      "caption": "Set a point and a range. Both bounds should reflect your actual uncertainty.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 5.023
+    },
+    "coachCarry-0": {
+      "file": "/ghost-metric/audio/coachCarry-0.mp3",
+      "signature": "d6b1ac449e8fa0320821a1d7bbcbc9859f8bbdec4f0b36f1b430d2c08281a62f",
+      "caption": "Decide when to raise this. Waiting uses preparation time and has consequences.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 5.628
+    },
+    "coachStakeholders-0": {
+      "file": "/ghost-metric/audio/coachStakeholders-0.mp3",
+      "signature": "85256fb76c1e4c18d7e2d893c45e59dc1cc34b3ebbcbd961697335c118f367c6",
+      "caption": "Choose who hears this first. You can brief others before picking a delivery.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 4.521
+    },
+    "coachSlides-0": {
+      "file": "/ghost-metric/audio/coachSlides-0.mp3",
+      "signature": "f8ba7936d9adeff5fabcbfe5b05cc587fe3a9ac921f89d43a461eb859cf87358",
+      "caption": "Give us one headline, sources we can check, and one explicit decision request.",
+      "speaker": "Elena",
+      "voice": "af_bella",
+      "emotion": "neutral",
+      "speed": 0.95,
+      "duration": 5.575
+    },
+    "coachMetric-0": {
+      "file": "/ghost-metric/audio/coachMetric-0.mp3",
+      "signature": "050dabd477a0950025ecbe6e90599deeeb95efd7724045f67973c3bec7090909",
+      "caption": "Define one unit, its counting rules, and the quality limits beside it.",
+      "speaker": "Ravi",
+      "voice": "en-IN-PrabhatNeural",
+      "emotion": "neutral",
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
+    },
+    "coachRedteam-0": {
+      "file": "/ghost-metric/audio/coachRedteam-0.mp3",
+      "signature": "c9a09f1e11cfe25f004c93d2ed1859c12e4a029f177472a2c2743537d7745b95",
+      "caption": "We test your wording, not your intentions. Close loopholes with three fix hours.",
+      "speaker": "Marcus",
+      "voice": "am_michael",
+      "emotion": "neutral",
+      "speed": 1,
+      "duration": 5.494
+    },
+    "coachBoard-0": {
+      "file": "/ghost-metric/audio/coachBoard-0.mp3",
+      "signature": "c97d5df917634b246a092694a0b205798c1a119d9f14fcfc47ddb051ab11c341",
+      "caption": "The board remembers your estimate and promises. Review them before answering.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 4.649
+    },
+    "coachAuditV2-0": {
+      "file": "/ghost-metric/audio/coachAuditV2-0.mp3",
+      "signature": "c1f1bf77b414b790181707b121aa0871f173849c57d0f1eba7156357936196e5",
+      "caption": "Start with one source. Leave enough hours to test how its rows connect.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 4.669
+    },
+    "coachAuditV2-1": {
+      "file": "/ghost-metric/audio/coachAuditV2-1.mp3",
+      "signature": "949932afa4e58bd2fc52b2d880debce320f4ca7907528b11b4406f0ebcc08051",
+      "caption": "Carry what you can defend, not everything you suspect.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 3.539
+    },
+    "coachAuditV3-0": {
+      "file": "/ghost-metric/audio/coachAuditV3-0.mp3",
+      "signature": "f0cde6105150a89520ab5783e741ecf7f918c1b7e34ad61d499ff0ce953b57f2",
+      "caption": "Pick the drawer most likely to change your mind. Joins cost another hour.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 4.8
+    },
+    "coachAuditV3-1": {
+      "file": "/ghost-metric/audio/coachAuditV3-1.mp3",
+      "signature": "0d87ff72cccd5ca5087da23f4058c1b7592837f282fc1e5b7c75774a0897c317",
+      "caption": "A smaller, verified claim is useful. You do not need every source.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.499
+    },
+    "coachAuditV4-0": {
+      "file": "/ghost-metric/audio/coachAuditV4-0.mp3",
+      "signature": "7c451e959af141d8b099cd203b7887b6d42740bca4af9b1f19c028a7748f07ce",
+      "caption": "Your budget cannot open everything. Choose a source, inspect it, then cross-check it.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 5.539
+    },
+    "coachJoinV2-0": {
+      "file": "/ghost-metric/audio/coachJoinV2-0.mp3",
+      "signature": "b5a67da2fbd285dd551930b823e2fc1a887adb33d6e1920b8a6da1f9aec6dd96",
+      "caption": "Start from this drawer. Select a target describing the same request or account.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 5.163
+    },
+    "coachJoinV2-1": {
+      "file": "/ghost-metric/audio/coachJoinV2-1.mp3",
+      "signature": "3a56a83666a4a91708143fe166077fe79c3210a39e4d34ffc4283d457393a27e",
+      "caption": "Review the keys before spending your hour.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 2.637
+    },
+    "coachJoinV3-0": {
+      "file": "/ghost-metric/audio/coachJoinV3-0.mp3",
+      "signature": "4782c6068c2934f6d515e404377fed9af47c0b2f0d050363566a24daf955b420",
+      "caption": "A request ID matches requests. An account ID matches accounts. Pick both sides.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 6.045
+    },
+    "coachJoinV4-0": {
+      "file": "/ghost-metric/audio/coachJoinV4-0.mp3",
+      "signature": "15ced7d5932b2eea7027d3f99a62ac8931245e7261154a748fd98683ab568b06",
+      "caption": "Use the chips or keyboard. Nothing is charged until you confirm the join.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 5.001
+    },
+    "coachEstimateV2-0": {
+      "file": "/ghost-metric/audio/coachEstimateV2-0.mp3",
+      "signature": "7fdcb6beba75b4391a0e75c4205522a8c3a12f16fb1afed87b0ab1a7757150c5",
+      "caption": "How uncertain are you? Choose bounds you can explain from your sources.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 4.392
+    },
+    "coachEstimateV3-0": {
+      "file": "/ghost-metric/audio/coachEstimateV3-0.mp3",
+      "signature": "f04d10158cfd6b2cc65e163d42bbc1bfa4e780fdb6d54902fb2d67cb64b43140",
+      "caption": "A precise point can hide uncertainty. Show the range you actually believe.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.797
+    },
+    "coachUnitV2-0": {
+      "file": "/ghost-metric/audio/coachUnitV2-0.mp3",
+      "signature": "1a2f8193ad2751373c68a4158e35019d6c50d1902a8994d380c49da051e7f2e1",
+      "caption": "The same request can appear again. Decide whether that adds new customer intent.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 5.043
+    },
+    "coachUnitV3-0": {
+      "file": "/ghost-metric/audio/coachUnitV3-0.mp3",
+      "signature": "f70f898bea8baf6748a717324c6ce8ccda1252bdb7279e000a9a7be27f50e0d7",
+      "caption": "Read the event, then classify it. A repeated attempt is not necessarily new demand.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 5.918
+    },
+    "coachCarryV2-0": {
+      "file": "/ghost-metric/audio/coachCarryV2-0.mp3",
+      "signature": "b2fe6627b5f363c0802cd0689cc7cef28dd830e3b68f789ddd59935459677fa9",
+      "caption": "Move with evidence, spend time verifying, or accept the consequences of staying quiet.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 5.844
+    },
+    "coachCarryV3-0": {
+      "file": "/ghost-metric/audio/coachCarryV3-0.mp3",
+      "signature": "4445ab56d10c08cc0f24f04aea2f876cf6c95e2f761c97e50ba35c7c944fc4c0",
+      "caption": "Choose what leaves the audit. You will need time to prepare the conversation.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 4.489
+    },
+    "coachBoardV2-0": {
+      "file": "/ghost-metric/audio/coachBoardV2-0.mp3",
+      "signature": "a0cf2dceb3e62c6d5dfe7635888ad5a47f2db7d9c211a117a7975734f7edd131",
+      "caption": "Your words are already in the record. Choose a response you can defend.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 4.372
+    },
+    "coachBoardV3-0": {
+      "file": "/ghost-metric/audio/coachBoardV3-0.mp3",
+      "signature": "bd178be92d685b2e3c58227e0281ba126663d8cb55136d6179c8f82322664cb2",
+      "caption": "Review the promises and remaining limits. Then put your correction on the record.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 4.958
+    },
+    "coachStakeholdersV2-0": {
+      "file": "/ghost-metric/audio/coachStakeholdersV2-0.mp3",
+      "signature": "b6489e852b760b797c90cf93df853de68198c47f7cc65ab1393ed5cc56ae559c",
+      "caption": "Who needs this directly from you? Set the order before the room hears.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 4.307
+    },
+    "coachStakeholdersV3-0": {
+      "file": "/ghost-metric/audio/coachStakeholdersV3-0.mp3",
+      "signature": "665756a822eac1302bcf9c523c658df42587521d2106dbe376cca5f5017eb8c8",
+      "caption": "The owner, sponsor, and target-holder need different conversations. Choose who comes first.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 5.951
+    },
+    "coachSlidesV2-0": {
+      "file": "/ghost-metric/audio/coachSlidesV2-0.mp3",
+      "signature": "02cfbc435ec4837f7c7427ee67b6a790bb216d0a24e8fed51a205ea98564bc8d",
+      "caption": "Make a claim, show the source, then tell us what decision changes.",
+      "speaker": "Elena",
+      "voice": "af_bella",
+      "emotion": "neutral",
+      "speed": 0.95,
+      "duration": 4.509
+    },
+    "coachSlidesV3-0": {
+      "file": "/ghost-metric/audio/coachSlidesV3-0.mp3",
+      "signature": "69be1775e7e40b18ac44daf4d1420443be9976b656721cb6eafb2957bba4b297",
+      "caption": "Keep the deck short. Your evidence should lead to a specific ask.",
+      "speaker": "Elena",
+      "voice": "af_bella",
+      "emotion": "thinking",
+      "speed": 0.9299999999999999,
+      "duration": 4.231
+    },
+    "coachMetricV2-0": {
+      "file": "/ghost-metric/audio/coachMetricV2-0.mp3",
+      "signature": "0954e100626f57dae3257406fde9a8cc67985d018f6d8d9288a9761e36821ec3",
+      "caption": "Someone else should reproduce this number from your wording. Make every boundary explicit.",
+      "speaker": "Ravi",
+      "voice": "en-IN-PrabhatNeural",
+      "emotion": "neutral",
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
+    },
+    "coachMetricV3-0": {
+      "file": "/ghost-metric/audio/coachMetricV3-0.mp3",
+      "signature": "b670cff1ff4fe0ee5a6c79852e80b9eb8457c5cc11087aa13704b98618e24a71",
+      "caption": "What is one unit? What is excluded? What would stop publication?",
+      "speaker": "Ravi",
+      "voice": "en-IN-PrabhatNeural",
+      "emotion": "thinking",
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
+    },
+    "coachRedteamV2-0": {
+      "file": "/ghost-metric/audio/coachRedteamV2-0.mp3",
+      "signature": "f909ffecdf2021cb70da72db367160b3b573776459508ba8be439652d4e2545c",
+      "caption": "Imagine I must hit this target. Which rule could I exploit?",
+      "speaker": "Marcus",
+      "voice": "am_michael",
+      "emotion": "thinking",
+      "speed": 0.98,
+      "duration": 4.627
+    },
+    "coachRedteamV3-0": {
+      "file": "/ghost-metric/audio/coachRedteamV3-0.mp3",
+      "signature": "7be846c92b08f5a7261f76a37e7579ed1f54a5a4b253e0ae4975e75c129a189c",
+      "caption": "Read the definition literally. Patch the controls that matter most.",
+      "speaker": "Marcus",
+      "voice": "am_michael",
+      "emotion": "neutral",
+      "speed": 1,
+      "duration": 4.505
+    },
+    "fixedV2-0": {
+      "file": "/ghost-metric/audio/fixedV2-0.mp3",
+      "signature": "b4d59209ee9823c866b9e91ce082e79e33f474ac48a9237ea745664450892e28",
+      "caption": "That route is closed. Check whether the remaining rules still allow inflation.",
+      "speaker": "Ravi",
+      "voice": "en-IN-PrabhatNeural",
+      "emotion": "approving",
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
+    },
+    "fixedV3-0": {
+      "file": "/ghost-metric/audio/fixedV3-0.mp3",
+      "signature": "b0f369ee02ec9f28dc1f842a5000e2ffaa492473d1728c207e1db3fe7a1d2b5f",
+      "caption": "The definition now prevents that. We should test the other boundaries too.",
+      "speaker": "Ravi",
+      "voice": "en-IN-PrabhatNeural",
+      "emotion": "approving",
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
+    },
+    "fixedV4-0": {
+      "file": "/ghost-metric/audio/fixedV4-0.mp3",
+      "signature": "0dbea083aed451badb94118b9affe0dd6ae6c6afe17c3615a470e9c983c4de99",
+      "caption": "One fewer loophole. The updated model follows the rule you just changed.",
+      "speaker": "Ravi",
+      "voice": "en-IN-PrabhatNeural",
+      "emotion": "neutral",
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
+    },
+    "wrongJoinV2-0": {
+      "file": "/ghost-metric/audio/wrongJoinV2-0.mp3",
+      "signature": "9c2616afb6c20e4440f577e11e4e4f735665418cdfd1606ee1bf715235699a5b",
+      "caption": "Those identifiers refer to different entities. We spent an hour checking the mismatch.",
+      "speaker": "Ravi",
+      "voice": "en-IN-PrabhatNeural",
+      "emotion": "neutral",
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
+    },
+    "wrongJoinV3-0": {
+      "file": "/ghost-metric/audio/wrongJoinV3-0.mp3",
+      "signature": "67edafcabac2924ea00d5c02f92c85597e9fe5eaa0574a09252d12bd6e2e77ec",
+      "caption": "No shared key here. Keep the failed check in the audit trail.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 3.785
+    },
+    "wrongJoinV4-0": {
+      "file": "/ghost-metric/audio/wrongJoinV4-0.mp3",
+      "signature": "a872093efa11b9cb87d2d29343601e9143e57f4c4d783849d1bda63907481474",
+      "caption": "These rows cannot align on that identifier. Try a key describing the same thing.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 5.459
+    },
+    "estimatedV2-0": {
+      "file": "/ghost-metric/audio/estimatedV2-0.mp3",
+      "signature": "299043dcf0531a006721d1a66176a282ef976ddfa7a03f86d0197e056952784a",
+      "caption": "Your range is saved. We will compare it with the completed audit later.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "neutral",
+      "speed": 0.96,
+      "duration": 4.533
+    },
+    "estimatedV3-0": {
+      "file": "/ghost-metric/audio/estimatedV3-0.mp3",
+      "signature": "23d73fd9062f93a631710fa11d9262893b58ffaa343a14c1d624fb02fa32d5d8",
+      "caption": "Keep that uncertainty visible when you present. The record now contains your range.",
+      "speaker": "Joyce",
+      "voice": "af_heart",
+      "emotion": "thinking",
+      "speed": 0.94,
+      "duration": 5.139
     },
     "unit-0": {
       "file": "/ghost-metric/audio/unit-0.mp3",
@@ -65,13 +625,13 @@
     },
     "audit-1": {
       "file": "/ghost-metric/audio/audit-1.mp3",
-      "signature": "fbaf2d643d8440e72a98386025b66b1eee4638a1f1e95e41d082682b897cb632",
+      "signature": "0f230c1646c9daa2b1d9379944d4d807b153aae09ef0afc893fd7a2a493f9e79",
       "caption": "If you find a discrepancy, send me the query.",
       "speaker": "Ravi",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "emotion": "neutral",
-      "speed": 0.97,
-      "duration": 3.603
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
     },
     "audit-2": {
       "file": "/ghost-metric/audio/audit-2.mp3",
@@ -105,13 +665,13 @@
     },
     "sdk-0": {
       "file": "/ghost-metric/audio/sdk-0.mp3",
-      "signature": "03cd35d8fe7126699e07d8f063217dacc0b71100275916f64b0bff32950753b3",
+      "signature": "0ba6bf850c73e22463d4e78b8ad7ac46c8b60a8c01cafe1a2457a1236799ca28",
       "caption": "Those are response chunks. They should not represent separate customer requests.",
       "speaker": "Ravi",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "emotion": "thinking",
-      "speed": 0.95,
-      "duration": 5.331
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
     },
     "cohorts-0": {
       "file": "/ghost-metric/audio/cohorts-0.mp3",
@@ -175,13 +735,13 @@
     },
     "wrongJoin-0": {
       "file": "/ghost-metric/audio/wrongJoin-0.mp3",
-      "signature": "e6ca43c64ca3d76ddcd3f33bf0042d7c090600e93803a0570b1884ee87927434",
+      "signature": "7fa5780bf8901ef7a8d91d2489761202e3d8f5b35962822b77f6c45520b7a54b",
       "caption": "A customer ID and request ID describe different things. They cannot match.",
       "speaker": "Ravi",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "emotion": "neutral",
-      "speed": 0.97,
-      "duration": 5.959
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
     },
     "estimate-0": {
       "file": "/ghost-metric/audio/estimate-0.mp3",
@@ -295,13 +855,13 @@
     },
     "tellRavi-0": {
       "file": "/ghost-metric/audio/tellRavi-0.mp3",
-      "signature": "3b32ee08dab0ac0b180540a23acca12c60a1de4c83756009e7aae983a6c1ed46",
+      "signature": "781106ae62381343f476feb08361b6bde04f6ef63d62c4c2c2808cdc2fe8f853",
       "caption": "Show me the unit and the joining key. Then your conclusion.",
       "speaker": "Ravi",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "emotion": "thinking",
-      "speed": 0.95,
-      "duration": 4.551
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
     },
     "tellMarcus-0": {
       "file": "/ghost-metric/audio/tellMarcus-0.mp3",
@@ -345,23 +905,23 @@
     },
     "headlineWrong-0": {
       "file": "/ghost-metric/audio/headlineWrong-0.mp3",
-      "signature": "dd2cc99305994b91c0d295154a991c83ee9343832e5a6d222311ddc13bd67630",
+      "signature": "776b2289427ba23251869416cec67727bd1f43ebe57c6e8d0c0608e4c22159f3",
       "caption": "So my metric is wrong. Send me the query.",
       "speaker": "Ravi",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "emotion": "annoyed",
-      "speed": 0.97,
-      "duration": 3.344
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
     },
     "headlineLimits-0": {
       "file": "/ghost-metric/audio/headlineLimits-0.mp3",
-      "signature": "fcc07ef5f975661ee766b10064339ba6af69cbedefa0dd8a6df86a12570dd9d2",
+      "signature": "e083ba2d497b7b0aedbccbf9c1064ad7e8817f0ce8b35c3bb6a5fd990e2d9220",
       "caption": "That is a fair question. Show me what it cannot distinguish.",
       "speaker": "Ravi",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "emotion": "thinking",
-      "speed": 0.95,
-      "duration": 4.307
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
     },
     "headlineCustomers-0": {
       "file": "/ghost-metric/audio/headlineCustomers-0.mp3",
@@ -385,13 +945,13 @@
     },
     "headlineNew-0": {
       "file": "/ghost-metric/audio/headlineNew-0.mp3",
-      "signature": "8a735ce35565e097ab50f6ce56591cb06b1cc72250c9b2211d5b3041491b1b79",
+      "signature": "d9105fc1301b352ad09e0192fb5f2e12526a8903892d0a57627d804c3a86c610",
       "caption": "A replacement needs a definition. A nicer chart will not be enough.",
       "speaker": "Ravi",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "emotion": "thinking",
-      "speed": 0.95,
-      "duration": 5.16
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
     },
     "slideEvidence-0": {
       "file": "/ghost-metric/audio/slideEvidence-0.mp3",
@@ -415,43 +975,43 @@
     },
     "direct-0": {
       "file": "/ghost-metric/audio/direct-0.mp3",
-      "signature": "6973f4541be0986520af838d397402adbc2449c0593737deedb00b0520417404",
+      "signature": "8ee0c852bc111f9f7bb9d50b20c321791528553bcd19410e16a0baaf6676fe98",
       "caption": "I would have preferred this conversation before the executive meeting.",
       "speaker": "Ravi",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "emotion": "annoyed",
-      "speed": 0.97,
-      "duration": 4.541
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
     },
     "privateFirst-0": {
       "file": "/ghost-metric/audio/privateFirst-0.mp3",
-      "signature": "161d271f5683883bcde196844ef6fff4fc6a65594efc0f75af5d7e4a06e5fdc6",
+      "signature": "a67253a9a9328c204d04b9dcdd980e3fa8c89fb2636248ce8f9e86e296dccf54",
       "caption": "Wait. This request ID repeats. Why didn\u2019t I see that?",
       "speaker": "Ravi",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "emotion": "approving",
-      "speed": 0.97,
-      "duration": 4.473
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
     },
     "privateNoProof-0": {
       "file": "/ghost-metric/audio/privateNoProof-0.mp3",
-      "signature": "0efe4778014738a66cdad40ecba4324d24e52e70a5e78bbd0f56aa3c8d2c50fc",
+      "signature": "44e545606c136e1d846a507ecd4721a98593a07e97bc42eaa6ad5e08a04fa716",
       "caption": "Let\u2019s check the definition together. We do not have a quantified cause yet.",
       "speaker": "Ravi",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "emotion": "thinking",
-      "speed": 0.95,
-      "duration": 4.999
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
     },
     "evolution-0": {
       "file": "/ghost-metric/audio/evolution-0.mp3",
-      "signature": "739bf1a3d85933b835ac5d886f33da2700374105fbbe670a377fad953778c675",
+      "signature": "dc27423b533f165f7d297a6bac040547364d8c5463c5203454ebf9e76c3c0f38",
       "caption": "Metric version two. We can work it into the next planning cycle.",
       "speaker": "Ravi",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "emotion": "neutral",
-      "speed": 0.97,
-      "duration": 4.497
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
     },
     "dataRoom-0": {
       "file": "/ghost-metric/audio/dataRoom-0.mp3",
@@ -495,13 +1055,13 @@
     },
     "metric-0": {
       "file": "/ghost-metric/audio/metric-0.mp3",
-      "signature": "b05af5963a7bfc12e83be018f102d9a16e0731e9c858003e34433f9df15f9f27",
+      "signature": "d1e8f46583b033612634d86c01ac27ccac0cc4e6f97513363ead914fad375460",
       "caption": "Let\u2019s write exactly what one unit means. Someone else must reproduce it.",
       "speaker": "Ravi",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "emotion": "thinking",
-      "speed": 0.95,
-      "duration": 5.311
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
     },
     "metric-1": {
       "file": "/ghost-metric/audio/metric-1.mp3",
@@ -545,13 +1105,13 @@
     },
     "loopholeStreams-0": {
       "file": "/ghost-metric/audio/loopholeStreams-0.mp3",
-      "signature": "0286b00332226250518769f3b909b2e090fa386889e9d79d181129a25342eaf0",
+      "signature": "2ee0399fcbb0ded414aae97f007103f47fc5ad7898d49714c115b8ad3a248475",
       "caption": "You still count each chunk. Longer answers become artificial growth.",
       "speaker": "Ravi",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "emotion": "thinking",
-      "speed": 0.95,
-      "duration": 5.234
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
     },
     "loopholeSegments-0": {
       "file": "/ghost-metric/audio/loopholeSegments-0.mp3",
@@ -575,13 +1135,13 @@
     },
     "fixed-0": {
       "file": "/ghost-metric/audio/fixed-0.mp3",
-      "signature": "e2d34b2b06f6f2b989c2af1050e5a667491dfc6b0a938c0c972072b720b211a1",
+      "signature": "37e5c5eda676c782ce09c7221f4a6b33c1c96db5389ce4b3e9a1292a7b903c25",
       "caption": "That closes this route. Let\u2019s see what the remaining definition allows.",
       "speaker": "Ravi",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "emotion": "approving",
-      "speed": 0.97,
-      "duration": 4.947
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
     },
     "clean-0": {
       "file": "/ghost-metric/audio/clean-0.mp3",
@@ -595,43 +1155,43 @@
     },
     "secondSource-0": {
       "file": "/ghost-metric/audio/secondSource-0.mp3",
-      "signature": "2f95cb3d09250bc10e2dfd40fc3b464f772b25aaca856b0f4e3b61666bb584fc",
+      "signature": "8e57e382078e2b5aa2d21a2fee292ab4005a647e1b535413a818726aa3eab3b0",
       "caption": "I need an independent source before I sign off on another definition.",
       "speaker": "Ravi",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "emotion": "thinking",
-      "speed": 0.95,
-      "duration": 5.063
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
     },
     "secondConfirmed-0": {
       "file": "/ghost-metric/audio/secondConfirmed-0.mp3",
-      "signature": "0f24507ef64eb2396fc18a010077b9d576a6e3becabcc78993b51fd9353b2832",
+      "signature": "9db8ad75270a7cb38f5139752f6112a729a7697dccdfab5f3d2324ee30fb116f",
       "caption": "The independent check agrees with the source you cited. I can sign that.",
       "speaker": "Ravi",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "emotion": "approving",
-      "speed": 0.97,
-      "duration": 5.309
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
     },
     "secondLimited-0": {
       "file": "/ghost-metric/audio/secondLimited-0.mp3",
-      "signature": "b100ae733b92af309905039d8b4a3958ced588111ce9a7bb9f618ecad20dc449",
+      "signature": "9768ec6bf09b02dd4a1aea8b8a5b35b3529296aee3f4bd664d9ef48f633ba854",
       "caption": "That check limits the claim. Let\u2019s carry the uncertainty into the boardroom.",
       "speaker": "Ravi",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "emotion": "thinking",
-      "speed": 0.95,
-      "duration": 5.287
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
     },
     "rolloutSlow-0": {
       "file": "/ghost-metric/audio/rolloutSlow-0.mp3",
-      "signature": "91e327445694b48b2a49b00902807100268d81f22f4ced6f59fd3bb38b4ea3f7",
+      "signature": "d45cc8f869317e24fd368a2c5293338dc8f0988fcda0e2b4b89a6f5beee7d0c0",
       "caption": "Three weeks to migrate safely. We can publish both definitions during that time.",
       "speaker": "Ravi",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "emotion": "neutral",
-      "speed": 0.97,
-      "duration": 5.533
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
     },
     "rolloutMandate-0": {
       "file": "/ghost-metric/audio/rolloutMandate-0.mp3",
@@ -655,13 +1215,13 @@
     },
     "fatigueOne-0": {
       "file": "/ghost-metric/audio/fatigueOne-0.mp3",
-      "signature": "400710e10e125d20566d9893bc2fe395d5f741636304ff32ff3e6e16c6295126",
+      "signature": "190065c92e076f368382d3fd3be0e9f602462dc6d49f9c612a2b1985c77831a3",
       "caption": "The team has rebuilt this twice. They need one agreed definition.",
       "speaker": "Ravi",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "emotion": "annoyed",
-      "speed": 0.97,
-      "duration": 4.935
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
     },
     "fatigueTwo-0": {
       "file": "/ghost-metric/audio/fatigueTwo-0.mp3",
@@ -765,13 +1325,13 @@
     },
     "blame-0": {
       "file": "/ghost-metric/audio/blame-0.mp3",
-      "signature": "800d2ae10596a891645495204be8ec6c845daf4fddb06c3575f5f6c08bc29cd8",
+      "signature": "cb953f3b970ae9bc886d7264e864730413723d14c27d19ec0e7d7848e1f46b86",
       "caption": "The pipeline needs fixing. Blame does not give us a better definition.",
       "speaker": "Ravi",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "emotion": "annoyed",
-      "speed": 0.97,
-      "duration": 4.819
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
     },
     "bury-0": {
       "file": "/ghost-metric/audio/bury-0.mp3",
@@ -855,13 +1415,13 @@
     },
     "guideMetric-0": {
       "file": "/ghost-metric/audio/guideMetric-0.mp3",
-      "signature": "4893d38a5d5f507867fd51764b45caaab2655b4b0fe0afdb655fbae5593bb7db",
+      "signature": "9aa6af7bc5302316ef8c6206ea2ad72ee1c9ec776bac4176ebecd0d5f47041cf",
       "caption": "The counting rule matters as much as the unit you choose.",
       "speaker": "Ravi",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "emotion": "neutral",
-      "speed": 0.97,
-      "duration": 4.361
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
     },
     "guideRedteam-0": {
       "file": "/ghost-metric/audio/guideRedteam-0.mp3",
@@ -895,13 +1455,13 @@
     },
     "guardrail-0": {
       "file": "/ghost-metric/audio/guardrail-0.mp3",
-      "signature": "2714cca9e7d7518cb460a4c76d32725d2578511ef0ede8c87d95aed7ebc58fd7",
+      "signature": "a314907471de8bab41c1e78accd32218c51b320ba825c4f7e24392b96115d410",
       "caption": "A completion is not useful if the customer waited too long for it.",
       "speaker": "Ravi",
-      "voice": "bm_george",
+      "voice": "en-IN-PrabhatNeural",
       "emotion": "thinking",
-      "speed": 0.95,
-      "duration": 5.065
+      "rate": "-3%",
+      "provider": "Microsoft neural / offline Edge read-aloud production"
     },
     "accountControl-0": {
       "file": "/ghost-metric/audio/accountControl-0.mp3",

@@ -15,6 +15,8 @@ for (const line of lines) {
   )
     throw Error("Invalid speaker or long line: " + line.id);
   const clip = manifest.lines[line.id];
+  if (line.speaker === "Ravi" && clip?.voice !== "en-IN-PrabhatNeural")
+    throw Error("Incorrect Ravi casting: " + line.id);
   if (
     clip?.caption !== line.text ||
     clip.speaker !== line.speaker ||

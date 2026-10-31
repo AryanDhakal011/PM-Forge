@@ -29,7 +29,7 @@ export const people = [
     fear: "His work being dismissed.",
     tell: "Asks for the query before discussing the conclusion.",
     color: "#647587",
-    voice: "bm_george",
+    voice: "en-IN-PrabhatNeural",
     speed: 0.97,
   },
   {

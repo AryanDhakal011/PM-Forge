@@ -52,7 +52,24 @@ import {
   type Run,
 } from "@/lib/ghost-metric/storage";
 import Portrait from "./Portrait";
-import JoinHands from "./JoinHands";
+import JoinPicker from "./JoinPicker";
+import Conversation, { type ConversationPlan } from "./Conversation";
+import AnimatedNumber from "./AnimatedNumber";
+import MissedTells from "./MissedTells";
+import UnitSample from "./UnitSample";
+import ResourceChip from "./ResourceChip";
+import UncertaintyBand from "./UncertaintyBand";
+import { useAmbient } from "./useAmbient";
+import {
+  openingSequence,
+  guideCard,
+  guideGroups,
+  remainingActions,
+  currentCost,
+  chooseVariant,
+  sourceColumns,
+  type VariantHistory,
+} from "@/lib/ghost-metric/presentation";
 import { useVoice } from "./useVoice";
 import s from "./GhostMetric.module.css";
 const Bubble = dynamic(() => import("./MetricBubble"), {
@@ -197,6 +214,7 @@ type Panel =
   | "settings"
   | "pause"
   | "resume"
+  | "rule"
   | null;
 export default function GhostMetricExperience() {
   const { profile, loading: identityLoading } = useWorkspace(),
@@ -210,6 +228,7 @@ export default function GhostMetricExperience() {
     [error, setError] = useState(""),
     [panel, setPanel] = useState<Panel>(null);
   const [sound, setSound] = useState(false),
+    [ambient, setAmbient] = useState(true),
     [calm, setCalm] = useState(false),
     [soft, setSoft] = useState(false),
     [guidance, setGuidance] = useState(true),
@@ -217,19 +236,13 @@ export default function GhostMetricExperience() {
     [prefsReady, setPrefsReady] = useState(false),
     [dismissed, setDismissed] = useState<string[]>([]),
     [tab, setTab] = useState("now");
-  const [dialogue, setDialogue] = useState<{
-      key: string;
-      lines: Line[];
-    } | null>(null),
+  const [dialogue, setDialogue] = useState<ConversationPlan | null>(null),
+    [joinSource, setJoinSource] = useState<DrawerId | null>(null),
+    [joinReading, setJoinReading] = useState<Line | undefined>(),
     [activeDrawer, setActiveDrawer] = useState<DrawerId | null>(null),
     [point, setPoint] = useState(70),
     [low, setLow] = useState(40),
     [high, setHigh] = useState(95),
-    [left, setLeft] = useState<DrawerId>("gateway"),
-    [right, setRight] = useState<"gateway" | "billing" | "accounts">("gateway"),
-    [joinKey, setJoinKey] = useState<
-      "request_id" | "account_id" | "customer_id"
-    >("request_id"),
     [evidence, setEvidence] = useState<DrawerId[]>([]),
     [spec, setSpec] = useState<Metric>(defaultMetric),
     [verifyId, setVerifyId] = useState<DrawerId>("sdk"),
@@ -240,18 +253,36 @@ export default function GhostMetricExperience() {
     root = useRef<HTMLDivElement>(null),
     mutation = useRef(false),
     lastPresented = useRef(""),
+    variantHistory = useRef<VariantHistory>({}),
+    serial = useRef(0),
+    briefingSeen = useRef(new Set<string>()),
     freshReveal = useRef(false);
   const state = useMemo(() => (run ? replay(run.events) : initial()), [run]),
     b = band(state),
     quiet = calm || reducedMotion;
   const paused = !!panel || arrival || !!confirm;
   const voice = useVoice(sound, paused || !!activeDrawer);
+  const ambientStatus = useAmbient(
+    ambient,
+    arrival || panel === "pause" || panel === "resume",
+  );
   useEffect(() => {
     try {
       const p = JSON.parse(
         localStorage.getItem("pmforge.ghost.prefs.v1") || "{}",
       );
       setSound(p.sound === true);
+      setAmbient(p.ambient !== false);
+      setDismissed(
+        Array.isArray(p.seenGuides)
+          ? p.seenGuides.filter((v: unknown) => typeof v === "string")
+          : [],
+      );
+      const variants = JSON.parse(
+        localStorage.getItem("pmforge.ghost.variants.v2") || "{}",
+      );
+      if (variants && typeof variants === "object" && !Array.isArray(variants))
+        variantHistory.current = variants;
       setCalm(p.calm === true);
       setSoft(p.soft === true);
       setGuidance(p.guidance !== false);
@@ -264,10 +295,18 @@ export default function GhostMetricExperience() {
       try {
         localStorage.setItem(
           "pmforge.ghost.prefs.v1",
-          JSON.stringify({ sound, calm, soft, guidance, auto }),
+          JSON.stringify({
+            sound,
+            ambient,
+            calm,
+            soft,
+            guidance,
+            auto,
+            seenGuides: dismissed,
+          }),
         );
       } catch {}
-  }, [sound, calm, soft, guidance, auto, prefsReady]);
+  }, [sound, ambient, calm, soft, guidance, auto, dismissed, prefsReady]);
   useEffect(() => {
     if (identityLoading || !owner) return;
     let active = true,
@@ -314,19 +353,40 @@ export default function GhostMetricExperience() {
     const key = run.id + ":" + run.revision;
     if (lastPresented.current === key) return;
     lastPresented.current = key;
-    let rows = conversation(state.lastConversation);
-    if (run.events.at(-1)?.action.type === "CLASSIFY")
-      rows = [...rows, ...conversation("audit").slice(0, 2)];
+    const lastAction = run.events.at(-1)?.action.type;
+    let rows = pickLines(state.lastConversation);
+    if (lastAction === "JOIN") {
+      setJoinReading(rows[0]);
+      return;
+    }
+    if (!run.events.length) {
+      let seen = briefingSeen.current.has(run.id);
+      try {
+        seen =
+          seen ||
+          localStorage.getItem("pmforge.ghost.briefed.v2:" + run.id) === "yes";
+      } catch {}
+      if (!seen) {
+        setDialogue({ key, lines: openingSequence(), kind: "intro" });
+        return;
+      }
+      return;
+    }
+    if (lastAction === "CLASSIFY")
+      rows = [...rows, ...conversation("invitation")];
     if (!rows.length) return;
     if (
       run.events.at(-1)?.action.type === "BOARD" &&
       freshReveal.current &&
       !quiet
     ) {
-      const t = setTimeout(() => setDialogue({ key, lines: rows }), 1400);
+      const t = setTimeout(
+        () => setDialogue({ key, lines: rows, kind: "story" }),
+        1400,
+      );
       return () => clearTimeout(t);
     }
-    setDialogue({ key, lines: rows });
+    setDialogue({ key, lines: rows, kind: "story" });
   }, [
     run?.id,
     run?.revision,
@@ -353,7 +413,7 @@ export default function GhostMetricExperience() {
     if (!root.current) return;
     const tween = gsap.to(root.current, {
       backgroundColor:
-        state.DEF >= 3 ? "#f7f0e4" : soft ? "#f3efe6" : "#faf9f6",
+        state.DEF >= 3 ? "#f3e4ca" : soft ? "#f3efe6" : "#faf9f6",
       duration: quiet ? 0 : 0.6,
     });
     return () => {
@@ -381,6 +441,8 @@ export default function GhostMetricExperience() {
     setSpec(state.spec || defaultMetric);
     setEvidence([]);
     setActiveDrawer(null);
+    setJoinSource(null);
+    setJoinReading(undefined);
     freshReveal.current = false;
   }, [run?.id]);
   function analytics(name: string, detail: Record<string, unknown> = {}) {
@@ -397,7 +459,52 @@ export default function GhostMetricExperience() {
       localStorage.setItem(key, JSON.stringify(log.slice(-400)));
     } catch {}
   }
+  function pickLines(group: string) {
+    const rows = chooseVariant(group, variantHistory.current);
+    try {
+      localStorage.setItem(
+        "pmforge.ghost.variants.v2",
+        JSON.stringify(variantHistory.current),
+      );
+    } catch {}
+    return rows;
+  }
+  function beginJoin(id: DrawerId) {
+    setActiveDrawer(null);
+    setJoinSource(id);
+    setError("");
+    setJoinReading(undefined);
+    showGuide("join");
+  }
+  function showGuide(key: string, force = false) {
+    if (
+      !guideCard(key) ||
+      !guideGroups[key] ||
+      (!force && (!guidance || dismissed.includes(key)))
+    )
+      return false;
+    setDialogue({
+      key: "guide:" + key + ":" + ++serial.current,
+      kind: "guide",
+      guideKey: key,
+      lines: pickLines(guideGroups[key]),
+    });
+    return true;
+  }
   function focusTask() {
+    if (dialogue?.kind === "intro" && run) {
+      briefingSeen.current.add(run.id);
+      try {
+        localStorage.setItem("pmforge.ghost.briefed.v2:" + run.id, "yes");
+      } catch {}
+      setDialogue(null);
+      void commit({ type: "OPEN" });
+      return;
+    }
+    if (dialogue?.kind === "guide") {
+      const key = dialogue.guideKey!;
+      setDismissed((v) => (v.includes(key) ? v : [...v, key]));
+    } else if (showGuide(state.scene)) return;
     setDialogue(null);
     requestAnimationFrame(() => {
       const e = stage.current?.querySelector<HTMLElement>(
@@ -429,6 +536,10 @@ export default function GhostMetricExperience() {
         navigator.vibrate?.(18);
       setRun(updated);
       setActiveDrawer(null);
+      if (action.type !== "JOIN") {
+        setJoinSource(null);
+        setJoinReading(undefined);
+      }
       setConfirm(null);
       setTab("now");
       const names: Partial<Record<Action["type"], string>> = {
@@ -454,8 +565,10 @@ export default function GhostMetricExperience() {
         next.loopholes.forEach((id) => analytics("loophole_found", { id }));
       if (action.type === "HEADLINE")
         analytics("room_temp_peak", { defensiveness: next.DEF });
+      return true;
     } catch (e) {
       setError((e as Error).message);
+      return false;
     } finally {
       mutation.current = false;
       setBusy(false);
@@ -559,19 +672,28 @@ export default function GhostMetricExperience() {
   const rightRail = (
     <aside className={`${s.rail} ${s.rightRail}`}>
       <p className={s.eyebrow}>THE REPORTED NUMBER</p>
-      <Bubble proved={b.mass} calm={quiet} reveal={state.scene === "debrief"} />
+      <div className={s.bubbleReactive}>
+        <Bubble
+          proved={b.mass}
+          calm={quiet}
+          reveal={state.scene === "debrief"}
+        />
+        {b.mass > 0 && !quiet && (
+          <span
+            key={b.mass}
+            className={s.bubbleAcknowledgement}
+            aria-hidden="true"
+          />
+        )}
+      </div>
       <div className={s.gauge} aria-live="polite">
         <p className={s.eyebrow}>PROVED, NOT ASSUMED</p>
         <strong>
-          {b.mass.toFixed(1)}M <span className={s.muted}>/ 8.5M growth</span>
+          <AnimatedNumber value={b.mass} decimals={1} suffix="M" calm={quiet} />{" "}
+          <span className={s.muted}>/ 8.5M growth</span>
         </strong>
         <p className={s.muted}>Confirmed counting noise per day.</p>
-        <div
-          className={s.band}
-          aria-label={`Evidence supports ${Math.round(b.low)} to ${Math.round(b.high)} percent ghost growth`}
-        >
-          <i style={{ left: b.low + "%", width: b.high - b.low + "%" }} />
-        </div>
+        <UncertaintyBand low={b.low} high={b.high} calm={quiet} />
         <div className={s.legend}>
           <span>{Math.round(b.low)}% confirmed</span>
           <span>{Math.round(b.high)}% upper bound</span>
@@ -632,46 +754,14 @@ export default function GhostMetricExperience() {
               <strong>You: PM, Platform Growth · three weeks in.</strong>You own
               the dashboard and roadmap. Ravi owns the metric definition.
             </div>
-            <div className={s.thread}>
-              <small>JOYCE · DIRECT MESSAGE</small>
-              <p>“Can you look at something? It’s probably nothing.”</p>
-            </div>
           </>
         );
       case "unit":
         return (
-          <>
-            <div className={s.card}>
-              <span className={s.eyebrow}>
-                REQUEST 8F2A / A SINGLE CUSTOMER INTENT
-              </span>
-              <h3>Timeout → retry → completed</h3>
-              <p>
-                The client sent the same request again because the first attempt
-                timed out.
-              </p>
-              <p>
-                <strong>Should that retry count as new customer demand?</strong>
-              </p>
-            </div>
-            {section(
-              <>
-                {actionButton(
-                  "Counts as new demand",
-                  { type: "CLASSIFY", counts: true },
-                  true,
-                )}
-                {actionButton("Doesn’t count as new demand", {
-                  type: "CLASSIFY",
-                  counts: false,
-                })}
-              </>,
-            )}
-            <p className={s.muted}>
-              This records your starting assumption. It is not a pass/fail
-              question.
-            </p>
-          </>
+          <UnitSample
+            busy={busy}
+            onClassify={(counts) => void commit({ type: "CLASSIFY", counts })}
+          />
         );
       case "audit":
         return (
@@ -707,99 +797,37 @@ export default function GhostMetricExperience() {
                         : "Open drawer"}
                     </button>
                   </div>
+                  {state.opened.includes(d.id) && (
+                    <button
+                      className={s.joinFromDrawer}
+                      disabled={busy || state.AH < 1}
+                      onClick={() => beginJoin(d.id)}
+                    >
+                      Join this with…
+                    </button>
+                  )}
                 </article>
               ))}
             </div>
-            <JoinHands
-              opened={state.opened}
-              attempts={state.joinsUsed.length}
-              result={
-                state.receipts.filter((r) => r.id.startsWith("J")).at(-1)
-                  ?.because || ""
-              }
-              busy={busy || state.AH < 1}
-              calm={quiet}
-              onJoin={(action) => void commit(action)}
-            />
             <section className={s.join} data-join-bench="">
-              <span className={s.eyebrow}>
-                JOIN BENCH / ONE HOUR PER ATTEMPT
-              </span>
-              <h3>Do these rows describe the same thing?</h3>
-              <p className={s.muted}>
-                Select columns to align them. Request IDs match requests;
-                account IDs match accounts. The reference account list is
-                provided.
+              <span className={s.eyebrow}>JOIN BENCH</span>
+              <h3>Start from a drawer you understand.</h3>
+              <p>
+                Open a drawer and inspect its columns. Choose “Join this with…”
+                to compare it with another dataset. Review both keys before
+                confirming the one-hour attempt.
               </p>
-              <div className={s.joinFields}>
-                <label>
-                  Source drawer
-                  <select
-                    value={left}
-                    onChange={(e) => setLeft(e.target.value as DrawerId)}
-                  >
-                    {drawers.map((d) => (
-                      <option
-                        key={d.id}
-                        value={d.id}
-                        disabled={!state.opened.includes(d.id)}
-                      >
-                        {d.title}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-                <label>
-                  Compare against
-                  <select
-                    value={right}
-                    onChange={(e) => setRight(e.target.value as typeof right)}
-                  >
-                    <option value="gateway">
-                      Gateway · deduplicate its request IDs
-                    </option>
-                    <option
-                      value="billing"
-                      disabled={!state.opened.includes("billing")}
-                    >
-                      Billing events
-                    </option>
-                    <option value="accounts">Reference account list</option>
-                  </select>
-                </label>
-                <label>
-                  Join on
-                  <select
-                    value={joinKey}
-                    onChange={(e) =>
-                      setJoinKey(e.target.value as typeof joinKey)
-                    }
-                  >
-                    <option value="request_id">
-                      request_id — identifies one request
-                    </option>
-                    <option value="account_id">
-                      account_id — identifies an account
-                    </option>
-                    <option value="customer_id">
-                      customer_id — identifies a customer
-                    </option>
-                  </select>
-                </label>
-              </div>
-              <button
-                disabled={busy || state.AH < 1 || !state.opened.includes(left)}
-                onClick={() =>
-                  void commit({ type: "JOIN", left, right, key: joinKey })
-                }
-              >
-                Align the rows · 1 hour
-              </button>
-              {state.feedback && (
+              {state.joinsUsed.length > 0 && (
                 <div className={s.result} role="status">
-                  {state.feedback}
+                  {
+                    state.receipts.filter((r) => r.id.startsWith("J")).at(-1)
+                      ?.because
+                  }
                 </div>
               )}
+              <button onClick={() => showGuide("join", true)}>
+                Hear the join guide
+              </button>
             </section>
             <div className={s.sectionEnd}>
               <span className={s.muted}>
@@ -1214,13 +1242,15 @@ export default function GhostMetricExperience() {
           <>
             <div className={s.preview}>
               <div className={s.actions}>
-                <span className={s.agent} data-red-agent="" aria-hidden="true">
-                  ↗
-                </span>
                 <span className={s.eyebrow}>THE RULE YOU WROTE</span>
+                <button className={s.editRule} onClick={() => setPanel("rule")}>
+                  Edit rule
+                </button>
               </div>
               <code>
-                {state.receipts.find((r) => r.id === "G_METRIC")?.words}
+                {state.spec
+                  ? definition(state.spec)
+                  : state.receipts.find((r) => r.id === "G_METRIC")?.words}
               </code>
             </div>
             {state.spec && <MetricPreview spec={state.spec} />}
@@ -1431,13 +1461,30 @@ export default function GhostMetricExperience() {
           <span className={s.brand}>PMFORGE / THE GHOST METRIC</span>
           <div className={s.actions}>
             {run && (
-              <span className={s.badge}>
-                {chapter(state.scene) === 1
-                  ? `${state.AH} AUDIT HOURS`
-                  : `${state.PH} PREP HOURS`}{" "}
-                · DAY {chapter(state.scene)}
-              </span>
+              <ResourceChip
+                value={chapter(state.scene) === 1 ? state.AH : state.PH}
+                label={
+                  chapter(state.scene) === 1 ? "AUDIT HOURS" : "PREP HOURS"
+                }
+                day={chapter(state.scene)}
+                calm={quiet}
+              />
             )}
+            <button
+              role="switch"
+              aria-label="Ambient sound"
+              aria-checked={ambient}
+              onClick={() => setAmbient((v) => !v)}
+              title={
+                ambientStatus === "ready"
+                  ? "Room tone starts after your first interaction."
+                  : ambientStatus === "unavailable"
+                    ? "Room tone unavailable; the lab remains usable."
+                    : "Ambient room tone ducks beneath dialogue."
+              }
+            >
+              Ambient: {ambient ? "On" : "Off"}
+            </button>
             <button onClick={() => setPanel("help")}>Guide</button>
             <button
               onClick={() => {
@@ -1463,6 +1510,26 @@ export default function GhostMetricExperience() {
             )}
           </div>
         </header>
+        {run && (
+          <nav
+            className={`${s.progressHeader} ${s.toolShell}`}
+            aria-label="Project chapters"
+          >
+            <ol className={s.tracker}>
+              {["The Mirage", "The Truth", "The Realignment"].map((name, i) => (
+                <li
+                  key={name}
+                  aria-current={
+                    chapter(state.scene) === i + 1 ? "step" : undefined
+                  }
+                  data-current={chapter(state.scene) === i + 1}
+                >
+                  <b>{String(i + 1).padStart(2, "0")}</b> {name}
+                </li>
+              ))}
+            </ol>
+          </nav>
+        )}
         {error && (
           <div className={s.error} role="alert">
             {error}{" "}
@@ -1558,7 +1625,7 @@ export default function GhostMetricExperience() {
             </div>
           </main>
         ) : state.scene === "debrief" ? (
-          <main className={s.debrief}>
+          <main className={`${s.debrief} ${s.pageShell}`}>
             <p className={s.eyebrow}>
               THE RECORD / {state.outcome.toUpperCase()}
             </p>
@@ -1691,34 +1758,11 @@ export default function GhostMetricExperience() {
                 </article>
               ))}
             </details>
-            <details>
-              <summary>What I could have noticed</summary>
-              {!state.opened.includes("billing") && (
-                <p>
-                  Billing: calls and revenue per call were moving in different
-                  directions.
-                </p>
-              )}
-              {!state.opened.includes("sdk") && (
-                <p>SDK release note: a chunk had quietly become a call.</p>
-              )}
-              {!state.opened.includes("tickets") && (
-                <p>
-                  Support tickets: a retry can raise the metric while worsening
-                  the experience.
-                </p>
-              )}
-              <p>
-                Joyce’s “probably nothing” was an invitation to investigate, not
-                a guarantee.
-              </p>
-              <p>
-                Retries and streaming each added 3.0M daily events. Internal and
-                partner traffic added another 1.5M. Ignoring them let
-                infrastructure planning confuse pipeline activity with customer
-                demand.
-              </p>
-            </details>
+            <MissedTells
+              opened={state.opened}
+              sound={sound}
+              paused={paused || !!dialogue}
+            />
             <h3>Try a different decision.</h3>
             <div className={s.actions}>
               {[
@@ -1748,20 +1792,19 @@ export default function GhostMetricExperience() {
               </p>
               <textarea
                 aria-label="Reflection note"
+                placeholder="What would you ask about the unit before publishing this number again?"
                 maxLength={1000}
                 value={note}
                 onChange={(e) => setNote(e.target.value)}
               />
               <div className={s.sectionEnd}>
-                <button onClick={() => void saveNote()}>Save reflection</button>
+                <button className={s.primary} onClick={() => void saveNote()}>
+                  Save reflection
+                </button>
                 <button onClick={() => exportRun(run)}>
                   Export this audit
                 </button>
-                <button
-                  className={s.primary}
-                  disabled={busy}
-                  onClick={() => void begin()}
-                >
+                <button disabled={busy} onClick={() => void begin()}>
                   Start a new audit
                 </button>
               </div>
@@ -1770,30 +1813,36 @@ export default function GhostMetricExperience() {
         ) : (
           <>
             <div className={s.goal}>
-              <div>
-                <strong>Goal:</strong>{" "}
-                {chapter(state.scene) === 1
-                  ? "Decide how much of the growth you can trust."
-                  : chapter(state.scene) === 2
-                    ? "Tell the right people before the board."
-                    : "Replace the number with a rule people can trust."}
-                <br />
-                <span className={s.muted}>Now: {titles[state.scene][1]}</span>
+              <div className={s.goalItems}>
+                <span>
+                  <strong>Goal</strong>{" "}
+                  {chapter(state.scene) === 1
+                    ? "Decide how much of the growth you can trust."
+                    : chapter(state.scene) === 2
+                      ? "Tell the right people before the board."
+                      : "Replace the number with a rule people can trust."}
+                </span>
+                <span>
+                  <strong>Now</strong> {titles[state.scene][1]}
+                </span>
+                <span>
+                  <strong>Costs</strong> {currentCost(state)}
+                </span>
               </div>
-              <div className={s.tracker}>
-                {["The Mirage", "The Truth", "The Realignment"].map((x, i) => (
-                  <span data-current={chapter(state.scene) === i + 1} key={x}>
-                    {String(i + 1).padStart(2, "0")} · {x}
-                  </span>
-                ))}
-              </div>
+              <p className={s.remainingActions} role="status">
+                {remainingActions(state)}
+              </p>
             </div>
-            <div className={s.workspace} data-tab={tab}>
+            <div className={`${s.workspace} ${s.toolShell}`} data-tab={tab}>
               <aside className={`${s.rail} ${s.leftRail}`}>
                 <span className={s.eyebrow}>APERTURE / TEAM THREAD</span>
                 <div className={s.thread}>
                   <small>JOYCE · ANALYST</small>
-                  <p>“Probably fine.”</p>
+                  <p>
+                    {state.scene === "cold" || state.scene === "unit"
+                      ? "Billing and the activity dashboard do not quite agree."
+                      : "“Can you look at something? It’s probably nothing.”"}
+                  </p>
                   <small>YOU · PLATFORM GROWTH</small>
                   <p>
                     {state.receipts.at(-1)?.words ||
@@ -1841,13 +1890,32 @@ export default function GhostMetricExperience() {
                 </div>
                 {plan && guidance && !dismissed.includes(state.scene) && (
                   <aside className={s.coach}>
-                    <strong>{plan[0]}</strong>
-                    <p>{plan[1]}</p>
-                    <div className={s.actions}>
+                    <span className={s.eyebrow}>YOUR NEXT MOVE</span>
+                    <dl className={s.guideReference}>
+                      <div>
+                        <dt>Goal</dt>
+                        <dd>{guideCard(state.scene)?.goal}</dd>
+                      </div>
+                      <div>
+                        <dt>Do this</dt>
+                        <dd>{guideCard(state.scene)?.do}</dd>
+                      </div>
+                      <div>
+                        <dt>Watch for</dt>
+                        <dd>{guideCard(state.scene)?.watch}</dd>
+                      </div>
+                    </dl>
+                    <div className={s.guidePrimary}>
                       <button
+                        className={s.primary}
                         onClick={() => setDismissed((v) => [...v, state.scene])}
                       >
                         Got it
+                      </button>
+                    </div>
+                    <div className={s.conversationUtilities}>
+                      <button onClick={() => showGuide(state.scene, true)}>
+                        Replay spoken guide
                       </button>
                       <label>
                         <input
@@ -1858,7 +1926,6 @@ export default function GhostMetricExperience() {
                         Don’t show guides again
                       </label>
                     </div>
-                    <p className={s.muted}>{plan[2]}</p>
                   </aside>
                 )}
                 {stageContent()}
@@ -1889,15 +1956,41 @@ export default function GhostMetricExperience() {
       {dialogue && (
         <Conversation
           key={dialogue.key}
-          rows={dialogue.lines}
+          plan={dialogue}
           sound={sound}
           auto={auto}
           paused={paused || !!activeDrawer}
           calm={quiet}
+          guidance={guidance}
+          guide={guideCard(dialogue.guideKey || "")}
           onDone={focusTask}
           onPause={() => setPanel("pause")}
           onSound={() => setSound((v) => !v)}
           onAuto={setAuto}
+          onGuidance={setGuidance}
+          ambient={ambient}
+          onAmbient={() => setAmbient((v) => !v)}
+        />
+      )}
+      {joinSource && (
+        <JoinPicker
+          source={joinSource}
+          open={!dialogue && !panel && !arrival}
+          state={state}
+          busy={busy}
+          error={error}
+          calm={quiet}
+          sound={sound}
+          reading={joinReading}
+          ambient={ambient}
+          onAmbient={() => setAmbient((v) => !v)}
+          onSound={() => setSound((v) => !v)}
+          onClose={() => {
+            setJoinSource(null);
+            setError("");
+          }}
+          onGuide={() => showGuide("join", true)}
+          onJoin={commit}
         />
       )}
       <Dialog
@@ -1996,6 +2089,14 @@ export default function GhostMetricExperience() {
           )}
           {panel === "settings" && (
             <>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={ambient}
+                  onChange={(e) => setAmbient(e.target.checked)}
+                />
+                Ambient room tone · ducks during dialogue
+              </label>
               <label>
                 <input
                   type="checkbox"
@@ -2105,7 +2206,9 @@ export default function GhostMetricExperience() {
               <details>
                 <summary>Dialogue heard in this scene</summary>
                 <div className={s.transcript}>
-                  {conversation(state.lastConversation).map((l) => (
+                  {(
+                    dialogue?.lines || conversation(state.lastConversation)
+                  ).map((l) => (
                     <p key={l.id}>
                       <strong>{l.speaker}:</strong> {l.text}
                     </p>
@@ -2117,9 +2220,53 @@ export default function GhostMetricExperience() {
                   setGuidance(true);
                   setDismissed((v) => v.filter((x) => x !== state.scene));
                   setPanel(null);
+                  showGuide(state.scene, true);
                 }}
               >
                 Show this task’s guide
+              </button>
+            </>
+          )}
+          {panel === "rule" && (
+            <>
+              <h2>Edit the rule.</h2>
+              <p>{state.spec && definition(state.spec)}</p>
+              <p>
+                Keep the recorded definition and patch its known controls.
+                Engineering changes use one fix hour; the cohort breakdown is
+                free.
+              </p>
+              {state.loopholes.map((id) => (
+                <div className={s.receipt} key={id}>
+                  <strong>{loopholeInfo[id][0]}</strong>
+                  <p>{loopholeInfo[id][2]}</p>
+                  <button
+                    disabled={busy || (id !== "segments" && state.fixHours < 1)}
+                    onClick={() => void commit({ type: "FIX", id })}
+                  >
+                    {id === "segments"
+                      ? "Add cohort breakdown"
+                      : "Apply patch · 1 fix hour"}
+                  </button>
+                </div>
+              ))}
+              {!state.loopholes.length && <p>No authored loopholes remain.</p>}
+              <div className={s.conversationPrimary}>
+                <button className={s.primary} onClick={() => setPanel(null)}>
+                  Done editing
+                </button>
+              </div>
+              <p className={s.muted}>
+                Changing the unit, window or original scope creates a separate
+                replay branch.
+              </p>
+              <button
+                onClick={() => {
+                  const r = state.receipts.find((r) => r.id === "G_METRIC");
+                  if (r) void branch(r.eventIndex);
+                }}
+              >
+                Rebuild the definition · new branch
               </button>
             </>
           )}
@@ -2138,6 +2285,14 @@ export default function GhostMetricExperience() {
               d && (
                 <>
                   <p>{d.reading}</p>
+                  <div
+                    className={s.columnChips}
+                    aria-label="Available identifying columns"
+                  >
+                    {sourceColumns(d.id).map((column) => (
+                      <code key={column}>{column}</code>
+                    ))}
+                  </div>
                   <div className={s.tableWrap}>
                     <table className={s.table}>
                       <caption>Authored sample rows · simulated data</caption>
@@ -2153,6 +2308,15 @@ export default function GhostMetricExperience() {
                     </table>
                   </div>
                   <p className={s.result}>{d.hint}</p>
+                  {state.scene === "audit" && (
+                    <button
+                      className={s.primary}
+                      disabled={busy || state.AH < 1}
+                      onClick={() => beginJoin(d.id)}
+                    >
+                      Join this with…
+                    </button>
+                  )}
                   <button
                     className={s.primary}
                     onClick={() => setActiveDrawer(null)}
@@ -2237,7 +2401,16 @@ function MetricPreview({ spec }: { spec: Metric }) {
   return (
     <div className={s.preview} aria-live="polite">
       <span className={s.eyebrow}>RETROSPECTIVE MODEL / SIMULATED QUARTER</span>
-      <strong>{preview.label}</strong>
+      <strong>
+        {preview.growth === null ? (
+          preview.label
+        ) : (
+          <>
+            <span>+</span>
+            <AnimatedNumber value={preview.growth} suffix="%" />
+          </>
+        )}
+      </strong>
       <svg
         viewBox="0 0 360 110"
         role="img"
@@ -2253,128 +2426,5 @@ function MetricPreview({ spec }: { spec: Metric }) {
       <p className={s.muted}>{preview.note}</p>
       <code>{definition(spec)}</code>
     </div>
-  );
-}
-function Conversation({
-  rows,
-  sound,
-  auto,
-  paused,
-  calm,
-  onDone,
-  onPause,
-  onSound,
-  onAuto,
-}: {
-  rows: Line[];
-  sound: boolean;
-  auto: boolean;
-  paused: boolean;
-  calm: boolean;
-  onDone: () => void;
-  onPause: () => void;
-  onSound: () => void;
-  onAuto: (value: boolean) => void;
-}) {
-  const [index, setIndex] = useState(0),
-    [ended, setEnded] = useState(false),
-    [replayCount, setReplayCount] = useState(0);
-  const voice = useVoice(sound, paused),
-    line = rows[index],
-    lock = useRef(false),
-    serial = useRef(0);
-  const person = people.find((p) => p.id === line.speaker)!;
-  function next() {
-    if (lock.current || paused) return;
-    lock.current = true;
-    voice.stop();
-    setEnded(false);
-    if (index < rows.length - 1) setIndex((v) => v + 1);
-    else onDone();
-  }
-  const nextRef = useRef(next);
-  nextRef.current = next;
-  useEffect(() => {
-    lock.current = false;
-    setEnded(false);
-    const ticket = ++serial.current;
-    if (!paused && sound)
-      voice.play(line.id, () => {
-        if (serial.current === ticket) setEnded(true);
-      });
-    return () => {
-      serial.current++;
-      voice.stop();
-    };
-  }, [line.id, sound, paused, replayCount, voice.play, voice.stop]);
-  useEffect(() => {
-    if (!ended || !auto || !sound || paused) return;
-    const timer = setTimeout(() => nextRef.current(), 600);
-    return () => clearTimeout(timer);
-  }, [ended, auto, sound, paused]);
-  return (
-    <Dialog
-      open={!paused}
-      onClose={onPause}
-      title="Live team conversation"
-      dismissible={false}
-      initialFocus="[data-ghost-next]"
-      size="lg"
-    >
-      <div
-        className={s.sheet}
-        data-ghost-conversation=""
-        data-line-id={line.id}
-        data-calm={calm}
-      >
-        <div className={s.dialogue}>
-          <Portrait id={line.speaker} mood={line.emotion} />
-          <div>
-            <p className={s.eyebrow}>
-              {person.role} · {index + 1}/{rows.length}
-            </p>
-            <h3>{person.name}</h3>
-            <blockquote>{line.text}</blockquote>
-          </div>
-          <div className={s.actions}>
-            <button onClick={onSound}>
-              {sound ? "Sound off" : "Sound on"}
-            </button>
-            <button onClick={() => setReplayCount((v) => v + 1)}>
-              Replay line
-            </button>
-            <button onClick={onPause}>Pause / leave</button>
-            <button data-ghost-next="" className={s.primary} onClick={next}>
-              {index < rows.length - 1 ? "Next →" : "Back to the task →"}
-            </button>
-          </div>
-        </div>
-        <div className={s.actions}>
-          <span className={s.muted}>
-            {voice.playing
-              ? "Recording playing"
-              : sound
-                ? voice.status || "Caption stays until you continue."
-                : "Captions on · no automatic advance"}
-          </span>
-          <label>
-            <input
-              type="checkbox"
-              checked={auto}
-              onChange={(e) => onAuto(e.target.checked)}
-            />
-            Auto-advance after audio
-          </label>
-          <button
-            onClick={() => {
-              voice.stop();
-              onDone();
-            }}
-          >
-            Skip this conversation
-          </button>
-        </div>
-      </div>
-    </Dialog>
   );
 }

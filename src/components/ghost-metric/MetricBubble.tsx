@@ -63,7 +63,13 @@ function Film({
   }, [reveal, invalidate]);
   useFrame((state, delta) => {
     uniforms.current.time.value += Math.min(delta, 0.05);
+    if (material.current) {
+      material.current.uniforms.time.value = uniforms.current.time.value;
+      material.current.uniforms.proved.value = uniforms.current.proved.value;
+      material.current.uniforms.pop.value = uniforms.current.pop.value;
+    }
     if (mesh.current) {
+      mesh.current.visible = uniforms.current.pop.value < 0.999;
       mesh.current.rotation.y += Math.min(delta, 0.05) * 0.09;
       const scale =
         (1 + Math.sin(state.clock.elapsedTime * 0.55) * 0.075) *
@@ -237,7 +243,12 @@ export default function MetricBubble({
       ref={ref}
       style={{ height: 290, position: "relative" }}
       data-metric-bubble=""
-      aria-label={`${proved.toFixed(1)} million daily events confirmed as counting noise`}
+      data-reveal={reveal ? "real-core" : "audit-shell"}
+      aria-label={
+        reveal
+          ? "Complete audit: one million real daily growth remains after removing seven point five million counting noise."
+          : `${proved.toFixed(1)} million daily events confirmed as counting noise`
+      }
     >
       <div
         style={{

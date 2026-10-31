@@ -1,0 +1,234 @@
+[
+  {
+    "label": "entry fits 390px",
+    "pass": true
+  },
+  {
+    "label": "entry fits 320px",
+    "pass": true
+  },
+  {
+    "label": "dialogue starts off",
+    "pass": true
+  },
+  {
+    "label": "captions are always on",
+    "pass": true
+  },
+  {
+    "label": "auto-advance starts off",
+    "pass": true
+  },
+  {
+    "label": "no drawer before the briefing and unit exercise",
+    "pass": true
+  },
+  {
+    "label": "sound-off briefing never advances on a timer",
+    "pass": true
+  },
+  {
+    "label": "briefing fits 390px",
+    "pass": true
+  },
+  {
+    "label": "briefing fits 320px",
+    "pass": true
+  },
+  {
+    "label": "primary action is separated above secondary utilities",
+    "pass": true
+  },
+  {
+    "label": "ambient ducks beneath recorded dialogue",
+    "pass": true
+  },
+  {
+    "label": "auto-advance waits while the recording plays",
+    "pass": true
+  },
+  {
+    "label": "actual audio completion advances exactly one line",
+    "pass": true
+  },
+  {
+    "label": "Ravi has a prerecorded spoken introduction",
+    "pass": true
+  },
+  {
+    "label": "pausing keeps the same introduction line",
+    "pass": true
+  },
+  {
+    "label": "failed recording leaves a caption-friendly fallback",
+    "pass": true
+  },
+  {
+    "label": "the complete cast and case briefing precede the sample task",
+    "pass": true
+  },
+  {
+    "label": "spoken guide has Goal / Do this / Watch for",
+    "pass": true
+  },
+  {
+    "label": "guide fits 390px",
+    "pass": true
+  },
+  {
+    "label": "guide fits 320px",
+    "pass": true
+  },
+  {
+    "label": "Joyce invitation arrives only after briefing and micro-task",
+    "pass": true
+  },
+  {
+    "label": "skip-all-guides preference is persistent",
+    "pass": true
+  },
+  {
+    "label": "audit fits 390px",
+    "pass": true
+  },
+  {
+    "label": "audit fits 320px",
+    "pass": true
+  },
+  {
+    "label": "opened drawer exposes identifying column chips",
+    "pass": true
+  },
+  {
+    "label": "join picker separates source and target columns",
+    "pass": true
+  },
+  {
+    "label": "opening the join picker spends no hour",
+    "pass": true
+  },
+  {
+    "label": "guide repeats use three different authored recordings",
+    "pass": true
+  },
+  {
+    "label": "keyboard focus stays in the join picker",
+    "pass": true
+  },
+  {
+    "label": "a failed confirmed join spends exactly one hour",
+    "pass": true
+  },
+  {
+    "label": "join fits 390px",
+    "pass": true
+  },
+  {
+    "label": "join fits 320px",
+    "pass": true
+  },
+  {
+    "label": "Change columns returns keyboard focus to a source chip",
+    "pass": true
+  },
+  {
+    "label": "a useful join spends exactly one hour",
+    "pass": true
+  },
+  {
+    "label": "useful join gives aligned-row feedback",
+    "pass": true
+  },
+  {
+    "label": "join confirmation stays visible in a fixed dialog footer",
+    "pass": true
+  },
+  {
+    "label": "proved mass animates through intermediate values",
+    "pass": true
+  },
+  {
+    "label": "clean metric model animates to forty percent",
+    "pass": true
+  },
+  {
+    "label": "metric fits 390px",
+    "pass": true
+  },
+  {
+    "label": "metric fits 320px",
+    "pass": true
+  },
+  {
+    "label": "Edit rule applies actual allowed patches without rewriting the engine",
+    "pass": true
+  },
+  {
+    "label": "debrief uses a reading shell with no oversized desktop gutters",
+    "pass": true
+  },
+  {
+    "label": "important missed tells are not hidden in a disclosure",
+    "pass": true
+  },
+  {
+    "label": "missed-tell card reveals its visual source callback",
+    "pass": true
+  },
+  {
+    "label": "debrief fits 390px",
+    "pass": true
+  },
+  {
+    "label": "debrief fits 320px",
+    "pass": true
+  },
+  {
+    "label": "reflection asks a real question",
+    "pass": true
+  },
+  {
+    "label": "reflection has a visible focus ring",
+    "pass": true
+  },
+  {
+    "label": "ambient mute persists separately from dialogue sound",
+    "pass": true
+  },
+  {
+    "label": "reflection survives reload",
+    "pass": true
+  },
+  {
+    "label": "ambient remains muted after reload",
+    "pass": true
+  },
+  {
+    "label": "replay opens a separate branch",
+    "pass": true
+  },
+  {
+    "label": "the original remains completed after replay",
+    "pass": true
+  },
+  {
+    "label": "board still remembers the original promise",
+    "pass": true
+  },
+  {
+    "label": "the unchanged crisis branch still completes",
+    "pass": true
+  },
+  {
+    "label": "reduced motion keeps the entrance immediate",
+    "pass": true
+  },
+  {
+    "label": "reduced-entry fits 390px",
+    "pass": true
+  },
+  {
+    "label": "reduced-entry fits 320px",
+    "pass": true
+  }
+]
