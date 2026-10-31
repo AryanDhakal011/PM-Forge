@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // `npm start` pins a complete build snapshot. Rebuilding .next must not
+  // invalidate scripts or manifests in an already-running user preview.
+  distDir: process.env.PMFORGE_PREVIEW_DIR || ".next",
   reactStrictMode: true,
   poweredByHeader: false,
   devIndicators: false,

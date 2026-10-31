@@ -1,0 +1,202 @@
+{
+  "at": "2026-10-31T13:46:27.290Z",
+  "base": "http://localhost:3001",
+  "http": [],
+  "assets": [],
+  "pages": [
+    {
+      "path": "/app",
+      "url": "/app",
+      "loads": 1,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nYour next good decision\nEnter PMForge.\n\nReal scenarios. Decisions you can defend. A practice space that remembers where you left off.\n\nG\nContinue with Google\nOther sign-in options\n\nAccounts aren’t",
+      "failed": false
+    },
+    {
+      "path": "/app",
+      "url": "/app",
+      "loads": 2,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nToday\nOn this device\nFind a scenario\n⌘ K\nMake room for a better decision.\n\nYou don’t need all the answers.",
+      "failed": false
+    },
+    {
+      "path": "/app",
+      "url": "/app",
+      "loads": 3,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nToday\nOn this device\nFind a scenario\n⌘ K\nMake room for a better decision.\n\nYou don’t need all the answers.",
+      "failed": false
+    },
+    {
+      "path": "/app",
+      "url": "/app",
+      "loads": 4,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nToday\nOn this device\nFind a scenario\n⌘ K\nMake room for a better decision.\n\nYou don’t need all the answers.",
+      "failed": false
+    },
+    {
+      "path": "/app/settings",
+      "url": "/app/settings",
+      "loads": 5,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nSettings\nOn this device\nFind a scenario\n⌘ K\nSettle into your workspace.\n\nSmall preferences. Clear data con",
+      "failed": false
+    },
+    {
+      "path": "/app/practice/est-e-1-is-a-flagship-phone-store-on-durbar-marg-worth-the-rent",
+      "url": "/app/practice/est-e-1-is-a-flagship-phone-store-on-durbar-marg-worth-the-rent",
+      "loads": 6,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nPractice\nOn this device\nFind a scenario\n⌘ K\nBack to practice\nPrecision workshop\nESTIMATION\nDRAFT · EXPERT ",
+      "failed": false
+    },
+    {
+      "path": "/app/practice",
+      "url": "/app/practice",
+      "loads": 7,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nPractice\nOn this device\nFind a scenario\n⌘ K\nFind your next challenge.\n\n63 specific situations. Seven ways ",
+      "failed": false
+    },
+    {
+      "path": "/app/bookmarks",
+      "url": "/app/practice?view=saved",
+      "loads": 9,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nPractice\nOn this device\nFind a scenario\n⌘ K\nSaved for later.\n\n63 specific situations. Seven ways to exerci",
+      "failed": false
+    },
+    {
+      "path": "/app/history",
+      "url": "/app/progress?tab=history",
+      "loads": 10,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nProgress\nOn this device\nFind a scenario\n⌘ K\nYour session history.\n\nResume a thought or revisit the decisio",
+      "failed": false
+    },
+    {
+      "path": "/dashboard",
+      "url": "/app",
+      "loads": 11,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nToday\nOn this device\nFind a scenario\n⌘ K\nMake room for a better decision.\n\nYou don’t need all the answers.",
+      "failed": false
+    },
+    {
+      "path": "/career",
+      "url": "/app/portfolio",
+      "loads": 12,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nClarity is a practice.\nSettings\nHelp\nWorkspace\nPortfolio\nOn this device\nFind a scenario\n⌘ K\nKeep the thinking that matters.\n\nYour decision records turn p",
+      "failed": false
+    },
+    {
+      "path": "/learn",
+      "url": "/resources",
+      "loads": 13,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nHome\nModules\nInterview Prep\nProjects\nTools\nResources\nOpen app\nKeep your questions sharp.\n\nA small set of useful places to go before and after you practise.\n\n63 scenario briefs\n\nBrowse all seven ca",
+      "failed": false
+    },
+    {
+      "path": "/app",
+      "url": "/app",
+      "loads": 14,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nToday\nOn this device\nMake room for a better decision.\n\nYou don’t need all the answers. Just a better next question.\n\nJust where you left it. Is a flagship phone store on Durbar Marg worth the rent?\nPrefli",
+      "failed": false
+    }
+  ],
+  "clicks": [
+    {
+      "path": "/help",
+      "url": "/help",
+      "pass": true
+    },
+    {
+      "path": "/app/settings",
+      "url": "/app/settings",
+      "pass": true
+    },
+    {
+      "path": "/app/account",
+      "url": "/app/account",
+      "pass": true
+    },
+    {
+      "path": "create real interview run",
+      "url": "/app/run/7a07c31a-ffad-4faf-9281-5d89e2252b24",
+      "pass": true
+    },
+    {
+      "path": "back to actual run",
+      "pass": true
+    },
+    {
+      "path": "forward to library",
+      "pass": true
+    },
+    {
+      "path": "/app/bookmarks",
+      "url": "/app/practice?view=saved",
+      "pass": true
+    },
+    {
+      "path": "/app/history",
+      "url": "/app/progress?tab=history",
+      "pass": true
+    },
+    {
+      "path": "/dashboard",
+      "url": "/app",
+      "pass": true
+    },
+    {
+      "path": "/career",
+      "url": "/app/portfolio",
+      "pass": true
+    },
+    {
+      "path": "/learn",
+      "url": "/resources",
+      "pass": true
+    },
+    {
+      "path": "mobile navigation menu",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "mobileControls": [
+    {
+      "text": "",
+      "label": "Collapse sidebar"
+    },
+    {
+      "text": "Export backup",
+      "label": null
+    },
+    {
+      "text": "Find a scenario⌘ K",
+      "label": "Search the workspace"
+    },
+    {
+      "text": "Export backup",
+      "label": null
+    },
+    {
+      "text": "Pick another",
+      "label": null
+    },
+    {
+      "text": "View as table ↗",
+      "label": null
+    },
+    {
+      "text": "More",
+      "label": null
+    }
+  ]
+}

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "node scripts/start-preview.mjs",
     "typecheck": "tsc --noEmit",
     "launch:check": "node --env-file-if-exists=.env.local scripts/check-launch.mjs",
     "test": "node --import tsx --test tests/interview-engine.test.ts tests/calibration.test.ts tests/projects.test.ts tests/workspace-reset.test.ts && node --conditions=react-server --import tsx --test tests/account-server.test.ts",

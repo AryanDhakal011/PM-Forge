@@ -66,3 +66,10 @@ docs/sacred-no-verification/*-mobile.png
 !docs/sacred-no-verification/evidence-mobile.png
 !docs/sacred-no-verification/rollout-mobile.png
 !docs/sacred-no-verification/cold-mobile.png
+
+# Immutable, local production preview builds
+.pmforge-preview/
+
+# Transient navigation diagnostics; final reports are retained.
+docs/navigation-verification/browser-progress.json
+docs/navigation-verification/dev-diagnosis.json
