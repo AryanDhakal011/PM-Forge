@@ -19,4 +19,3 @@ export const ROOMS: Room[] = [
 ];
 
 export const ROOM_BY_ID = Object.fromEntries(ROOMS.map((room) => [room.id, room])) as Record<Category, Room>;
-
