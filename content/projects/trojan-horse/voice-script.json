@@ -1,0 +1,336 @@
+{
+  "people": [
+    {
+      "id": "kavya",
+      "name": "Kavya Mehta",
+      "role": "CEO",
+      "color": "#e9c776",
+      "voice": "af_heart",
+      "speed": 0.96,
+      "wants": "A growth story the board can believe.",
+      "fear": "Discovering the headline was bought with cash."
+    },
+    {
+      "id": "omar",
+      "name": "Omar Reyes",
+      "role": "CFO",
+      "color": "#9fb9cc",
+      "voice": "bm_george",
+      "speed": 0.94,
+      "wants": "A weekly forecast he can defend.",
+      "fear": "Running out of cash before the next round."
+    },
+    {
+      "id": "dani",
+      "name": "Dani Kwon",
+      "role": "Head of Growth",
+      "color": "#f088bd",
+      "voice": "af_bella",
+      "speed": 1.01,
+      "wants": "Keep the customers who actually stay.",
+      "fear": "Being blamed for a system everyone celebrated."
+    },
+    {
+      "id": "tomas",
+      "name": "Tomas Aranda",
+      "role": "Guild Partner Lead",
+      "color": "#e7a27d",
+      "voice": "am_michael",
+      "speed": 0.94,
+      "wants": "Keep written promises to neighborhood businesses.",
+      "fear": "Real partners being treated as fraud."
+    },
+    {
+      "id": "rhea",
+      "name": "Rhea Shah",
+      "role": "Community Lead",
+      "color": "#9dcdbb",
+      "voice": "bf_emma",
+      "speed": 0.97,
+      "wants": "An announcement she can answer questions about.",
+      "fear": "A screenshot proving the company said two things."
+    },
+    {
+      "id": "priya",
+      "name": "Priya Nand",
+      "role": "Lead Investor",
+      "color": "#c2b7d6",
+      "voice": "bf_isabella",
+      "speed": 0.95,
+      "wants": "Evidence of a sustainable referral model.",
+      "fear": "Funding incentives rather than product value."
+    }
+  ],
+  "lines": [
+    {
+      "id": "party-1",
+      "speaker": "kavya",
+      "text": "Six weeks. Five times the users. Tonight, take a moment. You built this.",
+      "emotion": "warm"
+    },
+    {
+      "id": "party-2",
+      "speaker": "dani",
+      "text": "I saved you a drink. Though Omar has been staring at that spreadsheet all night.",
+      "emotion": "warm"
+    },
+    {
+      "id": "mismatch-1",
+      "speaker": "omar",
+      "text": "The stage says one hundred twenty thousand in weekly payouts. My ledger says four hundred ten thousand.",
+      "emotion": "concerned"
+    },
+    {
+      "id": "mismatch-2",
+      "speaker": "omar",
+      "text": "Before anyone calls this sustainable, help me explain the difference.",
+      "emotion": "firm"
+    },
+    {
+      "id": "sample-1",
+      "speaker": "dani",
+      "text": "Ana refers Ben. Ben refers Ana back. What should that pair earn? Try it here.",
+      "emotion": "thinking"
+    },
+    {
+      "id": "role-1",
+      "speaker": "omar",
+      "text": "You own referrals at Gilt, a neighborhood marketplace. I'm Omar, your finance partner.",
+      "emotion": "thinking"
+    },
+    {
+      "id": "role-2",
+      "speaker": "dani",
+      "text": "I'm Dani. I run growth. We celebrated signups before checking who stayed.",
+      "emotion": "concerned"
+    },
+    {
+      "id": "role-3",
+      "speaker": "kavya",
+      "text": "I'm Kavya, the CEO. We have twelve weeks of cash. Find the real growth worth keeping.",
+      "emotion": "firm"
+    },
+    {
+      "id": "role-4",
+      "speaker": "omar",
+      "text": "Three evidence pulls tonight. Then set payouts, protect useful customers, and explain the change.",
+      "emotion": "thinking"
+    },
+    {
+      "id": "reply-1",
+      "speaker": "kavya",
+      "text": "The board wants a sentence from you. Can we keep this growth going?",
+      "emotion": "warm"
+    },
+    {
+      "id": "guide-evidence",
+      "speaker": "omar",
+      "text": "Pick three reports. Each costs one pull. Opened reports stay in your case file.",
+      "emotion": "thinking"
+    },
+    {
+      "id": "guide-lens",
+      "speaker": "dani",
+      "text": "Try devices, purchases, and location. Separate fake accounts from people who really buy here.",
+      "emotion": "thinking"
+    },
+    {
+      "id": "guide-valve",
+      "speaker": "omar",
+      "text": "These controls change weekly payouts. Watch runway, then commit a week to see the result.",
+      "emotion": "thinking"
+    },
+    {
+      "id": "week-1",
+      "speaker": "dani",
+      "text": "The signup curve moved. I need to know which customers we lost, not just how many.",
+      "emotion": "concerned"
+    },
+    {
+      "id": "week-2",
+      "speaker": "omar",
+      "text": "Exactly. Cheaper growth means little if we cut the customers who create value.",
+      "emotion": "thinking"
+    },
+    {
+      "id": "message-1",
+      "speaker": "kavya",
+      "text": "People are asking if mutual referrals are a feature. What can we honestly promise tonight?",
+      "emotion": "thinking"
+    },
+    {
+      "id": "call-1",
+      "speaker": "tomas",
+      "text": "I'm Tomas. I work with the neighborhood Guilds. Those gold loops are actual shops.",
+      "emotion": "thinking"
+    },
+    {
+      "id": "call-2",
+      "speaker": "tomas",
+      "text": "Leena's bakery sends customers to the florist. They send people back. Both make sales.",
+      "emotion": "warm"
+    },
+    {
+      "id": "call-3",
+      "speaker": "tomas",
+      "text": "We put mutual referral bonuses in their contracts. She hired someone against that income.",
+      "emotion": "concerned"
+    },
+    {
+      "id": "call-4",
+      "speaker": "tomas",
+      "text": "Please separate the fake accounts from the promise we made her.",
+      "emotion": "firm"
+    },
+    {
+      "id": "guide-segments",
+      "speaker": "tomas",
+      "text": "Assign a policy to each segment. The forecast includes lost Guild revenue, not just saved rewards.",
+      "emotion": "thinking"
+    },
+    {
+      "id": "guide-grace",
+      "speaker": "tomas",
+      "text": "Notice buys people time, but costs cash. Thirty days honors the month we promised.",
+      "emotion": "thinking"
+    },
+    {
+      "id": "human-1",
+      "speaker": "dani",
+      "text": "I called it a flywheel in the board deck. I should have looked past the curve.",
+      "emotion": "concerned"
+    },
+    {
+      "id": "human-2",
+      "speaker": "dani",
+      "text": "Let's keep what works. I can live with a smaller number if it's real.",
+      "emotion": "firm"
+    },
+    {
+      "id": "guide-composer",
+      "speaker": "rhea",
+      "text": "I'm Rhea, community lead. Give me a reason, timing, exceptions, and somewhere people can ask questions.",
+      "emotion": "thinking"
+    },
+    {
+      "id": "screenshot-1",
+      "speaker": "rhea",
+      "text": "Someone posted our old message beside today's plan. Read both before you answer.",
+      "emotion": "concerned"
+    },
+    {
+      "id": "revolt-1",
+      "speaker": "rhea",
+      "text": "Reviews are falling. People feel the rules changed underneath them. We need to own that.",
+      "emotion": "concerned"
+    },
+    {
+      "id": "steady-1",
+      "speaker": "rhea",
+      "text": "There's pushback, but people understand the change. Matching our words to the rollout helped.",
+      "emotion": "approving"
+    },
+    {
+      "id": "funding-1",
+      "speaker": "priya",
+      "text": "I'm Priya, your lead investor. We can bridge two million dollars for eight percent ownership.",
+      "emotion": "firm"
+    },
+    {
+      "id": "funding-2",
+      "speaker": "omar",
+      "text": "That buys time. It doesn't fix the referral model. The dilution is permanent.",
+      "emotion": "concerned"
+    },
+    {
+      "id": "nofunding-1",
+      "speaker": "omar",
+      "text": "We have enough runway to avoid an emergency bridge. Keep measuring the customers we retained.",
+      "emotion": "approving"
+    },
+    {
+      "id": "final-1",
+      "speaker": "rhea",
+      "text": "We have one recovery team this week. Community support, partner repair, or a tighter cash forecast?",
+      "emotion": "thinking"
+    },
+    {
+      "id": "final-2",
+      "speaker": "tomas",
+      "text": "Splitting it helps both teams a little. Pick what you can actually stand behind.",
+      "emotion": "thinking"
+    },
+    {
+      "id": "ledger-1",
+      "speaker": "omar",
+      "text": "Here's the ledger. What you kept, what you cut, and what it cost. Start with the conclusion.",
+      "emotion": "thinking"
+    },
+    {
+      "id": "device-1",
+      "speaker": "omar",
+      "text": "One phone, fourteen accounts, no purchases. That's a fraud signal, not a neighborhood business.",
+      "emotion": "firm"
+    },
+    {
+      "id": "purchase-1",
+      "speaker": "dani",
+      "text": "The gold loops buy again without a bonus. That's the difference I missed.",
+      "emotion": "approving"
+    },
+    {
+      "id": "location-1",
+      "speaker": "tomas",
+      "text": "Three neighborhoods. Different phones. These are businesses sending customers to each other.",
+      "emotion": "warm"
+    },
+    {
+      "id": "no-pattern-1",
+      "speaker": "dani",
+      "text": "Account age alone doesn't separate these groups. We spent a check, but learned no useful pattern.",
+      "emotion": "thinking"
+    },
+    {
+      "id": "report-ledger",
+      "speaker": "omar",
+      "text": "There it is. The stage left out circular rewards. The missing cost is two hundred ninety thousand.",
+      "emotion": "firm"
+    },
+    {
+      "id": "report-graph",
+      "speaker": "dani",
+      "text": "Some rings are huge. Others are just two shops. We can't call them all the same thing.",
+      "emotion": "thinking"
+    },
+    {
+      "id": "report-value",
+      "speaker": "dani",
+      "text": "Guild customers are worth four times the average. Cutting that loop would cut real value.",
+      "emotion": "concerned"
+    },
+    {
+      "id": "report-device",
+      "speaker": "omar",
+      "text": "Fourteen accounts on one phone. Start there, before touching the shops buying every week.",
+      "emotion": "thinking"
+    },
+    {
+      "id": "report-community",
+      "speaker": "rhea",
+      "text": "People built routines around these rewards. They'll want a reason, not just a switch turning off.",
+      "emotion": "concerned"
+    },
+    {
+      "id": "report-contract",
+      "speaker": "tomas",
+      "text": "That's our signature. Mutual referrals qualify. We need to handle this as a promise we made.",
+      "emotion": "firm"
+    },
+    {
+      "id": "report-cash",
+      "speaker": "omar",
+      "text": "Twelve weeks sounds comfortable until you need to raise money. The clock is already running.",
+      "emotion": "concerned"
+    }
+  ]
+}

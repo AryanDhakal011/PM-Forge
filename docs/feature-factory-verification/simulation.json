@@ -1,0 +1,566 @@
+{
+  "runs": [
+    {
+      "path": "pulse",
+      "seed": 41,
+      "ending": "Crash and recover",
+      "archetype": "The Firefighter",
+      "shipped": [
+        "01",
+        "02",
+        "07",
+        "08",
+        "12",
+        "09",
+        "06",
+        "03"
+      ],
+      "incidents": 6,
+      "debt": 77.37499999999994,
+      "retention": 33.31498500000001,
+      "dynamicLines": 45
+    },
+    {
+      "path": "pulse",
+      "seed": 420,
+      "ending": "Crash and recover",
+      "archetype": "The Firefighter",
+      "shipped": [
+        "01",
+        "02",
+        "07",
+        "08",
+        "12",
+        "09",
+        "06",
+        "03",
+        "04",
+        "05"
+      ],
+      "incidents": 3,
+      "debt": 74.37499999999994,
+      "retention": 37.92219000000001,
+      "dynamicLines": 42
+    },
+    {
+      "path": "pulse",
+      "seed": 31217,
+      "ending": "Crash and recover",
+      "archetype": "The Firefighter",
+      "shipped": [
+        "01",
+        "02",
+        "07",
+        "08",
+        "12",
+        "09",
+        "03",
+        "06"
+      ],
+      "incidents": 4,
+      "debt": 81.37499999999993,
+      "retention": 34.005935000000015,
+      "dynamicLines": 43
+    },
+    {
+      "path": "foundations",
+      "seed": 41,
+      "ending": "Steady climb",
+      "archetype": "The Systems Thinker",
+      "shipped": [
+        "05",
+        "04",
+        "10",
+        "11"
+      ],
+      "incidents": 1,
+      "debt": 9.125000000000025,
+      "retention": 34.61605,
+      "dynamicLines": 51
+    },
+    {
+      "path": "foundations",
+      "seed": 420,
+      "ending": "Steady climb",
+      "archetype": "The Systems Thinker",
+      "shipped": [
+        "05",
+        "04",
+        "10",
+        "11"
+      ],
+      "incidents": 1,
+      "debt": 9.125000000000025,
+      "retention": 34.62585,
+      "dynamicLines": 51
+    },
+    {
+      "path": "foundations",
+      "seed": 31217,
+      "ending": "Crash and recover",
+      "archetype": "The Systems Thinker",
+      "shipped": [
+        "05",
+        "04",
+        "11",
+        "09"
+      ],
+      "incidents": 2,
+      "debt": 16.625000000000025,
+      "retention": 34.5104125,
+      "dynamicLines": 50
+    },
+    {
+      "path": "balanced",
+      "seed": 41,
+      "ending": "Steady climb",
+      "archetype": "The Systems Thinker",
+      "shipped": [
+        "05",
+        "04",
+        "10",
+        "11"
+      ],
+      "incidents": 1,
+      "debt": 9.125000000000025,
+      "retention": 33.411235,
+      "dynamicLines": 51
+    },
+    {
+      "path": "balanced",
+      "seed": 420,
+      "ending": "Steady climb",
+      "archetype": "The Systems Thinker",
+      "shipped": [
+        "05",
+        "04",
+        "10",
+        "11"
+      ],
+      "incidents": 1,
+      "debt": 9.125000000000025,
+      "retention": 33.418095,
+      "dynamicLines": 51
+    },
+    {
+      "path": "balanced",
+      "seed": 31217,
+      "ending": "Steady climb",
+      "archetype": "The Systems Thinker",
+      "shipped": [
+        "05",
+        "04",
+        "11",
+        "09"
+      ],
+      "incidents": 1,
+      "debt": 18.625000000000025,
+      "retention": 33.61658875,
+      "dynamicLines": 51
+    },
+    {
+      "path": "ignore-nils",
+      "seed": 41,
+      "ending": "Crash and recover",
+      "archetype": "The Firefighter",
+      "shipped": [
+        "01",
+        "02",
+        "07",
+        "08",
+        "12",
+        "09",
+        "06",
+        "03"
+      ],
+      "incidents": 6,
+      "debt": 77.37499999999994,
+      "retention": 33.31498500000001,
+      "dynamicLines": 46
+    },
+    {
+      "path": "ignore-nils",
+      "seed": 420,
+      "ending": "Crash and recover",
+      "archetype": "The Firefighter",
+      "shipped": [
+        "01",
+        "02",
+        "07",
+        "08",
+        "12",
+        "09",
+        "06",
+        "03",
+        "04",
+        "05"
+      ],
+      "incidents": 3,
+      "debt": 74.37499999999994,
+      "retention": 37.94163000000001,
+      "dynamicLines": 43
+    },
+    {
+      "path": "ignore-nils",
+      "seed": 31217,
+      "ending": "Crash and recover",
+      "archetype": "The Firefighter",
+      "shipped": [
+        "01",
+        "02",
+        "07",
+        "08",
+        "12",
+        "09",
+        "03",
+        "06"
+      ],
+      "incidents": 4,
+      "debt": 81.37499999999993,
+      "retention": 34.005935000000015,
+      "dynamicLines": 44
+    },
+    {
+      "path": "never-truth",
+      "seed": 41,
+      "ending": "Crash and recover",
+      "archetype": "The Firefighter",
+      "shipped": [
+        "01",
+        "02",
+        "07",
+        "08",
+        "12",
+        "09",
+        "06",
+        "03"
+      ],
+      "incidents": 6,
+      "debt": 77.37499999999994,
+      "retention": 33.31498500000001,
+      "dynamicLines": 45
+    },
+    {
+      "path": "never-truth",
+      "seed": 420,
+      "ending": "Crash and recover",
+      "archetype": "The Firefighter",
+      "shipped": [
+        "01",
+        "02",
+        "07",
+        "08",
+        "12",
+        "09",
+        "06",
+        "03",
+        "04",
+        "05"
+      ],
+      "incidents": 3,
+      "debt": 74.37499999999994,
+      "retention": 37.92219000000001,
+      "dynamicLines": 42
+    },
+    {
+      "path": "never-truth",
+      "seed": 31217,
+      "ending": "Crash and recover",
+      "archetype": "The Firefighter",
+      "shipped": [
+        "01",
+        "02",
+        "07",
+        "08",
+        "12",
+        "09",
+        "03",
+        "06"
+      ],
+      "incidents": 4,
+      "debt": 81.37499999999993,
+      "retention": 34.005935000000015,
+      "dynamicLines": 43
+    },
+    {
+      "path": "retention",
+      "seed": 41,
+      "ending": "Steady climb",
+      "archetype": "The Systems Thinker",
+      "shipped": [
+        "05",
+        "04",
+        "10",
+        "11"
+      ],
+      "incidents": 1,
+      "debt": 9.125000000000025,
+      "retention": 34.61605,
+      "dynamicLines": 51
+    },
+    {
+      "path": "retention",
+      "seed": 420,
+      "ending": "Steady climb",
+      "archetype": "The Systems Thinker",
+      "shipped": [
+        "05",
+        "04",
+        "10",
+        "11"
+      ],
+      "incidents": 1,
+      "debt": 9.125000000000025,
+      "retention": 34.62585,
+      "dynamicLines": 51
+    },
+    {
+      "path": "retention",
+      "seed": 31217,
+      "ending": "Crash and recover",
+      "archetype": "The Systems Thinker",
+      "shipped": [
+        "05",
+        "04",
+        "11",
+        "09"
+      ],
+      "incidents": 2,
+      "debt": 16.625000000000025,
+      "retention": 34.5104125,
+      "dynamicLines": 50
+    },
+    {
+      "path": "no-criteria",
+      "seed": 41,
+      "ending": "Crash and recover",
+      "archetype": "The Firefighter",
+      "shipped": [
+        "01",
+        "02",
+        "07",
+        "08",
+        "12",
+        "09",
+        "06",
+        "03"
+      ],
+      "incidents": 6,
+      "debt": 77.37499999999994,
+      "retention": 33.31498500000001,
+      "dynamicLines": 46
+    },
+    {
+      "path": "no-criteria",
+      "seed": 420,
+      "ending": "Crash and recover",
+      "archetype": "The Firefighter",
+      "shipped": [
+        "01",
+        "02",
+        "07",
+        "08",
+        "12",
+        "09",
+        "06",
+        "03",
+        "04",
+        "05"
+      ],
+      "incidents": 3,
+      "debt": 74.37499999999994,
+      "retention": 37.94163000000001,
+      "dynamicLines": 43
+    },
+    {
+      "path": "no-criteria",
+      "seed": 31217,
+      "ending": "Crash and recover",
+      "archetype": "The Firefighter",
+      "shipped": [
+        "01",
+        "02",
+        "07",
+        "08",
+        "12",
+        "09",
+        "03",
+        "06"
+      ],
+      "incidents": 4,
+      "debt": 81.37499999999993,
+      "retention": 34.005935000000015,
+      "dynamicLines": 44
+    },
+    {
+      "path": "hold",
+      "seed": 41,
+      "ending": "Mixed",
+      "archetype": "The Stabilizer",
+      "shipped": [],
+      "incidents": 0,
+      "debt": 48.12500000000004,
+      "retention": 31,
+      "dynamicLines": 40
+    },
+    {
+      "path": "hold",
+      "seed": 420,
+      "ending": "Mixed",
+      "archetype": "The Stabilizer",
+      "shipped": [],
+      "incidents": 1,
+      "debt": 46.12500000000004,
+      "retention": 30.6,
+      "dynamicLines": 41
+    },
+    {
+      "path": "hold",
+      "seed": 31217,
+      "ending": "Mixed",
+      "archetype": "The Stabilizer",
+      "shipped": [],
+      "incidents": 0,
+      "debt": 48.12500000000004,
+      "retention": 31,
+      "dynamicLines": 40
+    },
+    {
+      "path": "scope",
+      "seed": 41,
+      "ending": "Crash and recover",
+      "archetype": "The Firefighter",
+      "shipped": [
+        "01",
+        "02",
+        "07",
+        "08",
+        "12",
+        "09",
+        "05",
+        "06"
+      ],
+      "incidents": 5,
+      "debt": 76.37499999999994,
+      "retention": 34.06710900000001,
+      "dynamicLines": 45
+    },
+    {
+      "path": "scope",
+      "seed": 420,
+      "ending": "Crash and recover",
+      "archetype": "The Firefighter",
+      "shipped": [
+        "01",
+        "02",
+        "07",
+        "08",
+        "12",
+        "09",
+        "05",
+        "06",
+        "03",
+        "04"
+      ],
+      "incidents": 4,
+      "debt": 73.37499999999994,
+      "retention": 37.65852,
+      "dynamicLines": 44
+    },
+    {
+      "path": "scope",
+      "seed": 31217,
+      "ending": "Crash and recover",
+      "archetype": "The Firefighter",
+      "shipped": [
+        "01",
+        "02",
+        "07",
+        "08",
+        "12",
+        "09",
+        "05",
+        "06",
+        "03"
+      ],
+      "incidents": 4,
+      "debt": 84.87499999999993,
+      "retention": 35.690425000000005,
+      "dynamicLines": 44
+    },
+    {
+      "path": "spin",
+      "seed": 41,
+      "ending": "Crash and recover",
+      "archetype": "The Firefighter",
+      "shipped": [
+        "01",
+        "02",
+        "07",
+        "08",
+        "12",
+        "09",
+        "06",
+        "03"
+      ],
+      "incidents": 6,
+      "debt": 77.37499999999994,
+      "retention": 33.31498500000001,
+      "dynamicLines": 46
+    },
+    {
+      "path": "spin",
+      "seed": 420,
+      "ending": "Crash and recover",
+      "archetype": "The Firefighter",
+      "shipped": [
+        "01",
+        "02",
+        "07",
+        "08",
+        "12",
+        "09",
+        "06",
+        "03",
+        "04",
+        "05"
+      ],
+      "incidents": 3,
+      "debt": 74.37499999999994,
+      "retention": 37.94163000000001,
+      "dynamicLines": 43
+    },
+    {
+      "path": "spin",
+      "seed": 31217,
+      "ending": "Crash and recover",
+      "archetype": "The Firefighter",
+      "shipped": [
+        "01",
+        "02",
+        "07",
+        "08",
+        "12",
+        "09",
+        "03",
+        "06"
+      ],
+      "incidents": 4,
+      "debt": 81.37499999999993,
+      "retention": 34.005935000000015,
+      "dynamicLines": 44
+    }
+  ],
+  "variation": 0.9117647058823529,
+  "definition": "Jaccard difference of (day,event) pairs for the same seed under two policies",
+  "counterfactual": {
+    "velocity": {
+      "debt": 87.87499999999994,
+      "retention": 33.60983
+    },
+    "stability": {
+      "debt": 26.625000000000025,
+      "retention": 34.00223875
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "S23",
+  "type": "TOOL",
+  "background": "server",
+  "speakers": [
+    "narration",
+    "tavi"
+  ],
+  "lines": [
+    {
+      "id": "s23-1",
+      "speaker": "tavi",
+      "expression": "pressured",
+      "text": "Hold the wave in the band. Use pause if you need it.",
+      "voiceId": "tavi",
+      "phase": "before"
+    },
+    {
+      "id": "s23-2",
+      "speaker": "narration",
+      "expression": "thinking",
+      "text": "Your choice is recorded. Inspect the result before moving on.",
+      "voiceId": "narration",
+      "phase": "after"
+    }
+  ],
+  "choices": [],
+  "tool": "stability",
+  "goal": "Hold the waveform in the band",
+  "canStill": "Damper, queue and cooldown control a seeded 30-second simulation.",
+  "next": "S24"
+}

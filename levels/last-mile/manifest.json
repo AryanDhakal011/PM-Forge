@@ -1,0 +1,71 @@
+{
+  "id": "last-mile",
+  "title": "The Last Mile",
+  "tagline": "The city is online. Can anyone get through?",
+  "company": "THE CITY / ONE FLOODED NIGHT",
+  "status": "draft",
+  "version": "2.0.0",
+  "minPlatformVersion": "1.0.0",
+  "palette": {
+    "bg": "#101b22",
+    "ink": "#f4f2e7",
+    "accent": "#9bcad8"
+  },
+  "fonts": [
+    "Inter",
+    "DM Serif Display"
+  ],
+  "difficulty": {
+    "guided": "Preview effects and see decision hints.",
+    "standard": "Read the situation without previews.",
+    "sharp": "Hide soft meters and handle extra check-ins."
+  },
+  "entranceArt": "/levels/last-mile/art/backgrounds/street.svg",
+  "estimatedMinutes": 28,
+  "startScene": "ride-along",
+  "scenes": [
+    "ride-along",
+    "ride-tick-0",
+    "ride-tick-1",
+    "field-reports",
+    "radio",
+    "threshold",
+    "shelters",
+    "statement",
+    "face-ledger",
+    "rumors",
+    "reopen",
+    "cadence",
+    "review"
+  ],
+  "people": [
+    "sana",
+    "mina",
+    "bikram",
+    "salma",
+    "joon",
+    "anita",
+    "rakesh"
+  ],
+  "assetsBudgetKB": 3072,
+  "voiceCast": {},
+  "labels": "Simulated company, authored scenarios, expert review pending",
+  "flagKey": "last-mile",
+  "minEvents": 24,
+  "systemic": true,
+  "launchCandidate": false,
+  "reviewGates": {
+    "design": "pending",
+    "content": "pending",
+    "accessibility-manual": "pending",
+    "performance": "pending",
+    "security": "pending",
+    "playtest": "pending",
+    "domain": "pending"
+  },
+  "acts": [
+    "The Ride",
+    "The Rebellion",
+    "The Recovery"
+  ]
+}

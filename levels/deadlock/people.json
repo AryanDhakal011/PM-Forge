@@ -1,0 +1,123 @@
+[
+  {
+    "id": "mara",
+    "name": "Mara Vale",
+    "role": "Product lead",
+    "look": {
+      "silhouette": 0,
+      "skin": "#b98463",
+      "hair": "#34383c",
+      "outfit": "#476872",
+      "props": [
+        "glasses"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "That is why I called you.",
+    "accent": "#c6dca2",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "dev",
+    "name": "Dev Rao",
+    "role": "Robotics lead",
+    "look": {
+      "silhouette": 1,
+      "skin": "#d7a381",
+      "hair": "#5d473e",
+      "outfit": "#7c6355",
+      "props": [
+        "tablet"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "I want Northgate to see it move.",
+    "accent": "#c6dca2",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "ines",
+    "name": "Ines Soto",
+    "role": "Software lead",
+    "look": {
+      "silhouette": 2,
+      "skin": "#925f46",
+      "hair": "#2d343a",
+      "outfit": "#657b5b",
+      "props": [
+        "headset"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "Fine is not a stopping distance.",
+    "accent": "#c6dca2",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "theo",
+    "name": "Theo Grant",
+    "role": "Northgate operations",
+    "look": {
+      "silhouette": 3,
+      "skin": "#d8b49a",
+      "hair": "#a8a49a",
+      "outfit": "#5c687e",
+      "props": []
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "Show the recovery, including the awkward part.",
+    "accent": "#c6dca2",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "nadia",
+    "name": "Nadia Wells",
+    "role": "Northgate safety",
+    "look": {
+      "silhouette": 4,
+      "skin": "#b98a72",
+      "hair": "#34383c",
+      "outfit": "#476872",
+      "props": []
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "Who can stop the arm?",
+    "accent": "#c6dca2",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  }
+]

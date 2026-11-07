@@ -1,0 +1,13 @@
+{
+  "id": "S18",
+  "type": "TOOL",
+  "background": "desktop",
+  "goal": "Make the second release call",
+  "tools": [
+    "board",
+    "allocation",
+    "stress",
+    "gate",
+    "slides"
+  ]
+}

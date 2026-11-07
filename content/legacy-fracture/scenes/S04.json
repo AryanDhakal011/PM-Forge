@@ -1,0 +1,23 @@
+{
+  "id": "S04",
+  "type": "FACE",
+  "background": "server",
+  "goal": "Ask Oswald",
+  "tools": [
+    "question"
+  ],
+  "lines": [
+    {
+      "speaker": "oswald",
+      "text": "I built GRID-3. Back in ninety-four.",
+      "expression": "neutral",
+      "clip": null
+    },
+    {
+      "speaker": "oswald",
+      "text": "Everyone wants it gone. Nobody asks how it works.",
+      "expression": "thinking",
+      "clip": null
+    }
+  ]
+}

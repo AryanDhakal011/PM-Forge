@@ -12,7 +12,7 @@ npm run build
 npm run start -- --port 3001
 ```
 
-Guest mode needs no credentials. Set up Google or GitHub through [.env.example](.env.example) before offering account sync. The account backend uses Better Auth and Node SQLite in ignored `.data/`; deployment requires durable storage and configured OAuth. Secrets and personal practice data must stay out of Git.
+Guest mode needs no credentials. Email signup, verification and password recovery use a configured sender; Google and GitHub login are optional. See [.env.example](.env.example) for local settings and [the hosting guide](docs/HOSTING.md) for the Node container, HTTPS, persistent SQLite, backups and production configuration. Secrets and personal practice data must stay out of Git.
 
 ## Navigation
 
@@ -62,8 +62,14 @@ The Sacred No now has a dedicated playable simulation at `/app/projects/sacred-n
 
 The Ghost Metric is playable at `/app/projects/ghost-metric`: hear the team and case briefing, audit a celebrated number, join evidence, sequence stakeholders, and red-team a replacement metric before the board. It includes 150 recorded lines, spoken first-use guides, Indian English casting for Ravi, independently muted room tone, an evidence-driven bubble with mobile/SVG equivalents, reflection/export and separate replay branches. See [implementation](docs/GHOST-METRIC.md) and [experience corrections](docs/GHOST-METRIC-CORRECTIONS.md). Run `npm run test:ghost-metric`; production builds validate recording coverage. Its dedicated runs remain device-local.
 
+The Trojan Horses is playable at `/app/projects/trojan-horse`: a growth party becomes an investigation into circular referrals, then a segment policy, public rollout and causal debrief. It has 19 guided beats, six illustrated characters, 45 prerecorded dialogue lines, an interactive Loop Lens, connected payout forecasts, a party-to-hangover transition, saved receipts, reflection/export and archive-preserving hindsight branches. See [flow, model and verification](docs/TROJAN-HORSES.md). Run `npm run test:trojan-horse`; production builds verify every recording. Runs remain device-local.
+
+The Invisible Wall is playable at `/app/projects/invisible-wall/play`: explore Halcyon's night shift, discover a hidden safety/stability interlock, test under realistic load and decide what to change. It includes 29 guided scenes, 89 recorded lines, a WebGL/CSS UV lens, stealth routes, an evidence board and a real deterministic 30-second stability task. Local checksum/backup saves, export and checkpoint-preserving forks are included. See [implementation and verification](docs/INVISIBLE-WALL.md). Run `npm run test:invisible-wall`; CI validates scenes and four complete engine paths. `PMFORGE_INVISIBLE_WALL_ENABLED=false` provides a rollback without deleting progress.
+
 For a clean local test, open `/reset.html`. Cache-only recovery preserves saved work; the full reset signs out and clears this origin’s PMForge databases, preferences and cached assets, including dedicated project runs. Ports 3001 and 3002 have separate browser storage and must be reset separately. Localhost no longer registers an offline service worker.
 
 Use `npm run build`, then `npm start -- --port 3001` for a stable user preview. The launcher copies the build into an ignored `.pmforge-preview/` snapshot, so subsequent builds cannot replace assets used by the running server. Restart the preview to show a new build. Use `npm run dev -- --port 3003` separately for coding with hot refresh. Do not run a build and development server against the same `.next` directory at the same time.
 
 Navigation regression QA: generate the concrete route inventory with `node --import tsx scripts/navigation-routes.ts > .data/navigation-routes.json`, then run `node scripts/verify-navigation.mjs` against a running preview. The Windows Chrome harness uses a disposable profile, preserves your browser data, checks every concrete route and its client rendering, checks shared navigation links and mobile layouts, and records results under `docs/navigation-verification/`.
+
+The Feature Factory is playable at `/app/projects/feature-factory/play`: a seeded fifteen-day PM desktop with 42 events, 48 ask topics, evidence-backed release gates and computed policy replays. See [the implementation notes](docs/FEATURE-FACTORY.md).

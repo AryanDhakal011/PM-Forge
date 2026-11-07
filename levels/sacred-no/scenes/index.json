@@ -1,0 +1,951 @@
+[
+  {
+    "id": "first-messages",
+    "type": "TOOL",
+    "background": "office",
+    "goal": "Sort three messages before promising a delivery.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "kian"
+    ],
+    "lines": [
+      {
+        "id": "line-1",
+        "speaker": "kian",
+        "expression": "thinking",
+        "text": "The board expects something ambitious tomorrow."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "messages",
+        "kind": "DragBins",
+        "title": "Three people need an answer",
+        "items": [
+          {
+            "id": "kian",
+            "label": "Kian’s voice note",
+            "detail": "The promise is already in an investor email.",
+            "effects": []
+          },
+          {
+            "id": "priya",
+            "label": "Priya’s warning",
+            "detail": "The payment queue needs a safeguard.",
+            "effects": []
+          },
+          {
+            "id": "tess",
+            "label": "Tess’s customer message",
+            "detail": "Sales wants a date before the demo.",
+            "effects": []
+          }
+        ],
+        "min": 3,
+        "max": 3,
+        "cost": 0,
+        "receiptId": "R_sacred-no_messages",
+        "bins": [
+          "Answer now",
+          "Answer in an hour",
+          "Ignore"
+        ]
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "triage"
+  },
+  {
+    "id": "triage",
+    "type": "TOOL",
+    "background": "office",
+    "goal": "Inspect claims while Slack interruptions compete for attention.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "priya"
+    ],
+    "lines": [
+      {
+        "id": "line-2",
+        "speaker": "priya",
+        "expression": "thinking",
+        "text": "I am not touching the queue unguarded."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "triage",
+        "kind": "EvidenceDrawers",
+        "title": "Claims and evidence",
+        "items": [
+          {
+            "id": "latency",
+            "label": "Latency trace",
+            "detail": "The feature raises p95 latency from 420 to 1900 ms.",
+            "effects": [],
+            "group": "data",
+            "soWhat": "Shows the feature’s performance impact."
+          },
+          {
+            "id": "revenue",
+            "label": "Revenue risk",
+            "detail": "Pipeline is not contracted revenue.",
+            "effects": [],
+            "group": "revenue",
+            "soWhat": "Shows the quality of the commercial evidence."
+          },
+          {
+            "id": "burnout",
+            "label": "Night-shift roster",
+            "detail": "Priya has one remaining reliable engineer.",
+            "effects": [],
+            "group": "burnout",
+            "soWhat": "Shows available engineering capacity."
+          },
+          {
+            "id": "alternative",
+            "label": "Recorded prototype",
+            "detail": "A bounded alternative can preserve the story.",
+            "effects": [],
+            "group": "alternative",
+            "soWhat": "Shows a bounded offer the team can support."
+          },
+          {
+            "id": "reputation",
+            "label": "Incident note",
+            "detail": "A demo crash also reaches existing customers.",
+            "effects": [],
+            "group": "reputation",
+            "soWhat": "Shows who else a failure could affect."
+          },
+          {
+            "id": "board",
+            "label": "Board agenda",
+            "detail": "The board asks for a pilot checkpoint.",
+            "effects": [],
+            "group": "board",
+            "soWhat": "Shows which decision the board actually needs."
+          }
+        ],
+        "min": 3,
+        "max": 3,
+        "cost": 1,
+        "receiptId": "R_sacred-no_triage"
+      },
+      {
+        "id": "slack",
+        "kind": "Inbox",
+        "title": "Slack interruptions",
+        "items": [
+          {
+            "id": "sales",
+            "label": "A sales promise arrives",
+            "detail": "Answering costs ten minutes.",
+            "effects": [
+              {
+                "var": "HOURS",
+                "op": "add",
+                "value": 0.16666666666666666
+              },
+              {
+                "var": "TRUST.tess",
+                "op": "add",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "id": "crash",
+            "label": "A crash alert arrives",
+            "detail": "Answering costs ten minutes.",
+            "effects": [
+              {
+                "var": "HOURS",
+                "op": "add",
+                "value": 0.16666666666666666
+              },
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "id": "nudge",
+            "label": "Kian asks for a date",
+            "detail": "Answering costs ten minutes.",
+            "effects": [
+              {
+                "var": "HOURS",
+                "op": "add",
+                "value": 0.16666666666666666
+              },
+              {
+                "var": "TRUST.kian",
+                "op": "add",
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "min": 1,
+        "max": 3,
+        "cost": 0,
+        "receiptId": "R_sacred-no_slack"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "night-shift"
+  },
+  {
+    "id": "night-shift",
+    "type": "TOOL",
+    "background": "office",
+    "goal": "Allocate safeguard hours and see Priya’s remaining availability.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "priya"
+    ],
+    "lines": [
+      {
+        "id": "line-3",
+        "speaker": "priya",
+        "expression": "thinking",
+        "text": "Hours on a slide are still hours someone must work."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "hours",
+        "kind": "SliderForecast",
+        "title": "Night-shift allocation",
+        "items": [],
+        "min": 0,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_sacred-no_hours",
+        "lever": [
+          {
+            "id": "safeguards",
+            "label": "Safeguard hours",
+            "min": 0,
+            "max": 24,
+            "initial": 5,
+            "step": 1
+          },
+          {
+            "id": "availability",
+            "label": "Protected engineering availability",
+            "min": 0,
+            "max": 100,
+            "initial": 80,
+            "step": 5
+          }
+        ]
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "rehearsal"
+  },
+  {
+    "id": "rehearsal",
+    "type": "TOOL",
+    "background": "office",
+    "goal": "Test three arguments against Kian’s resolve.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "kian"
+    ],
+    "lines": [
+      {
+        "id": "line-4",
+        "speaker": "kian",
+        "expression": "thinking",
+        "text": "The board needs conviction. Show me yours."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "rehearsal",
+        "kind": "ArgumentDeck",
+        "title": "Argument deck",
+        "items": [
+          {
+            "id": "data-card",
+            "label": "The trace shows production latency increasing.",
+            "detail": "Evidence: latency.",
+            "effects": [
+              {
+                "var": "resolve",
+                "op": "add",
+                "value": -8
+              }
+            ],
+            "requires": {
+              "has": "data"
+            },
+            "reaction": "Fine. Convince me.",
+            "speaker": "kian"
+          },
+          {
+            "id": "revenue-card",
+            "label": "Pipeline is not contracted revenue.",
+            "detail": "Evidence: commercial risk.",
+            "effects": [
+              {
+                "var": "resolve",
+                "op": "add",
+                "value": -4
+              }
+            ],
+            "requires": {
+              "has": "revenue"
+            },
+            "reaction": "Then give Tess a smaller offer.",
+            "speaker": "kian"
+          },
+          {
+            "id": "burnout-card",
+            "label": "This requires another unsupported night shift.",
+            "detail": "Evidence: staffing.",
+            "effects": [
+              {
+                "var": "resolve",
+                "op": "add",
+                "value": -5
+              }
+            ],
+            "requires": {
+              "has": "burnout"
+            },
+            "reaction": "Who can actually support the pilot?",
+            "speaker": "kian"
+          },
+          {
+            "id": "alternative-card",
+            "label": "Show the stable product and a bounded pilot.",
+            "detail": "Evidence: alternative.",
+            "effects": [
+              {
+                "var": "resolve",
+                "op": "add",
+                "value": -10
+              }
+            ],
+            "requires": {
+              "has": "alternative"
+            },
+            "reaction": "That still gives the board a direction.",
+            "speaker": "kian"
+          },
+          {
+            "id": "reputation-card",
+            "label": "A crash can interrupt existing customer payments.",
+            "detail": "Evidence: reliability.",
+            "effects": [
+              {
+                "var": "resolve",
+                "op": "add",
+                "value": -8
+              }
+            ],
+            "requires": {
+              "has": "reputation"
+            }
+          },
+          {
+            "id": "board-card",
+            "label": "The board can approve a measurable checkpoint.",
+            "detail": "Evidence: board agenda.",
+            "effects": [
+              {
+                "var": "resolve",
+                "op": "add",
+                "value": -7
+              }
+            ],
+            "requires": {
+              "has": "board"
+            }
+          }
+        ],
+        "min": 3,
+        "max": 3,
+        "cost": 0,
+        "receiptId": "R_sacred-no_rehearsal",
+        "rounds": 3
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "duel"
+  },
+  {
+    "id": "duel",
+    "type": "TOOL",
+    "background": "office",
+    "goal": "Play an argument and a tone in each of three rounds.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "kian"
+    ],
+    "lines": [
+      {
+        "id": "line-5",
+        "speaker": "kian",
+        "expression": "thinking",
+        "text": "You think? I need a decision."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "duel",
+        "kind": "Duel",
+        "title": "The Call: three rounds",
+        "items": [
+          {
+            "id": "data-card",
+            "label": "The trace shows production latency increasing.",
+            "detail": "Evidence: latency.",
+            "effects": [
+              {
+                "var": "resolve",
+                "op": "add",
+                "value": -8
+              }
+            ],
+            "requires": {
+              "has": "data"
+            },
+            "reaction": "Fine. Convince me.",
+            "speaker": "kian"
+          },
+          {
+            "id": "revenue-card",
+            "label": "Pipeline is not contracted revenue.",
+            "detail": "Evidence: commercial risk.",
+            "effects": [
+              {
+                "var": "resolve",
+                "op": "add",
+                "value": -4
+              }
+            ],
+            "requires": {
+              "has": "revenue"
+            },
+            "reaction": "Then give Tess a smaller offer.",
+            "speaker": "kian"
+          },
+          {
+            "id": "burnout-card",
+            "label": "This requires another unsupported night shift.",
+            "detail": "Evidence: staffing.",
+            "effects": [
+              {
+                "var": "resolve",
+                "op": "add",
+                "value": -5
+              }
+            ],
+            "requires": {
+              "has": "burnout"
+            },
+            "reaction": "Who can actually support the pilot?",
+            "speaker": "kian"
+          },
+          {
+            "id": "alternative-card",
+            "label": "Show the stable product and a bounded pilot.",
+            "detail": "Evidence: alternative.",
+            "effects": [
+              {
+                "var": "resolve",
+                "op": "add",
+                "value": -10
+              }
+            ],
+            "requires": {
+              "has": "alternative"
+            },
+            "reaction": "That still gives the board a direction.",
+            "speaker": "kian"
+          },
+          {
+            "id": "reputation-card",
+            "label": "A crash can interrupt existing customer payments.",
+            "detail": "Evidence: reliability.",
+            "effects": [
+              {
+                "var": "resolve",
+                "op": "add",
+                "value": -8
+              }
+            ],
+            "requires": {
+              "has": "reputation"
+            }
+          },
+          {
+            "id": "board-card",
+            "label": "The board can approve a measurable checkpoint.",
+            "detail": "Evidence: board agenda.",
+            "effects": [
+              {
+                "var": "resolve",
+                "op": "add",
+                "value": -7
+              }
+            ],
+            "requires": {
+              "has": "board"
+            }
+          }
+        ],
+        "min": 3,
+        "max": 3,
+        "cost": 0,
+        "receiptId": "R_sacred-no_duel",
+        "rounds": 3,
+        "resolution": "The exact arguments and tones are now your commitment.",
+        "resultEffects": [
+          {
+            "var": "CT",
+            "op": "add",
+            "value": 5
+          },
+          {
+            "schedule": {
+              "fuse": "duel-quote",
+              "inDays": 1
+            }
+          }
+        ]
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "cave-or-steady"
+  },
+  {
+    "id": "cave-or-steady",
+    "type": "FACE",
+    "background": "office",
+    "goal": "Make the boundary explicit after the call.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "priya"
+    ],
+    "lines": [
+      {
+        "id": "line-6",
+        "speaker": "priya",
+        "expression": "thinking",
+        "text": "What did you actually commit us to?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "guarded",
+        "text": "A guarded pilot with a stop condition.",
+        "effects": [
+          {
+            "flag": "guarded",
+            "value": true
+          },
+          {
+            "var": "readiness",
+            "op": "add",
+            "value": 5
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_sacred-no_guarded",
+          "store": "text"
+        }
+      },
+      {
+        "id": "cave",
+        "text": "The full feature tomorrow.",
+        "effects": [
+          {
+            "flag": "caved",
+            "value": true
+          },
+          {
+            "var": "risk",
+            "op": "add",
+            "value": 15
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_sacred-no_cave",
+          "store": "text"
+        }
+      },
+      {
+        "id": "refuse",
+        "text": "Protect the stable build.",
+        "effects": [
+          {
+            "var": "risk",
+            "op": "add",
+            "value": -8
+          },
+          {
+            "var": "CT",
+            "op": "add",
+            "value": -18
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_sacred-no_refuse",
+          "store": "text"
+        }
+      }
+    ],
+    "tools": [],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "tell-negotiation"
+  },
+  {
+    "id": "tell-negotiation",
+    "type": "TOOL",
+    "background": "office",
+    "goal": "Read Tess’s tells before accepting the offer.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "tess"
+    ],
+    "lines": [
+      {
+        "id": "line-7",
+        "speaker": "tess",
+        "expression": "thinking",
+        "text": "Say yes and I stop asking."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "tells",
+        "kind": "TellNegotiation",
+        "title": "The trade table",
+        "items": [
+          {
+            "id": "accept",
+            "label": "Accept the fast offer",
+            "detail": "Tess answers before you finish the condition.",
+            "effects": [
+              {
+                "var": "jitter",
+                "op": "add",
+                "value": 8
+              },
+              {
+                "var": "TRUST.tess",
+                "op": "add",
+                "value": 4
+              }
+            ],
+            "reaction": "I can sell that. What exactly ships?",
+            "speaker": "tess"
+          },
+          {
+            "id": "counter",
+            "label": "Counter with one scoped pilot",
+            "detail": "The hedge is hiding a missing acceptance criterion.",
+            "effects": [
+              {
+                "var": "jitter",
+                "op": "add",
+                "value": -4
+              },
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": 5
+              }
+            ],
+            "reaction": "One pilot. Named customer. Written limits.",
+            "speaker": "tess"
+          },
+          {
+            "id": "hold",
+            "label": "Hold until the condition is explicit",
+            "detail": "She repeats the date but avoids the support owner.",
+            "effects": [
+              {
+                "var": "jitter",
+                "op": "add",
+                "value": -3
+              }
+            ],
+            "reaction": "Let me name the owner before we promise.",
+            "speaker": "tess"
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_sacred-no_tells"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 2,
+    "act": 2,
+    "next": "blast-radius"
+  },
+  {
+    "id": "blast-radius",
+    "type": "TOOL",
+    "background": "office",
+    "goal": "Inspect the blast radius and replay a failure at triple speed.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "priya"
+    ],
+    "lines": [
+      {
+        "id": "line-8",
+        "speaker": "priya",
+        "expression": "thinking",
+        "text": "The queue serves customers who never joined this meeting."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "blast",
+        "kind": "GraphView",
+        "title": "Failure propagation",
+        "items": [
+          {
+            "id": "payment",
+            "label": "Payments",
+            "detail": "An overloaded queue delays existing transactions.",
+            "effects": [],
+            "group": "payments"
+          },
+          {
+            "id": "support",
+            "label": "Support",
+            "detail": "A vague pilot becomes an unstaffed support promise.",
+            "effects": [],
+            "group": "support"
+          },
+          {
+            "id": "replay",
+            "label": "What if I am wrong?",
+            "detail": "Replay the failure trace at three times speed.",
+            "effects": [
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": 2
+              }
+            ],
+            "group": "downside"
+          }
+        ],
+        "min": 3,
+        "max": 3,
+        "cost": 0,
+        "receiptId": "R_sacred-no_blast"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 2,
+    "act": 2,
+    "next": "kill-switch"
+  },
+  {
+    "id": "kill-switch",
+    "type": "TOOL",
+    "background": "boardroom",
+    "goal": "Use the kill switch once during the live demo ramp.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "priya"
+    ],
+    "lines": [
+      {
+        "id": "line-9",
+        "speaker": "priya",
+        "expression": "thinking",
+        "text": "Safeguard hours buy us a wider stopping window."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "demo-switch",
+        "kind": "KillSwitch",
+        "title": "The live demonstration",
+        "items": [],
+        "min": 0,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_sacred-no_demo-switch",
+        "duration": 15
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 3,
+    "act": 3,
+    "next": "board"
+  },
+  {
+    "id": "board",
+    "type": "FACE",
+    "background": "boardroom",
+    "goal": "Defend the boundary when the board asks what happened.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "marlo"
+    ],
+    "lines": [
+      {
+        "id": "line-10",
+        "speaker": "marlo",
+        "expression": "thinking",
+        "text": "Tell me what I can actually use."
+      }
+    ],
+    "choices": [
+      {
+        "id": "own",
+        "text": "Own the result and the stop condition.",
+        "effects": [
+          {
+            "var": "credibility",
+            "op": "add",
+            "value": 8
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_sacred-no_own",
+          "store": "text"
+        }
+      },
+      {
+        "id": "defend",
+        "text": "Defend the ambition without its limits.",
+        "effects": [
+          {
+            "var": "credibility",
+            "op": "add",
+            "value": -8
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_sacred-no_defend",
+          "store": "text"
+        }
+      },
+      {
+        "id": "rollback",
+        "text": "Restore the stable product and explain why.",
+        "effects": [
+          {
+            "var": "readiness",
+            "op": "add",
+            "value": 5
+          },
+          {
+            "var": "CT",
+            "op": "add",
+            "value": -4
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_sacred-no_rollback",
+          "store": "text"
+        }
+      }
+    ],
+    "tools": [],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 3,
+    "act": 3,
+    "next": "review"
+  },
+  {
+    "id": "review",
+    "type": "REVIEW",
+    "background": "boardroom",
+    "goal": "Replay the argument deck and the commitment it created.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "priya"
+    ],
+    "lines": [
+      {
+        "id": "line-12",
+        "speaker": "priya",
+        "expression": "thinking",
+        "text": "The next shift inherits the words we used tonight."
+      }
+    ],
+    "choices": [],
+    "tools": [],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": true,
+    "minInteractions": 0,
+    "day": 3,
+    "act": 3
+  }
+]

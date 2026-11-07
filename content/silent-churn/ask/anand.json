@@ -1,0 +1,32 @@
+[
+  {
+    "id": "anand-0",
+    "topic": "Core stability",
+    "line": "Nothing writes into the core without review."
+  },
+  {
+    "id": "anand-1",
+    "topic": "Change windows",
+    "line": "Not every weekday is a change window."
+  },
+  {
+    "id": "anand-2",
+    "topic": "Last outage",
+    "line": "Four hundred days since the last outage."
+  },
+  {
+    "id": "anand-3",
+    "topic": "A side feed",
+    "line": "Beside the core, not inside it."
+  },
+  {
+    "id": "anand-4",
+    "topic": "Who you trust",
+    "line": "Tobias knows what the diagrams leave out."
+  },
+  {
+    "id": "anand-5",
+    "topic": "What you need",
+    "line": "A boundary, a rollback, and an owner."
+  }
+]

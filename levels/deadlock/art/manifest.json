@@ -1,0 +1,245 @@
+[
+  {
+    "id": "mara-neutral",
+    "path": "/levels/deadlock/art/portraits/mara_neutral.svg",
+    "sizeKB": 0.92578125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Mara Vale, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "mara-thinking",
+    "path": "/levels/deadlock/art/portraits/mara_thinking.svg",
+    "sizeKB": 0.92578125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Mara Vale, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "mara-annoyed",
+    "path": "/levels/deadlock/art/portraits/mara_annoyed.svg",
+    "sizeKB": 0.9306640625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Mara Vale, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "mara-approving",
+    "path": "/levels/deadlock/art/portraits/mara_approving.svg",
+    "sizeKB": 0.9267578125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Mara Vale, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "mara-pressured",
+    "path": "/levels/deadlock/art/portraits/mara_pressured.svg",
+    "sizeKB": 0.923828125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Mara Vale, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "dev-neutral",
+    "path": "/levels/deadlock/art/portraits/dev_neutral.svg",
+    "sizeKB": 0.8935546875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Dev Rao, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "dev-thinking",
+    "path": "/levels/deadlock/art/portraits/dev_thinking.svg",
+    "sizeKB": 0.8935546875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Dev Rao, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "dev-annoyed",
+    "path": "/levels/deadlock/art/portraits/dev_annoyed.svg",
+    "sizeKB": 0.8984375,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Dev Rao, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "dev-approving",
+    "path": "/levels/deadlock/art/portraits/dev_approving.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Dev Rao, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "dev-pressured",
+    "path": "/levels/deadlock/art/portraits/dev_pressured.svg",
+    "sizeKB": 0.8916015625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Dev Rao, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "ines-neutral",
+    "path": "/levels/deadlock/art/portraits/ines_neutral.svg",
+    "sizeKB": 0.921875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Ines Soto, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "ines-thinking",
+    "path": "/levels/deadlock/art/portraits/ines_thinking.svg",
+    "sizeKB": 0.921875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Ines Soto, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "ines-annoyed",
+    "path": "/levels/deadlock/art/portraits/ines_annoyed.svg",
+    "sizeKB": 0.9267578125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Ines Soto, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "ines-approving",
+    "path": "/levels/deadlock/art/portraits/ines_approving.svg",
+    "sizeKB": 0.9228515625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Ines Soto, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "ines-pressured",
+    "path": "/levels/deadlock/art/portraits/ines_pressured.svg",
+    "sizeKB": 0.919921875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Ines Soto, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "theo-neutral",
+    "path": "/levels/deadlock/art/portraits/theo_neutral.svg",
+    "sizeKB": 0.8271484375,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Theo Grant, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "theo-thinking",
+    "path": "/levels/deadlock/art/portraits/theo_thinking.svg",
+    "sizeKB": 0.8271484375,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Theo Grant, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "theo-annoyed",
+    "path": "/levels/deadlock/art/portraits/theo_annoyed.svg",
+    "sizeKB": 0.83203125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Theo Grant, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "theo-approving",
+    "path": "/levels/deadlock/art/portraits/theo_approving.svg",
+    "sizeKB": 0.828125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Theo Grant, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "theo-pressured",
+    "path": "/levels/deadlock/art/portraits/theo_pressured.svg",
+    "sizeKB": 0.8251953125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Theo Grant, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "nadia-neutral",
+    "path": "/levels/deadlock/art/portraits/nadia_neutral.svg",
+    "sizeKB": 0.828125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Nadia Wells, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "nadia-thinking",
+    "path": "/levels/deadlock/art/portraits/nadia_thinking.svg",
+    "sizeKB": 0.828125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Nadia Wells, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "nadia-annoyed",
+    "path": "/levels/deadlock/art/portraits/nadia_annoyed.svg",
+    "sizeKB": 0.8330078125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Nadia Wells, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "nadia-approving",
+    "path": "/levels/deadlock/art/portraits/nadia_approving.svg",
+    "sizeKB": 0.8291015625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Nadia Wells, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "nadia-pressured",
+    "path": "/levels/deadlock/art/portraits/nadia_pressured.svg",
+    "sizeKB": 0.826171875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Nadia Wells, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "lab",
+    "path": "/levels/deadlock/art/backgrounds/lab.svg",
+    "sizeKB": 0.8828125,
+    "source": "PMForge layered background kit",
+    "license": "Project-authored original",
+    "alt": "Fictional lab background",
+    "status": "placeholder"
+  },
+  {
+    "id": "office",
+    "path": "/levels/deadlock/art/backgrounds/office.svg",
+    "sizeKB": 0.8037109375,
+    "source": "PMForge layered background kit",
+    "license": "Project-authored original",
+    "alt": "Fictional office background",
+    "status": "placeholder"
+  }
+]

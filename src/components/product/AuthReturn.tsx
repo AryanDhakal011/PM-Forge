@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { db, IDENTITY_KEY } from "@/lib/product/db";
+import { db, IDENTITY_KEY,importWorkspace } from "@/lib/product/db";
 import { safeNext } from "@/lib/product/routes";
 import type { Profile } from "@/lib/product/types";
 import styles from "./Product.module.css";
@@ -18,7 +18,10 @@ export default function AuthReturn() {
         if (!result.user)
           throw Error("Sign-in did not finish. Your device work is unchanged.");
         const user = result.user;
-        const existing = await db.profiles.get(user.id);
+        const previous=localStorage.getItem(IDENTITY_KEY);if(previous&&previous!==user.id){const guest=await db.profiles.get(previous);if(guest?.identity==='guest')sessionStorage.setItem('pmforge.pendingGuest',previous)}
+        let existing = await db.profiles.get(user.id);
+        if(!existing){try{const response=await fetch('/api/workspace',{cache:'no-store'});if(response.ok){const remote=await response.json();if(remote.data?.profile?.id===user.id){await importWorkspace(remote.data,{...remote.data.profile,identity:'member'},false);existing=await db.profiles.get(user.id)}}}catch{}}
+
         const profile: Profile = existing || {
           id: user.id,
           name: user.name,

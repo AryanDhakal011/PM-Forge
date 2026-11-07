@@ -1,0 +1,93 @@
+[
+  {
+    "voiceId": "placeholder-joyce",
+    "person": "joyce",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "It is probably fine.",
+    "samples": [
+      "It is probably fine.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-ravi",
+    "person": "ravi",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "Send me the query.",
+    "samples": [
+      "Send me the query.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-anders",
+    "person": "anders",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "The number is already in the board deck.",
+    "samples": [
+      "The number is already in the board deck.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-elena",
+    "person": "elena",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "Customers read the headline.",
+    "samples": [
+      "Customers read the headline.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-retrier",
+    "person": "retrier",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "I repeat what you let me count.",
+    "samples": [
+      "I repeat what you let me count.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-duper",
+    "person": "duper",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "Your definition is my instruction.",
+    "samples": [
+      "Your definition is my instruction.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-insider",
+    "person": "insider",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "I know which accounts you exclude.",
+    "samples": [
+      "I know which accounts you exclude.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  }
+]

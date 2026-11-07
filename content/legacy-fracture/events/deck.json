@@ -1,0 +1,191 @@
+[
+  {
+    "id": "E01",
+    "chapter": 1,
+    "speaker": "renata",
+    "condition": "always",
+    "text": "A depot asks which route is the source of truth."
+  },
+  {
+    "id": "E02",
+    "chapter": 1,
+    "speaker": "oswald",
+    "condition": "thread-known",
+    "text": "The overnight file is still moving."
+  },
+  {
+    "id": "E03",
+    "chapter": 1,
+    "speaker": "leif",
+    "condition": "thread-unknown",
+    "text": "A driver has a map and a different road."
+  },
+  {
+    "id": "E04",
+    "chapter": 1,
+    "speaker": "cora",
+    "condition": "ops",
+    "text": "The board asks what you proved."
+  },
+  {
+    "id": "E05",
+    "chapter": 1,
+    "speaker": "isaac",
+    "condition": "finance",
+    "text": "Finance wants a date with the number."
+  },
+  {
+    "id": "E06",
+    "chapter": 1,
+    "speaker": "alistair",
+    "condition": "shadow",
+    "text": "The old route remains in the morning queue."
+  },
+  {
+    "id": "E07",
+    "chapter": 1,
+    "speaker": "renata",
+    "condition": "overnight",
+    "text": "A depot asks which route is the source of truth."
+  },
+  {
+    "id": "E08",
+    "chapter": 1,
+    "speaker": "oswald",
+    "condition": "friction-high",
+    "text": "The overnight file is still moving."
+  },
+  {
+    "id": "E09",
+    "chapter": 1,
+    "speaker": "leif",
+    "condition": "parity-low",
+    "text": "A driver has a map and a different road."
+  },
+  {
+    "id": "E10",
+    "chapter": 2,
+    "speaker": "cora",
+    "condition": "always",
+    "text": "The board asks what you proved."
+  },
+  {
+    "id": "E11",
+    "chapter": 2,
+    "speaker": "isaac",
+    "condition": "thread-known",
+    "text": "Finance wants a date with the number."
+  },
+  {
+    "id": "E12",
+    "chapter": 2,
+    "speaker": "alistair",
+    "condition": "thread-unknown",
+    "text": "The old route remains in the morning queue."
+  },
+  {
+    "id": "E13",
+    "chapter": 2,
+    "speaker": "renata",
+    "condition": "ops",
+    "text": "A depot asks which route is the source of truth."
+  },
+  {
+    "id": "E14",
+    "chapter": 2,
+    "speaker": "oswald",
+    "condition": "finance",
+    "text": "The overnight file is still moving."
+  },
+  {
+    "id": "E15",
+    "chapter": 2,
+    "speaker": "leif",
+    "condition": "shadow",
+    "text": "A driver has a map and a different road."
+  },
+  {
+    "id": "E16",
+    "chapter": 2,
+    "speaker": "cora",
+    "condition": "overnight",
+    "text": "The board asks what you proved."
+  },
+  {
+    "id": "E17",
+    "chapter": 2,
+    "speaker": "isaac",
+    "condition": "friction-high",
+    "text": "Finance wants a date with the number."
+  },
+  {
+    "id": "E18",
+    "chapter": 2,
+    "speaker": "alistair",
+    "condition": "parity-low",
+    "text": "The old route remains in the morning queue."
+  },
+  {
+    "id": "E19",
+    "chapter": 3,
+    "speaker": "renata",
+    "condition": "always",
+    "text": "A depot asks which route is the source of truth."
+  },
+  {
+    "id": "E20",
+    "chapter": 3,
+    "speaker": "oswald",
+    "condition": "thread-known",
+    "text": "The overnight file is still moving."
+  },
+  {
+    "id": "E21",
+    "chapter": 3,
+    "speaker": "leif",
+    "condition": "thread-unknown",
+    "text": "A driver has a map and a different road."
+  },
+  {
+    "id": "E22",
+    "chapter": 3,
+    "speaker": "cora",
+    "condition": "ops",
+    "text": "The board asks what you proved."
+  },
+  {
+    "id": "E23",
+    "chapter": 3,
+    "speaker": "isaac",
+    "condition": "finance",
+    "text": "Finance wants a date with the number."
+  },
+  {
+    "id": "E24",
+    "chapter": 3,
+    "speaker": "alistair",
+    "condition": "shadow",
+    "text": "The old route remains in the morning queue."
+  },
+  {
+    "id": "E25",
+    "chapter": 3,
+    "speaker": "renata",
+    "condition": "overnight",
+    "text": "A depot asks which route is the source of truth."
+  },
+  {
+    "id": "E26",
+    "chapter": 3,
+    "speaker": "oswald",
+    "condition": "friction-high",
+    "text": "The overnight file is still moving."
+  },
+  {
+    "id": "E27",
+    "chapter": 3,
+    "speaker": "leif",
+    "condition": "parity-low",
+    "text": "A driver has a map and a different road."
+  }
+]

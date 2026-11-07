@@ -1,0 +1,222 @@
+PMFORGE STORYLINE CORRECTIONS HANDOFF (v2.0)
+For: the code editor (Claude Code) and the founder. Replaces Section 4 of PMFORGE_PROJECTS_STATUS_AND_CORRECTIONS.txt (the status board stays valid). This document says, level by level, WHAT TO CHANGE IN THE EXISTING STORYLINE to make it more interesting, fun and fruitful. It assumes the shared platform in PMFORGE_PROJECT_PLATFORM_SPEC.txt.
+Each correction has its own section with the same layout: A What exists, B Why it falls flat, C Goals, D Scene-by-scene changes (KEEP / CHANGE / ADD / CUT), E New mechanics (exact), F New beats and sample lines, G Receipts and fuses, H Spectacle moments, I Acceptance.
+Rules for every correction: lines under 14 words; no more than 3 consecutive non-interactive lines; consequences visible within 2 seconds and again later; every change keeps the learning goal of the level.
+
+======================================================================
+0. THE FUN RUBRIC (every level must score 4 of 5 or higher on each; judged in playtests)
+======================================================================
+ F1 AGENCY: I chose, and the world changed in ways I did not expect.
+ F2 SURPRISE: something happened that I had not predicted but could trace to my choices.
+ F3 MASTERY: I got better at something in the level (reading evidence, handling a tool, negotiating).
+ F4 TENSION AND RELIEF: there were at least three tense moments and three releases.
+ F5 DISCOVERY: I found things by looking, asking or exploring, not only by clicking Next.
+ F6 TACTILE FEEL: dragging, switching, scrubbing and placing felt physical.
+ F7 CHARACTER: I cared what at least two people thought of me.
+ F8 HUMOR OR WARMTH: at least two moments made me smile.
+ F9 VISIBLE CONSEQUENCE: I could point to a result and say "I did that".
+ F10 REPLAY HOOK: I wanted to try a different approach.
+Playtest protocol: 6 to 8 players per level; think-aloud; after play, they score F1 to F10 from 1 to 5; any criterion under 4 is fixed before the level is marked ready.
+
+======================================================================
+1. CORRECTION: THE DEADLOCK (retrofit of the built level)
+======================================================================
+A. WHAT EXISTS (from your walkthrough)
+ Entrance with captions or sound; "Meet the team" portrait slideshow (Mara, Dev, Ines); "Understand the case" diagram (Halyard to 12 weeks to Northgate) and resources (12 weeks, 3 investigations, 5 persuasion points, 3 interventions); an 8-stage tracker; Walk the lab with 5 evidence objects (demo footage, incident log, Slack wall, sealed bench report, Northgate letter); Settle three arguments (Speed, Recovery, Learning) with Back Dev, Back Ines, Compromise, Defer; the team reaction screen; the evidence projector with four datasets; the Forge (three controls and a submit loop); five demo events; six endings; a paper conclusion plus an optional trail; replay fork; export.
+B. WHY IT FALLS FLAT
+ It is a procedure: slideshow, form, projector, form, watch. The big revelations are numbers shown on screens. The "best" build is discoverable from one dataset. Dev and Ines are portraits who read lines; they do not feel like people who want things from you. There is no moment of physical risk, no humor, no personal stake, and consequences arrive in a closing panel.
+C. GOALS
+ Make the first minute matter; make the lab explorable; make the argument live; keep one ambiguous result; let the player feel the robot; make consequences personal and early; cut about 40% of the reading.
+D. SCENE-BY-SCENE CHANGES
+ 1 Entrance: KEEP. ADD a difficulty choice (Guided, Standard, Sharp).
+ 2 "Meet the team" slideshow: CUT. REPLACE with a Cold Open (F below): a rehearsal, a near-miss, a decision in 15 seconds. Characters are introduced by what they ask of you.
+ 3 "Understand the case" diagram: CHANGE. Keep the diagram as a 20-second animated map (Halyard to 12 weeks to Northgate) shown while Mara talks; remove the separate screen. Move the resource list to the Role Card.
+ 4 8-stage tracker: CUT. REPLACE with 3 Acts ("Two Teams", "The Table", "The Demo") and a weeks clock (12 down to 0).
+ 5 Walk the lab: CHANGE. Make it a free-explore room with three areas and ambient overheard lines when the player lingers near Dev's table or Ines's pit (each gives a hint and nudges nothing). KEEP the 5 evidence objects and the 3-investigation limit. ADD a "second look" (1 attention) on any opened object to reveal a hidden detail (for example the footage shows a second near-miss at 1:52 if you scrub past the marker).
+ 6 Settle three arguments: CHANGE. From three lanes to a live mediation (E1 below).
+ 7 Team reaction screen: CHANGE into a hallway scene: two private 1:1 asides (Dev, then Ines); the player chooses the order; the first conversation colors the second.
+ 8 Evidence projector: KEEP the four datasets; ADD live reactions and one AMBIGUOUS dataset (safety margin "22 cm, plus or minus 9") that can be re-tested for 1 investigation; assumption labels still turn BROKEN.
+ 9 The Forge: CHANGE. Keep the three controls, but ADD a visible robot (SVG) that changes with each setting and a 15-second Dry Run (seeded wobble) before submit, so the build is felt before the demo.
+ 10 Submit proposal loop: KEEP the rules (reject, push through at 2 points, conservative build imposed). CHANGE the feedback into spoken, specific objections with a visible "what they mean" chip.
+ 11 Demo events: KEEP the five. ADD a sixth, conditional: "The Technician Returns" (callback to the near-miss if not mitigated). ADD live faces for Theo and Nadia and a Demo Pulse gauge.
+ 12 Endings: KEEP the six. ADD per-ending epilogue lines referencing your receipts.
+ 13 Conclusion: CHANGE. Replace the paper panel by The Replay Wall: three scrubbable moments with your choice highlighted and a "what if" preview for each.
+ 14 Reading volume: CUT from 191 lines to about 120; every line under 14 words; guides appear only on first use and are off by default after.
+E. NEW MECHANICS
+ E1 LIVE MEDIATION (replaces the lanes). For each argument: Dev speaks 2 lines, Ines speaks 2 lines; their faces show a Tension bar; the player has three moves: INTERRUPT (ask for evidence, costs 1 attention), OFFER A THIRD OPTION (a card built from findings), BACK ONE (reduces that lead's resentment, raises the other's). Compromises cost 1 persuasion point and 1 week as before. Defer costs readiness. The same numbers as today drive the outcome; the UI makes them felt.
+ E2 PRESS AND HOLD E-STOP (cold open). Hold for 0.4 s to stop the arm; release early and it keeps moving (the arm stops anyway after a beat, but 12 cm from the technician's sleeve). The reading teaches stopping distance by doing.
+ E3 DRY RUN. A 15-second simulation after configuring the Forge; shows how the robot behaves with your settings (smooth, jerky, stops, needs help), seeded and reproducible.
+ E4 SECOND LOOK. A small attention cost to reveal hidden detail in an opened object; rewards curiosity.
+F. NEW BEATS AND SAMPLE LINES
+ Cold Open (7:40 AM, rehearsal): NARRATION: "Rehearsal. Four days to Northgate." A technician steps near TERN-1. HOLD TO STOP. After: MARA [pressured]: "That is why I called you." DEV [annoyed]: "It was fine. It would have stopped." INES [annoyed]: "Fine is not a stopping distance."
+ Asks: DEV [pressured]: "Don't let her cap the speed." INES [pressured]: "Don't let him hide that footage."
+ Overheard (Ines, pit): "If we show it, we show everything."
+ Mediation sample: DEV: "Point-five metres a second kills the demo." INES: "Seven centimetres is not a margin." Player: Interrupt: "Show me the throughput number." DEV [thinking]: "Ninety-four percent. Fine."
+ Hallway aside, Dev: "I just want Northgate to see it move." Ines: "I just want nobody hurt."
+ Earned beat (if the player respected both): MARA [approving], quiet: "I stopped arguing years ago. Thank you for listening."
+ Humor: TERN-1 chirps in three sounds (happy, worried, sulking); in Shared Ground it bows.
+G. RECEIPTS AND FUSES
+ Receipts: first reply to Mara's ask; the Speed argument choice and line; the evidence you ignored. Fuses: Dev quotes your Speed decision in the demo; Ines shows the incident slip you skipped; the near-miss at 0:47 returns as event six if not mitigated.
+H. SPECTACLE MOMENTS (max 5)
+ Cold open E-stop with a 400 ms slow-motion; the footage scrub with the proximity tape measure snapping to 0.4 m; the BROKEN stamps; the Dry Run; the endings (Quiet Room dims, Shared Ground bow).
+I. ACCEPTANCE
+ First meaningful action within 15 seconds; no slideshow; the lab is explorable; mediation shows both faces reacting live; the Dry Run exists; one ambiguous dataset; scripts under 125 lines; Fun Rubric 4+.
+
+======================================================================
+2. CORRECTION: THE TROJAN HORSES (full rebuild; merge the three earlier documents)
+======================================================================
+A. WHAT EXISTS
+ A first handoff (mechanics), an animation addendum, and a correction handoff (vertical slice S00 to S12 only). The shipped screen was a tool dashboard inside the workspace shell with no characters or dialogue.
+B. WHY IT FALLS FLAT
+ It lacked a stage, people, a script past Chapter 1 and any reason to care. The strongest ideas (the double-paying loop, the hidden Guild ally, the party turning into a hangover) were never staged.
+C. GOALS
+ Make the party a place; make Guilds real people the player can visit; make the fraud hunt a game; make Launch Night a live crisis; keep the story honest about incentives.
+D. SCENE-BY-SCENE CHANGES (use the Invisible Wall document as the format)
+ 1 Entrance: ADD a difficulty choice; title art of a warehouse party.
+ 2 Cold open: KEEP the party and the "pay once, pay twice" drag; ADD the coin ticker device (E1) so the player hears the double payout.
+ 3 Introductions: CHANGE from a chat list to THE PARTY FLOOR (E2): a short walkable map with four hotspots (the LED wall with Kavya, the bar with Dani, the corner with Omar, the community booth with Rhea). The player talks to two before the story proceeds (sequencing matters).
+ 4 Evidence drawers: KEEP the seven reports with so-what lines. CHANGE the ledger report into the Coin Press view (E1).
+ 5 Loop Lens: KEEP; ADD the Fraud Ring Hunt (E3).
+ 6 Payout Valve: KEEP; ADD the "pour" animation where coins drain from the runway ring.
+ 7 Message to the community: KEEP the three exact wordings and stamp.
+ 8 Chapter 2 phone call with Tomas: CHANGE. If the player named the Guilds, the call becomes THE GUILD VISIT (E4), a short in-person scene at a bakery; otherwise it stays a phone call with a harsher tone.
+ 9 Segment Board, Grandfather Gate: KEEP; ADD a small "who is this person" popup for each segment (three faces and a line).
+ 10 Chapter 3 Announcement Composer: CHANGE into LAUNCH NIGHT (E5): composer plus a live Community Weather feed, a Rhea Reply Queue and a Rating Watch.
+ 11 Outcomes: KEEP six; ADD the party-to-hangover transition once per run; KEEP the Gardener golden moment.
+ 12 Debrief: KEEP the Ledger of Loops; ADD Patient-style Letters from Guild members (short, human).
+ 13 Chapters 2 and 3 script: WRITE in full (the earlier documents have only core lines). Required: 12 authored branches per chapter and the event deck (24 events minimum).
+E. NEW MECHANICS
+ E1 COIN PRESS: a device on the stage that prints a coin for each referral. When a loop passes, it prints two; the sound doubles; the Payout Valve lowers the multiplier and the press slows. The player literally hears the money.
+ E2 PARTY FLOOR: a 4-hotspot map, 2 attention each; talking to two people locks the order of introductions and sets first impressions (Dani, Omar, Kavya, Rhea).
+ E3 FRAUD RING HUNT: a device-fingerprint board; drag strings between accounts sharing a phone; a ring "pops" into a grey cluster; cutting a ring uses scissors; overlapping Guild loops resist cutting (they share locations but not devices). Wrong cuts cost trust.
+ E4 GUILD VISIT: a 90-second scene in a bakery; the owner shows a referral card used between neighbors; the player can accept a loaf (a human moment) and sees the guild's real revenue; this reveals the Guild segment with certainty.
+ E5 LAUNCH NIGHT: three panels. Composer (blocks); Community Weather (posts rain, sun, storm by sentiment); Reply Queue (3 live posts you answer with a stance: Own it, Explain, Escalate); Rating Watch (line graph). Three interventions: delay 24 hours (once), publish an FAQ, DM the Guild leads. Seeded events only.
+F. NEW BEATS AND SAMPLE LINES
+ Party Floor: KAVYA [approving]: "Look at that curve!" DANI [pressured]: "It's the loop. Don't touch it." OMAR [annoyed]: "Four hundred ten thousand a week." RHEA [neutral]: "Users call it a feature. Hear them out."
+ Guild Visit: TOMAS [approving]: "We refer each other every week. Take a loaf."
+ Launch Night: RHEA [pressured]: "Someone posted your week-one message." FEED: "Tarang"? no. FEED (example post): "Gilt said 'fix today'. It's week three."
+G. RECEIPTS AND FUSES
+ Receipts: first impressions order; the three-wording message; segment placements; grace days; announcement text. Fuses: instant kill ignites a partner fuse and a rating fuse; message vs announcement contradiction; skipped Guild visit ignites an angry Tomas call.
+H. SPECTACLE MOMENTS
+ Party bloom; coin press double-tick; Guild bakery warmth; ring pop; party-to-hangover; revolt rating collapse; Gardener golden bloom.
+I. ACCEPTANCE
+ No workspace chrome; characters on screen in every scene; Party Floor, Guild Visit and Launch Night exist; Chapters 2 and 3 fully scripted; Fun Rubric 4+.
+
+======================================================================
+3. CORRECTION: THE SACRED NO (upgrade)
+======================================================================
+A. WHAT EXISTS
+ Cold open voice note, triage board, resource slider, rehearsal with a Shadow CEO, the Call (Compose Your No), cave and steady sequences, Chapter 2 pager, Trade Table, blast radius field, Chapter 3 demo and boardroom, debrief with receipts and archetypes.
+B. WHY IT FALLS FLAT
+ The Call is a sentence builder (a form with a spotlight). The rehearsal reads as a menu. The Trade Table and blast field are strong ideas but static. The demo is a result, not a moment.
+C. GOALS
+ Turn the Call into a duel; keep pressure continuous; make Kian and Tess readable by their tells; end with a playable crisis.
+D. SCENE-BY-SCENE CHANGES
+ 1 Cold open: KEEP; ADD a first action that matters (E1 below).
+ 2 Triage board: KEEP the claims and breaking mechanic; ADD live Slack interruptions (E2).
+ 3 Resource slider: KEEP; ADD a night-shift clock and Priya's availability meter.
+ 4 Rehearsal: CHANGE to the Argument Deck (E3).
+ 5 The Call: CHANGE from sentence builder to a three-round Duel (E4), keeping the exact-words receipt.
+ 6 Cave and steady sequences: KEEP; strengthen the time-slow.
+ 7 Chapter 2 Trade Table: CHANGE to a Tell-Reading Negotiation (E5).
+ 8 Blast radius: KEEP; ADD a "what if I am wrong?" button that replays the failure at 3x speed.
+ 9 Chapter 3 demo: CHANGE to a live Kill-Switch Moment (E6).
+ 10 Debrief: KEEP; ADD the Argument Deck replay showing which cards landed.
+E. NEW MECHANICS
+ E1 FIRST ACTION: Kian's voice note arrives while Priya and Tess message you; drag the three messages into Answer now, Answer in an hour, Ignore. The choice sets first impressions.
+ E2 LIVE INTERRUPTIONS: three seeded Slack interruptions (a sales promise, a crash alert, a CEO nudge) arrive during the triage; each costs 10 minutes if answered; ignoring them has visible drift.
+ E3 ARGUMENT DECK: collect cards from evidence (Revenue risk, Reputation, Board optics, Burnout, Alternative offer, Data point). Each rehearsal round plays one card against Kian's Resolve bar; his reaction teaches his lens (what lands, what makes him interrupt).
+ E4 THE DUEL: three rounds. Each round the player plays one argument card and one tone chip; Kian counters with a pressure move (jargon alert, board threat, timeline). Resolve bars show who is yielding; hedge words erode your Composure; the exact words played become the receipt. Result sets CT and plan status.
+ E5 TELL-READING: Tess's tells (hedging, fast offers) show as a small cue strip; the player decides Accept, Counter, Hold; reading tells correctly improves the deal; misreading raises Jitter.
+ E6 KILL-SWITCH MOMENT: during the demo ramp, a live chart climbs; the player may hit the kill switch once; too early wastes the demo, too late crashes it; the Safeguard hours placed earlier widen the safe window.
+F. NEW BEATS AND SAMPLE LINES
+ PRIYA [annoyed]: "I'm not touching the queue unguarded." TESS [pressured]: "Say yes and I stop asking." KIAN (duel, after a strong card) [thinking]: "Fine. Convince me." KIAN (after hedging): "You think? I need a decision."
+G. RECEIPTS AND FUSES
+ Duel words; deal choices; safeguard hours; fuses: cave, Marlo promise, Priya's warning.
+H. SPECTACLE MOMENTS
+ UI vibration; time-slow cave; blast field ripple; kill-switch chart; fracture or golden glow.
+I. ACCEPTANCE
+ The Call is a duel with three rounds and exact-words receipts; Slack interruptions appear; Tess's tells are readable; the demo has a live moment; Fun Rubric 4+.
+
+======================================================================
+4. CORRECTION: THE GHOST METRIC (upgrade)
+======================================================================
+A. WHAT EXISTS
+ Cold open with the Metric Bubble, six drawers, Join Bench, peel animation, Uncertainty Gauge, promise to the board, Slide Builder with Room Temperature, Metric Builder and Red Team, reveal and debrief.
+B. WHY IT FALLS FLAT
+ It risks being a spreadsheet chore. The bubble is the star but it is passive. The Red Team and the all-hands reveal are the best moments and need staging.
+C. GOALS
+ Make the audit physical, the bet risky, the reveal a show, and the Red Team a heist.
+D. SCENE-BY-SCENE CHANGES
+ 1 Cold open: KEEP; ADD the first action (E1).
+ 2 Drawers: KEEP with so-what lines; ADD a Drawer Cart that wheels to the bench.
+ 3 Join Bench: KEEP; ADD join feedback (bubble pulses before text).
+ 4 Peel: CHANGE to THE METRIC AUTOPSY (E2).
+ 5 Uncertainty Gauge: CHANGE to CONFIDENCE BETTING (E3).
+ 6 Promise to the board: KEEP the full beat; ADD the Confession Booth (E4) when the promise later fails.
+ 7 Slide Builder: KEEP; ADD the Reading the Room faces.
+ 8 Chapter 2 reveal: CHANGE to THE ALL-HANDS REVEAL (E5).
+ 9 Metric Builder and Red Team: CHANGE the Red Team to THE HEIST CREW (E6).
+ 10 Debrief: KEEP the comparative reveal.
+E. NEW MECHANICS
+ E1 FIRST ACTION: confetti and "340%"; the player's dashboard differs; drag the first sample event (a retry) into counts or does not count.
+ E2 METRIC AUTOPSY: the bubble lies on an operating table; the player picks instruments (Scalpel = filter by account, Probe = trace a request, Microscope = zoom a cohort); each instrument peels one layer and reports its mass; wrong instruments leave a scar (cost an hour).
+ E3 CONFIDENCE BETTING: the player places chips on the ghost-share range before the reveal; a narrower range with more chips wins more credibility if correct and loses more if wrong; Joyce later comments on over-betting.
+ E4 CONFESSION BOOTH: if the promise fails, a short booth scene with three ways to confess; Anders quotes the exact promise.
+ E5 ALL-HANDS REVEAL: the player presents on a stage; the audience (executives and the crowd) reacts in real time; applause bar and gasps; framing choices change the crowd temperature.
+ E6 HEIST CREW: three sprites (the Retrier, the Duper, the Insider) try to game your metric; you patch loopholes; each sprite quotes your exact definition when it succeeds.
+F. SAMPLE LINES
+ JOYCE [pressured]: "It's probably fine." RAVI [annoyed]: "Send me the query." HEIST: "You said 'completions per account'. I did forty under different accounts."
+G. RECEIPTS AND FUSES
+ Estimate range and chips; promise wording; slide headline; metric spec; fuses: promise, leak, roadmap on a lie.
+H. SPECTACLE MOMENTS
+ Bubble peel by instrument; bubble pop; all-hands reveal; heist chase; the bubble clears (rare).
+I. ACCEPTANCE
+ Autopsy, betting, confession and heist exist; every drawer has a so-what line; Fun Rubric 4+.
+
+======================================================================
+5. CORRECTION: THE LAST MILE (upgrade)
+======================================================================
+A. WHAT EXISTS
+ Cold open (online vs reachable), Field Reports, Forecast Fan threshold, Policy board, public statement, Rebellion (Ledger, support backlog, statement audit), Recovery (Reopen Sequencer, Freeze Cadence dial), Triangle debrief.
+B. WHY IT FALLS FLAT
+ The city is a dashboard; couriers are numbers. The strongest hook (people in water) is never felt.
+C. GOALS
+ Make couriers people; make the radio the voice of the night; make the player choose where to place help; give the debrief faces.
+D. SCENE-BY-SCENE CHANGES
+ 1 Cold open: KEEP; ADD a ride-along (E1).
+ 2 Field Reports: KEEP; ADD the Radio Room (E2).
+ 3 Threshold fan: KEEP.
+ 4 Policy board: KEEP; ADD Shelter Points (E3).
+ 5 Public statement: KEEP.
+ 6 Rebellion: CHANGE the ledger to be face-first (E4).
+ 7 Recovery: KEEP the sequencer; ADD the Rumor Mill (E5).
+ 8 Debrief: KEEP the Triangle; ADD Courier Letters (E6).
+E. NEW MECHANICS
+ E1 RIDE-ALONG: choose one of five named couriers (Bikram, Salma, Joon, Anita, Rakesh) to follow for 2 ticks; see their short POV card (route, water level, a worry); your policy affects them; they appear again in the debrief.
+ E2 RADIO ROOM: voices from the field arrive on a channel; the player answers with one of three stances (Hold, Go with caution, Reroute); the answers feed the same engine.
+ E3 SHELTER POINTS: place up to 4 shelter points on the map; they reduce risk near them and cost cash; a courier ends the night at one.
+ E4 FACE LEDGER: each refund or compensation choice is shown as a list of faces (restaurants and customers) with a small outcome.
+ E5 RUMOR MILL: a feed of rumors (price gouging, closures, safe routes); the player can correct two per night with a short reply; ignored rumors raise narrative risk.
+ E6 COURIER LETTERS: at the end, the followed courier writes a short letter based on what you decided.
+F. SAMPLE LINES
+ SANA [neutral]: "Wards five and nine are under." BIKRAM (radio): "Water is at my knees. Orders still coming." MINA: "Half my staff can't get in." Courier letter: "I made it home. Thank you for stopping the order."
+G. RECEIPTS AND FUSES
+ Public statement; safety threshold; shelter locations; courier followed; fuses: surge level and PR; skipped shelter and incident.
+H. SPECTACLE MOMENTS
+ Water rising; sirens; radio static; the courier POV; the freeze and recovery ripple.
+I. ACCEPTANCE
+ Couriers are named people; the radio and shelter mechanics exist; the debrief includes letters; Fun Rubric 4+.
+
+======================================================================
+6. CROSS-LEVEL CORRECTIONS
+======================================================================
+ 6.1 RANDOMNESS POLICY: seeded randomness allowed for event selection and incident timing; explicit choices are deterministic; every random outcome has a because-tag. Update all old handoffs that said "no randomness in outcomes".
+ 6.2 SAFETY CONTRACT: now standalone in PMFORGE_PROJECT_PLATFORM_SPEC Section 17; remove the "Last Mile Section 12" references.
+ 6.3 HUB BEHAVIOR: a card shows Enter or Resume only when the manifest status is ready and the linter passed; otherwise "In development". The hub never shows seeded demo progress.
+ 6.4 DEMO STATE: remove all seeded "in progress" states; progress comes only from saves.
+ 6.5 NUMBERING AND NAMING: fix the duplicate section number in the Feature Factory file; use one expression set (neutral, thinking, annoyed, approving, pressured) and one receipt naming scheme (R_<level>_<n>).
+ 6.6 VOICE: one casting sheet per level; TTS pipeline from the platform; captions default.
+ 6.7 REVIEW GATES: design, content, accessibility, performance, security; domain expert reviews for health, insurance, logistics, AI safety and hardware levels.
+ 6.8 LAUNCH SCOPE: ship three flagship levels first (Deadlock retrofit, Invisible Wall, Feature Factory), mark others "In development".
+ 6.9 STILL UNWRITTEN: Shadow Roadmap and Public Fracture handoffs (write in the complete format after the platform exists).

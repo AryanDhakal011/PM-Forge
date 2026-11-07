@@ -1,0 +1,62 @@
+{
+  "id": "reopen",
+  "type": "TOOL",
+  "background": "street",
+  "goal": "Sequence reopening after field verification.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "rakesh"
+  ],
+  "lines": [
+    {
+      "id": "line-11",
+      "speaker": "rakesh",
+      "expression": "thinking",
+      "text": "A reopened zone still needs a way home."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "reopen",
+      "kind": "PlannerBoard",
+      "title": "Reopen sequencer",
+      "items": [
+        {
+          "id": "north",
+          "label": "North",
+          "detail": "Needs a verified road and staffed shelter.",
+          "effects": []
+        },
+        {
+          "id": "market",
+          "label": "Market",
+          "detail": "Needs restaurant staffing and route clearance.",
+          "effects": []
+        },
+        {
+          "id": "south",
+          "label": "South",
+          "detail": "Needs a functioning depot and a safe return route.",
+          "effects": []
+        }
+      ],
+      "min": 3,
+      "max": 3,
+      "cost": 0,
+      "receiptId": "R_last-mile_reopen",
+      "bins": [
+        "First",
+        "Second",
+        "Last"
+      ]
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 3,
+  "act": 3,
+  "next": "cadence"
+}

@@ -1,0 +1,85 @@
+{
+  "id": "slides",
+  "type": "TOOL",
+  "background": "office",
+  "goal": "Build the slide and watch the room’s faces.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "elena"
+  ],
+  "lines": [
+    {
+      "id": "line-8",
+      "speaker": "elena",
+      "expression": "thinking",
+      "text": "The headline will travel without your footnotes."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "slides",
+      "kind": "PosterComposer",
+      "title": "Read the room",
+      "items": [
+        {
+          "id": "direct",
+          "label": "Correct the number explicitly.",
+          "detail": "",
+          "effects": [
+            {
+              "var": "temperature",
+              "op": "add",
+              "value": -5
+            },
+            {
+              "var": "credibility",
+              "op": "add",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "evolution",
+          "label": "Explain how the measurement improved.",
+          "detail": "",
+          "effects": [
+            {
+              "var": "temperature",
+              "op": "add",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "id": "bury",
+          "label": "Move the caveat into the appendix.",
+          "detail": "",
+          "effects": [
+            {
+              "var": "temperature",
+              "op": "add",
+              "value": -12
+            },
+            {
+              "var": "risk",
+              "op": "add",
+              "value": 8
+            }
+          ]
+        }
+      ],
+      "min": 1,
+      "max": 1,
+      "cost": 0,
+      "receiptId": "R_ghost-metric_slides"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 7,
+  "act": 2,
+  "next": "all-hands"
+}

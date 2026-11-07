@@ -1,0 +1,34 @@
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    env_file: .env.production
+    environment:
+      AUTH_TRUSTED_IP_HEADER: x-pmforge-client-ip
+    expose:
+      - "3000"
+    volumes:
+      - pmforge-data:/data
+      - pmforge-backups:/backups
+    security_opt:
+      - no-new-privileges:true
+  proxy:
+    image: caddy:2
+    restart: unless-stopped
+    environment:
+      PMFORGE_DOMAIN: ${PMFORGE_DOMAIN:?Set PMFORGE_DOMAIN in .env.production}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      app:
+        condition: service_healthy
+volumes:
+  pmforge-data:
+  pmforge-backups:
+  caddy-data:
+  caddy-config:

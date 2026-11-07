@@ -1,0 +1,14 @@
+{
+  "id": "S13",
+  "type": "GAUNTLET",
+  "goal": "Answer the live objections",
+  "background": "committee",
+  "tools": [
+    "dredger",
+    "pattern",
+    "coalition",
+    "preread",
+    "window",
+    "gauntlet"
+  ]
+}

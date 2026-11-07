@@ -1,0 +1,188 @@
+[
+  {
+    "id": "reva",
+    "name": "Reva Sandoval",
+    "role": "Head of Product",
+    "color": "#B69CFF",
+    "voice": "af_heart",
+    "speed": 0.99,
+    "want": "A launch every Friday.",
+    "fear": "Being left behind.",
+    "prop": "violet scarf",
+    "topics": [
+      "Roadmap pressure",
+      "What Cass wants",
+      "The demo",
+      "Zenith headline",
+      "Retention",
+      "Risks",
+      "How you are measured",
+      "What you will back"
+    ],
+    "leadins": [
+      "Every Friday needs a story.",
+      "Cass needs visible progress.",
+      "A demo is a promise.",
+      "Give me an honest headline.",
+      "Retention moves slowly. That matters.",
+      "Let us name the risk.",
+      "I am measured on launches.",
+      "Bring evidence. I can back that."
+    ]
+  },
+  {
+    "id": "cass",
+    "name": "Cass Whitlock",
+    "role": "CEO",
+    "color": "#FFB84D",
+    "voice": "am_michael",
+    "speed": 0.99,
+    "want": "Speed the board can see.",
+    "fear": "Losing the investor window.",
+    "prop": "rocket pin",
+    "topics": [
+      "Investor timeline",
+      "Why speed",
+      "A bad Friday",
+      "Reliability",
+      "Who is pushing",
+      "The Pulse",
+      "Quarterly review",
+      "What changes your mind"
+    ],
+    "leadins": [
+      "The board is watching this quarter.",
+      "Speed buys us another chance.",
+      "Silence on Friday scares me.",
+      "Reliability needs to be visible too.",
+      "Investors want a reason to stay.",
+      "The Pulse is easy to explain.",
+      "Tell me what changed.",
+      "A credible alternative changes my mind."
+    ]
+  },
+  {
+    "id": "nils",
+    "name": "Nils Bergstrom",
+    "role": "Engineering Lead",
+    "color": "#85B9C7",
+    "voice": "bm_george",
+    "speed": 0.94,
+    "want": "A plan the team can survive.",
+    "fear": "Another lost weekend.",
+    "prop": "travel mug",
+    "topics": [
+      "Debt list",
+      "Estimates",
+      "Burnout",
+      "What breaks first",
+      "What you need",
+      "A safer plan",
+      "Who you trust",
+      "Weekend coverage"
+    ],
+    "leadins": [
+      "The foundations are charging interest.",
+      "An estimate is not a promise.",
+      "People are tired of being surprised.",
+      "Autosave breaks before the demo does.",
+      "Give us room to finish.",
+      "Less work in flight. More hardening.",
+      "I trust people who close loops.",
+      "I would like my weekend back."
+    ]
+  },
+  {
+    "id": "amara",
+    "name": "Amara Eze",
+    "role": "QA Lead",
+    "color": "#5CE0A0",
+    "voice": "af_nicole",
+    "speed": 0.99,
+    "want": "A release gate with evidence.",
+    "fear": "Being overruled again.",
+    "prop": "bug notebook",
+    "topics": [
+      "Release criteria",
+      "Open bugs",
+      "Test coverage",
+      "Last incident",
+      "Evidence you need",
+      "Staging risks",
+      "Past overrules",
+      "Feature flags"
+    ],
+    "leadins": [
+      "A gate needs teeth.",
+      "Every bug has a person behind it.",
+      "Coverage is a tool, not permission.",
+      "Let us read the incident record.",
+      "Evidence needs an owner and a date.",
+      "Staging is trying to tell us something.",
+      "I have heard looks fine before.",
+      "A flag gives us an exit."
+    ]
+  },
+  {
+    "id": "kofi",
+    "name": "Kofi Mensah",
+    "role": "Data Analyst",
+    "color": "#E7B8F0",
+    "voice": "am_fenrir",
+    "speed": 0.99,
+    "want": "Someone to ask about retention.",
+    "fear": "Being blamed for bad news.",
+    "prop": "headphones",
+    "topics": [
+      "Retention trend",
+      "Cohorts",
+      "Pulse inflation",
+      "The funnel",
+      "Metric definition",
+      "Data trust",
+      "What went unsaid",
+      "Disagreeing dashboards"
+    ],
+    "leadins": [
+      "Thirty days. The same people returning.",
+      "Cohorts expose what totals hide.",
+      "More sessions can mean more interruptions.",
+      "The funnel needs a clean definition.",
+      "Pick an outcome before a chart.",
+      "Disagreement is a reason to investigate.",
+      "I thought nobody wanted this answer.",
+      "Both dashboards can be technically correct."
+    ]
+  },
+  {
+    "id": "lila",
+    "name": "Lila Park",
+    "role": "Customer Success",
+    "color": "#F3BA92",
+    "voice": "af_bella",
+    "speed": 0.99,
+    "want": "Customers who can rely on us.",
+    "fear": "Renewals lost to broken promises.",
+    "prop": "headset",
+    "topics": [
+      "Complaints",
+      "Churn",
+      "What customers love",
+      "Requests",
+      "Customer quotes",
+      "SLA fears",
+      "Renewal calendar",
+      "Customer call"
+    ],
+    "leadins": [
+      "Lost work is a broken promise.",
+      "Churn has a story behind it.",
+      "Customers love work that stays saved.",
+      "Requests are clues, not commitments.",
+      "Here is what a customer said.",
+      "An SLA becomes personal during outages.",
+      "Renewals arrive whether we are ready.",
+      "I can bring a customer into this."
+    ]
+  }
+]

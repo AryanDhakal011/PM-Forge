@@ -1,0 +1,273 @@
+# PMForge landing page: final design and development handoff
+
+Redesign and implement the PMForge landing page as a complete, responsive product experience. Preserve its editorial identity: warm cream, forest green, amber, paper surfaces, fine rules, a large serif display face, and clear sans-serif interface text. Make the page feel lively through purposeful motion and meaningful interaction.
+
+This is a development task, not a concept exercise. Inspect the current implementation and product data before changing it. Build the experience, connect every action to a real destination or control, and verify it across desktop, tablet, and mobile.
+
+## Product story
+
+A visitor should understand the journey within the first screen:
+
+**Practice product judgment through interviews and simulations, then turn the reasoning into a portfolio.**
+
+The page should answer, in order:
+
+1. What is PMForge?
+2. What can I try right now?
+3. What does using it look like?
+4. Which path fits me?
+5. Can I trust the feedback and control my work?
+6. What should I do next?
+
+Keep copy specific and concise. Do not invent testimonials, employer logos, hiring outcomes, assessment accuracy, or product capabilities.
+
+## Design principles
+
+- **Clarity before spectacle:** Every animation should show a relationship, confirm an action, direct attention, or make a transition understandable.
+- **Progressive disclosure:** Show enough to make a decision, then offer deeper detail. Keep long explanations behind deliberate controls.
+- **Visible affordances:** Anything that looks clickable must be a working link or control. Hover must never be the only way to discover essential information.
+- **Consistency:** Reuse spacing, typography, button styles, card behavior, focus states, and motion timing across sections.
+- **Accessibility by default:** Content and controls must work without animation, WebGL, hover, sound, or precise pointer movement.
+- **Honest representation:** Label simulated companies, data, decisions, and portfolio artifacts clearly. Derive product counts from actual data.
+- **Performance is part of the experience:** Prioritize fast content display and immediate input response. Decorative effects may load later.
+
+## Visual system
+
+Keep the current DM Serif Display and Inter pairing unless the existing design system specifies a more appropriate equivalent.
+
+| Element | Desktop | Mobile | Weight and use |
+|---|---:|---:|---|
+| Hero headline | 88–120 px | 54–72 px | Serif 400, tight but readable line spacing |
+| Section headline | 64–88 px | 42–56 px | Serif 400 |
+| Card headline | 28–38 px | 26–32 px | Serif 400 |
+| Lead paragraph | 18–20 px | 17–18 px | Sans 400–500 |
+| Body | 16–18 px | 16 px | Sans 400, line height 1.55–1.7 |
+| Navigation and controls | 14–16 px | 14–16 px | Sans 500–600 |
+| Supporting label | 12–13 px | 12–13 px | Sans 500–600 |
+
+Do not use tiny 8–10 px text for information visitors need to read. Restrict that scale to decorative numbering where an accessible text equivalent exists.
+
+Use full-width section color fields with a consistent content grid, approximately 1440 px maximum content width. Use generous but controlled whitespace. Keep paragraphs around 55–70 characters per line. Preserve strong contrast on cream, amber, tinted cards, and green. Give focus states enough contrast against every surface. Interactive targets must be at least 44 × 44 px.
+
+## Motion system
+
+Use **GSAP** for coordinated entrance sequences and selected scroll-linked storytelling. Use CSS for simple hover, press, focus, and color transitions. Use **WebGL sparingly**, only where a DOM or SVG treatment cannot achieve the intended result as effectively.
+
+| Interaction | Duration | Direction |
+|---|---:|---|
+| Hover and press | 120–180 ms | 2–4 px movement, subtle surface or shadow response |
+| Selection feedback | 180–240 ms | Immediate selected state, then supporting explanation |
+| Menu or accordion | 200–300 ms | Short fade and 8–12 px movement |
+| Card entrance | 350–500 ms | 16–28 px movement; 30–60 ms stagger |
+| Headline or section entrance | 500–700 ms | One measured reveal |
+| Paper composition | 650–900 ms | Sheets settle individually into final position |
+| Exit | Roughly two thirds of entrance time | Prompt response to the next action |
+
+Use a decelerating entrance curve such as `cubic-bezier(0.22, 1, 0.36, 1)`. Keep scroll-triggered reveals short, local, and limited to once per section. Never hijack scrolling, force a snap, make visitors wait for an entrance to click, or hide essential content until an animation finishes.
+
+Every section should have an intentional motion moment, but reading text should remain steady once visible. Avoid word-by-word animation of paragraphs, persistent parallax behind copy, continuous camera movement, and decorative movement that competes with the content.
+
+## Section 1: Navigation
+
+**Current:** Mobile navigation loses important links. The page has several distinct entry routes, but they are not equally discoverable.
+
+**Build:**
+
+- Keep a clean desktop header with the brand, section links, sign-in, and primary workspace action.
+- Add a complete mobile menu with How it works, Practice, Simulations, Portfolio, Help, Sign in, and Create your workspace.
+- Keep **“Try a question” visible on mobile as a secondary action outside the menu**. It must not be buried behind the menu trigger.
+- Make the header sticky once the hero begins leaving view. An active-section indicator may update as visitors scroll.
+- Add a skip link. The menu must support Escape, focus management, and keyboard navigation.
+- Animate sticky compression in about 220 ms and menu entry in about 240 ms. Avoid layout shifts.
+
+## Section 2: Hero
+
+**Current:** The live headline is “Good judgment is a practice.” The paper collage establishes the visual language, but the product offer and entry action need greater clarity.
+
+**Build:**
+
+- Replace the headline with **“Good judgment. Built in the mess.”**
+- Use one tight sub-line that explains the whole journey: interviews and simulations lead to a portfolio of decisions and reasoning. Refine the exact sentence for clarity, but keep it to one sentence.
+- Make **“Try your first decision”** the primary action and **“Try a question”** or **“See how it works”** the visible secondary action. Match labels to their actual destinations.
+- Turn the brief, conflicting signals, and decision cards into an understandable sequence. Add restrained numbering or a connector: **brief → evidence → choice**.
+- Replace the tiny “63 scenarios · 21 simulations · Portfolio ready” treatment with legible benefit chips. Obtain all numbers from product data; never hard-code counts in landing copy.
+- If local or signed-in progress exists, replace the generic hero CTA with **“Continue where you left off”**, linked to the correct saved activity. Preserve a way to explore from the beginning.
+
+**Animation:**
+
+- Reveal the headline and actions immediately enough that the page feels ready to use. Bring the three paper sheets into place in sequence within roughly 1.2 seconds.
+- Each sheet moves at most 28 px and rotates at most 3° from its final angle. The settled composition should feel tactile, not chaotic.
+- Hover or focus lifts a relevant sheet 4–6 px and exposes a concise label. On touch, show these labels without hover.
+- If implementing WebGL, use one subtle signal field behind the paper: fine grid lines or restrained paths that converge toward the decision. Pointer response is limited to about 6–10 px. Maintain text contrast with an opaque paper layer or scrim. Provide a static SVG fallback.
+
+## Section 3: Journey ribbon
+
+**Current:** The ribbon reads as three decorative slogans.
+
+**Build:** Turn it into a compact journey map: **Explore a question → Practice a decision → Keep the reasoning.** Each step links to the corresponding section. A thin progress mark can follow page position. All three statements remain visible on mobile.
+
+**Animation:** Let the progress mark advance with scroll. Keep labels still and readable.
+
+## Section 4: First decision demo
+
+**Current:** The interactive chart and three choices are the strongest part of the page. Preserve this core interaction.
+
+**Build:**
+
+- Keep the chart, question, and three choices. Increase chart labels, option text, and explanatory copy to readable sizes.
+- Give the chart a clear title, time context or axis labels, release marker, and a visible “simulated data” label. State the chart’s main observation in text.
+- On selection, keep the existing feedback and add a concise rationale: **why this move helps or what it risks**.
+- Add a follow-up prompt: **“What would you check next?”** Offer a small set of meaningful next checks or a clear explanation of the next step.
+- Let visitors change their selection and provide a “Try another move” reset action. Never auto-advance.
+- Use background, border, icon, and text to identify the selected option. Announce feedback through a controlled live region.
+- End with a clear route to the full scenario.
+
+**Animation:** Selection responds immediately. Highlight the chosen row within 180 ms, reveal the relevant chart annotation in 250–350 ms, and show the rationale in about 250 ms. Do not change chart values to dramatize an answer.
+
+## Section 5: How it works
+
+**Current:** Three static columns explain interviews, simulations, and portfolio work, but show little of the product.
+
+**Build:**
+
+- Keep the three-stage structure: **Take the room → Carry the consequences → Build a body of work.**
+- Give each stage one concrete action and one visible output: an interview exchange, a branching choice, and a case-study excerpt.
+- Make the relationship between stages clear with a restrained connector or progress line.
+- On mobile, stack all stages in document order. Do not use a long pinned sequence.
+
+**Animation:** Reveal a stage’s product vignette as it enters view. Use 350–450 ms entrances and short stagger within the vignette. Keep all explanatory text available without waiting for motion.
+
+## Section 6: Real product preview strip
+
+Add this **between How it works and the category grid**.
+
+Build a compact interactive switcher with three views:
+
+1. **Interview prompt:** A question, an example request for evidence, and how the response is captured.
+2. **Simulation decision:** A real sample dilemma, available evidence, and a consequence preview.
+3. **Portfolio result:** The concise case-study output created from a decision.
+
+Use representative product UI and accurate labels. Tabs must support keyboard operation and show their active state clearly. The content should remain usable on a slow network or when an asset fails.
+
+**Animation:** Switch views with a directional crossfade or 8–12 px slide in 250–350 ms. Do not animate text character by character. If data loads, show a stable skeleton or a meaningful static example; never leave an empty panel.
+
+## Section 7: Choose your path
+
+Add this **before the seven-category practice grid**.
+
+Offer three prominent, working entry paths:
+
+- **Prepare for an interview**
+- **Practice a longer simulation**
+- **Build a portfolio**
+
+Each card needs a one-sentence explanation, a realistic indication of what happens next, and a direct link to the correct destination. If an account is required, say so before the click. The cards should differ through useful preview content rather than arbitrary decorative colors.
+
+**Animation:** Cards rise 16–20 px as the group enters view, staggered by 40 ms. On hover or focus, the active card lifts 3–4 px and its arrow moves 3 px. Touch users see all necessary copy by default.
+
+## Section 8: Practice categories
+
+**Current:** Seven categories show breadth, but their cards are visually repetitive and provide little guidance for beginners.
+
+**Build:**
+
+- Keep all seven categories and the overall grid.
+- Add a clear newcomer recommendation such as **“Start here”** when supported by the curriculum.
+- Each card should show the skill, a sample challenge, and a count drawn from product data. Make the outcome more prominent than the count.
+- If product metadata supports it, add filters for skill, expected time, or practice format. Do not add filters backed by invented attributes.
+- Every card is a real link. Focus gives the same detail as hover.
+
+**Animation:** Reveal only the visible row with 30–50 ms stagger. Keep hover movement restrained and avoid a long cascade across the entire grid.
+
+## Section 9: Simulations
+
+**Current:** Featured simulation cards are static `<article>` elements that look clickable.
+
+**Build:**
+
+- Make every featured card a real link to the corresponding simulation or a useful details page.
+- Show the dilemma, theme, estimated active time, and type of decision. Label simulated companies and operating data clearly.
+- Add a working **“View all simulations”** route.
+- Use an editorial folio stack without sacrificing scanning. On desktop, the active card can rise slightly above the others. On mobile, display cards in normal vertical flow.
+
+**Animation:** Cards settle into a stack on entrance, with no more than 3° rotational change. Hover or focus lifts one card about 6 px. A short scroll-linked stack is acceptable only if visitors can pass it at a normal pace and no content is obscured. Disable stacking motion under reduced motion.
+
+## Section 10: Portfolio
+
+**Current:** The tilted paper is visually appealing but its contents are largely unreadable.
+
+**Build:**
+
+- Replace it with a legible, realistic sample case study.
+- Show a **15-second skim**: problem, evidence, decision, trade-off, and next check or result.
+- Add a **“Go deeper”** view with source evidence, alternatives considered, and reflection.
+- Make the distinction between simulated practice and real professional work explicit. Preserve the “illustrative practice artifact” label.
+- Explain how a visitor controls sharing. Private work stays private until the user chooses to publish or share it; ensure the implemented product behavior matches this statement.
+- Keep the paper character, but place reading content on an upright or nearly upright plane.
+
+**Animation:** The deeper view unfolds or expands in 300–400 ms without moving the reader’s scroll position unexpectedly. Keep text upright and selectable. Under reduced motion, switch instantly.
+
+## Section 11: Credibility and transparency
+
+Add a short factual block before the FAQ. Cover:
+
+- How feedback is generated and what its limits are.
+- That practice companies, operating data, and outcomes are simulated.
+- That users may choose microphone or typing where those options exist.
+- How recording and private work are controlled.
+- That private portfolio work stays private until explicitly published or shared, if verified in the product.
+
+Use short statements with links to detailed help and policy pages. Do not imply AI feedback is a definitive hiring assessment. Do not add testimonials or outcome claims without approved evidence.
+
+**Animation:** Use simple icon or rule reveals, 300–400 ms. Keep the statements fully visible and stable after entrance.
+
+## Section 12: FAQ
+
+**Current:** Important questions are present, but type is small and the section has substantial unused space.
+
+**Build:**
+
+- Increase questions to 16–17 px and answers to 15–16 px.
+- Make open and closed indicators match the real state. Support multiple open questions.
+- Cover account-free use, saving or exporting work, microphone and recording choices, simulated work, private sharing, and pricing only where accurate.
+- Link to full help or policies for topics requiring detail.
+
+**Animation:** Open answers in about 220 ms, with no delayed keyboard response. Reduced-motion mode opens instantly.
+
+## Section 13: Final CTA and footer
+
+**Current:** The amber closing message is memorable, but the final CTA is generic and the oversized “Make the call.” footer wordmark is clipped.
+
+**Build:**
+
+- Keep the strong amber closing panel. Tell visitors what their first action will be after clicking: choose a prompt, make a decision, and inspect what changes.
+- Keep **“Start your practice”** as the primary action and offer a secondary route back to the question demo or practice library.
+- If progress exists, use **“Continue where you left off”** as the primary action here too.
+- Give the footer clear product, support, company, and policy links. Include social links only for maintained official accounts.
+- Retain **“Make the call.”** as a large brand flourish, but size it so the entire phrase is visible at every supported width and its descenders are not cut off.
+
+**Animation:** Reunite the brief, evidence, and decision marks once as the final panel enters view. Finish within 700 ms. The CTA remains immediately available.
+
+## Shared states and interaction audit
+
+- Review every button, text link, card, arrow, tab, accordion, and decorative element that appears interactive. Give it a real action or remove the interactive affordance.
+- Add meaningful loading, error, and empty states to the demo and preview strip. If WebGL fails or assets are blocked, show the static visual and preserve every control.
+- Handle returning users with actual progress: continue from the correct saved activity, and provide a clear route to start something new.
+- Keep destination labels accurate. A control labeled “Try a question” should open the question, not an unrelated sign-up screen without explanation.
+- Prevent layout shifts when feedback, previews, or deeper portfolio content appear.
+
+## Technical boundaries
+
+- Render all meaningful copy and controls as HTML or SVG before animation initializes.
+- Scope GSAP timelines to their components and clean up timelines and ScrollTriggers on unmount. Avoid animating layout properties when transforms will suffice.
+- Use one hero WebGL canvas at most. Cap pixel ratio and scene complexity. Pause it when off screen or when the tab is hidden. Handle context loss and release resources on unmount.
+- Provide a static SVG or image fallback for WebGL failure, reduced motion, and constrained devices.
+- Any automatic ambient motion lasting more than five seconds needs a visible pause option; preferably stop after a few cycles.
+- Respect `prefers-reduced-motion` when it changes at runtime. Disable parallax, looping, spinning, large zooms, and scroll-linked movement. Keep state changes understandable through instant updates or brief opacity transitions.
+- Never make animation the sole carrier of information.
+
+## Verification and definition of done
+
+Verify the page at 320, 375, 768, 1024, 1440, and 1920 px widths. Check for clipped typography, hidden actions, overlapping cards, horizontal scroll, and footer cropping. Test keyboard navigation, focus restoration, touch behavior, screen reader announcements, reduced motion, slow network, blocked assets, and WebGL failure.
+
+The finished page must load useful content quickly, respond to actions immediately, explain the product through real examples, and remain fully usable when all decorative motion is disabled.

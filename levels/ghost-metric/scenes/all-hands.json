@@ -1,0 +1,85 @@
+{
+  "id": "all-hands",
+  "type": "TOOL",
+  "background": "boardroom",
+  "goal": "Present on stage and respond to the audience.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "anders"
+  ],
+  "lines": [
+    {
+      "id": "line-9",
+      "speaker": "anders",
+      "expression": "thinking",
+      "text": "Tell the room what was true, and what changed."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "reveal",
+      "kind": "AllHands",
+      "title": "The all-hands reveal",
+      "items": [
+        {
+          "id": "own",
+          "label": "Own the correction.",
+          "detail": "",
+          "effects": [
+            {
+              "var": "temperature",
+              "op": "add",
+              "value": 4
+            },
+            {
+              "var": "credibility",
+              "op": "add",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "id": "limits",
+          "label": "Name the remaining uncertainty.",
+          "detail": "",
+          "effects": [
+            {
+              "var": "temperature",
+              "op": "add",
+              "value": 2
+            },
+            {
+              "var": "confidence",
+              "op": "add",
+              "value": -3
+            }
+          ]
+        },
+        {
+          "id": "celebrate",
+          "label": "Celebrate the cleaned growth alone.",
+          "detail": "",
+          "effects": [
+            {
+              "var": "temperature",
+              "op": "add",
+              "value": -4
+            }
+          ]
+        }
+      ],
+      "min": 2,
+      "max": 2,
+      "cost": 0,
+      "receiptId": "R_ghost-metric_reveal"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 8,
+  "act": 2,
+  "next": "definition"
+}

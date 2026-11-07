@@ -1,3 +1,4 @@
+import {headers} from "next/headers";
 import type { Metadata, Viewport } from "next";
 import "@fontsource/dm-serif-display/400.css";
 import "@fontsource/dm-serif-display/400-italic.css";
@@ -14,7 +15,7 @@ import { EntryGate } from "@/components/product/EntryGate";
 
 // Set NEXT_PUBLIC_SITE_URL when deploying. The localhost fallback keeps
 // canonical and social URLs valid for a local preview on the documented port.
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3001";
+const siteUrl = process.env.SITE_URL || process.env.BETTER_AUTH_URL || process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3002";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -53,13 +54,14 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const nonce=(await headers()).get('x-nonce')||undefined;
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
-        <script
+        <script nonce={nonce}
           // Must run before the first paint; see LOADER_BOOT_SCRIPT.
           dangerouslySetInnerHTML={{ __html: LOADER_BOOT_SCRIPT }}
         />
@@ -76,7 +78,6 @@ export default function RootLayout({
           {children}
           <EntryGate />
         </SettingsProvider>
-        <div className="grain" aria-hidden="true" />
       </body>
     </html>
   );

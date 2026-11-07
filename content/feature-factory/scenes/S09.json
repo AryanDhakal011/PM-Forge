@@ -1,0 +1,12 @@
+{
+  "id": "S09",
+  "type": "DESK",
+  "background": "desktop",
+  "goal": "Wednesday",
+  "tools": [
+    "inbox",
+    "board",
+    "dashboard",
+    "calendar"
+  ]
+}

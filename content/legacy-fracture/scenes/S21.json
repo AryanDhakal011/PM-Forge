@@ -1,0 +1,17 @@
+{
+  "id": "S21",
+  "type": "CINEMA",
+  "background": "night",
+  "goal": "Read the outcome",
+  "tools": [
+    "outcome"
+  ],
+  "lines": [
+    {
+      "speaker": "narrator",
+      "text": "The maps settle. The consequences do not.",
+      "expression": "neutral",
+      "clip": null
+    }
+  ]
+}

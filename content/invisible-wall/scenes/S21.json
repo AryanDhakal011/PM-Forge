@@ -1,0 +1,52 @@
+{
+  "id": "S21",
+  "type": "FACE",
+  "background": "annex",
+  "speakers": [
+    "imani",
+    "jonas"
+  ],
+  "lines": [
+    {
+      "id": "s21-1",
+      "speaker": "jonas",
+      "expression": "approving",
+      "text": "Now we're talking.",
+      "voiceId": "jonas",
+      "phase": "before",
+      "when": "interlock:dismantle"
+    },
+    {
+      "id": "s21-2",
+      "speaker": "imani",
+      "expression": "pressured",
+      "text": "Watch the load.",
+      "voiceId": "imani",
+      "phase": "before",
+      "when": "interlock:dismantle"
+    },
+    {
+      "id": "s21-3",
+      "speaker": "jonas",
+      "expression": "thinking",
+      "text": "Gate Five is farther away.",
+      "voiceId": "jonas",
+      "phase": "before",
+      "when": "interlock:integrate"
+    },
+    {
+      "id": "s21-4",
+      "speaker": "imani",
+      "expression": "approving",
+      "text": "It's honest. That matters.",
+      "voiceId": "imani",
+      "phase": "before",
+      "when": "interlock:integrate"
+    }
+  ],
+  "choices": [],
+  "tool": "continue",
+  "goal": "Face the policy consequences",
+  "canStill": "Read the response to the choice you made.",
+  "next": "S22"
+}

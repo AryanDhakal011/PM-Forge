@@ -1,6 +1,7 @@
 "use client";
 import {
   useEffect,
+  useLayoutEffect,
   useMemo,
   useRef,
   useState,
@@ -267,7 +268,7 @@ export default function SacredNoExperience() {
       window.removeEventListener("popstate", pop);
     };
   }, [owner, identityLoading]);
-  useEffect(() => {
+  useLayoutEffect(() => {
     voice.stop();
     setVoiceId(null);
     if (!run) return;
@@ -287,7 +288,7 @@ export default function SacredNoExperience() {
     }, root);
     return () => ctx.revert();
   }, [state.scene, run?.id, quiet]);
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!run || state.effect === "none") return;
     const ctx = gsap.context(() => {
       if (quiet) return;
@@ -848,7 +849,7 @@ export default function SacredNoExperience() {
               </div>
             </div>
             <small>
-              {content.notice}. About 40 minutes intended; actual play time is
+              {content.notice}. 15–25 min active play estimated; actual play time is
               uncalibrated. Pause anywhere.
             </small>
           </div>

@@ -1,0 +1,398 @@
+[
+  {
+    "id": "deadlock",
+    "scenes": 19,
+    "paths": [
+      {
+        "seed": 1,
+        "ending": "steady",
+        "actions": 79,
+        "receipts": 17
+      },
+      {
+        "seed": 2,
+        "ending": "guard",
+        "actions": 78,
+        "receipts": 17
+      },
+      {
+        "seed": 3,
+        "ending": "steady",
+        "actions": 79,
+        "receipts": 17
+      },
+      {
+        "seed": 4,
+        "ending": "guard",
+        "actions": 77,
+        "receipts": 17
+      },
+      {
+        "seed": 5,
+        "ending": "steady",
+        "actions": 79,
+        "receipts": 17
+      },
+      {
+        "seed": 6,
+        "ending": "steady",
+        "actions": 79,
+        "receipts": 17
+      },
+      {
+        "seed": 7,
+        "ending": "steady",
+        "actions": 79,
+        "receipts": 17
+      },
+      {
+        "seed": 8,
+        "ending": "steady",
+        "actions": 79,
+        "receipts": 17
+      },
+      {
+        "seed": 9,
+        "ending": "steady",
+        "actions": 79,
+        "receipts": 17
+      },
+      {
+        "seed": 10,
+        "ending": "guard",
+        "actions": 78,
+        "receipts": 17
+      }
+    ]
+  },
+  {
+    "id": "sacred-no",
+    "scenes": 11,
+    "paths": [
+      {
+        "seed": 1,
+        "ending": "backed",
+        "actions": 54,
+        "receipts": 11
+      },
+      {
+        "seed": 2,
+        "ending": "backed",
+        "actions": 52,
+        "receipts": 11
+      },
+      {
+        "seed": 3,
+        "ending": "backed",
+        "actions": 54,
+        "receipts": 11
+      },
+      {
+        "seed": 4,
+        "ending": "crash",
+        "actions": 52,
+        "receipts": 11
+      },
+      {
+        "seed": 5,
+        "ending": "backed",
+        "actions": 54,
+        "receipts": 11
+      },
+      {
+        "seed": 6,
+        "ending": "tolerated",
+        "actions": 52,
+        "receipts": 11
+      },
+      {
+        "seed": 7,
+        "ending": "backed",
+        "actions": 54,
+        "receipts": 11
+      },
+      {
+        "seed": 8,
+        "ending": "crash",
+        "actions": 52,
+        "receipts": 11
+      },
+      {
+        "seed": 9,
+        "ending": "backed",
+        "actions": 54,
+        "receipts": 11
+      },
+      {
+        "seed": 10,
+        "ending": "backed",
+        "actions": 54,
+        "receipts": 11
+      }
+    ]
+  },
+  {
+    "id": "ghost-metric",
+    "scenes": 13,
+    "paths": [
+      {
+        "seed": 1,
+        "ending": "calibrated",
+        "actions": 52,
+        "receipts": 12
+      },
+      {
+        "seed": 2,
+        "ending": "calibrated",
+        "actions": 52,
+        "receipts": 12
+      },
+      {
+        "seed": 3,
+        "ending": "calibrated",
+        "actions": 52,
+        "receipts": 12
+      },
+      {
+        "seed": 4,
+        "ending": "lie",
+        "actions": 52,
+        "receipts": 12
+      },
+      {
+        "seed": 5,
+        "ending": "calibrated",
+        "actions": 52,
+        "receipts": 12
+      },
+      {
+        "seed": 6,
+        "ending": "lie",
+        "actions": 48,
+        "receipts": 11
+      },
+      {
+        "seed": 7,
+        "ending": "calibrated",
+        "actions": 52,
+        "receipts": 12
+      },
+      {
+        "seed": 8,
+        "ending": "calibrated",
+        "actions": 52,
+        "receipts": 12
+      },
+      {
+        "seed": 9,
+        "ending": "calibrated",
+        "actions": 52,
+        "receipts": 12
+      },
+      {
+        "seed": 10,
+        "ending": "quiet",
+        "actions": 52,
+        "receipts": 12
+      }
+    ]
+  },
+  {
+    "id": "trojan-horse",
+    "scenes": 15,
+    "paths": [
+      {
+        "seed": 1,
+        "ending": "gardener",
+        "actions": 56,
+        "receipts": 12
+      },
+      {
+        "seed": 2,
+        "ending": "pragmatist",
+        "actions": 56,
+        "receipts": 12
+      },
+      {
+        "seed": 3,
+        "ending": "gardener",
+        "actions": 56,
+        "receipts": 12
+      },
+      {
+        "seed": 4,
+        "ending": "pragmatist",
+        "actions": 56,
+        "receipts": 12
+      },
+      {
+        "seed": 5,
+        "ending": "gardener",
+        "actions": 56,
+        "receipts": 12
+      },
+      {
+        "seed": 6,
+        "ending": "blanket",
+        "actions": 55,
+        "receipts": 12
+      },
+      {
+        "seed": 7,
+        "ending": "gardener",
+        "actions": 56,
+        "receipts": 12
+      },
+      {
+        "seed": 8,
+        "ending": "pragmatist",
+        "actions": 55,
+        "receipts": 12
+      },
+      {
+        "seed": 9,
+        "ending": "gardener",
+        "actions": 56,
+        "receipts": 12
+      },
+      {
+        "seed": 10,
+        "ending": "pragmatist",
+        "actions": 56,
+        "receipts": 12
+      }
+    ]
+  },
+  {
+    "id": "last-mile",
+    "scenes": 13,
+    "paths": [
+      {
+        "seed": 1,
+        "ending": "safe",
+        "actions": 50,
+        "receipts": 12
+      },
+      {
+        "seed": 2,
+        "ending": "safe",
+        "actions": 50,
+        "receipts": 12
+      },
+      {
+        "seed": 3,
+        "ending": "safe",
+        "actions": 50,
+        "receipts": 12
+      },
+      {
+        "seed": 4,
+        "ending": "safe",
+        "actions": 50,
+        "receipts": 12
+      },
+      {
+        "seed": 5,
+        "ending": "safe",
+        "actions": 50,
+        "receipts": 12
+      },
+      {
+        "seed": 6,
+        "ending": "safe",
+        "actions": 50,
+        "receipts": 12
+      },
+      {
+        "seed": 7,
+        "ending": "safe",
+        "actions": 50,
+        "receipts": 12
+      },
+      {
+        "seed": 8,
+        "ending": "safe",
+        "actions": 50,
+        "receipts": 12
+      },
+      {
+        "seed": 9,
+        "ending": "safe",
+        "actions": 50,
+        "receipts": 12
+      },
+      {
+        "seed": 10,
+        "ending": "safe",
+        "actions": 50,
+        "receipts": 12
+      }
+    ]
+  },
+  {
+    "id": "toy-regression",
+    "scenes": 3,
+    "paths": [
+      {
+        "seed": 1,
+        "ending": "bounded",
+        "actions": 3,
+        "receipts": 1
+      },
+      {
+        "seed": 2,
+        "ending": "bounded",
+        "actions": 3,
+        "receipts": 1
+      },
+      {
+        "seed": 3,
+        "ending": "bounded",
+        "actions": 3,
+        "receipts": 1
+      },
+      {
+        "seed": 4,
+        "ending": "bounded",
+        "actions": 3,
+        "receipts": 1
+      },
+      {
+        "seed": 5,
+        "ending": "bounded",
+        "actions": 3,
+        "receipts": 1
+      },
+      {
+        "seed": 6,
+        "ending": "bounded",
+        "actions": 3,
+        "receipts": 1
+      },
+      {
+        "seed": 7,
+        "ending": "bounded",
+        "actions": 3,
+        "receipts": 1
+      },
+      {
+        "seed": 8,
+        "ending": "bounded",
+        "actions": 3,
+        "receipts": 1
+      },
+      {
+        "seed": 9,
+        "ending": "bounded",
+        "actions": 3,
+        "receipts": 1
+      },
+      {
+        "seed": 10,
+        "ending": "bounded",
+        "actions": 3,
+        "receipts": 1
+      }
+    ]
+  }
+]

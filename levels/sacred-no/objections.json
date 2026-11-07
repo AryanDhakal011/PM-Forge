@@ -1,0 +1,59 @@
+[
+  {
+    "id": "evidence-objection",
+    "concern": "Unverified claim",
+    "text": "Show me the evidence behind that claim.",
+    "resolvers": [
+      {
+        "type": "evidence",
+        "ref": "data"
+      },
+      {
+        "type": "evidence",
+        "ref": "revenue"
+      },
+      {
+        "type": "evidence",
+        "ref": "burnout"
+      },
+      {
+        "type": "evidence",
+        "ref": "alternative"
+      },
+      {
+        "type": "evidence",
+        "ref": "reputation"
+      },
+      {
+        "type": "evidence",
+        "ref": "board"
+      },
+      {
+        "type": "evidence",
+        "ref": "payments"
+      },
+      {
+        "type": "evidence",
+        "ref": "support"
+      },
+      {
+        "type": "evidence",
+        "ref": "downside"
+      }
+    ],
+    "onResolve": [
+      {
+        "var": "credibility",
+        "op": "add",
+        "value": 5
+      }
+    ],
+    "onFail": [
+      {
+        "var": "credibility",
+        "op": "add",
+        "value": -5
+      }
+    ]
+  }
+]

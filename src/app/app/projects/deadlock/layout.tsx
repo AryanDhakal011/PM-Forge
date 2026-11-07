@@ -1,6 +1,6 @@
 import { preload } from "react-dom";
 import type { Metadata } from "next";
-import DeadlockExperience from "@/components/deadlock/DeadlockExperience";
+import DeadlockExperience from "@/components/deadlock/LegacyMount";
 export const metadata: Metadata = {
   title: "The Deadlock — PMForge",
   description:

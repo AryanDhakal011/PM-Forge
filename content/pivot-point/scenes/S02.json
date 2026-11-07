@@ -1,0 +1,1 @@
+{"id":"S02","type":"TOOL","background":"corridor","goal":"Place Raman. Both choices cost something.","tools":["first"],"lines":[{"speaker":"raman","text":"My shop does not run itself.","expression":"thinking"},{"speaker":"raman","text":"Every place given is a place withheld.","expression":"thinking"}]}

@@ -1,0 +1,93 @@
+[
+  {
+    "voiceId": "placeholder-sana",
+    "person": "sana",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "Wards five and nine are under.",
+    "samples": [
+      "Wards five and nine are under.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-mina",
+    "person": "mina",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "Half my staff cannot get in.",
+    "samples": [
+      "Half my staff cannot get in.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-bikram",
+    "person": "bikram",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "Water is at my knees. Orders still coming.",
+    "samples": [
+      "Water is at my knees. Orders still coming.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-salma",
+    "person": "salma",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "The bridge is closed. My route is not.",
+    "samples": [
+      "The bridge is closed. My route is not.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-joon",
+    "person": "joon",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "Tell me where I can wait safely.",
+    "samples": [
+      "Tell me where I can wait safely.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-anita",
+    "person": "anita",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "I need the next instruction to be clear.",
+    "samples": [
+      "I need the next instruction to be clear.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-rakesh",
+    "person": "rakesh",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "A reopened zone still needs a way home.",
+    "samples": [
+      "A reopened zone still needs a way home.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  }
+]

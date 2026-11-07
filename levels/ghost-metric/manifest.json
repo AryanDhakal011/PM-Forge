@@ -1,0 +1,71 @@
+{
+  "id": "ghost-metric",
+  "title": "The Ghost Metric",
+  "tagline": "The number is a story. Make it survive an audit.",
+  "company": "THE COUNTING ROOM",
+  "status": "draft",
+  "version": "2.0.0",
+  "minPlatformVersion": "1.0.0",
+  "palette": {
+    "bg": "#101b22",
+    "ink": "#f4f2e7",
+    "accent": "#c3b6e4"
+  },
+  "fonts": [
+    "Inter",
+    "DM Serif Display"
+  ],
+  "difficulty": {
+    "guided": "Preview effects and see decision hints.",
+    "standard": "Read the situation without previews.",
+    "sharp": "Hide soft meters and handle extra check-ins."
+  },
+  "entranceArt": "/levels/ghost-metric/art/backgrounds/office.svg",
+  "estimatedMinutes": 25,
+  "startScene": "retry",
+  "scenes": [
+    "retry",
+    "drawer-cart",
+    "join",
+    "autopsy",
+    "bet",
+    "promise",
+    "confession",
+    "slides",
+    "all-hands",
+    "definition",
+    "heist",
+    "board",
+    "review"
+  ],
+  "people": [
+    "joyce",
+    "ravi",
+    "anders",
+    "elena",
+    "retrier",
+    "duper",
+    "insider"
+  ],
+  "assetsBudgetKB": 3072,
+  "voiceCast": {},
+  "labels": "Simulated company, authored scenarios, expert review pending",
+  "flagKey": "ghost-metric",
+  "minEvents": 24,
+  "systemic": true,
+  "launchCandidate": false,
+  "reviewGates": {
+    "design": "pending",
+    "content": "pending",
+    "accessibility-manual": "pending",
+    "performance": "pending",
+    "security": "pending",
+    "playtest": "pending",
+    "domain": "pending"
+  },
+  "acts": [
+    "The Autopsy",
+    "The Reveal",
+    "The Heist"
+  ]
+}

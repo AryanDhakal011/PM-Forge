@@ -1,0 +1,218 @@
+[
+  {
+    "id": "elliot",
+    "name": "Elliot Vance",
+    "role": "SVP Strategy",
+    "voice": "bm_george",
+    "speed": 0.92,
+    "want": "A credible win before reorganisation.",
+    "fear": "Being blamed for an unfunded promise.",
+    "concern": "steel",
+    "prop": "tired kindness",
+    "topics": [
+      "Politics",
+      "Who to see first",
+      "The Quarterly Review",
+      "Risks to you",
+      "How decisions happen",
+      "Past failed projects"
+    ],
+    "leadins": [
+      "I can sponsor you. I cannot order them.",
+      "Start with what each person could lose.",
+      "The review wants a decision we can deliver.",
+      "Off the record. I need this to hold.",
+      "Every seat has a veto.",
+      "The last programme forgot the people running it."
+    ]
+  },
+  {
+    "id": "walter",
+    "name": "Walter Abbott",
+    "role": "Chief Financial Officer",
+    "voice": "bm_daniel",
+    "speed": 0.98,
+    "want": "A capped cost and credible payback.",
+    "fear": "Another open-ended programme.",
+    "concern": "COST",
+    "prop": "ledger pen",
+    "topics": [
+      "Revenue at risk",
+      "Price",
+      "Cost caps",
+      "What changes your mind",
+      "Payback",
+      "Who you trust"
+    ],
+    "leadins": [
+      "Revenue is leaking at renewal.",
+      "Pricing is the problem. It always is.",
+      "Capped. Then we can talk.",
+      "Show me what would disprove my theory.",
+      "Payback needs a customer outcome.",
+      "Beatrice knows the accounts behind the spreadsheet."
+    ]
+  },
+  {
+    "id": "dolores",
+    "name": "Dolores Reyes",
+    "role": "Chief Operating Officer",
+    "voice": "af_nicole",
+    "speed": 0.98,
+    "want": "A process claims teams can run.",
+    "fear": "Higher costs and call volumes.",
+    "concern": "RISK",
+    "prop": "rolled sleeves",
+    "topics": [
+      "Claims process",
+      "Call volumes",
+      "Service levels",
+      "What worries you",
+      "Pilot design",
+      "Who owns status"
+    ],
+    "leadins": [
+      "Show me the process.",
+      "More updates can mean more calls.",
+      "A service level needs an owner.",
+      "Do not move the cost into my team.",
+      "Prove it in a small pilot.",
+      "Intake hands the claim to an adjuster."
+    ]
+  },
+  {
+    "id": "anand",
+    "name": "Anand Rao",
+    "role": "Chief Information Officer",
+    "voice": "bm_lewis",
+    "speed": 0.92,
+    "want": "A stable core and a safe boundary.",
+    "fear": "An outage after four hundred quiet days.",
+    "concern": "STABILITY",
+    "prop": "cardigan",
+    "topics": [
+      "Core stability",
+      "Change windows",
+      "Last outage",
+      "A side feed",
+      "Who you trust",
+      "What you need"
+    ],
+    "leadins": [
+      "Nothing writes into the core without review.",
+      "Not every weekday is a change window.",
+      "Four hundred days since the last outage.",
+      "Beside the core, not inside it.",
+      "Tobias knows what the diagrams leave out.",
+      "A boundary, a rollback, and an owner."
+    ]
+  },
+  {
+    "id": "beatrice",
+    "name": "Beatrice Okonjo",
+    "role": "Chief Distribution Officer",
+    "voice": "af_bella",
+    "speed": 0.98,
+    "want": "Brokers informed before their clients.",
+    "fear": "Losing the relationship to competitors.",
+    "concern": "BROKERS",
+    "prop": "broker notebook",
+    "topics": [
+      "Brokers",
+      "Commissions",
+      "Competitors",
+      "Broker communication",
+      "Who to see",
+      "Your stance"
+    ],
+    "leadins": [
+      "My brokers want to hear it first.",
+      "Competitors pay more. Or so I hear.",
+      "Bring a comparison, not a rumour.",
+      "Tell brokers before clients tell them.",
+      "Walter listens when an account has a name.",
+      "I back what protects the relationship."
+    ]
+  },
+  {
+    "id": "gideon",
+    "name": "Gideon Hale",
+    "role": "Chief Compliance Officer",
+    "voice": "am_michael",
+    "speed": 0.92,
+    "want": "Approved factual wording, in writing.",
+    "fear": "An unreviewed promise to a claimant.",
+    "concern": "COMPLIANCE",
+    "prop": "rimless glasses",
+    "topics": [
+      "Wording rules",
+      "Past incidents",
+      "Approvals",
+      "Templates",
+      "Deadlines",
+      "Personal risk"
+    ],
+    "leadins": [
+      "Approved factual wording. No invented promises.",
+      "A message can outlive the meeting that approved it.",
+      "In writing, please.",
+      "Templates keep the boundary clear.",
+      "Legal review also needs working days.",
+      "Name who signs the wording."
+    ]
+  },
+  {
+    "id": "marta",
+    "name": "Marta Solberg",
+    "role": "Data Steward",
+    "voice": "af_heart",
+    "speed": 0.98,
+    "want": "A question, not a demand for everything.",
+    "fear": "Extracts used without context.",
+    "concern": "access",
+    "prop": "keys",
+    "topics": [
+      "Datasets",
+      "Access",
+      "Tickets",
+      "Landmines",
+      "History",
+      "How to ask"
+    ],
+    "leadins": [
+      "I prefer a question to everything.",
+      "Restricted extracts need a ticket.",
+      "A ticket can be a useful conversation.",
+      "There are traps in the old status field.",
+      "The field changed meaning between systems.",
+      "Ask what you need to decide."
+    ]
+  },
+  {
+    "id": "tobias",
+    "name": "Tobias Wren",
+    "role": "Mainframe Operator",
+    "voice": "am_fenrir",
+    "speed": 0.98,
+    "want": "A safe window and a named rollback.",
+    "fear": "A Friday core change.",
+    "concern": "stability",
+    "prop": "thermos",
+    "topics": [
+      "Change windows",
+      "Rollbacks",
+      "What breaks",
+      "Nightly batches",
+      "A safe pilot",
+      "Your advice"
+    ],
+    "leadins": [
+      "Not on a Friday.",
+      "Tell me how we get back.",
+      "The batch does not care about our deadline.",
+      "Nightly means nightly. It is not a live feed.",
+      "A feed beside the core. Flag it.",
+      "Leave five working days after approval."
+    ]
+  }
+]

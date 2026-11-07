@@ -1,0 +1,412 @@
+{
+  "version": 1,
+  "provider": "Kokoro-82M v1.0 / kokoro-onnx 0.6.1",
+  "directionLimit": "Emotion tags adjust pace and pauses. This model does not provide native acted emotions.",
+  "lines": {
+    "party-1": {
+      "file": "/trojan-horse/audio/party-1.mp3",
+      "signature": "c6d1b9dc31aa8caf082d1c883f059358a19833fdb04c10840c74c4bb6669b664",
+      "caption": "Six weeks. Five times the users. Tonight, take a moment. You built this.",
+      "speaker": "kavya",
+      "emotion": "warm",
+      "voice": "af_heart",
+      "duration": 5.131
+    },
+    "party-2": {
+      "file": "/trojan-horse/audio/party-2.mp3",
+      "signature": "f7f8438275f823f500cbb79b253c8d4af23650813d90fa55807dc95312138d92",
+      "caption": "I saved you a drink. Though Omar has been staring at that spreadsheet all night.",
+      "speaker": "dani",
+      "emotion": "warm",
+      "voice": "af_bella",
+      "duration": 4.87
+    },
+    "mismatch-1": {
+      "file": "/trojan-horse/audio/mismatch-1.mp3",
+      "signature": "f4a54766457ab615845d28ccf487fbed478bb68a926e34f9fca69ba4db9d3fc1",
+      "caption": "The stage says one hundred twenty thousand in weekly payouts. My ledger says four hundred ten thousand.",
+      "speaker": "omar",
+      "emotion": "concerned",
+      "voice": "bm_george",
+      "duration": 8.144
+    },
+    "mismatch-2": {
+      "file": "/trojan-horse/audio/mismatch-2.mp3",
+      "signature": "7d6460946587429f2d2518652840cfe211f68af270b1697d972600d6476be0d1",
+      "caption": "Before anyone calls this sustainable, help me explain the difference.",
+      "speaker": "omar",
+      "emotion": "firm",
+      "voice": "bm_george",
+      "duration": 4.849
+    },
+    "sample-1": {
+      "file": "/trojan-horse/audio/sample-1.mp3",
+      "signature": "53284b0d513b44ceb1c318cffe42e60af3d08af96fb02e16d7ef45d6e1d65cd2",
+      "caption": "Ana refers Ben. Ben refers Ana back. What should that pair earn? Try it here.",
+      "speaker": "dani",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 5.421
+    },
+    "role-1": {
+      "file": "/trojan-horse/audio/role-1.mp3",
+      "signature": "1678b60348f26bf5d8c321b4f661ace9d449c84730e0c0e41e2f295ff104fe27",
+      "caption": "You own referrals at Gilt, a neighborhood marketplace. I'm Omar, your finance partner.",
+      "speaker": "omar",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 6.501
+    },
+    "role-2": {
+      "file": "/trojan-horse/audio/role-2.mp3",
+      "signature": "fda58ea1a3fe7301e97b501e741e20c11eb39ad35a5017e586b9e9921246630e",
+      "caption": "I'm Dani. I run growth. We celebrated signups before checking who stayed.",
+      "speaker": "dani",
+      "emotion": "concerned",
+      "voice": "af_bella",
+      "duration": 5.268
+    },
+    "role-3": {
+      "file": "/trojan-horse/audio/role-3.mp3",
+      "signature": "582127f858ce39c865310d6b0a8574b1f6b2121f33928c366f044528837c7d64",
+      "caption": "I'm Kavya, the CEO. We have twelve weeks of cash. Find the real growth worth keeping.",
+      "speaker": "kavya",
+      "emotion": "firm",
+      "voice": "af_heart",
+      "duration": 6.004
+    },
+    "role-4": {
+      "file": "/trojan-horse/audio/role-4.mp3",
+      "signature": "f26eaf862a9ebd41be461b2c3c85aa33132f25e3faca1b8c1621107f1479ff86",
+      "caption": "Three evidence pulls tonight. Then set payouts, protect useful customers, and explain the change.",
+      "speaker": "omar",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 7.238
+    },
+    "reply-1": {
+      "file": "/trojan-horse/audio/reply-1.mp3",
+      "signature": "726bacf282d71d32db9cf4c07fe5ccacbbbf48ae3ee7911031bbe5e0666f6318",
+      "caption": "The board wants a sentence from you. Can we keep this growth going?",
+      "speaker": "kavya",
+      "emotion": "warm",
+      "voice": "af_heart",
+      "duration": 3.869
+    },
+    "guide-evidence": {
+      "file": "/trojan-horse/audio/guide-evidence.mp3",
+      "signature": "e78d642590ea42ed6f95cebb5d33a9c9953a318ee84c6f19bcb1f2f38b622417",
+      "caption": "Pick three reports. Each costs one pull. Opened reports stay in your case file.",
+      "speaker": "omar",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 6.063
+    },
+    "guide-lens": {
+      "file": "/trojan-horse/audio/guide-lens.mp3",
+      "signature": "bad5cd3aa416935af5beb4ec7d88b340ffd44014403ccfbd0dce8627ad60025b",
+      "caption": "Try devices, purchases, and location. Separate fake accounts from people who really buy here.",
+      "speaker": "dani",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 6.617
+    },
+    "guide-valve": {
+      "file": "/trojan-horse/audio/guide-valve.mp3",
+      "signature": "fb781f23bd3cbc384c3976884a5d6976ce030a332f6803f748e3a958d8555662",
+      "caption": "These controls change weekly payouts. Watch runway, then commit a week to see the result.",
+      "speaker": "omar",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 6.672
+    },
+    "week-1": {
+      "file": "/trojan-horse/audio/week-1.mp3",
+      "signature": "2976b22ee14faf13dab823932c97631aeda3850369878f7fc989f4c265976262",
+      "caption": "The signup curve moved. I need to know which customers we lost, not just how many.",
+      "speaker": "dani",
+      "emotion": "concerned",
+      "voice": "af_bella",
+      "duration": 5.402
+    },
+    "week-2": {
+      "file": "/trojan-horse/audio/week-2.mp3",
+      "signature": "0da218b746117960e449a82d553d912958f9e8d6bf9832d9e704f2712e2fffa6",
+      "caption": "Exactly. Cheaper growth means little if we cut the customers who create value.",
+      "speaker": "omar",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 5.957
+    },
+    "message-1": {
+      "file": "/trojan-horse/audio/message-1.mp3",
+      "signature": "0873f29f0c56d4db5b87e3595be53636a1848f9e0d422149b619551eda9a9d26",
+      "caption": "People are asking if mutual referrals are a feature. What can we honestly promise tonight?",
+      "speaker": "kavya",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 5.779
+    },
+    "call-1": {
+      "file": "/trojan-horse/audio/call-1.mp3",
+      "signature": "f4220788afca4c228d6b9fbe814254616b6d5bbf2820fe6aa918b4f832a8fd4f",
+      "caption": "I'm Tomas. I work with the neighborhood Guilds. Those gold loops are actual shops.",
+      "speaker": "tomas",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 6.272
+    },
+    "call-2": {
+      "file": "/trojan-horse/audio/call-2.mp3",
+      "signature": "be42c934466f8f6809a3ec6bf6b02ad85d69640cac990bb4347d6da503732db8",
+      "caption": "Leena's bakery sends customers to the florist. They send people back. Both make sales.",
+      "speaker": "tomas",
+      "emotion": "warm",
+      "voice": "am_michael",
+      "duration": 6.591
+    },
+    "call-3": {
+      "file": "/trojan-horse/audio/call-3.mp3",
+      "signature": "9eff9259dff9021796c02b96986535906cf076255c8bc0880a0e210d1e7dd27e",
+      "caption": "We put mutual referral bonuses in their contracts. She hired someone against that income.",
+      "speaker": "tomas",
+      "emotion": "concerned",
+      "voice": "am_michael",
+      "duration": 6.764
+    },
+    "call-4": {
+      "file": "/trojan-horse/audio/call-4.mp3",
+      "signature": "4cd94eabc1a241a19acde50c961b54110bcb41b47891178c0a4593694544dd4c",
+      "caption": "Please separate the fake accounts from the promise we made her.",
+      "speaker": "tomas",
+      "emotion": "firm",
+      "voice": "am_michael",
+      "duration": 4.03
+    },
+    "guide-segments": {
+      "file": "/trojan-horse/audio/guide-segments.mp3",
+      "signature": "a32e4b781bc71fb0e27af4695b35b1fb9ad0e7231bb09e10349543aa1efba947",
+      "caption": "Assign a policy to each segment. The forecast includes lost Guild revenue, not just saved rewards.",
+      "speaker": "tomas",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 7.938
+    },
+    "guide-grace": {
+      "file": "/trojan-horse/audio/guide-grace.mp3",
+      "signature": "0796270119623e8d2b681933c2f089980156c24e1b18f8b73efc2eb55f6915b9",
+      "caption": "Notice buys people time, but costs cash. Thirty days honors the month we promised.",
+      "speaker": "tomas",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 6.338
+    },
+    "human-1": {
+      "file": "/trojan-horse/audio/human-1.mp3",
+      "signature": "7192dc3162058626a775af97811ef8ea70c9ceea841ae1bf1e54a90067f8fe83",
+      "caption": "I called it a flywheel in the board deck. I should have looked past the curve.",
+      "speaker": "dani",
+      "emotion": "concerned",
+      "voice": "af_bella",
+      "duration": 4.261
+    },
+    "human-2": {
+      "file": "/trojan-horse/audio/human-2.mp3",
+      "signature": "89ccc26ff2359ac4211133d338200482fcfdb579d3eec7eda27757bce871ad82",
+      "caption": "Let's keep what works. I can live with a smaller number if it's real.",
+      "speaker": "dani",
+      "emotion": "firm",
+      "voice": "af_bella",
+      "duration": 4.155
+    },
+    "guide-composer": {
+      "file": "/trojan-horse/audio/guide-composer.mp3",
+      "signature": "f93b64bae37e86d2683728a5a9276a05600cf4b3476e356e6c4972145a647485",
+      "caption": "I'm Rhea, community lead. Give me a reason, timing, exceptions, and somewhere people can ask questions.",
+      "speaker": "rhea",
+      "emotion": "thinking",
+      "voice": "bf_emma",
+      "duration": 6.521
+    },
+    "screenshot-1": {
+      "file": "/trojan-horse/audio/screenshot-1.mp3",
+      "signature": "747c3ba79448ce7af1d6bdec75c56215a8f1bed7b2702315de5fe9842b78704e",
+      "caption": "Someone posted our old message beside today's plan. Read both before you answer.",
+      "speaker": "rhea",
+      "emotion": "concerned",
+      "voice": "bf_emma",
+      "duration": 5.456
+    },
+    "revolt-1": {
+      "file": "/trojan-horse/audio/revolt-1.mp3",
+      "signature": "2b75090896ebffcf4755806283266c611aa199e19ff20db77586c2d84fa3eae7",
+      "caption": "Reviews are falling. People feel the rules changed underneath them. We need to own that.",
+      "speaker": "rhea",
+      "emotion": "concerned",
+      "voice": "bf_emma",
+      "duration": 5.347
+    },
+    "steady-1": {
+      "file": "/trojan-horse/audio/steady-1.mp3",
+      "signature": "2b801271bd0da3cfc77c7b6a3dd0cc46d9190c7c4be3277d07c55ed8c1ae9bb4",
+      "caption": "There's pushback, but people understand the change. Matching our words to the rollout helped.",
+      "speaker": "rhea",
+      "emotion": "approving",
+      "voice": "bf_emma",
+      "duration": 5.512
+    },
+    "funding-1": {
+      "file": "/trojan-horse/audio/funding-1.mp3",
+      "signature": "3fbd76d22306af838f03c48980490e62a1d9237db295db781595f813383280a2",
+      "caption": "I'm Priya, your lead investor. We can bridge two million dollars for eight percent ownership.",
+      "speaker": "priya",
+      "emotion": "firm",
+      "voice": "bf_isabella",
+      "duration": 5.48
+    },
+    "funding-2": {
+      "file": "/trojan-horse/audio/funding-2.mp3",
+      "signature": "199fdfcb06f009351067e8e68fbeb136d6aa1c630fc9899f38d82cabb66514ac",
+      "caption": "That buys time. It doesn't fix the referral model. The dilution is permanent.",
+      "speaker": "omar",
+      "emotion": "concerned",
+      "voice": "bm_george",
+      "duration": 5.958
+    },
+    "nofunding-1": {
+      "file": "/trojan-horse/audio/nofunding-1.mp3",
+      "signature": "214e473a0ac78c017d1555e7f894b06ffc28e9e859df1d73df1d104cee38b699",
+      "caption": "We have enough runway to avoid an emergency bridge. Keep measuring the customers we retained.",
+      "speaker": "omar",
+      "emotion": "approving",
+      "voice": "bm_george",
+      "duration": 6.961
+    },
+    "final-1": {
+      "file": "/trojan-horse/audio/final-1.mp3",
+      "signature": "3ff0420e357462ae5924959a842ef7afcde2b4799f5c71132b211da5ba1cfccb",
+      "caption": "We have one recovery team this week. Community support, partner repair, or a tighter cash forecast?",
+      "speaker": "rhea",
+      "emotion": "thinking",
+      "voice": "bf_emma",
+      "duration": 6.198
+    },
+    "final-2": {
+      "file": "/trojan-horse/audio/final-2.mp3",
+      "signature": "abad991f61cc61fb2de3dd837383e164d7c015aaef8b708728a618f6baf82118",
+      "caption": "Splitting it helps both teams a little. Pick what you can actually stand behind.",
+      "speaker": "tomas",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 5.297
+    },
+    "ledger-1": {
+      "file": "/trojan-horse/audio/ledger-1.mp3",
+      "signature": "ad54d3d05c43be650d4f137f659aca536142b95044c9d104e849bd6cf43daae0",
+      "caption": "Here's the ledger. What you kept, what you cut, and what it cost. Start with the conclusion.",
+      "speaker": "omar",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 6.426
+    },
+    "device-1": {
+      "file": "/trojan-horse/audio/device-1.mp3",
+      "signature": "ad741d847c3b8b9ac708abb02bad5dc17cc987c9e9bacef999b89fcf67be1929",
+      "caption": "One phone, fourteen accounts, no purchases. That's a fraud signal, not a neighborhood business.",
+      "speaker": "omar",
+      "emotion": "firm",
+      "voice": "bm_george",
+      "duration": 6.637
+    },
+    "purchase-1": {
+      "file": "/trojan-horse/audio/purchase-1.mp3",
+      "signature": "3242afbe3f094c8e6fb11f6c440248df736c59d762865decf31070b5cbce273f",
+      "caption": "The gold loops buy again without a bonus. That's the difference I missed.",
+      "speaker": "dani",
+      "emotion": "approving",
+      "voice": "af_bella",
+      "duration": 4.357
+    },
+    "location-1": {
+      "file": "/trojan-horse/audio/location-1.mp3",
+      "signature": "15a26c89aaf6053cc10aa5b492053c6363f9b3247f2d1abe5458cfde02cc4e6f",
+      "caption": "Three neighborhoods. Different phones. These are businesses sending customers to each other.",
+      "speaker": "tomas",
+      "emotion": "warm",
+      "voice": "am_michael",
+      "duration": 6.163
+    },
+    "no-pattern-1": {
+      "file": "/trojan-horse/audio/no-pattern-1.mp3",
+      "signature": "e7c3bb6511276cda822daeb525b37ee5a7603bee4b1d3a44bd5af37ecb45ef10",
+      "caption": "Account age alone doesn't separate these groups. We spent a check, but learned no useful pattern.",
+      "speaker": "dani",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 6.49
+    },
+    "report-ledger": {
+      "file": "/trojan-horse/audio/report-ledger.mp3",
+      "signature": "aa1605797ae02edb08c1ab188e018210ead1783032b72275bc764d42b7981bbb",
+      "caption": "There it is. The stage left out circular rewards. The missing cost is two hundred ninety thousand.",
+      "speaker": "omar",
+      "emotion": "firm",
+      "voice": "bm_george",
+      "duration": 7.184
+    },
+    "report-graph": {
+      "file": "/trojan-horse/audio/report-graph.mp3",
+      "signature": "d1ea855cdda91ca3dccef866e1303cf5329b8397eb0934bc05580c5dce6a2783",
+      "caption": "Some rings are huge. Others are just two shops. We can't call them all the same thing.",
+      "speaker": "dani",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 5.637
+    },
+    "report-value": {
+      "file": "/trojan-horse/audio/report-value.mp3",
+      "signature": "839883c834e34e19a09a75b1cf876e70ea786485e351e0556da98721a09c93a7",
+      "caption": "Guild customers are worth four times the average. Cutting that loop would cut real value.",
+      "speaker": "dani",
+      "emotion": "concerned",
+      "voice": "af_bella",
+      "duration": 5.868
+    },
+    "report-device": {
+      "file": "/trojan-horse/audio/report-device.mp3",
+      "signature": "c6c31b94f9f754eac6950fdb27ba723cf1ec330f3a4cd7f5eabde1c4ba375fc5",
+      "caption": "Fourteen accounts on one phone. Start there, before touching the shops buying every week.",
+      "speaker": "omar",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 6.503
+    },
+    "report-community": {
+      "file": "/trojan-horse/audio/report-community.mp3",
+      "signature": "015788d1a9f55bc674954cf50a7f60d5cd0e9bc53062e8823ef32e7f4d91ac72",
+      "caption": "People built routines around these rewards. They'll want a reason, not just a switch turning off.",
+      "speaker": "rhea",
+      "emotion": "concerned",
+      "voice": "bf_emma",
+      "duration": 5.691
+    },
+    "report-contract": {
+      "file": "/trojan-horse/audio/report-contract.mp3",
+      "signature": "07e7d3acf510b2740762f7ed26359dbf50a25b324d01e917815337df2d9c0606",
+      "caption": "That's our signature. Mutual referrals qualify. We need to handle this as a promise we made.",
+      "speaker": "tomas",
+      "emotion": "firm",
+      "voice": "am_michael",
+      "duration": 6.953
+    },
+    "report-cash": {
+      "file": "/trojan-horse/audio/report-cash.mp3",
+      "signature": "cea99b2c039e9dcce5d597418d22504bd39002f7b4518e91383e96ae42d84267",
+      "caption": "Twelve weeks sounds comfortable until you need to raise money. The clock is already running.",
+      "speaker": "omar",
+      "emotion": "concerned",
+      "voice": "bm_george",
+      "duration": 6.481
+    }
+  }
+}

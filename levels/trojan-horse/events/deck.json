@@ -1,0 +1,674 @@
+[
+  {
+    "id": "event-2-00",
+    "window": {
+      "dayMin": 14,
+      "dayMax": 200
+    },
+    "weight": 1,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-17",
+        "speaker": "kavya",
+        "expression": "thinking",
+        "text": "A colleague asks which promise still holds."
+      }
+    ],
+    "effects": [
+      {
+        "var": "trust",
+        "op": "add",
+        "value": 2
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-2-01",
+    "window": {
+      "dayMin": 14,
+      "dayMax": 200
+    },
+    "weight": 2,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-18",
+        "speaker": "dani",
+        "expression": "thinking",
+        "text": "The next team needs your evidence, not your confidence."
+      }
+    ],
+    "effects": [
+      {
+        "var": "readiness",
+        "op": "add",
+        "value": 1
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-2-02",
+    "window": {
+      "dayMin": 14,
+      "dayMax": 200
+    },
+    "weight": 3,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-19",
+        "speaker": "omar",
+        "expression": "thinking",
+        "text": "Someone kept a screenshot of your original words."
+      }
+    ],
+    "effects": [
+      {
+        "var": "risk",
+        "op": "add",
+        "value": 2
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-2-03",
+    "window": {
+      "dayMin": 14,
+      "dayMax": 200
+    },
+    "weight": 1,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-20",
+        "speaker": "rhea",
+        "expression": "thinking",
+        "text": "The workaround is helping one group and delaying another."
+      }
+    ],
+    "effects": [
+      {
+        "var": "cash",
+        "op": "add",
+        "value": -1
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-2-04",
+    "window": {
+      "dayMin": 14,
+      "dayMax": 200
+    },
+    "weight": 2,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-21",
+        "speaker": "tomas",
+        "expression": "thinking",
+        "text": "A customer asks what happens if the plan fails."
+      }
+    ],
+    "effects": [
+      {
+        "var": "readiness",
+        "op": "add",
+        "value": -1
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-2-05",
+    "window": {
+      "dayMin": 14,
+      "dayMax": 200
+    },
+    "weight": 3,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-22",
+        "speaker": "kavya",
+        "expression": "thinking",
+        "text": "The quiet shift spots a detail the meeting missed."
+      }
+    ],
+    "effects": [
+      {
+        "var": "credibility",
+        "op": "add",
+        "value": 1
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-2-06",
+    "window": {
+      "dayMin": 14,
+      "dayMax": 200
+    },
+    "weight": 1,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-23",
+        "speaker": "dani",
+        "expression": "thinking",
+        "text": "A colleague asks which promise still holds."
+      }
+    ],
+    "effects": [
+      {
+        "var": "trust",
+        "op": "add",
+        "value": 2
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-2-07",
+    "window": {
+      "dayMin": 14,
+      "dayMax": 200
+    },
+    "weight": 2,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-24",
+        "speaker": "omar",
+        "expression": "thinking",
+        "text": "The next team needs your evidence, not your confidence."
+      }
+    ],
+    "effects": [
+      {
+        "var": "readiness",
+        "op": "add",
+        "value": 1
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-2-08",
+    "window": {
+      "dayMin": 14,
+      "dayMax": 200
+    },
+    "weight": 3,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-25",
+        "speaker": "rhea",
+        "expression": "thinking",
+        "text": "Someone kept a screenshot of your original words."
+      }
+    ],
+    "effects": [
+      {
+        "var": "risk",
+        "op": "add",
+        "value": 2
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-2-09",
+    "window": {
+      "dayMin": 14,
+      "dayMax": 200
+    },
+    "weight": 1,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-26",
+        "speaker": "tomas",
+        "expression": "thinking",
+        "text": "The workaround is helping one group and delaying another."
+      }
+    ],
+    "effects": [
+      {
+        "var": "cash",
+        "op": "add",
+        "value": -1
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-2-10",
+    "window": {
+      "dayMin": 14,
+      "dayMax": 200
+    },
+    "weight": 2,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-27",
+        "speaker": "kavya",
+        "expression": "thinking",
+        "text": "A customer asks what happens if the plan fails."
+      }
+    ],
+    "effects": [
+      {
+        "var": "readiness",
+        "op": "add",
+        "value": -1
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-2-11",
+    "window": {
+      "dayMin": 14,
+      "dayMax": 200
+    },
+    "weight": 3,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-28",
+        "speaker": "dani",
+        "expression": "thinking",
+        "text": "The quiet shift spots a detail the meeting missed."
+      }
+    ],
+    "effects": [
+      {
+        "var": "credibility",
+        "op": "add",
+        "value": 1
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-3-12",
+    "window": {
+      "dayMin": 28,
+      "dayMax": 200
+    },
+    "weight": 1,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-29",
+        "speaker": "omar",
+        "expression": "thinking",
+        "text": "A colleague asks which promise still holds."
+      }
+    ],
+    "effects": [
+      {
+        "var": "trust",
+        "op": "add",
+        "value": 2
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-3-13",
+    "window": {
+      "dayMin": 28,
+      "dayMax": 200
+    },
+    "weight": 2,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-30",
+        "speaker": "rhea",
+        "expression": "thinking",
+        "text": "The next team needs your evidence, not your confidence."
+      }
+    ],
+    "effects": [
+      {
+        "var": "readiness",
+        "op": "add",
+        "value": 1
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-3-14",
+    "window": {
+      "dayMin": 28,
+      "dayMax": 200
+    },
+    "weight": 3,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-31",
+        "speaker": "tomas",
+        "expression": "thinking",
+        "text": "Someone kept a screenshot of your original words."
+      }
+    ],
+    "effects": [
+      {
+        "var": "risk",
+        "op": "add",
+        "value": 2
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-3-15",
+    "window": {
+      "dayMin": 28,
+      "dayMax": 200
+    },
+    "weight": 1,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-32",
+        "speaker": "kavya",
+        "expression": "thinking",
+        "text": "The workaround is helping one group and delaying another."
+      }
+    ],
+    "effects": [
+      {
+        "var": "cash",
+        "op": "add",
+        "value": -1
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-3-16",
+    "window": {
+      "dayMin": 28,
+      "dayMax": 200
+    },
+    "weight": 2,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-33",
+        "speaker": "dani",
+        "expression": "thinking",
+        "text": "A customer asks what happens if the plan fails."
+      }
+    ],
+    "effects": [
+      {
+        "var": "readiness",
+        "op": "add",
+        "value": -1
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-3-17",
+    "window": {
+      "dayMin": 28,
+      "dayMax": 200
+    },
+    "weight": 3,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-34",
+        "speaker": "omar",
+        "expression": "thinking",
+        "text": "The quiet shift spots a detail the meeting missed."
+      }
+    ],
+    "effects": [
+      {
+        "var": "credibility",
+        "op": "add",
+        "value": 1
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-3-18",
+    "window": {
+      "dayMin": 28,
+      "dayMax": 200
+    },
+    "weight": 1,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-35",
+        "speaker": "rhea",
+        "expression": "thinking",
+        "text": "A colleague asks which promise still holds."
+      }
+    ],
+    "effects": [
+      {
+        "var": "trust",
+        "op": "add",
+        "value": 2
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-3-19",
+    "window": {
+      "dayMin": 28,
+      "dayMax": 200
+    },
+    "weight": 2,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-36",
+        "speaker": "tomas",
+        "expression": "thinking",
+        "text": "The next team needs your evidence, not your confidence."
+      }
+    ],
+    "effects": [
+      {
+        "var": "readiness",
+        "op": "add",
+        "value": 1
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-3-20",
+    "window": {
+      "dayMin": 28,
+      "dayMax": 200
+    },
+    "weight": 3,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-37",
+        "speaker": "kavya",
+        "expression": "thinking",
+        "text": "Someone kept a screenshot of your original words."
+      }
+    ],
+    "effects": [
+      {
+        "var": "risk",
+        "op": "add",
+        "value": 2
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-3-21",
+    "window": {
+      "dayMin": 28,
+      "dayMax": 200
+    },
+    "weight": 1,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-38",
+        "speaker": "dani",
+        "expression": "thinking",
+        "text": "The workaround is helping one group and delaying another."
+      }
+    ],
+    "effects": [
+      {
+        "var": "cash",
+        "op": "add",
+        "value": -1
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-3-22",
+    "window": {
+      "dayMin": 28,
+      "dayMax": 200
+    },
+    "weight": 2,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-39",
+        "speaker": "omar",
+        "expression": "thinking",
+        "text": "A customer asks what happens if the plan fails."
+      }
+    ],
+    "effects": [
+      {
+        "var": "readiness",
+        "op": "add",
+        "value": -1
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  },
+  {
+    "id": "event-3-23",
+    "window": {
+      "dayMin": 28,
+      "dayMax": 200
+    },
+    "weight": 3,
+    "cooldown": 1,
+    "once": true,
+    "lines": [
+      {
+        "id": "line-40",
+        "speaker": "rhea",
+        "expression": "thinking",
+        "text": "The quiet shift spots a detail the meeting missed."
+      }
+    ],
+    "effects": [
+      {
+        "var": "credibility",
+        "op": "add",
+        "value": 1
+      },
+      {
+        "chip": "A seeded check-in exposed another operating constraint."
+      }
+    ]
+  }
+]

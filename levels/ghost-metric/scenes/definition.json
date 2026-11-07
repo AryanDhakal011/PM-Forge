@@ -1,0 +1,83 @@
+{
+  "id": "definition",
+  "type": "TOOL",
+  "background": "office",
+  "goal": "Write the metric the heist crew will try to game.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "ravi"
+  ],
+  "lines": [
+    {
+      "id": "line-10",
+      "speaker": "ravi",
+      "expression": "thinking",
+      "text": "A definition is a contract with everyone optimizing it."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "definition",
+      "kind": "SentenceBuilder",
+      "title": "Metric definition",
+      "items": [
+        {
+          "id": "dedupe",
+          "label": "Count one completion per stable request.",
+          "detail": "",
+          "effects": [
+            {
+              "flag": "dedupe",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "exclude",
+          "label": "Exclude verified internal and sandbox accounts.",
+          "detail": "",
+          "effects": [
+            {
+              "flag": "exclude",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "quality",
+          "label": "Pair completion with quality and latency guardrails.",
+          "detail": "",
+          "effects": [
+            {
+              "flag": "quality",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "raw",
+          "label": "Count every completion event.",
+          "detail": "",
+          "effects": [
+            {
+              "flag": "raw-count",
+              "value": true
+            }
+          ]
+        }
+      ],
+      "min": 2,
+      "max": 3,
+      "cost": 0,
+      "receiptId": "R_ghost-metric_definition"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 14,
+  "act": 3,
+  "next": "heist"
+}

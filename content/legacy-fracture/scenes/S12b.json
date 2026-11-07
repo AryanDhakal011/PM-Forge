@@ -1,0 +1,17 @@
+{
+  "id": "S12b",
+  "type": "FACE",
+  "background": "board",
+  "goal": "Present three evidence cards",
+  "tools": [
+    "board"
+  ],
+  "lines": [
+    {
+      "speaker": "alistair",
+      "text": "Show me.",
+      "expression": "neutral",
+      "clip": null
+    }
+  ]
+}

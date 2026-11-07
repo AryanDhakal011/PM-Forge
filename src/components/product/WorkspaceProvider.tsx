@@ -1,4 +1,5 @@
 "use client";
+import {transcriptForSync} from "@/lib/product/interview-live";
 import {
   createContext,
   useCallback,
@@ -134,6 +135,7 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
           );
         if (remote.data) await importWorkspace(remote.data, profile, false);
         const data = await exportWorkspace(profile);
+        data.runs = data.runs.map(transcriptForSync);
         data.projectRuns = data.projectRuns?.map((run) =>
           run.includeNotes
             ? run

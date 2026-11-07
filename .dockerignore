@@ -1,0 +1,12 @@
+.git
+node_modules
+.next*
+.pmforge-preview
+.data
+.env*
+!.env.production.example
+**/mail-preview
+**/*verification*
+docs/assets-source
+*.log
+*.tsbuildinfo

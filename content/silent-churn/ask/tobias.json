@@ -1,0 +1,32 @@
+[
+  {
+    "id": "tobias-0",
+    "topic": "Change windows",
+    "line": "Not on a Friday."
+  },
+  {
+    "id": "tobias-1",
+    "topic": "Rollbacks",
+    "line": "Tell me how we get back."
+  },
+  {
+    "id": "tobias-2",
+    "topic": "What breaks",
+    "line": "The batch does not care about our deadline."
+  },
+  {
+    "id": "tobias-3",
+    "topic": "Nightly batches",
+    "line": "Nightly means nightly. It is not a live feed."
+  },
+  {
+    "id": "tobias-4",
+    "topic": "A safe pilot",
+    "line": "A feed beside the core. Flag it."
+  },
+  {
+    "id": "tobias-5",
+    "topic": "Your advice",
+    "line": "Leave five working days after approval."
+  }
+]

@@ -1,2 +1,2 @@
 import { providersConfigured } from "@/lib/product/server";
-export function GET(){return Response.json(providersConfigured(),{headers:{"Cache-Control":"no-store"}});}
+export function GET(){const configured=providersConfigured(),ready=process.env.NODE_ENV!=='production'||!!process.env.BETTER_AUTH_URL?.startsWith('https://');return Response.json({...configured,...(!ready?{email:false,google:false,github:false}:{}),emailPreview:process.env.AUTH_EMAIL_MODE==='preview'&&process.env.NODE_ENV!=='production'},{headers:{"Cache-Control":"no-store"}});}

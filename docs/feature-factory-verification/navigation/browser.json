@@ -1,0 +1,193 @@
+{
+  "at": "2026-11-05T05:49:09.557Z",
+  "base": "http://localhost:3002",
+  "http": [],
+  "assets": [],
+  "pages": [
+    {
+      "path": "/app",
+      "url": "/app",
+      "loads": 1,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nYour next good decision\nEnter PMForge.\n\nReal scenarios. Decisions you can defend. A practice space that remembers where you left off.\n\nG\nContinue with Google\nOther sign-in options\n\nAccounts aren’t",
+      "failed": false
+    },
+    {
+      "path": "/app/projects",
+      "url": "/app/projects",
+      "loads": 2,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nListen for the missing signal.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you wal",
+      "failed": false
+    },
+    {
+      "path": "/app/projects",
+      "url": "/app/projects",
+      "loads": 3,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nListen for the missing signal.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you wal",
+      "failed": false
+    },
+    {
+      "path": "/app/projects",
+      "url": "/app/projects",
+      "loads": 4,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nListen for the missing signal.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you wal",
+      "failed": false
+    },
+    {
+      "path": "/app/projects",
+      "url": "/app/projects",
+      "loads": 5,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nListen for the missing signal.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you wal",
+      "failed": false
+    },
+    {
+      "path": "/app/projects",
+      "url": "/app/projects",
+      "loads": 6,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nListen for the missing signal.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you wal",
+      "failed": false
+    },
+    {
+      "path": "/app/projects",
+      "url": "/app/projects",
+      "loads": 7,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nToday\nPractice\nProjects\nProgress\nPortfolio\nListen for the missing signal.\nSettings\nHelp\nWorkspace\nProjects\nOn this device\nFind a scenario\n⌘ K\nReal World Projects\nThe map draws itself\nwhile you wal",
+      "failed": false
+    },
+    {
+      "path": "/app",
+      "url": "/app",
+      "loads": 8,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nToday\nOn this device\nMake room for a better decision.\n\nYou don’t need all the answers. Just a better next question.\n\nOn your desk today\nSign-ups dropped 12% after the app update\n\nTwo numbers disagree afte",
+      "failed": false
+    },
+    {
+      "path": "/app/projects",
+      "url": "/app/projects",
+      "loads": 9,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nProjects\nOn this device\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThree chapters. Decisions that stay with you. Enter a company under pressure, make a tradeoff, and watch the next room inh",
+      "failed": false
+    },
+    {
+      "path": "/app/settings",
+      "url": "/app/settings",
+      "loads": 10,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nSettings\nOn this device\nSettle into your workspace.\n\nSmall preferences. Clear data controls. Everything with an obvious way back.\n\nYour practice profile\nRevisit setup ↗\nFirst name\nTarget role\nAspiring PM\n",
+      "failed": false
+    },
+    {
+      "path": "/app",
+      "url": "/app",
+      "loads": 11,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nToday\nOn this device\nMake room for a better decision.\n\nYou don’t need all the answers. Just a better next question.\n\nOn your desk today\nSign-ups dropped 12% after the app update\n\nTwo numbers disagree afte",
+      "failed": false
+    },
+    {
+      "path": "/app/projects",
+      "url": "/app/projects",
+      "loads": 12,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nProjects\nOn this device\nReal World Projects\nThe map draws itself\nwhile you walk.\n\nThree chapters. Decisions that stay with you. Enter a company under pressure, make a tradeoff, and watch the next room inh",
+      "failed": false
+    },
+    {
+      "path": "/app/settings",
+      "url": "/app/settings",
+      "loads": 13,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nSettings\nOn this device\nSettle into your workspace.\n\nSmall preferences. Clear data controls. Everything with an obvious way back.\n\nYour practice profile\nRevisit setup ↗\nFirst name\nTarget role\nAspiring PM\n",
+      "failed": false
+    }
+  ],
+  "clicks": [
+    {
+      "path": "/app/practice",
+      "pass": true
+    },
+    {
+      "path": "/app/projects",
+      "pass": true
+    },
+    {
+      "path": "/app/progress",
+      "pass": true
+    },
+    {
+      "path": "/app/portfolio",
+      "pass": true
+    },
+    {
+      "path": "/app/settings",
+      "pass": true
+    },
+    {
+      "path": "/app",
+      "pass": true
+    },
+    {
+      "path": "feature-factory",
+      "pass": true
+    },
+    {
+      "path": "invisible-wall",
+      "pass": true
+    },
+    {
+      "path": "trojan-horse",
+      "pass": true
+    },
+    {
+      "path": "deadlock",
+      "pass": true
+    },
+    {
+      "path": "sacred-no",
+      "pass": true
+    },
+    {
+      "path": "ghost-metric",
+      "pass": true
+    },
+    {
+      "path": "/app",
+      "width": 390,
+      "pass": true
+    },
+    {
+      "path": "/app/projects",
+      "width": 390,
+      "pass": true
+    },
+    {
+      "path": "/app/settings",
+      "width": 390,
+      "pass": true
+    },
+    {
+      "path": "/app",
+      "width": 320,
+      "pass": true
+    },
+    {
+      "path": "/app/projects",
+      "width": 320,
+      "pass": true
+    },
+    {
+      "path": "/app/settings",
+      "width": 320,
+      "pass": true
+    }
+  ],
+  "errors": []
+}

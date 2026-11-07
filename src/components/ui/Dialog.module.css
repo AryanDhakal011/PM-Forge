@@ -17,9 +17,9 @@
   display: flex;
   flex-direction: column;
   background: var(--paper);
-  border: 1px solid rgba(37, 35, 31, 0.16);
-  border-radius: 12px;
-  box-shadow: 0 40px 90px rgba(37, 35, 31, 0.3);
+  border: 1px solid rgba(164, 82, 5, 0.12);
+  border-radius: 14px;
+  box-shadow: 0 28px 72px rgba(37, 35, 31, 0.2), 0 4px 14px rgba(37, 35, 31, 0.06);
   animation: rise 320ms var(--ease) both;
   overflow: hidden;
 }
@@ -41,8 +41,8 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 1.5rem;
-  padding: 1.6rem 1.75rem 1.1rem;
-  border-bottom: 1px solid var(--line-light);
+  padding: 1.5rem 2rem 1.2rem;
+  border-bottom: 1px solid rgba(164, 82, 5, 0.11);
 }
 
 .title {
@@ -83,7 +83,7 @@
 }
 
 .body {
-  padding: 1.4rem 1.75rem;
+  padding: 1.55rem 2rem 1.4rem;
   overflow-y: auto;
   overscroll-behavior: contain;
 }

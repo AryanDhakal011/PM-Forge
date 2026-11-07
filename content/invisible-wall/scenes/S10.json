@@ -1,0 +1,81 @@
+{
+  "id": "S10",
+  "type": "FACE",
+  "background": "floor",
+  "speakers": [
+    "mags"
+  ],
+  "lines": [
+    {
+      "id": "s10-1",
+      "speaker": "mags",
+      "expression": "neutral",
+      "text": "The server hall is level two.",
+      "voiceId": "mags",
+      "phase": "before"
+    },
+    {
+      "id": "s10-2",
+      "speaker": "mags",
+      "expression": "thinking",
+      "text": "Who approved this?",
+      "voiceId": "mags",
+      "phase": "after",
+      "when": "access:ask"
+    },
+    {
+      "id": "s10-3",
+      "speaker": "mags",
+      "expression": "approving",
+      "text": "Documented. Level two for one hour.",
+      "voiceId": "mags",
+      "phase": "after",
+      "when": "access:ask"
+    },
+    {
+      "id": "s10-4",
+      "speaker": "mags",
+      "expression": "annoyed",
+      "text": "No. Come back with a reason.",
+      "voiceId": "mags",
+      "phase": "after",
+      "when": "access:refused"
+    },
+    {
+      "id": "s10-5",
+      "speaker": "mags",
+      "expression": "thinking",
+      "text": "Camera four reports motion. Probably a cat.",
+      "voiceId": "mags",
+      "phase": "after",
+      "when": "spotted"
+    }
+  ],
+  "choices": [
+    {
+      "id": "ask",
+      "text": "Ask for access with evidence",
+      "effects": {},
+      "receipt": null,
+      "next": "S11"
+    },
+    {
+      "id": "refuse",
+      "text": "Ask without evidence",
+      "effects": {},
+      "receipt": null,
+      "next": "S11"
+    },
+    {
+      "id": "sneak",
+      "text": "Find another way",
+      "effects": {},
+      "receipt": null,
+      "next": "S11"
+    }
+  ],
+  "tool": "access",
+  "goal": "Earn server-hall access",
+  "canStill": "Present two clues or build an unlogged route.",
+  "next": "S11"
+}

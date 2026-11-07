@@ -29,11 +29,13 @@ export default function DataRoom({ state, dispatch, busy, calm }: SceneProps) {
     (d) => d.id === active && state.shown.includes(d.id),
   );
   useEffect(() => {
+    // Calm mode skips the bounce entirely; every other Deadlock effect does.
+    if (calm) return;
     const ctx = gsap.context(() => {
       gsap.fromTo(
         "[data-chip-broken=true]",
         { y: -5, rotation: -3 },
-        { y: 5, rotation: 3, duration: calm ? 0.2 : 0.65, ease: "bounce.out" },
+        { y: 5, rotation: 3, duration: 0.65, ease: "bounce.out" },
       );
     }, root);
     return () => ctx.revert();

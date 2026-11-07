@@ -1,0 +1,14 @@
+[
+  {
+    "path": "/app/projects/feature-factory",
+    "status": 200,
+    "closed": true,
+    "noEntry": true
+  },
+  {
+    "path": "/app/projects/feature-factory/play",
+    "status": 200,
+    "closed": true,
+    "noEntry": true
+  }
+]

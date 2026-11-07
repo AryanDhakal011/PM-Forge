@@ -1,0 +1,26 @@
+{
+  "id": "review",
+  "type": "REVIEW",
+  "background": "bakery",
+  "goal": "Read the Ledger of Loops and the Guild letters.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "tomas"
+  ],
+  "lines": [
+    {
+      "id": "line-16",
+      "speaker": "tomas",
+      "expression": "thinking",
+      "text": "A neighborhood is more than an acquisition channel."
+    }
+  ],
+  "choices": [],
+  "tools": [],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": true,
+  "minInteractions": 0,
+  "day": 42,
+  "act": 3
+}

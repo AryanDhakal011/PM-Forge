@@ -1,0 +1,127 @@
+[
+  {
+    "id": "kavya",
+    "name": "Kavya Mehta",
+    "role": "CEO",
+    "look": {
+      "silhouette": 0,
+      "skin": "#b98463",
+      "hair": "#34383c",
+      "outfit": "#476872",
+      "props": [
+        "tablet"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "Look at that curve!",
+    "accent": "#e9c776",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "dani",
+    "name": "Dani Kwon",
+    "role": "Growth lead",
+    "look": {
+      "silhouette": 1,
+      "skin": "#d7a381",
+      "hair": "#5d473e",
+      "outfit": "#7c6355",
+      "props": [
+        "tablet"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "It is the loop. Do not touch it.",
+    "accent": "#e9c776",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "omar",
+    "name": "Omar Reyes",
+    "role": "CFO",
+    "look": {
+      "silhouette": 2,
+      "skin": "#925f46",
+      "hair": "#2d343a",
+      "outfit": "#657b5b",
+      "props": [
+        "tablet"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "Four hundred ten thousand a week.",
+    "accent": "#e9c776",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "rhea",
+    "name": "Rhea Sol",
+    "role": "Community lead",
+    "look": {
+      "silhouette": 3,
+      "skin": "#d8b49a",
+      "hair": "#a8a49a",
+      "outfit": "#5c687e",
+      "props": [
+        "tablet"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "Users call it a feature. Hear them out.",
+    "accent": "#e9c776",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "tomas",
+    "name": "Tomas Aranda",
+    "role": "Guild partner",
+    "look": {
+      "silhouette": 4,
+      "skin": "#b98a72",
+      "hair": "#34383c",
+      "outfit": "#476872",
+      "props": [
+        "apron"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "We refer each other every week. Take a loaf.",
+    "accent": "#e9c776",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  }
+]

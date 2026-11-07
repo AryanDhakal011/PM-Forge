@@ -1,0 +1,85 @@
+{
+  "id": "promise",
+  "type": "FACE",
+  "background": "office",
+  "goal": "Choose the exact promise Anders can quote.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "anders"
+  ],
+  "lines": [
+    {
+      "id": "line-6",
+      "speaker": "anders",
+      "expression": "thinking",
+      "text": "The number is already in the board deck."
+    }
+  ],
+  "choices": [
+    {
+      "id": "confident",
+      "text": "The increase is verified.",
+      "effects": [
+        {
+          "flag": "strong-promise",
+          "value": true
+        },
+        {
+          "schedule": {
+            "fuse": "promise-quote",
+            "inDays": 7
+          }
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_ghost-metric_confident",
+        "store": "text"
+      }
+    },
+    {
+      "id": "qualified",
+      "text": "The increase includes counting noise. Verification continues.",
+      "effects": [
+        {
+          "var": "credibility",
+          "op": "add",
+          "value": 3
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_ghost-metric_qualified",
+        "store": "text"
+      }
+    },
+    {
+      "id": "evasive",
+      "text": "The story is directionally useful.",
+      "effects": [
+        {
+          "var": "credibility",
+          "op": "add",
+          "value": -5
+        },
+        {
+          "flag": "strong-promise",
+          "value": true
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_ghost-metric_evasive",
+        "store": "text"
+      }
+    }
+  ],
+  "tools": [],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "confession"
+}

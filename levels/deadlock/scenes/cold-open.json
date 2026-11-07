@@ -1,0 +1,86 @@
+{
+  "id": "cold-open",
+  "type": "TOOL",
+  "background": "lab",
+  "goal": "Hold the E-stop before the arm reaches the sleeve.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "mara",
+    "dev",
+    "ines"
+  ],
+  "lines": [
+    {
+      "id": "line-3",
+      "speaker": "mara",
+      "expression": "thinking",
+      "text": "Rehearsal. Four days to Northgate."
+    },
+    {
+      "id": "line-1",
+      "speaker": "dev",
+      "expression": "annoyed",
+      "text": "It was fine. It would have stopped."
+    },
+    {
+      "id": "line-2",
+      "speaker": "ines",
+      "expression": "annoyed",
+      "text": "Fine is not a stopping distance."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "estop",
+      "kind": "EStop",
+      "title": "Press and hold to stop TERN-1",
+      "items": [
+        {
+          "id": "held",
+          "label": "Hold completed",
+          "detail": "The arm stopped with room to spare.",
+          "effects": [
+            {
+              "flag": "near-miss-mitigated",
+              "value": true
+            },
+            {
+              "var": "readiness",
+              "op": "add",
+              "value": 5
+            }
+          ],
+          "reaction": "That is why I called you.",
+          "speaker": "mara"
+        },
+        {
+          "id": "released",
+          "label": "Released early",
+          "detail": "The arm stops twelve centimetres from the sleeve.",
+          "effects": [
+            {
+              "var": "risk",
+              "op": "add",
+              "value": 8
+            }
+          ],
+          "reaction": "Fine is not a stopping distance.",
+          "speaker": "ines"
+        }
+      ],
+      "min": 1,
+      "max": 1,
+      "cost": 0,
+      "receiptId": "R_deadlock_estop",
+      "duration": 0.4
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "role"
+}

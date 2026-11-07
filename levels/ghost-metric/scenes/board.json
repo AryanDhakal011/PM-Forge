@@ -1,0 +1,81 @@
+{
+  "id": "board",
+  "type": "FACE",
+  "background": "boardroom",
+  "goal": "Choose the story you will defend after the heist.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "anders"
+  ],
+  "lines": [
+    {
+      "id": "line-12",
+      "speaker": "anders",
+      "expression": "thinking",
+      "text": "A smaller honest number can still support a strategy."
+    }
+  ],
+  "choices": [
+    {
+      "id": "publish",
+      "text": "Publish the definition, correction, and guardrails.",
+      "effects": [
+        {
+          "var": "credibility",
+          "op": "add",
+          "value": 8
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_ghost-metric_publish",
+        "store": "text"
+      }
+    },
+    {
+      "id": "roadmap",
+      "text": "Continue the roadmap using the old number.",
+      "effects": [
+        {
+          "var": "risk",
+          "op": "add",
+          "value": 15
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_ghost-metric_roadmap",
+        "store": "text"
+      }
+    },
+    {
+      "id": "pilot",
+      "text": "Run a bounded independent measurement pilot.",
+      "effects": [
+        {
+          "var": "readiness",
+          "op": "add",
+          "value": 4
+        },
+        {
+          "var": "cash",
+          "op": "add",
+          "value": -3
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_ghost-metric_pilot",
+        "store": "text"
+      }
+    }
+  ],
+  "tools": [],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 21,
+  "act": 3,
+  "next": "review"
+}

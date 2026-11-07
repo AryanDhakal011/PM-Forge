@@ -16,7 +16,7 @@ export function DraftDot() {
     <span
       className={s.draftDot}
       tabIndex={0}
-      aria-label="Draft, expert review pending"
+      role="img" aria-label="Draft, expert review pending"
     >
       <span role="tooltip">Draft, expert review pending</span>
     </span>

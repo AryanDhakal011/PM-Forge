@@ -1,0 +1,1 @@
+{"id":"S20","type":"NARR","background":"corridor","goal":"Read the clinical decision and its conditions.","tools":["consequence","letters"],"lines":[{"speaker":"kapoor","text":"A signature is a promise to the people delivering care.","expression":"thinking"}]}

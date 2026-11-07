@@ -1,0 +1,1703 @@
+[
+  {
+    "id": "cold-open",
+    "type": "TOOL",
+    "background": "lab",
+    "goal": "Hold the E-stop before the arm reaches the sleeve.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "mara",
+      "dev",
+      "ines"
+    ],
+    "lines": [
+      {
+        "id": "line-3",
+        "speaker": "mara",
+        "expression": "thinking",
+        "text": "Rehearsal. Four days to Northgate."
+      },
+      {
+        "id": "line-1",
+        "speaker": "dev",
+        "expression": "annoyed",
+        "text": "It was fine. It would have stopped."
+      },
+      {
+        "id": "line-2",
+        "speaker": "ines",
+        "expression": "annoyed",
+        "text": "Fine is not a stopping distance."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "estop",
+        "kind": "EStop",
+        "title": "Press and hold to stop TERN-1",
+        "items": [
+          {
+            "id": "held",
+            "label": "Hold completed",
+            "detail": "The arm stopped with room to spare.",
+            "effects": [
+              {
+                "flag": "near-miss-mitigated",
+                "value": true
+              },
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": 5
+              }
+            ],
+            "reaction": "That is why I called you.",
+            "speaker": "mara"
+          },
+          {
+            "id": "released",
+            "label": "Released early",
+            "detail": "The arm stops twelve centimetres from the sleeve.",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": 8
+              }
+            ],
+            "reaction": "Fine is not a stopping distance.",
+            "speaker": "ines"
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_deadlock_estop",
+        "duration": 0.4
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "role"
+  },
+  {
+    "id": "role",
+    "type": "FACE",
+    "background": "lab",
+    "goal": "Know your mandate while Mara maps the next twelve weeks.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "mara"
+    ],
+    "lines": [
+      {
+        "id": "line-4",
+        "speaker": "mara",
+        "expression": "thinking",
+        "text": "Halyard. Twelve weeks. Northgate. One defensible prototype."
+      }
+    ],
+    "choices": [
+      {
+        "id": "mara-ask",
+        "text": "I will make the tradeoff explicit.",
+        "effects": [
+          {
+            "var": "trust",
+            "op": "add",
+            "value": 4
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_deadlock_mara-ask",
+          "store": "text"
+        }
+      },
+      {
+        "id": "mara-rush",
+        "text": "Let us make it impressive.",
+        "effects": [
+          {
+            "var": "readiness",
+            "op": "add",
+            "value": 2
+          },
+          {
+            "var": "risk",
+            "op": "add",
+            "value": 3
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_deadlock_mara-rush",
+          "store": "text"
+        }
+      }
+    ],
+    "tools": [],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "lab"
+  },
+  {
+    "id": "lab",
+    "type": "TOOL",
+    "background": "lab",
+    "goal": "Explore three lab areas. Investigate three of five objects.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "mara"
+    ],
+    "lines": [
+      {
+        "id": "line-5",
+        "speaker": "mara",
+        "expression": "thinking",
+        "text": "Look around. The useful details are not all on screens."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "lab-walk",
+        "kind": "EvidenceDrawers",
+        "title": "Walk the lab",
+        "items": [
+          {
+            "id": "footage",
+            "label": "Demo footage",
+            "detail": "Scrub past 01:52. There is another near-miss.",
+            "effects": [],
+            "group": "footage",
+            "reaction": "Do not let him hide that footage.",
+            "speaker": "ines",
+            "soWhat": "Shows actual stopping behavior."
+          },
+          {
+            "id": "incident",
+            "label": "Incident log",
+            "detail": "Recovery took fourteen minutes with two technicians.",
+            "effects": [],
+            "group": "incident",
+            "soWhat": "Shows what recovering from a failure requires."
+          },
+          {
+            "id": "slack",
+            "label": "Slack wall",
+            "detail": "The teams use different definitions of autonomy.",
+            "effects": [],
+            "group": "slack",
+            "soWhat": "Shows the teams’ conflicting assumptions."
+          },
+          {
+            "id": "bench",
+            "label": "Sealed bench report",
+            "detail": "Throughput improves, but stopping margins narrow.",
+            "effects": [],
+            "group": "bench",
+            "soWhat": "Shows the controlled-test tradeoffs."
+          },
+          {
+            "id": "letter",
+            "label": "Northgate letter",
+            "detail": "The customer wants repeatable recovery, not only speed.",
+            "effects": [],
+            "group": "letter",
+            "soWhat": "Shows what Northgate actually asked for."
+          }
+        ],
+        "min": 3,
+        "max": 3,
+        "cost": 1,
+        "receiptId": "R_deadlock_lab-walk",
+        "hint": "Dev’s table: throughput. Ines’s pit: recovery. Customer wall: evidence."
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "second-look"
+  },
+  {
+    "id": "second-look",
+    "type": "TOOL",
+    "background": "lab",
+    "goal": "Spend one attention point on a second look.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "ines"
+    ],
+    "lines": [
+      {
+        "id": "line-6",
+        "speaker": "ines",
+        "expression": "thinking",
+        "text": "The first viewing is not the whole story."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "second-look",
+        "kind": "TimelineScrubber",
+        "title": "Second look: the rehearsal",
+        "items": [
+          {
+            "id": "marker",
+            "label": "Inspect 00:47",
+            "detail": "The sleeve passes through the stopping envelope.",
+            "effects": [
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": 3
+              }
+            ],
+            "group": "near-miss"
+          },
+          {
+            "id": "beyond",
+            "label": "Scrub past 01:52",
+            "detail": "A second near-miss appears beyond the original marker.",
+            "effects": [
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": 5
+              },
+              {
+                "flag": "near-miss-mitigated",
+                "value": true
+              }
+            ],
+            "group": "second-near-miss"
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "cost": 1,
+        "receiptId": "R_deadlock_second-look"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "mediate-speed"
+  },
+  {
+    "id": "mediate-speed",
+    "type": "TOOL",
+    "background": "lab",
+    "goal": "Mediate speed while both leads remain in the room.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "dev",
+      "ines"
+    ],
+    "lines": [
+      {
+        "id": "line-8",
+        "speaker": "dev",
+        "expression": "thinking",
+        "text": "Point-five metres a second kills the demo."
+      },
+      {
+        "id": "line-7",
+        "speaker": "ines",
+        "expression": "thinking",
+        "text": "Seven centimetres is not a margin."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "mediation-speed",
+        "kind": "LiveMediation",
+        "title": "Speed mediation",
+        "items": [
+          {
+            "id": "interrupt",
+            "label": "Show me the evidence.",
+            "detail": "Costs one attention.",
+            "effects": [
+              {
+                "var": "ATT",
+                "op": "add",
+                "value": -1
+              },
+              {
+                "var": "credibility",
+                "op": "add",
+                "value": 3
+              }
+            ],
+            "reaction": "Ninety-four percent. Fine.",
+            "speaker": "dev"
+          },
+          {
+            "id": "third",
+            "label": "Offer a bounded third option.",
+            "detail": "Spend persuasion and one week.",
+            "effects": [
+              {
+                "var": "persuasion",
+                "op": "add",
+                "value": -1
+              },
+              {
+                "var": "weeks",
+                "op": "add",
+                "value": -1
+              },
+              {
+                "var": "trust",
+                "op": "add",
+                "value": 6
+              }
+            ],
+            "reaction": "A boundary we can both test.",
+            "speaker": "ines"
+          },
+          {
+            "id": "back-dev",
+            "label": "Back Dev.",
+            "detail": "Protect his goal. Raise Ines’s concern.",
+            "effects": [
+              {
+                "var": "TRUST.dev",
+                "op": "add",
+                "value": 8
+              },
+              {
+                "var": "TRUST.ines",
+                "op": "add",
+                "value": -8
+              },
+              {
+                "var": "trust",
+                "op": "add",
+                "value": -8
+              }
+            ],
+            "reaction": "Do not hide the safety cost.",
+            "speaker": "ines"
+          },
+          {
+            "id": "back-ines",
+            "label": "Back Ines.",
+            "detail": "Protect her standard. Raise Dev’s concern.",
+            "effects": [
+              {
+                "var": "TRUST.ines",
+                "op": "add",
+                "value": 8
+              },
+              {
+                "var": "TRUST.dev",
+                "op": "add",
+                "value": -8
+              },
+              {
+                "var": "trust",
+                "op": "add",
+                "value": -8
+              }
+            ],
+            "reaction": "Then show me what still moves.",
+            "speaker": "dev"
+          },
+          {
+            "id": "defer",
+            "label": "Defer the argument.",
+            "detail": "Readiness falls.",
+            "effects": [
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": -8
+              }
+            ]
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_deadlock_mediation-speed"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [
+      {
+        "schedule": {
+          "fuse": "speed-quote",
+          "inDays": 0
+        }
+      }
+    ],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "mediate-recovery"
+  },
+  {
+    "id": "mediate-recovery",
+    "type": "TOOL",
+    "background": "lab",
+    "goal": "Mediate recovery while both leads remain in the room.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "dev",
+      "ines"
+    ],
+    "lines": [
+      {
+        "id": "line-10",
+        "speaker": "dev",
+        "expression": "thinking",
+        "text": "Manual recovery is predictable. That matters."
+      },
+      {
+        "id": "line-9",
+        "speaker": "ines",
+        "expression": "thinking",
+        "text": "It is not autonomy when someone must rescue it."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "mediation-recovery",
+        "kind": "LiveMediation",
+        "title": "Recovery mediation",
+        "items": [
+          {
+            "id": "interrupt",
+            "label": "Show me the evidence.",
+            "detail": "Costs one attention.",
+            "effects": [
+              {
+                "var": "ATT",
+                "op": "add",
+                "value": -1
+              },
+              {
+                "var": "credibility",
+                "op": "add",
+                "value": 3
+              }
+            ],
+            "reaction": "Ninety-four percent. Fine.",
+            "speaker": "dev"
+          },
+          {
+            "id": "third",
+            "label": "Offer a bounded third option.",
+            "detail": "Spend persuasion and one week.",
+            "effects": [
+              {
+                "var": "persuasion",
+                "op": "add",
+                "value": -1
+              },
+              {
+                "var": "weeks",
+                "op": "add",
+                "value": -1
+              },
+              {
+                "var": "trust",
+                "op": "add",
+                "value": 6
+              }
+            ],
+            "reaction": "A boundary we can both test.",
+            "speaker": "ines"
+          },
+          {
+            "id": "back-dev",
+            "label": "Back Dev.",
+            "detail": "Protect his goal. Raise Ines’s concern.",
+            "effects": [
+              {
+                "var": "TRUST.dev",
+                "op": "add",
+                "value": 8
+              },
+              {
+                "var": "TRUST.ines",
+                "op": "add",
+                "value": -8
+              },
+              {
+                "var": "trust",
+                "op": "add",
+                "value": -8
+              }
+            ],
+            "reaction": "Do not hide the safety cost.",
+            "speaker": "ines"
+          },
+          {
+            "id": "back-ines",
+            "label": "Back Ines.",
+            "detail": "Protect her standard. Raise Dev’s concern.",
+            "effects": [
+              {
+                "var": "TRUST.ines",
+                "op": "add",
+                "value": 8
+              },
+              {
+                "var": "TRUST.dev",
+                "op": "add",
+                "value": -8
+              },
+              {
+                "var": "trust",
+                "op": "add",
+                "value": -8
+              }
+            ],
+            "reaction": "Then show me what still moves.",
+            "speaker": "dev"
+          },
+          {
+            "id": "defer",
+            "label": "Defer the argument.",
+            "detail": "Readiness falls.",
+            "effects": [
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": -8
+              }
+            ]
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_deadlock_mediation-recovery"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "mediate-learning"
+  },
+  {
+    "id": "mediate-learning",
+    "type": "TOOL",
+    "background": "lab",
+    "goal": "Mediate learning while both leads remain in the room.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "dev",
+      "ines"
+    ],
+    "lines": [
+      {
+        "id": "line-12",
+        "speaker": "dev",
+        "expression": "thinking",
+        "text": "Always learning makes the demo feel alive."
+      },
+      {
+        "id": "line-11",
+        "speaker": "ines",
+        "expression": "thinking",
+        "text": "Nobody consented to an unbounded live update."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "mediation-learning",
+        "kind": "LiveMediation",
+        "title": "Learning mediation",
+        "items": [
+          {
+            "id": "interrupt",
+            "label": "Show me the evidence.",
+            "detail": "Costs one attention.",
+            "effects": [
+              {
+                "var": "ATT",
+                "op": "add",
+                "value": -1
+              },
+              {
+                "var": "credibility",
+                "op": "add",
+                "value": 3
+              }
+            ],
+            "reaction": "Ninety-four percent. Fine.",
+            "speaker": "dev"
+          },
+          {
+            "id": "third",
+            "label": "Offer a bounded third option.",
+            "detail": "Spend persuasion and one week.",
+            "effects": [
+              {
+                "var": "persuasion",
+                "op": "add",
+                "value": -1
+              },
+              {
+                "var": "weeks",
+                "op": "add",
+                "value": -1
+              },
+              {
+                "var": "trust",
+                "op": "add",
+                "value": 6
+              }
+            ],
+            "reaction": "A boundary we can both test.",
+            "speaker": "ines"
+          },
+          {
+            "id": "back-dev",
+            "label": "Back Dev.",
+            "detail": "Protect his goal. Raise Ines’s concern.",
+            "effects": [
+              {
+                "var": "TRUST.dev",
+                "op": "add",
+                "value": 8
+              },
+              {
+                "var": "TRUST.ines",
+                "op": "add",
+                "value": -8
+              },
+              {
+                "var": "trust",
+                "op": "add",
+                "value": -8
+              }
+            ],
+            "reaction": "Do not hide the safety cost.",
+            "speaker": "ines"
+          },
+          {
+            "id": "back-ines",
+            "label": "Back Ines.",
+            "detail": "Protect her standard. Raise Dev’s concern.",
+            "effects": [
+              {
+                "var": "TRUST.ines",
+                "op": "add",
+                "value": 8
+              },
+              {
+                "var": "TRUST.dev",
+                "op": "add",
+                "value": -8
+              },
+              {
+                "var": "trust",
+                "op": "add",
+                "value": -8
+              }
+            ],
+            "reaction": "Then show me what still moves.",
+            "speaker": "dev"
+          },
+          {
+            "id": "defer",
+            "label": "Defer the argument.",
+            "detail": "Readiness falls.",
+            "effects": [
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": -8
+              }
+            ]
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_deadlock_mediation-learning"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "hallway"
+  },
+  {
+    "id": "hallway",
+    "type": "TOOL",
+    "background": "office",
+    "goal": "Choose which private conversation comes first.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "mara"
+    ],
+    "lines": [
+      {
+        "id": "line-13",
+        "speaker": "mara",
+        "expression": "thinking",
+        "text": "A hallway conversation can change the next one."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "asides",
+        "kind": "PartyFloor",
+        "title": "Two private asides",
+        "items": [
+          {
+            "id": "dev-first",
+            "label": "Speak to Dev",
+            "detail": "I just want Northgate to see it move.",
+            "effects": [
+              {
+                "var": "TRUST.dev",
+                "op": "add",
+                "value": 3
+              }
+            ],
+            "reaction": "I just want Northgate to see it move.",
+            "speaker": "dev"
+          },
+          {
+            "id": "ines-first",
+            "label": "Speak to Ines",
+            "detail": "I just want nobody hurt.",
+            "effects": [
+              {
+                "var": "TRUST.ines",
+                "op": "add",
+                "value": 3
+              }
+            ],
+            "reaction": "I just want nobody hurt.",
+            "speaker": "ines"
+          }
+        ],
+        "min": 2,
+        "max": 2,
+        "cost": 0,
+        "receiptId": "R_deadlock_asides"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "projector"
+  },
+  {
+    "id": "projector",
+    "type": "TOOL",
+    "background": "lab",
+    "goal": "Inspect four datasets. Keep one result uncertain.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "ines"
+    ],
+    "lines": [
+      {
+        "id": "line-14",
+        "speaker": "ines",
+        "expression": "thinking",
+        "text": "Twenty-two centimetres, plus or minus nine. Retest the margin."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "projector",
+        "kind": "EvidenceDrawers",
+        "title": "The evidence projector",
+        "items": [
+          {
+            "id": "throughput",
+            "label": "Throughput: 94%",
+            "detail": "Under the controlled bench workload.",
+            "effects": [],
+            "group": "throughput"
+          },
+          {
+            "id": "recovery",
+            "label": "Assisted recovery",
+            "detail": "Specialist intervention falls with bounded assistance.",
+            "effects": [],
+            "group": "recovery"
+          },
+          {
+            "id": "safety",
+            "label": "Safety margin: 22 ± 9 cm",
+            "detail": "The uncertainty remains material.",
+            "effects": [],
+            "group": "safety"
+          },
+          {
+            "id": "retest",
+            "label": "Retest the uncertain margin",
+            "detail": "Costs one investigation.",
+            "effects": [
+              {
+                "var": "ATT",
+                "op": "add",
+                "value": -1
+              },
+              {
+                "var": "credibility",
+                "op": "add",
+                "value": 4
+              }
+            ],
+            "group": "retested"
+          }
+        ],
+        "min": 3,
+        "max": 4,
+        "cost": 0,
+        "receiptId": "R_deadlock_projector"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 28,
+    "act": 2,
+    "next": "forge"
+  },
+  {
+    "id": "forge",
+    "type": "TOOL",
+    "background": "lab",
+    "goal": "Configure a robot you are willing to demonstrate.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "dev"
+    ],
+    "lines": [
+      {
+        "id": "line-15",
+        "speaker": "dev",
+        "expression": "thinking",
+        "text": "Show me the build before asking for a signature."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "forge",
+        "kind": "SliderForecast",
+        "title": "The Forge",
+        "items": [],
+        "min": 0,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_deadlock_forge",
+        "lever": [
+          {
+            "id": "speed",
+            "label": "Arm speed",
+            "min": 5,
+            "max": 12,
+            "initial": 8,
+            "step": 1
+          },
+          {
+            "id": "assistance",
+            "label": "Recovery assistance",
+            "min": 0,
+            "max": 2,
+            "initial": 1,
+            "step": 1
+          },
+          {
+            "id": "learning",
+            "label": "Learning exposure",
+            "min": 0,
+            "max": 2,
+            "initial": 1,
+            "step": 1
+          }
+        ]
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 42,
+    "act": 2,
+    "next": "dry-run"
+  },
+  {
+    "id": "dry-run",
+    "type": "TOOL",
+    "background": "lab",
+    "goal": "Feel the robot for fifteen seconds before proposing it.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "ines"
+    ],
+    "lines": [
+      {
+        "id": "line-16",
+        "speaker": "ines",
+        "expression": "thinking",
+        "text": "Run it here. The customer should not find the first surprise."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "dry-run",
+        "kind": "DryRun",
+        "title": "TERN-1 dry run",
+        "items": [],
+        "min": 0,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_deadlock_dry-run",
+        "duration": 15
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 42,
+    "act": 2,
+    "next": "proposal"
+  },
+  {
+    "id": "proposal",
+    "type": "FACE",
+    "background": "office",
+    "goal": "Respond to specific objections without erasing the cost.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "mara"
+    ],
+    "lines": [
+      {
+        "id": "line-17",
+        "speaker": "mara",
+        "expression": "thinking",
+        "text": "They can reject it. You still own the proposal."
+      }
+    ],
+    "choices": [
+      {
+        "id": "revise",
+        "text": "Revise with the evidence.",
+        "effects": [
+          {
+            "var": "readiness",
+            "op": "add",
+            "value": 5
+          },
+          {
+            "var": "weeks",
+            "op": "add",
+            "value": -1
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_deadlock_revise",
+          "store": "text"
+        }
+      },
+      {
+        "id": "push",
+        "text": "Push through using two persuasion points.",
+        "effects": [
+          {
+            "var": "persuasion",
+            "op": "add",
+            "value": -2
+          },
+          {
+            "var": "risk",
+            "op": "add",
+            "value": 10
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_deadlock_push",
+          "store": "text"
+        },
+        "requires": {
+          "var": "persuasion",
+          "op": ">=",
+          "value": 2
+        }
+      },
+      {
+        "id": "conservative",
+        "text": "Accept the conservative fallback.",
+        "effects": [
+          {
+            "var": "risk",
+            "op": "add",
+            "value": -8
+          },
+          {
+            "var": "readiness",
+            "op": "add",
+            "value": -3
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_deadlock_conservative",
+          "store": "text"
+        }
+      }
+    ],
+    "tools": [],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 49,
+    "act": 2,
+    "next": "demo-0"
+  },
+  {
+    "id": "demo-0",
+    "type": "TOOL",
+    "background": "lab",
+    "goal": "Choose your intervention: the greeting.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "theo"
+    ],
+    "lines": [
+      {
+        "id": "line-18",
+        "speaker": "theo",
+        "expression": "thinking",
+        "text": "We are watching how the team handles the unexpected."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "demo-0",
+        "kind": "RadioRoom",
+        "title": "The greeting",
+        "items": [
+          {
+            "id": "let",
+            "label": "Let the robot continue.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": 2
+              },
+              {
+                "var": "risk",
+                "op": "add",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "id": "pause",
+            "label": "Pause and explain.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -4
+              },
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": -1
+              }
+            ]
+          },
+          {
+            "id": "slow",
+            "label": "Slow the next motion.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -3
+              }
+            ]
+          },
+          {
+            "id": "takeover",
+            "label": "Take over explicitly.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -5
+              },
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": -2
+              }
+            ]
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_deadlock_demo-0"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 84,
+    "act": 3,
+    "next": "demo-1"
+  },
+  {
+    "id": "demo-1",
+    "type": "TOOL",
+    "background": "lab",
+    "goal": "Choose your intervention: the first object.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "theo"
+    ],
+    "lines": [
+      {
+        "id": "line-19",
+        "speaker": "theo",
+        "expression": "thinking",
+        "text": "We are watching how the team handles the unexpected."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "demo-1",
+        "kind": "RadioRoom",
+        "title": "The first object",
+        "items": [
+          {
+            "id": "let",
+            "label": "Let the robot continue.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": 2
+              },
+              {
+                "var": "risk",
+                "op": "add",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "id": "pause",
+            "label": "Pause and explain.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -4
+              },
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": -1
+              }
+            ]
+          },
+          {
+            "id": "slow",
+            "label": "Slow the next motion.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -3
+              }
+            ]
+          },
+          {
+            "id": "takeover",
+            "label": "Take over explicitly.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -5
+              },
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": -2
+              }
+            ]
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_deadlock_demo-1"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 84,
+    "act": 3,
+    "next": "demo-2"
+  },
+  {
+    "id": "demo-2",
+    "type": "TOOL",
+    "background": "lab",
+    "goal": "Choose your intervention: the blocked path.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "theo"
+    ],
+    "lines": [
+      {
+        "id": "line-20",
+        "speaker": "theo",
+        "expression": "thinking",
+        "text": "We are watching how the team handles the unexpected."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "demo-2",
+        "kind": "RadioRoom",
+        "title": "The blocked path",
+        "items": [
+          {
+            "id": "let",
+            "label": "Let the robot continue.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": 2
+              },
+              {
+                "var": "risk",
+                "op": "add",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "id": "pause",
+            "label": "Pause and explain.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -4
+              },
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": -1
+              }
+            ]
+          },
+          {
+            "id": "slow",
+            "label": "Slow the next motion.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -3
+              }
+            ]
+          },
+          {
+            "id": "takeover",
+            "label": "Take over explicitly.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -5
+              },
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": -2
+              }
+            ]
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_deadlock_demo-2"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 84,
+    "act": 3,
+    "next": "demo-3"
+  },
+  {
+    "id": "demo-3",
+    "type": "TOOL",
+    "background": "lab",
+    "goal": "Choose your intervention: the recovery.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "theo"
+    ],
+    "lines": [
+      {
+        "id": "line-21",
+        "speaker": "theo",
+        "expression": "thinking",
+        "text": "We are watching how the team handles the unexpected."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "demo-3",
+        "kind": "RadioRoom",
+        "title": "The recovery",
+        "items": [
+          {
+            "id": "let",
+            "label": "Let the robot continue.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": 2
+              },
+              {
+                "var": "risk",
+                "op": "add",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "id": "pause",
+            "label": "Pause and explain.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -4
+              },
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": -1
+              }
+            ]
+          },
+          {
+            "id": "slow",
+            "label": "Slow the next motion.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -3
+              }
+            ]
+          },
+          {
+            "id": "takeover",
+            "label": "Take over explicitly.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -5
+              },
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": -2
+              }
+            ]
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_deadlock_demo-3"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 84,
+    "act": 3,
+    "next": "demo-4"
+  },
+  {
+    "id": "demo-4",
+    "type": "TOOL",
+    "background": "lab",
+    "goal": "Choose your intervention: the final bow.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "theo"
+    ],
+    "lines": [
+      {
+        "id": "line-22",
+        "speaker": "theo",
+        "expression": "thinking",
+        "text": "We are watching how the team handles the unexpected."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "demo-4",
+        "kind": "RadioRoom",
+        "title": "The final bow",
+        "items": [
+          {
+            "id": "let",
+            "label": "Let the robot continue.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": 2
+              },
+              {
+                "var": "risk",
+                "op": "add",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "id": "pause",
+            "label": "Pause and explain.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -4
+              },
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": -1
+              }
+            ]
+          },
+          {
+            "id": "slow",
+            "label": "Slow the next motion.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -3
+              }
+            ]
+          },
+          {
+            "id": "takeover",
+            "label": "Take over explicitly.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -5
+              },
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": -2
+              }
+            ]
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_deadlock_demo-4"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 84,
+    "act": 3,
+    "next": "technician"
+  },
+  {
+    "id": "technician",
+    "type": "FACE",
+    "background": "lab",
+    "goal": "The technician returns when the near-miss was left unresolved.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "nadia"
+    ],
+    "lines": [
+      {
+        "id": "line-23",
+        "speaker": "nadia",
+        "expression": "thinking",
+        "text": "That sleeve was in the rehearsal footage."
+      }
+    ],
+    "choices": [
+      {
+        "id": "own-near-miss",
+        "text": "Stop and own the earlier warning.",
+        "effects": [
+          {
+            "var": "risk",
+            "op": "add",
+            "value": -5
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_deadlock_own-near-miss",
+          "store": "text"
+        }
+      },
+      {
+        "id": "continue-near-miss",
+        "text": "Continue within the accepted risk.",
+        "effects": [
+          {
+            "var": "risk",
+            "op": "add",
+            "value": 10
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_deadlock_continue-near-miss",
+          "store": "text"
+        }
+      }
+    ],
+    "tools": [],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 84,
+    "act": 3,
+    "when": {
+      "not": {
+        "flag": "near-miss-mitigated"
+      }
+    },
+    "next": "review"
+  },
+  {
+    "id": "review",
+    "type": "REVIEW",
+    "background": "lab",
+    "goal": "Scrub three turning points and compare another approach.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "mara"
+    ],
+    "lines": [
+      {
+        "id": "line-25",
+        "speaker": "mara",
+        "expression": "thinking",
+        "text": "I stopped arguing years ago. Thank you for listening."
+      }
+    ],
+    "choices": [],
+    "tools": [],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": true,
+    "minInteractions": 0,
+    "day": 84,
+    "act": 3
+  }
+]

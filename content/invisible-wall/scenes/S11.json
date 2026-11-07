@@ -1,0 +1,32 @@
+{
+  "id": "S11",
+  "type": "TOOL",
+  "background": "server",
+  "speakers": [
+    "narration",
+    "tavi"
+  ],
+  "lines": [
+    {
+      "id": "s11-1",
+      "speaker": "narration",
+      "expression": "neutral",
+      "text": "The hall is fog and white light. Something hums.",
+      "voiceId": "narration",
+      "phase": "before"
+    },
+    {
+      "id": "s11-2",
+      "speaker": "tavi",
+      "expression": "pressured",
+      "text": "That's not a bug. Someone built a wall.",
+      "voiceId": "tavi",
+      "phase": "after"
+    }
+  ],
+  "choices": [],
+  "tool": "uvlens",
+  "goal": "Reveal the invisible wall",
+  "canStill": "Hold the lens over the central etched seam for one second.",
+  "next": "S12"
+}

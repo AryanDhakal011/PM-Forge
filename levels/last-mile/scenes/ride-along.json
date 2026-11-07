@@ -1,0 +1,99 @@
+{
+  "id": "ride-along",
+  "type": "TOOL",
+  "background": "street",
+  "goal": "Choose one courier to follow for two field ticks.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "sana"
+  ],
+  "lines": [
+    {
+      "id": "line-1",
+      "speaker": "sana",
+      "expression": "thinking",
+      "text": "Online does not mean reachable."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "follow",
+      "kind": "PartyFloor",
+      "title": "Ride along tonight",
+      "items": [
+        {
+          "id": "bikram",
+          "label": "Bikram Rai",
+          "detail": "Water is at my knees. Orders still coming.",
+          "effects": [
+            {
+              "flag": "follow-bikram",
+              "value": true
+            }
+          ],
+          "group": "follow-bikram"
+        },
+        {
+          "id": "salma",
+          "label": "Salma Khan",
+          "detail": "The bridge is closed. My route is not.",
+          "effects": [
+            {
+              "flag": "follow-salma",
+              "value": true
+            }
+          ],
+          "group": "follow-salma"
+        },
+        {
+          "id": "joon",
+          "label": "Joon Park",
+          "detail": "Tell me where I can wait safely.",
+          "effects": [
+            {
+              "flag": "follow-joon",
+              "value": true
+            }
+          ],
+          "group": "follow-joon"
+        },
+        {
+          "id": "anita",
+          "label": "Anita Shrestha",
+          "detail": "I need the next instruction to be clear.",
+          "effects": [
+            {
+              "flag": "follow-anita",
+              "value": true
+            }
+          ],
+          "group": "follow-anita"
+        },
+        {
+          "id": "rakesh",
+          "label": "Rakesh Shah",
+          "detail": "A reopened zone still needs a way home.",
+          "effects": [
+            {
+              "flag": "follow-rakesh",
+              "value": true
+            }
+          ],
+          "group": "follow-rakesh"
+        }
+      ],
+      "min": 1,
+      "max": 1,
+      "cost": 0,
+      "receiptId": "R_last-mile_follow"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "ride-tick-0"
+}

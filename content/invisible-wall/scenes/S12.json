@@ -1,0 +1,32 @@
+{
+  "id": "S12",
+  "type": "TOOL",
+  "background": "server",
+  "speakers": [
+    "narration",
+    "tavi"
+  ],
+  "lines": [
+    {
+      "id": "s12-1",
+      "speaker": "tavi",
+      "expression": "thinking",
+      "text": "Pin your clues. Which story fits?",
+      "voiceId": "tavi",
+      "phase": "before"
+    },
+    {
+      "id": "s12-2",
+      "speaker": "narration",
+      "expression": "thinking",
+      "text": "Your choice is recorded. Inspect the result before moving on.",
+      "voiceId": "narration",
+      "phase": "after"
+    }
+  ],
+  "choices": [],
+  "tool": "board",
+  "goal": "Build a falsifiable theory",
+  "canStill": "Link three clues to hypotheses. Inspect conflicting evidence.",
+  "next": "S13"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "S19",
+  "type": "TOOL",
+  "background": "night",
+  "goal": "Prepare the guarded switch",
+  "tools": [
+    "cutover"
+  ],
+  "lines": [
+    {
+      "speaker": "cora",
+      "text": "Overnight, or in waves. I need an answer.",
+      "expression": "pressured",
+      "clip": null
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "trojan-horse",
+  "title": "The Trojan Horses",
+  "tagline": "The party is real. So is the payout.",
+  "company": "GILT",
+  "status": "draft",
+  "version": "2.0.0",
+  "minPlatformVersion": "1.0.0",
+  "palette": {
+    "bg": "#101b22",
+    "ink": "#f4f2e7",
+    "accent": "#e9c776"
+  },
+  "fonts": [
+    "Inter",
+    "DM Serif Display"
+  ],
+  "difficulty": {
+    "guided": "Preview effects and see decision hints.",
+    "standard": "Read the situation without previews.",
+    "sharp": "Hide soft meters and handle extra check-ins."
+  },
+  "entranceArt": "/levels/trojan-horse/art/backgrounds/party.svg",
+  "estimatedMinutes": 32,
+  "startScene": "coin-press",
+  "scenes": [
+    "coin-press",
+    "party-floor",
+    "drawers",
+    "fraud-hunt",
+    "valve",
+    "message",
+    "guild-visit",
+    "angry-call",
+    "segments",
+    "grace",
+    "hangover",
+    "launch-night",
+    "launch-interventions",
+    "last-request",
+    "review"
+  ],
+  "people": [
+    "kavya",
+    "dani",
+    "omar",
+    "rhea",
+    "tomas"
+  ],
+  "assetsBudgetKB": 3072,
+  "voiceCast": {},
+  "labels": "Simulated company, authored scenarios, expert review pending",
+  "flagKey": "trojan-horse",
+  "minEvents": 24,
+  "systemic": true,
+  "launchCandidate": false,
+  "reviewGates": {
+    "design": "pending",
+    "content": "pending",
+    "accessibility-manual": "pending",
+    "performance": "pending",
+    "security": "pending",
+    "playtest": "pending",
+    "domain": "pending"
+  },
+  "acts": [
+    "The Party",
+    "The Guilds",
+    "Launch Night"
+  ]
+}

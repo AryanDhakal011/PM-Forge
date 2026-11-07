@@ -1,0 +1,81 @@
+{
+  "id": "S24",
+  "type": "CINEMA",
+  "background": "server",
+  "speakers": [
+    "imani",
+    "jonas",
+    "mags",
+    "tavi"
+  ],
+  "lines": [
+    {
+      "id": "s24-1",
+      "speaker": "jonas",
+      "expression": "approving",
+      "text": "It held.",
+      "voiceId": "jonas",
+      "phase": "before",
+      "when": "ending:fast"
+    },
+    {
+      "id": "s24-2",
+      "speaker": "imani",
+      "expression": "thinking",
+      "text": "It held tonight.",
+      "voiceId": "imani",
+      "phase": "before",
+      "when": "ending:fast"
+    },
+    {
+      "id": "s24-3",
+      "speaker": "tavi",
+      "expression": "pressured",
+      "text": "It's erratic. Everything is erratic.",
+      "voiceId": "tavi",
+      "phase": "before",
+      "when": "ending:meltdown"
+    },
+    {
+      "id": "s24-4",
+      "speaker": "imani",
+      "expression": "approving",
+      "text": "Seventy-eight. And still a line.",
+      "voiceId": "imani",
+      "phase": "before",
+      "when": "ending:governed"
+    },
+    {
+      "id": "s24-5",
+      "speaker": "jonas",
+      "expression": "approving",
+      "text": "Investors will like the word safe.",
+      "voiceId": "jonas",
+      "phase": "before",
+      "when": "ending:governed"
+    },
+    {
+      "id": "s24-6",
+      "speaker": "jonas",
+      "expression": "annoyed",
+      "text": "Stable. And slower than promised.",
+      "voiceId": "jonas",
+      "phase": "before",
+      "when": "ending:safe"
+    },
+    {
+      "id": "s24-7",
+      "speaker": "mags",
+      "expression": "neutral",
+      "text": "Cage C. We need to talk.",
+      "voiceId": "mags",
+      "phase": "before",
+      "when": "ending:shadow"
+    }
+  ],
+  "choices": [],
+  "tool": "continue",
+  "goal": "See what your policy proved",
+  "canStill": "Compare the result with the safety question you were answering.",
+  "next": "S25"
+}

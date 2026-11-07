@@ -34,7 +34,10 @@ import { Dialog } from "@/components/ui/Dialog";
 import { palette, toggleProjectBookmark } from "./ProjectViews";
 import s from "./Projects.module.css";
 import u from "@/components/product/Product.module.css";
-const Entrance = dynamic(() => import("./Entrance"), { ssr: false });
+const Entrance = dynamic(() => import("./Entrance"), {
+  ssr: false,
+  loading: () => <div className={s.entrance} role="status" aria-label="Preparing project entrance" />,
+});
 export default function ProjectRunner({
   runId,
   projectId,

@@ -1,0 +1,628 @@
+{
+  "version": 1,
+  "provider": "Kokoro-82M v1.0 / kokoro-onnx 0.6.1",
+  "directionLimit": "Emotion tags adjust pace and pauses. This model does not provide native acted emotions.",
+  "lines": {
+    "S01-0": {
+      "file": "/projects/legacy-fracture/audio/S01-0.mp3",
+      "signature": "c29a380938a0540abd0f8fe1993361ff82708a24cf6518831f378c04b89df29d",
+      "caption": "Granger and Sons Freight. One hundred twelve years of deliveries.",
+      "speaker": "narrator",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 4.409
+    },
+    "S01-1": {
+      "file": "/projects/legacy-fracture/audio/S01-1.mp3",
+      "signature": "db8bc085d893661f7dd178435535fab91adcfbd4f6779299b9a86441e0e86a1d",
+      "caption": "A brass bell opens every shift.",
+      "speaker": "narrator",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 2.759
+    },
+    "S01-2": {
+      "file": "/projects/legacy-fracture/audio/S01-2.mp3",
+      "signature": "503451448b4965d68e9540204e6cdd70846dd49374dbc30b7fc44e2975c976d7",
+      "caption": "Peak season starts in nine weeks.",
+      "speaker": "narrator",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 2.654
+    },
+    "S02-0": {
+      "file": "/projects/legacy-fracture/audio/S02-0.mp3",
+      "signature": "6844649c980866dbfddd40465b7d5dcd53cb45f4b791ae8853d059e98fecff68",
+      "caption": "Every late truck has a story. The pattern is the problem.",
+      "speaker": "renata",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 3.695
+    },
+    "S03-0": {
+      "file": "/projects/legacy-fracture/audio/S03-0.mp3",
+      "signature": "99737d141490403299d0b6ffddac47a0b593461fca271796d7a5919a3df28606",
+      "caption": "Cora. Operations. Welcome to Granger.",
+      "speaker": "cora",
+      "emotion": "neutral",
+      "voice": "af_nicole",
+      "duration": 4.565
+    },
+    "S03-1": {
+      "file": "/projects/legacy-fracture/audio/S03-1.mp3",
+      "signature": "bca33d6c1f8bfcb724c0e315c6c07477040d922aacf871927e519534f42f98c5",
+      "caption": "Peak is in nine weeks. Nothing breaks before then.",
+      "speaker": "cora",
+      "emotion": "pressured",
+      "voice": "af_nicole",
+      "duration": 4.839
+    },
+    "S04-0": {
+      "file": "/projects/legacy-fracture/audio/S04-0.mp3",
+      "signature": "fcaf2fd858b7d8628fa49c78f5541693999bc609a3e0a7e4cc37bdc8eee9e6cf",
+      "caption": "I built GRID-3. Back in ninety-four.",
+      "speaker": "oswald",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 3.461
+    },
+    "S04-1": {
+      "file": "/projects/legacy-fracture/audio/S04-1.mp3",
+      "signature": "9856a6b3ea5ceb84ff586ee2d9932fb98885f8bbaceee4372ba9c0b9066bd5f2",
+      "caption": "Everyone wants it gone. Nobody asks how it works.",
+      "speaker": "oswald",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 4.102
+    },
+    "S05-0": {
+      "file": "/projects/legacy-fracture/audio/S05-0.mp3",
+      "signature": "5b7c43b9330c6da0bc9775474956301e59adf2c669b8f85b6ce303a6fc2b0e78",
+      "caption": "My drivers are late. I'm the one explaining.",
+      "speaker": "renata",
+      "emotion": "pressured",
+      "voice": "af_bella",
+      "duration": 2.981
+    },
+    "S05-1": {
+      "file": "/projects/legacy-fracture/audio/S05-1.mp3",
+      "signature": "f2f14c9f0a34ef96e039d948607e05c4899d1335b161a6beee5a61b576a48983",
+      "caption": "I can rebuild routing. If someone lets me.",
+      "speaker": "leif",
+      "emotion": "approving",
+      "voice": "bm_lewis",
+      "duration": 3.259
+    },
+    "S06-0": {
+      "file": "/projects/legacy-fracture/audio/S06-0.mp3",
+      "signature": "a801eaf7b807143a0c273388dbc06269ba9e942e0d8f01de4b78c1a5ba711b6f",
+      "caption": "Practice first. Nothing here counts.",
+      "speaker": "coach",
+      "emotion": "neutral",
+      "voice": "af_heart",
+      "duration": 2.642
+    },
+    "S06-1": {
+      "file": "/projects/legacy-fracture/audio/S06-1.mp3",
+      "signature": "5d64b935aaf22c9aafdf6750752e196ade2d7486c491ff5c0ec5f2f6121fd434",
+      "caption": "That is the loop. The real clock starts now.",
+      "speaker": "coach",
+      "emotion": "approving",
+      "voice": "af_heart",
+      "duration": 3.065
+    },
+    "S07-0": {
+      "file": "/projects/legacy-fracture/audio/S07-0.mp3",
+      "signature": "3be6b14b1c33411c8fcdea87b2ef39bb34e88c2e141336b75bbed5c61ecccee4",
+      "caption": "Six attention this week. Find what causes the delay.",
+      "speaker": "cora",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 5.649
+    },
+    "S08-0": {
+      "file": "/projects/legacy-fracture/audio/S08-0.mp3",
+      "signature": "b7e636cf6e5979c1b1768cbe10053e6db632185028bf227b995416ddf2feb533",
+      "caption": "Scrub the day. Mark where the plan and road disagree.",
+      "speaker": "renata",
+      "emotion": "neutral",
+      "voice": "af_bella",
+      "duration": 3.643
+    },
+    "S09-0": {
+      "file": "/projects/legacy-fracture/audio/S09-0.mp3",
+      "signature": "8d07d0304ff3118af42c7a5698183118010258f2e4be974ee776583e19a8e0d7",
+      "caption": "Ask your question. I'll answer what I remember.",
+      "speaker": "oswald",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 3.782
+    },
+    "S10-0": {
+      "file": "/projects/legacy-fracture/audio/S10-0.mp3",
+      "signature": "11f8389b3e0754f5084e70d87e4bd71e72f559769e96e1f9b0c4ae5aa9a9866e",
+      "caption": "Place what we know. See what breaks if we move it.",
+      "speaker": "leif",
+      "emotion": "pressured",
+      "voice": "bm_lewis",
+      "duration": 3.173
+    },
+    "S11-0": {
+      "file": "/projects/legacy-fracture/audio/S11-0.mp3",
+      "signature": "1f51bbee8d7c2cd80abbdca646c907da11739ce231ef24faa6ce01e3756e81fc",
+      "caption": "Cora tells me you have been busy.",
+      "speaker": "alistair",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 2.653
+    },
+    "S11-1": {
+      "file": "/projects/legacy-fracture/audio/S11-1.mp3",
+      "signature": "53d81b6c311010c583de4d67eeefe957eacdd80556c6895b0a1f7d260e6908c9",
+      "caption": "Tell me a story. What is wrong with my system?",
+      "speaker": "alistair",
+      "emotion": "thinking",
+      "voice": "bm_daniel",
+      "duration": 3.568
+    },
+    "S12a-0": {
+      "file": "/projects/legacy-fracture/audio/S12a-0.mp3",
+      "signature": "f421122bad9bdf7c1691f56e641c3b41aaca9d4236a7522ddcddd6abd3cf1267",
+      "caption": "Two weeks. I'll show you something.",
+      "speaker": "leif",
+      "emotion": "approving",
+      "voice": "bm_lewis",
+      "duration": 2.529
+    },
+    "S12b-0": {
+      "file": "/projects/legacy-fracture/audio/S12b-0.mp3",
+      "signature": "3aefb9a28e2dab785bd96b6eaec189b7711bbffdb3600fb9c993f773886682dd",
+      "caption": "Show me.",
+      "speaker": "alistair",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 1.512
+    },
+    "S13-0": {
+      "file": "/projects/legacy-fracture/audio/S13-0.mp3",
+      "signature": "0b9e8e64ee11367788cdc7a6848ea1660b724873611c54de20ccd252f992460e",
+      "caption": "The story now belongs to the people who heard it.",
+      "speaker": "narrator",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 3.103
+    },
+    "S14-0": {
+      "file": "/projects/legacy-fracture/audio/S14-0.mp3",
+      "signature": "7b6c150ee8034dbf96bdfd2f7f2ebee4e5c1c5a083d20619a012ad73a49c533d",
+      "caption": "Week four. The coalition war begins.",
+      "speaker": "narrator",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 2.931
+    },
+    "S15-0": {
+      "file": "/projects/legacy-fracture/audio/S15-0.mp3",
+      "signature": "d100807dec9e3494282f2ee1e8c8f10bc441a44917cc695d36041dd8b7585ce7",
+      "caption": "Ops will back you. We feel the pain daily.",
+      "speaker": "renata",
+      "emotion": "neutral",
+      "voice": "af_bella",
+      "duration": 2.86
+    },
+    "S15-1": {
+      "file": "/projects/legacy-fracture/audio/S15-1.mp3",
+      "signature": "47b6d1a12e6062c3d41fc4142d50e1fcb765861273fa55965266a997c12352ed",
+      "caption": "Finance will fund it. Show me the cost of failure.",
+      "speaker": "isaac",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 3.838
+    },
+    "S16-0": {
+      "file": "/projects/legacy-fracture/audio/S16-0.mp3",
+      "signature": "30e5be2941b6f34fc693303840cc6fa7c04de1dfcf46499385cc928a443e3175",
+      "caption": "Waves, not a leap. Pick the order.",
+      "speaker": "leif",
+      "emotion": "neutral",
+      "voice": "bm_lewis",
+      "duration": 2.565
+    },
+    "S16-1": {
+      "file": "/projects/legacy-fracture/audio/S16-1.mp3",
+      "signature": "3303b8c4b467f85e2096529cbf0f3da1c5e000fd3a3531062b3686baad186cb2",
+      "caption": "Move the night jobs last. Please.",
+      "speaker": "oswald",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 3.193
+    },
+    "S17-0": {
+      "file": "/projects/legacy-fracture/audio/S17-0.mp3",
+      "signature": "286ad0ee39e4ef010328e212ea87e21bf2ed0d54098a27d96c02cf7841f758c5",
+      "caption": "The board approved. Don't waste that trust.",
+      "speaker": "cora",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 4.102
+    },
+    "S18-0": {
+      "file": "/projects/legacy-fracture/audio/S18-0.mp3",
+      "signature": "576a3ebaf2d48f845a42a4165d7ea59531f7b00087ca5486801673902c168772",
+      "caption": "Week eight. The dispatch bell rings after dark.",
+      "speaker": "narrator",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 3.585
+    },
+    "S19-0": {
+      "file": "/projects/legacy-fracture/audio/S19-0.mp3",
+      "signature": "606a5ef3fc70cd3d97eb1fe45a189960d0978962526386adf8682acc632e3245",
+      "caption": "Overnight, or in waves. I need an answer.",
+      "speaker": "cora",
+      "emotion": "pressured",
+      "voice": "af_nicole",
+      "duration": 4.423
+    },
+    "S20-0": {
+      "file": "/projects/legacy-fracture/audio/S20-0.mp3",
+      "signature": "48d9a5e64e3b4d52895f601529be27db6dacb48516bd4083e79964f5e9b7326d",
+      "caption": "We're live.",
+      "speaker": "leif",
+      "emotion": "pressured",
+      "voice": "bm_lewis",
+      "duration": 1.222
+    },
+    "S20-1": {
+      "file": "/projects/legacy-fracture/audio/S20-1.mp3",
+      "signature": "8c81abd0bca4f91843c4ba4f5bad4c2085c114dd0024254fd162888b260ab7a1",
+      "caption": "Trucks are moving.",
+      "speaker": "renata",
+      "emotion": "neutral",
+      "voice": "af_bella",
+      "duration": 1.358
+    },
+    "S21-0": {
+      "file": "/projects/legacy-fracture/audio/S21-0.mp3",
+      "signature": "21b1dd635fad4baccb1fe02dab03baacf7db04445b2150354688bf96386341c2",
+      "caption": "The maps settle. The consequences do not.",
+      "speaker": "narrator",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 3.132
+    },
+    "S22-0": {
+      "file": "/projects/legacy-fracture/audio/S22-0.mp3",
+      "signature": "fd355f712eaf2fb4dbf4a7edf57c91f8d69d02c9305a169a4f7303b833516063",
+      "caption": "Keep the night jobs documented.",
+      "speaker": "oswald",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 2.94
+    },
+    "S22-1": {
+      "file": "/projects/legacy-fracture/audio/S22-1.mp3",
+      "signature": "f189761ef44b2692a5092816d05c66b6065a2ccee7714715ba782f256318d934",
+      "caption": "Fix the driver app next.",
+      "speaker": "renata",
+      "emotion": "neutral",
+      "voice": "af_bella",
+      "duration": 1.904
+    },
+    "S22-2": {
+      "file": "/projects/legacy-fracture/audio/S22-2.mp3",
+      "signature": "e5184a605e048b3316e54bec50b399bfa3af3898a178135f6037f21657603d8c",
+      "caption": "Publish the savings.",
+      "speaker": "isaac",
+      "emotion": "neutral",
+      "voice": "am_michael",
+      "duration": 1.831
+    },
+    "S23-0": {
+      "file": "/projects/legacy-fracture/audio/S23-0.mp3",
+      "signature": "da5926e5c006d840a394c93a7b0b27557faca058fc12decf75039c1f91e96af4",
+      "caption": "The fleet remembers what the plan forgot.",
+      "speaker": "narrator",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 2.964
+    },
+    "reaction-00": {
+      "file": "/projects/legacy-fracture/audio/reaction-00.mp3",
+      "signature": "21b266d2ee6dfb0a672c9f62772930441347460ed9180114fe717ee25e3c2069",
+      "caption": "Finally someone says it.",
+      "speaker": "renata",
+      "emotion": "approving",
+      "voice": "af_bella",
+      "duration": 1.721
+    },
+    "reaction-01": {
+      "file": "/projects/legacy-fracture/audio/reaction-01.mp3",
+      "signature": "2675c30cce47e1ea5913fc9cf583ab61a51a6445e581a30622ef27d0547aa5de",
+      "caption": "Half of it, yes.",
+      "speaker": "renata",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 1.368
+    },
+    "reaction-02": {
+      "file": "/projects/legacy-fracture/audio/reaction-02.mp3",
+      "signature": "0b6f2f96157ad26553d16015388858bb83a1f311d224d3432950244eb1a49429",
+      "caption": "It rained everywhere. Only we were late.",
+      "speaker": "renata",
+      "emotion": "annoyed",
+      "voice": "af_bella",
+      "duration": 2.751
+    },
+    "reaction-03": {
+      "file": "/projects/legacy-fracture/audio/reaction-03.mp3",
+      "signature": "cea4ced8b1e222e8ace5e7b59a9f57f273b12abfe62dfdc05b9f0fad3fc66668",
+      "caption": "Honest. Go look.",
+      "speaker": "renata",
+      "emotion": "approving",
+      "voice": "af_bella",
+      "duration": 1.744
+    },
+    "reaction-04": {
+      "file": "/projects/legacy-fracture/audio/reaction-04.mp3",
+      "signature": "e0c2c87459d2e1698a66fcb39d1d8ed5ce4b1db88f6fedf8b28c503b1ae46192",
+      "caption": "Good.",
+      "speaker": "cora",
+      "emotion": "approving",
+      "voice": "af_nicole",
+      "duration": 1.125
+    },
+    "reaction-05": {
+      "file": "/projects/legacy-fracture/audio/reaction-05.mp3",
+      "signature": "faf0bf4492ce2e1e41688b2652f839e72bec693fc2c934b0e24c4af7fc7079b4",
+      "caption": "Show me. Quietly.",
+      "speaker": "cora",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 2.011
+    },
+    "reaction-06": {
+      "file": "/projects/legacy-fracture/audio/reaction-06.mp3",
+      "signature": "00e357f79017602193147361a9b40a7742de8a45cb745f6739cf23da9644db6c",
+      "caption": "Not before peak.",
+      "speaker": "cora",
+      "emotion": "annoyed",
+      "voice": "af_nicole",
+      "duration": 1.863
+    },
+    "reaction-07": {
+      "file": "/projects/legacy-fracture/audio/reaction-07.mp3",
+      "signature": "d346599a16305e4e4e4fe929352df6e8552f30c5c1cd92f9a6badb452d06d9c4",
+      "caption": "The night jobs. Nobody reads them.",
+      "speaker": "oswald",
+      "emotion": "approving",
+      "voice": "bm_george",
+      "duration": 3.246
+    },
+    "reaction-08": {
+      "file": "/projects/legacy-fracture/audio/reaction-08.mp3",
+      "signature": "d6a62baa90d6a403525d6c2461d03b1458a7cc49aa4ed446a0b9875dc2f3b501",
+      "caption": "The nightly batch clears overrides. I never liked that.",
+      "speaker": "oswald",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 4.243
+    },
+    "reaction-09": {
+      "file": "/projects/legacy-fracture/audio/reaction-09.mp3",
+      "signature": "8fe155e12c6869e750e25aec4c2c4f7dc115a1f7a17d5922977c3890a75ea12f",
+      "caption": "The road table? Nobody has the source anymore.",
+      "speaker": "oswald",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 3.846
+    },
+    "reaction-10": {
+      "file": "/projects/legacy-fracture/audio/reaction-10.mp3",
+      "signature": "7dc105d2eeddecab491b646010cc63f582e532d6aa2f9b80a039f9bfb3c3ed00",
+      "caption": "The two a.m. job writes customs codes. Billing reads them too.",
+      "speaker": "oswald",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 5.567
+    },
+    "reaction-11": {
+      "file": "/projects/legacy-fracture/audio/reaction-11.mp3",
+      "signature": "da5b108ae4769b7305be42dac6944c184d78698f15a8fda9d43bbdc65d0ce8c9",
+      "caption": "If we replace routing and skip that job, invoices break.",
+      "speaker": "leif",
+      "emotion": "thinking",
+      "voice": "bm_lewis",
+      "duration": 4.135
+    },
+    "reaction-12": {
+      "file": "/projects/legacy-fracture/audio/reaction-12.mp3",
+      "signature": "2fcb1812815e094e1511d0607ed04213a86f597ccbea236914456ea26a2fee69",
+      "caption": "You went over my head.",
+      "speaker": "cora",
+      "emotion": "annoyed",
+      "voice": "af_nicole",
+      "duration": 2.213
+    },
+    "reaction-13": {
+      "file": "/projects/legacy-fracture/audio/reaction-13.mp3",
+      "signature": "f421122bad9bdf7c1691f56e641c3b41aaca9d4236a7522ddcddd6abd3cf1267",
+      "caption": "Two weeks. I'll show you something.",
+      "speaker": "leif",
+      "emotion": "approving",
+      "voice": "bm_lewis",
+      "duration": 2.549
+    },
+    "reaction-14": {
+      "file": "/projects/legacy-fracture/audio/reaction-14.mp3",
+      "signature": "0b9c896dbf50714871712ad2d6200faeb664fd81e4d47b6219e0d3dfdcf997e9",
+      "caption": "Come. I'll show you where it breathes.",
+      "speaker": "oswald",
+      "emotion": "approving",
+      "voice": "bm_george",
+      "duration": 2.84
+    },
+    "reaction-15": {
+      "file": "/projects/legacy-fracture/audio/reaction-15.mp3",
+      "signature": "e16ccd2b18005a87fb2fcc72b2f4c88a0681aa71815adb323f08687e6a490447",
+      "caption": "Invoices won't match. I don't know why.",
+      "speaker": "leif",
+      "emotion": "pressured",
+      "voice": "bm_lewis",
+      "duration": 2.949
+    },
+    "reaction-16": {
+      "file": "/projects/legacy-fracture/audio/reaction-16.mp3",
+      "signature": "2218509f9efc3a4083a7952d195d3013d4388b238e8ca8df533dbb428e20129e",
+      "caption": "That is a good ledger. Cora, fund it.",
+      "speaker": "alistair",
+      "emotion": "thinking",
+      "voice": "bm_daniel",
+      "duration": 3.248
+    },
+    "reaction-17": {
+      "file": "/projects/legacy-fracture/audio/reaction-17.mp3",
+      "signature": "0035358aaddea4ca128aedd98f0fa3b4ece00d8ec359d43a4017f5455a13e23d",
+      "caption": "Stories, not facts.",
+      "speaker": "alistair",
+      "emotion": "annoyed",
+      "voice": "bm_daniel",
+      "duration": 2.225
+    },
+    "reaction-18": {
+      "file": "/projects/legacy-fracture/audio/reaction-18.mp3",
+      "signature": "6c7e7567a692b7f105b12679544894add2031ab24ccea606c0b1b8f96cc140a0",
+      "caption": "I have a budget meeting. You gave me a headline.",
+      "speaker": "isaac",
+      "emotion": "annoyed",
+      "voice": "am_michael",
+      "duration": 3.731
+    },
+    "reaction-19": {
+      "file": "/projects/legacy-fracture/audio/reaction-19.mp3",
+      "signature": "0e46dc9b57d7c791f81d9de459a139df0c5b644ac701575da84a82c4b2c73217",
+      "caption": "Leif's side project. Interesting. Not told to me.",
+      "speaker": "oswald",
+      "emotion": "pressured",
+      "voice": "bm_george",
+      "duration": 4.542
+    },
+    "reaction-20": {
+      "file": "/projects/legacy-fracture/audio/reaction-20.mp3",
+      "signature": "52ccf861d53a33223b1e2ab09e525e57e5decc599cfa920a943870642b6eace7",
+      "caption": "You listen. That is rare.",
+      "speaker": "oswald",
+      "emotion": "approving",
+      "voice": "bm_george",
+      "duration": 2.632
+    },
+    "reaction-21": {
+      "file": "/projects/legacy-fracture/audio/reaction-21.mp3",
+      "signature": "d6b12e9d8edfa71391c561842328d4024f5e5f3a802d37b52c4e9008093cfcf1",
+      "caption": "My depots will pilot.",
+      "speaker": "renata",
+      "emotion": "approving",
+      "voice": "af_bella",
+      "duration": 1.687
+    },
+    "reaction-22": {
+      "file": "/projects/legacy-fracture/audio/reaction-22.mp3",
+      "signature": "e83c4308fb5886e187315187622afabc7ea7fc768ef28516ab5af5a57d768c81",
+      "caption": "No budget until you show me the number.",
+      "speaker": "isaac",
+      "emotion": "annoyed",
+      "voice": "am_michael",
+      "duration": 3.271
+    },
+    "reaction-23": {
+      "file": "/projects/legacy-fracture/audio/reaction-23.mp3",
+      "signature": "53d768270029d2dd9ef51811af063b5780b2a08df8b63ff647756ec5b1062618",
+      "caption": "Funded.",
+      "speaker": "isaac",
+      "emotion": "approving",
+      "voice": "am_michael",
+      "duration": 1.24
+    },
+    "reaction-24": {
+      "file": "/projects/legacy-fracture/audio/reaction-24.mp3",
+      "signature": "dd043ac2e1e46621a4df327682437ca904d9d78bab3fcbf68104285b5b1e30ee",
+      "caption": "You never asked us.",
+      "speaker": "renata",
+      "emotion": "annoyed",
+      "voice": "af_bella",
+      "duration": 1.472
+    },
+    "reaction-25": {
+      "file": "/projects/legacy-fracture/audio/reaction-25.mp3",
+      "signature": "23c5ab4505381879cb8c06f4d889460f811d43721760b3db84e1552bb46a4508",
+      "caption": "You did not skip the night jobs. Thank you.",
+      "speaker": "oswald",
+      "emotion": "approving",
+      "voice": "bm_george",
+      "duration": 3.384
+    },
+    "reaction-26": {
+      "file": "/projects/legacy-fracture/audio/reaction-26.mp3",
+      "signature": "c74265cdb333b126df0d741a6a1b7eea9ed6236a8406fef45338107cae27d7ae",
+      "caption": "My father drove one of these routes. Go gently.",
+      "speaker": "oswald",
+      "emotion": "approving",
+      "voice": "bm_george",
+      "duration": 3.739
+    },
+    "reaction-27": {
+      "file": "/projects/legacy-fracture/audio/reaction-27.mp3",
+      "signature": "d8f7691382ea787071ebe812878fa9dfcaf78a9e71fd571165282aaea7f8f9a6",
+      "caption": "Nine hundred trucks. No routes.",
+      "speaker": "renata",
+      "emotion": "pressured",
+      "voice": "af_bella",
+      "duration": 2.597
+    },
+    "reaction-28": {
+      "file": "/projects/legacy-fracture/audio/reaction-28.mp3",
+      "signature": "29ac51b49da729cdf786ccdc37b202de0ff90228c9aa8e235e0cf5906ba3c107",
+      "caption": "Two systems. Two bills. Every day a fight.",
+      "speaker": "isaac",
+      "emotion": "annoyed",
+      "voice": "am_michael",
+      "duration": 3.862
+    },
+    "reaction-29": {
+      "file": "/projects/legacy-fracture/audio/reaction-29.mp3",
+      "signature": "16d37d8a9d48b2b09d8e9d72bb1e2af9ad8ad094c30a1eee057d4f92591fa6b7",
+      "caption": "It breathes. Good.",
+      "speaker": "oswald",
+      "emotion": "approving",
+      "voice": "bm_george",
+      "duration": 2.194
+    },
+    "reaction-30": {
+      "file": "/projects/legacy-fracture/audio/reaction-30.mp3",
+      "signature": "118add625cb48de7052c076b8572a4f11b2bc6321af975a44952eb5dbe641799",
+      "caption": "The fleet is moving. I did not sleep.",
+      "speaker": "cora",
+      "emotion": "approving",
+      "voice": "af_nicole",
+      "duration": 4.133
+    },
+    "reaction-31": {
+      "file": "/projects/legacy-fracture/audio/reaction-31.mp3",
+      "signature": "6b2057ebeb8de2fcb6aedcfec33545a490d6966fec6f49492ad375fbd2d0d2fc",
+      "caption": "Ask me something else.",
+      "speaker": "oswald",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 2.033
+    },
+    "reaction-32": {
+      "file": "/projects/legacy-fracture/audio/reaction-32.mp3",
+      "signature": "0733ef469d34ba787dd5a037a4418eff3946eba698192c5ed3d5ce17edce704d",
+      "caption": "Parity is measured on a sample, not a promise.",
+      "speaker": "leif",
+      "emotion": "thinking",
+      "voice": "bm_lewis",
+      "duration": 3.301
+    }
+  }
+}

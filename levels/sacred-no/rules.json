@@ -1,0 +1,147 @@
+{
+  "initial": {
+    "credibility": 60,
+    "readiness": 50,
+    "trust": 55,
+    "risk": 25,
+    "cash": 100,
+    "composure": 60,
+    "safeguards": 5,
+    "resolve": 70,
+    "jitter": 20,
+    "availability": 80,
+    "CT": 55
+  },
+  "bounds": {
+    "credibility": [
+      0,
+      100
+    ],
+    "readiness": [
+      0,
+      100
+    ],
+    "trust": [
+      0,
+      100
+    ],
+    "risk": [
+      0,
+      100
+    ],
+    "cash": [
+      0,
+      100
+    ],
+    "composure": [
+      0,
+      100
+    ],
+    "safeguards": [
+      0,
+      24
+    ],
+    "resolve": [
+      0,
+      100
+    ],
+    "jitter": [
+      0,
+      100
+    ],
+    "availability": [
+      0,
+      100
+    ],
+    "CT": [
+      0,
+      100
+    ]
+  },
+  "flags": [
+    "guarded",
+    "caved"
+  ],
+  "clues": [
+    "data",
+    "revenue",
+    "burnout",
+    "alternative",
+    "reputation",
+    "board",
+    "payments",
+    "support",
+    "downside"
+  ],
+  "receipts": [
+    "R_sacred-no_messages",
+    "R_sacred-no_triage",
+    "R_sacred-no_slack",
+    "R_sacred-no_hours",
+    "R_sacred-no_rehearsal",
+    "R_sacred-no_duel",
+    "R_sacred-no_tells",
+    "R_sacred-no_blast",
+    "R_sacred-no_demo-switch",
+    "R_sacred-no_guarded",
+    "R_sacred-no_cave",
+    "R_sacred-no_refuse",
+    "R_sacred-no_own",
+    "R_sacred-no_defend",
+    "R_sacred-no_rollback"
+  ],
+  "endings": [
+    {
+      "id": "crash",
+      "title": "Crash",
+      "summary": "Your boundary, evidence, tone, and safeguards shaped the demonstration.",
+      "when": {
+        "var": "risk",
+        "op": ">=",
+        "value": 40
+      }
+    },
+    {
+      "id": "standoff",
+      "title": "Standoff",
+      "summary": "Your boundary, evidence, tone, and safeguards shaped the demonstration.",
+      "when": {
+        "var": "CT",
+        "op": "<",
+        "value": 40
+      }
+    },
+    {
+      "id": "overruled",
+      "title": "Overruled",
+      "summary": "Your boundary, evidence, tone, and safeguards shaped the demonstration.",
+      "when": {
+        "var": "resolve",
+        "op": ">",
+        "value": 65
+      }
+    },
+    {
+      "id": "backed",
+      "title": "Backed",
+      "summary": "Your boundary, evidence, tone, and safeguards shaped the demonstration.",
+      "when": {
+        "all": [
+          {
+            "var": "credibility",
+            "op": ">=",
+            "value": 60
+          },
+          {
+            "flag": "guarded"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tolerated",
+      "title": "Tolerated",
+      "summary": "Your boundary, evidence, tone, and safeguards shaped the demonstration."
+    }
+  ]
+}

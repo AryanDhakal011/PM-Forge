@@ -1,0 +1,66 @@
+{
+  "id": "blast-radius",
+  "type": "TOOL",
+  "background": "office",
+  "goal": "Inspect the blast radius and replay a failure at triple speed.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "priya"
+  ],
+  "lines": [
+    {
+      "id": "line-8",
+      "speaker": "priya",
+      "expression": "thinking",
+      "text": "The queue serves customers who never joined this meeting."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "blast",
+      "kind": "GraphView",
+      "title": "Failure propagation",
+      "items": [
+        {
+          "id": "payment",
+          "label": "Payments",
+          "detail": "An overloaded queue delays existing transactions.",
+          "effects": [],
+          "group": "payments"
+        },
+        {
+          "id": "support",
+          "label": "Support",
+          "detail": "A vague pilot becomes an unstaffed support promise.",
+          "effects": [],
+          "group": "support"
+        },
+        {
+          "id": "replay",
+          "label": "What if I am wrong?",
+          "detail": "Replay the failure trace at three times speed.",
+          "effects": [
+            {
+              "var": "readiness",
+              "op": "add",
+              "value": 2
+            }
+          ],
+          "group": "downside"
+        }
+      ],
+      "min": 3,
+      "max": 3,
+      "cost": 0,
+      "receiptId": "R_sacred-no_blast"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 2,
+  "act": 2,
+  "next": "kill-switch"
+}

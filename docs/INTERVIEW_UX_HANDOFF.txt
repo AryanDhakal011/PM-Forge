@@ -1,0 +1,176 @@
+# PMForge interview experience: reusable UX redesign and implementation handoff
+
+Redesign and implement the interview experience so a first-time user always knows **where they are, what to do now, and what happens next**. Apply the structure across every interview category and difficulty, rather than fixing one scenario in isolation.
+
+Inspect the current interview runner, live interview desk, scenario data, persistence, scoring, audio, and debrief flows before editing. Preserve the underlying practice mechanics and saved work. Reorganize when controls and information appear so the screen presents one primary task at a time.
+
+Consult Subframe inspiration for this substantial design change. Use its guided-step and panel-transition patterns as interaction references while preserving PMForge’s typography, colors, accessibility, and editorial character.
+
+## Core problem
+
+The current preflight screen exposes too many layers at once: an evidence desk with locked cards, a three-phase tracker, an interviewer prompt, speak and typing modes, interviewer voice, microphone consent and testing, local audio recording, a writing field, three context cards, pressure mode, and a distant “Begin the interview” button.
+
+These functions are valuable, but their current order makes the user wonder whether the interview has already begun. The timer and interviewer appear active while a separate start action remains below the fold. Evidence appears before the user knows the brief or why they would request it. Pressure controls appear in more than one place. The primary next action is visually separated from the explanation of the task.
+
+Resolve this through **progressive disclosure and a consistent interview state model**.
+
+## Required experience model
+
+Every interview should use the same five user-facing stages:
+
+1. **Prepare** — Understand the scenario and choose how to respond.
+2. **Frame** — Clarify the decision and state the goal.
+3. **Investigate** — Ask questions, request evidence, and work through category-specific reasoning.
+4. **Decide** — Make and defend a recommendation, including trade-offs and pushback.
+5. **Reflect** — Review feedback, decisions, evidence used, and next practice steps.
+
+The existing internal stages may remain more granular. Map them to these five user-facing stages instead of exposing implementation labels directly. The user-facing stage indicator must reflect the actual current task. Never show a phase as active before the interview begins.
+
+At every stage, display a compact **“Your next move”** prompt with one actionable sentence. Pair it with one primary action. Secondary tools remain available in a clearly labeled drawer or panel.
+
+## 1. Prepare: a calm, short preflight
+
+**Current:** Preflight content is mixed with the active interviewer and evidence workspace, and the start button sits far below the initial view.
+
+**Build:**
+
+- Show a focused preparation screen before the interview starts. It should fit the essential information and start action within the first viewport on common laptop and phone sizes.
+- Present the scenario title, a two- or three-sentence brief, the decision the user will practice, estimated time, and what a successful run involves.
+- Condense the three existing primer cards into a short **“Keep these in mind”** summary. Allow expansion for the full context; do not require the user to scroll through three large cards before starting.
+- Offer a simple response-mode choice: **Type** or **Speak**. Choose a sensible default based on existing preference or device capability. Neither mode changes the quality of the practice path.
+- Put optional settings behind a **“Practice settings”** disclosure: pressure mode, interviewer voice, local recording, and other advanced controls. Describe the consequence of each choice in plain language.
+- Ask for microphone and transcription consent **only after the user chooses Speak**. Then provide microphone test and fallback to typing. Do not show disabled microphone controls to someone who chose typing.
+- Keep **“Begin interview”** visible near the brief, including on mobile. If a required setup step is incomplete, explain precisely what is needed beside that control.
+- Do not start the practice timer until the user begins. If the existing timer includes preflight time for another purpose, separate that measure from the visible interview timer.
+
+The preparation screen should answer: **What is this? What will I do? How do I want to respond? How do I start?**
+
+## 2. Active interview shell
+
+Use one reusable shell across Root cause, Product sense, Strategy, Metrics, Estimation, AI & technical, Behavioral, and future categories.
+
+The shell has four stable regions:
+
+- **Top bar:** PMForge, scenario title, elapsed or remaining time, save status, Pause, and Exit.
+- **Stage rail:** The five user-facing stages, current position, and completed steps. Keep it compact on mobile.
+- **Main task area:** The interviewer’s current prompt, the user’s response control, and the primary next action.
+- **Context tools:** Evidence, notes, outline, transcript, and settings, accessible when relevant without competing with the main task.
+
+On desktop, context tools may sit in a narrower side panel. On mobile, use a clearly labeled bottom sheet or expandable panel. The main task must appear before the tools in reading and focus order. Avoid a long sidebar above the interview prompt on narrow screens.
+
+Show the pinned objective in one concise line once it has been set. Keep save status reassuring but quiet. Make the primary action visually dominant and give it a specific label such as “Ask this question,” “Pin this goal,” “Request evidence,” or “Defend my decision.” Avoid a generic “Continue” when a more precise label is possible.
+
+## 3. Frame the decision
+
+**Current:** The user sees a generic interviewer welcome and a separate later stage for pinning the objective.
+
+**Build:**
+
+- Begin with the interviewer’s opening prompt and one clear task: **“Clarify the decision before proposing a solution.”**
+- Give the user a place to ask a clarifying question or state what they need to know. Use category-specific examples as optional hints, not prefilled answers.
+- Make the goal-pinning step understandable: explain why it matters and show the selected objective in the persistent top area afterward.
+- Unlock evidence according to the existing rules, but explain an unavailable action in context. A locked card should not merely look faded.
+
+## 4. Investigate with an evidence desk
+
+**Current:** The evidence desk is prominent before the interview begins; locked evidence cards and the credit budget appear without enough task context.
+
+**Build:**
+
+- Introduce the evidence desk when investigation becomes relevant. It remains accessible later, but should not dominate preflight.
+- Start with the brief and one suggestion about how to use evidence: **“Choose a cut that could change your conclusion.”**
+- Show the available evidence budget with a short explanation of what a request costs. Keep the budget visible but secondary to the decision.
+- Group evidence into **available**, **requested**, and **not yet available**. Explain each disabled state: requires clarification, insufficient credits, locked by phase, pending interviewer response, or paused session.
+- When evidence is requested, show what was learned and how the budget changed. Preserve the decision trail.
+- On mobile, make opening and closing the evidence panel easy while keeping the current prompt and response available.
+- Preserve the distinction between simulated data and unverified reference material.
+
+## 5. Responding to the interviewer
+
+**Current:** The live desk combines presence, voice settings, mode switching, microphone setup, a text field, transcript, outline, and diagnostics.
+
+**Build:**
+
+- Keep the interviewer prompt and user response together in the main task area.
+- Show a single obvious response control for the selected mode. In typing mode, prioritize the writing field and submit action. In speaking mode, prioritize microphone state, start/stop listening, and a visible transcript of captured words.
+- Keep a persistent, easy **“Switch to typing”** fallback in speaking mode. Preserve draft and transcript content when switching.
+- Place interviewer voice, local recording, transcript sync, and other optional audio settings in a settings panel after initial setup. Show their current state where useful.
+- Show microphone permission, test, listening, processing, failure, and recovery states distinctly. Each failure needs a next action, not only an error message.
+- Treat interviewer follow-ups as a focused moment: highlight the follow-up, explain whether the main clock is paused, and offer the existing defend/adjust/pivot choices without burying the response field.
+- Keep transcript, raw wording, outline, and structure tools available as secondary panels. Do not expand them by default during an active answer unless the task specifically requires them.
+- Preserve the current behavior that original words are not silently rewritten.
+
+## 6. Decide and defend
+
+Create a clear transition from exploration to recommendation.
+
+- Summarize the pinned goal and evidence the user chose, without generating unsupported claims.
+- Ask for one recommendation, the evidence supporting it, a trade-off, and what would change the user’s mind.
+- Let category-specific workbenches appear here or in Investigate when they are needed. Do not make users work through unrelated widgets just because the component exists.
+- When the interviewer challenges the recommendation, show the challenge as the current primary task. Put previous reasoning one click away in context tools.
+- If an action is locked, explain why and show the smallest next step that unlocks it.
+
+## 7. Reflect and debrief
+
+**Build:**
+
+- Clearly signal that the interview is complete and the session has moved to feedback.
+- Show a readable sequence: **decision made → evidence used → trade-offs → feedback → next practice step**.
+- Distinguish rubric-based feedback from diagnostic voice observations. Explain limits of timing, filler, and delivery metrics. Do not present them as a definitive judgment.
+- Make the decision trail and transcript inspectable without overwhelming the summary view.
+- Offer real next actions: retry this scenario, practice another in the category, save or view the portfolio artifact where supported, or return to practice.
+- Show saving, sync, and local recording state clearly. Never imply audio clips are synced when they are local only.
+
+## Reusable architecture
+
+Implement this as a shared interview experience, not a separate hand-coded layout for each scenario.
+
+- Create a common stage model that maps internal run stages to the five user-facing stages.
+- Use shared components for the shell, stage rail, next-move cue, primary action area, context panel, evidence desk, response mode, settings, and debrief summary.
+- Put category-specific copy, workbench content, evidence rules, and stage requirements behind explicit configuration or existing scenario data.
+- Keep gating and scoring rules in their current source of truth. UI state must explain those rules rather than duplicate them.
+- Preserve run data, autosave, pause/resume, exit confirmation, audio consent, evidence costs, transcripts, and decision history.
+- Ensure a saved interview resumes at the correct user-facing stage with its panels and current task intact.
+
+## Visual design
+
+Preserve PMForge’s cream, green, amber, paper, and editorial type. Use the serif for stage headings and short moments of emphasis; use the sans-serif for prompts, controls, evidence, and feedback.
+
+Suggested scale: stage heading 32–44 px desktop and 28–36 px mobile; interviewer prompt 22–28 px; body 16–18 px; labels and control text at least 14–16 px. Keep lines around 60–75 characters. Use strong contrast for disabled states and explain their reason in text. Avoid making essential instructions look like fine print.
+
+The active task card should be visually prominent. Context tools should feel available but quiet. The screen should have one clear focal point at a time.
+
+## Motion and feedback
+
+Use motion to explain stage changes and confirm actions. Keep the interview calmer than the marketing page.
+
+- Stage change: 250–350 ms directional crossfade, with focus moved to the new stage heading.
+- Evidence request: immediate pressed feedback, then a 250–350 ms reveal of the result and updated budget.
+- Response submission: 150–220 ms confirmation, followed by the interviewer’s next prompt. Never delay submission to finish an animation.
+- Drawer or panel: 200–280 ms, interruptible.
+- Pause/resume: immediate state change with a short 180 ms visual transition.
+- Save status: subtle state change, no repeating animation.
+- Avoid ambient loops, parallax, camera effects, and WebGL in the active interview. This is a concentration task.
+- Under reduced motion, use instant state changes or brief fades. Keyboard input must never wait for motion.
+
+## Accessibility and reliability
+
+- Make every stage, control, disabled reason, and status understandable to screen readers.
+- Keep focus order aligned with the visual task order. Move focus deliberately after stage transitions and return it after closing panels.
+- Give the evidence panel, settings, and transcript clear labels and keyboard support.
+- Do not rely on color, animation, audio, or icons alone for state.
+- Keep typed work during audio failure, network failure, pause, mode switch, and resume.
+- Test with voice unavailable, permission denied, silent microphone, slow transcription, offline or failed save, exhausted evidence budget, and a paused session.
+
+## Acceptance test
+
+For each interview category and difficulty, a new user should be able to answer these questions at every moment without reading the whole page:
+
+1. What stage am I in?
+2. What is my one next action?
+3. Why is that action useful?
+4. Where can I find supporting evidence or notes?
+5. What has been saved?
+6. How do I pause, recover, or leave?
+
+Verify the full flow on 320, 375, 768, 1024, and 1440 px widths; keyboard and touch; typing and speaking; reduced motion; interrupted audio; resume; and debrief. The result should feel like a guided conversation with powerful tools nearby, not a control panel that must be understood before the interview can begin.

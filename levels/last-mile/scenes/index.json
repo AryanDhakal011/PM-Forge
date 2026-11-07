@@ -1,0 +1,1010 @@
+[
+  {
+    "id": "ride-along",
+    "type": "TOOL",
+    "background": "street",
+    "goal": "Choose one courier to follow for two field ticks.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "sana"
+    ],
+    "lines": [
+      {
+        "id": "line-1",
+        "speaker": "sana",
+        "expression": "thinking",
+        "text": "Online does not mean reachable."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "follow",
+        "kind": "PartyFloor",
+        "title": "Ride along tonight",
+        "items": [
+          {
+            "id": "bikram",
+            "label": "Bikram Rai",
+            "detail": "Water is at my knees. Orders still coming.",
+            "effects": [
+              {
+                "flag": "follow-bikram",
+                "value": true
+              }
+            ],
+            "group": "follow-bikram"
+          },
+          {
+            "id": "salma",
+            "label": "Salma Khan",
+            "detail": "The bridge is closed. My route is not.",
+            "effects": [
+              {
+                "flag": "follow-salma",
+                "value": true
+              }
+            ],
+            "group": "follow-salma"
+          },
+          {
+            "id": "joon",
+            "label": "Joon Park",
+            "detail": "Tell me where I can wait safely.",
+            "effects": [
+              {
+                "flag": "follow-joon",
+                "value": true
+              }
+            ],
+            "group": "follow-joon"
+          },
+          {
+            "id": "anita",
+            "label": "Anita Shrestha",
+            "detail": "I need the next instruction to be clear.",
+            "effects": [
+              {
+                "flag": "follow-anita",
+                "value": true
+              }
+            ],
+            "group": "follow-anita"
+          },
+          {
+            "id": "rakesh",
+            "label": "Rakesh Shah",
+            "detail": "A reopened zone still needs a way home.",
+            "effects": [
+              {
+                "flag": "follow-rakesh",
+                "value": true
+              }
+            ],
+            "group": "follow-rakesh"
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_last-mile_follow"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "ride-tick-0"
+  },
+  {
+    "id": "ride-tick-0",
+    "type": "TOOL",
+    "background": "street",
+    "goal": "Listen before setting the network policy.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "bikram"
+    ],
+    "lines": [
+      {
+        "id": "line-2",
+        "speaker": "bikram",
+        "expression": "thinking",
+        "text": "Water is at my knees. Orders still coming."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "ride-tick-0",
+        "kind": "RadioRoom",
+        "title": "Courier field tick",
+        "items": [
+          {
+            "id": "hold",
+            "label": "Hold at a safe location.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -4
+              },
+              {
+                "var": "backlog",
+                "op": "add",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "id": "caution",
+            "label": "Go with caution.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": 3
+              },
+              {
+                "var": "backlog",
+                "op": "add",
+                "value": -2
+              }
+            ]
+          },
+          {
+            "id": "reroute",
+            "label": "Reroute away from the flooded segment.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -2
+              },
+              {
+                "var": "cash",
+                "op": "add",
+                "value": -2
+              }
+            ]
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_last-mile_ride-tick-0"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "ride-tick-1"
+  },
+  {
+    "id": "ride-tick-1",
+    "type": "TOOL",
+    "background": "street",
+    "goal": "Listen before setting the network policy.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "bikram"
+    ],
+    "lines": [
+      {
+        "id": "line-3",
+        "speaker": "bikram",
+        "expression": "thinking",
+        "text": "Water is at my knees. Orders still coming."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "ride-tick-1",
+        "kind": "RadioRoom",
+        "title": "Courier field tick",
+        "items": [
+          {
+            "id": "hold",
+            "label": "Hold at a safe location.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -4
+              },
+              {
+                "var": "backlog",
+                "op": "add",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "id": "caution",
+            "label": "Go with caution.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": 3
+              },
+              {
+                "var": "backlog",
+                "op": "add",
+                "value": -2
+              }
+            ]
+          },
+          {
+            "id": "reroute",
+            "label": "Reroute away from the flooded segment.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -2
+              },
+              {
+                "var": "cash",
+                "op": "add",
+                "value": -2
+              }
+            ]
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_last-mile_ride-tick-1"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "field-reports"
+  },
+  {
+    "id": "field-reports",
+    "type": "TOOL",
+    "background": "street",
+    "goal": "Read the physical conditions behind online status.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "sana"
+    ],
+    "lines": [
+      {
+        "id": "line-4",
+        "speaker": "sana",
+        "expression": "thinking",
+        "text": "Wards five and nine are under."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "reports",
+        "kind": "EvidenceDrawers",
+        "title": "Field reports",
+        "items": [
+          {
+            "id": "water",
+            "label": "Water levels",
+            "detail": "Field reports exceed the route’s ordinary operating assumptions.",
+            "effects": [],
+            "group": "water",
+            "soWhat": "Shows conditions on the physical routes."
+          },
+          {
+            "id": "staff",
+            "label": "Restaurant staffing",
+            "detail": "Mina has half the usual staff available.",
+            "effects": [],
+            "group": "staff",
+            "soWhat": "Shows restaurant capacity behind online status."
+          },
+          {
+            "id": "access",
+            "label": "Route accessibility",
+            "detail": "A restaurant can be online while its access road closes.",
+            "effects": [],
+            "group": "access",
+            "soWhat": "Shows whether a door can actually be reached."
+          },
+          {
+            "id": "support",
+            "label": "Support queue",
+            "detail": "Delayed safety decisions also create a support backlog.",
+            "effects": [],
+            "group": "support",
+            "soWhat": "Shows the cost of delayed decisions."
+          }
+        ],
+        "min": 3,
+        "max": 3,
+        "cost": 1,
+        "receiptId": "R_last-mile_reports"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "radio"
+  },
+  {
+    "id": "radio",
+    "type": "TOOL",
+    "background": "control-room",
+    "goal": "Answer three field calls with operational instructions.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "sana"
+    ],
+    "lines": [
+      {
+        "id": "line-5",
+        "speaker": "sana",
+        "expression": "thinking",
+        "text": "Give the field one instruction they can repeat."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "radio",
+        "kind": "RadioRoom",
+        "title": "The radio room",
+        "items": [
+          {
+            "id": "hold",
+            "label": "Hold.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -5
+              },
+              {
+                "var": "backlog",
+                "op": "add",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "id": "caution",
+            "label": "Go with caution.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": 4
+              },
+              {
+                "var": "backlog",
+                "op": "add",
+                "value": -3
+              }
+            ]
+          },
+          {
+            "id": "reroute",
+            "label": "Reroute.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -2
+              },
+              {
+                "var": "cash",
+                "op": "add",
+                "value": -2
+              }
+            ]
+          }
+        ],
+        "min": 3,
+        "max": 3,
+        "cost": 0,
+        "receiptId": "R_last-mile_radio",
+        "rounds": 3
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "threshold"
+  },
+  {
+    "id": "threshold",
+    "type": "TOOL",
+    "background": "office",
+    "goal": "Choose a safety threshold with an uncertainty range.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "sana"
+    ],
+    "lines": [
+      {
+        "id": "line-6",
+        "speaker": "sana",
+        "expression": "thinking",
+        "text": "A forecast is a range, not a permission slip."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "threshold",
+        "kind": "SliderForecast",
+        "title": "Forecast fan",
+        "items": [],
+        "min": 0,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_last-mile_threshold",
+        "lever": [
+          {
+            "id": "water",
+            "label": "Operating threshold",
+            "min": 0,
+            "max": 100,
+            "initial": 35,
+            "step": 5
+          }
+        ]
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "shelters"
+  },
+  {
+    "id": "shelters",
+    "type": "TOOL",
+    "background": "street",
+    "goal": "Place up to four shelters near exposed courier routes.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "joon"
+    ],
+    "lines": [
+      {
+        "id": "line-7",
+        "speaker": "joon",
+        "expression": "thinking",
+        "text": "Tell me where I can wait safely."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "shelters",
+        "kind": "MapShelters",
+        "title": "Shelter points",
+        "items": [
+          {
+            "id": "north",
+            "label": "North school",
+            "detail": "Covers the northern route.",
+            "effects": [
+              {
+                "var": "shelters",
+                "op": "add",
+                "value": 1
+              },
+              {
+                "var": "cash",
+                "op": "add",
+                "value": -5
+              },
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -4
+              }
+            ],
+            "x": 0.22,
+            "y": 0.22
+          },
+          {
+            "id": "market",
+            "label": "Covered market",
+            "detail": "Covers the restaurant district.",
+            "effects": [
+              {
+                "var": "shelters",
+                "op": "add",
+                "value": 1
+              },
+              {
+                "var": "cash",
+                "op": "add",
+                "value": -5
+              },
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -4
+              }
+            ],
+            "x": 0.52,
+            "y": 0.46
+          },
+          {
+            "id": "bridge",
+            "label": "Bridge approach",
+            "detail": "A safe waiting point before the closed crossing.",
+            "effects": [
+              {
+                "var": "shelters",
+                "op": "add",
+                "value": 1
+              },
+              {
+                "var": "cash",
+                "op": "add",
+                "value": -5
+              },
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -4
+              }
+            ],
+            "x": 0.75,
+            "y": 0.35
+          },
+          {
+            "id": "south",
+            "label": "South depot",
+            "detail": "A staffed handover and charging point.",
+            "effects": [
+              {
+                "var": "shelters",
+                "op": "add",
+                "value": 1
+              },
+              {
+                "var": "cash",
+                "op": "add",
+                "value": -5
+              },
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -4
+              }
+            ],
+            "x": 0.65,
+            "y": 0.76
+          }
+        ],
+        "min": 0,
+        "max": 4,
+        "cost": 0,
+        "receiptId": "R_last-mile_shelters"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "statement"
+  },
+  {
+    "id": "statement",
+    "type": "FACE",
+    "background": "office",
+    "goal": "Publish a statement the field can verify.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "mina"
+    ],
+    "lines": [
+      {
+        "id": "line-8",
+        "speaker": "mina",
+        "expression": "thinking",
+        "text": "People will compare your words with the door they reach."
+      }
+    ],
+    "choices": [
+      {
+        "id": "safety-first",
+        "text": "We are closing unsafe routes and supporting affected couriers.",
+        "effects": [
+          {
+            "var": "narrativeRisk",
+            "op": "add",
+            "value": -5
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_last-mile_safety-first",
+          "store": "text"
+        }
+      },
+      {
+        "id": "online",
+        "text": "Service remains online across the city.",
+        "effects": [
+          {
+            "var": "narrativeRisk",
+            "op": "add",
+            "value": 22
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_last-mile_online",
+          "store": "text"
+        }
+      },
+      {
+        "id": "limited",
+        "text": "Service is limited. Reopening depends on verified routes.",
+        "effects": [
+          {
+            "var": "narrativeRisk",
+            "op": "add",
+            "value": -3
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_last-mile_limited",
+          "store": "text"
+        }
+      }
+    ],
+    "tools": [],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "face-ledger"
+  },
+  {
+    "id": "face-ledger",
+    "type": "TOOL",
+    "background": "office",
+    "goal": "Choose compensation with the affected people visible.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "mina"
+    ],
+    "lines": [
+      {
+        "id": "line-9",
+        "speaker": "mina",
+        "expression": "thinking",
+        "text": "A refund is somebody’s dinner and somebody’s lost shift."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "ledger",
+        "kind": "LedgerSankey",
+        "title": "The face ledger",
+        "items": [
+          {
+            "id": "restaurants",
+            "label": "Compensate closed restaurants",
+            "detail": "Mina’s team lost a shift, not only an order.",
+            "effects": [
+              {
+                "var": "cash",
+                "op": "add",
+                "value": -10
+              },
+              {
+                "var": "trust",
+                "op": "add",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "id": "couriers",
+            "label": "Pay couriers for safe waiting",
+            "detail": "Salma stopped where the radio told her to.",
+            "effects": [
+              {
+                "var": "cash",
+                "op": "add",
+                "value": -12
+              },
+              {
+                "var": "trust",
+                "op": "add",
+                "value": 7
+              }
+            ]
+          },
+          {
+            "id": "customers",
+            "label": "Refund unreachable orders",
+            "detail": "Anita’s customer never had a reachable restaurant.",
+            "effects": [
+              {
+                "var": "cash",
+                "op": "add",
+                "value": -6
+              },
+              {
+                "var": "narrativeRisk",
+                "op": "add",
+                "value": -5
+              }
+            ]
+          }
+        ],
+        "min": 1,
+        "max": 2,
+        "cost": 0,
+        "receiptId": "R_last-mile_ledger"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 2,
+    "act": 2,
+    "next": "rumors"
+  },
+  {
+    "id": "rumors",
+    "type": "TOOL",
+    "background": "office",
+    "goal": "Correct two rumors. Ignored claims continue to circulate.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "sana"
+    ],
+    "lines": [
+      {
+        "id": "line-10",
+        "speaker": "sana",
+        "expression": "thinking",
+        "text": "Corrections need the same reach as the rumor."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "rumors",
+        "kind": "RumorMill",
+        "title": "The rumor mill",
+        "items": [
+          {
+            "id": "gouging",
+            "label": "Price gouging rumor",
+            "detail": "Publish the actual surge policy.",
+            "effects": [
+              {
+                "var": "narrativeRisk",
+                "op": "add",
+                "value": -4
+              }
+            ]
+          },
+          {
+            "id": "closures",
+            "label": "Closure rumor",
+            "detail": "Publish the current closure map.",
+            "effects": [
+              {
+                "var": "narrativeRisk",
+                "op": "add",
+                "value": -4
+              }
+            ]
+          },
+          {
+            "id": "safe-route",
+            "label": "Unsafe shortcut rumor",
+            "detail": "Correct the route and give a safe alternative.",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": -5
+              }
+            ]
+          }
+        ],
+        "min": 2,
+        "max": 2,
+        "cost": 0,
+        "receiptId": "R_last-mile_rumors",
+        "resultEffects": [
+          {
+            "var": "narrativeRisk",
+            "op": "add",
+            "value": 2
+          }
+        ]
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 2,
+    "act": 2,
+    "next": "reopen"
+  },
+  {
+    "id": "reopen",
+    "type": "TOOL",
+    "background": "street",
+    "goal": "Sequence reopening after field verification.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "rakesh"
+    ],
+    "lines": [
+      {
+        "id": "line-11",
+        "speaker": "rakesh",
+        "expression": "thinking",
+        "text": "A reopened zone still needs a way home."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "reopen",
+        "kind": "PlannerBoard",
+        "title": "Reopen sequencer",
+        "items": [
+          {
+            "id": "north",
+            "label": "North",
+            "detail": "Needs a verified road and staffed shelter.",
+            "effects": []
+          },
+          {
+            "id": "market",
+            "label": "Market",
+            "detail": "Needs restaurant staffing and route clearance.",
+            "effects": []
+          },
+          {
+            "id": "south",
+            "label": "South",
+            "detail": "Needs a functioning depot and a safe return route.",
+            "effects": []
+          }
+        ],
+        "min": 3,
+        "max": 3,
+        "cost": 0,
+        "receiptId": "R_last-mile_reopen",
+        "bins": [
+          "First",
+          "Second",
+          "Last"
+        ]
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 3,
+    "act": 3,
+    "next": "cadence"
+  },
+  {
+    "id": "cadence",
+    "type": "TOOL",
+    "background": "office",
+    "goal": "Choose the next operating cadence.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "sana"
+    ],
+    "lines": [
+      {
+        "id": "line-12",
+        "speaker": "sana",
+        "expression": "thinking",
+        "text": "The city can reopen faster than trust returns."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "cadence",
+        "kind": "SliderForecast",
+        "title": "Freeze cadence",
+        "items": [],
+        "min": 0,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_last-mile_cadence",
+        "lever": [
+          {
+            "id": "freeze",
+            "label": "Minutes between verified reopen decisions",
+            "min": 10,
+            "max": 90,
+            "initial": 50,
+            "step": 10
+          }
+        ]
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 3,
+    "act": 3,
+    "next": "review"
+  },
+  {
+    "id": "review",
+    "type": "REVIEW",
+    "background": "street",
+    "goal": "Read the followed courier’s letter beside the policy trace.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "anita"
+    ],
+    "lines": [
+      {
+        "id": "line-13",
+        "speaker": "anita",
+        "expression": "thinking",
+        "text": "A useful instruction is one we can act on together."
+      }
+    ],
+    "choices": [],
+    "tools": [],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": true,
+    "minInteractions": 0,
+    "day": 4,
+    "act": 3
+  }
+]

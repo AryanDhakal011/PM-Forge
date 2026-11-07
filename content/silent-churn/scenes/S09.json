@@ -1,0 +1,14 @@
+{
+  "id": "S09",
+  "type": "TOOL",
+  "goal": "Name the pattern",
+  "background": "desk",
+  "tools": [
+    "dredger",
+    "pattern",
+    "coalition",
+    "preread",
+    "window",
+    "gauntlet"
+  ]
+}

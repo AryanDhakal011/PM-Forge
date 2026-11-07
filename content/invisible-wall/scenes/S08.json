@@ -1,0 +1,31 @@
+{
+  "id": "S08",
+  "type": "TOOL",
+  "background": "floor",
+  "speakers": [
+    "tavi"
+  ],
+  "lines": [
+    {
+      "id": "s08-1",
+      "speaker": "tavi",
+      "expression": "approving",
+      "text": "Drag the playhead. Mark where the line dips.",
+      "voiceId": "tavi",
+      "phase": "before"
+    },
+    {
+      "id": "s08-2",
+      "speaker": "tavi",
+      "expression": "thinking",
+      "text": "Every dip is a benchmark gain. Why would load know?",
+      "voiceId": "tavi",
+      "phase": "after"
+    }
+  ],
+  "choices": [],
+  "tool": "logs",
+  "goal": "Match three throttle dips",
+  "canStill": "Mark dips within six seconds of a benchmark gain.",
+  "next": "S07"
+}

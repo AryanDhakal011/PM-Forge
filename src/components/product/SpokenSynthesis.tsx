@@ -6,10 +6,14 @@ export default function SpokenSynthesis({
   value,
   onChange,
   paused,
+  liveMode,
+  microphoneActive,
 }: {
   value: NonNullable<Run["spoken"]>;
   onChange: (value: NonNullable<Run["spoken"]>) => void;
   paused: boolean;
+  liveMode?: "voice" | "typing";
+  microphoneActive?: boolean;
 }) {
   const [running, setRunning] = useState(false);
   const latest = useRef({ value, onChange });
@@ -32,6 +36,7 @@ export default function SpokenSynthesis({
         tradeoff, and the next check. Speak without reading a script. No
         microphone permission or recording is needed; this rep is self-assessed.
       </p>
+      {running && value.seconds>=3 && liveMode==="voice" && !microphoneActive && <p role="alert" className={styles.notice}>Your microphone is not listening. Start listening in the interview room above, or use the text/accessibility path. No speech is being captured.</p>}
       <p role="timer" aria-label="Spoken rep time remaining">
         {Math.floor((90 - value.seconds) / 60)}:
         {String((90 - value.seconds) % 60).padStart(2, "0")} remaining

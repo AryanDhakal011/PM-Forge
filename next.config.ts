@@ -5,8 +5,18 @@ const nextConfig: NextConfig = {
   // invalidate scripts or manifests in an already-running user preview.
   distDir: process.env.PMFORGE_PREVIEW_DIR || ".next",
   reactStrictMode: true,
+  output:"standalone",
   poweredByHeader: false,
   devIndicators: false,
+  // Account storage creates .data at runtime. Offline voice models, test
+  // profiles and pinned previews must never be traced into deployable pages.
+  outputFileTracingExcludes: {
+    "/*": ["./.data/**/*", "./.pmforge-preview/**/*"],
+  },
+  outputFileTracingIncludes: {
+    "/api/project-platform": ["./levels/**/*"],
+    "/api/project-platform/*": ["./levels/**/*"],
+  },
   images: {
     formats: ["image/avif", "image/webp"],
   },
@@ -30,6 +40,8 @@ const nextConfig: NextConfig = {
         source: "/(.*)",
         headers: [
           { key: "X-Content-Type-Options", value: "nosniff" },
+          {key:"Cross-Origin-Opener-Policy",value:"same-origin"},
+          ...(process.env.BETTER_AUTH_URL?.startsWith('https://')?[{key:'Strict-Transport-Security',value:'max-age=31536000'}]:[]),
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
           { key: "X-Frame-Options", value: "SAMEORIGIN" },
           {

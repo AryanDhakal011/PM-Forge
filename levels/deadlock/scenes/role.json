@@ -1,0 +1,65 @@
+{
+  "id": "role",
+  "type": "FACE",
+  "background": "lab",
+  "goal": "Know your mandate while Mara maps the next twelve weeks.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "mara"
+  ],
+  "lines": [
+    {
+      "id": "line-4",
+      "speaker": "mara",
+      "expression": "thinking",
+      "text": "Halyard. Twelve weeks. Northgate. One defensible prototype."
+    }
+  ],
+  "choices": [
+    {
+      "id": "mara-ask",
+      "text": "I will make the tradeoff explicit.",
+      "effects": [
+        {
+          "var": "trust",
+          "op": "add",
+          "value": 4
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_deadlock_mara-ask",
+        "store": "text"
+      }
+    },
+    {
+      "id": "mara-rush",
+      "text": "Let us make it impressive.",
+      "effects": [
+        {
+          "var": "readiness",
+          "op": "add",
+          "value": 2
+        },
+        {
+          "var": "risk",
+          "op": "add",
+          "value": 3
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_deadlock_mara-rush",
+        "store": "text"
+      }
+    }
+  ],
+  "tools": [],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "lab"
+}

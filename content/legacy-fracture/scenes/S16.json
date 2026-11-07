@@ -1,0 +1,23 @@
+{
+  "id": "S16",
+  "type": "TOOL",
+  "background": "server",
+  "goal": "Plan the migration waves",
+  "tools": [
+    "migration"
+  ],
+  "lines": [
+    {
+      "speaker": "leif",
+      "text": "Waves, not a leap. Pick the order.",
+      "expression": "neutral",
+      "clip": null
+    },
+    {
+      "speaker": "oswald",
+      "text": "Move the night jobs last. Please.",
+      "expression": "thinking",
+      "clip": null
+    }
+  ]
+}

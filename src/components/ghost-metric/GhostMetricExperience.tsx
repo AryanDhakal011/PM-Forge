@@ -1,6 +1,7 @@
 "use client";
 import {
   useEffect,
+  useLayoutEffect,
   useMemo,
   useRef,
   useState,
@@ -308,6 +309,13 @@ export default function GhostMetricExperience() {
       } catch {}
   }, [sound, ambient, calm, soft, guidance, auto, dismissed, prefsReady]);
   useEffect(() => {
+    // Mirror the other two simulations so Ghost Metric survives offline too.
+    if (!loaded || !navigator.serviceWorker) return;
+    void navigator.serviceWorker.ready
+      .then((reg) => reg.active?.postMessage({ type: "CACHE_GHOST_SHELL" }))
+      .catch(() => {});
+  }, [loaded]);
+  useEffect(() => {
     if (identityLoading || !owner) return;
     let active = true,
       request = 0;
@@ -396,7 +404,7 @@ export default function GhostMetricExperience() {
     state.lastConversation,
     quiet,
   ]);
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (quiet || !loaded || !stage.current) return;
     const ctx = gsap.context(
       () =>
@@ -420,7 +428,7 @@ export default function GhostMetricExperience() {
       tween.kill();
     };
   }, [state.DEF, soft, quiet]);
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (quiet || !root.current) return;
     const ctx = gsap.context(() => {
       if (state.scene === "redteam")
@@ -1593,7 +1601,7 @@ export default function GhostMetricExperience() {
                 </button>
               </div>
               <p className={s.notes}>
-                About 40 minutes · pause at any beat · authored simulation ·
+                20–30 min active play · pause at any beat · authored simulation ·
                 expert review pending
               </p>
               {runs.length > 0 && (
@@ -1939,17 +1947,21 @@ export default function GhostMetricExperience() {
             <button aria-pressed={tab === "now"} onClick={() => setTab("now")}>
               Now
             </button>
-            <button onClick={() => setPanel("people")}>People</button>
+            <button aria-haspopup="dialog" onClick={() => setPanel("people")}>
+              People
+            </button>
             <button
               aria-pressed={tab === "bubble"}
               onClick={() => setTab("bubble")}
             >
               Evidence
             </button>
-            <button onClick={() => setPanel("case")}>
+            <button aria-haspopup="dialog" onClick={() => setPanel("case")}>
               Case · {state.receipts.length}
             </button>
-            <button onClick={() => setPanel("pause")}>Pause</button>
+            <button aria-haspopup="dialog" onClick={() => setPanel("pause")}>
+              Pause
+            </button>
           </nav>
         )}
       </div>

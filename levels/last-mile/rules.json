@@ -1,0 +1,137 @@
+{
+  "initial": {
+    "credibility": 60,
+    "readiness": 50,
+    "trust": 55,
+    "risk": 25,
+    "cash": 100,
+    "composure": 60,
+    "safeguards": 0,
+    "water": 35,
+    "narrativeRisk": 25,
+    "shelters": 0,
+    "backlog": 30,
+    "freeze": 50
+  },
+  "bounds": {
+    "credibility": [
+      0,
+      100
+    ],
+    "readiness": [
+      0,
+      100
+    ],
+    "trust": [
+      0,
+      100
+    ],
+    "risk": [
+      0,
+      100
+    ],
+    "cash": [
+      0,
+      100
+    ],
+    "composure": [
+      0,
+      100
+    ],
+    "safeguards": [
+      0,
+      100
+    ],
+    "water": [
+      0,
+      100
+    ],
+    "narrativeRisk": [
+      0,
+      100
+    ],
+    "shelters": [
+      0,
+      4
+    ],
+    "backlog": [
+      0,
+      100
+    ],
+    "freeze": [
+      0,
+      100
+    ]
+  },
+  "flags": [
+    "follow-bikram",
+    "follow-salma",
+    "follow-joon",
+    "follow-anita",
+    "follow-rakesh"
+  ],
+  "clues": [
+    "follow-bikram",
+    "follow-salma",
+    "follow-joon",
+    "follow-anita",
+    "follow-rakesh",
+    "water",
+    "staff",
+    "access",
+    "support"
+  ],
+  "receipts": [
+    "R_last-mile_follow",
+    "R_last-mile_ride-tick-0",
+    "R_last-mile_ride-tick-1",
+    "R_last-mile_reports",
+    "R_last-mile_radio",
+    "R_last-mile_threshold",
+    "R_last-mile_shelters",
+    "R_last-mile_ledger",
+    "R_last-mile_rumors",
+    "R_last-mile_reopen",
+    "R_last-mile_cadence",
+    "R_last-mile_safety-first",
+    "R_last-mile_online",
+    "R_last-mile_limited"
+  ],
+  "endings": [
+    {
+      "id": "strained",
+      "title": "Resource strain",
+      "summary": "Safety, cash, access, and public claims followed your operating decisions.",
+      "when": {
+        "var": "cash",
+        "op": "<",
+        "value": 50
+      }
+    },
+    {
+      "id": "safe",
+      "title": "Safe return",
+      "summary": "Safety, cash, access, and public claims followed your operating decisions.",
+      "when": {
+        "var": "risk",
+        "op": "<",
+        "value": 25
+      }
+    },
+    {
+      "id": "narrative",
+      "title": "Narrative crisis",
+      "summary": "Safety, cash, access, and public claims followed your operating decisions.",
+      "when": {
+        "var": "narrativeRisk",
+        "op": ">=",
+        "value": 40
+      }
+    },
+    {
+      "id": "recovery",
+      "title": "Measured recovery",
+      "summary": "Safety, cash, access, and public claims followed your operating decisions."
+    }
+  ]
+}

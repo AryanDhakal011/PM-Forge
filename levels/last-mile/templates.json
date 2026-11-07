@@ -1,0 +1,20 @@
+[
+  {
+    "id": "stateful-recap",
+    "slots": [
+      "served",
+      "remaining"
+    ],
+    "variants": {
+      "warm": [
+        "You reached {served}. {remaining} still need a plan."
+      ],
+      "neutral": [
+        "{served} reached. {remaining} remain outside the plan."
+      ],
+      "cold": [
+        "Defend the {remaining} left outside your {served}."
+      ]
+    }
+  }
+]

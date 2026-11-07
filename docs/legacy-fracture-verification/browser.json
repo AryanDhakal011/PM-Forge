@@ -1,0 +1,280 @@
+{
+  "at": "2026-11-06T05:10:37.950Z",
+  "base": "http://localhost:3001",
+  "http": [],
+  "assets": [],
+  "pages": [
+    {
+      "path": "/app/projects/legacy-fracture/play?qa=1",
+      "url": "/app/projects/legacy-fracture/play?qa=1",
+      "loads": 1,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nGRANGER & SONS FREIGHT · DISPATCH PLATFORM · GRID-3\nProjects\nREAL WORLD PROJECT / GRANGER & SONS\nHow to play\n\nDISPATCH PLATFORM / NINE WEEKS TO PEAK\n\nThe Legacy\nFracture.\n\nEverything still works.\nThat is ",
+      "failed": false
+    },
+    {
+      "path": "/app/projects/legacy-fracture/play?qa=1",
+      "url": "/app/projects/legacy-fracture/play?qa=1",
+      "loads": 2,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nGRANGER & SONS FREIGHT · DISPATCH PLATFORM · GRID-3\nProjects\nREAL WORLD PROJECT / GRANGER & SONS\nHow to play\n\nDISPATCH PLATFORM / NINE WEEKS TO PEAK\n\nThe Legacy\nFracture.\n\nEverything still works.\nThat is ",
+      "failed": false
+    }
+  ],
+  "clicks": [],
+  "errors": [],
+  "checks": [
+    {
+      "label": "entrance copy",
+      "pass": true
+    },
+    {
+      "label": "standalone entry",
+      "pass": true
+    },
+    {
+      "label": "entrance fits 390",
+      "pass": true
+    },
+    {
+      "label": "entrance fits 320",
+      "pass": true
+    },
+    {
+      "label": "find Ring the bell",
+      "pass": true
+    },
+    {
+      "label": "opening shows no campaign cost",
+      "pass": true
+    },
+    {
+      "label": "find Case file",
+      "pass": true
+    },
+    {
+      "label": "case file opens",
+      "pass": true
+    },
+    {
+      "label": "find Close dialog",
+      "pass": true
+    },
+    {
+      "label": "first task opens",
+      "pass": true
+    },
+    {
+      "label": "find Unknown",
+      "pass": true
+    },
+    {
+      "label": "sort reacts",
+      "pass": true
+    },
+    {
+      "label": "Cora reply",
+      "pass": true
+    },
+    {
+      "label": "Oswald question",
+      "pass": true
+    },
+    {
+      "label": "depot walk",
+      "pass": true
+    },
+    {
+      "label": "Day Zero complete",
+      "pass": true
+    },
+    {
+      "label": "audit opens",
+      "pass": true
+    },
+    {
+      "label": "find Decision Log",
+      "pass": true
+    },
+    {
+      "label": "decision log has receipt",
+      "pass": true
+    },
+    {
+      "label": "find Close dialog",
+      "pass": true
+    },
+    {
+      "label": "three audit causes lead to oral history",
+      "pass": true
+    },
+    {
+      "label": "hidden thread revealed",
+      "pass": true
+    },
+    {
+      "label": "POC choice opens scope",
+      "pass": true
+    },
+    {
+      "label": "evidence board held",
+      "pass": true
+    },
+    {
+      "label": "chapter two starts",
+      "pass": true
+    },
+    {
+      "label": "migration locked",
+      "pass": true
+    },
+    {
+      "label": "cutover opens",
+      "pass": true
+    },
+    {
+      "label": "fleet live",
+      "pass": true
+    },
+    {
+      "label": "fleet result",
+      "pass": true
+    },
+    {
+      "label": "review reached by real choices",
+      "pass": true
+    },
+    {
+      "label": "clean ending",
+      "pass": true
+    },
+    {
+      "label": "review fits 390",
+      "pass": true
+    },
+    {
+      "label": "review fits 320",
+      "pass": true
+    },
+    {
+      "label": "reflection completes",
+      "pass": true
+    },
+    {
+      "label": "find Pause",
+      "pass": true
+    },
+    {
+      "label": "pause export",
+      "pass": true
+    },
+    {
+      "label": "find Save & return to entrance",
+      "pass": true
+    },
+    {
+      "label": "back to entrance",
+      "pass": true
+    },
+    {
+      "label": "find Resume ·",
+      "pass": true
+    },
+    {
+      "label": "resume persisted",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "gallery card",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed 0",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed 1",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed 2",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed 3",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed 4",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed 5",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed 6",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed 7",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed 8",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed 9",
+      "pass": true
+    },
+    {
+      "label": "soft navigation avoids reload",
+      "pass": true
+    }
+  ]
+}

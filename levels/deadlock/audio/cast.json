@@ -1,0 +1,67 @@
+[
+  {
+    "voiceId": "placeholder-mara",
+    "person": "mara",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "That is why I called you.",
+    "samples": [
+      "That is why I called you.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-dev",
+    "person": "dev",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "I want Northgate to see it move.",
+    "samples": [
+      "I want Northgate to see it move.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-ines",
+    "person": "ines",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "Fine is not a stopping distance.",
+    "samples": [
+      "Fine is not a stopping distance.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-theo",
+    "person": "theo",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "Show the recovery, including the awkward part.",
+    "samples": [
+      "Show the recovery, including the awkward part.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-nadia",
+    "person": "nadia",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "Who can stop the arm?",
+    "samples": [
+      "Who can stop the arm?",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  }
+]

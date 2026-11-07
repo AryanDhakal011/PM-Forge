@@ -1,0 +1,78 @@
+{
+  "id": "projector",
+  "type": "TOOL",
+  "background": "lab",
+  "goal": "Inspect four datasets. Keep one result uncertain.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "ines"
+  ],
+  "lines": [
+    {
+      "id": "line-14",
+      "speaker": "ines",
+      "expression": "thinking",
+      "text": "Twenty-two centimetres, plus or minus nine. Retest the margin."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "projector",
+      "kind": "EvidenceDrawers",
+      "title": "The evidence projector",
+      "items": [
+        {
+          "id": "throughput",
+          "label": "Throughput: 94%",
+          "detail": "Under the controlled bench workload.",
+          "effects": [],
+          "group": "throughput"
+        },
+        {
+          "id": "recovery",
+          "label": "Assisted recovery",
+          "detail": "Specialist intervention falls with bounded assistance.",
+          "effects": [],
+          "group": "recovery"
+        },
+        {
+          "id": "safety",
+          "label": "Safety margin: 22 ± 9 cm",
+          "detail": "The uncertainty remains material.",
+          "effects": [],
+          "group": "safety"
+        },
+        {
+          "id": "retest",
+          "label": "Retest the uncertain margin",
+          "detail": "Costs one investigation.",
+          "effects": [
+            {
+              "var": "ATT",
+              "op": "add",
+              "value": -1
+            },
+            {
+              "var": "credibility",
+              "op": "add",
+              "value": 4
+            }
+          ],
+          "group": "retested"
+        }
+      ],
+      "min": 3,
+      "max": 4,
+      "cost": 0,
+      "receiptId": "R_deadlock_projector"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 28,
+  "act": 2,
+  "next": "forge"
+}

@@ -1,0 +1,89 @@
+{
+  "id": "cave-or-steady",
+  "type": "FACE",
+  "background": "office",
+  "goal": "Make the boundary explicit after the call.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "priya"
+  ],
+  "lines": [
+    {
+      "id": "line-6",
+      "speaker": "priya",
+      "expression": "thinking",
+      "text": "What did you actually commit us to?"
+    }
+  ],
+  "choices": [
+    {
+      "id": "guarded",
+      "text": "A guarded pilot with a stop condition.",
+      "effects": [
+        {
+          "flag": "guarded",
+          "value": true
+        },
+        {
+          "var": "readiness",
+          "op": "add",
+          "value": 5
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_sacred-no_guarded",
+        "store": "text"
+      }
+    },
+    {
+      "id": "cave",
+      "text": "The full feature tomorrow.",
+      "effects": [
+        {
+          "flag": "caved",
+          "value": true
+        },
+        {
+          "var": "risk",
+          "op": "add",
+          "value": 15
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_sacred-no_cave",
+        "store": "text"
+      }
+    },
+    {
+      "id": "refuse",
+      "text": "Protect the stable build.",
+      "effects": [
+        {
+          "var": "risk",
+          "op": "add",
+          "value": -8
+        },
+        {
+          "var": "CT",
+          "op": "add",
+          "value": -18
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_sacred-no_refuse",
+        "store": "text"
+      }
+    }
+  ],
+  "tools": [],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "tell-negotiation"
+}

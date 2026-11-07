@@ -1,0 +1,72 @@
+{
+  "id": "S19",
+  "type": "PHONE",
+  "background": "annex",
+  "speakers": [
+    "jonas"
+  ],
+  "lines": [
+    {
+      "id": "s19-1",
+      "speaker": "jonas",
+      "expression": "pressured",
+      "text": "Is something throttling my model?",
+      "voiceId": "jonas",
+      "phase": "before"
+    },
+    {
+      "id": "s19-2",
+      "speaker": "jonas",
+      "expression": "annoyed",
+      "text": "A founder did what without telling me?",
+      "voiceId": "jonas",
+      "phase": "after",
+      "when": "choice:direct"
+    },
+    {
+      "id": "s19-3",
+      "speaker": "jonas",
+      "expression": "approving",
+      "text": "Good. Fix it.",
+      "voiceId": "jonas",
+      "phase": "after",
+      "when": "choice:evasive"
+    },
+    {
+      "id": "s19-4",
+      "speaker": "jonas",
+      "expression": "thinking",
+      "text": "Then get them in the room. Quickly.",
+      "voiceId": "jonas",
+      "phase": "after",
+      "when": "choice:governance"
+    }
+  ],
+  "choices": [
+    {
+      "id": "direct",
+      "text": "Yes. A founder installed a safety limit.",
+      "effects": {},
+      "receipt": "R05",
+      "next": "S20"
+    },
+    {
+      "id": "evasive",
+      "text": "A scheduler quirk. We're fixing it.",
+      "effects": {},
+      "receipt": "R05",
+      "next": "S20"
+    },
+    {
+      "id": "governance",
+      "text": "A safeguard. I need the founders in the room.",
+      "effects": {},
+      "receipt": "R05",
+      "next": "S20"
+    }
+  ],
+  "tool": "briefing",
+  "goal": "Brief the CEO",
+  "canStill": "Choose direct, evasive or governance-first wording.",
+  "next": "S20"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "S22",
+  "type": "FACE",
+  "background": "dispatch",
+  "goal": "Choose what happens next",
+  "tools": [
+    "final"
+  ],
+  "lines": [
+    {
+      "speaker": "oswald",
+      "text": "Keep the night jobs documented.",
+      "expression": "neutral",
+      "clip": null
+    },
+    {
+      "speaker": "renata",
+      "text": "Fix the driver app next.",
+      "expression": "neutral",
+      "clip": null
+    },
+    {
+      "speaker": "isaac",
+      "text": "Publish the savings.",
+      "expression": "neutral",
+      "clip": null
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+[
+  {
+    "id": "evidence-objection",
+    "concern": "Unverified claim",
+    "text": "Show me the evidence behind that claim.",
+    "resolvers": [
+      {
+        "type": "evidence",
+        "ref": "ledger"
+      },
+      {
+        "type": "evidence",
+        "ref": "graph"
+      },
+      {
+        "type": "evidence",
+        "ref": "cohort"
+      },
+      {
+        "type": "evidence",
+        "ref": "devices"
+      },
+      {
+        "type": "evidence",
+        "ref": "guilds"
+      },
+      {
+        "type": "evidence",
+        "ref": "contracts"
+      },
+      {
+        "type": "evidence",
+        "ref": "cash"
+      },
+      {
+        "type": "evidence",
+        "ref": "fraud"
+      },
+      {
+        "type": "evidence",
+        "ref": "guild-proof"
+      },
+      {
+        "type": "evidence",
+        "ref": "revenue"
+      }
+    ],
+    "onResolve": [
+      {
+        "var": "credibility",
+        "op": "add",
+        "value": 5
+      }
+    ],
+    "onFail": [
+      {
+        "var": "credibility",
+        "op": "add",
+        "value": -5
+      }
+    ]
+  }
+]

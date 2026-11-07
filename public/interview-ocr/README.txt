@@ -1,0 +1,1 @@
+Optional local equation OCR. Tesseract.js 7, tesseract.js-core, and English Tesseract training data. Apache-2.0; licenses included. Assets load only when handwriting recognition is requested. No drawing is uploaded.

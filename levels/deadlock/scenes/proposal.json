@@ -1,0 +1,96 @@
+{
+  "id": "proposal",
+  "type": "FACE",
+  "background": "office",
+  "goal": "Respond to specific objections without erasing the cost.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "mara"
+  ],
+  "lines": [
+    {
+      "id": "line-17",
+      "speaker": "mara",
+      "expression": "thinking",
+      "text": "They can reject it. You still own the proposal."
+    }
+  ],
+  "choices": [
+    {
+      "id": "revise",
+      "text": "Revise with the evidence.",
+      "effects": [
+        {
+          "var": "readiness",
+          "op": "add",
+          "value": 5
+        },
+        {
+          "var": "weeks",
+          "op": "add",
+          "value": -1
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_deadlock_revise",
+        "store": "text"
+      }
+    },
+    {
+      "id": "push",
+      "text": "Push through using two persuasion points.",
+      "effects": [
+        {
+          "var": "persuasion",
+          "op": "add",
+          "value": -2
+        },
+        {
+          "var": "risk",
+          "op": "add",
+          "value": 10
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_deadlock_push",
+        "store": "text"
+      },
+      "requires": {
+        "var": "persuasion",
+        "op": ">=",
+        "value": 2
+      }
+    },
+    {
+      "id": "conservative",
+      "text": "Accept the conservative fallback.",
+      "effects": [
+        {
+          "var": "risk",
+          "op": "add",
+          "value": -8
+        },
+        {
+          "var": "readiness",
+          "op": "add",
+          "value": -3
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_deadlock_conservative",
+        "store": "text"
+      }
+    }
+  ],
+  "tools": [],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 49,
+  "act": 2,
+  "next": "demo-0"
+}

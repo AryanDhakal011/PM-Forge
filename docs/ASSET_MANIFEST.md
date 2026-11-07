@@ -29,14 +29,14 @@ Font files are imported in `src/app/layout.tsx` and served from the application 
 
 | Asset | Dimensions | Size | Creator | Source | Licence | Date / status | Use |
 | --- | --- | ---: | --- | --- | --- | --- | --- |
-| `public/assets/images/plates/final-mountains.jpg` | 2600 × 3900 | 1,064,554 B | Eberhard Grossgasteiger | [Pexels profile](https://www.pexels.com/@eberhardgross/) | [Pexels License](https://www.pexels.com/license/) | Measured 2026-10-26; exact item URL still pending | Mountain landscape plate in the final Decision Blueprint section and its CSS background |
-| `public/assets/images/plates/Cozy Sunlit Workspace Backdrop.png` | 1536 × 1024 | 2,167,048 B | Not recorded | Source URL not recorded | Licence not recorded; verify before public launch | Measured 2026-10-26; existing local asset, provenance pending | Shared wall plate behind the first narrative beat and Signal Test |
+| `public/assets/images/plates/final-mountains.webp` | 2600 × 3900 source | 497,862 B | Eberhard Grossgasteiger | [Pexels profile](https://www.pexels.com/@eberhardgross/) | [Pexels License](https://www.pexels.com/license/) | Source JPEG archived at `docs/assets-source/plates/final-mountains.jpg`; exact item URL still pending | Mountain landscape plate in the final Decision Blueprint section and its CSS background |
+| `public/assets/images/plates/cozy-sunlit-workspace.webp` | 1536 × 1024 source | 71,000 B | Not recorded | Source URL not recorded | Licence not recorded; verify before public launch | Source PNG archived at `docs/assets-source/plates/`; provenance pending | Shared wall plate behind the first narrative beat and Signal Test |
 
 **Known gap:** the exact Pexels photo page URL and item ID were not preserved during asset collection. The creator profile and licence are recorded; the ID should be recovered before a public launch if exact provenance is required. See `BLOCKERS.md`.
 
 The shared workspace plate's creator and licence are not recorded in the repository; do not treat it as cleared for public redistribution until provenance is verified. The hero poster, learning scene, interview card, project workbench, career board, and blueprint maquette are CSS/SVG/Three.js art direction built in this repository.
 
-Four additional files remain in `public/assets/images/plates/` (`P-PLATE-DESK.jpg`, `P-PLATE-FINAL.avif`, `TEXTURES (OpenGameArt) Darkwood.jpg`, `TEXTURES (Poly Haven) Laminate floor.jpg`). No source file references them, so they are not shipped by any page and are not counted above. They are left in place as source candidates; delete or document them before packaging the repository.
+`public/assets/images/plates/` ships only the two WebP derivatives above. The uncompressed originals and four unreferenced source candidates (`P-PLATE-DESK.jpg`, `P-PLATE-FINAL.avif`, `TEXTURES (OpenGameArt) Darkwood.jpg`, `TEXTURES (Poly Haven) Laminate floor.jpg`) now live in `docs/assets-source/plates/` so they are archived but no longer served. They are source candidates only; delete or document them before packaging the repository.
 
 ## Textures
 

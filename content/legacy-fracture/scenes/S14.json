@@ -1,0 +1,15 @@
+{
+  "id": "S14",
+  "type": "CINEMA",
+  "background": "dispatch",
+  "goal": "Enter Chapter 2",
+  "tools": [],
+  "lines": [
+    {
+      "speaker": "narrator",
+      "text": "Week four. The coalition war begins.",
+      "expression": "neutral",
+      "clip": null
+    }
+  ]
+}

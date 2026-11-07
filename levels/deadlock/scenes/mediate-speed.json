@@ -1,0 +1,156 @@
+{
+  "id": "mediate-speed",
+  "type": "TOOL",
+  "background": "lab",
+  "goal": "Mediate speed while both leads remain in the room.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "dev",
+    "ines"
+  ],
+  "lines": [
+    {
+      "id": "line-8",
+      "speaker": "dev",
+      "expression": "thinking",
+      "text": "Point-five metres a second kills the demo."
+    },
+    {
+      "id": "line-7",
+      "speaker": "ines",
+      "expression": "thinking",
+      "text": "Seven centimetres is not a margin."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "mediation-speed",
+      "kind": "LiveMediation",
+      "title": "Speed mediation",
+      "items": [
+        {
+          "id": "interrupt",
+          "label": "Show me the evidence.",
+          "detail": "Costs one attention.",
+          "effects": [
+            {
+              "var": "ATT",
+              "op": "add",
+              "value": -1
+            },
+            {
+              "var": "credibility",
+              "op": "add",
+              "value": 3
+            }
+          ],
+          "reaction": "Ninety-four percent. Fine.",
+          "speaker": "dev"
+        },
+        {
+          "id": "third",
+          "label": "Offer a bounded third option.",
+          "detail": "Spend persuasion and one week.",
+          "effects": [
+            {
+              "var": "persuasion",
+              "op": "add",
+              "value": -1
+            },
+            {
+              "var": "weeks",
+              "op": "add",
+              "value": -1
+            },
+            {
+              "var": "trust",
+              "op": "add",
+              "value": 6
+            }
+          ],
+          "reaction": "A boundary we can both test.",
+          "speaker": "ines"
+        },
+        {
+          "id": "back-dev",
+          "label": "Back Dev.",
+          "detail": "Protect his goal. Raise Ines’s concern.",
+          "effects": [
+            {
+              "var": "TRUST.dev",
+              "op": "add",
+              "value": 8
+            },
+            {
+              "var": "TRUST.ines",
+              "op": "add",
+              "value": -8
+            },
+            {
+              "var": "trust",
+              "op": "add",
+              "value": -8
+            }
+          ],
+          "reaction": "Do not hide the safety cost.",
+          "speaker": "ines"
+        },
+        {
+          "id": "back-ines",
+          "label": "Back Ines.",
+          "detail": "Protect her standard. Raise Dev’s concern.",
+          "effects": [
+            {
+              "var": "TRUST.ines",
+              "op": "add",
+              "value": 8
+            },
+            {
+              "var": "TRUST.dev",
+              "op": "add",
+              "value": -8
+            },
+            {
+              "var": "trust",
+              "op": "add",
+              "value": -8
+            }
+          ],
+          "reaction": "Then show me what still moves.",
+          "speaker": "dev"
+        },
+        {
+          "id": "defer",
+          "label": "Defer the argument.",
+          "detail": "Readiness falls.",
+          "effects": [
+            {
+              "var": "readiness",
+              "op": "add",
+              "value": -8
+            }
+          ]
+        }
+      ],
+      "min": 1,
+      "max": 1,
+      "cost": 0,
+      "receiptId": "R_deadlock_mediation-speed"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [
+    {
+      "schedule": {
+        "fuse": "speed-quote",
+        "inDays": 0
+      }
+    }
+  ],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "mediate-recovery"
+}

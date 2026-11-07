@@ -1,0 +1,81 @@
+{
+  "at": "2026-11-05T05:53:07.091Z",
+  "base": "http://localhost:3002",
+  "http": [],
+  "assets": [],
+  "pages": [
+    {
+      "path": "/app/projects/feature-factory/play?qa=1",
+      "url": "/app/projects/feature-factory/play?qa=1",
+      "loads": 1,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nSHIP FRIDAY\nIGNIS WORKS / RELEASE FLOOR 03\nProjects\nREAL WORLD PROJECT / 03\nHow to play\n\nIGNIS / CORE PLATFORM / ONE QUARTER\n\nThe Feature\nFactory.\n\nShip every Friday.\nFind out what it costs.\n\nA living PM ",
+      "failed": false
+    },
+    {
+      "path": "/app/projects/feature-factory/play?qa=1",
+      "url": "/app/projects/feature-factory/play?qa=1",
+      "loads": 2,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nSHIP FRIDAY\nIGNIS WORKS / RELEASE FLOOR 03\nProjects\nREAL WORLD PROJECT / 03\nHow to play\n\nIGNIS / CORE PLATFORM / ONE QUARTER\n\nThe Feature\nFactory.\n\nShip every Friday.\nFind out what it costs.\n\nA living PM ",
+      "failed": false
+    }
+  ],
+  "clicks": [],
+  "errors": [],
+  "checks": [
+    {
+      "pass": true,
+      "label": "risk-first route generates an actual engine incident"
+    },
+    {
+      "pass": true,
+      "label": "S17-native-incident fits 390"
+    },
+    {
+      "pass": true,
+      "label": "S17-native-incident fits 320"
+    },
+    {
+      "pass": true,
+      "label": "three native log selections diagnose the cause"
+    },
+    {
+      "pass": true,
+      "label": "native patch restores service"
+    },
+    {
+      "pass": true,
+      "label": "resolved incident retained in causal history"
+    },
+    {
+      "pass": true,
+      "label": "incident-recovered fits 390"
+    },
+    {
+      "pass": true,
+      "label": "incident-recovered fits 320"
+    },
+    {
+      "pass": true,
+      "label": "blocked recording leaves readable captions"
+    },
+    {
+      "pass": true,
+      "label": "manual continuation works without audio"
+    },
+    {
+      "pass": true,
+      "label": "audio-fallback fits 390"
+    },
+    {
+      "pass": true,
+      "label": "audio-fallback fits 320"
+    }
+  ],
+  "screens": [
+    "S17-native-incident",
+    "incident-recovered",
+    "audio-fallback"
+  ]
+}

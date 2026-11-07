@@ -1,0 +1,98 @@
+[
+  {
+    "id": "01",
+    "title": "Streak Confetti",
+    "estimate": 3,
+    "pulse": 9,
+    "retention": 0.1,
+    "debt": 2
+  },
+  {
+    "id": "02",
+    "title": "Live Dashboard Tiles",
+    "estimate": 5,
+    "pulse": 12,
+    "retention": 0,
+    "debt": 4
+  },
+  {
+    "id": "03",
+    "title": "Notification Digest",
+    "estimate": 5,
+    "pulse": 3,
+    "retention": 1.4,
+    "debt": 2
+  },
+  {
+    "id": "04",
+    "title": "Search Speed Fix",
+    "estimate": 8,
+    "pulse": 1,
+    "retention": 2.2,
+    "debt": -5
+  },
+  {
+    "id": "05",
+    "title": "Autosave Reliability",
+    "estimate": 5,
+    "pulse": 0,
+    "retention": 1.8,
+    "debt": -4
+  },
+  {
+    "id": "06",
+    "title": "Mobile Offline Mode",
+    "estimate": 13,
+    "pulse": 2,
+    "retention": 2.6,
+    "debt": 6
+  },
+  {
+    "id": "07",
+    "title": "AI Summaries",
+    "estimate": 8,
+    "pulse": 8,
+    "retention": 0.4,
+    "debt": 5
+  },
+  {
+    "id": "08",
+    "title": "SSO for Enterprise",
+    "estimate": 8,
+    "pulse": 0,
+    "retention": 0.2,
+    "debt": 3
+  },
+  {
+    "id": "09",
+    "title": "Export to CSV",
+    "estimate": 3,
+    "pulse": 0,
+    "retention": 0.3,
+    "debt": 1
+  },
+  {
+    "id": "10",
+    "title": "Permission Refactor",
+    "estimate": 8,
+    "pulse": 0,
+    "retention": 0,
+    "debt": -9
+  },
+  {
+    "id": "11",
+    "title": "Webhook Retries",
+    "estimate": 5,
+    "pulse": 0,
+    "retention": 0.2,
+    "debt": -4
+  },
+  {
+    "id": "12",
+    "title": "Dark Mode",
+    "estimate": 3,
+    "pulse": 2,
+    "retention": 0.1,
+    "debt": 1
+  }
+]

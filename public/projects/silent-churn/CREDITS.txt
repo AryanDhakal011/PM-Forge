@@ -1,0 +1,3 @@
+Meridian Mutual is fictional. Portraits, office illustration, canvas ledger and sound cues are original PMForge assets.
+151 dialogue recordings: Kokoro-82M v1.0, Apache-2.0, prerecorded synthetic speech. The model has no native acted emotion control. Captions and typed follow-ups are shown in the product. See the shipped licence.
+Subframe MCP references consulted: Griffin visual approach, animated-beam, proposal-ledger, expandable-ledger, seat-picker and chart-crosshair. No example source copied.

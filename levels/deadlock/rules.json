@@ -1,0 +1,172 @@
+{
+  "initial": {
+    "credibility": 60,
+    "readiness": 50,
+    "trust": 55,
+    "risk": 25,
+    "cash": 100,
+    "composure": 60,
+    "safeguards": 0,
+    "persuasion": 5,
+    "weeks": 12,
+    "speed": 8,
+    "assistance": 1,
+    "learning": 1
+  },
+  "bounds": {
+    "credibility": [
+      0,
+      100
+    ],
+    "readiness": [
+      0,
+      100
+    ],
+    "trust": [
+      0,
+      100
+    ],
+    "risk": [
+      0,
+      100
+    ],
+    "cash": [
+      0,
+      100
+    ],
+    "composure": [
+      0,
+      100
+    ],
+    "safeguards": [
+      0,
+      100
+    ],
+    "persuasion": [
+      0,
+      5
+    ],
+    "weeks": [
+      0,
+      12
+    ],
+    "speed": [
+      5,
+      12
+    ],
+    "assistance": [
+      0,
+      2
+    ],
+    "learning": [
+      0,
+      2
+    ]
+  },
+  "flags": [
+    "near-miss-mitigated"
+  ],
+  "clues": [
+    "footage",
+    "incident",
+    "slack",
+    "bench",
+    "letter",
+    "near-miss",
+    "second-near-miss",
+    "throughput",
+    "recovery",
+    "safety",
+    "retested"
+  ],
+  "receipts": [
+    "R_deadlock_estop",
+    "R_deadlock_lab-walk",
+    "R_deadlock_second-look",
+    "R_deadlock_mediation-speed",
+    "R_deadlock_mediation-recovery",
+    "R_deadlock_mediation-learning",
+    "R_deadlock_asides",
+    "R_deadlock_projector",
+    "R_deadlock_forge",
+    "R_deadlock_dry-run",
+    "R_deadlock_demo-0",
+    "R_deadlock_demo-1",
+    "R_deadlock_demo-2",
+    "R_deadlock_demo-3",
+    "R_deadlock_demo-4",
+    "R_deadlock_mara-ask",
+    "R_deadlock_mara-rush",
+    "R_deadlock_revise",
+    "R_deadlock_push",
+    "R_deadlock_conservative",
+    "R_deadlock_own-near-miss",
+    "R_deadlock_continue-near-miss"
+  ],
+  "endings": [
+    {
+      "id": "quiet",
+      "title": "Quiet Room",
+      "summary": "The demonstration reflects the boundaries you funded and defended.",
+      "when": {
+        "var": "readiness",
+        "op": "<",
+        "value": 35
+      }
+    },
+    {
+      "id": "fracture",
+      "title": "Fracture",
+      "summary": "The demonstration reflects the boundaries you funded and defended.",
+      "when": {
+        "var": "trust",
+        "op": "<",
+        "value": 35
+      }
+    },
+    {
+      "id": "shared",
+      "title": "Shared Ground",
+      "summary": "The demonstration reflects the boundaries you funded and defended.",
+      "when": {
+        "all": [
+          {
+            "var": "risk",
+            "op": "<",
+            "value": 35
+          },
+          {
+            "var": "trust",
+            "op": ">=",
+            "value": 60
+          }
+        ]
+      }
+    },
+    {
+      "id": "guard",
+      "title": "Standing Guard",
+      "summary": "The demonstration reflects the boundaries you funded and defended.",
+      "when": {
+        "var": "risk",
+        "op": "<",
+        "value": 25
+      }
+    },
+    {
+      "id": "babysitter",
+      "title": "Babysitter",
+      "summary": "The demonstration reflects the boundaries you funded and defended.",
+      "when": {
+        "var": "assistance",
+        "op": "==",
+        "value": 0
+      }
+    },
+    {
+      "id": "steady",
+      "title": "Steady Hands",
+      "summary": "The demonstration reflects the boundaries you funded and defended."
+    }
+  ]
+}

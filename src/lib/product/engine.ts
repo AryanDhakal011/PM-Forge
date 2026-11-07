@@ -1,6 +1,7 @@
 import { categoryOf, evidenceBudget, getQuestion, RCA_CUTS } from "./content";
 import { getDials, sanityRatio } from "./estimation";
 import type { Question, Run, RunStage } from "./types";
+import {liveStageIssue} from "./interview-live";
 import { readinessBand } from "./readiness";
 
 export const guidedStages: RunStage[] = [
@@ -111,33 +112,12 @@ export const spentEvidence = (run: Run, q: Question) =>
     .reduce((sum, e) => sum + e.cost, 0);
 export const remainingEvidence = (run: Run, q: Question) =>
   evidenceBudget(q.level) - spentEvidence(run, q);
-export function requestEvidence(run: Run, id: string): Run {
-  const q = getQuestion(run.questionId)!;
-  const card = q.evidence.find((e) => e.id === id);
-  if (
-    !card ||
-    !run.objectivePinned ||
-    run.evidenceIds.includes(id) ||
-    remainingEvidence(run, q) < card.cost ||
-    run.locked.includes("synthesis")
-  )
-    return run;
-  return {
-    ...run,
-    evidenceIds: [...run.evidenceIds, id],
-    decisions: [
-      ...run.decisions,
-      {
-        stage: run.stage,
-        action: "Evidence requested",
-        value: id,
-        at: new Date().toISOString(),
-      },
-    ],
-  };
-}
+export function evidenceUnavailableReason(run:Run,q:Question,id:string):string|null{const card=q.evidence.find(e=>e.id===id);if(!card)return 'This evidence is unavailable.';if(run.evidenceIds.includes(id))return 'Already requested; read it below.';if(run.status==='paused')return 'Resume the interview to request evidence.';if(run.live?.pending)return 'Respond to the interviewer first.';if(!run.objectivePinned)return 'Pin the goal in Frame before requesting evidence.';if(run.live&&q.category==='root-cause'&&run.live.clarifications.length<2&&card.cost>0)return 'Ask two clarifying questions before buying this cut.';if(run.locked.includes('synthesis'))return 'Evidence is locked after your final decision.';if(remainingEvidence(run,q)<card.cost)return 'Not enough evidence credits for this request.';return null}
+export function requestEvidence(run:Run,id:string):Run{const q=getQuestion(run.questionId)!;if(evidenceUnavailableReason(run,q,id))return run;return {...run,evidenceIds:[...run.evidenceIds,id],decisions:[...run.decisions,{stage:run.stage,action:'Evidence requested',value:id,at:new Date().toISOString()}]}}
 export function stageIssue(run: Run): string | null {
   const q = getQuestion(run.questionId)!;
+  const liveIssue = liveStageIssue(run, q);
+  if (liveIssue) return liveIssue;
   switch (run.stage) {
     case "fundamentals":
       return Object.keys(run.fundamentals).length < 3

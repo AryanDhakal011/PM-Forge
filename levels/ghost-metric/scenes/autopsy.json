@@ -1,0 +1,90 @@
+{
+  "id": "autopsy",
+  "type": "TOOL",
+  "background": "lab",
+  "goal": "Use three instruments to separate real growth from counting noise.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "joyce"
+  ],
+  "lines": [
+    {
+      "id": "line-4",
+      "speaker": "joyce",
+      "expression": "thinking",
+      "text": "The bubble is a claim. Find its layers."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "autopsy",
+      "kind": "MetricAutopsy",
+      "title": "The metric autopsy",
+      "items": [
+        {
+          "id": "scalpel",
+          "label": "Scalpel: filter by account",
+          "detail": "Internal traffic is part of the apparent increase.",
+          "effects": [
+            {
+              "var": "ghostMass",
+              "op": "add",
+              "value": -2
+            }
+          ],
+          "group": "account-layer"
+        },
+        {
+          "id": "probe",
+          "label": "Probe: trace a request",
+          "detail": "Retries contribute repeated completion events.",
+          "effects": [
+            {
+              "var": "ghostMass",
+              "op": "add",
+              "value": -3.5
+            }
+          ],
+          "group": "retry-layer"
+        },
+        {
+          "id": "microscope",
+          "label": "Microscope: inspect a cohort",
+          "detail": "Streams and cohort shifts add more counting noise.",
+          "effects": [
+            {
+              "var": "ghostMass",
+              "op": "add",
+              "value": -2
+            }
+          ],
+          "group": "cohort-layer"
+        },
+        {
+          "id": "hammer",
+          "label": "Hammer: delete the headline",
+          "detail": "A headline is not a data filter.",
+          "effects": [
+            {
+              "var": "HOURS",
+              "op": "add",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "min": 3,
+      "max": 3,
+      "cost": 0,
+      "receiptId": "R_ghost-metric_autopsy"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "bet"
+}

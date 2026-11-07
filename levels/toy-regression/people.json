@@ -1,0 +1,27 @@
+[
+  {
+    "id": "guide",
+    "name": "The guide",
+    "role": "Team lead",
+    "look": {
+      "silhouette": 0,
+      "skin": "#b98463",
+      "hair": "#34383c",
+      "outfit": "#476872",
+      "props": [
+        "tablet"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "Fine. Convince me.",
+    "accent": "#d5d99a",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  }
+]

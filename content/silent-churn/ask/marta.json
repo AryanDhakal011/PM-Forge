@@ -1,0 +1,32 @@
+[
+  {
+    "id": "marta-0",
+    "topic": "Datasets",
+    "line": "I prefer a question to everything."
+  },
+  {
+    "id": "marta-1",
+    "topic": "Access",
+    "line": "Restricted extracts need a ticket."
+  },
+  {
+    "id": "marta-2",
+    "topic": "Tickets",
+    "line": "A ticket can be a useful conversation."
+  },
+  {
+    "id": "marta-3",
+    "topic": "Landmines",
+    "line": "There are traps in the old status field."
+  },
+  {
+    "id": "marta-4",
+    "topic": "History",
+    "line": "The field changed meaning between systems."
+  },
+  {
+    "id": "marta-5",
+    "topic": "How to ask",
+    "line": "Ask what you need to decide."
+  }
+]

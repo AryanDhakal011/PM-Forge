@@ -1,0 +1,39 @@
+{
+  "id": "dry-run",
+  "type": "TOOL",
+  "background": "lab",
+  "goal": "Feel the robot for fifteen seconds before proposing it.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "ines"
+  ],
+  "lines": [
+    {
+      "id": "line-16",
+      "speaker": "ines",
+      "expression": "thinking",
+      "text": "Run it here. The customer should not find the first surprise."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "dry-run",
+      "kind": "DryRun",
+      "title": "TERN-1 dry run",
+      "items": [],
+      "min": 0,
+      "max": 1,
+      "cost": 0,
+      "receiptId": "R_deadlock_dry-run",
+      "duration": 15
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 42,
+  "act": 2,
+  "next": "proposal"
+}

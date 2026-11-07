@@ -1,0 +1,61 @@
+{
+  "id": "join",
+  "type": "TOOL",
+  "background": "lab",
+  "goal": "Connect the source to a defensible identity key.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "ravi"
+  ],
+  "lines": [
+    {
+      "id": "line-3",
+      "speaker": "ravi",
+      "expression": "thinking",
+      "text": "A join can multiply a story before anyone notices."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "join",
+      "kind": "GraphView",
+      "title": "The join bench",
+      "items": [
+        {
+          "id": "request",
+          "label": "Trace request identity",
+          "detail": "Request ID exposes duplicated retry events.",
+          "effects": [],
+          "group": "request-proof"
+        },
+        {
+          "id": "account",
+          "label": "Trace account identity",
+          "detail": "Account ID exposes internal traffic.",
+          "effects": [],
+          "group": "account-proof"
+        },
+        {
+          "id": "billing",
+          "label": "Reconcile paid activity",
+          "detail": "Billing links activity to customers, not promises.",
+          "effects": [],
+          "group": "billing-proof",
+          "soWhat": "Shows genuine paid activity."
+        }
+      ],
+      "min": 2,
+      "max": 2,
+      "cost": 0,
+      "receiptId": "R_ghost-metric_join"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "autopsy"
+}

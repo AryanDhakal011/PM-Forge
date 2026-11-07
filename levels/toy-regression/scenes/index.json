@@ -1,0 +1,100 @@
+[
+  {
+    "id": "opening",
+    "type": "NARR",
+    "background": "office",
+    "goal": "Understand the constraint.",
+    "canStill": "Read, continue, or pause.",
+    "speakers": [
+      "guide"
+    ],
+    "lines": [
+      {
+        "id": "opening-line",
+        "speaker": "guide",
+        "expression": "neutral",
+        "text": "We need a decision we can explain tomorrow."
+      }
+    ],
+    "choices": [],
+    "tools": [],
+    "onEnter": [],
+    "onExit": [],
+    "next": "decision",
+    "skippable": true,
+    "minInteractions": 0,
+    "day": 1,
+    "act": 1
+  },
+  {
+    "id": "decision",
+    "type": "FACE",
+    "background": "office",
+    "goal": "Choose a bounded next step.",
+    "canStill": "Compare the options, choose, or pause.",
+    "speakers": [
+      "guide"
+    ],
+    "lines": [
+      {
+        "id": "decision-line",
+        "speaker": "guide",
+        "expression": "neutral",
+        "text": "What do you recommend?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "pilot",
+        "text": "Run a bounded pilot.",
+        "effects": [
+          {
+            "var": "readiness",
+            "op": "add",
+            "value": 5
+          }
+        ],
+        "receipt": {
+          "id": "R_toy-regression_1",
+          "store": "text"
+        },
+        "next": "review",
+        "unlocks": []
+      }
+    ],
+    "tools": [],
+    "onEnter": [],
+    "onExit": [],
+    "next": "review",
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1
+  },
+  {
+    "id": "review",
+    "type": "REVIEW",
+    "background": "office",
+    "goal": "Review your decision.",
+    "canStill": "Inspect your receipt, replay, or export.",
+    "speakers": [
+      "guide"
+    ],
+    "lines": [
+      {
+        "id": "review-line",
+        "speaker": "guide",
+        "expression": "neutral",
+        "text": "The pilot has a boundary and a person responsible."
+      }
+    ],
+    "choices": [],
+    "tools": [],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 0,
+    "day": 2,
+    "act": 3
+  }
+]

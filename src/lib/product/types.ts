@@ -129,6 +129,7 @@ export type Run = {
   pausedFrom?: RunStage;
   elapsedSeconds: number;
   pressureSeconds: number | null;
+  live?: import("./interview-live").LiveSession;
   guided?: boolean;
   sessionId?: string;
   reflectionStartedAt?: string;
@@ -186,6 +187,7 @@ export type Snapshot = {
   createdAt: string;
 };
 export type WorkspaceExport = {
+  career?:{profiles:import("../portfolio/model").MasterProfile[];cases:import("../portfolio/model").CaseStudy[];resumes:import("../portfolio/model").ResumeVersion[];jobs:import("../portfolio/model").CareerJob[]};
   version: 1;
   exportedAt: string;
   profile: Profile;

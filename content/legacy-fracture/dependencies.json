@@ -1,0 +1,270 @@
+{
+  "nodes": [
+    {
+      "id": "ROUTE_CORE",
+      "label": "GRID-3 routing core",
+      "zone": "legacy",
+      "discovery": "known"
+    },
+    {
+      "id": "ROAD_TABLE",
+      "label": "Road restrictions table",
+      "zone": "legacy",
+      "discovery": "known"
+    },
+    {
+      "id": "OVERRIDE_UI",
+      "label": "Dispatcher override screen",
+      "zone": "legacy",
+      "discovery": "known"
+    },
+    {
+      "id": "NIGHT_BATCH",
+      "label": "Nightly route batch",
+      "zone": "legacy",
+      "discovery": "known"
+    },
+    {
+      "id": "TIME_WINDOWS",
+      "label": "Customer time windows",
+      "zone": "legacy",
+      "discovery": "known"
+    },
+    {
+      "id": "DEPOT_QUEUE",
+      "label": "Depot queue",
+      "zone": "legacy",
+      "discovery": "known"
+    },
+    {
+      "id": "DRIVER_APP",
+      "label": "Driver handset feed",
+      "zone": "legacy",
+      "discovery": "known"
+    },
+    {
+      "id": "ETA_EXPORT",
+      "label": "ETA export",
+      "zone": "legacy",
+      "discovery": "known"
+    },
+    {
+      "id": "MANIFEST",
+      "label": "Freight manifest",
+      "zone": "legacy",
+      "discovery": "known"
+    },
+    {
+      "id": "BILLING",
+      "label": "Billing",
+      "zone": "legacy",
+      "discovery": "known"
+    },
+    {
+      "id": "CUSTOMS_X",
+      "label": "Border code table",
+      "zone": "legacy",
+      "discovery": "known"
+    },
+    {
+      "id": "TELEMETRY",
+      "label": "Truck telemetry",
+      "zone": "legacy",
+      "discovery": "known"
+    },
+    {
+      "id": "DISPATCH_LOG",
+      "label": "Dispatch audit log",
+      "zone": "legacy",
+      "discovery": "known"
+    },
+    {
+      "id": "CAPACITY",
+      "label": "Capacity allocator",
+      "zone": "legacy",
+      "discovery": "audit"
+    },
+    {
+      "id": "LOAD_BALANCE",
+      "label": "Load balancing",
+      "zone": "legacy",
+      "discovery": "audit"
+    },
+    {
+      "id": "SLA_FLAGS",
+      "label": "Service level flags",
+      "zone": "legacy",
+      "discovery": "audit"
+    },
+    {
+      "id": "INVOICE_RUN",
+      "label": "Invoice run",
+      "zone": "legacy",
+      "discovery": "audit"
+    },
+    {
+      "id": "NORTHERN_GATE",
+      "label": "Northern crossing clearance",
+      "zone": "legacy",
+      "discovery": "audit"
+    },
+    {
+      "id": "CUSTOMER_FEED",
+      "label": "Customer status feed",
+      "zone": "legacy",
+      "discovery": "audit"
+    },
+    {
+      "id": "FUEL_ROUTE",
+      "label": "Fuel route planner",
+      "zone": "legacy",
+      "discovery": "audit"
+    },
+    {
+      "id": "DELAY_CODES",
+      "label": "Delay reason codes",
+      "zone": "legacy",
+      "discovery": "audit"
+    },
+    {
+      "id": "LEDGER_SYNC",
+      "label": "2 AM ledger sync",
+      "zone": "legacy",
+      "discovery": "oral"
+    },
+    {
+      "id": "PATCH_2003",
+      "label": "2003 customs patch",
+      "zone": "legacy",
+      "discovery": "oral"
+    },
+    {
+      "id": "BORDER_FALLBACK",
+      "label": "Manual border fallback",
+      "zone": "legacy",
+      "discovery": "oral"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ROAD_TABLE",
+      "target": "ROUTE_CORE",
+      "discovery": "known"
+    },
+    {
+      "source": "TIME_WINDOWS",
+      "target": "ROUTE_CORE",
+      "discovery": "known"
+    },
+    {
+      "source": "ROUTE_CORE",
+      "target": "DEPOT_QUEUE",
+      "discovery": "known"
+    },
+    {
+      "source": "DEPOT_QUEUE",
+      "target": "DRIVER_APP",
+      "discovery": "known"
+    },
+    {
+      "source": "ROUTE_CORE",
+      "target": "ETA_EXPORT",
+      "discovery": "known"
+    },
+    {
+      "source": "ETA_EXPORT",
+      "target": "CUSTOMER_FEED",
+      "discovery": "audit"
+    },
+    {
+      "source": "OVERRIDE_UI",
+      "target": "NIGHT_BATCH",
+      "discovery": "known"
+    },
+    {
+      "source": "NIGHT_BATCH",
+      "target": "ROUTE_CORE",
+      "discovery": "known"
+    },
+    {
+      "source": "MANIFEST",
+      "target": "BILLING",
+      "discovery": "known"
+    },
+    {
+      "source": "CUSTOMS_X",
+      "target": "ROUTE_CORE",
+      "discovery": "known"
+    },
+    {
+      "source": "TELEMETRY",
+      "target": "DISPATCH_LOG",
+      "discovery": "known"
+    },
+    {
+      "source": "DISPATCH_LOG",
+      "target": "DELAY_CODES",
+      "discovery": "audit"
+    },
+    {
+      "source": "CAPACITY",
+      "target": "ROUTE_CORE",
+      "discovery": "audit"
+    },
+    {
+      "source": "LOAD_BALANCE",
+      "target": "CAPACITY",
+      "discovery": "audit"
+    },
+    {
+      "source": "SLA_FLAGS",
+      "target": "TIME_WINDOWS",
+      "discovery": "audit"
+    },
+    {
+      "source": "BILLING",
+      "target": "INVOICE_RUN",
+      "discovery": "audit"
+    },
+    {
+      "source": "CUSTOMS_X",
+      "target": "NORTHERN_GATE",
+      "discovery": "audit"
+    },
+    {
+      "source": "FUEL_ROUTE",
+      "target": "ROUTE_CORE",
+      "discovery": "audit"
+    },
+    {
+      "source": "DEPOT_QUEUE",
+      "target": "MANIFEST",
+      "discovery": "audit"
+    },
+    {
+      "source": "CUSTOMER_FEED",
+      "target": "INVOICE_RUN",
+      "discovery": "audit"
+    },
+    {
+      "source": "LEDGER_SYNC",
+      "target": "CUSTOMS_X",
+      "discovery": "oral-or-map"
+    },
+    {
+      "source": "LEDGER_SYNC",
+      "target": "BILLING",
+      "discovery": "oral-or-map"
+    },
+    {
+      "source": "PATCH_2003",
+      "target": "LEDGER_SYNC",
+      "discovery": "oral"
+    },
+    {
+      "source": "BORDER_FALLBACK",
+      "target": "NORTHERN_GATE",
+      "discovery": "oral"
+    }
+  ]
+}

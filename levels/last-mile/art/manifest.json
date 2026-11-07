@@ -1,0 +1,344 @@
+[
+  {
+    "id": "sana-neutral",
+    "path": "/levels/last-mile/art/portraits/sana_neutral.svg",
+    "sizeKB": 0.921875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Sana Rana, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "sana-thinking",
+    "path": "/levels/last-mile/art/portraits/sana_thinking.svg",
+    "sizeKB": 0.921875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Sana Rana, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "sana-annoyed",
+    "path": "/levels/last-mile/art/portraits/sana_annoyed.svg",
+    "sizeKB": 0.9267578125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Sana Rana, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "sana-approving",
+    "path": "/levels/last-mile/art/portraits/sana_approving.svg",
+    "sizeKB": 0.9228515625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Sana Rana, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "sana-pressured",
+    "path": "/levels/last-mile/art/portraits/sana_pressured.svg",
+    "sizeKB": 0.919921875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Sana Rana, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "mina-neutral",
+    "path": "/levels/last-mile/art/portraits/mina_neutral.svg",
+    "sizeKB": 0.9091796875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Mina Joshi, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "mina-thinking",
+    "path": "/levels/last-mile/art/portraits/mina_thinking.svg",
+    "sizeKB": 0.9091796875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Mina Joshi, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "mina-annoyed",
+    "path": "/levels/last-mile/art/portraits/mina_annoyed.svg",
+    "sizeKB": 0.9140625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Mina Joshi, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "mina-approving",
+    "path": "/levels/last-mile/art/portraits/mina_approving.svg",
+    "sizeKB": 0.91015625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Mina Joshi, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "mina-pressured",
+    "path": "/levels/last-mile/art/portraits/mina_pressured.svg",
+    "sizeKB": 0.9072265625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Mina Joshi, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "bikram-neutral",
+    "path": "/levels/last-mile/art/portraits/bikram_neutral.svg",
+    "sizeKB": 0.91015625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Bikram Rai, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "bikram-thinking",
+    "path": "/levels/last-mile/art/portraits/bikram_thinking.svg",
+    "sizeKB": 0.91015625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Bikram Rai, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "bikram-annoyed",
+    "path": "/levels/last-mile/art/portraits/bikram_annoyed.svg",
+    "sizeKB": 0.9150390625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Bikram Rai, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "bikram-approving",
+    "path": "/levels/last-mile/art/portraits/bikram_approving.svg",
+    "sizeKB": 0.9111328125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Bikram Rai, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "bikram-pressured",
+    "path": "/levels/last-mile/art/portraits/bikram_pressured.svg",
+    "sizeKB": 0.908203125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Bikram Rai, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "salma-neutral",
+    "path": "/levels/last-mile/art/portraits/salma_neutral.svg",
+    "sizeKB": 0.9091796875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Salma Khan, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "salma-thinking",
+    "path": "/levels/last-mile/art/portraits/salma_thinking.svg",
+    "sizeKB": 0.9091796875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Salma Khan, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "salma-annoyed",
+    "path": "/levels/last-mile/art/portraits/salma_annoyed.svg",
+    "sizeKB": 0.9140625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Salma Khan, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "salma-approving",
+    "path": "/levels/last-mile/art/portraits/salma_approving.svg",
+    "sizeKB": 0.91015625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Salma Khan, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "salma-pressured",
+    "path": "/levels/last-mile/art/portraits/salma_pressured.svg",
+    "sizeKB": 0.9072265625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Salma Khan, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "joon-neutral",
+    "path": "/levels/last-mile/art/portraits/joon_neutral.svg",
+    "sizeKB": 0.91015625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Joon Park, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "joon-thinking",
+    "path": "/levels/last-mile/art/portraits/joon_thinking.svg",
+    "sizeKB": 0.91015625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Joon Park, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "joon-annoyed",
+    "path": "/levels/last-mile/art/portraits/joon_annoyed.svg",
+    "sizeKB": 0.9150390625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Joon Park, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "joon-approving",
+    "path": "/levels/last-mile/art/portraits/joon_approving.svg",
+    "sizeKB": 0.9111328125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Joon Park, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "joon-pressured",
+    "path": "/levels/last-mile/art/portraits/joon_pressured.svg",
+    "sizeKB": 0.908203125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Joon Park, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "anita-neutral",
+    "path": "/levels/last-mile/art/portraits/anita_neutral.svg",
+    "sizeKB": 0.91015625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Anita Shrestha, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "anita-thinking",
+    "path": "/levels/last-mile/art/portraits/anita_thinking.svg",
+    "sizeKB": 0.91015625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Anita Shrestha, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "anita-annoyed",
+    "path": "/levels/last-mile/art/portraits/anita_annoyed.svg",
+    "sizeKB": 0.9150390625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Anita Shrestha, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "anita-approving",
+    "path": "/levels/last-mile/art/portraits/anita_approving.svg",
+    "sizeKB": 0.9111328125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Anita Shrestha, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "anita-pressured",
+    "path": "/levels/last-mile/art/portraits/anita_pressured.svg",
+    "sizeKB": 0.908203125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Anita Shrestha, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "rakesh-neutral",
+    "path": "/levels/last-mile/art/portraits/rakesh_neutral.svg",
+    "sizeKB": 0.9091796875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Rakesh Shah, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "rakesh-thinking",
+    "path": "/levels/last-mile/art/portraits/rakesh_thinking.svg",
+    "sizeKB": 0.9091796875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Rakesh Shah, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "rakesh-annoyed",
+    "path": "/levels/last-mile/art/portraits/rakesh_annoyed.svg",
+    "sizeKB": 0.9140625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Rakesh Shah, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "rakesh-approving",
+    "path": "/levels/last-mile/art/portraits/rakesh_approving.svg",
+    "sizeKB": 0.91015625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Rakesh Shah, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "rakesh-pressured",
+    "path": "/levels/last-mile/art/portraits/rakesh_pressured.svg",
+    "sizeKB": 0.9072265625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Rakesh Shah, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "street",
+    "path": "/levels/last-mile/art/backgrounds/street.svg",
+    "sizeKB": 0.7919921875,
+    "source": "PMForge layered background kit",
+    "license": "Project-authored original",
+    "alt": "Fictional street background",
+    "status": "placeholder"
+  },
+  {
+    "id": "control-room",
+    "path": "/levels/last-mile/art/backgrounds/control-room.svg",
+    "sizeKB": 0.8095703125,
+    "source": "PMForge layered background kit",
+    "license": "Project-authored original",
+    "alt": "Fictional control-room background",
+    "status": "placeholder"
+  },
+  {
+    "id": "office",
+    "path": "/levels/last-mile/art/backgrounds/office.svg",
+    "sizeKB": 0.8037109375,
+    "source": "PMForge layered background kit",
+    "license": "Project-authored original",
+    "alt": "Fictional office background",
+    "status": "placeholder"
+  }
+]

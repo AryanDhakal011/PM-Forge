@@ -1,0 +1,45 @@
+{
+  "id": "decision",
+  "type": "FACE",
+  "background": "office",
+  "goal": "Choose a bounded next step.",
+  "canStill": "Compare the options, choose, or pause.",
+  "speakers": [
+    "guide"
+  ],
+  "lines": [
+    {
+      "id": "decision-line",
+      "speaker": "guide",
+      "expression": "neutral",
+      "text": "What do you recommend?"
+    }
+  ],
+  "choices": [
+    {
+      "id": "pilot",
+      "text": "Run a bounded pilot.",
+      "effects": [
+        {
+          "var": "readiness",
+          "op": "add",
+          "value": 5
+        }
+      ],
+      "receipt": {
+        "id": "R_toy-regression_1",
+        "store": "text"
+      },
+      "next": "review",
+      "unlocks": []
+    }
+  ],
+  "tools": [],
+  "onEnter": [],
+  "onExit": [],
+  "next": "review",
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1
+}

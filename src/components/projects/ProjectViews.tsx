@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef, useLayoutEffect, type CSSProperties } from "react";
+import { useState, useRef, useLayoutEffect, useEffect, type CSSProperties } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import { Flip } from "gsap/Flip";
@@ -13,6 +13,8 @@ import {
   EmptyState,
 } from "@/components/product/WorkspaceUI";
 import ProjectPosterArt from "./ProjectPosterArt";
+import { ProjectEntryLink } from "@/components/trojan-horse/ProjectEntryLink";
+import { useProjectCatalog } from "./useProjectCatalog";
 import { useRouter } from "next/navigation";
 import { useLiveQuery } from "dexie-react-hooks";
 import {
@@ -25,6 +27,7 @@ import {
   Info,
 } from "lucide-react";
 import { db } from "@/lib/product/db";
+import {projectDuration} from "@/lib/projects/durations";
 import { projects, getProject } from "@/lib/projects/content";
 import { createProjectRun, projectArchetype } from "@/lib/projects/engine";
 import { saveProjectRun } from "@/lib/projects/db";
@@ -111,6 +114,35 @@ export const palette = (p: Project) =>
     "--case-ink": p.palette.ink,
     "--case-accent": p.palette.accent,
   }) as CSSProperties;
+/**
+ * The three dedicated simulations keep their runs outside the generic
+ * project table, so "Resume" must point at each one's own route. Generic
+ * campaigns resume the open run directly.
+ */
+function resumeHref(
+  p: Project,
+  open: { id: string } | undefined,
+  sims: {
+    deadlock: { id: string }[];
+    sacred: { id: string }[];
+    ghost: { id: string }[];
+  },
+) {
+  if (p.id === "invisible-wall") return "/app/projects/invisible-wall/play";
+  if (p.id === "feature-factory") return "/app/projects/feature-factory/play";
+  if (p.id === "silent-churn") return "/app/projects/silent-churn/play";
+  if (p.id === "legacy-fracture") return "/app/projects/legacy-fracture/play";
+  if (p.id === "pivot-point") return "/app/projects/pivot-point/play";
+  if (p.id === "deadlock" && sims.deadlock[0])
+    return `/app/projects/deadlock/play/${sims.deadlock[0].id}`;
+  if (p.id === "sacred-no" && sims.sacred[0])
+    return `/app/projects/sacred-no?run=${sims.sacred[0].id}`;
+  if (p.id === "ghost-metric" && sims.ghost[0])
+    return `/app/projects/ghost-metric?run=${sims.ghost[0].id}`;
+  return open
+    ? `/app/projects/${p.id}/run/${open.id}`
+    : `/app/projects/${p.id}`;
+}
 export function useProjectRuns() {
   const { profile } = useWorkspace();
   return (
@@ -152,6 +184,8 @@ export function ProjectGallery({
   publicView?: boolean;
 }) {
   const { profile } = useWorkspace();
+  const { catalog, platformRuns, enterable } = useProjectCatalog();
+  const catalogProjects: Project[] = [...projects, ...(catalog?.manifests || []).filter(m => m.status !== 'hidden' && !projects.some(p => p.id === m.id)).map(m => ({id:m.id,title:m.title,setting:m.company,skill:m.tagline,category:'product-sense',tags:['Review'],duration:projectDuration(m.id),palette:m.palette,variables:[],archetypes:[],chapters:[],rules:[]}))];
   const runs = useProjectRuns();
   const deadlockRuns =
     useLiveQuery(async () => {
@@ -208,7 +242,7 @@ export function ProjectGallery({
           : weakest
             ? "sacred-no"
             : "";
-  const filtered = projects.filter(
+  const filtered = catalogProjects.filter(
     (p) => !filters.length || filters.some((tag) => p.tags.includes(tag)),
   );
   filtered.sort((a, b) =>
@@ -234,7 +268,7 @@ export function ProjectGallery({
         </p>
         <div className={s.galleryMeta}>
           <span>3 chapters</span>
-          <span>45–75 minutes</span>
+          <span>15–75 minutes</span>
           <span>Pause between chapters</span>
         </div>
         <div className={s.galleryMap}>
@@ -315,7 +349,17 @@ export function ProjectGallery({
         {filtered.map((p, i) => {
           const history = runs.filter((r) => r.projectId === p.id),
             open = history.find((r) => r.phase !== "debrief"),
-            done = history.find((r) => r.phase === "debrief");
+            done = history.find((r) => r.phase === "debrief"),
+            saved =
+              p.id === "deadlock"
+                ? deadlockRuns.length > 0
+                : p.id === "sacred-no"
+                  ? sacredRuns.length > 0
+                  : p.id === "ghost-metric"
+                    ? ghostRuns.length > 0
+                    : !!open;
+          const actualRun = platformRuns.find(r => r.level === p.id);
+          const manifest = catalog?.manifests.find(m => m.id === p.id);
           return (
             <article
               key={p.id}
@@ -331,10 +375,10 @@ export function ProjectGallery({
             >
               <div className={s.cardTop}>
                 <span>
-                  Case {String(projects.indexOf(p) + 1).padStart(2, "0")} /{" "}
+                  Case {String(catalogProjects.indexOf(p) + 1).padStart(2, "0")} /{" "}
                   {categoryNames[p.category] || p.category}
                 </span>
-                {["deadlock", "sacred-no", "ghost-metric"].includes(p.id) ? (
+                {enterable(p.id) ? (
                   <span title="Playable simulation prototype">
                     LIVE · PROTOTYPE
                   </span>
@@ -349,57 +393,28 @@ export function ProjectGallery({
                   ? "Two teams. Twelve weeks. One prototype."
                   : `${p.skill}.`}
               </p>
-              {!publicView && (
-                <span className={s.cardStatus}>
-                  {["deadlock", "sacred-no", "ghost-metric"].includes(p.id) ? (
-                    (p.id === "deadlock" ? deadlockRuns : p.id === "sacred-no" ? sacredRuns : ghostRuns).length ? (
-                      "Saved simulation · continue your run"
-                    ) : (
-                      "Playable prototype · three distinct chapter loops"
-                    )
-                  ) : (
-                    <>
-                      {open && (
-                        <Meter
-                          value={open.decisions.length}
-                          label={`${open.decisions.length} of 3 chapters complete`}
-                        />
-                      )}
-                      {open
-                        ? `In progress · chapter ${open.chapter}/3`
-                        : done
-                          ? `Completed · ${projectArchetype(done).label}`
-                          : "New"}
-                    </>
-                  )}
-                </span>
-              )}
+              {!publicView && <span className={s.cardStatus}>
+                {actualRun ? actualRun.state.completed ? `Saved result · ${actualRun.state.completed.ending}` : `Saved locally · day ${actualRun.state.clock.day}` : enterable(p.id) ? 'Ready to begin' : manifest?.launchCandidate ? 'Launch candidate · review gates pending' : 'Temporarily unavailable'}
+              </span>}
               {p.id === recommended && !publicView && (
                 <p className={s.recommend}>
                   ↗ Suggested from your recorded practice
                 </p>
               )}
-              {open && p.id !== "deadlock" && (
-                <p className={s.remaining}>
-                  About {Math.max(15, (3 - open.decisions.length) * 20)} min
-                  remaining, estimate
-                </p>
-              )}
               <div className={s.cardFoot}>
                 <span>
-                  {["deadlock", "sacred-no", "ghost-metric"].includes(p.id) ? "About 40 minutes" : "45–75 min"} ·{" "}
-                  {p.tags[0]}
+                  {p.duration.label} · {p.tags[0]}
                 </span>
-                <Link
+                {enterable(p.id) ? <ProjectEntryLink
                   className={s.cardEntry}
-                  aria-label={`Open ${p.title}`}
-                  href={`/app/projects/${p.id}`}
+                  label={`Open ${p.title}`}
+                  animate={false}
+                  href={actualRun?.state.completed ? `/app/projects/${p.id}/debrief/${actualRun.runId}` : ['shadow-roadmap','public-fracture'].includes(p.id)?`/app/projects/${p.id}`:`/app/projects/${p.id}/play`}
                 >
-                  {(p.id === "deadlock" ? deadlockRuns.length > 0 : p.id === "sacred-no" ? sacredRuns.length > 0 : p.id === "ghost-metric" ? ghostRuns.length > 0 : !!open)
-                    ? "Resume"
-                    : "Enter project"}{" "}
-                  <ArrowRight size={13} style={{ display: "inline" }} />
-                </Link>
+                  {actualRun ? actualRun.state.completed ? 'Open result' : 'Resume' : 'Enter project'} <ArrowRight size={13}/>
+                </ProjectEntryLink> : <span className={s.cardEntry} aria-disabled="true">Temporarily unavailable</span>}
+                {!enterable(p.id) && catalog?.flags.levels[p.id]?.preview && <Link data-review-preview href={`/app/projects/${p.id}/play`} className={s.cardEntry}>Review preview <ArrowRight size={13}/></Link>}
+
               </div>
             </article>
           );
@@ -435,6 +450,15 @@ export function ProjectLanding({
     p.title.split(" ").at(-1)!,
   ];
   const start = async () => {
+    if (p.id === "invisible-wall") { router.push("/app/projects/invisible-wall/play"); return; }
+    if (p.id === "feature-factory") { router.push("/app/projects/feature-factory/play"); return; }
+    if (p.id === "silent-churn") { router.push("/app/projects/silent-churn/play"); return; }
+    if (p.id === "legacy-fracture") { router.push("/app/projects/legacy-fracture/play"); return; }
+    if (p.id === "pivot-point") { router.push("/app/projects/pivot-point/play"); return; }
+    if (p.id === "trojan-horse") {
+      router.push("/app/projects/trojan-horse/play");
+      return;
+    }
     if (!profile) {
       router.push(entryHref(`/app/projects/${p.id}`, "project"));
       return;
@@ -530,7 +554,7 @@ export function ProjectLanding({
         <div className={s.detailMeta}>
           <span>
             <Clock size={14} aria-hidden="true" />
-            45–75 minutes
+            {p.duration.label}
           </span>
           <span>Pause anytime</span>
         </div>

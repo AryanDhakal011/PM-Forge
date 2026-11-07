@@ -10,6 +10,7 @@ import {
   REFERENCE_NOTE,
   evidenceBudget,
 } from "@/lib/product/content";
+import {createLive} from "@/lib/product/interview-live";
 import { createRun, scoreRun, stageLabel } from "@/lib/product/engine";
 import { db, markDirty, saveRun } from "@/lib/product/db";
 import { entryHref } from "@/lib/product/routes";
@@ -70,6 +71,7 @@ export function QuestionDetail({
         profile.id,
         attempts.length % 3,
       );
+      run.live = createLive();
       if (guided) {
         run.guided = true;
         run.sessionId = practiceSession();
@@ -122,7 +124,7 @@ export function QuestionDetail({
             minutes
           </span>
           <span>{evidenceBudget(q.level)} evidence credits</span>
-          <span>Text & structured decisions</span>
+          <span>Voice, typing & structured decisions</span>
         </div>
         <section className={styles.brief}>
           <span className={styles.eyebrow}>The situation</span>
@@ -130,16 +132,15 @@ export function QuestionDetail({
         </section>
         <section className={styles.prose}>
           <p className={`${styles.mobileGuidance} ${styles.notice}`}>
-            Full workbenches are best on a desktop. Mobile supports reading,
-            guided reps, spoken synthesis, and reflection; you can still
-            continue this full run here.
+            Speak or switch to Fast-Typing Mode on mobile. Evidence, notes,
+            and interrupted answers save as you work.
           </p>
           <h2>What you’ll do</h2>
           <p>
             {categoryOf(q.category).description} You’ll pin the objective,
-            inspect evidence, work through a{" "}
+            inspect evidence, think aloud with a contextual interviewer, work through a{" "}
             {categoryOf(q.category).studio.toLowerCase()} activity, respond to
-            interviewer pushback, and defend one call.
+            interviewer pushback, and defend one call. The interviewer can challenge a claim while you work.
           </p>
           <h2>Leave with a clearer next move.</h2>
           <p>

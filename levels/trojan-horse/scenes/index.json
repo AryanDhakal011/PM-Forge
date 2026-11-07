@@ -1,0 +1,1138 @@
+[
+  {
+    "id": "coin-press",
+    "type": "TOOL",
+    "background": "party",
+    "goal": "Place a referral in the press. Listen for the second payout.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "kavya"
+    ],
+    "lines": [
+      {
+        "id": "line-1",
+        "speaker": "kavya",
+        "expression": "thinking",
+        "text": "Look at that curve!"
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "coin-press",
+        "kind": "CoinPress",
+        "title": "One referral. Two payouts.",
+        "items": [
+          {
+            "id": "once",
+            "label": "Pay once",
+            "detail": "A genuine referral earns one reward.",
+            "effects": [
+              {
+                "var": "cash",
+                "op": "add",
+                "value": -1
+              }
+            ]
+          },
+          {
+            "id": "twice",
+            "label": "Pay twice",
+            "detail": "The same referral loops back through the press.",
+            "effects": [
+              {
+                "var": "cash",
+                "op": "add",
+                "value": -2
+              },
+              {
+                "flag": "double-paid",
+                "value": true
+              }
+            ]
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_trojan-horse_coin-press"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "party-floor"
+  },
+  {
+    "id": "party-floor",
+    "type": "TOOL",
+    "background": "party",
+    "goal": "Visit two people. The introduction order matters.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "rhea"
+    ],
+    "lines": [
+      {
+        "id": "line-2",
+        "speaker": "rhea",
+        "expression": "thinking",
+        "text": "The party has four corners. You have time for two."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "party-floor",
+        "kind": "PartyFloor",
+        "title": "Walk the party",
+        "items": [
+          {
+            "id": "led",
+            "label": "LED wall · Kavya",
+            "detail": "Look at that curve!",
+            "effects": [
+              {
+                "var": "TRUST.kavya",
+                "op": "add",
+                "value": 5
+              }
+            ],
+            "reaction": "Look at that curve!",
+            "speaker": "kavya"
+          },
+          {
+            "id": "bar",
+            "label": "Bar · Dani",
+            "detail": "It is the loop. Do not touch it.",
+            "effects": [
+              {
+                "var": "TRUST.dani",
+                "op": "add",
+                "value": 5
+              }
+            ],
+            "reaction": "It is the loop. Do not touch it.",
+            "speaker": "dani"
+          },
+          {
+            "id": "corner",
+            "label": "Quiet corner · Omar",
+            "detail": "Four hundred ten thousand a week.",
+            "effects": [
+              {
+                "var": "TRUST.omar",
+                "op": "add",
+                "value": 5
+              }
+            ],
+            "reaction": "Four hundred ten thousand a week.",
+            "speaker": "omar"
+          },
+          {
+            "id": "booth",
+            "label": "Community booth · Rhea",
+            "detail": "Users call it a feature. Hear them out.",
+            "effects": [
+              {
+                "var": "TRUST.rhea",
+                "op": "add",
+                "value": 5
+              },
+              {
+                "flag": "guilds-named",
+                "value": true
+              }
+            ],
+            "reaction": "Users call it a feature. Hear them out.",
+            "speaker": "rhea"
+          }
+        ],
+        "min": 2,
+        "max": 2,
+        "cost": 2,
+        "receiptId": "R_trojan-horse_party-floor"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "drawers"
+  },
+  {
+    "id": "drawers",
+    "type": "TOOL",
+    "background": "party",
+    "goal": "Open three reports that distinguish value from incentives.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "omar"
+    ],
+    "lines": [
+      {
+        "id": "line-3",
+        "speaker": "omar",
+        "expression": "thinking",
+        "text": "The payout ledger has a rhythm nobody budgeted for."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "drawers",
+        "kind": "EvidenceDrawers",
+        "title": "Seven reports",
+        "items": [
+          {
+            "id": "ledger",
+            "label": "Payout ledger",
+            "detail": "Shows $410k paid weekly, not the displayed $120k.",
+            "effects": [],
+            "group": "ledger",
+            "soWhat": "Shows the outgoing rewards the dashboard misses."
+          },
+          {
+            "id": "graph",
+            "label": "Account graph",
+            "detail": "Shows circular referral clusters.",
+            "effects": [],
+            "group": "graph",
+            "soWhat": "Shows who repeatedly refers whom."
+          },
+          {
+            "id": "cohort",
+            "label": "Cohort value",
+            "detail": "Shows which referrals later buy useful services.",
+            "effects": [],
+            "group": "cohort",
+            "soWhat": "Shows who buys after a referral."
+          },
+          {
+            "id": "devices",
+            "label": "Device fingerprints",
+            "detail": "Shows one device controlling many accounts.",
+            "effects": [],
+            "group": "devices",
+            "soWhat": "Shows who controls multiple accounts."
+          },
+          {
+            "id": "community",
+            "label": "Community threads",
+            "detail": "Shows neighbors exchanging useful referrals.",
+            "effects": [
+              {
+                "flag": "guilds-named",
+                "value": true
+              }
+            ],
+            "group": "guilds",
+            "soWhat": "Shows how neighbors use the rewards."
+          },
+          {
+            "id": "contracts",
+            "label": "Partner contracts",
+            "detail": "Shows rewards promised in writing.",
+            "effects": [],
+            "group": "contracts",
+            "soWhat": "Shows which promises are already in writing."
+          },
+          {
+            "id": "cash",
+            "label": "Cash forecast",
+            "detail": "Shows twelve weeks of cash at current burn.",
+            "effects": [],
+            "group": "cash",
+            "soWhat": "Shows how payouts affect runway."
+          }
+        ],
+        "min": 3,
+        "max": 3,
+        "cost": 1,
+        "receiptId": "R_trojan-horse_drawers"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 2,
+    "act": 1,
+    "next": "fraud-hunt"
+  },
+  {
+    "id": "fraud-hunt",
+    "type": "TOOL",
+    "background": "party",
+    "goal": "Cut shared-device rings. Shared locations alone do not prove fraud.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "rhea"
+    ],
+    "lines": [
+      {
+        "id": "line-4",
+        "speaker": "rhea",
+        "expression": "thinking",
+        "text": "Same street does not mean same person."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "fraud-hunt",
+        "kind": "FraudRing",
+        "title": "Device-fingerprint hunt",
+        "items": [
+          {
+            "id": "ring-a",
+            "label": "Accounts A1, A2, A3",
+            "detail": "Device P-17 · repeated payouts · no purchases.",
+            "effects": [
+              {
+                "flag": "fraud-cut",
+                "value": true
+              },
+              {
+                "var": "runway",
+                "op": "add",
+                "value": 3
+              }
+            ],
+            "answer": "cut",
+            "device": "P-17",
+            "location": "Market",
+            "group": "fraud"
+          },
+          {
+            "id": "guild-loop",
+            "label": "Leena, Asha, Tomas",
+            "detail": "Three devices · shared market · recurring purchases.",
+            "effects": [
+              {
+                "flag": "guilds-named",
+                "value": true
+              },
+              {
+                "var": "partner",
+                "op": "add",
+                "value": 3
+              }
+            ],
+            "answer": "keep",
+            "device": "P-81 / P-93 / P-24",
+            "location": "Market",
+            "group": "guilds"
+          },
+          {
+            "id": "ring-b",
+            "label": "Accounts B1, B2",
+            "detail": "Device P-42 · matching cash-out destination.",
+            "effects": [
+              {
+                "var": "runway",
+                "op": "add",
+                "value": 2
+              }
+            ],
+            "answer": "cut",
+            "device": "P-42",
+            "location": "Depot",
+            "group": "fraud"
+          }
+        ],
+        "min": 3,
+        "max": 3,
+        "cost": 0,
+        "receiptId": "R_trojan-horse_fraud-hunt",
+        "bins": [
+          "cut",
+          "keep"
+        ]
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "valve"
+  },
+  {
+    "id": "valve",
+    "type": "TOOL",
+    "background": "party",
+    "goal": "Change the payout multiplier and watch the coin press slow.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "omar"
+    ],
+    "lines": [
+      {
+        "id": "line-5",
+        "speaker": "omar",
+        "expression": "thinking",
+        "text": "The runway ring is a cash forecast, not confetti."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "valve",
+        "kind": "SliderForecast",
+        "title": "Payout valve",
+        "items": [],
+        "min": 0,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_trojan-horse_valve",
+        "lever": [
+          {
+            "id": "multiplier",
+            "label": "Payout multiplier",
+            "min": 0,
+            "max": 2,
+            "initial": 1,
+            "step": 0.25
+          }
+        ]
+      }
+    ],
+    "onEnter": [],
+    "onExit": [
+      {
+        "when": {
+          "var": "multiplier",
+          "op": ">=",
+          "value": 1.5
+        },
+        "effects": [
+          {
+            "var": "runway",
+            "op": "add",
+            "value": -7
+          },
+          {
+            "var": "cash",
+            "op": "add",
+            "value": -35
+          },
+          {
+            "chip": "High payouts shorten runway and consume cash."
+          }
+        ]
+      },
+      {
+        "when": {
+          "var": "multiplier",
+          "op": "<=",
+          "value": 0.5
+        },
+        "effects": [
+          {
+            "var": "community",
+            "op": "add",
+            "value": -12
+          },
+          {
+            "chip": "A sharp payout cut creates an access and trust cost."
+          }
+        ]
+      }
+    ],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "message"
+  },
+  {
+    "id": "message",
+    "type": "FACE",
+    "background": "office",
+    "goal": "Write one promise the community can quote later.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "rhea"
+    ],
+    "lines": [
+      {
+        "id": "line-6",
+        "speaker": "rhea",
+        "expression": "thinking",
+        "text": "They will screenshot this. Choose words you can keep."
+      }
+    ],
+    "choices": [
+      {
+        "id": "fix-today",
+        "text": "We will fix this today.",
+        "effects": [
+          {
+            "flag": "promised-today",
+            "value": true
+          },
+          {
+            "schedule": {
+              "fuse": "message-quote",
+              "inDays": 14
+            }
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_trojan-horse_fix-today",
+          "store": "text"
+        }
+      },
+      {
+        "id": "review",
+        "text": "We are reviewing rewards and will publish a date.",
+        "effects": [
+          {
+            "var": "community",
+            "op": "add",
+            "value": 3
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_trojan-horse_review",
+          "store": "text"
+        }
+      },
+      {
+        "id": "together",
+        "text": "We will protect legitimate value while changing incentives.",
+        "effects": [
+          {
+            "var": "partner",
+            "op": "add",
+            "value": 4
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_trojan-horse_together",
+          "store": "text"
+        }
+      }
+    ],
+    "tools": [],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "guild-visit"
+  },
+  {
+    "id": "guild-visit",
+    "type": "TOOL",
+    "background": "bakery",
+    "goal": "Visit Tomas’s bakery if you discovered the Guilds.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "tomas"
+    ],
+    "lines": [
+      {
+        "id": "line-7",
+        "speaker": "tomas",
+        "expression": "thinking",
+        "text": "We refer each other every week. Take a loaf."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "guild-visit",
+        "kind": "GuildVisit",
+        "title": "At the bakery",
+        "items": [
+          {
+            "id": "loaf",
+            "label": "Accept a loaf",
+            "detail": "A human moment before the spreadsheet.",
+            "effects": [
+              {
+                "var": "TRUST.tomas",
+                "op": "add",
+                "value": 5
+              }
+            ],
+            "reaction": "The end piece is for whoever asks the hardest question.",
+            "speaker": "tomas"
+          },
+          {
+            "id": "card",
+            "label": "Inspect the referral card",
+            "detail": "Three shops, three devices, recurring revenue.",
+            "effects": [
+              {
+                "flag": "guilds-certain",
+                "value": true
+              }
+            ],
+            "group": "guild-proof"
+          },
+          {
+            "id": "revenue",
+            "label": "Follow a real purchase",
+            "detail": "Legitimate Guild revenue is $190k per week.",
+            "effects": [
+              {
+                "var": "credibility",
+                "op": "add",
+                "value": 3
+              }
+            ],
+            "group": "revenue"
+          }
+        ],
+        "min": 3,
+        "max": 3,
+        "cost": 0,
+        "receiptId": "R_trojan-horse_guild-visit",
+        "duration": 90
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 14,
+    "act": 2,
+    "when": {
+      "flag": "guilds-named"
+    },
+    "next": "angry-call"
+  },
+  {
+    "id": "angry-call",
+    "type": "FACE",
+    "background": "office",
+    "goal": "Take the call when the Guild visit was missed.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "tomas"
+    ],
+    "lines": [
+      {
+        "id": "line-8",
+        "speaker": "tomas",
+        "expression": "thinking",
+        "text": "You changed our income without learning our names."
+      }
+    ],
+    "choices": [
+      {
+        "id": "listen-call",
+        "text": "Listen and name the uncertainty.",
+        "effects": [
+          {
+            "var": "partner",
+            "op": "add",
+            "value": 3
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_trojan-horse_listen-call",
+          "store": "text"
+        }
+      },
+      {
+        "id": "defend-call",
+        "text": "Defend the blanket policy.",
+        "effects": [
+          {
+            "var": "partner",
+            "op": "add",
+            "value": -12
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_trojan-horse_defend-call",
+          "store": "text"
+        }
+      }
+    ],
+    "tools": [],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 14,
+    "act": 2,
+    "when": {
+      "not": {
+        "flag": "guilds-named"
+      }
+    },
+    "next": "segments"
+  },
+  {
+    "id": "segments",
+    "type": "TOOL",
+    "background": "office",
+    "goal": "Place each segment with its people and incentives visible.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "rhea"
+    ],
+    "lines": [
+      {
+        "id": "line-9",
+        "speaker": "rhea",
+        "expression": "thinking",
+        "text": "Fraud rings, gamers, Guilds. Different value. Different treatment."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "segments",
+        "kind": "CaseCards",
+        "title": "Segment board",
+        "items": [
+          {
+            "id": "fraud",
+            "label": "Fraud rings",
+            "detail": "One device. Multiple identities. No purchase value.",
+            "effects": []
+          },
+          {
+            "id": "gamers",
+            "label": "Reward gamers",
+            "detail": "Real people optimizing a reward mechanic.",
+            "effects": []
+          },
+          {
+            "id": "guilds",
+            "label": "Neighborhood Guilds",
+            "detail": "Leena’s bakery, Asha’s flowers, Tomas’s market.",
+            "effects": []
+          }
+        ],
+        "min": 3,
+        "max": 3,
+        "cost": 0,
+        "receiptId": "R_trojan-horse_segments",
+        "bins": [
+          "cut",
+          "sunset",
+          "formalize",
+          "keep"
+        ]
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 14,
+    "act": 2,
+    "next": "grace"
+  },
+  {
+    "id": "grace",
+    "type": "TOOL",
+    "background": "office",
+    "goal": "Choose the grandfather window before the announcement.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "omar"
+    ],
+    "lines": [
+      {
+        "id": "line-10",
+        "speaker": "omar",
+        "expression": "thinking",
+        "text": "Notice costs money. Surprise costs trust."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "grace",
+        "kind": "SliderForecast",
+        "title": "Grandfather gate",
+        "items": [],
+        "min": 0,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_trojan-horse_grace",
+        "lever": [
+          {
+            "id": "graceDays",
+            "label": "Grace period, days",
+            "min": 0,
+            "max": 30,
+            "initial": 14,
+            "step": 1
+          }
+        ]
+      }
+    ],
+    "onEnter": [],
+    "onExit": [
+      {
+        "when": {
+          "var": "graceDays",
+          "op": ">=",
+          "value": 21
+        },
+        "effects": [
+          {
+            "var": "cash",
+            "op": "add",
+            "value": -15
+          },
+          {
+            "chip": "The longer notice period costs cash."
+          }
+        ]
+      }
+    ],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 21,
+    "act": 2,
+    "next": "hangover"
+  },
+  {
+    "id": "hangover",
+    "type": "NARR",
+    "background": "party",
+    "goal": "The party lights come up. The bill remains.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "dani"
+    ],
+    "lines": [
+      {
+        "id": "line-11",
+        "speaker": "dani",
+        "expression": "thinking",
+        "text": "The curve was real. So was the payout."
+      }
+    ],
+    "choices": [],
+    "tools": [],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": true,
+    "minInteractions": 0,
+    "day": 28,
+    "act": 3,
+    "next": "launch-night"
+  },
+  {
+    "id": "launch-night",
+    "type": "TOOL",
+    "background": "party",
+    "goal": "Compose the announcement and answer three live posts.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "rhea"
+    ],
+    "lines": [
+      {
+        "id": "line-12",
+        "speaker": "rhea",
+        "expression": "thinking",
+        "text": "Someone posted your week-one message."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "launch-night",
+        "kind": "LaunchNight",
+        "title": "Launch Night",
+        "items": [
+          {
+            "id": "own",
+            "label": "Own it",
+            "detail": "Acknowledge the earlier promise.",
+            "effects": [
+              {
+                "var": "community",
+                "op": "add",
+                "value": 4
+              }
+            ],
+            "reaction": "A clear answer travels further than another slogan.",
+            "speaker": "rhea"
+          },
+          {
+            "id": "explain",
+            "label": "Explain",
+            "detail": "Explain the mechanics without dismissing the cost.",
+            "effects": [
+              {
+                "var": "community",
+                "op": "add",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "id": "escalate",
+            "label": "Escalate",
+            "detail": "Get the partner lead into the conversation.",
+            "effects": [
+              {
+                "var": "partner",
+                "op": "add",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "id": "dismiss",
+            "label": "Keep the policy. Decline individual replies.",
+            "detail": "Lower support load; higher community frustration.",
+            "effects": [
+              {
+                "var": "community",
+                "op": "add",
+                "value": -12
+              },
+              {
+                "var": "rating",
+                "op": "add",
+                "value": -4
+              }
+            ]
+          }
+        ],
+        "min": 3,
+        "max": 3,
+        "cost": 0,
+        "receiptId": "R_trojan-horse_launch-night",
+        "rounds": 3,
+        "lever": [
+          {
+            "id": "rolloutDays",
+            "label": "Rollout days",
+            "min": 0,
+            "max": 28,
+            "initial": 14,
+            "step": 1
+          }
+        ],
+        "resolution": "The posts and your stance are recorded. Rating Watch reflects the response."
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 28,
+    "act": 3,
+    "next": "launch-interventions"
+  },
+  {
+    "id": "launch-interventions",
+    "type": "FACE",
+    "background": "office",
+    "goal": "Choose a single operating intervention before the next wave.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "rhea"
+    ],
+    "lines": [
+      {
+        "id": "line-13",
+        "speaker": "rhea",
+        "expression": "thinking",
+        "text": "A public reply and an operational fix are different jobs."
+      }
+    ],
+    "choices": [
+      {
+        "id": "delay",
+        "text": "Delay twenty-four hours.",
+        "effects": [
+          {
+            "var": "cash",
+            "op": "add",
+            "value": -4
+          },
+          {
+            "var": "community",
+            "op": "add",
+            "value": 4
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_trojan-horse_delay",
+          "store": "text"
+        }
+      },
+      {
+        "id": "faq",
+        "text": "Publish an FAQ.",
+        "effects": [
+          {
+            "var": "community",
+            "op": "add",
+            "value": 5
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_trojan-horse_faq",
+          "store": "text"
+        }
+      },
+      {
+        "id": "dm",
+        "text": "Message the Guild leads.",
+        "effects": [
+          {
+            "var": "partner",
+            "op": "add",
+            "value": 7
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_trojan-horse_dm",
+          "store": "text"
+        }
+      }
+    ],
+    "tools": [],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 28,
+    "act": 3,
+    "next": "last-request"
+  },
+  {
+    "id": "last-request",
+    "type": "FACE",
+    "background": "office",
+    "goal": "Choose what the team funds next week.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "omar"
+    ],
+    "lines": [
+      {
+        "id": "line-14",
+        "speaker": "omar",
+        "expression": "thinking",
+        "text": "A reward has a cost even when customers love it."
+      }
+    ],
+    "choices": [
+      {
+        "id": "fund-support",
+        "text": "Fund support during the transition.",
+        "effects": [
+          {
+            "var": "community",
+            "op": "add",
+            "value": 7
+          },
+          {
+            "var": "cash",
+            "op": "add",
+            "value": -5
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_trojan-horse_fund-support",
+          "store": "text"
+        }
+      },
+      {
+        "id": "publish-payouts",
+        "text": "Publish payout and revenue separately.",
+        "effects": [
+          {
+            "var": "credibility",
+            "op": "add",
+            "value": 5
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_trojan-horse_publish-payouts",
+          "store": "text"
+        }
+      },
+      {
+        "id": "restore",
+        "text": "Restore full rewards.",
+        "effects": [
+          {
+            "var": "cash",
+            "op": "add",
+            "value": -12
+          },
+          {
+            "var": "community",
+            "op": "add",
+            "value": 6
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_trojan-horse_restore",
+          "store": "text"
+        }
+      }
+    ],
+    "tools": [],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 35,
+    "act": 3,
+    "next": "review"
+  },
+  {
+    "id": "review",
+    "type": "REVIEW",
+    "background": "bakery",
+    "goal": "Read the Ledger of Loops and the Guild letters.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "tomas"
+    ],
+    "lines": [
+      {
+        "id": "line-16",
+        "speaker": "tomas",
+        "expression": "thinking",
+        "text": "A neighborhood is more than an acquisition channel."
+      }
+    ],
+    "choices": [],
+    "tools": [],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": true,
+    "minInteractions": 0,
+    "day": 42,
+    "act": 3
+  }
+]

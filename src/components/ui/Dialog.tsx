@@ -87,7 +87,7 @@ export function Dialog({
       window.clearTimeout(timer);
       document.removeEventListener("keydown", onKeyDown);
       document.body.classList.remove("no-scroll");
-      restoreRef.current?.focus?.();
+      restoreRef.current?.focus?.({preventScroll:true});
     };
   }, [open, dismissible, initialFocus]);
 

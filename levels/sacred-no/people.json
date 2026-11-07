@@ -1,0 +1,102 @@
+[
+  {
+    "id": "kian",
+    "name": "Kian Mercer",
+    "role": "Founder",
+    "look": {
+      "silhouette": 0,
+      "skin": "#b98463",
+      "hair": "#34383c",
+      "outfit": "#476872",
+      "props": [
+        "tablet"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "Fine. Convince me.",
+    "accent": "#d5d99a",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "priya",
+    "name": "Priya Nair",
+    "role": "Engineering lead",
+    "look": {
+      "silhouette": 1,
+      "skin": "#d7a381",
+      "hair": "#5d473e",
+      "outfit": "#7c6355",
+      "props": [
+        "headset"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "I am not touching the queue unguarded.",
+    "accent": "#d5d99a",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "tess",
+    "name": "Tess Grant",
+    "role": "Commercial lead",
+    "look": {
+      "silhouette": 2,
+      "skin": "#925f46",
+      "hair": "#2d343a",
+      "outfit": "#657b5b",
+      "props": [
+        "tablet"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "Say yes and I stop asking.",
+    "accent": "#d5d99a",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "marlo",
+    "name": "Marlo Chen",
+    "role": "Customer sponsor",
+    "look": {
+      "silhouette": 3,
+      "skin": "#d8b49a",
+      "hair": "#a8a49a",
+      "outfit": "#5c687e",
+      "props": [
+        "tablet"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "Tell me what I can actually use.",
+    "accent": "#d5d99a",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  }
+]

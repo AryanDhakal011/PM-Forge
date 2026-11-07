@@ -1,0 +1,14 @@
+{
+  "id": "S15",
+  "type": "DEPLOY",
+  "goal": "Plan five safe working days",
+  "background": "desk",
+  "tools": [
+    "dredger",
+    "pattern",
+    "coalition",
+    "preread",
+    "window",
+    "gauntlet"
+  ]
+}

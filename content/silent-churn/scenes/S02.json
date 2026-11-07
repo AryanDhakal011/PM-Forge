@@ -1,0 +1,14 @@
+{
+  "id": "S02",
+  "type": "TOOL",
+  "goal": "Sort one lost account",
+  "background": "desk",
+  "tools": [
+    "dredger",
+    "pattern",
+    "coalition",
+    "preread",
+    "window",
+    "gauntlet"
+  ]
+}

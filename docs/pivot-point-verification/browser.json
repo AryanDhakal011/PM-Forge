@@ -1,0 +1,665 @@
+{
+  "base": "http://localhost:3002",
+  "checks": [
+    {
+      "label": "entrance visible",
+      "pass": true
+    },
+    {
+      "label": "no workspace gate",
+      "pass": true
+    },
+    {
+      "label": "no workspace navigation",
+      "pass": true
+    },
+    {
+      "label": "entrance fits 390",
+      "pass": true
+    },
+    {
+      "label": "entrance fits 320",
+      "pass": true
+    },
+    {
+      "label": "click Step inside",
+      "pass": true
+    },
+    {
+      "label": "click Community Network",
+      "pass": true
+    },
+    {
+      "label": "click Who gets left out",
+      "pass": true
+    },
+    {
+      "label": "click What would change",
+      "pass": true
+    },
+    {
+      "label": "click Show me the numbers",
+      "pass": true
+    },
+    {
+      "label": "click Walk a community",
+      "pass": true
+    },
+    {
+      "label": "click Start with who cannot",
+      "pass": true
+    },
+    {
+      "label": "click Case file",
+      "pass": true
+    },
+    {
+      "label": "case file includes opened evidence",
+      "pass": true
+    },
+    {
+      "label": "click Close dialog",
+      "pass": true
+    },
+    {
+      "label": "click Income",
+      "pass": true
+    },
+    {
+      "label": "map fits mobile",
+      "pass": true
+    },
+    {
+      "label": "click Per recovered",
+      "pass": true
+    },
+    {
+      "label": "click Pivot to the lower-cost",
+      "pass": true
+    },
+    {
+      "label": "click Walk me through",
+      "pass": true
+    },
+    {
+      "label": "click Record these commitments",
+      "pass": true
+    },
+    {
+      "label": "click Present the design",
+      "pass": true
+    },
+    {
+      "label": "click Ask for the board",
+      "pass": true
+    },
+    {
+      "label": "click Fund the community workers",
+      "pass": true
+    },
+    {
+      "label": "complete run",
+      "pass": true
+    },
+    {
+      "label": "hybrid ending",
+      "pass": true
+    },
+    {
+      "label": "review fits 390",
+      "pass": true
+    },
+    {
+      "label": "review fits 320",
+      "pass": true
+    },
+    {
+      "label": "click Pause",
+      "pass": true
+    },
+    {
+      "label": "click Save & return",
+      "pass": true
+    },
+    {
+      "label": "click Resume ·",
+      "pass": true
+    },
+    {
+      "label": "resume completed run",
+      "pass": true
+    },
+    {
+      "label": "branch completed flagship",
+      "pass": true
+    },
+    {
+      "label": "intensive branch ending",
+      "pass": true
+    },
+    {
+      "label": "branch completed premium",
+      "pass": true
+    },
+    {
+      "label": "premium branch ending",
+      "pass": true
+    },
+    {
+      "label": "branch completed community",
+      "pass": true
+    },
+    {
+      "label": "unsupervised branch ending",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "test hook disposed",
+      "pass": true
+    },
+    {
+      "label": "gallery links to takeover",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hook 0",
+      "pass": true
+    },
+    {
+      "label": "takeover 0",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hook 1",
+      "pass": true
+    },
+    {
+      "label": "takeover 1",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hook 2",
+      "pass": true
+    },
+    {
+      "label": "takeover 2",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hook 3",
+      "pass": true
+    },
+    {
+      "label": "takeover 3",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hook 4",
+      "pass": true
+    },
+    {
+      "label": "takeover 4",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hook 5",
+      "pass": true
+    },
+    {
+      "label": "takeover 5",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hook 6",
+      "pass": true
+    },
+    {
+      "label": "takeover 6",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hook 7",
+      "pass": true
+    },
+    {
+      "label": "takeover 7",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hook 8",
+      "pass": true
+    },
+    {
+      "label": "takeover 8",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hook 9",
+      "pass": true
+    },
+    {
+      "label": "takeover 9",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hook 10",
+      "pass": true
+    },
+    {
+      "label": "takeover 10",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hook 11",
+      "pass": true
+    },
+    {
+      "label": "takeover 11",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hook 12",
+      "pass": true
+    },
+    {
+      "label": "takeover 12",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hook 13",
+      "pass": true
+    },
+    {
+      "label": "takeover 13",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hook 14",
+      "pass": true
+    },
+    {
+      "label": "takeover 14",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hook 15",
+      "pass": true
+    },
+    {
+      "label": "takeover 15",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hook 16",
+      "pass": true
+    },
+    {
+      "label": "takeover 16",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hook 17",
+      "pass": true
+    },
+    {
+      "label": "takeover 17",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hook 18",
+      "pass": true
+    },
+    {
+      "label": "takeover 18",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hook 19",
+      "pass": true
+    },
+    {
+      "label": "takeover 19",
+      "pass": true
+    },
+    {
+      "label": "reduced motion honored",
+      "pass": true
+    },
+    {
+      "label": "global listeners stable after 20 entries",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "globalListenersBefore": [
+    {
+      "pagehide": 2,
+      "pageshow": 3,
+      "x-storagemutated-1": 1,
+      "pmforge:gate-close": 1,
+      "error": 1,
+      "unhandledrejection": 1,
+      "popstate": 1,
+      "wheel": 1,
+      "load": 1,
+      "resize": 1,
+      "pmforge:theme": 1,
+      "keydown": 1,
+      "storage": 1
+    },
+    {
+      "input": 2,
+      "compositionstart": 2,
+      "compositionupdate": 2,
+      "compositionend": 2,
+      "drop": 2,
+      "paste": 2,
+      "keydown": 2,
+      "keyup": 2,
+      "keypress": 2,
+      "abort": 1,
+      "auxclick": 2,
+      "beforetoggle": 1,
+      "cancel": 1,
+      "canplay": 1,
+      "canplaythrough": 1,
+      "click": 4,
+      "close": 1,
+      "contextmenu": 2,
+      "copy": 2,
+      "cut": 2,
+      "drag": 2,
+      "dragend": 2,
+      "dragenter": 2,
+      "dragexit": 2,
+      "dragleave": 2,
+      "dragover": 2,
+      "dragstart": 2,
+      "durationchange": 1,
+      "emptied": 1,
+      "encrypted": 1,
+      "ended": 1,
+      "error": 1,
+      "fullscreenchange": 2,
+      "fullscreenerror": 2,
+      "gotpointercapture": 2,
+      "invalid": 1,
+      "load": 1,
+      "loadeddata": 1,
+      "loadedmetadata": 1,
+      "loadstart": 1,
+      "lostpointercapture": 2,
+      "mousedown": 3,
+      "mousemove": 2,
+      "mouseout": 2,
+      "mouseover": 2,
+      "mouseup": 3,
+      "pause": 1,
+      "play": 1,
+      "playing": 1,
+      "pointercancel": 2,
+      "pointerdown": 3,
+      "pointermove": 2,
+      "pointerout": 2,
+      "pointerover": 2,
+      "pointerup": 3,
+      "progress": 1,
+      "ratechange": 1,
+      "reset": 2,
+      "resize": 1,
+      "seeked": 1,
+      "seeking": 1,
+      "stalled": 1,
+      "submit": 2,
+      "suspend": 1,
+      "timeupdate": 1,
+      "touchcancel": 3,
+      "touchend": 3,
+      "touchstart": 3,
+      "volumechange": 1,
+      "scroll": 2,
+      "toggle": 1,
+      "touchmove": 2,
+      "waiting": 1,
+      "wheel": 2,
+      "scrollend": 1,
+      "animationcancel": 2,
+      "animationend": 2,
+      "animationiteration": 2,
+      "animationstart": 2,
+      "dblclick": 2,
+      "focusin": 2,
+      "focusout": 2,
+      "transitionrun": 2,
+      "transitionstart": 2,
+      "transitioncancel": 2,
+      "transitionend": 2,
+      "change": 2,
+      "textInput": 2,
+      "visibilitychange": 1,
+      "DOMContentLoaded": 1
+    }
+  ],
+  "beforeMetrics": [
+    {
+      "name": "JSEventListeners",
+      "value": 583
+    },
+    {
+      "name": "Nodes",
+      "value": 262
+    },
+    {
+      "name": "JSHeapUsedSize",
+      "value": 10365632
+    }
+  ],
+  "metrics": [
+    {
+      "name": "JSEventListeners",
+      "value": 988
+    },
+    {
+      "name": "Nodes",
+      "value": 276
+    },
+    {
+      "name": "JSHeapUsedSize",
+      "value": 11911656
+    }
+  ],
+  "globalListenersAfter": [
+    {
+      "pagehide": 2,
+      "pageshow": 3,
+      "x-storagemutated-1": 1,
+      "pmforge:gate-close": 1,
+      "error": 1,
+      "unhandledrejection": 1,
+      "popstate": 1,
+      "wheel": 1,
+      "load": 1,
+      "resize": 1,
+      "pmforge:theme": 1,
+      "keydown": 1,
+      "storage": 1
+    },
+    {
+      "input": 2,
+      "compositionstart": 2,
+      "compositionupdate": 2,
+      "compositionend": 2,
+      "drop": 2,
+      "paste": 2,
+      "keydown": 2,
+      "keyup": 2,
+      "keypress": 2,
+      "abort": 1,
+      "auxclick": 2,
+      "beforetoggle": 1,
+      "cancel": 1,
+      "canplay": 1,
+      "canplaythrough": 1,
+      "click": 4,
+      "close": 1,
+      "contextmenu": 2,
+      "copy": 2,
+      "cut": 2,
+      "drag": 2,
+      "dragend": 2,
+      "dragenter": 2,
+      "dragexit": 2,
+      "dragleave": 2,
+      "dragover": 2,
+      "dragstart": 2,
+      "durationchange": 1,
+      "emptied": 1,
+      "encrypted": 1,
+      "ended": 1,
+      "error": 1,
+      "fullscreenchange": 2,
+      "fullscreenerror": 2,
+      "gotpointercapture": 2,
+      "invalid": 1,
+      "load": 1,
+      "loadeddata": 1,
+      "loadedmetadata": 1,
+      "loadstart": 1,
+      "lostpointercapture": 2,
+      "mousedown": 3,
+      "mousemove": 2,
+      "mouseout": 2,
+      "mouseover": 2,
+      "mouseup": 3,
+      "pause": 1,
+      "play": 1,
+      "playing": 1,
+      "pointercancel": 2,
+      "pointerdown": 3,
+      "pointermove": 2,
+      "pointerout": 2,
+      "pointerover": 2,
+      "pointerup": 3,
+      "progress": 1,
+      "ratechange": 1,
+      "reset": 2,
+      "resize": 1,
+      "seeked": 1,
+      "seeking": 1,
+      "stalled": 1,
+      "submit": 2,
+      "suspend": 1,
+      "timeupdate": 1,
+      "touchcancel": 3,
+      "touchend": 3,
+      "touchstart": 3,
+      "volumechange": 1,
+      "scroll": 2,
+      "toggle": 1,
+      "touchmove": 2,
+      "waiting": 1,
+      "wheel": 2,
+      "scrollend": 1,
+      "animationcancel": 2,
+      "animationend": 2,
+      "animationiteration": 2,
+      "animationstart": 2,
+      "dblclick": 2,
+      "focusin": 2,
+      "focusout": 2,
+      "transitionrun": 2,
+      "transitionstart": 2,
+      "transitioncancel": 2,
+      "transitionend": 2,
+      "change": 2,
+      "textInput": 2,
+      "visibilitychange": 1,
+      "DOMContentLoaded": 1
+    }
+  ]
+}

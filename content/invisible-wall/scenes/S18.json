@@ -1,0 +1,41 @@
+{
+  "id": "S18",
+  "type": "TOOL",
+  "background": "server",
+  "speakers": [
+    "tavi"
+  ],
+  "lines": [
+    {
+      "id": "s18-1",
+      "speaker": "tavi",
+      "expression": "thinking",
+      "text": "Run it with the wall paused. Pick a load.",
+      "voiceId": "tavi",
+      "phase": "before"
+    },
+    {
+      "id": "s18-2",
+      "speaker": "tavi",
+      "expression": "pressured",
+      "text": "That wobble. That wasn't there before.",
+      "voiceId": "tavi",
+      "phase": "after",
+      "when": "tested:highOrMedium"
+    },
+    {
+      "id": "s18-3",
+      "speaker": "tavi",
+      "expression": "approving",
+      "text": "Looks fine!",
+      "voiceId": "tavi",
+      "phase": "after",
+      "when": "tested:lowOnly"
+    }
+  ],
+  "choices": [],
+  "tool": "staging",
+  "goal": "Test the conditions that matter",
+  "canStill": "Run Low, Medium or High load. Pause and 2× speed are available.",
+  "next": "S19"
+}

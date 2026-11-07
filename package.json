@@ -2,7 +2,7 @@
   "name": "pmforge",
   "version": "1.0.0",
   "private": true,
-  "description": "PMForge \u00e2\u20ac\u201d a practice platform for product decisions.",
+  "description": "PMForge \u2014 a practice platform for product decisions.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,9 +12,23 @@
     "test": "node --import tsx --test tests/interview-engine.test.ts tests/calibration.test.ts tests/projects.test.ts tests/workspace-reset.test.ts && node --conditions=react-server --import tsx --test tests/account-server.test.ts",
     "test:deadlock": "node --import tsx --test tests/deadlock.test.ts tests/deadlock-v2.test.ts tests/deadlock-refinements.test.ts",
     "deadlock:sim": "node --import tsx scripts/deadlock-sim.ts",
-    "prebuild": "node --import tsx scripts/check-sacred-no.ts && node --import tsx scripts/check-ghost-metric.ts",
+    "prebuild": "node scripts/setup-interview-ocr.mjs && node --import tsx scripts/build-platform-content.ts && node --import tsx scripts/check-sacred-no.ts && node --import tsx scripts/check-ghost-metric.ts && node --import tsx scripts/check-trojan-horse.ts && node --import tsx scripts/check-invisible-wall.ts && node --import tsx scripts/check-feature-factory.ts && node --import tsx scripts/check-silent-churn.ts && node --import tsx scripts/check-legacy-fracture.ts && node --import tsx scripts/check-pivot-point.ts",
+    "test:trojan-horse": "node --import tsx --test tests/trojan-horse.test.ts",
+    "test:invisible-wall": "node --import tsx --test tests/invisible-wall.test.ts && node --import tsx scripts/invisible-wall-smoke.ts",
     "test:ghost-metric": "node --import tsx --test tests/ghost-metric.test.ts tests/ghost-metric-presentation.test.ts",
-    "test:sacred-no": "node --import tsx --test tests/sacred-no.test.ts tests/sacred-no-conversations.test.ts"
+    "test:sacred-no": "node --import tsx --test tests/sacred-no.test.ts tests/sacred-no-conversations.test.ts",
+    "test:feature-factory": "node --import tsx --test tests/feature-factory.test.ts && node --import tsx scripts/feature-factory-smoke.ts",
+    "test:silent-churn": "node --import tsx --test tests/silent-churn.test.ts && node --import tsx scripts/check-silent-churn.ts && node --import tsx scripts/silent-churn-smoke.ts",
+    "test:legacy-fracture": "node --import tsx --test tests/legacy-fracture.test.ts && node --import tsx scripts/check-legacy-fracture.ts && node --import tsx scripts/legacy-fracture-smoke.ts",
+    "test:pivot-point": "node --import tsx --test tests/pivot-point.test.ts && node --import tsx scripts/check-pivot-point.ts && node --import tsx scripts/pivot-point-smoke.ts",
+    "pm-level": "node --import tsx platform/devtools/cli.ts",
+    "test:platform": "node --import tsx --test tests/shared-platform.test.ts && node --import tsx scripts/check-shared-platform.ts",
+    "platform:fuzz": "node --import tsx scripts/fuzz-shared-platform.ts",
+    "test:interview-live": "node --import tsx --test tests/interview-live.test.ts && node --conditions=react-server --import tsx --test tests/interview-voice-route.test.ts",
+    "test:portfolio": "node --import tsx --test tests/portfolio.test.ts && node --conditions=react-server --import tsx --test tests/portfolio-server.test.ts",
+    "test:auth": "node --conditions=react-server --import tsx --test tests/auth-flow.test.ts",
+    "start:server": "next start",
+    "backup:data": "node scripts/backup-data.mjs"
   },
   "dependencies": {
     "@fontsource/barlow-condensed": "^5.3.0",
@@ -32,9 +46,11 @@
     "lenis": "1.3.27",
     "lucide-react": "1.61.0",
     "next": "16.4.3",
+    "pdfjs-dist": "6.5.438",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "server-only": "0.0.1",
+    "tesseract.js": "7.0.0",
     "three": "0.182.0",
     "zod": "4.6.7"
   },
@@ -43,7 +59,11 @@
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "@types/three": "0.182.0",
+    "axe-core": "4.14.0",
     "tsx": "4.23.15",
     "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">=24.4 <25"
   }
 }

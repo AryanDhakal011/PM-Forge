@@ -1,0 +1,13 @@
+{
+  "id": "S02",
+  "type": "TOOL",
+  "background": "desktop",
+  "goal": "Pick your steering metric",
+  "tools": [
+    "board",
+    "allocation",
+    "stress",
+    "gate",
+    "slides"
+  ]
+}

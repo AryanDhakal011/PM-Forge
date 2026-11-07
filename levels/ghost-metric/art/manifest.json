@@ -1,0 +1,344 @@
+[
+  {
+    "id": "joyce-neutral",
+    "path": "/levels/ghost-metric/art/portraits/joyce_neutral.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Joyce Lin, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "joyce-thinking",
+    "path": "/levels/ghost-metric/art/portraits/joyce_thinking.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Joyce Lin, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "joyce-annoyed",
+    "path": "/levels/ghost-metric/art/portraits/joyce_annoyed.svg",
+    "sizeKB": 0.8994140625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Joyce Lin, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "joyce-approving",
+    "path": "/levels/ghost-metric/art/portraits/joyce_approving.svg",
+    "sizeKB": 0.8955078125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Joyce Lin, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "joyce-pressured",
+    "path": "/levels/ghost-metric/art/portraits/joyce_pressured.svg",
+    "sizeKB": 0.892578125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Joyce Lin, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "ravi-neutral",
+    "path": "/levels/ghost-metric/art/portraits/ravi_neutral.svg",
+    "sizeKB": 0.9208984375,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Ravi Shah, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "ravi-thinking",
+    "path": "/levels/ghost-metric/art/portraits/ravi_thinking.svg",
+    "sizeKB": 0.9208984375,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Ravi Shah, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "ravi-annoyed",
+    "path": "/levels/ghost-metric/art/portraits/ravi_annoyed.svg",
+    "sizeKB": 0.92578125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Ravi Shah, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "ravi-approving",
+    "path": "/levels/ghost-metric/art/portraits/ravi_approving.svg",
+    "sizeKB": 0.921875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Ravi Shah, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "ravi-pressured",
+    "path": "/levels/ghost-metric/art/portraits/ravi_pressured.svg",
+    "sizeKB": 0.9189453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Ravi Shah, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "anders-neutral",
+    "path": "/levels/ghost-metric/art/portraits/anders_neutral.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Anders Cole, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "anders-thinking",
+    "path": "/levels/ghost-metric/art/portraits/anders_thinking.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Anders Cole, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "anders-annoyed",
+    "path": "/levels/ghost-metric/art/portraits/anders_annoyed.svg",
+    "sizeKB": 0.8994140625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Anders Cole, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "anders-approving",
+    "path": "/levels/ghost-metric/art/portraits/anders_approving.svg",
+    "sizeKB": 0.8955078125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Anders Cole, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "anders-pressured",
+    "path": "/levels/ghost-metric/art/portraits/anders_pressured.svg",
+    "sizeKB": 0.892578125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Anders Cole, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "elena-neutral",
+    "path": "/levels/ghost-metric/art/portraits/elena_neutral.svg",
+    "sizeKB": 0.8935546875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Elena Ruiz, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "elena-thinking",
+    "path": "/levels/ghost-metric/art/portraits/elena_thinking.svg",
+    "sizeKB": 0.8935546875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Elena Ruiz, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "elena-annoyed",
+    "path": "/levels/ghost-metric/art/portraits/elena_annoyed.svg",
+    "sizeKB": 0.8984375,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Elena Ruiz, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "elena-approving",
+    "path": "/levels/ghost-metric/art/portraits/elena_approving.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Elena Ruiz, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "elena-pressured",
+    "path": "/levels/ghost-metric/art/portraits/elena_pressured.svg",
+    "sizeKB": 0.8916015625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Elena Ruiz, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "retrier-neutral",
+    "path": "/levels/ghost-metric/art/portraits/retrier_neutral.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "The Retrier, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "retrier-thinking",
+    "path": "/levels/ghost-metric/art/portraits/retrier_thinking.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "The Retrier, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "retrier-annoyed",
+    "path": "/levels/ghost-metric/art/portraits/retrier_annoyed.svg",
+    "sizeKB": 0.8994140625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "The Retrier, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "retrier-approving",
+    "path": "/levels/ghost-metric/art/portraits/retrier_approving.svg",
+    "sizeKB": 0.8955078125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "The Retrier, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "retrier-pressured",
+    "path": "/levels/ghost-metric/art/portraits/retrier_pressured.svg",
+    "sizeKB": 0.892578125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "The Retrier, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "duper-neutral",
+    "path": "/levels/ghost-metric/art/portraits/duper_neutral.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "The Duper, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "duper-thinking",
+    "path": "/levels/ghost-metric/art/portraits/duper_thinking.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "The Duper, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "duper-annoyed",
+    "path": "/levels/ghost-metric/art/portraits/duper_annoyed.svg",
+    "sizeKB": 0.8994140625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "The Duper, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "duper-approving",
+    "path": "/levels/ghost-metric/art/portraits/duper_approving.svg",
+    "sizeKB": 0.8955078125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "The Duper, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "duper-pressured",
+    "path": "/levels/ghost-metric/art/portraits/duper_pressured.svg",
+    "sizeKB": 0.892578125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "The Duper, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "insider-neutral",
+    "path": "/levels/ghost-metric/art/portraits/insider_neutral.svg",
+    "sizeKB": 0.8935546875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "The Insider, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "insider-thinking",
+    "path": "/levels/ghost-metric/art/portraits/insider_thinking.svg",
+    "sizeKB": 0.8935546875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "The Insider, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "insider-annoyed",
+    "path": "/levels/ghost-metric/art/portraits/insider_annoyed.svg",
+    "sizeKB": 0.8984375,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "The Insider, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "insider-approving",
+    "path": "/levels/ghost-metric/art/portraits/insider_approving.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "The Insider, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "insider-pressured",
+    "path": "/levels/ghost-metric/art/portraits/insider_pressured.svg",
+    "sizeKB": 0.8916015625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "The Insider, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "office",
+    "path": "/levels/ghost-metric/art/backgrounds/office.svg",
+    "sizeKB": 0.8037109375,
+    "source": "PMForge layered background kit",
+    "license": "Project-authored original",
+    "alt": "Fictional office background",
+    "status": "placeholder"
+  },
+  {
+    "id": "lab",
+    "path": "/levels/ghost-metric/art/backgrounds/lab.svg",
+    "sizeKB": 0.8828125,
+    "source": "PMForge layered background kit",
+    "license": "Project-authored original",
+    "alt": "Fictional lab background",
+    "status": "placeholder"
+  },
+  {
+    "id": "boardroom",
+    "path": "/levels/ghost-metric/art/backgrounds/boardroom.svg",
+    "sizeKB": 0.806640625,
+    "source": "PMForge layered background kit",
+    "license": "Project-authored original",
+    "alt": "Fictional boardroom background",
+    "status": "placeholder"
+  }
+]

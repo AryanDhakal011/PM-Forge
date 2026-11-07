@@ -1,0 +1,55 @@
+{
+  "id": "toy-regression",
+  "title": "Platform Regression Lab",
+  "tagline": "A tiny level that exercises the shared runtime.",
+  "company": "FICTIONAL COMPANY",
+  "status": "hidden",
+  "version": "1.0.0",
+  "minPlatformVersion": "1.0.0",
+  "palette": {
+    "bg": "#101b22",
+    "ink": "#f4f2e7",
+    "accent": "#d5d99a"
+  },
+  "fonts": [
+    "Inter",
+    "DM Serif Display"
+  ],
+  "difficulty": {
+    "guided": "Preview effects and see decision hints.",
+    "standard": "Read the situation without previews.",
+    "sharp": "Hide soft meters and handle extra check-ins."
+  },
+  "entranceArt": "/levels/toy-regression/art/backgrounds/office.svg",
+  "estimatedMinutes": 25,
+  "startScene": "opening",
+  "scenes": [
+    "opening",
+    "decision",
+    "review"
+  ],
+  "people": [
+    "guide"
+  ],
+  "assetsBudgetKB": 3072,
+  "voiceCast": {},
+  "labels": "Simulated company, authored scenarios, expert review pending",
+  "flagKey": "toy-regression",
+  "minEvents": 1,
+  "systemic": false,
+  "launchCandidate": false,
+  "reviewGates": {
+    "design": "pending",
+    "content": "pending",
+    "accessibility-manual": "pending",
+    "performance": "pending",
+    "security": "pending",
+    "playtest": "pending",
+    "domain": "pending"
+  },
+  "acts": [
+    "The Request",
+    "The Trade",
+    "The Demo"
+  ]
+}

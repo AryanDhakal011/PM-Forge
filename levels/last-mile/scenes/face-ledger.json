@@ -1,0 +1,90 @@
+{
+  "id": "face-ledger",
+  "type": "TOOL",
+  "background": "office",
+  "goal": "Choose compensation with the affected people visible.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "mina"
+  ],
+  "lines": [
+    {
+      "id": "line-9",
+      "speaker": "mina",
+      "expression": "thinking",
+      "text": "A refund is somebody’s dinner and somebody’s lost shift."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "ledger",
+      "kind": "LedgerSankey",
+      "title": "The face ledger",
+      "items": [
+        {
+          "id": "restaurants",
+          "label": "Compensate closed restaurants",
+          "detail": "Mina’s team lost a shift, not only an order.",
+          "effects": [
+            {
+              "var": "cash",
+              "op": "add",
+              "value": -10
+            },
+            {
+              "var": "trust",
+              "op": "add",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "couriers",
+          "label": "Pay couriers for safe waiting",
+          "detail": "Salma stopped where the radio told her to.",
+          "effects": [
+            {
+              "var": "cash",
+              "op": "add",
+              "value": -12
+            },
+            {
+              "var": "trust",
+              "op": "add",
+              "value": 7
+            }
+          ]
+        },
+        {
+          "id": "customers",
+          "label": "Refund unreachable orders",
+          "detail": "Anita’s customer never had a reachable restaurant.",
+          "effects": [
+            {
+              "var": "cash",
+              "op": "add",
+              "value": -6
+            },
+            {
+              "var": "narrativeRisk",
+              "op": "add",
+              "value": -5
+            }
+          ]
+        }
+      ],
+      "min": 1,
+      "max": 2,
+      "cost": 0,
+      "receiptId": "R_last-mile_ledger"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 2,
+  "act": 2,
+  "next": "rumors"
+}

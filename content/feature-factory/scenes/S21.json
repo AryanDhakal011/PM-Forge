@@ -1,0 +1,13 @@
+{
+  "id": "S21",
+  "type": "TOOL",
+  "background": "desktop",
+  "goal": "Present three slides",
+  "tools": [
+    "board",
+    "allocation",
+    "stress",
+    "gate",
+    "slides"
+  ]
+}

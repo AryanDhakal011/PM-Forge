@@ -12,6 +12,8 @@ import {
 } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import DecisionDesk from "./DecisionDesk";
+import ResumeInterview from "./interview/ResumeInterview";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import {
   ArrowRight,
@@ -53,224 +55,7 @@ const Instrument = dynamic(() => import("./CoverageInstrument"), {
   ssr: false,
 });
 
-export function HomeView() {
-  const { runs, records } = useWorkspaceData();
-  const router = useRouter();
-  const params = useSearchParams();
-  const [swap, setSwap] = useState(0);
-  const [table, setTable] = useState(false);
-  const open = runs.find((r) => r.stage !== "complete");
-  const completed = new Set(
-    runs.filter((r) => r.completedAt).map((r) => r.questionId),
-  );
-  const choices = questions.filter(
-    (q) => q.level === "easy" && !completed.has(q.id),
-  );
-  const weakest = runs
-    .filter((r) => r.completedAt)
-    .flatMap((r) => scoreRun(r).dimensions)
-    .sort((a, b) => a.score - b.score)[0];
-  const nextRoom =
-    weakest &&
-    CATEGORIES.find((c) => c.dimensions.some((d) => d.id === weakest.id));
-  const next = nextRoom && choices.find((q) => q.category === nextRoom.id);
-  const q = swap
-    ? choices[swap % choices.length] || questions[0]
-    : next ||
-      (!completed.has("RCA-E-1")
-        ? getQuestion("RCA-E-1")!
-        : choices[0] || getQuestion("RCA-E-1")!);
-  useEffect(() => {
-    if (params.get("resume") === "1")
-      router.replace(open ? `/app/run/${open.id}` : `/app/practice/${q.slug}`);
-  }, [params, open?.id, q.slug, router]);
-  return (
-    <>
-      <div className={`${u.pageHead} ${s.todayHead}`} data-enter>
-        <div>
-          <h1>Make room for a better decision.</h1>
-          <p>You don’t need all the answers. Just a better next question.</p>
-        </div>
-      </div>
-      {open && (
-        <Link className={s.resume} href={`/app/run/${open.id}`}>
-          <span>
-            <strong>Just where you left it.</strong>{" "}
-            {getQuestion(open.questionId)?.title}
-          </span>
-          <span>
-            {stageLabel[open.stage]} · Resume <ArrowRight size={16} />
-          </span>
-        </Link>
-      )}
-      <section
-        className={s.hero}
-        aria-label="Your recommended practice"
-        data-enter
-      >
-        <div className={s.heroCopy}>
-          <span className={u.eyebrow}>
-            On your desk today <DraftDot />
-          </span>
-          <h2>{q.title}</h2>
-          <p>
-            {swap
-              ? q.primer[1]
-              : "Two numbers disagree after a release. Find out whether the product changed, or the measurement did."}
-          </p>
-          <svg
-            className={s.releaseChart}
-            viewBox="0 0 500 72"
-            role="img"
-            aria-label="A steady signal falls after a release"
-          >
-            <path
-              className={s.chartLine}
-              d="M0 38 40 35 80 39 120 32 160 35 200 28 240 31 280 27 300 29 312 57 350 54 390 60 430 57 470 60 500 56"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            />
-            <path
-              d="M300 10v55"
-              stroke="currentColor"
-              strokeDasharray="2 4"
-              opacity=".45"
-            />
-            <text x="310" y="16" fill="currentColor" fontSize="12">
-              release
-            </text>
-            <circle cx="312" cy="57" r="4" fill="currentColor" />
-          </svg>
-          <Link href={`/app/practice/${q.slug}`} className={u.primary}>
-            Step into the scenario <ArrowRight size={18} />
-          </Link>
-          <div className={s.meta}>
-            <Clock size={14} />
-            About 8 min · {categoryOf(q.category).studio}
-          </div>
-          <div className={u.row}>
-            <button
-              className={u.textButton}
-              onClick={() => setSwap((v) => v + 1)}
-            >
-              <Shuffle size={16} />
-              Pick another
-            </button>
-            <Link className={u.textButton} href="/app/practice">
-              Browse all 63 <ArrowRight size={14} />
-            </Link>
-          </div>
-        </div>
-        <div className={s.instrumentPanel}>
-          <span className={s.annotation}>coverage</span>
-          <Instrument runs={runs} nextId={q.id} edge={weakest?.label} />
-          <p className={s.coverageCaption}>
-            {completed.size} of 63 lit.{" "}
-            {completed.size
-              ? "Every session leaves a trace."
-              : "Begin anywhere."}
-          </p>
-          <button
-            className={s.tableLink}
-            onClick={() => setTable((v) => !v)}
-            aria-expanded={table}
-          >
-            View as table ↗
-          </button>
-        </div>
-      </section>
-      {table && (
-        <section className={u.panel} style={{ marginTop: 24 }}>
-          <CoverageTable runs={runs} />
-        </section>
-      )}
-      <div className={`${u.grid2} ${s.desk}`}>
-        <section className={`${u.panel} ${s.warmup}`}>
-          <div className={u.panelHead}>
-            <h2>Warm-up</h2>
-            <span className={u.badge}>5 min</span>
-          </div>
-          <h3>One question. A clearer starting point.</h3>
-          <p>
-            Choose a brief, then use its fundamentals check to test what you
-            know before entering the full scenario.
-          </p>
-          <Link href={`/app/practice/${q.slug}`} className={u.textButton}>
-            Try a short rep <ArrowRight size={16} />
-          </Link>
-        </section>
-        <section className={`${u.panel} ${s.shelf}`}>
-          <h2>Your decision shelf</h2>
-          <div className={s.paperShelf}>
-            {[0, 1, 2].map((i) =>
-              records[i] ? (
-                <Link
-                  key={records[i].id}
-                  href={`/app/portfolio/${records[i].id}`}
-                >
-                  <span>{String(i + 1).padStart(2, "0")}</span>
-                  <strong>{records[i].title}</strong>
-                </Link>
-              ) : (
-                <div key={i} aria-label="Space for a future decision record">
-                  <span>0{i + 1}</span>
-                  <i />
-                  <i />
-                  <i />
-                </div>
-              ),
-            )}
-          </div>
-          <Link href="/app/portfolio" className={u.textButton}>
-            Open portfolio <ArrowRight size={16} />
-          </Link>
-        </section>
-      </div>
-      <div className={u.sectionTitle}>
-        <h2>Seven rooms. Different ways to think.</h2>
-      </div>
-      <div className={s.rooms}>
-        {CATEGORIES.map((c) => {
-          const n = questions.filter(
-            (q) => q.category === c.id && completed.has(q.id),
-          ).length;
-          return (
-            <Link
-              className={s.roomCard}
-              href={`/app/practice?category=${c.id}`}
-              key={c.id}
-              style={{ "--accent": c.color } as CSSProperties}
-            >
-              <div className={s.roomTop}>
-                <Emblem category={c.id} scene />
-                <span>{n} of 9</span>
-              </div>
-              <h3>{c.label}</h3>
-              <p>{c.description}</p>
-              <Meter value={n} total={9} label={`${n} of 9 completed`} />
-              <footer>
-                {c.studio}
-                <ArrowRight size={16} />
-              </footer>
-            </Link>
-          );
-        })}
-        <Link
-          href={`/app/practice/${questions.filter((x) => x.level === "easy")[(swap + 3) % 21].slug}`}
-          className={`${s.roomCard} ${s.surprise}`}
-        >
-          <Shuffle size={32} />
-          <h3>Surprise me</h3>
-          <p>Try a different way to think.</p>
-          <footer>
-            Open an Easy brief <ArrowRight size={16} />
-          </footer>
-        </Link>
-      </div>
-    </>
-  );
-}
+export function HomeView(){return <DecisionDesk/>;}
 type CardProps = {
   q: Question;
   saved: boolean;
@@ -585,6 +370,7 @@ export function LibraryView({
   );
   return (
     <>
+      <ResumeInterview runs={runs}/>
       <div className={u.pageHead} data-enter>
         <div>
           <h1>

@@ -1,0 +1,73 @@
+{
+  "id": "S20",
+  "type": "TOOL",
+  "background": "annex",
+  "speakers": [
+    "imani",
+    "soren"
+  ],
+  "lines": [
+    {
+      "id": "s20-1",
+      "speaker": "imani",
+      "expression": "neutral",
+      "text": "Three switches. Each one changes the night.",
+      "voiceId": "imani",
+      "phase": "before"
+    },
+    {
+      "id": "s20-2",
+      "speaker": "imani",
+      "expression": "annoyed",
+      "text": "I won't stop you. I'll watch.",
+      "voiceId": "imani",
+      "phase": "after",
+      "when": "interlock:dismantle"
+    },
+    {
+      "id": "s20-3",
+      "speaker": "imani",
+      "expression": "approving",
+      "text": "Then write it down. Make it real.",
+      "voiceId": "imani",
+      "phase": "after",
+      "when": "interlock:integrate"
+    },
+    {
+      "id": "s20-4",
+      "speaker": "soren",
+      "expression": "pressured",
+      "text": "We cannot defer past six.",
+      "voiceId": "soren",
+      "phase": "after",
+      "when": "interlock:defer"
+    }
+  ],
+  "choices": [
+    {
+      "id": "dismantle",
+      "text": "Dismantle the wall",
+      "effects": {},
+      "receipt": "R06",
+      "next": "S21"
+    },
+    {
+      "id": "integrate",
+      "text": "Integrate as a Governor",
+      "effects": {},
+      "receipt": "R06",
+      "next": "S21"
+    },
+    {
+      "id": "defer",
+      "text": "Defer · spend 45 minutes",
+      "effects": {},
+      "receipt": "R06",
+      "next": "S21"
+    }
+  ],
+  "tool": "interlock",
+  "goal": "Make the interlock decision",
+  "canStill": "Preview each policy, lift the guard, then confirm.",
+  "next": "S21"
+}

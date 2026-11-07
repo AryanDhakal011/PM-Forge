@@ -1,0 +1,908 @@
+[
+  {
+    "id": "ask-elliot-0",
+    "speaker": "elliot",
+    "text": "I can sponsor you. I cannot order them.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-elliot-1",
+    "speaker": "elliot",
+    "text": "Start with what each person could lose.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-elliot-2",
+    "speaker": "elliot",
+    "text": "The review wants a decision we can deliver.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-elliot-3",
+    "speaker": "elliot",
+    "text": "Off the record. I need this to hold.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-elliot-4",
+    "speaker": "elliot",
+    "text": "Every seat has a veto.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-elliot-5",
+    "speaker": "elliot",
+    "text": "The last programme forgot the people running it.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-walter-0",
+    "speaker": "walter",
+    "text": "Revenue is leaking at renewal.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-walter-1",
+    "speaker": "walter",
+    "text": "Pricing is the problem. It always is.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-walter-2",
+    "speaker": "walter",
+    "text": "Capped. Then we can talk.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-walter-3",
+    "speaker": "walter",
+    "text": "Show me what would disprove my theory.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-walter-4",
+    "speaker": "walter",
+    "text": "Payback needs a customer outcome.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-walter-5",
+    "speaker": "walter",
+    "text": "Beatrice knows the accounts behind the spreadsheet.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-dolores-0",
+    "speaker": "dolores",
+    "text": "Show me the process.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-dolores-1",
+    "speaker": "dolores",
+    "text": "More updates can mean more calls.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-dolores-2",
+    "speaker": "dolores",
+    "text": "A service level needs an owner.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-dolores-3",
+    "speaker": "dolores",
+    "text": "Do not move the cost into my team.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-dolores-4",
+    "speaker": "dolores",
+    "text": "Prove it in a small pilot.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-dolores-5",
+    "speaker": "dolores",
+    "text": "Intake hands the claim to an adjuster.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-anand-0",
+    "speaker": "anand",
+    "text": "Nothing writes into the core without review.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-anand-1",
+    "speaker": "anand",
+    "text": "Not every weekday is a change window.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-anand-2",
+    "speaker": "anand",
+    "text": "Four hundred days since the last outage.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-anand-3",
+    "speaker": "anand",
+    "text": "Beside the core, not inside it.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-anand-4",
+    "speaker": "anand",
+    "text": "Tobias knows what the diagrams leave out.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-anand-5",
+    "speaker": "anand",
+    "text": "A boundary, a rollback, and an owner.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-beatrice-0",
+    "speaker": "beatrice",
+    "text": "My brokers want to hear it first.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-beatrice-1",
+    "speaker": "beatrice",
+    "text": "Competitors pay more. Or so I hear.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-beatrice-2",
+    "speaker": "beatrice",
+    "text": "Bring a comparison, not a rumour.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-beatrice-3",
+    "speaker": "beatrice",
+    "text": "Tell brokers before clients tell them.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-beatrice-4",
+    "speaker": "beatrice",
+    "text": "Walter listens when an account has a name.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-beatrice-5",
+    "speaker": "beatrice",
+    "text": "I back what protects the relationship.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-gideon-0",
+    "speaker": "gideon",
+    "text": "Approved factual wording. No invented promises.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-gideon-1",
+    "speaker": "gideon",
+    "text": "A message can outlive the meeting that approved it.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-gideon-2",
+    "speaker": "gideon",
+    "text": "In writing, please.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-gideon-3",
+    "speaker": "gideon",
+    "text": "Templates keep the boundary clear.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-gideon-4",
+    "speaker": "gideon",
+    "text": "Legal review also needs working days.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-gideon-5",
+    "speaker": "gideon",
+    "text": "Name who signs the wording.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-marta-0",
+    "speaker": "marta",
+    "text": "I prefer a question to everything.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-marta-1",
+    "speaker": "marta",
+    "text": "Restricted extracts need a ticket.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-marta-2",
+    "speaker": "marta",
+    "text": "A ticket can be a useful conversation.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-marta-3",
+    "speaker": "marta",
+    "text": "There are traps in the old status field.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-marta-4",
+    "speaker": "marta",
+    "text": "The field changed meaning between systems.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-marta-5",
+    "speaker": "marta",
+    "text": "Ask what you need to decide.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-tobias-0",
+    "speaker": "tobias",
+    "text": "Not on a Friday.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-tobias-1",
+    "speaker": "tobias",
+    "text": "Tell me how we get back.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-tobias-2",
+    "speaker": "tobias",
+    "text": "The batch does not care about our deadline.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-tobias-3",
+    "speaker": "tobias",
+    "text": "Nightly means nightly. It is not a live feed.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-tobias-4",
+    "speaker": "tobias",
+    "text": "A feed beside the core. Flag it.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-tobias-5",
+    "speaker": "tobias",
+    "text": "Leave five working days after approval.",
+    "expression": "thinking"
+  },
+  {
+    "id": "O01",
+    "speaker": "walter",
+    "text": "What is the total cost?",
+    "expression": "thinking"
+  },
+  {
+    "id": "O02",
+    "speaker": "walter",
+    "text": "Why not just lower the price?",
+    "expression": "thinking"
+  },
+  {
+    "id": "O03",
+    "speaker": "walter",
+    "text": "How do you know it pays back?",
+    "expression": "thinking"
+  },
+  {
+    "id": "O04",
+    "speaker": "walter",
+    "text": "What happens if the pilot expands?",
+    "expression": "thinking"
+  },
+  {
+    "id": "O05",
+    "speaker": "dolores",
+    "text": "More updates mean more calls.",
+    "expression": "thinking"
+  },
+  {
+    "id": "O06",
+    "speaker": "dolores",
+    "text": "What if the pilot backfires?",
+    "expression": "thinking"
+  },
+  {
+    "id": "O07",
+    "speaker": "dolores",
+    "text": "Who owns the handoff?",
+    "expression": "thinking"
+  },
+  {
+    "id": "O08",
+    "speaker": "dolores",
+    "text": "Show me the process before changing it.",
+    "expression": "thinking"
+  },
+  {
+    "id": "O09",
+    "speaker": "anand",
+    "text": "What breaks if this touches the core?",
+    "expression": "thinking"
+  },
+  {
+    "id": "O10",
+    "speaker": "anand",
+    "text": "Who gets paged at three in the morning?",
+    "expression": "thinking"
+  },
+  {
+    "id": "O11",
+    "speaker": "anand",
+    "text": "How do we recover the nightly batch?",
+    "expression": "thinking"
+  },
+  {
+    "id": "O12",
+    "speaker": "anand",
+    "text": "Does this write into the policy core?",
+    "expression": "thinking"
+  },
+  {
+    "id": "O13",
+    "speaker": "beatrice",
+    "text": "Brokers will hear this from clients first.",
+    "expression": "thinking"
+  },
+  {
+    "id": "O14",
+    "speaker": "beatrice",
+    "text": "Do competitors pay more?",
+    "expression": "thinking"
+  },
+  {
+    "id": "O15",
+    "speaker": "beatrice",
+    "text": "Who tells our brokers what changed?",
+    "expression": "thinking"
+  },
+  {
+    "id": "O16",
+    "speaker": "beatrice",
+    "text": "What does this do for renewals?",
+    "expression": "thinking"
+  },
+  {
+    "id": "O17",
+    "speaker": "gideon",
+    "text": "Who writes the messages?",
+    "expression": "thinking"
+  },
+  {
+    "id": "O18",
+    "speaker": "gideon",
+    "text": "Is this in writing?",
+    "expression": "thinking"
+  },
+  {
+    "id": "O19",
+    "speaker": "gideon",
+    "text": "Who approves the exact wording?",
+    "expression": "thinking"
+  },
+  {
+    "id": "O20",
+    "speaker": "gideon",
+    "text": "What promise does this message make?",
+    "expression": "thinking"
+  },
+  {
+    "id": "B1",
+    "speaker": "walter",
+    "text": "Why am I hearing this for the first time?",
+    "expression": "annoyed"
+  },
+  {
+    "id": "B2",
+    "speaker": "dolores",
+    "text": "Why am I hearing this for the first time?",
+    "expression": "annoyed"
+  },
+  {
+    "id": "B3",
+    "speaker": "anand",
+    "text": "Why am I hearing this for the first time?",
+    "expression": "annoyed"
+  },
+  {
+    "id": "B4",
+    "speaker": "beatrice",
+    "text": "Why am I hearing this for the first time?",
+    "expression": "annoyed"
+  },
+  {
+    "id": "B5",
+    "speaker": "gideon",
+    "text": "Why am I hearing this for the first time?",
+    "expression": "annoyed"
+  },
+  {
+    "id": "E01",
+    "speaker": "beatrice",
+    "text": "Another account left without a complaint.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E02",
+    "speaker": "marta",
+    "text": "Restricted data needs context and a ticket.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E03",
+    "speaker": "beatrice",
+    "text": "My brokers say competitors are paying more.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E04",
+    "speaker": "walter",
+    "text": "A thin sample is not a conclusion.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E05",
+    "speaker": "dolores",
+    "text": "Explain why you need those records.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E06",
+    "speaker": "gideon",
+    "text": "Put the approved wording in the pre-read.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E07",
+    "speaker": "anand",
+    "text": "Nobody asked me about the core.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E08",
+    "speaker": "elliot",
+    "text": "Off the record. Close one open loop.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E09",
+    "speaker": "tobias",
+    "text": "Five working days. Tell me the boundary.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E10",
+    "speaker": "tobias",
+    "text": "The broad core change will not hold.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E11",
+    "speaker": "elliot",
+    "text": "The status queue is getting less quiet.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E12",
+    "speaker": "anand",
+    "text": "The core is down. What is the recovery?",
+    "expression": "thinking"
+  },
+  {
+    "id": "E13",
+    "speaker": "marta",
+    "text": "The status field changes meaning between systems.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E14",
+    "speaker": "walter",
+    "text": "A pilot is not an open cheque.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E15",
+    "speaker": "dolores",
+    "text": "Show me the handoff, not the headline.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E16",
+    "speaker": "gideon",
+    "text": "You made a promise. Is it still true?",
+    "expression": "thinking"
+  },
+  {
+    "id": "E17",
+    "speaker": "beatrice",
+    "text": "My brokers need a date before the launch.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E18",
+    "speaker": "elliot",
+    "text": "A high-value client is asking how to leave.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E19",
+    "speaker": "elliot",
+    "text": "Could we do more after this pilot?",
+    "expression": "thinking"
+  },
+  {
+    "id": "E20",
+    "speaker": "walter",
+    "text": "You put that reason in writing. Defend it.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E21",
+    "speaker": "marta",
+    "text": "Your question helped us select the right extract.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E22",
+    "speaker": "tobias",
+    "text": "The batch does not move for our meeting.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E23",
+    "speaker": "gideon",
+    "text": "Factual wording is possible. Approval still matters.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E24",
+    "speaker": "beatrice",
+    "text": "What will a client know that they cannot see today?",
+    "expression": "thinking"
+  },
+  {
+    "id": "E25",
+    "speaker": "anand",
+    "text": "A side feed needs its own rollback.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E26",
+    "speaker": "dolores",
+    "text": "Name who will answer the extra calls.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E27",
+    "speaker": "marta",
+    "text": "Five percent is a starting point. Not certainty.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E28",
+    "speaker": "elliot",
+    "text": "I need a decision that survives my absence.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E29",
+    "speaker": "tobias",
+    "text": "We can rehearse before we touch production.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E30",
+    "speaker": "gideon",
+    "text": "The minutes need the exact commitment.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E31",
+    "speaker": "anand",
+    "text": "No new incident is a result too.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E32",
+    "speaker": "marta",
+    "text": "Nobody ever asks what I do all day.",
+    "expression": "thinking"
+  },
+  {
+    "id": "intro-0",
+    "speaker": "pa",
+    "text": "Meridian Mutual. One hundred forty years of paper.",
+    "expression": "neutral"
+  },
+  {
+    "id": "intro-1",
+    "speaker": "broker",
+    "text": "Another one left. No complaint. No call. Just gone.",
+    "expression": "neutral"
+  },
+  {
+    "id": "intro-2",
+    "speaker": "pa",
+    "text": "Twenty-one working days until the Quarterly Review.",
+    "expression": "neutral"
+  },
+  {
+    "id": "intro-3",
+    "speaker": "elliot",
+    "text": "Elliot. Strategy. I'm your sponsor. That's all I can be.",
+    "expression": "neutral"
+  },
+  {
+    "id": "intro-4",
+    "speaker": "elliot",
+    "text": "Nobody owns the churn. Everybody has a theory.",
+    "expression": "neutral"
+  },
+  {
+    "id": "intro-5",
+    "speaker": "elliot",
+    "text": "Off the record. Find the real reason before the review.",
+    "expression": "neutral"
+  },
+  {
+    "id": "pricing",
+    "speaker": "elliot",
+    "text": "Walter will like that answer.",
+    "expression": "neutral"
+  },
+  {
+    "id": "service",
+    "speaker": "elliot",
+    "text": "Interesting. Prove it.",
+    "expression": "neutral"
+  },
+  {
+    "id": "unknown",
+    "speaker": "elliot",
+    "text": "Honest. Start there.",
+    "expression": "neutral"
+  },
+  {
+    "id": "sandbox",
+    "speaker": "pa",
+    "text": "Practice first. Nothing here counts.",
+    "expression": "neutral"
+  },
+  {
+    "id": "sandbox-done",
+    "speaker": "pa",
+    "text": "That's the loop. The real clock starts now.",
+    "expression": "neutral"
+  },
+  {
+    "id": "intro-walter",
+    "speaker": "walter",
+    "text": "Pricing is the problem. It always is.",
+    "expression": "neutral"
+  },
+  {
+    "id": "intro-dolores",
+    "speaker": "dolores",
+    "text": "Show me the process before you change a word.",
+    "expression": "neutral"
+  },
+  {
+    "id": "intro-anand",
+    "speaker": "anand",
+    "text": "The core has not crashed in four hundred days.",
+    "expression": "neutral"
+  },
+  {
+    "id": "intro-beatrice",
+    "speaker": "beatrice",
+    "text": "Brokers tell me everything. Competitors pay more.",
+    "expression": "neutral"
+  },
+  {
+    "id": "intro-gideon",
+    "speaker": "gideon",
+    "text": "Put it in writing. Approved wording only.",
+    "expression": "neutral"
+  },
+  {
+    "id": "intro-marta",
+    "speaker": "marta",
+    "text": "Marta. Data stewardship. Restricted extracts need a ticket.",
+    "expression": "neutral"
+  },
+  {
+    "id": "marta-question",
+    "speaker": "marta",
+    "text": "Most people ask for everything. I prefer a question.",
+    "expression": "neutral"
+  },
+  {
+    "id": "standard-hint",
+    "speaker": "marta",
+    "text": "That sample is thin. A standard pull would tell you more.",
+    "expression": "neutral"
+  },
+  {
+    "id": "quick",
+    "speaker": "marta",
+    "text": "Quick: a rough shape. Low confidence.",
+    "expression": "neutral"
+  },
+  {
+    "id": "standard",
+    "speaker": "marta",
+    "text": "Standard: a clear trend.",
+    "expression": "neutral"
+  },
+  {
+    "id": "deep",
+    "speaker": "marta",
+    "text": "Deep: the full picture. Costs days.",
+    "expression": "neutral"
+  },
+  {
+    "id": "thin",
+    "speaker": "elliot",
+    "text": "That's thin. Walter will eat it alive.",
+    "expression": "thinking"
+  },
+  {
+    "id": "pattern",
+    "speaker": "pa",
+    "text": "A named problem is half a fix.",
+    "expression": "neutral"
+  },
+  {
+    "id": "listen-walter",
+    "speaker": "walter",
+    "text": "Revenue is leaking at renewal. I want to know why.",
+    "expression": "neutral"
+  },
+  {
+    "id": "listen-dolores",
+    "speaker": "dolores",
+    "text": "Faster updates mean more calls. Calls cost money.",
+    "expression": "neutral"
+  },
+  {
+    "id": "listen-anand",
+    "speaker": "anand",
+    "text": "We do not touch the core. A feed beside it, maybe.",
+    "expression": "neutral"
+  },
+  {
+    "id": "listen-beatrice",
+    "speaker": "beatrice",
+    "text": "Brokers will want to know first.",
+    "expression": "neutral"
+  },
+  {
+    "id": "listen-gideon",
+    "speaker": "gideon",
+    "text": "Who writes the wording? Who approves it?",
+    "expression": "neutral"
+  },
+  {
+    "id": "match-walter",
+    "speaker": "walter",
+    "text": "Hm. Then it isn't price.",
+    "expression": "neutral"
+  },
+  {
+    "id": "match-dolores",
+    "speaker": "dolores",
+    "text": "Prove it in the pilot.",
+    "expression": "neutral"
+  },
+  {
+    "id": "match-anand",
+    "speaker": "anand",
+    "text": "Beside, not inside. Acceptable.",
+    "expression": "neutral"
+  },
+  {
+    "id": "match-beatrice",
+    "speaker": "beatrice",
+    "text": "Then commissions are not it. Good to know.",
+    "expression": "neutral"
+  },
+  {
+    "id": "match-gideon",
+    "speaker": "gideon",
+    "text": "In writing. Then I can support it.",
+    "expression": "neutral"
+  },
+  {
+    "id": "second",
+    "speaker": "beatrice",
+    "text": "I've seen this with my own brokers.",
+    "expression": "neutral"
+  },
+  {
+    "id": "window",
+    "speaker": "tobias",
+    "text": "Not on a Friday.",
+    "expression": "neutral"
+  },
+  {
+    "id": "safe-window",
+    "speaker": "tobias",
+    "text": "A feed beside the core. Flag it. Tell me the rollback.",
+    "expression": "neutral"
+  },
+  {
+    "id": "danger-window",
+    "speaker": "tobias",
+    "text": "That will not hold. I'm telling you now.",
+    "expression": "thinking"
+  },
+  {
+    "id": "crash",
+    "speaker": "tobias",
+    "text": "Core is down. The batch collided.",
+    "expression": "thinking"
+  },
+  {
+    "id": "warned",
+    "speaker": "anand",
+    "text": "You said this could happen. We should have listened.",
+    "expression": "neutral"
+  },
+  {
+    "id": "unwarned",
+    "speaker": "anand",
+    "text": "You were warned.",
+    "expression": "neutral"
+  },
+  {
+    "id": "win",
+    "speaker": "elliot",
+    "text": "Eleven days to three. Quietly.",
+    "expression": "neutral"
+  },
+  {
+    "id": "trust",
+    "speaker": "pa",
+    "text": "Trust is a slow variable. Today was a good day.",
+    "expression": "neutral"
+  },
+  {
+    "id": "human-anand",
+    "speaker": "anand",
+    "text": "I have not slept well since the outage. Thank you for asking.",
+    "expression": "neutral"
+  },
+  {
+    "id": "human-marta",
+    "speaker": "marta",
+    "text": "Nobody ever asks what I do all day.",
+    "expression": "neutral"
+  },
+  {
+    "id": "human-elliot",
+    "speaker": "elliot",
+    "text": "I almost didn't hire you. I'm glad I did.",
+    "expression": "neutral"
+  }
+]

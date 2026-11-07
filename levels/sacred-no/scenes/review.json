@@ -1,0 +1,26 @@
+{
+  "id": "review",
+  "type": "REVIEW",
+  "background": "boardroom",
+  "goal": "Replay the argument deck and the commitment it created.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "priya"
+  ],
+  "lines": [
+    {
+      "id": "line-12",
+      "speaker": "priya",
+      "expression": "thinking",
+      "text": "The next shift inherits the words we used tonight."
+    }
+  ],
+  "choices": [],
+  "tools": [],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": true,
+  "minInteractions": 0,
+  "day": 3,
+  "act": 3
+}

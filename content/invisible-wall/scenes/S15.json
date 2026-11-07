@@ -1,0 +1,43 @@
+{
+  "id": "S15",
+  "type": "CINEMA",
+  "background": "annex",
+  "speakers": [
+    "narration",
+    "soren",
+    "tavi"
+  ],
+  "lines": [
+    {
+      "id": "s15-1",
+      "speaker": "narration",
+      "expression": "neutral",
+      "text": "The Founders' Annex has a door with no handle.",
+      "voiceId": "narration",
+      "phase": "before"
+    },
+    {
+      "id": "s15-2",
+      "speaker": "soren",
+      "expression": "neutral",
+      "text": "Imani asked to see you.",
+      "voiceId": "soren",
+      "phase": "before",
+      "when": "flagged"
+    },
+    {
+      "id": "s15-3",
+      "speaker": "tavi",
+      "expression": "pressured",
+      "text": "The author trail ends at a door code.",
+      "voiceId": "tavi",
+      "phase": "before",
+      "when": "authorAccess"
+    }
+  ],
+  "choices": [],
+  "tool": "continue",
+  "goal": "Enter the Founders’ Annex",
+  "canStill": "Use your escort or author trail to reach Imani.",
+  "next": "S16"
+}

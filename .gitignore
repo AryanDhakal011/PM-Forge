@@ -73,3 +73,16 @@ docs/sacred-no-verification/*-mobile.png
 # Transient navigation diagnostics; final reports are retained.
 docs/navigation-verification/browser-progress.json
 docs/navigation-verification/dev-diagnosis.json
+
+# Isolated local Pivot Point development build
+.next-pivot/
+
+# Isolated shared-platform development build
+.next-platform/
+
+# Private deployment settings and isolated verification builds
+.env.production
+.next-auth/
+.next-final/
+
+.auth-test-path

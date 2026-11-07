@@ -1,0 +1,42 @@
+[
+  {
+    "id": "amara-0",
+    "topic": "Release criteria",
+    "line": "A gate needs teeth."
+  },
+  {
+    "id": "amara-1",
+    "topic": "Open bugs",
+    "line": "Every bug has a person behind it."
+  },
+  {
+    "id": "amara-2",
+    "topic": "Test coverage",
+    "line": "Coverage is a tool, not permission."
+  },
+  {
+    "id": "amara-3",
+    "topic": "Last incident",
+    "line": "Let us read the incident record."
+  },
+  {
+    "id": "amara-4",
+    "topic": "Evidence you need",
+    "line": "Evidence needs an owner and a date."
+  },
+  {
+    "id": "amara-5",
+    "topic": "Staging risks",
+    "line": "Staging is trying to tell us something."
+  },
+  {
+    "id": "amara-6",
+    "topic": "Past overrules",
+    "line": "I have heard looks fine before."
+  },
+  {
+    "id": "amara-7",
+    "topic": "Feature flags",
+    "line": "A flag gives us an exit."
+  }
+]

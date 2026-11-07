@@ -1,0 +1,15 @@
+{
+  "deadlock": true,
+  "sacred-no": true,
+  "silent-churn": false,
+  "feature-factory": false,
+  "ghost-metric": true,
+  "trojan-horse": true,
+  "pivot-point": false,
+  "legacy-fracture": false,
+  "shadow-roadmap": false,
+  "invisible-wall": false,
+  "public-fracture": false,
+  "last-mile": true,
+  "toy-regression": true
+}

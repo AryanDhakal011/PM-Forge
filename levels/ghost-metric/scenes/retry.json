@@ -1,0 +1,50 @@
+{
+  "id": "retry",
+  "type": "TOOL",
+  "background": "office",
+  "goal": "Sort the first retry while the confetti says 340%.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "joyce"
+  ],
+  "lines": [
+    {
+      "id": "line-1",
+      "speaker": "joyce",
+      "expression": "thinking",
+      "text": "The dashboard and the sample do not agree."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "retry",
+      "kind": "DragBins",
+      "title": "Does this event count?",
+      "items": [
+        {
+          "id": "sample",
+          "label": "Retry of request R-12",
+          "detail": "Same request, same account, second completion event.",
+          "effects": [],
+          "answer": "Does not count"
+        }
+      ],
+      "min": 1,
+      "max": 1,
+      "cost": 0,
+      "receiptId": "R_ghost-metric_retry",
+      "bins": [
+        "Counts",
+        "Does not count"
+      ]
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "drawer-cart"
+}

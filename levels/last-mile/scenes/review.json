@@ -1,0 +1,26 @@
+{
+  "id": "review",
+  "type": "REVIEW",
+  "background": "street",
+  "goal": "Read the followed courier’s letter beside the policy trace.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "anita"
+  ],
+  "lines": [
+    {
+      "id": "line-13",
+      "speaker": "anita",
+      "expression": "thinking",
+      "text": "A useful instruction is one we can act on together."
+    }
+  ],
+  "choices": [],
+  "tools": [],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": true,
+  "minInteractions": 0,
+  "day": 4,
+  "act": 3
+}

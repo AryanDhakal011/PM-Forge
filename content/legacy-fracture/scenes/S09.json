@@ -1,0 +1,17 @@
+{
+  "id": "S09",
+  "type": "TOOL",
+  "background": "server",
+  "goal": "Ask for the tapes",
+  "tools": [
+    "tape"
+  ],
+  "lines": [
+    {
+      "speaker": "oswald",
+      "text": "Ask your question. I'll answer what I remember.",
+      "expression": "neutral",
+      "clip": null
+    }
+  ]
+}

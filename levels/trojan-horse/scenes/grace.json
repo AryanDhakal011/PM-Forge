@@ -1,0 +1,66 @@
+{
+  "id": "grace",
+  "type": "TOOL",
+  "background": "office",
+  "goal": "Choose the grandfather window before the announcement.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "omar"
+  ],
+  "lines": [
+    {
+      "id": "line-10",
+      "speaker": "omar",
+      "expression": "thinking",
+      "text": "Notice costs money. Surprise costs trust."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "grace",
+      "kind": "SliderForecast",
+      "title": "Grandfather gate",
+      "items": [],
+      "min": 0,
+      "max": 1,
+      "cost": 0,
+      "receiptId": "R_trojan-horse_grace",
+      "lever": [
+        {
+          "id": "graceDays",
+          "label": "Grace period, days",
+          "min": 0,
+          "max": 30,
+          "initial": 14,
+          "step": 1
+        }
+      ]
+    }
+  ],
+  "onEnter": [],
+  "onExit": [
+    {
+      "when": {
+        "var": "graceDays",
+        "op": ">=",
+        "value": 21
+      },
+      "effects": [
+        {
+          "var": "cash",
+          "op": "add",
+          "value": -15
+        },
+        {
+          "chip": "The longer notice period costs cash."
+        }
+      ]
+    }
+  ],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 21,
+  "act": 2,
+  "next": "hangover"
+}

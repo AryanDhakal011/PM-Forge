@@ -7,6 +7,7 @@ const staticAsset = (url) =>
     url.pathname.startsWith("/deadlock/characters/") ||
     url.pathname.startsWith("/deadlock/audio/") ||
     url.pathname.startsWith("/sacred-no/audio/") ||
+    url.pathname.startsWith("/ghost-metric/audio/") ||
     url.pathname === "/sacred-no/cast-v1.webp");
 self.addEventListener("install", (event) =>
   event.waitUntil(
@@ -57,26 +58,42 @@ self.addEventListener("message", (event) => {
     );
     return;
   }
+  if (event.data?.type === "CACHE_GHOST_SHELL") {
+    event.waitUntil(
+      caches
+        .open(CACHE)
+        .then((cache) =>
+          Promise.allSettled(
+            ["/app/projects/ghost-metric"].map((url) => cache.add(url)),
+          ),
+        ),
+    );
+    return;
+  }
   if (
     event.data?.type !== "CACHE_VISITED_ASSETS" ||
     !Array.isArray(event.data.urls)
   )
     return;
   event.waitUntil(
-    caches.open(CACHE).then((cache) =>
-      Promise.allSettled(
-        event.data.urls
-          .slice(0, 160)
-          .filter((url) => {
-            try {
-              return staticAsset(new URL(url));
-            } catch {
-              return false;
-            }
-          })
-          .map((url) => cache.add(url)),
-      ),
-    ),
+    caches.open(CACHE).then((cache) => {
+      const assets = event.data.urls.filter((url) => {
+        try {
+          return staticAsset(new URL(url));
+        } catch {
+          return false;
+        }
+      });
+      // Never truncate voice clips: Deadlock alone ships 191. Cap only the
+      // non-audio tail so a long session cannot queue an unbounded download.
+      const audio = assets.filter((url) => url.includes("/audio/"));
+      const rest = assets
+        .filter((url) => !url.includes("/audio/"))
+        .slice(0, 160);
+      return Promise.allSettled(
+        [...audio, ...rest].map((url) => cache.add(url)),
+      );
+    }),
   );
 });
 self.addEventListener("fetch", (event) => {
@@ -126,6 +143,9 @@ self.addEventListener("fetch", (event) => {
               ? await cache.match("/app/projects/deadlock")
               : null) ||
             (url.pathname === "/app/projects/sacred-no" ? await cache.match("/app/projects/sacred-no") : null) ||
+            (url.pathname.startsWith("/app/projects/ghost-metric")
+              ? await cache.match("/app/projects/ghost-metric")
+              : null) ||
             (await cache.match("/offline")) ||
             Response.error()
           );

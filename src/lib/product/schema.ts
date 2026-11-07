@@ -1,4 +1,6 @@
+import {masterSchema,caseSchema,resumeSchema,jobSchema} from "../portfolio/model";
 import { z } from "zod";
+import {liveSessionSchema} from "./interview-live-schema";
 import { projectRunSchema } from "../projects/schema";
 const text = z.string().max(20000);
 const short = z.string().max(300);
@@ -92,6 +94,7 @@ export const runSchema = z
     elapsedSeconds: z.number().finite().min(0),
     pressureSeconds: z.number().finite().min(0).nullable(),
     eventIndex: z.number().int().min(0).max(3),
+    live: liveSessionSchema.optional(),
     guided: z.boolean().optional(),
     sessionId: short.optional(),
     reflectionStartedAt: date.optional(),
@@ -144,5 +147,6 @@ export const exportSchema = z
     records: z.array(recordSchema).max(1000),
     bookmarks: z.array(bookmarkSchema).max(200),
     projectRuns: z.array(projectRunSchema).max(200).optional(),
+    career:z.object({profiles:z.array(masterSchema).max(1),cases:z.array(caseSchema).max(200),resumes:z.array(resumeSchema).max(100),jobs:z.array(jobSchema).max(200)}).optional(),
   })
   .strict();

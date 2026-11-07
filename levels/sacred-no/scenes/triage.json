@@ -1,0 +1,149 @@
+{
+  "id": "triage",
+  "type": "TOOL",
+  "background": "office",
+  "goal": "Inspect claims while Slack interruptions compete for attention.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "priya"
+  ],
+  "lines": [
+    {
+      "id": "line-2",
+      "speaker": "priya",
+      "expression": "thinking",
+      "text": "I am not touching the queue unguarded."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "triage",
+      "kind": "EvidenceDrawers",
+      "title": "Claims and evidence",
+      "items": [
+        {
+          "id": "latency",
+          "label": "Latency trace",
+          "detail": "The feature raises p95 latency from 420 to 1900 ms.",
+          "effects": [],
+          "group": "data",
+          "soWhat": "Shows the feature’s performance impact."
+        },
+        {
+          "id": "revenue",
+          "label": "Revenue risk",
+          "detail": "Pipeline is not contracted revenue.",
+          "effects": [],
+          "group": "revenue",
+          "soWhat": "Shows the quality of the commercial evidence."
+        },
+        {
+          "id": "burnout",
+          "label": "Night-shift roster",
+          "detail": "Priya has one remaining reliable engineer.",
+          "effects": [],
+          "group": "burnout",
+          "soWhat": "Shows available engineering capacity."
+        },
+        {
+          "id": "alternative",
+          "label": "Recorded prototype",
+          "detail": "A bounded alternative can preserve the story.",
+          "effects": [],
+          "group": "alternative",
+          "soWhat": "Shows a bounded offer the team can support."
+        },
+        {
+          "id": "reputation",
+          "label": "Incident note",
+          "detail": "A demo crash also reaches existing customers.",
+          "effects": [],
+          "group": "reputation",
+          "soWhat": "Shows who else a failure could affect."
+        },
+        {
+          "id": "board",
+          "label": "Board agenda",
+          "detail": "The board asks for a pilot checkpoint.",
+          "effects": [],
+          "group": "board",
+          "soWhat": "Shows which decision the board actually needs."
+        }
+      ],
+      "min": 3,
+      "max": 3,
+      "cost": 1,
+      "receiptId": "R_sacred-no_triage"
+    },
+    {
+      "id": "slack",
+      "kind": "Inbox",
+      "title": "Slack interruptions",
+      "items": [
+        {
+          "id": "sales",
+          "label": "A sales promise arrives",
+          "detail": "Answering costs ten minutes.",
+          "effects": [
+            {
+              "var": "HOURS",
+              "op": "add",
+              "value": 0.16666666666666666
+            },
+            {
+              "var": "TRUST.tess",
+              "op": "add",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "id": "crash",
+          "label": "A crash alert arrives",
+          "detail": "Answering costs ten minutes.",
+          "effects": [
+            {
+              "var": "HOURS",
+              "op": "add",
+              "value": 0.16666666666666666
+            },
+            {
+              "var": "readiness",
+              "op": "add",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "id": "nudge",
+          "label": "Kian asks for a date",
+          "detail": "Answering costs ten minutes.",
+          "effects": [
+            {
+              "var": "HOURS",
+              "op": "add",
+              "value": 0.16666666666666666
+            },
+            {
+              "var": "TRUST.kian",
+              "op": "add",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "min": 1,
+      "max": 3,
+      "cost": 0,
+      "receiptId": "R_sacred-no_slack"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "night-shift"
+}

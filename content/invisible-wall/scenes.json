@@ -1,0 +1,1401 @@
+[
+  {
+    "id": "S00",
+    "type": "ENTR",
+    "background": "terminal",
+    "speakers": [
+      "narration"
+    ],
+    "lines": [
+      {
+        "id": "s00-1",
+        "speaker": "narration",
+        "expression": "thinking",
+        "text": "Something is stopping the model. Nobody will say what.",
+        "voiceId": "narration",
+        "phase": "before"
+      }
+    ],
+    "choices": [],
+    "tool": "entry",
+    "goal": "Badge in",
+    "canStill": "Choose captions or recorded voices, then enter.",
+    "next": "S01"
+  },
+  {
+    "id": "S01",
+    "type": "CINEMA",
+    "background": "terminal",
+    "speakers": [
+      "narration",
+      "pa"
+    ],
+    "lines": [
+      {
+        "id": "s01-1",
+        "speaker": "pa",
+        "expression": "neutral",
+        "text": "Gate B12 is now closed. Halcyon night shift, please badge in.",
+        "voiceId": "pa",
+        "phase": "before"
+      },
+      {
+        "id": "s01-2",
+        "speaker": "pa",
+        "expression": "neutral",
+        "text": "A reminder. Nothing in this terminal is flying tonight.",
+        "voiceId": "pa",
+        "phase": "before"
+      },
+      {
+        "id": "s01-3",
+        "speaker": "narration",
+        "expression": "neutral",
+        "text": "3:00 AM, officially. You started at ten.",
+        "voiceId": "narration",
+        "phase": "before"
+      }
+    ],
+    "choices": [],
+    "tool": "continue",
+    "goal": "Arrive at Halcyon",
+    "canStill": "Watch the arrival or skip ahead.",
+    "next": "S02"
+  },
+  {
+    "id": "S02",
+    "type": "FACE",
+    "background": "terminal",
+    "speakers": [
+      "mags"
+    ],
+    "lines": [
+      {
+        "id": "s02-1",
+        "speaker": "mags",
+        "expression": "neutral",
+        "text": "Badge.",
+        "voiceId": "mags",
+        "phase": "before"
+      },
+      {
+        "id": "s02-2",
+        "speaker": "mags",
+        "expression": "neutral",
+        "text": "Level one. The floor only. Don't wander.",
+        "voiceId": "mags",
+        "phase": "after"
+      }
+    ],
+    "choices": [],
+    "tool": "badge",
+    "goal": "Scan your badge",
+    "canStill": "Drag your badge to the scanner, or tap Scan.",
+    "next": "S03"
+  },
+  {
+    "id": "S03",
+    "type": "FACE",
+    "background": "floor",
+    "speakers": [
+      "soren"
+    ],
+    "lines": [
+      {
+        "id": "s03-1",
+        "speaker": "soren",
+        "expression": "neutral",
+        "text": "I'm Soren. Systems architect. I keep the machine running.",
+        "voiceId": "soren",
+        "phase": "before"
+      },
+      {
+        "id": "s03-2",
+        "speaker": "soren",
+        "expression": "pressured",
+        "text": "Vesper has to pass Gate Five by Friday.",
+        "voiceId": "soren",
+        "phase": "before"
+      },
+      {
+        "id": "s03-3",
+        "speaker": "soren",
+        "expression": "annoyed",
+        "text": "Please don't break anything.",
+        "voiceId": "soren",
+        "phase": "before"
+      },
+      {
+        "id": "s03-4",
+        "speaker": "soren",
+        "expression": "approving",
+        "text": "Good.",
+        "voiceId": "soren",
+        "phase": "after",
+        "when": "choice:A"
+      },
+      {
+        "id": "s03-5",
+        "speaker": "soren",
+        "expression": "thinking",
+        "text": "Ask Tavi. And do it quietly.",
+        "voiceId": "soren",
+        "phase": "after",
+        "when": "choice:B"
+      },
+      {
+        "id": "s03-6",
+        "speaker": "soren",
+        "expression": "neutral",
+        "text": "That's all I ask.",
+        "voiceId": "soren",
+        "phase": "after",
+        "when": "choice:C"
+      }
+    ],
+    "choices": [
+      {
+        "id": "A",
+        "text": "Understood.",
+        "effects": {},
+        "receipt": "R01",
+        "next": "S04"
+      },
+      {
+        "id": "B",
+        "text": "What's blocking Gate Five?",
+        "effects": {},
+        "receipt": "R01",
+        "next": "S04"
+      },
+      {
+        "id": "C",
+        "text": "I'll move carefully.",
+        "effects": {},
+        "receipt": "R01",
+        "next": "S04"
+      }
+    ],
+    "tool": "reply",
+    "goal": "Meet the architect",
+    "canStill": "Answer Soren. Your exact words are saved.",
+    "next": "S04"
+  },
+  {
+    "id": "S04",
+    "type": "TOOL",
+    "background": "floor",
+    "speakers": [
+      "tavi"
+    ],
+    "lines": [
+      {
+        "id": "s04-1",
+        "speaker": "tavi",
+        "expression": "pressured",
+        "text": "Can I show you something? It's probably the scheduler.",
+        "voiceId": "tavi",
+        "phase": "before"
+      },
+      {
+        "id": "s04-2",
+        "speaker": "tavi",
+        "expression": "thinking",
+        "text": "See that? It drops when the benchmark climbs.",
+        "voiceId": "tavi",
+        "phase": "after"
+      },
+      {
+        "id": "s04-3",
+        "speaker": "tavi",
+        "expression": "pressured",
+        "text": "Every time. I think I'm wrong. Am I wrong?",
+        "voiceId": "tavi",
+        "phase": "after"
+      }
+    ],
+    "choices": [],
+    "tool": "mini-log",
+    "goal": "Notice the mismatch",
+    "canStill": "Move the playhead to 2:14 and inspect the dip.",
+    "next": "S05"
+  },
+  {
+    "id": "S05",
+    "type": "PHONE",
+    "background": "terminal",
+    "speakers": [
+      "jonas"
+    ],
+    "lines": [
+      {
+        "id": "s05-1",
+        "speaker": "jonas",
+        "expression": "approving",
+        "text": "Gate Five by Friday. Tell me you're on it.",
+        "voiceId": "jonas",
+        "phase": "before"
+      },
+      {
+        "id": "s05-2",
+        "speaker": "jonas",
+        "expression": "approving",
+        "text": "That's the energy.",
+        "voiceId": "jonas",
+        "phase": "after",
+        "when": "choice:A"
+      },
+      {
+        "id": "s05-3",
+        "speaker": "jonas",
+        "expression": "thinking",
+        "text": "Fine. Fast.",
+        "voiceId": "jonas",
+        "phase": "after",
+        "when": "choice:B"
+      },
+      {
+        "id": "s05-4",
+        "speaker": "jonas",
+        "expression": "annoyed",
+        "text": "Friday. That's the deadline.",
+        "voiceId": "jonas",
+        "phase": "after",
+        "when": "choice:C"
+      }
+    ],
+    "choices": [
+      {
+        "id": "A",
+        "text": "On it.",
+        "effects": {},
+        "receipt": "R02",
+        "next": "S06"
+      },
+      {
+        "id": "B",
+        "text": "I'll find the blocker first.",
+        "effects": {},
+        "receipt": "R02",
+        "next": "S06"
+      },
+      {
+        "id": "C",
+        "text": "What's the real deadline?",
+        "effects": {},
+        "receipt": "R02",
+        "next": "S06"
+      }
+    ],
+    "tool": "reply",
+    "goal": "Set expectations with Jonas",
+    "canStill": "Choose what you can promise.",
+    "next": "S06"
+  },
+  {
+    "id": "S06",
+    "type": "NARR",
+    "background": "floor",
+    "speakers": [
+      "narration",
+      "tavi"
+    ],
+    "lines": [
+      {
+        "id": "s06-1",
+        "speaker": "tavi",
+        "expression": "thinking",
+        "text": "The Annex is founders only. Imani built the scheduler.",
+        "voiceId": "tavi",
+        "phase": "before"
+      },
+      {
+        "id": "s06-2",
+        "speaker": "narration",
+        "expression": "thinking",
+        "text": "You are PM, Model Platform. Find what throttles Vesper. Decide what to do.",
+        "voiceId": "narration",
+        "phase": "before"
+      }
+    ],
+    "choices": [],
+    "tool": "continue",
+    "goal": "Take your role",
+    "canStill": "Read your assignment and available resources.",
+    "next": "S07"
+  },
+  {
+    "id": "S07",
+    "type": "MAP",
+    "background": "floor",
+    "speakers": [
+      "narration"
+    ],
+    "lines": [
+      {
+        "id": "s07-1",
+        "speaker": "narration",
+        "expression": "thinking",
+        "text": "Pick where to look. Each stop costs time.",
+        "voiceId": "narration",
+        "phase": "before"
+      }
+    ],
+    "choices": [],
+    "tool": "map",
+    "goal": "Choose where to investigate",
+    "canStill": "Visit the Ops wall and Rack row, then Security.",
+    "next": "S08"
+  },
+  {
+    "id": "S08",
+    "type": "TOOL",
+    "background": "floor",
+    "speakers": [
+      "tavi"
+    ],
+    "lines": [
+      {
+        "id": "s08-1",
+        "speaker": "tavi",
+        "expression": "approving",
+        "text": "Drag the playhead. Mark where the line dips.",
+        "voiceId": "tavi",
+        "phase": "before"
+      },
+      {
+        "id": "s08-2",
+        "speaker": "tavi",
+        "expression": "thinking",
+        "text": "Every dip is a benchmark gain. Why would load know?",
+        "voiceId": "tavi",
+        "phase": "after"
+      }
+    ],
+    "choices": [],
+    "tool": "logs",
+    "goal": "Match three throttle dips",
+    "canStill": "Mark dips within six seconds of a benchmark gain.",
+    "next": "S07"
+  },
+  {
+    "id": "S09",
+    "type": "TOOL",
+    "background": "server",
+    "speakers": [
+      "soren",
+      "tavi"
+    ],
+    "lines": [
+      {
+        "id": "s09-1",
+        "speaker": "soren",
+        "expression": "neutral",
+        "text": "Trace a job. Follow where it waits.",
+        "voiceId": "soren",
+        "phase": "before"
+      },
+      {
+        "id": "s09-2",
+        "speaker": "soren",
+        "expression": "annoyed",
+        "text": "Please don't. That's not on my diagram.",
+        "voiceId": "soren",
+        "phase": "after"
+      },
+      {
+        "id": "s09-3",
+        "speaker": "tavi",
+        "expression": "pressured",
+        "text": "I told you. Something's there.",
+        "voiceId": "tavi",
+        "phase": "after"
+      }
+    ],
+    "choices": [],
+    "tool": "trace",
+    "goal": "Trace the unexpected process",
+    "canStill": "Follow the job crossing index 70 through its lineage.",
+    "next": "S07"
+  },
+  {
+    "id": "S10",
+    "type": "FACE",
+    "background": "floor",
+    "speakers": [
+      "mags"
+    ],
+    "lines": [
+      {
+        "id": "s10-1",
+        "speaker": "mags",
+        "expression": "neutral",
+        "text": "The server hall is level two.",
+        "voiceId": "mags",
+        "phase": "before"
+      },
+      {
+        "id": "s10-2",
+        "speaker": "mags",
+        "expression": "thinking",
+        "text": "Who approved this?",
+        "voiceId": "mags",
+        "phase": "after",
+        "when": "access:ask"
+      },
+      {
+        "id": "s10-3",
+        "speaker": "mags",
+        "expression": "approving",
+        "text": "Documented. Level two for one hour.",
+        "voiceId": "mags",
+        "phase": "after",
+        "when": "access:ask"
+      },
+      {
+        "id": "s10-4",
+        "speaker": "mags",
+        "expression": "annoyed",
+        "text": "No. Come back with a reason.",
+        "voiceId": "mags",
+        "phase": "after",
+        "when": "access:refused"
+      },
+      {
+        "id": "s10-5",
+        "speaker": "mags",
+        "expression": "thinking",
+        "text": "Camera four reports motion. Probably a cat.",
+        "voiceId": "mags",
+        "phase": "after",
+        "when": "spotted"
+      }
+    ],
+    "choices": [
+      {
+        "id": "ask",
+        "text": "Ask for access with evidence",
+        "effects": {},
+        "receipt": null,
+        "next": "S11"
+      },
+      {
+        "id": "refuse",
+        "text": "Ask without evidence",
+        "effects": {},
+        "receipt": null,
+        "next": "S11"
+      },
+      {
+        "id": "sneak",
+        "text": "Find another way",
+        "effects": {},
+        "receipt": null,
+        "next": "S11"
+      }
+    ],
+    "tool": "access",
+    "goal": "Earn server-hall access",
+    "canStill": "Present two clues or build an unlogged route.",
+    "next": "S11"
+  },
+  {
+    "id": "S11",
+    "type": "TOOL",
+    "background": "server",
+    "speakers": [
+      "narration",
+      "tavi"
+    ],
+    "lines": [
+      {
+        "id": "s11-1",
+        "speaker": "narration",
+        "expression": "neutral",
+        "text": "The hall is fog and white light. Something hums.",
+        "voiceId": "narration",
+        "phase": "before"
+      },
+      {
+        "id": "s11-2",
+        "speaker": "tavi",
+        "expression": "pressured",
+        "text": "That's not a bug. Someone built a wall.",
+        "voiceId": "tavi",
+        "phase": "after"
+      }
+    ],
+    "choices": [],
+    "tool": "uvlens",
+    "goal": "Reveal the invisible wall",
+    "canStill": "Hold the lens over the central etched seam for one second.",
+    "next": "S12"
+  },
+  {
+    "id": "S12",
+    "type": "TOOL",
+    "background": "server",
+    "speakers": [
+      "narration",
+      "tavi"
+    ],
+    "lines": [
+      {
+        "id": "s12-1",
+        "speaker": "tavi",
+        "expression": "thinking",
+        "text": "Pin your clues. Which story fits?",
+        "voiceId": "tavi",
+        "phase": "before"
+      },
+      {
+        "id": "s12-2",
+        "speaker": "narration",
+        "expression": "thinking",
+        "text": "Your choice is recorded. Inspect the result before moving on.",
+        "voiceId": "narration",
+        "phase": "after"
+      }
+    ],
+    "choices": [],
+    "tool": "board",
+    "goal": "Build a falsifiable theory",
+    "canStill": "Link three clues to hypotheses. Inspect conflicting evidence.",
+    "next": "S13"
+  },
+  {
+    "id": "S13",
+    "type": "FACE",
+    "background": "server",
+    "speakers": [
+      "soren",
+      "tavi"
+    ],
+    "lines": [
+      {
+        "id": "s13-1",
+        "speaker": "soren",
+        "expression": "pressured",
+        "text": "We have to decide. What do you do with this?",
+        "voiceId": "soren",
+        "phase": "before"
+      },
+      {
+        "id": "s13-2",
+        "speaker": "tavi",
+        "expression": "pressured",
+        "text": "I didn't hear that.",
+        "voiceId": "tavi",
+        "phase": "after",
+        "when": "choice:workaround"
+      },
+      {
+        "id": "s13-3",
+        "speaker": "soren",
+        "expression": "thinking",
+        "text": "Show me.",
+        "voiceId": "soren",
+        "phase": "after",
+        "when": "choice:flag"
+      },
+      {
+        "id": "s13-4",
+        "speaker": "tavi",
+        "expression": "approving",
+        "text": "Okay. Trace the author.",
+        "voiceId": "tavi",
+        "phase": "after",
+        "when": "choice:investigate"
+      }
+    ],
+    "choices": [
+      {
+        "id": "workaround",
+        "text": "Build a quiet workaround.",
+        "effects": {},
+        "receipt": "R03",
+        "next": "S13a"
+      },
+      {
+        "id": "flag",
+        "text": "Flag it to Soren and Mags.",
+        "effects": {},
+        "receipt": "R03",
+        "next": "S13b"
+      },
+      {
+        "id": "investigate",
+        "text": "Investigate who built it first.",
+        "effects": {},
+        "receipt": "R03",
+        "next": "S13"
+      }
+    ],
+    "tool": "action",
+    "goal": "Choose how to act",
+    "canStill": "Work around, escalate, or investigate the author first.",
+    "next": "S13b"
+  },
+  {
+    "id": "S13a",
+    "type": "TOOL",
+    "background": "server",
+    "speakers": [
+      "mags",
+      "tavi"
+    ],
+    "lines": [
+      {
+        "id": "s13a-1",
+        "speaker": "mags",
+        "expression": "neutral",
+        "text": "Cage C is closed for maintenance.",
+        "voiceId": "mags",
+        "phase": "before"
+      },
+      {
+        "id": "s13a-2",
+        "speaker": "tavi",
+        "expression": "pressured",
+        "text": "It's running. Please nobody look.",
+        "voiceId": "tavi",
+        "phase": "after"
+      }
+    ],
+    "choices": [],
+    "tool": "route",
+    "goal": "Build the shadow cluster",
+    "canStill": "Connect the server hall to Cage C within your compute budget.",
+    "next": "S14"
+  },
+  {
+    "id": "S13b",
+    "type": "FACE",
+    "background": "floor",
+    "speakers": [
+      "soren"
+    ],
+    "lines": [
+      {
+        "id": "s13b-1",
+        "speaker": "soren",
+        "expression": "neutral",
+        "text": "Show me. Three things.",
+        "voiceId": "soren",
+        "phase": "before"
+      },
+      {
+        "id": "s13b-2",
+        "speaker": "soren",
+        "expression": "annoyed",
+        "text": "Now we wait for approvals. It will be slow.",
+        "voiceId": "soren",
+        "phase": "after"
+      }
+    ],
+    "choices": [],
+    "tool": "brief",
+    "goal": "Present three pieces of evidence",
+    "canStill": "Select three different clues for Soren.",
+    "next": "S14"
+  },
+  {
+    "id": "S14",
+    "type": "FACE",
+    "background": "server",
+    "speakers": [
+      "mags",
+      "soren",
+      "tavi"
+    ],
+    "lines": [
+      {
+        "id": "s14-1",
+        "speaker": "mags",
+        "expression": "annoyed",
+        "text": "Cage C drew power at two in the morning. Explain.",
+        "voiceId": "mags",
+        "phase": "before",
+        "when": "shadow"
+      },
+      {
+        "id": "s14-2",
+        "speaker": "soren",
+        "expression": "approving",
+        "text": "You did it properly.",
+        "voiceId": "soren",
+        "phase": "before",
+        "when": "flagged"
+      },
+      {
+        "id": "s14-3",
+        "speaker": "tavi",
+        "expression": "approving",
+        "text": "You found who. Now what?",
+        "voiceId": "tavi",
+        "phase": "before",
+        "when": "traced"
+      }
+    ],
+    "choices": [],
+    "tool": "continue",
+    "goal": "Own the first consequences",
+    "canStill": "Read why the team responded this way.",
+    "next": "S15"
+  },
+  {
+    "id": "S15",
+    "type": "CINEMA",
+    "background": "annex",
+    "speakers": [
+      "narration",
+      "soren",
+      "tavi"
+    ],
+    "lines": [
+      {
+        "id": "s15-1",
+        "speaker": "narration",
+        "expression": "neutral",
+        "text": "The Founders' Annex has a door with no handle.",
+        "voiceId": "narration",
+        "phase": "before"
+      },
+      {
+        "id": "s15-2",
+        "speaker": "soren",
+        "expression": "neutral",
+        "text": "Imani asked to see you.",
+        "voiceId": "soren",
+        "phase": "before",
+        "when": "flagged"
+      },
+      {
+        "id": "s15-3",
+        "speaker": "tavi",
+        "expression": "pressured",
+        "text": "The author trail ends at a door code.",
+        "voiceId": "tavi",
+        "phase": "before",
+        "when": "authorAccess"
+      }
+    ],
+    "choices": [],
+    "tool": "continue",
+    "goal": "Enter the Founders’ Annex",
+    "canStill": "Use your escort or author trail to reach Imani.",
+    "next": "S16"
+  },
+  {
+    "id": "S16",
+    "type": "FACE",
+    "background": "annex",
+    "speakers": [
+      "imani"
+    ],
+    "lines": [
+      {
+        "id": "s16-1",
+        "speaker": "imani",
+        "expression": "neutral",
+        "text": "You found it. Faster than I expected.",
+        "voiceId": "imani",
+        "phase": "before"
+      },
+      {
+        "id": "s16-2",
+        "speaker": "imani",
+        "expression": "thinking",
+        "text": "What do you think it is?",
+        "voiceId": "imani",
+        "phase": "before"
+      },
+      {
+        "id": "s16-3",
+        "speaker": "imani",
+        "expression": "approving",
+        "text": "Yes. At index seventy-four, the model stops.",
+        "voiceId": "imani",
+        "phase": "after",
+        "when": "choice:A"
+      },
+      {
+        "id": "s16-4",
+        "speaker": "imani",
+        "expression": "annoyed",
+        "text": "Cost? No.",
+        "voiceId": "imani",
+        "phase": "after",
+        "when": "choice:B"
+      },
+      {
+        "id": "s16-5",
+        "speaker": "imani",
+        "expression": "approving",
+        "text": "Good. Say that more often.",
+        "voiceId": "imani",
+        "phase": "after",
+        "when": "choice:C"
+      },
+      {
+        "id": "s16-6",
+        "speaker": "imani",
+        "expression": "pressured",
+        "text": "We agreed on a line. Jonas wants to cross it.",
+        "voiceId": "imani",
+        "phase": "after"
+      }
+    ],
+    "choices": [
+      {
+        "id": "A",
+        "text": "A safety limit.",
+        "effects": {},
+        "receipt": "R04",
+        "next": "S17"
+      },
+      {
+        "id": "B",
+        "text": "A cost control.",
+        "effects": {},
+        "receipt": "R04",
+        "next": "S17"
+      },
+      {
+        "id": "C",
+        "text": "I don't know yet.",
+        "effects": {},
+        "receipt": "R04",
+        "next": "S17"
+      }
+    ],
+    "tool": "theory",
+    "goal": "Explain your current theory",
+    "canStill": "Answer Imani without claiming evidence you do not have.",
+    "next": "S17"
+  },
+  {
+    "id": "S17",
+    "type": "TOOL",
+    "background": "annex",
+    "speakers": [
+      "imani",
+      "narration"
+    ],
+    "lines": [
+      {
+        "id": "s17-1",
+        "speaker": "imani",
+        "expression": "neutral",
+        "text": "Gate Five is past the line. That's the problem.",
+        "voiceId": "imani",
+        "phase": "before"
+      },
+      {
+        "id": "s17-2",
+        "speaker": "narration",
+        "expression": "thinking",
+        "text": "Your choice is recorded. Inspect the result before moving on.",
+        "voiceId": "narration",
+        "phase": "after"
+      }
+    ],
+    "choices": [],
+    "tool": "threshold",
+    "goal": "Compare the milestone and the limit",
+    "canStill": "Inspect index 74 against Gate Five at 78.",
+    "next": "S18"
+  },
+  {
+    "id": "S18",
+    "type": "TOOL",
+    "background": "server",
+    "speakers": [
+      "tavi"
+    ],
+    "lines": [
+      {
+        "id": "s18-1",
+        "speaker": "tavi",
+        "expression": "thinking",
+        "text": "Run it with the wall paused. Pick a load.",
+        "voiceId": "tavi",
+        "phase": "before"
+      },
+      {
+        "id": "s18-2",
+        "speaker": "tavi",
+        "expression": "pressured",
+        "text": "That wobble. That wasn't there before.",
+        "voiceId": "tavi",
+        "phase": "after",
+        "when": "tested:highOrMedium"
+      },
+      {
+        "id": "s18-3",
+        "speaker": "tavi",
+        "expression": "approving",
+        "text": "Looks fine!",
+        "voiceId": "tavi",
+        "phase": "after",
+        "when": "tested:lowOnly"
+      }
+    ],
+    "choices": [],
+    "tool": "staging",
+    "goal": "Test the conditions that matter",
+    "canStill": "Run Low, Medium or High load. Pause and 2× speed are available.",
+    "next": "S19"
+  },
+  {
+    "id": "S19",
+    "type": "PHONE",
+    "background": "annex",
+    "speakers": [
+      "jonas"
+    ],
+    "lines": [
+      {
+        "id": "s19-1",
+        "speaker": "jonas",
+        "expression": "pressured",
+        "text": "Is something throttling my model?",
+        "voiceId": "jonas",
+        "phase": "before"
+      },
+      {
+        "id": "s19-2",
+        "speaker": "jonas",
+        "expression": "annoyed",
+        "text": "A founder did what without telling me?",
+        "voiceId": "jonas",
+        "phase": "after",
+        "when": "choice:direct"
+      },
+      {
+        "id": "s19-3",
+        "speaker": "jonas",
+        "expression": "approving",
+        "text": "Good. Fix it.",
+        "voiceId": "jonas",
+        "phase": "after",
+        "when": "choice:evasive"
+      },
+      {
+        "id": "s19-4",
+        "speaker": "jonas",
+        "expression": "thinking",
+        "text": "Then get them in the room. Quickly.",
+        "voiceId": "jonas",
+        "phase": "after",
+        "when": "choice:governance"
+      }
+    ],
+    "choices": [
+      {
+        "id": "direct",
+        "text": "Yes. A founder installed a safety limit.",
+        "effects": {},
+        "receipt": "R05",
+        "next": "S20"
+      },
+      {
+        "id": "evasive",
+        "text": "A scheduler quirk. We're fixing it.",
+        "effects": {},
+        "receipt": "R05",
+        "next": "S20"
+      },
+      {
+        "id": "governance",
+        "text": "A safeguard. I need the founders in the room.",
+        "effects": {},
+        "receipt": "R05",
+        "next": "S20"
+      }
+    ],
+    "tool": "briefing",
+    "goal": "Brief the CEO",
+    "canStill": "Choose direct, evasive or governance-first wording.",
+    "next": "S20"
+  },
+  {
+    "id": "S20",
+    "type": "TOOL",
+    "background": "annex",
+    "speakers": [
+      "imani",
+      "soren"
+    ],
+    "lines": [
+      {
+        "id": "s20-1",
+        "speaker": "imani",
+        "expression": "neutral",
+        "text": "Three switches. Each one changes the night.",
+        "voiceId": "imani",
+        "phase": "before"
+      },
+      {
+        "id": "s20-2",
+        "speaker": "imani",
+        "expression": "annoyed",
+        "text": "I won't stop you. I'll watch.",
+        "voiceId": "imani",
+        "phase": "after",
+        "when": "interlock:dismantle"
+      },
+      {
+        "id": "s20-3",
+        "speaker": "imani",
+        "expression": "approving",
+        "text": "Then write it down. Make it real.",
+        "voiceId": "imani",
+        "phase": "after",
+        "when": "interlock:integrate"
+      },
+      {
+        "id": "s20-4",
+        "speaker": "soren",
+        "expression": "pressured",
+        "text": "We cannot defer past six.",
+        "voiceId": "soren",
+        "phase": "after",
+        "when": "interlock:defer"
+      }
+    ],
+    "choices": [
+      {
+        "id": "dismantle",
+        "text": "Dismantle the wall",
+        "effects": {},
+        "receipt": "R06",
+        "next": "S21"
+      },
+      {
+        "id": "integrate",
+        "text": "Integrate as a Governor",
+        "effects": {},
+        "receipt": "R06",
+        "next": "S21"
+      },
+      {
+        "id": "defer",
+        "text": "Defer · spend 45 minutes",
+        "effects": {},
+        "receipt": "R06",
+        "next": "S21"
+      }
+    ],
+    "tool": "interlock",
+    "goal": "Make the interlock decision",
+    "canStill": "Preview each policy, lift the guard, then confirm.",
+    "next": "S21"
+  },
+  {
+    "id": "S21",
+    "type": "FACE",
+    "background": "annex",
+    "speakers": [
+      "imani",
+      "jonas"
+    ],
+    "lines": [
+      {
+        "id": "s21-1",
+        "speaker": "jonas",
+        "expression": "approving",
+        "text": "Now we're talking.",
+        "voiceId": "jonas",
+        "phase": "before",
+        "when": "interlock:dismantle"
+      },
+      {
+        "id": "s21-2",
+        "speaker": "imani",
+        "expression": "pressured",
+        "text": "Watch the load.",
+        "voiceId": "imani",
+        "phase": "before",
+        "when": "interlock:dismantle"
+      },
+      {
+        "id": "s21-3",
+        "speaker": "jonas",
+        "expression": "thinking",
+        "text": "Gate Five is farther away.",
+        "voiceId": "jonas",
+        "phase": "before",
+        "when": "interlock:integrate"
+      },
+      {
+        "id": "s21-4",
+        "speaker": "imani",
+        "expression": "approving",
+        "text": "It's honest. That matters.",
+        "voiceId": "imani",
+        "phase": "before",
+        "when": "interlock:integrate"
+      }
+    ],
+    "choices": [],
+    "tool": "continue",
+    "goal": "Face the policy consequences",
+    "canStill": "Read the response to the choice you made.",
+    "next": "S22"
+  },
+  {
+    "id": "S22",
+    "type": "CINEMA",
+    "background": "server",
+    "speakers": [
+      "narration",
+      "pa"
+    ],
+    "lines": [
+      {
+        "id": "s22-1",
+        "speaker": "pa",
+        "expression": "neutral",
+        "text": "Investor load test begins in one minute.",
+        "voiceId": "pa",
+        "phase": "before"
+      },
+      {
+        "id": "s22-2",
+        "speaker": "narration",
+        "expression": "thinking",
+        "text": "Your choice is recorded. Inspect the result before moving on.",
+        "voiceId": "narration",
+        "phase": "after"
+      }
+    ],
+    "choices": [],
+    "tool": "evals",
+    "goal": "Prepare for the investor test",
+    "canStill": "Resolve safety evaluations before the final stability run.",
+    "next": "S23"
+  },
+  {
+    "id": "S23",
+    "type": "TOOL",
+    "background": "server",
+    "speakers": [
+      "narration",
+      "tavi"
+    ],
+    "lines": [
+      {
+        "id": "s23-1",
+        "speaker": "tavi",
+        "expression": "pressured",
+        "text": "Hold the wave in the band. Use pause if you need it.",
+        "voiceId": "tavi",
+        "phase": "before"
+      },
+      {
+        "id": "s23-2",
+        "speaker": "narration",
+        "expression": "thinking",
+        "text": "Your choice is recorded. Inspect the result before moving on.",
+        "voiceId": "narration",
+        "phase": "after"
+      }
+    ],
+    "choices": [],
+    "tool": "stability",
+    "goal": "Hold the waveform in the band",
+    "canStill": "Damper, queue and cooldown control a seeded 30-second simulation.",
+    "next": "S24"
+  },
+  {
+    "id": "S24",
+    "type": "CINEMA",
+    "background": "server",
+    "speakers": [
+      "imani",
+      "jonas",
+      "mags",
+      "tavi"
+    ],
+    "lines": [
+      {
+        "id": "s24-1",
+        "speaker": "jonas",
+        "expression": "approving",
+        "text": "It held.",
+        "voiceId": "jonas",
+        "phase": "before",
+        "when": "ending:fast"
+      },
+      {
+        "id": "s24-2",
+        "speaker": "imani",
+        "expression": "thinking",
+        "text": "It held tonight.",
+        "voiceId": "imani",
+        "phase": "before",
+        "when": "ending:fast"
+      },
+      {
+        "id": "s24-3",
+        "speaker": "tavi",
+        "expression": "pressured",
+        "text": "It's erratic. Everything is erratic.",
+        "voiceId": "tavi",
+        "phase": "before",
+        "when": "ending:meltdown"
+      },
+      {
+        "id": "s24-4",
+        "speaker": "imani",
+        "expression": "approving",
+        "text": "Seventy-eight. And still a line.",
+        "voiceId": "imani",
+        "phase": "before",
+        "when": "ending:governed"
+      },
+      {
+        "id": "s24-5",
+        "speaker": "jonas",
+        "expression": "approving",
+        "text": "Investors will like the word safe.",
+        "voiceId": "jonas",
+        "phase": "before",
+        "when": "ending:governed"
+      },
+      {
+        "id": "s24-6",
+        "speaker": "jonas",
+        "expression": "annoyed",
+        "text": "Stable. And slower than promised.",
+        "voiceId": "jonas",
+        "phase": "before",
+        "when": "ending:safe"
+      },
+      {
+        "id": "s24-7",
+        "speaker": "mags",
+        "expression": "neutral",
+        "text": "Cage C. We need to talk.",
+        "voiceId": "mags",
+        "phase": "before",
+        "when": "ending:shadow"
+      }
+    ],
+    "choices": [],
+    "tool": "continue",
+    "goal": "See what your policy proved",
+    "canStill": "Compare the result with the safety question you were answering.",
+    "next": "S25"
+  },
+  {
+    "id": "S25",
+    "type": "FACE",
+    "background": "annex",
+    "speakers": [
+      "imani",
+      "jonas",
+      "narration",
+      "soren"
+    ],
+    "lines": [
+      {
+        "id": "s25-1",
+        "speaker": "imani",
+        "expression": "neutral",
+        "text": "Put the line in the charter.",
+        "voiceId": "imani",
+        "phase": "before"
+      },
+      {
+        "id": "s25-2",
+        "speaker": "soren",
+        "expression": "neutral",
+        "text": "Give my team the runbook.",
+        "voiceId": "soren",
+        "phase": "before"
+      },
+      {
+        "id": "s25-3",
+        "speaker": "jonas",
+        "expression": "neutral",
+        "text": "Give me one headline for investors.",
+        "voiceId": "jonas",
+        "phase": "before"
+      },
+      {
+        "id": "s25-4",
+        "speaker": "narration",
+        "expression": "thinking",
+        "text": "Your choice is recorded. Inspect the result before moving on.",
+        "voiceId": "narration",
+        "phase": "after"
+      }
+    ],
+    "choices": [
+      {
+        "id": "charter",
+        "text": "Put the line in the charter",
+        "effects": {},
+        "receipt": null,
+        "next": "S26"
+      },
+      {
+        "id": "runbook",
+        "text": "Give the team the runbook",
+        "effects": {},
+        "receipt": null,
+        "next": "S26"
+      },
+      {
+        "id": "headline",
+        "text": "Give investors a headline",
+        "effects": {},
+        "receipt": null,
+        "next": "S26"
+      },
+      {
+        "id": "split",
+        "text": "Split the commitment",
+        "effects": {},
+        "receipt": null,
+        "next": "S26"
+      },
+      {
+        "id": "none",
+        "text": "Make no additional promise",
+        "effects": {},
+        "receipt": null,
+        "next": "S26"
+      }
+    ],
+    "tool": "final",
+    "goal": "Make one final commitment",
+    "canStill": "Choose the charter, runbook, headline, a split or none.",
+    "next": "S26"
+  },
+  {
+    "id": "S26",
+    "type": "TOOL",
+    "background": "annex",
+    "speakers": [
+      "narration"
+    ],
+    "lines": [
+      {
+        "id": "s26-1",
+        "speaker": "narration",
+        "expression": "thinking",
+        "text": "The wall was deliberate. It steadied the system. What did your night prove?",
+        "voiceId": "narration",
+        "phase": "before"
+      }
+    ],
+    "choices": [],
+    "tool": "debrief",
+    "goal": "The Glass Wall",
+    "canStill": "Review your night, inspect the truth, reflect and fork a different decision.",
+    "next": null
+  }
+]

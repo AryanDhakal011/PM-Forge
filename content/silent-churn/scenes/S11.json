@@ -1,0 +1,14 @@
+{
+  "id": "S11",
+  "type": "DESK",
+  "goal": "Pre-wire the committee",
+  "background": "desk",
+  "tools": [
+    "dredger",
+    "pattern",
+    "coalition",
+    "preread",
+    "window",
+    "gauntlet"
+  ]
+}

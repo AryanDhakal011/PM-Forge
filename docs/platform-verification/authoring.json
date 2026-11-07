@@ -1,0 +1,121 @@
+[
+  {
+    "id": "deadlock",
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "coverage": {
+      "scenes": 19,
+      "lines": 79,
+      "events": 24,
+      "tools": [
+        "EStop",
+        "EvidenceDrawers",
+        "TimelineScrubber",
+        "LiveMediation",
+        "PartyFloor",
+        "SliderForecast",
+        "DryRun",
+        "RadioRoom"
+      ]
+    }
+  },
+  {
+    "id": "sacred-no",
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "coverage": {
+      "scenes": 11,
+      "lines": 60,
+      "events": 24,
+      "tools": [
+        "DragBins",
+        "EvidenceDrawers",
+        "Inbox",
+        "SliderForecast",
+        "ArgumentDeck",
+        "Duel",
+        "TellNegotiation",
+        "GraphView",
+        "KillSwitch"
+      ]
+    }
+  },
+  {
+    "id": "ghost-metric",
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "coverage": {
+      "scenes": 13,
+      "lines": 80,
+      "events": 24,
+      "tools": [
+        "DragBins",
+        "EvidenceDrawers",
+        "GraphView",
+        "MetricAutopsy",
+        "ConfidenceBet",
+        "SentenceBuilder",
+        "PosterComposer",
+        "AllHands",
+        "HeistCrew"
+      ]
+    }
+  },
+  {
+    "id": "trojan-horse",
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "coverage": {
+      "scenes": 15,
+      "lines": 70,
+      "events": 24,
+      "tools": [
+        "CoinPress",
+        "PartyFloor",
+        "EvidenceDrawers",
+        "FraudRing",
+        "SliderForecast",
+        "GuildVisit",
+        "CaseCards",
+        "LaunchNight"
+      ]
+    }
+  },
+  {
+    "id": "last-mile",
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "coverage": {
+      "scenes": 13,
+      "lines": 79,
+      "events": 24,
+      "tools": [
+        "PartyFloor",
+        "RadioRoom",
+        "EvidenceDrawers",
+        "SliderForecast",
+        "MapShelters",
+        "LedgerSankey",
+        "RumorMill",
+        "PlannerBoard"
+      ]
+    }
+  },
+  {
+    "id": "toy-regression",
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "coverage": {
+      "scenes": 3,
+      "lines": 4,
+      "events": 1,
+      "tools": []
+    }
+  }
+]

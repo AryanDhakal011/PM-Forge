@@ -157,7 +157,7 @@ function evidenceFor(text: string): Evidence[] {
       text: base,
       cost: 0,
       discriminating: true,
-      tag: "SIMULATED",
+      tag: /\(S\d+\)/.test(base) ? "REFERENCE" : "SIMULATED",
     });
   markers.forEach((m, index) => {
     const body = text
@@ -184,7 +184,10 @@ function evidenceFor(text: string): Evidence[] {
       tag: /\(S\d+\)/.test(body) ? "REFERENCE" : "SIMULATED",
     });
   });
-  return items;
+  // A referenced A1 and a paid E1 may coexist in the authored brief.
+  // Keep paid evidence IDs stable and give the opening reference its own identity.
+  return items.map(item => item.cost===0 && items.some(other=>other.id===item.id && other.cost>0)
+    ? {...item,id:'reference-'+item.id} : item);
 }
 
 export const questions: Question[] = handoff.map((raw) => {

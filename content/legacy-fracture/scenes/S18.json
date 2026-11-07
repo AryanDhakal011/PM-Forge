@@ -1,0 +1,15 @@
+{
+  "id": "S18",
+  "type": "CINEMA",
+  "background": "night",
+  "goal": "Enter cutover week",
+  "tools": [],
+  "lines": [
+    {
+      "speaker": "narrator",
+      "text": "Week eight. The dispatch bell rings after dark.",
+      "expression": "neutral",
+      "clip": null
+    }
+  ]
+}

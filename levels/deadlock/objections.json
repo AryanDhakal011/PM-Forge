@@ -1,0 +1,67 @@
+[
+  {
+    "id": "evidence-objection",
+    "concern": "Unverified claim",
+    "text": "Show me the evidence behind that claim.",
+    "resolvers": [
+      {
+        "type": "evidence",
+        "ref": "footage"
+      },
+      {
+        "type": "evidence",
+        "ref": "incident"
+      },
+      {
+        "type": "evidence",
+        "ref": "slack"
+      },
+      {
+        "type": "evidence",
+        "ref": "bench"
+      },
+      {
+        "type": "evidence",
+        "ref": "letter"
+      },
+      {
+        "type": "evidence",
+        "ref": "near-miss"
+      },
+      {
+        "type": "evidence",
+        "ref": "second-near-miss"
+      },
+      {
+        "type": "evidence",
+        "ref": "throughput"
+      },
+      {
+        "type": "evidence",
+        "ref": "recovery"
+      },
+      {
+        "type": "evidence",
+        "ref": "safety"
+      },
+      {
+        "type": "evidence",
+        "ref": "retested"
+      }
+    ],
+    "onResolve": [
+      {
+        "var": "credibility",
+        "op": "add",
+        "value": 5
+      }
+    ],
+    "onFail": [
+      {
+        "var": "credibility",
+        "op": "add",
+        "value": -5
+      }
+    ]
+  }
+]

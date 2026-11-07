@@ -1,0 +1,12 @@
+{
+  "id": "S20",
+  "type": "DESK",
+  "background": "desktop",
+  "goal": "Run sprint three",
+  "tools": [
+    "inbox",
+    "board",
+    "dashboard",
+    "calendar"
+  ]
+}

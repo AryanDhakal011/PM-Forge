@@ -1,0 +1,82 @@
+{
+  "id": "lab",
+  "type": "TOOL",
+  "background": "lab",
+  "goal": "Explore three lab areas. Investigate three of five objects.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "mara"
+  ],
+  "lines": [
+    {
+      "id": "line-5",
+      "speaker": "mara",
+      "expression": "thinking",
+      "text": "Look around. The useful details are not all on screens."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "lab-walk",
+      "kind": "EvidenceDrawers",
+      "title": "Walk the lab",
+      "items": [
+        {
+          "id": "footage",
+          "label": "Demo footage",
+          "detail": "Scrub past 01:52. There is another near-miss.",
+          "effects": [],
+          "group": "footage",
+          "reaction": "Do not let him hide that footage.",
+          "speaker": "ines",
+          "soWhat": "Shows actual stopping behavior."
+        },
+        {
+          "id": "incident",
+          "label": "Incident log",
+          "detail": "Recovery took fourteen minutes with two technicians.",
+          "effects": [],
+          "group": "incident",
+          "soWhat": "Shows what recovering from a failure requires."
+        },
+        {
+          "id": "slack",
+          "label": "Slack wall",
+          "detail": "The teams use different definitions of autonomy.",
+          "effects": [],
+          "group": "slack",
+          "soWhat": "Shows the teams’ conflicting assumptions."
+        },
+        {
+          "id": "bench",
+          "label": "Sealed bench report",
+          "detail": "Throughput improves, but stopping margins narrow.",
+          "effects": [],
+          "group": "bench",
+          "soWhat": "Shows the controlled-test tradeoffs."
+        },
+        {
+          "id": "letter",
+          "label": "Northgate letter",
+          "detail": "The customer wants repeatable recovery, not only speed.",
+          "effects": [],
+          "group": "letter",
+          "soWhat": "Shows what Northgate actually asked for."
+        }
+      ],
+      "min": 3,
+      "max": 3,
+      "cost": 1,
+      "receiptId": "R_deadlock_lab-walk",
+      "hint": "Dev’s table: throughput. Ines’s pit: recovery. Customer wall: evidence."
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "second-look"
+}

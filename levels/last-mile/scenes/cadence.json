@@ -1,0 +1,48 @@
+{
+  "id": "cadence",
+  "type": "TOOL",
+  "background": "office",
+  "goal": "Choose the next operating cadence.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "sana"
+  ],
+  "lines": [
+    {
+      "id": "line-12",
+      "speaker": "sana",
+      "expression": "thinking",
+      "text": "The city can reopen faster than trust returns."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "cadence",
+      "kind": "SliderForecast",
+      "title": "Freeze cadence",
+      "items": [],
+      "min": 0,
+      "max": 1,
+      "cost": 0,
+      "receiptId": "R_last-mile_cadence",
+      "lever": [
+        {
+          "id": "freeze",
+          "label": "Minutes between verified reopen decisions",
+          "min": 10,
+          "max": 90,
+          "initial": 50,
+          "step": 10
+        }
+      ]
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 3,
+  "act": 3,
+  "next": "review"
+}

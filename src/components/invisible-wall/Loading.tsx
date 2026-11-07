@@ -1,0 +1,2 @@
+import s from "./Wall.module.css";
+export default function Loading(){return <main id="main" tabIndex={-1} className={s.root}><div className={s.loading} role="status"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M20 80V30h80v50M20 55h80M60 30v50" fill="none" stroke="#7fe7ff" strokeWidth="2"/><circle cx="60" cy="60" r="43" stroke="#7fe7ff44" fill="none"/></svg><p>Opening Terminal B12…</p><small>Your saved night stays on this device.</small></div></main>;}

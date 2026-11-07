@@ -1,0 +1,177 @@
+[
+  {
+    "id": "sana",
+    "name": "Sana Rana",
+    "role": "Operations lead",
+    "look": {
+      "silhouette": 0,
+      "skin": "#b98463",
+      "hair": "#34383c",
+      "outfit": "#476872",
+      "props": [
+        "headset"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "Wards five and nine are under.",
+    "accent": "#9bcad8",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "mina",
+    "name": "Mina Joshi",
+    "role": "Restaurant owner",
+    "look": {
+      "silhouette": 1,
+      "skin": "#d7a381",
+      "hair": "#5d473e",
+      "outfit": "#7c6355",
+      "props": [
+        "scarf"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "Half my staff cannot get in.",
+    "accent": "#9bcad8",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "bikram",
+    "name": "Bikram Rai",
+    "role": "Courier",
+    "look": {
+      "silhouette": 2,
+      "skin": "#925f46",
+      "hair": "#2d343a",
+      "outfit": "#657b5b",
+      "props": [
+        "scarf"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "Water is at my knees. Orders still coming.",
+    "accent": "#9bcad8",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "salma",
+    "name": "Salma Khan",
+    "role": "Courier",
+    "look": {
+      "silhouette": 3,
+      "skin": "#d8b49a",
+      "hair": "#a8a49a",
+      "outfit": "#5c687e",
+      "props": [
+        "scarf"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "The bridge is closed. My route is not.",
+    "accent": "#9bcad8",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "joon",
+    "name": "Joon Park",
+    "role": "Courier",
+    "look": {
+      "silhouette": 4,
+      "skin": "#b98a72",
+      "hair": "#34383c",
+      "outfit": "#476872",
+      "props": [
+        "scarf"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "Tell me where I can wait safely.",
+    "accent": "#9bcad8",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "anita",
+    "name": "Anita Shrestha",
+    "role": "Courier",
+    "look": {
+      "silhouette": 0,
+      "skin": "#735044",
+      "hair": "#5d473e",
+      "outfit": "#7c6355",
+      "props": [
+        "scarf"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "I need the next instruction to be clear.",
+    "accent": "#9bcad8",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "rakesh",
+    "name": "Rakesh Shah",
+    "role": "Courier",
+    "look": {
+      "silhouette": 1,
+      "skin": "#b98463",
+      "hair": "#2d343a",
+      "outfit": "#657b5b",
+      "props": [
+        "scarf"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "A reopened zone still needs a way home.",
+    "accent": "#9bcad8",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  }
+]

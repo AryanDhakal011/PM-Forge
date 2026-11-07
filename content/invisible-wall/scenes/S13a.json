@@ -1,0 +1,32 @@
+{
+  "id": "S13a",
+  "type": "TOOL",
+  "background": "server",
+  "speakers": [
+    "mags",
+    "tavi"
+  ],
+  "lines": [
+    {
+      "id": "s13a-1",
+      "speaker": "mags",
+      "expression": "neutral",
+      "text": "Cage C is closed for maintenance.",
+      "voiceId": "mags",
+      "phase": "before"
+    },
+    {
+      "id": "s13a-2",
+      "speaker": "tavi",
+      "expression": "pressured",
+      "text": "It's running. Please nobody look.",
+      "voiceId": "tavi",
+      "phase": "after"
+    }
+  ],
+  "choices": [],
+  "tool": "route",
+  "goal": "Build the shadow cluster",
+  "canStill": "Connect the server hall to Cage C within your compute budget.",
+  "next": "S14"
+}

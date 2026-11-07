@@ -1,0 +1,88 @@
+{
+  "id": "S03",
+  "type": "FACE",
+  "background": "floor",
+  "speakers": [
+    "soren"
+  ],
+  "lines": [
+    {
+      "id": "s03-1",
+      "speaker": "soren",
+      "expression": "neutral",
+      "text": "I'm Soren. Systems architect. I keep the machine running.",
+      "voiceId": "soren",
+      "phase": "before"
+    },
+    {
+      "id": "s03-2",
+      "speaker": "soren",
+      "expression": "pressured",
+      "text": "Vesper has to pass Gate Five by Friday.",
+      "voiceId": "soren",
+      "phase": "before"
+    },
+    {
+      "id": "s03-3",
+      "speaker": "soren",
+      "expression": "annoyed",
+      "text": "Please don't break anything.",
+      "voiceId": "soren",
+      "phase": "before"
+    },
+    {
+      "id": "s03-4",
+      "speaker": "soren",
+      "expression": "approving",
+      "text": "Good.",
+      "voiceId": "soren",
+      "phase": "after",
+      "when": "choice:A"
+    },
+    {
+      "id": "s03-5",
+      "speaker": "soren",
+      "expression": "thinking",
+      "text": "Ask Tavi. And do it quietly.",
+      "voiceId": "soren",
+      "phase": "after",
+      "when": "choice:B"
+    },
+    {
+      "id": "s03-6",
+      "speaker": "soren",
+      "expression": "neutral",
+      "text": "That's all I ask.",
+      "voiceId": "soren",
+      "phase": "after",
+      "when": "choice:C"
+    }
+  ],
+  "choices": [
+    {
+      "id": "A",
+      "text": "Understood.",
+      "effects": {},
+      "receipt": "R01",
+      "next": "S04"
+    },
+    {
+      "id": "B",
+      "text": "What's blocking Gate Five?",
+      "effects": {},
+      "receipt": "R01",
+      "next": "S04"
+    },
+    {
+      "id": "C",
+      "text": "I'll move carefully.",
+      "effects": {},
+      "receipt": "R01",
+      "next": "S04"
+    }
+  ],
+  "tool": "reply",
+  "goal": "Meet the architect",
+  "canStill": "Answer Soren. Your exact words are saved.",
+  "next": "S04"
+}

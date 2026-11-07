@@ -1,0 +1,173 @@
+PMForge Portfolio Section — Final Complete HandoffDocument Status: Production-ready single source of truth.
+
+Purpose: Turn interview practice into credible, recruiter-ready career artifacts while solving the three real-world failure modes that kill most PM portfolios.0. Non-Negotiable Principles
+Simulated work is never presented as production impact. It is framed as Strategic Teardown & Stress Test.
+Every case study has three reading depths by default. The 15-second view is the primary surface.
+LinkedIn ingestion never depends on fragile scraping or restricted OAuth scopes.
+AI never invents experience. It only synthesizes, rewrites, or anonymizes what the candidate already owns.
+Public profiles default to private/draft. Explicit promotion + checklist required before anything goes live.
+The portfolio must survive a 6–10 second recruiter scan and still reward a 5–10 minute hiring-manager deep dive.
+1. Three Structural Blind Spots — Solved
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Blind SpotSolutionBootcamp StigmaExplicit labeling system: [Production Impact] vs [Strategic Teardown & Stress Test]. Simulation work is positioned as rigorous decision audits under pressure, not fake projects.Recruiter Attention DeficitMulti-Depth Reading Engine (Level 1 = 15-second Exec Skim card is the default view).LinkedIn API WallUniversal Ingestion Flow: Primary = LinkedIn “Save to PDF” upload + high-fidelity parser. Secondary = best-effort public URL. Tertiary = raw text paste. No dependency on restricted OAuth.2. Core Architecture2.1 Universal Profile Ingestion
+Primary path: User downloads LinkedIn PDF (More → Save to PDF) and drops it. System parses experience, bullets, dates, skills, summary, education with high fidelity.
+Secondary: Public profile URL (best-effort, rate-limited, graceful degradation).
+Tertiary: Raw text paste with automated field detection.
+Output: Master Profile data model that feeds Strength score, resume, case studies, and public profile.
+2.2 Living PM Profile (Public or Private)
+Hero: Name, target title, one-line value prop, domain focus, open-to-work status.
+About / Philosophy (AI-assisted draft from Master Profile, fully editable).
+Selected Case Studies (user chooses which appear publicly).
+Impact Highlights strip.
+Skills & Frameworks with evidence links.
+Contact / CTA.
+Default state = Draft. Publishing requires explicit checklist confirmation.
+2.3 Multi-Depth Reading Engine (Mandatory for every case study)Floating toggle on every case study page/card:
+Level 1 – 15-Second Exec Skim (default for public visitors)
+Clean visual card: Problem Statement · Single Key Metric Moved/Defended · Primary Strategic Trade-off · Methodology/Tech Stack.
+Level 2 – 2-Minute Narrative
+Standard structured flow (Context → Hypotheses / Options → Friction & Trade-offs → Decision → Outcomes → Learning).
+Level 3 – Artifact Deep Dive
+Full decision record, decision trees, calculation scratchpads, PRD excerpts, spoken audio snippet (if available), original Interview evidence links.
+Frontend simply toggles visibility layers and layout. All three levels live in the same data object.2.4 Case Study System
+Import path from any completed Interview scenario → pre-fills problem, evidence, decision, trade-offs, metrics, guardrails, learning. Auto-labeled [Strategic Teardown & Stress Test].
+Manual builder for real work → labeled [Production Impact].
+AI assists with narrative polishing, metric framing, ownership language, and missing-element detection. Never invents facts.
+Visual artifact upload (screenshots, simple diagrams, charts) with NDA warnings.
+2.5 Embedded Decision Replay + Verifiable Voice SnippetsFor any case study originating from a PMForge Interview:
+Interactive 45–60 second micro-player showing:
+Initial Metric / Situation
+Pushback or Injected Constraint
+Trade-off Chosen
+Candidate’s spoken rationale (audio)
+
+Subtle verification badge: “Verified Simulation — Defended under timed pressure on PMForge”.
+Optional Top-X% signal if the candidate scored in the upper band on the relevant dimension.
+This turns practice into authentic proof of real-time reasoning under pressure.2.6 “Ask This Candidate” Portfolio AI Agent
+Discrete inquiry bar on public profile: “Ask an interview question about [Name]’s work.”
+Visitor asks natural questions (e.g., “How do they handle engineer pushback?”, “Any experience with B2B churn?”).
+RAG agent grounded strictly in the candidate’s published case studies, resume bullets, and decision records.
+Response always cites the exact artifact: “Yes. In their B2B Billing Migration case study… [Read Case Study →]”.
+If no relevant experience exists: “Alex hasn’t documented an experience with this specific challenge yet. Invite them to interview to learn more.”
+Zero hallucination policy. Agent refuses to invent.
+2.7 NDA Metric Masking & De-Risking Scrubber
+Client-side tool.
+Candidate pastes sensitive text → one-click “De-Risk & Anonymize”.
+Converts absolute numbers and internal names into relative lifts, order-of-magnitude impact, and generic descriptors while preserving mathematical consistency across the entire portfolio.
+Maintains an internal mapping dictionary so percentages stay coherent.
+2.8 AI-Powered Resume / CV Builder
+Master + role-specific versions.
+Strict single-column, semantic HTML-to-PDF templates (ATS-safe). No multi-column CSS grids.
+AI rewriting and tailoring limited to data present in Master Profile or Interview Decision Records.
+JD Match Differential (not just a score):
+Hard Requirements missing
+Impact-type mismatch (e.g., “JD wants Zero-to-One, your resume is 80% Optimization”)
+Suggested additions drawn only from existing evidence
+
+Cover letter companion that references one real portfolio case study.
+Export: PDF, Markdown, plain text. Version history retained.
+2.9 Skills & Evidence Map
+Explicit skills inventory.
+Each skill links to supporting case studies, Interview scores, or resume bullets.
+Gap analysis against target role types (Growth, AI, Platform, Consumer, etc.).
+2.10 Strength Dashboard & Goals
+Composite Profile Strength score.
+Dimension breakdown + prioritized next actions.
+Career goals + lightweight job tracker (save JD → create tailored resume version → link relevant case study).
+Practice recommendations tied to weakest portfolio signals.
+3. Privacy, Access & Edge-Case Controls
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AreaFailure ModeRequired FixPublic ProfilesPoor SEO / weak social previewsSSR or static generation + dynamic OpenGraph cards (Name, Value Prop, Top Skills, Strength badge)PDF / PrintHeaders and charts split across pages@media print rules with page-break-inside: avoid on all cards, metrics, decision trees. Page-count balancing.Draft vs PublicAccidental exposure of incomplete or private practiceDefault-to-Draft. Publishing requires explicit checklist: “2+ Case Studies selected, 0 unscrubbed metrics, Contact verified”.SharingPassword friction kills recruiter usageTime-expiring signed links (e.g., 30-day validity) instead of passwords.AudioPermanent storage concernsOptional local recording for self-review; cloud storage only if user explicitly opts in for public embedding.4. Implementation Roadmap (Clear & Ordered)PHASE A — Trust Layer (MVP)
+Universal Profile Ingestion (LinkedIn PDF primary + fallbacks)
+Living PM Profile Builder with Level 1 & Level 2 reading views
+Case Study Builder + Interview Import (auto-labeled Strategic Teardown)
+ATS-compliant single-column Resume Builder + PDF export
+Client-side NDA Metric Masking Scrubber
+Default-to-Draft + publishing checklist
+Basic Strength Dashboard
+PHASE B — Intelligence Layer
+Full Multi-Depth Reader Engine (Level 3 + floating toggle)
+JD Tailoring Engine with Missing Signal Diagnostics
+Skills & Evidence Verification Map
+Time-expiring signed sharing links
+OpenGraph / SSR for public profiles
+PHASE C — Differentiator Layer
+Embedded Decision Replay + Spoken Audio Micro-Player with verification badge
+“Ask This Candidate” RAG Agent (grounded, no hallucination)
+Portfolio traffic analytics (views, scroll depth, audio listens)
+Mentor / Peer annotation mode on draft case studies
+5. What We Have Explicitly Covered (Nothing Critical Left Open)
+Bootcamp stigma → labeling + framing
+Recruiter 6–10 second attention → Multi-Depth default Level 1
+LinkedIn API restrictions → PDF-first ingestion
+Fakeable text → Decision Replay + verified audio
+Static portfolios → Ask-This-Candidate agent
+NDA risk → automated de-risking scrubber
+ATS breakage → single-column semantic export
+Accidental exposure → draft-first + checklist
+Sharing friction → signed expiring links
+Practice-to-portfolio flywheel → one-click import from Interview
+AI hallucination → strict grounding rules
+Print/PDF quality → page-break rules
+SEO & social previews → OpenGraph + SSR
+6. Success DefinitionA candidate can:
+Ingest their LinkedIn PDF in under 60 seconds.
+Turn a completed Interview into a labeled Strategic Teardown case study in one click.
+Publish a public profile whose default view is a 15-second scannable card.
+Embed a 60-second verified spoken defense of a real decision under pressure.
+Let a hiring manager ask free-form questions that are answered only from their actual artifacts.
+Export an ATS-safe resume tailored to a JD without inventing experience.
+Anonymize real metrics with one click while keeping relative numbers consistent.
+When these seven actions are possible, the Portfolio section is complete and differentiated.

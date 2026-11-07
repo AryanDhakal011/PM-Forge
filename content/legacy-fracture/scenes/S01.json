@@ -1,0 +1,27 @@
+{
+  "id": "S01",
+  "type": "CINEMA",
+  "background": "dispatch",
+  "goal": "Meet the company",
+  "tools": [],
+  "lines": [
+    {
+      "speaker": "narrator",
+      "text": "Granger and Sons Freight. One hundred twelve years of deliveries.",
+      "expression": "neutral",
+      "clip": null
+    },
+    {
+      "speaker": "narrator",
+      "text": "A brass bell opens every shift.",
+      "expression": "neutral",
+      "clip": null
+    },
+    {
+      "speaker": "narrator",
+      "text": "Peak season starts in nine weeks.",
+      "expression": "neutral",
+      "clip": null
+    }
+  ]
+}

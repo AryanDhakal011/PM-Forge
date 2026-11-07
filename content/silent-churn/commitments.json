@@ -1,0 +1,68 @@
+[
+  {
+    "id": "cap",
+    "text": "A capped 5% pilot",
+    "concern": "COST",
+    "cost": "Scope ≤5%; do not expand without another decision."
+  },
+  {
+    "id": "measure",
+    "text": "Measure payback in the pilot",
+    "concern": "COST",
+    "cost": "Spend 1 attention defining the renewal measurement."
+  },
+  {
+    "id": "call-track",
+    "text": "Track calls during the pilot",
+    "concern": "RISK",
+    "cost": "Spend 1 attention assigning claims-call measurement."
+  },
+  {
+    "id": "rollback",
+    "text": "A rehearsed rollback",
+    "concern": "RISK",
+    "cost": "Enable rollback and spend 1 attention rehearsing."
+  },
+  {
+    "id": "side-feed",
+    "text": "A flagged side feed",
+    "concern": "STABILITY",
+    "cost": "Use the phased method; keep the core untouched."
+  },
+  {
+    "id": "oncall",
+    "text": "A named on-call owner",
+    "concern": "STABILITY",
+    "cost": "Spend 1 attention arranging operator coverage."
+  },
+  {
+    "id": "wording",
+    "text": "Approved factual templates",
+    "concern": "COMPLIANCE",
+    "cost": "Spend 1 attention obtaining written wording approval."
+  },
+  {
+    "id": "signoff",
+    "text": "Written approval trail",
+    "concern": "COMPLIANCE",
+    "cost": "Save a complete pre-read and record Gideon approval."
+  },
+  {
+    "id": "brokers",
+    "text": "Brief brokers first",
+    "concern": "BROKERS",
+    "cost": "Spend 1 attention briefing Distribution before launch."
+  },
+  {
+    "id": "followup",
+    "text": "A personal follow-up",
+    "concern": "GENERAL",
+    "cost": "Spend 1 attention repairing a bypassed relationship."
+  },
+  {
+    "id": "warn",
+    "text": "Disclose the core-change risk",
+    "concern": "STABILITY",
+    "cost": "Record the risk now. This does not prevent a crash."
+  }
+]

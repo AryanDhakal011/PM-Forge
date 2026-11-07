@@ -1,0 +1,56 @@
+[
+  {
+    "id": "guide-neutral",
+    "path": "/levels/toy-regression/art/portraits/guide_neutral.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "The guide, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "guide-thinking",
+    "path": "/levels/toy-regression/art/portraits/guide_thinking.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "The guide, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "guide-annoyed",
+    "path": "/levels/toy-regression/art/portraits/guide_annoyed.svg",
+    "sizeKB": 0.8994140625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "The guide, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "guide-approving",
+    "path": "/levels/toy-regression/art/portraits/guide_approving.svg",
+    "sizeKB": 0.8955078125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "The guide, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "guide-pressured",
+    "path": "/levels/toy-regression/art/portraits/guide_pressured.svg",
+    "sizeKB": 0.892578125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "The guide, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "office",
+    "path": "/levels/toy-regression/art/backgrounds/office.svg",
+    "sizeKB": 0.8037109375,
+    "source": "PMForge layered background kit",
+    "license": "Project-authored original",
+    "alt": "Fictional office background",
+    "status": "placeholder"
+  }
+]

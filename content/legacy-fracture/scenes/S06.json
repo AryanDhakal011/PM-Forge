@@ -1,0 +1,23 @@
+{
+  "id": "S06",
+  "type": "DAYZERO",
+  "background": "dispatch",
+  "goal": "Practise the four tools",
+  "tools": [
+    "practice"
+  ],
+  "lines": [
+    {
+      "speaker": "coach",
+      "text": "Practice first. Nothing here counts.",
+      "expression": "neutral",
+      "clip": null
+    },
+    {
+      "speaker": "coach",
+      "text": "That is the loop. The real clock starts now.",
+      "expression": "approving",
+      "clip": null
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "voiceId": "placeholder-kavya",
+    "person": "kavya",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "Look at that curve!",
+    "samples": [
+      "Look at that curve!",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-dani",
+    "person": "dani",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "It is the loop. Do not touch it.",
+    "samples": [
+      "It is the loop. Do not touch it.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-omar",
+    "person": "omar",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "Four hundred ten thousand a week.",
+    "samples": [
+      "Four hundred ten thousand a week.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-rhea",
+    "person": "rhea",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "Users call it a feature. Hear them out.",
+    "samples": [
+      "Users call it a feature. Hear them out.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-tomas",
+    "person": "tomas",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "We refer each other every week. Take a loaf.",
+    "samples": [
+      "We refer each other every week. Take a loaf.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  }
+]

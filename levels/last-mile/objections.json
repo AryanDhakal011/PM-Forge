@@ -1,0 +1,59 @@
+[
+  {
+    "id": "evidence-objection",
+    "concern": "Unverified claim",
+    "text": "Show me the evidence behind that claim.",
+    "resolvers": [
+      {
+        "type": "evidence",
+        "ref": "follow-bikram"
+      },
+      {
+        "type": "evidence",
+        "ref": "follow-salma"
+      },
+      {
+        "type": "evidence",
+        "ref": "follow-joon"
+      },
+      {
+        "type": "evidence",
+        "ref": "follow-anita"
+      },
+      {
+        "type": "evidence",
+        "ref": "follow-rakesh"
+      },
+      {
+        "type": "evidence",
+        "ref": "water"
+      },
+      {
+        "type": "evidence",
+        "ref": "staff"
+      },
+      {
+        "type": "evidence",
+        "ref": "access"
+      },
+      {
+        "type": "evidence",
+        "ref": "support"
+      }
+    ],
+    "onResolve": [
+      {
+        "var": "credibility",
+        "op": "add",
+        "value": 5
+      }
+    ],
+    "onFail": [
+      {
+        "var": "credibility",
+        "op": "add",
+        "value": -5
+      }
+    ]
+  }
+]

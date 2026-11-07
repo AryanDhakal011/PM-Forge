@@ -1,0 +1,9 @@
+{
+  "id": "S17",
+  "type": "INCIDENT",
+  "background": "desktop",
+  "goal": "Diagnose the incident",
+  "tools": [
+    "logs"
+  ]
+}

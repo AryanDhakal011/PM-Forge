@@ -1,0 +1,47 @@
+{
+  "id": "pivot-point",
+  "title": "The Pivot Point",
+  "tagline": "Evidence, decisions, and consequences.",
+  "company": "PMFORGE / PRESERVED CAMPAIGN",
+  "status": "draft",
+  "version": "1.0.0",
+  "minPlatformVersion": "1.0.0",
+  "palette": {
+    "bg": "#142027",
+    "ink": "#f6f2e5",
+    "accent": "#b9c99d"
+  },
+  "fonts": [
+    "Inter",
+    "DM Serif Display"
+  ],
+  "difficulty": {
+    "guided": "Hints on",
+    "standard": "Hints reduced",
+    "sharp": "Hints off"
+  },
+  "entranceArt": "",
+  "estimatedMinutes": 32,
+  "startScene": "legacy",
+  "scenes": [
+    "legacy"
+  ],
+  "people": [],
+  "assetsBudgetKB": 3072,
+  "voiceCast": {},
+  "labels": "Simulated company, authored scenarios, expert review pending",
+  "flagKey": "pivot-point",
+  "minEvents": 0,
+  "systemic": false,
+  "launchCandidate": false,
+  "reviewGates": {
+    "design": "pending",
+    "content": "pending",
+    "accessibility-manual": "pending",
+    "performance": "pending",
+    "security": "pending",
+    "playtest": "pending",
+    "domain": "pending"
+  },
+  "runtime": "legacy-preserved"
+}

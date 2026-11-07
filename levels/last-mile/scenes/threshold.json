@@ -1,0 +1,48 @@
+{
+  "id": "threshold",
+  "type": "TOOL",
+  "background": "office",
+  "goal": "Choose a safety threshold with an uncertainty range.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "sana"
+  ],
+  "lines": [
+    {
+      "id": "line-6",
+      "speaker": "sana",
+      "expression": "thinking",
+      "text": "A forecast is a range, not a permission slip."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "threshold",
+      "kind": "SliderForecast",
+      "title": "Forecast fan",
+      "items": [],
+      "min": 0,
+      "max": 1,
+      "cost": 0,
+      "receiptId": "R_last-mile_threshold",
+      "lever": [
+        {
+          "id": "water",
+          "label": "Operating threshold",
+          "min": 0,
+          "max": 100,
+          "initial": 35,
+          "step": 5
+        }
+      ]
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "shelters"
+}

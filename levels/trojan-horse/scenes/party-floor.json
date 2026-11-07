@@ -1,0 +1,99 @@
+{
+  "id": "party-floor",
+  "type": "TOOL",
+  "background": "party",
+  "goal": "Visit two people. The introduction order matters.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "rhea"
+  ],
+  "lines": [
+    {
+      "id": "line-2",
+      "speaker": "rhea",
+      "expression": "thinking",
+      "text": "The party has four corners. You have time for two."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "party-floor",
+      "kind": "PartyFloor",
+      "title": "Walk the party",
+      "items": [
+        {
+          "id": "led",
+          "label": "LED wall · Kavya",
+          "detail": "Look at that curve!",
+          "effects": [
+            {
+              "var": "TRUST.kavya",
+              "op": "add",
+              "value": 5
+            }
+          ],
+          "reaction": "Look at that curve!",
+          "speaker": "kavya"
+        },
+        {
+          "id": "bar",
+          "label": "Bar · Dani",
+          "detail": "It is the loop. Do not touch it.",
+          "effects": [
+            {
+              "var": "TRUST.dani",
+              "op": "add",
+              "value": 5
+            }
+          ],
+          "reaction": "It is the loop. Do not touch it.",
+          "speaker": "dani"
+        },
+        {
+          "id": "corner",
+          "label": "Quiet corner · Omar",
+          "detail": "Four hundred ten thousand a week.",
+          "effects": [
+            {
+              "var": "TRUST.omar",
+              "op": "add",
+              "value": 5
+            }
+          ],
+          "reaction": "Four hundred ten thousand a week.",
+          "speaker": "omar"
+        },
+        {
+          "id": "booth",
+          "label": "Community booth · Rhea",
+          "detail": "Users call it a feature. Hear them out.",
+          "effects": [
+            {
+              "var": "TRUST.rhea",
+              "op": "add",
+              "value": 5
+            },
+            {
+              "flag": "guilds-named",
+              "value": true
+            }
+          ],
+          "reaction": "Users call it a feature. Hear them out.",
+          "speaker": "rhea"
+        }
+      ],
+      "min": 2,
+      "max": 2,
+      "cost": 2,
+      "receiptId": "R_trojan-horse_party-floor"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "drawers"
+}

@@ -1,0 +1,65 @@
+{
+  "id": "angry-call",
+  "type": "FACE",
+  "background": "office",
+  "goal": "Take the call when the Guild visit was missed.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "tomas"
+  ],
+  "lines": [
+    {
+      "id": "line-8",
+      "speaker": "tomas",
+      "expression": "thinking",
+      "text": "You changed our income without learning our names."
+    }
+  ],
+  "choices": [
+    {
+      "id": "listen-call",
+      "text": "Listen and name the uncertainty.",
+      "effects": [
+        {
+          "var": "partner",
+          "op": "add",
+          "value": 3
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_trojan-horse_listen-call",
+        "store": "text"
+      }
+    },
+    {
+      "id": "defend-call",
+      "text": "Defend the blanket policy.",
+      "effects": [
+        {
+          "var": "partner",
+          "op": "add",
+          "value": -12
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_trojan-horse_defend-call",
+        "store": "text"
+      }
+    }
+  ],
+  "tools": [],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 14,
+  "act": 2,
+  "when": {
+    "not": {
+      "flag": "guilds-named"
+    }
+  },
+  "next": "segments"
+}

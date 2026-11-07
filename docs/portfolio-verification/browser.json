@@ -1,0 +1,327 @@
+{
+  "base": "http://localhost:3002",
+  "checks": [
+    {
+      "label": "landing has no WebGL or video",
+      "pass": true
+    },
+    {
+      "label": "accessibility landing desktop",
+      "pass": true
+    },
+    {
+      "label": "landing fits 1920",
+      "pass": true
+    },
+    {
+      "label": "landing fits 1440",
+      "pass": true
+    },
+    {
+      "label": "landing fits 390",
+      "pass": true
+    },
+    {
+      "label": "landing fits 320",
+      "pass": true
+    },
+    {
+      "label": "accessibility signup",
+      "pass": true
+    },
+    {
+      "label": "guest retained",
+      "pass": true
+    },
+    {
+      "label": "accessibility desk",
+      "pass": true
+    },
+    {
+      "label": "collapsed sidebar control stays beside logo",
+      "pass": true
+    },
+    {
+      "label": "accessibility global search",
+      "pass": true
+    },
+    {
+      "label": "desk has no WebGL",
+      "pass": true
+    },
+    {
+      "label": "device menu opens",
+      "pass": true
+    },
+    {
+      "label": "device menu dismisses outside",
+      "pass": true
+    },
+    {
+      "label": "account menu closes on navigation",
+      "pass": true
+    },
+    {
+      "label": "accessibility switcher",
+      "pass": true
+    },
+    {
+      "label": "desk has exactly two secondary actions",
+      "pass": true
+    },
+    {
+      "label": "desk removes generic recommendation and bottom cards",
+      "pass": true
+    },
+    {
+      "label": "accessibility desk dark",
+      "pass": true
+    },
+    {
+      "label": "desk fits 390",
+      "pass": true
+    },
+    {
+      "label": "mobile primary action clears bottom navigation 390",
+      "pass": true
+    },
+    {
+      "label": "desk fits 320",
+      "pass": true
+    },
+    {
+      "label": "mobile primary action clears bottom navigation 320",
+      "pass": true
+    },
+    {
+      "label": "input Full name",
+      "pass": true
+    },
+    {
+      "label": "input One-line value proposition",
+      "pass": true
+    },
+    {
+      "label": "input Contact email",
+      "pass": true
+    },
+    {
+      "label": "input About you",
+      "pass": true
+    },
+    {
+      "label": "accessibility profile",
+      "pass": true
+    },
+    {
+      "label": "profile persists on reload",
+      "pass": true
+    },
+    {
+      "label": "accessibility case editor",
+      "pass": true
+    },
+    {
+      "label": "case narrative",
+      "pass": true
+    },
+    {
+      "label": "honest provenance",
+      "pass": true
+    },
+    {
+      "label": "accessibility resume",
+      "pass": true
+    },
+    {
+      "label": "ATS PDF created",
+      "pass": true
+    },
+    {
+      "label": "PDF parsed entirely on the device",
+      "pass": true
+    },
+    {
+      "label": "input Company",
+      "pass": true
+    },
+    {
+      "label": "input Role",
+      "pass": true
+    },
+    {
+      "label": "input Next action",
+      "pass": true
+    },
+    {
+      "label": "accessibility applications",
+      "pass": true
+    },
+    {
+      "label": "input Portfolio handle",
+      "pass": true
+    },
+    {
+      "label": "signed page rejects missing token",
+      "pass": true
+    },
+    {
+      "label": "accessibility share",
+      "pass": true
+    },
+    {
+      "label": "accessibility public reader",
+      "pass": true
+    },
+    {
+      "label": "input Your question",
+      "pass": true
+    },
+    {
+      "label": "answer has exact case citation",
+      "pass": true
+    },
+    {
+      "label": "input Your question",
+      "pass": true
+    },
+    {
+      "label": "undocumented work refused",
+      "pass": true
+    },
+    {
+      "label": "public page fits 390",
+      "pass": true
+    },
+    {
+      "label": "public page fits 320",
+      "pass": true
+    },
+    {
+      "label": "portfolio count in progress",
+      "pass": true
+    },
+    {
+      "label": "interview reflected in progress",
+      "pass": true
+    },
+    {
+      "label": "accessibility progress",
+      "pass": true
+    },
+    {
+      "label": "all five authored project formats contribute completed progress",
+      "pass": true
+    },
+    {
+      "label": "evidence text contained 390",
+      "pass": true
+    },
+    {
+      "label": "evidence text contained 320",
+      "pass": true
+    },
+    {
+      "label": "help starts at top",
+      "pass": true
+    },
+    {
+      "label": "test publication revoked",
+      "pass": true
+    },
+    {
+      "label": "revocation closes signed page",
+      "pass": true
+    },
+    {
+      "label": "all visible projects playable with valid flags",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "accessibility": [
+    {
+      "label": "landing desktop",
+      "violations": []
+    },
+    {
+      "label": "signup",
+      "violations": []
+    },
+    {
+      "label": "desk",
+      "violations": []
+    },
+    {
+      "label": "global search",
+      "violations": []
+    },
+    {
+      "label": "switcher",
+      "violations": []
+    },
+    {
+      "label": "desk dark",
+      "violations": []
+    },
+    {
+      "label": "profile",
+      "violations": []
+    },
+    {
+      "label": "case editor",
+      "violations": []
+    },
+    {
+      "label": "resume",
+      "violations": []
+    },
+    {
+      "label": "applications",
+      "violations": []
+    },
+    {
+      "label": "share",
+      "violations": []
+    },
+    {
+      "label": "public reader",
+      "violations": []
+    },
+    {
+      "label": "progress",
+      "violations": []
+    }
+  ],
+  "screenshots": [
+    "landing-desktop",
+    "landing-1920",
+    "landing-1440",
+    "landing-390",
+    "landing-320",
+    "desk-desktop",
+    "global-search",
+    "scenario-switcher",
+    "desk-dark",
+    "desk-390",
+    "desk-320",
+    "profile-desktop",
+    "case-editor",
+    "case-deep-dive",
+    "resume",
+    "applications",
+    "share",
+    "public-desktop",
+    "public-390",
+    "public-320",
+    "progress",
+    "progress-with-authored-saves",
+    "evidence-390",
+    "evidence-320"
+  ],
+  "publication": {
+    "handle": "pmf-check-1794079863755",
+    "url": "http://localhost:3002/p/pmf-check-1794079863755?t=uZBYHdn5mfRrnVJHL6xJqKvbQPWIitq0lQo3_iWo46U"
+  }
+}

@@ -33,7 +33,15 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    ".next/dev/types/**/*.ts"
+    ".next/dev/types/**/*.ts",
+    ".next-platform/types/**/*.ts",
+    ".next-platform/dev/types/**/*.ts",
+    ".next-pivot/types/**/*.ts",
+    ".next-pivot/dev/types/**/*.ts",
+    ".next-final/types/**/*.ts",
+    ".next-final/dev/types/**/*.ts",
+    ".next-auth/types/**/*.ts",
+    ".next-auth/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

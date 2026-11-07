@@ -1,0 +1,102 @@
+{
+  "id": "demo-3",
+  "type": "TOOL",
+  "background": "lab",
+  "goal": "Choose your intervention: the recovery.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "theo"
+  ],
+  "lines": [
+    {
+      "id": "line-21",
+      "speaker": "theo",
+      "expression": "thinking",
+      "text": "We are watching how the team handles the unexpected."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "demo-3",
+      "kind": "RadioRoom",
+      "title": "The recovery",
+      "items": [
+        {
+          "id": "let",
+          "label": "Let the robot continue.",
+          "detail": "",
+          "effects": [
+            {
+              "var": "readiness",
+              "op": "add",
+              "value": 2
+            },
+            {
+              "var": "risk",
+              "op": "add",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "id": "pause",
+          "label": "Pause and explain.",
+          "detail": "",
+          "effects": [
+            {
+              "var": "risk",
+              "op": "add",
+              "value": -4
+            },
+            {
+              "var": "readiness",
+              "op": "add",
+              "value": -1
+            }
+          ]
+        },
+        {
+          "id": "slow",
+          "label": "Slow the next motion.",
+          "detail": "",
+          "effects": [
+            {
+              "var": "risk",
+              "op": "add",
+              "value": -3
+            }
+          ]
+        },
+        {
+          "id": "takeover",
+          "label": "Take over explicitly.",
+          "detail": "",
+          "effects": [
+            {
+              "var": "risk",
+              "op": "add",
+              "value": -5
+            },
+            {
+              "var": "readiness",
+              "op": "add",
+              "value": -2
+            }
+          ]
+        }
+      ],
+      "min": 1,
+      "max": 1,
+      "cost": 0,
+      "receiptId": "R_deadlock_demo-3"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 84,
+  "act": 3,
+  "next": "demo-4"
+}

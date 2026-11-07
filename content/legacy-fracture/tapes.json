@@ -1,0 +1,23 @@
+[
+  {
+    "id": "batch",
+    "title": "The nightly batch",
+    "requires": "always",
+    "line": "The nightly batch clears overrides. I never liked that.",
+    "soWhat": "Why dispatchers fight the system."
+  },
+  {
+    "id": "road",
+    "title": "The missing source",
+    "requires": "rapport30",
+    "line": "The road table? Nobody has the source anymore.",
+    "soWhat": "A 2019 road rule still drives today's routes."
+  },
+  {
+    "id": "border",
+    "title": "Two in the morning",
+    "requires": "border-or-rapport55",
+    "line": "The two a.m. job writes customs codes. Billing reads them too.",
+    "soWhat": "LEDGER_SYNC feeds routing and billing."
+  }
+]

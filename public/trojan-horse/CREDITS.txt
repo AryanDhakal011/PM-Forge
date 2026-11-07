@@ -1,0 +1,9 @@
+PMForge — The Trojan Horses
+
+Dialogue, illustrated SVG portraits, referral graphs, interface and procedural soundscapes: original PMForge production.
+Recorded synthetic dialogue: Kokoro-82M v1.0, rendered offline with kokoro-onnx 0.6.1.
+Model: https://huggingface.co/hexgrad/Kokoro-82M (Apache License 2.0).
+Inference: https://github.com/thewh1teagle/kokoro-onnx (MIT).
+No speech model or voice synthesis runtime is shipped to browsers.
+Voice casting, captions, emotion directions and file provenance are in content/projects/trojan-horse/.
+Subframe Motion Library allocation-ring was consulted for design inspiration; no example source or assets were copied.

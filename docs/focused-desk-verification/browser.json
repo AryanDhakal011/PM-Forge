@@ -1,0 +1,371 @@
+{
+  "base": "http://localhost:3002",
+  "checks": [
+    {
+      "label": "accessibility today empty",
+      "pass": true
+    },
+    {
+      "label": "only two secondary desk actions",
+      "pass": true
+    },
+    {
+      "label": "no generic next recommendation or zero list without assessed data",
+      "pass": true
+    },
+    {
+      "label": "chart decision point has an explanatory tooltip",
+      "pass": true
+    },
+    {
+      "label": "tooltip dismisses with Escape",
+      "pass": true
+    },
+    {
+      "label": "menu export action has a visible hover state",
+      "pass": true
+    },
+    {
+      "label": "accessibility device menu",
+      "pass": true
+    },
+    {
+      "label": "accessibility account menu",
+      "pass": true
+    },
+    {
+      "label": "system menu stays inside a 320px screen",
+      "pass": true
+    },
+    {
+      "label": "accessibility overview empty",
+      "pass": true
+    },
+    {
+      "label": "career goal removed from Overview",
+      "pass": true
+    },
+    {
+      "label": "prioritized next actions capped at four",
+      "pass": true
+    },
+    {
+      "label": "accessibility master profile empty",
+      "pass": true
+    },
+    {
+      "label": "only four essential profile fields initially visible",
+      "pass": true
+    },
+    {
+      "label": "accessibility cases empty",
+      "pass": true
+    },
+    {
+      "label": "two equal case creation paths",
+      "pass": true
+    },
+    {
+      "label": "practice import has a specific next action when empty",
+      "pass": true
+    },
+    {
+      "label": "resume has actionable missing-source state",
+      "pass": true
+    },
+    {
+      "label": "cover letter secondary and collapsed",
+      "pass": true
+    },
+    {
+      "label": "publishing disabled before checklist and source completion",
+      "pass": true
+    },
+    {
+      "label": "recommendation identifies strongest actual category",
+      "pass": true
+    },
+    {
+      "label": "saved work has a direct resume action",
+      "pass": true
+    },
+    {
+      "label": "accessibility today returning",
+      "pass": true
+    },
+    {
+      "label": "case library defaults to quiet executive skims",
+      "pass": true
+    },
+    {
+      "label": "accessibility case skims",
+      "pass": true
+    },
+    {
+      "label": "input Target job description",
+      "pass": true
+    },
+    {
+      "label": "accessibility resume ready",
+      "pass": true
+    },
+    {
+      "label": "input Company",
+      "pass": true
+    },
+    {
+      "label": "input Role",
+      "pass": true
+    },
+    {
+      "label": "application list shows linked case",
+      "pass": true
+    },
+    {
+      "label": "application opens its attached resume",
+      "pass": true
+    },
+    {
+      "label": "application opens its attached case",
+      "pass": true
+    },
+    {
+      "label": "input Portfolio handle",
+      "pass": true
+    },
+    {
+      "label": "publish remains disabled before all confirmations: My contact email",
+      "pass": true
+    },
+    {
+      "label": "publish remains disabled before all confirmations: I reviewed every selected case",
+      "pass": true
+    },
+    {
+      "label": "publish enabled only after complete checklist and valid selected evidence",
+      "pass": true
+    },
+    {
+      "label": "accessibility share ready",
+      "pass": true
+    },
+    {
+      "label": "portfolio fits 390px light Overview",
+      "pass": true
+    },
+    {
+      "label": "accessibility Overview light mobile",
+      "pass": true
+    },
+    {
+      "label": "portfolio fits 390px light Master profile",
+      "pass": true
+    },
+    {
+      "label": "accessibility Master profile light mobile",
+      "pass": true
+    },
+    {
+      "label": "portfolio fits 390px light Case studies",
+      "pass": true
+    },
+    {
+      "label": "accessibility Case studies light mobile",
+      "pass": true
+    },
+    {
+      "label": "portfolio fits 390px light Resume studio",
+      "pass": true
+    },
+    {
+      "label": "accessibility Resume studio light mobile",
+      "pass": true
+    },
+    {
+      "label": "portfolio fits 390px light Applications",
+      "pass": true
+    },
+    {
+      "label": "accessibility Applications light mobile",
+      "pass": true
+    },
+    {
+      "label": "portfolio fits 390px light Share",
+      "pass": true
+    },
+    {
+      "label": "accessibility Share light mobile",
+      "pass": true
+    },
+    {
+      "label": "portfolio fits 390px dark Overview",
+      "pass": true
+    },
+    {
+      "label": "accessibility Overview dark mobile",
+      "pass": true
+    },
+    {
+      "label": "portfolio fits 390px dark Master profile",
+      "pass": true
+    },
+    {
+      "label": "accessibility Master profile dark mobile",
+      "pass": true
+    },
+    {
+      "label": "portfolio fits 390px dark Case studies",
+      "pass": true
+    },
+    {
+      "label": "accessibility Case studies dark mobile",
+      "pass": true
+    },
+    {
+      "label": "portfolio fits 390px dark Resume studio",
+      "pass": true
+    },
+    {
+      "label": "accessibility Resume studio dark mobile",
+      "pass": true
+    },
+    {
+      "label": "portfolio fits 390px dark Applications",
+      "pass": true
+    },
+    {
+      "label": "accessibility Applications dark mobile",
+      "pass": true
+    },
+    {
+      "label": "portfolio fits 390px dark Share",
+      "pass": true
+    },
+    {
+      "label": "accessibility Share dark mobile",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "accessibility": [
+    {
+      "label": "today empty",
+      "violations": []
+    },
+    {
+      "label": "device menu",
+      "violations": []
+    },
+    {
+      "label": "account menu",
+      "violations": []
+    },
+    {
+      "label": "overview empty",
+      "violations": []
+    },
+    {
+      "label": "master profile empty",
+      "violations": []
+    },
+    {
+      "label": "cases empty",
+      "violations": []
+    },
+    {
+      "label": "today returning",
+      "violations": []
+    },
+    {
+      "label": "case skims",
+      "violations": []
+    },
+    {
+      "label": "resume ready",
+      "violations": []
+    },
+    {
+      "label": "share ready",
+      "violations": []
+    },
+    {
+      "label": "Overview light mobile",
+      "violations": []
+    },
+    {
+      "label": "Master profile light mobile",
+      "violations": []
+    },
+    {
+      "label": "Case studies light mobile",
+      "violations": []
+    },
+    {
+      "label": "Resume studio light mobile",
+      "violations": []
+    },
+    {
+      "label": "Applications light mobile",
+      "violations": []
+    },
+    {
+      "label": "Share light mobile",
+      "violations": []
+    },
+    {
+      "label": "Overview dark mobile",
+      "violations": []
+    },
+    {
+      "label": "Master profile dark mobile",
+      "violations": []
+    },
+    {
+      "label": "Case studies dark mobile",
+      "violations": []
+    },
+    {
+      "label": "Resume studio dark mobile",
+      "violations": []
+    },
+    {
+      "label": "Applications dark mobile",
+      "violations": []
+    },
+    {
+      "label": "Share dark mobile",
+      "violations": []
+    }
+  ],
+  "screenshots": [
+    "today-empty",
+    "today-tooltip",
+    "device-menu",
+    "account-menu",
+    "account-menu-320",
+    "overview-empty",
+    "profile-empty",
+    "cases-empty",
+    "resume-empty",
+    "share-empty",
+    "today-returning",
+    "overview-ready",
+    "cases-ready",
+    "resume-ready",
+    "applications-ready",
+    "share-ready",
+    "overview-light-390",
+    "master-profile-light-390",
+    "case-studies-light-390",
+    "resume-studio-light-390",
+    "applications-light-390",
+    "share-light-390",
+    "overview-dark-390",
+    "master-profile-dark-390",
+    "case-studies-dark-390",
+    "resume-studio-dark-390",
+    "applications-dark-390",
+    "share-dark-390"
+  ]
+}

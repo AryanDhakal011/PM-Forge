@@ -29,7 +29,7 @@ The gallery has all 12 palettes, responsive cards, category filters, one role/pr
 - After chapter 3, the debrief returns to paper. It presents the outcome, exact decision → delta → reaction → constraint chain, an archetype definition, three alternate levers, JSON/Markdown exports and Interview practice suggested from the most exposed operating tradeoff. Last Mile gets a multi-stakeholder tension map instead of a single archetype.
 - Replay from any completed chapter creates a new run, reconstructs the prefix through the engine, preselects a different choice and preserves the original. Every named archetype is reachable by an authored path.
 
-All numeric meters are fictional operating indices or simulated runway weeks, not performance scores. Campaigns have no rubric totals or leaderboard. The 45–75 minute duration is a planning estimate, not a participant-tested median.
+All numeric meters are fictional operating indices or simulated runway weeks, not performance scores. Campaigns have no rubric totals or leaderboard. The three dedicated simulations (The Deadlock, The Sacred No, The Ghost Metric) are planned at about 15 minutes each; the nine campaign blueprints remain planned at 45–75. Both are planning estimates, not participant-tested medians.
 
 ## Persistence, consent and ownership
 

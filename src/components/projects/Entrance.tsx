@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { useSettings } from "@/components/providers/SettingsProvider";
 import { projectEntrance } from "@/lib/motion/projectEntrances";
 import type { Project } from "@/lib/projects/types";
@@ -48,7 +48,7 @@ export default function Entrance({
   done.current = onDone;
   const { reducedMotion } = useSettings();
   const [skip, setSkip] = useState(skipImmediately);
-  useEffect(() => {
+  useLayoutEffect(() => {
     const before = document.activeElement as HTMLElement | null;
     root.current?.focus();
     if (reducedMotion || calm) {

@@ -1,0 +1,10 @@
+PMForge — The Invisible Wall
+
+Halcyon Labs, Vesper and all characters are fictional.
+World, parametric SVG portraits, shader, graphs, interface, procedural soundscapes and implementation: original PMForge production.
+Dialogue adapted from the user-supplied complete game-style handoff.
+Synthetic voices: Kokoro-82M v1.0 (Apache License 2.0), rendered offline through kokoro-onnx 0.6.1 (MIT).
+Model source: https://huggingface.co/hexgrad/Kokoro-82M
+Inference source: https://github.com/thewh1teagle/kokoro-onnx
+No model weights or speech synthesis runtime ship to browsers.
+Subframe Motion Library spotlight, waveform and phosphor references were consulted as design inspiration. No example code or assets were copied.

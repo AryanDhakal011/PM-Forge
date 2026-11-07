@@ -1,0 +1,13 @@
+{
+  "id": "S07",
+  "type": "TOOL",
+  "background": "desktop",
+  "goal": "Plan Monday",
+  "tools": [
+    "board",
+    "allocation",
+    "stress",
+    "gate",
+    "slides"
+  ]
+}

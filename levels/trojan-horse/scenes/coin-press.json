@@ -1,0 +1,67 @@
+{
+  "id": "coin-press",
+  "type": "TOOL",
+  "background": "party",
+  "goal": "Place a referral in the press. Listen for the second payout.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "kavya"
+  ],
+  "lines": [
+    {
+      "id": "line-1",
+      "speaker": "kavya",
+      "expression": "thinking",
+      "text": "Look at that curve!"
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "coin-press",
+      "kind": "CoinPress",
+      "title": "One referral. Two payouts.",
+      "items": [
+        {
+          "id": "once",
+          "label": "Pay once",
+          "detail": "A genuine referral earns one reward.",
+          "effects": [
+            {
+              "var": "cash",
+              "op": "add",
+              "value": -1
+            }
+          ]
+        },
+        {
+          "id": "twice",
+          "label": "Pay twice",
+          "detail": "The same referral loops back through the press.",
+          "effects": [
+            {
+              "var": "cash",
+              "op": "add",
+              "value": -2
+            },
+            {
+              "flag": "double-paid",
+              "value": true
+            }
+          ]
+        }
+      ],
+      "min": 1,
+      "max": 1,
+      "cost": 0,
+      "receiptId": "R_trojan-horse_coin-press"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "party-floor"
+}

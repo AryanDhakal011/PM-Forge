@@ -1,0 +1,63 @@
+{
+  "id": "segments",
+  "type": "TOOL",
+  "background": "office",
+  "goal": "Place each segment with its people and incentives visible.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "rhea"
+  ],
+  "lines": [
+    {
+      "id": "line-9",
+      "speaker": "rhea",
+      "expression": "thinking",
+      "text": "Fraud rings, gamers, Guilds. Different value. Different treatment."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "segments",
+      "kind": "CaseCards",
+      "title": "Segment board",
+      "items": [
+        {
+          "id": "fraud",
+          "label": "Fraud rings",
+          "detail": "One device. Multiple identities. No purchase value.",
+          "effects": []
+        },
+        {
+          "id": "gamers",
+          "label": "Reward gamers",
+          "detail": "Real people optimizing a reward mechanic.",
+          "effects": []
+        },
+        {
+          "id": "guilds",
+          "label": "Neighborhood Guilds",
+          "detail": "Leena’s bakery, Asha’s flowers, Tomas’s market.",
+          "effects": []
+        }
+      ],
+      "min": 3,
+      "max": 3,
+      "cost": 0,
+      "receiptId": "R_trojan-horse_segments",
+      "bins": [
+        "cut",
+        "sunset",
+        "formalize",
+        "keep"
+      ]
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 14,
+  "act": 2,
+  "next": "grace"
+}

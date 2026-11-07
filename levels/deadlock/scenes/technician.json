@@ -1,0 +1,65 @@
+{
+  "id": "technician",
+  "type": "FACE",
+  "background": "lab",
+  "goal": "The technician returns when the near-miss was left unresolved.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "nadia"
+  ],
+  "lines": [
+    {
+      "id": "line-23",
+      "speaker": "nadia",
+      "expression": "thinking",
+      "text": "That sleeve was in the rehearsal footage."
+    }
+  ],
+  "choices": [
+    {
+      "id": "own-near-miss",
+      "text": "Stop and own the earlier warning.",
+      "effects": [
+        {
+          "var": "risk",
+          "op": "add",
+          "value": -5
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_deadlock_own-near-miss",
+        "store": "text"
+      }
+    },
+    {
+      "id": "continue-near-miss",
+      "text": "Continue within the accepted risk.",
+      "effects": [
+        {
+          "var": "risk",
+          "op": "add",
+          "value": 10
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_deadlock_continue-near-miss",
+        "store": "text"
+      }
+    }
+  ],
+  "tools": [],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 84,
+  "act": 3,
+  "when": {
+    "not": {
+      "flag": "near-miss-mitigated"
+    }
+  },
+  "next": "review"
+}

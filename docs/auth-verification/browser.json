@@ -1,0 +1,108 @@
+{
+  "base": "http://localhost:3014",
+  "checks": [
+    {
+      "label": "input Your name",
+      "pass": true
+    },
+    {
+      "label": "input Email address",
+      "pass": true
+    },
+    {
+      "label": "input Password",
+      "pass": true
+    },
+    {
+      "label": "signup fields valid",
+      "pass": true
+    },
+    {
+      "label": "preview delivery is honestly labeled",
+      "pass": true
+    },
+    {
+      "label": "verified signup preserves requested destination",
+      "pass": true
+    },
+    {
+      "label": "accessibility authenticated practice",
+      "pass": true
+    },
+    {
+      "label": "account session exists",
+      "pass": true
+    },
+    {
+      "label": "session cookie HttpOnly and SameSite",
+      "pass": true
+    },
+    {
+      "label": "input Email address",
+      "pass": true
+    },
+    {
+      "label": "input Password",
+      "pass": true
+    },
+    {
+      "label": "invalid credentials handled",
+      "pass": true
+    },
+    {
+      "label": "input Password",
+      "pass": true
+    },
+    {
+      "label": "returning login skips completed onboarding",
+      "pass": true
+    },
+    {
+      "label": "input Email address",
+      "pass": true
+    },
+    {
+      "label": "input New password",
+      "pass": true
+    },
+    {
+      "label": "input Confirm new password",
+      "pass": true
+    },
+    {
+      "label": "browser recovery completes",
+      "pass": true
+    },
+    {
+      "label": "browser rejects reused recovery link",
+      "pass": true
+    },
+    {
+      "label": "accessibility reset error",
+      "pass": true
+    },
+    {
+      "label": "auth request size bounded",
+      "pass": true
+    },
+    {
+      "label": "foreign origin rejected",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "accessibility": [
+    {
+      "label": "authenticated practice",
+      "violations": []
+    },
+    {
+      "label": "reset error",
+      "violations": []
+    }
+  ],
+  "screenshots": [
+    "verification"
+  ]
+}

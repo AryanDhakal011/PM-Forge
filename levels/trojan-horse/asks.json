@@ -1,0 +1,752 @@
+[
+  {
+    "person": "kavya",
+    "topic": "priority",
+    "cost": 1,
+    "minTrust": 0,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-41",
+            "speaker": "kavya",
+            "expression": "thinking",
+            "text": "Look at that curve!"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.kavya",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "kavya",
+    "topic": "risk",
+    "cost": 1,
+    "minTrust": 0,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-42",
+            "speaker": "kavya",
+            "expression": "thinking",
+            "text": "Name the downside before you ask for a signature."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.kavya",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "kavya",
+    "topic": "evidence",
+    "cost": 1,
+    "minTrust": 0,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-43",
+            "speaker": "kavya",
+            "expression": "thinking",
+            "text": "A measured result beats a confident claim."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.kavya",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "kavya",
+    "topic": "people",
+    "cost": 1,
+    "minTrust": 30,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-44",
+            "speaker": "kavya",
+            "expression": "thinking",
+            "text": "Ask the people doing the work, including the quiet shift."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.kavya",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "kavya",
+    "topic": "promise",
+    "cost": 1,
+    "minTrust": 30,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-45",
+            "speaker": "kavya",
+            "expression": "thinking",
+            "text": "Promise what the team can verify and support."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.kavya",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "kavya",
+    "topic": "next",
+    "cost": 1,
+    "minTrust": 30,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-46",
+            "speaker": "kavya",
+            "expression": "thinking",
+            "text": "Start small, watch the result, then decide again."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.kavya",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "dani",
+    "topic": "priority",
+    "cost": 1,
+    "minTrust": 0,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-47",
+            "speaker": "dani",
+            "expression": "thinking",
+            "text": "It is the loop. Do not touch it."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.dani",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "dani",
+    "topic": "risk",
+    "cost": 1,
+    "minTrust": 0,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-48",
+            "speaker": "dani",
+            "expression": "thinking",
+            "text": "Name the downside before you ask for a signature."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.dani",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "dani",
+    "topic": "evidence",
+    "cost": 1,
+    "minTrust": 0,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-49",
+            "speaker": "dani",
+            "expression": "thinking",
+            "text": "A measured result beats a confident claim."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.dani",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "dani",
+    "topic": "people",
+    "cost": 1,
+    "minTrust": 30,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-50",
+            "speaker": "dani",
+            "expression": "thinking",
+            "text": "Ask the people doing the work, including the quiet shift."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.dani",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "dani",
+    "topic": "promise",
+    "cost": 1,
+    "minTrust": 30,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-51",
+            "speaker": "dani",
+            "expression": "thinking",
+            "text": "Promise what the team can verify and support."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.dani",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "dani",
+    "topic": "next",
+    "cost": 1,
+    "minTrust": 30,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-52",
+            "speaker": "dani",
+            "expression": "thinking",
+            "text": "Start small, watch the result, then decide again."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.dani",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "omar",
+    "topic": "priority",
+    "cost": 1,
+    "minTrust": 0,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-53",
+            "speaker": "omar",
+            "expression": "thinking",
+            "text": "Four hundred ten thousand a week."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.omar",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "omar",
+    "topic": "risk",
+    "cost": 1,
+    "minTrust": 0,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-54",
+            "speaker": "omar",
+            "expression": "thinking",
+            "text": "Name the downside before you ask for a signature."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.omar",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "omar",
+    "topic": "evidence",
+    "cost": 1,
+    "minTrust": 0,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-55",
+            "speaker": "omar",
+            "expression": "thinking",
+            "text": "A measured result beats a confident claim."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.omar",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "omar",
+    "topic": "people",
+    "cost": 1,
+    "minTrust": 30,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-56",
+            "speaker": "omar",
+            "expression": "thinking",
+            "text": "Ask the people doing the work, including the quiet shift."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.omar",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "omar",
+    "topic": "promise",
+    "cost": 1,
+    "minTrust": 30,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-57",
+            "speaker": "omar",
+            "expression": "thinking",
+            "text": "Promise what the team can verify and support."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.omar",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "omar",
+    "topic": "next",
+    "cost": 1,
+    "minTrust": 30,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-58",
+            "speaker": "omar",
+            "expression": "thinking",
+            "text": "Start small, watch the result, then decide again."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.omar",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "rhea",
+    "topic": "priority",
+    "cost": 1,
+    "minTrust": 0,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-59",
+            "speaker": "rhea",
+            "expression": "thinking",
+            "text": "Users call it a feature. Hear them out."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.rhea",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "rhea",
+    "topic": "risk",
+    "cost": 1,
+    "minTrust": 0,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-60",
+            "speaker": "rhea",
+            "expression": "thinking",
+            "text": "Name the downside before you ask for a signature."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.rhea",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "rhea",
+    "topic": "evidence",
+    "cost": 1,
+    "minTrust": 0,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-61",
+            "speaker": "rhea",
+            "expression": "thinking",
+            "text": "A measured result beats a confident claim."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.rhea",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "rhea",
+    "topic": "people",
+    "cost": 1,
+    "minTrust": 30,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-62",
+            "speaker": "rhea",
+            "expression": "thinking",
+            "text": "Ask the people doing the work, including the quiet shift."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.rhea",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "rhea",
+    "topic": "promise",
+    "cost": 1,
+    "minTrust": 30,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-63",
+            "speaker": "rhea",
+            "expression": "thinking",
+            "text": "Promise what the team can verify and support."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.rhea",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "rhea",
+    "topic": "next",
+    "cost": 1,
+    "minTrust": 30,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-64",
+            "speaker": "rhea",
+            "expression": "thinking",
+            "text": "Start small, watch the result, then decide again."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.rhea",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "tomas",
+    "topic": "priority",
+    "cost": 1,
+    "minTrust": 0,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-65",
+            "speaker": "tomas",
+            "expression": "thinking",
+            "text": "We refer each other every week. Take a loaf."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.tomas",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "tomas",
+    "topic": "risk",
+    "cost": 1,
+    "minTrust": 0,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-66",
+            "speaker": "tomas",
+            "expression": "thinking",
+            "text": "Name the downside before you ask for a signature."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.tomas",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "tomas",
+    "topic": "evidence",
+    "cost": 1,
+    "minTrust": 0,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-67",
+            "speaker": "tomas",
+            "expression": "thinking",
+            "text": "A measured result beats a confident claim."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.tomas",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "tomas",
+    "topic": "people",
+    "cost": 1,
+    "minTrust": 30,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-68",
+            "speaker": "tomas",
+            "expression": "thinking",
+            "text": "Ask the people doing the work, including the quiet shift."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.tomas",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "tomas",
+    "topic": "promise",
+    "cost": 1,
+    "minTrust": 30,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-69",
+            "speaker": "tomas",
+            "expression": "thinking",
+            "text": "Promise what the team can verify and support."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.tomas",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "person": "tomas",
+    "topic": "next",
+    "cost": 1,
+    "minTrust": 30,
+    "answers": [
+      {
+        "lines": [
+          {
+            "id": "line-70",
+            "speaker": "tomas",
+            "expression": "thinking",
+            "text": "Start small, watch the result, then decide again."
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "var": "TRUST.tomas",
+        "op": "add",
+        "value": 2
+      }
+    ]
+  }
+]

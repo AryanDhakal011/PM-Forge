@@ -1,0 +1,17 @@
+{
+  "id": "S10",
+  "type": "MAP",
+  "background": "server",
+  "goal": "Trace what breaks",
+  "tools": [
+    "map"
+  ],
+  "lines": [
+    {
+      "speaker": "leif",
+      "text": "Place what we know. See what breaks if we move it.",
+      "expression": "pressured",
+      "clip": null
+    }
+  ]
+}

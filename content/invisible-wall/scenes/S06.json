@@ -1,0 +1,32 @@
+{
+  "id": "S06",
+  "type": "NARR",
+  "background": "floor",
+  "speakers": [
+    "narration",
+    "tavi"
+  ],
+  "lines": [
+    {
+      "id": "s06-1",
+      "speaker": "tavi",
+      "expression": "thinking",
+      "text": "The Annex is founders only. Imani built the scheduler.",
+      "voiceId": "tavi",
+      "phase": "before"
+    },
+    {
+      "id": "s06-2",
+      "speaker": "narration",
+      "expression": "thinking",
+      "text": "You are PM, Model Platform. Find what throttles Vesper. Decide what to do.",
+      "voiceId": "narration",
+      "phase": "before"
+    }
+  ],
+  "choices": [],
+  "tool": "continue",
+  "goal": "Take your role",
+  "canStill": "Read your assignment and available resources.",
+  "next": "S07"
+}

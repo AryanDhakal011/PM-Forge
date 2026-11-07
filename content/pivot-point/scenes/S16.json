@@ -1,0 +1,1 @@
+{"id":"S16","type":"FACE","background":"corridor","goal":"Respond to the clinical concern.","tools":["reply"],"lines":[{"speaker":"kapoor","text":"Show me what happens when the model falls short.","expression":"thinking"}]}

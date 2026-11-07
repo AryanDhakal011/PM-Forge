@@ -1,0 +1,27 @@
+{
+  "id": "opening",
+  "type": "NARR",
+  "background": "office",
+  "goal": "Understand the constraint.",
+  "canStill": "Read, continue, or pause.",
+  "speakers": [
+    "guide"
+  ],
+  "lines": [
+    {
+      "id": "opening-line",
+      "speaker": "guide",
+      "expression": "neutral",
+      "text": "We need a decision we can explain tomorrow."
+    }
+  ],
+  "choices": [],
+  "tools": [],
+  "onEnter": [],
+  "onExit": [],
+  "next": "decision",
+  "skippable": true,
+  "minInteractions": 0,
+  "day": 1,
+  "act": 1
+}

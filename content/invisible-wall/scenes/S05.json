@@ -1,0 +1,72 @@
+{
+  "id": "S05",
+  "type": "PHONE",
+  "background": "terminal",
+  "speakers": [
+    "jonas"
+  ],
+  "lines": [
+    {
+      "id": "s05-1",
+      "speaker": "jonas",
+      "expression": "approving",
+      "text": "Gate Five by Friday. Tell me you're on it.",
+      "voiceId": "jonas",
+      "phase": "before"
+    },
+    {
+      "id": "s05-2",
+      "speaker": "jonas",
+      "expression": "approving",
+      "text": "That's the energy.",
+      "voiceId": "jonas",
+      "phase": "after",
+      "when": "choice:A"
+    },
+    {
+      "id": "s05-3",
+      "speaker": "jonas",
+      "expression": "thinking",
+      "text": "Fine. Fast.",
+      "voiceId": "jonas",
+      "phase": "after",
+      "when": "choice:B"
+    },
+    {
+      "id": "s05-4",
+      "speaker": "jonas",
+      "expression": "annoyed",
+      "text": "Friday. That's the deadline.",
+      "voiceId": "jonas",
+      "phase": "after",
+      "when": "choice:C"
+    }
+  ],
+  "choices": [
+    {
+      "id": "A",
+      "text": "On it.",
+      "effects": {},
+      "receipt": "R02",
+      "next": "S06"
+    },
+    {
+      "id": "B",
+      "text": "I'll find the blocker first.",
+      "effects": {},
+      "receipt": "R02",
+      "next": "S06"
+    },
+    {
+      "id": "C",
+      "text": "What's the real deadline?",
+      "effects": {},
+      "receipt": "R02",
+      "next": "S06"
+    }
+  ],
+  "tool": "reply",
+  "goal": "Set expectations with Jonas",
+  "canStill": "Choose what you can promise.",
+  "next": "S06"
+}

@@ -1,0 +1,100 @@
+{
+  "id": "drawers",
+  "type": "TOOL",
+  "background": "party",
+  "goal": "Open three reports that distinguish value from incentives.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "omar"
+  ],
+  "lines": [
+    {
+      "id": "line-3",
+      "speaker": "omar",
+      "expression": "thinking",
+      "text": "The payout ledger has a rhythm nobody budgeted for."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "drawers",
+      "kind": "EvidenceDrawers",
+      "title": "Seven reports",
+      "items": [
+        {
+          "id": "ledger",
+          "label": "Payout ledger",
+          "detail": "Shows $410k paid weekly, not the displayed $120k.",
+          "effects": [],
+          "group": "ledger",
+          "soWhat": "Shows the outgoing rewards the dashboard misses."
+        },
+        {
+          "id": "graph",
+          "label": "Account graph",
+          "detail": "Shows circular referral clusters.",
+          "effects": [],
+          "group": "graph",
+          "soWhat": "Shows who repeatedly refers whom."
+        },
+        {
+          "id": "cohort",
+          "label": "Cohort value",
+          "detail": "Shows which referrals later buy useful services.",
+          "effects": [],
+          "group": "cohort",
+          "soWhat": "Shows who buys after a referral."
+        },
+        {
+          "id": "devices",
+          "label": "Device fingerprints",
+          "detail": "Shows one device controlling many accounts.",
+          "effects": [],
+          "group": "devices",
+          "soWhat": "Shows who controls multiple accounts."
+        },
+        {
+          "id": "community",
+          "label": "Community threads",
+          "detail": "Shows neighbors exchanging useful referrals.",
+          "effects": [
+            {
+              "flag": "guilds-named",
+              "value": true
+            }
+          ],
+          "group": "guilds",
+          "soWhat": "Shows how neighbors use the rewards."
+        },
+        {
+          "id": "contracts",
+          "label": "Partner contracts",
+          "detail": "Shows rewards promised in writing.",
+          "effects": [],
+          "group": "contracts",
+          "soWhat": "Shows which promises are already in writing."
+        },
+        {
+          "id": "cash",
+          "label": "Cash forecast",
+          "detail": "Shows twelve weeks of cash at current burn.",
+          "effects": [],
+          "group": "cash",
+          "soWhat": "Shows how payouts affect runway."
+        }
+      ],
+      "min": 3,
+      "max": 3,
+      "cost": 1,
+      "receiptId": "R_trojan-horse_drawers"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 2,
+  "act": 1,
+  "next": "fraud-hunt"
+}

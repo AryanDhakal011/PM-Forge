@@ -13,7 +13,7 @@ const WATCHDOG_MS = LOADER_TIMING.hardMax * 1000 + 1500;
 
 export const LOADER_BOOT_SCRIPT = `(function(){try{
 var html=document.documentElement;
-if(location.pathname!=="/")return;
+if(location.pathname!=="/"||!html.hasAttribute("data-legacy-loader"))return;
 var reduce=false;
 try{reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;}catch(e){}
 var stored=null;

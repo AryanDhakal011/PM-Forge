@@ -1,0 +1,18 @@
+{
+  "preview": "http://localhost:3002/app/projects/pivot-point/play",
+  "build": "qZByq_OIdny1xq2GXEAk1",
+  "productionBuild": "passed",
+  "baseTests": 50,
+  "levelTests": 13,
+  "completeEnginePaths": 10,
+  "eventCoverage": "24/24",
+  "browserChecks": 103,
+  "browserFailures": [],
+  "consoleErrors": [],
+  "accessibility": 100,
+  "globalListenersStable": true,
+  "rollback": "both entry routes verified",
+  "humanReview": "Clinician and health-equity review pending",
+  "art": "Original SVG placeholders",
+  "audio": "Synthesized ambience and chimes, muted by default"
+}

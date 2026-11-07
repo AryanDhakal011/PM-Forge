@@ -1,0 +1,39 @@
+{
+  "id": "S04",
+  "type": "TOOL",
+  "background": "floor",
+  "speakers": [
+    "tavi"
+  ],
+  "lines": [
+    {
+      "id": "s04-1",
+      "speaker": "tavi",
+      "expression": "pressured",
+      "text": "Can I show you something? It's probably the scheduler.",
+      "voiceId": "tavi",
+      "phase": "before"
+    },
+    {
+      "id": "s04-2",
+      "speaker": "tavi",
+      "expression": "thinking",
+      "text": "See that? It drops when the benchmark climbs.",
+      "voiceId": "tavi",
+      "phase": "after"
+    },
+    {
+      "id": "s04-3",
+      "speaker": "tavi",
+      "expression": "pressured",
+      "text": "Every time. I think I'm wrong. Am I wrong?",
+      "voiceId": "tavi",
+      "phase": "after"
+    }
+  ],
+  "choices": [],
+  "tool": "mini-log",
+  "goal": "Notice the mismatch",
+  "canStill": "Move the playhead to 2:14 and inspect the dip.",
+  "next": "S05"
+}

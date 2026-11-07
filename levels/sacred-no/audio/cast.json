@@ -1,0 +1,54 @@
+[
+  {
+    "voiceId": "placeholder-kian",
+    "person": "kian",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "Fine. Convince me.",
+    "samples": [
+      "Fine. Convince me.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-priya",
+    "person": "priya",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "I am not touching the queue unguarded.",
+    "samples": [
+      "I am not touching the queue unguarded.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-tess",
+    "person": "tess",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "Say yes and I stop asking.",
+    "samples": [
+      "Say yes and I stop asking.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  },
+  {
+    "voiceId": "placeholder-marlo",
+    "person": "marlo",
+    "status": "captions-only",
+    "age": "adult",
+    "pace": "measured",
+    "tone": "Tell me what I can actually use.",
+    "samples": [
+      "Tell me what I can actually use.",
+      "Name the downside before you ask for a signature.",
+      "A measured result beats a confident claim."
+    ]
+  }
+]

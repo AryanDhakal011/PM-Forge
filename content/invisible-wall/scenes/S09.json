@@ -1,0 +1,40 @@
+{
+  "id": "S09",
+  "type": "TOOL",
+  "background": "server",
+  "speakers": [
+    "soren",
+    "tavi"
+  ],
+  "lines": [
+    {
+      "id": "s09-1",
+      "speaker": "soren",
+      "expression": "neutral",
+      "text": "Trace a job. Follow where it waits.",
+      "voiceId": "soren",
+      "phase": "before"
+    },
+    {
+      "id": "s09-2",
+      "speaker": "soren",
+      "expression": "annoyed",
+      "text": "Please don't. That's not on my diagram.",
+      "voiceId": "soren",
+      "phase": "after"
+    },
+    {
+      "id": "s09-3",
+      "speaker": "tavi",
+      "expression": "pressured",
+      "text": "I told you. Something's there.",
+      "voiceId": "tavi",
+      "phase": "after"
+    }
+  ],
+  "choices": [],
+  "tool": "trace",
+  "goal": "Trace the unexpected process",
+  "canStill": "Follow the job crossing index 70 through its lineage.",
+  "next": "S07"
+}

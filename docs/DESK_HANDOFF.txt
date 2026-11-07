@@ -1,0 +1,164 @@
+omplete UI/UX Handoff (Target: 10/10)Goal
+
+Turn this entry surface into the most compelling, low-friction, high-signal starting point in the product. It must simultaneously:
+Feel like a senior PM’s actual desk (focused, curated, calm)
+Create immediate curiosity and momentum
+Make progress visible without guilt or overwhelm
+Encourage both deep work on one scenario and exploration of the full set
+Seamlessly connect to the new Interview realism and Portfolio systems
+1. Current State Diagnosis (from the screenshot)Strengths
+Strong editorial voice (“On your desk today”)
+Clean two-panel layout
+Beautiful line chart with “release” marker
+Clear primary CTA
+Coverage visualization is distinctive
+Weaknesses that prevent 10/10
+The left panel feels static / poster-like rather than interactive
+Secondary actions (“Pick another”, “Browse all 63”) are under-emphasized
+Coverage panel is visually heavy but information-light (just zeros)
+No sense of personalization or “why this scenario right now”
+No clear path for returning users (resume, weakest category, recommended next)
+Missing emotional reward and progress narrative
+The chart is decorative rather than decision-relevant
+Mobile behavior is undefined
+No connection to Portfolio or spoken practice outcomes
+2. Design Principles for 10/10
+Desk, not dashboard — One primary focus + clear secondary paths. Never a wall of options.
+Curiosity first, progress second — Lead with the mystery of the scenario, then show coverage.
+Progress without pressure — Show what is lit without making zeros feel like failure.
+One-click depth — From this surface the user should be able to start, resume, or deeply understand the scenario in under two clicks.
+Living surface — It should change meaningfully based on user state (first-time, mid-progress, returning after a streak, Portfolio strength, weakest category).
+3. Recommended Layout (Desktop)Overall structure: Two primary columns + thin contextual header strip.text┌─────────────────────────────────────────────────────────────────────────────┐
+│  Contextual header (subtle)                                                │
+│  “On your desk today”  ·  Last practiced 2 days ago  ·  Streak 3           │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────┬────────────────────────────────────────────┐
+│                              │                                            │
+│   LEFT: Focus Scenario       │   RIGHT: Coverage & Momentum               │
+│   (60–65% width)             │   (35–40% width)                           │
+│                              │                                            │
+│   • Scenario card            │   • Coverage visualization (refined)       │
+│   • Micro-insight            │   • Next edge recommendation               │
+│   • Primary CTA              │   • Category progress                      │
+│   • Secondary actions        │   • Quick filters / Browse                 │
+│                              │                                            │
+└──────────────────────────────┴────────────────────────────────────────────┘4. Left Panel — Focus Scenario (The “Desk”)Hierarchy
+Contextual label
+“On your desk today” (or dynamic variants: “Continue where you left off”, “Recommended for your weakest area”, “Fresh challenge”)
+Scenario title (large, high-contrast)
+“Sign-ups dropped 12% after the app update”
+One-sentence hook (the mystery)
+“Two numbers disagree after a release. Find out whether the product changed, or the measurement did.”
+Visual evidence teaser (interactive)
+Keep the elegant line chart
+Make the “release” marker interactive: hover reveals a short tooltip (“Release shipped · sign-ups & activation diverged”)
+Subtle animation on load: the line draws itself once
+
+Scenario metadata row (compact)
+Category pill (RCA)
+Difficulty (Easy / Medium / Hard) with color
+Estimated time
+Evidence allowance (e.g. “6 evidence credits”)
+Practice status (Not started / In progress / Completed · 2 attempts)
+
+Primary CTA (high visual weight)
+First-time / not started → “Step into the scenario”
+In progress → “Resume investigation”
+Completed → “Retry with new variant” or “Review your last decision”
+
+Secondary actions (quiet but present)
+“Pick another” (opens lightweight scenario switcher)
+“Browse all 63”
+“Save for later” / Bookmark
+“Why this one?” (short AI or rule-based explanation of why it was chosen)
+
+Micro-interactions
+Hover on the chart → soft highlight of the drop
+Clicking the chart area can open a larger evidence preview without leaving the page
+Primary button has a subtle press + slight scale on hover
+5. Right Panel — Coverage & MomentumRedesign the current “coverage” panel so it feels useful rather than decorative.Top: Coverage Visualization
+Keep the distinctive orbital / constellation visual, but make it purposeful.
+Each category is a node. Lit nodes glow. Unlit nodes are dimmer.
+Hover any node → shows category name + “0/9 completed · Start here”
+Click node → filters or recommends a scenario in that category
+Middle: Next Edge RecommendationReplace the current static “Start with curiosity” with a smart, personalized line:Examples:
+“Your strongest signal so far is Execution. Next edge: Product Sense.”
+“You haven’t touched Estimation yet. A clean 8-minute win is waiting.”
+“You completed 4 RCAs. Time to stress-test under Hard constraints.”
+Primary action under it: “Go to recommended” (one click)Category Progress StripCompact, scannable:textRCA  2/9   ●●○○○○○○○
+PS   0/9   ○○○○○○○○○
+STR  1/9   ●○○○○○○○○
+...Or a more elegant version with small colored dots + numbers.Bottom actions
+“View as table” (keeps current functionality)
+“Filter by difficulty / time / status”
+“Show only unattempted”
+6. Dynamic States (Critical for 10/10)The surface must adapt:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+User StateLeft Panel BehaviorRight Panel BehaviorFirst visitGuided Easy scenario + soft explanationFull constellation, all zero, encouragingIn-progress scenario“Resume” primary CTA + progress indicatorHighlight current categoryJust completed oneCelebration micro-state + “What next?”Newly lit node + recommendationReturning after days“Continue your streak” or weakest categoryMomentum messageHigh coverage“You’re deep in the set. Try a Hard variant”Show mastery view or Portfolio promptWeakest category knownAuto-select a scenario from that categoryExplicitly call out the gap7. Mobile Behavior
+Stack vertically: Focus Scenario first (full width), then Coverage.
+Primary CTA remains large and sticky at the bottom while scrolling the left content.
+Coverage visualization collapses into a compact horizontal progress strip + “View full coverage” expander.
+“Pick another” becomes a bottom sheet with filters.
+8. Microcopy SystemTone: Calm, precise, slightly literary, never hype.Examples:
+Label: “On your desk today”
+Hook: Keep the current excellent one-sentence mystery.
+CTA: “Step into the scenario” / “Resume investigation” / “Defend this decision again”
+Coverage: “0 of 63 lit. Begin anywhere.” → evolve to “12 of 63 lit. Your next edge is Estimation.”
+Empty state encouragement: “Curiosity is the only prerequisite.”
+9. Connection Points to Rest of Product
+After completing a scenario → return to this surface with the newly lit node and a soft “Add this decision to Portfolio” prompt.
+From Portfolio Strength dashboard → deep link here with a specific recommended scenario.
+“Browse all 63” should open a high-quality scenario library (filterable by category, difficulty, time, status, bookmarked).
+10. Visual & Motion Spec Notes
+Maintain the deep green + cream palette (it already feels distinctive and premium).
+Chart line should have a very subtle draw-on animation (once).
+Orbital coverage visualization: slow, almost imperceptible rotation or breathing when idle.
+Primary button: soft elevation + slight scale on hover, clear pressed state.
+All interactive elements must have clear focus states for accessibility.
+Respect reduced-motion preferences (disable orbital animation and draw-on).
+11. Success Criteria for 10/10
+A first-time user understands what to do in < 8 seconds.
+A returning user can resume or start a high-value next scenario in one click.
+Coverage feels motivating rather than incomplete.
+The surface never feels like a static poster or a generic dashboard.
+Users frequently click into the recommended “next edge”.
+The transition from this page into the Interview experience feels seamless and intentional.

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "message-quote",
+    "receiptId": "R_trojan-horse_fix-today",
+    "fireCondition": {
+      "day": {
+        "between": [
+          28,
+          200
+        ]
+      }
+    },
+    "lines": [
+      {
+        "id": "line-15",
+        "speaker": "rhea",
+        "expression": "thinking",
+        "text": "You wrote: {receipt.R_trojan-horse_fix-today}"
+      }
+    ]
+  }
+]

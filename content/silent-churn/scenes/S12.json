@@ -1,0 +1,14 @@
+{
+  "id": "S12",
+  "type": "TOOL",
+  "goal": "Write the pre-read",
+  "background": "desk",
+  "tools": [
+    "dredger",
+    "pattern",
+    "coalition",
+    "preread",
+    "window",
+    "gauntlet"
+  ]
+}

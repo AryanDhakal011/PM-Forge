@@ -1,0 +1,17 @@
+{
+  "id": "S07",
+  "type": "DESK",
+  "background": "dispatch",
+  "goal": "Choose your first stops",
+  "tools": [
+    "planner"
+  ],
+  "lines": [
+    {
+      "speaker": "cora",
+      "text": "Six attention this week. Find what causes the delay.",
+      "expression": "thinking",
+      "clip": null
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "S12a",
+  "type": "TOOL",
+  "background": "server",
+  "goal": "Build the replacement sample",
+  "tools": [
+    "poc"
+  ],
+  "lines": [
+    {
+      "speaker": "leif",
+      "text": "Two weeks. I'll show you something.",
+      "expression": "approving",
+      "clip": null
+    }
+  ]
+}

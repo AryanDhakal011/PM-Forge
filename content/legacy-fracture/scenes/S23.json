@@ -1,0 +1,17 @@
+{
+  "id": "S23",
+  "type": "REVIEW",
+  "background": "dispatch",
+  "goal": "Trace, compare and reflect",
+  "tools": [
+    "review"
+  ],
+  "lines": [
+    {
+      "speaker": "narrator",
+      "text": "The fleet remembers what the plan forgot.",
+      "expression": "neutral",
+      "clip": null
+    }
+  ]
+}

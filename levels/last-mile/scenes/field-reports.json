@@ -1,0 +1,71 @@
+{
+  "id": "field-reports",
+  "type": "TOOL",
+  "background": "street",
+  "goal": "Read the physical conditions behind online status.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "sana"
+  ],
+  "lines": [
+    {
+      "id": "line-4",
+      "speaker": "sana",
+      "expression": "thinking",
+      "text": "Wards five and nine are under."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "reports",
+      "kind": "EvidenceDrawers",
+      "title": "Field reports",
+      "items": [
+        {
+          "id": "water",
+          "label": "Water levels",
+          "detail": "Field reports exceed the route’s ordinary operating assumptions.",
+          "effects": [],
+          "group": "water",
+          "soWhat": "Shows conditions on the physical routes."
+        },
+        {
+          "id": "staff",
+          "label": "Restaurant staffing",
+          "detail": "Mina has half the usual staff available.",
+          "effects": [],
+          "group": "staff",
+          "soWhat": "Shows restaurant capacity behind online status."
+        },
+        {
+          "id": "access",
+          "label": "Route accessibility",
+          "detail": "A restaurant can be online while its access road closes.",
+          "effects": [],
+          "group": "access",
+          "soWhat": "Shows whether a door can actually be reached."
+        },
+        {
+          "id": "support",
+          "label": "Support queue",
+          "detail": "Delayed safety decisions also create a support backlog.",
+          "effects": [],
+          "group": "support",
+          "soWhat": "Shows the cost of delayed decisions."
+        }
+      ],
+      "min": 3,
+      "max": 3,
+      "cost": 1,
+      "receiptId": "R_last-mile_reports"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "radio"
+}

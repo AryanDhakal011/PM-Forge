@@ -12,7 +12,7 @@ Served locally through @fontsource packages (no third-party font CDN at runtime)
 
 PHOTOGRAPHY
 -----------
-"Mountain ridge at dusk" (final-mountains.jpg)
+"Mountain ridge at dusk" (final-mountains.webp)
 Photographer: Eberhard Grossgasteiger
 Source: Pexels — https://www.pexels.com/@eberhardgross/
 License: Pexels License (free to use, attribution appreciated)
@@ -59,3 +59,7 @@ CONTACT
 -------
 hello@pmforge.example — placeholder address; this demo runs entirely locally
 and does not send email.
+
+Interview equation OCR: Tesseract.js 7.0.0, tesseract.js-core, and English Tesseract language data (Apache-2.0). Sources: https://github.com/naptha/tesseract.js and https://github.com/tesseract-ocr/tessdata. Local assets and licenses: /interview-ocr/. Drawings are processed locally.
+
+Portfolio profile PDF import: Mozilla PDF.js (Apache-2.0), self-hosted worker, https://mozilla.github.io/pdf.js/. See /portfolio-pdf/LICENSE.txt.

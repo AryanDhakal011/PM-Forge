@@ -1,0 +1,44 @@
+{
+  "id": "S14",
+  "type": "FACE",
+  "background": "server",
+  "speakers": [
+    "mags",
+    "soren",
+    "tavi"
+  ],
+  "lines": [
+    {
+      "id": "s14-1",
+      "speaker": "mags",
+      "expression": "annoyed",
+      "text": "Cage C drew power at two in the morning. Explain.",
+      "voiceId": "mags",
+      "phase": "before",
+      "when": "shadow"
+    },
+    {
+      "id": "s14-2",
+      "speaker": "soren",
+      "expression": "approving",
+      "text": "You did it properly.",
+      "voiceId": "soren",
+      "phase": "before",
+      "when": "flagged"
+    },
+    {
+      "id": "s14-3",
+      "speaker": "tavi",
+      "expression": "approving",
+      "text": "You found who. Now what?",
+      "voiceId": "tavi",
+      "phase": "before",
+      "when": "traced"
+    }
+  ],
+  "choices": [],
+  "tool": "continue",
+  "goal": "Own the first consequences",
+  "canStill": "Read why the team responded this way.",
+  "next": "S15"
+}

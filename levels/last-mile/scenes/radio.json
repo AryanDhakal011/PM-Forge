@@ -1,0 +1,91 @@
+{
+  "id": "radio",
+  "type": "TOOL",
+  "background": "control-room",
+  "goal": "Answer three field calls with operational instructions.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "sana"
+  ],
+  "lines": [
+    {
+      "id": "line-5",
+      "speaker": "sana",
+      "expression": "thinking",
+      "text": "Give the field one instruction they can repeat."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "radio",
+      "kind": "RadioRoom",
+      "title": "The radio room",
+      "items": [
+        {
+          "id": "hold",
+          "label": "Hold.",
+          "detail": "",
+          "effects": [
+            {
+              "var": "risk",
+              "op": "add",
+              "value": -5
+            },
+            {
+              "var": "backlog",
+              "op": "add",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "id": "caution",
+          "label": "Go with caution.",
+          "detail": "",
+          "effects": [
+            {
+              "var": "risk",
+              "op": "add",
+              "value": 4
+            },
+            {
+              "var": "backlog",
+              "op": "add",
+              "value": -3
+            }
+          ]
+        },
+        {
+          "id": "reroute",
+          "label": "Reroute.",
+          "detail": "",
+          "effects": [
+            {
+              "var": "risk",
+              "op": "add",
+              "value": -2
+            },
+            {
+              "var": "cash",
+              "op": "add",
+              "value": -2
+            }
+          ]
+        }
+      ],
+      "min": 3,
+      "max": 3,
+      "cost": 0,
+      "receiptId": "R_last-mile_radio",
+      "rounds": 3
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "threshold"
+}

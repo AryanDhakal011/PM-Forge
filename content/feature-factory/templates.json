@@ -1,0 +1,30 @@
+{
+  "slots": [
+    "day",
+    "feature",
+    "pulse",
+    "retention",
+    "debt",
+    "bugs",
+    "playerLine",
+    "trust",
+    "topic"
+  ],
+  "variants": {
+    "warm": [
+      "Good call on {feature}.",
+      "You wrote: “{playerLine}”",
+      "Day {day}: debt is {debt}."
+    ],
+    "neutral": [
+      "The current feature is {feature}.",
+      "Your record says: “{playerLine}”",
+      "Day {day}: bugs total {bugs}."
+    ],
+    "cold": [
+      "{feature} is still the commitment.",
+      "You promised: “{playerLine}”",
+      "Day {day}: trust is {trust}."
+    ]
+  }
+}

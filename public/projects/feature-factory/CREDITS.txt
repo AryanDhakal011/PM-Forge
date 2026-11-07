@@ -1,0 +1,3 @@
+Ignis is fictional. Portraits, factory illustration, shader and soundscapes are original PMForge code assets.
+Dialogue: Kokoro-82M v1.0, Apache-2.0; prerecorded synthetic speech, not human actors. Emotion labels guide pace; native acted emotions are not supported. See the shipped licence.
+Subframe inspiration: status-board and locked-budget-balance. No example source copied.

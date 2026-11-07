@@ -1,0 +1,27 @@
+{
+  "id": "hangover",
+  "type": "NARR",
+  "background": "party",
+  "goal": "The party lights come up. The bill remains.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "dani"
+  ],
+  "lines": [
+    {
+      "id": "line-11",
+      "speaker": "dani",
+      "expression": "thinking",
+      "text": "The curve was real. So was the payout."
+    }
+  ],
+  "choices": [],
+  "tools": [],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": true,
+  "minInteractions": 0,
+  "day": 28,
+  "act": 3,
+  "next": "launch-night"
+}

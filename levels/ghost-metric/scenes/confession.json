@@ -1,0 +1,78 @@
+{
+  "id": "confession",
+  "type": "TOOL",
+  "background": "office",
+  "goal": "Choose how to correct the promise when it fails.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "anders"
+  ],
+  "lines": [
+    {
+      "id": "line-7",
+      "speaker": "anders",
+      "expression": "thinking",
+      "text": "Read your original promise back to me."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "confession",
+      "kind": "SentenceBuilder",
+      "title": "The confession booth",
+      "items": [
+        {
+          "id": "own",
+          "label": "I overstated the verification. Here is the corrected evidence.",
+          "detail": "",
+          "effects": [
+            {
+              "var": "credibility",
+              "op": "add",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "blame",
+          "label": "The data team supplied the number.",
+          "detail": "",
+          "effects": [
+            {
+              "var": "trust",
+              "op": "add",
+              "value": -10
+            }
+          ]
+        },
+        {
+          "id": "hide",
+          "label": "We can quietly replace the chart.",
+          "detail": "",
+          "effects": [
+            {
+              "var": "risk",
+              "op": "add",
+              "value": 10
+            }
+          ]
+        }
+      ],
+      "min": 1,
+      "max": 1,
+      "cost": 0,
+      "receiptId": "R_ghost-metric_confession"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 7,
+  "act": 2,
+  "when": {
+    "flag": "strong-promise"
+  },
+  "next": "slides"
+}

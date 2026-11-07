@@ -1,0 +1,73 @@
+{
+  "id": "S13",
+  "type": "FACE",
+  "background": "server",
+  "speakers": [
+    "soren",
+    "tavi"
+  ],
+  "lines": [
+    {
+      "id": "s13-1",
+      "speaker": "soren",
+      "expression": "pressured",
+      "text": "We have to decide. What do you do with this?",
+      "voiceId": "soren",
+      "phase": "before"
+    },
+    {
+      "id": "s13-2",
+      "speaker": "tavi",
+      "expression": "pressured",
+      "text": "I didn't hear that.",
+      "voiceId": "tavi",
+      "phase": "after",
+      "when": "choice:workaround"
+    },
+    {
+      "id": "s13-3",
+      "speaker": "soren",
+      "expression": "thinking",
+      "text": "Show me.",
+      "voiceId": "soren",
+      "phase": "after",
+      "when": "choice:flag"
+    },
+    {
+      "id": "s13-4",
+      "speaker": "tavi",
+      "expression": "approving",
+      "text": "Okay. Trace the author.",
+      "voiceId": "tavi",
+      "phase": "after",
+      "when": "choice:investigate"
+    }
+  ],
+  "choices": [
+    {
+      "id": "workaround",
+      "text": "Build a quiet workaround.",
+      "effects": {},
+      "receipt": "R03",
+      "next": "S13a"
+    },
+    {
+      "id": "flag",
+      "text": "Flag it to Soren and Mags.",
+      "effects": {},
+      "receipt": "R03",
+      "next": "S13b"
+    },
+    {
+      "id": "investigate",
+      "text": "Investigate who built it first.",
+      "effects": {},
+      "receipt": "R03",
+      "next": "S13"
+    }
+  ],
+  "tool": "action",
+  "goal": "Choose how to act",
+  "canStill": "Work around, escalate, or investigate the author first.",
+  "next": "S13b"
+}

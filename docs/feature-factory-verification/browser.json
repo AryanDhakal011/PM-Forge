@@ -1,0 +1,404 @@
+{
+  "at": "2026-11-05T05:48:59.443Z",
+  "base": "http://localhost:3002",
+  "http": [],
+  "assets": [],
+  "pages": [
+    {
+      "path": "/app/projects/feature-factory/play?qa=1",
+      "url": "/app/projects/feature-factory/play?qa=1",
+      "loads": 1,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nSHIP FRIDAY\nIGNIS WORKS / RELEASE FLOOR 03\nProjects\nREAL WORLD PROJECT / 03\nHow to play\n\nIGNIS / CORE PLATFORM / ONE QUARTER\n\nThe Feature\nFactory.\n\nShip every Friday.\nFind out what it costs.\n\nA living PM ",
+      "failed": false
+    }
+  ],
+  "clicks": [],
+  "errors": [],
+  "checks": [
+    {
+      "pass": true,
+      "label": "entrance bypasses workspace onboarding"
+    },
+    {
+      "pass": true,
+      "label": "S00-entrance fits 390"
+    },
+    {
+      "pass": true,
+      "label": "S00-entrance fits 320"
+    },
+    {
+      "pass": true,
+      "label": "opening uses a prerecorded, playable voice"
+    },
+    {
+      "pass": true,
+      "label": "S01-cinema fits 390"
+    },
+    {
+      "pass": true,
+      "label": "S01-cinema fits 320"
+    },
+    {
+      "pass": true,
+      "label": "S02-metric fits 390"
+    },
+    {
+      "pass": true,
+      "label": "S02-metric fits 320"
+    },
+    {
+      "pass": true,
+      "label": "first metric choice is stored"
+    },
+    {
+      "pass": true,
+      "label": "S07-plan fits 390"
+    },
+    {
+      "pass": true,
+      "label": "S07-plan fits 320"
+    },
+    {
+      "pass": true,
+      "label": "native allocation controls preserve 100 percent"
+    },
+    {
+      "pass": true,
+      "label": "sprint commitment costs one point"
+    },
+    {
+      "pass": true,
+      "label": "desktop-inbox fits 390"
+    },
+    {
+      "pass": true,
+      "label": "desktop-inbox fits 320"
+    },
+    {
+      "pass": true,
+      "label": "reading costs one point"
+    },
+    {
+      "pass": true,
+      "label": "a no reply stores the exact authored reason"
+    },
+    {
+      "pass": true,
+      "label": "native Truth switch instruments retention"
+    },
+    {
+      "pass": true,
+      "label": "desktop-truth fits 390"
+    },
+    {
+      "pass": true,
+      "label": "desktop-truth fits 320"
+    },
+    {
+      "pass": true,
+      "label": "people fits 390"
+    },
+    {
+      "pass": true,
+      "label": "people fits 320"
+    },
+    {
+      "pass": true,
+      "label": "conversation fits 390"
+    },
+    {
+      "pass": true,
+      "label": "conversation fits 320"
+    },
+    {
+      "pass": true,
+      "label": "native ask consumes attention and records a topic"
+    },
+    {
+      "pass": true,
+      "label": "insufficient attention blocks an investment"
+    },
+    {
+      "pass": true,
+      "label": "Inbox mobile panel fits"
+    },
+    {
+      "pass": true,
+      "label": "Board mobile panel fits"
+    },
+    {
+      "pass": true,
+      "label": "Dashboard mobile panel fits"
+    },
+    {
+      "pass": true,
+      "label": "Day mobile panel fits"
+    },
+    {
+      "pass": true,
+      "label": "recap fits 390"
+    },
+    {
+      "pass": true,
+      "label": "recap fits 320"
+    },
+    {
+      "pass": true,
+      "label": "automation is a real investment"
+    },
+    {
+      "pass": true,
+      "label": "stress fits 390"
+    },
+    {
+      "pass": true,
+      "label": "stress fits 320"
+    },
+    {
+      "pass": true,
+      "label": "real stress run stores evidence"
+    },
+    {
+      "pass": true,
+      "label": "gate-5 fits 390"
+    },
+    {
+      "pass": true,
+      "label": "gate-5 fits 320"
+    },
+    {
+      "pass": true,
+      "label": "missing enforced evidence blocks go"
+    },
+    {
+      "pass": true,
+      "label": "ritual-5 fits 390"
+    },
+    {
+      "pass": true,
+      "label": "ritual-5 fits 320"
+    },
+    {
+      "pass": true,
+      "label": "gate-10 fits 390"
+    },
+    {
+      "pass": true,
+      "label": "gate-10 fits 320"
+    },
+    {
+      "pass": true,
+      "label": "ritual-10 fits 390"
+    },
+    {
+      "pass": true,
+      "label": "ritual-10 fits 320"
+    },
+    {
+      "pass": true,
+      "label": "gate-15 fits 390"
+    },
+    {
+      "pass": true,
+      "label": "gate-15 fits 320"
+    },
+    {
+      "pass": true,
+      "label": "ritual-15 fits 390"
+    },
+    {
+      "pass": true,
+      "label": "ritual-15 fits 320"
+    },
+    {
+      "pass": true,
+      "label": "S21-slides fits 390"
+    },
+    {
+      "pass": true,
+      "label": "S21-slides fits 320"
+    },
+    {
+      "pass": true,
+      "label": "S21-slides fits 390"
+    },
+    {
+      "pass": true,
+      "label": "S21-slides fits 320"
+    },
+    {
+      "pass": true,
+      "label": "S21-slides fits 390"
+    },
+    {
+      "pass": true,
+      "label": "S21-slides fits 320"
+    },
+    {
+      "pass": true,
+      "label": "real controls reach the full quarterly review"
+    },
+    {
+      "pass": true,
+      "label": "three releases are accounted for"
+    },
+    {
+      "pass": true,
+      "label": "S22-review fits 390"
+    },
+    {
+      "pass": true,
+      "label": "S22-review fits 320"
+    },
+    {
+      "pass": true,
+      "label": "reflection completes the quarter"
+    },
+    {
+      "pass": true,
+      "label": "pause fits 390"
+    },
+    {
+      "pass": true,
+      "label": "pause fits 320"
+    },
+    {
+      "pass": true,
+      "label": "pause resume target receives physical clicks"
+    },
+    {
+      "pass": true,
+      "label": "save and exit returns to entrance"
+    },
+    {
+      "pass": true,
+      "label": "resume retains the completed reflection"
+    },
+    {
+      "pass": true,
+      "label": "hooks removed on exit"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 1"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 2"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 3"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 4"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 5"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 6"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 7"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 8"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 9"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 10"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 11"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 12"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 13"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 14"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 15"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 16"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 17"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 18"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 19"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 20"
+    },
+    {
+      "pass": true,
+      "label": "all twenty-entry GPU resources disposed"
+    },
+    {
+      "pass": true,
+      "label": "no-WebGL fallback keeps numerical information"
+    },
+    {
+      "pass": true,
+      "label": "system reduced motion applies"
+    }
+  ],
+  "screens": [
+    "S00-entrance",
+    "S01-cinema",
+    "S02-metric",
+    "S07-plan",
+    "desktop-inbox",
+    "desktop-truth",
+    "people",
+    "conversation",
+    "recap",
+    "stress",
+    "gate-5",
+    "ritual-5",
+    "gate-10",
+    "ritual-10",
+    "gate-15",
+    "ritual-15",
+    "S21-slides",
+    "S21-slides",
+    "S21-slides",
+    "S22-review",
+    "pause"
+  ],
+  "resources": {
+    "cycles": 20,
+    "contexts": 20,
+    "lost": 20
+  }
+}

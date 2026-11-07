@@ -1,0 +1,200 @@
+[
+  {
+    "id": "kian-neutral",
+    "path": "/levels/sacred-no/art/portraits/kian_neutral.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Kian Mercer, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "kian-thinking",
+    "path": "/levels/sacred-no/art/portraits/kian_thinking.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Kian Mercer, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "kian-annoyed",
+    "path": "/levels/sacred-no/art/portraits/kian_annoyed.svg",
+    "sizeKB": 0.8994140625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Kian Mercer, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "kian-approving",
+    "path": "/levels/sacred-no/art/portraits/kian_approving.svg",
+    "sizeKB": 0.8955078125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Kian Mercer, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "kian-pressured",
+    "path": "/levels/sacred-no/art/portraits/kian_pressured.svg",
+    "sizeKB": 0.892578125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Kian Mercer, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "priya-neutral",
+    "path": "/levels/sacred-no/art/portraits/priya_neutral.svg",
+    "sizeKB": 0.9208984375,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Priya Nair, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "priya-thinking",
+    "path": "/levels/sacred-no/art/portraits/priya_thinking.svg",
+    "sizeKB": 0.9208984375,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Priya Nair, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "priya-annoyed",
+    "path": "/levels/sacred-no/art/portraits/priya_annoyed.svg",
+    "sizeKB": 0.92578125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Priya Nair, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "priya-approving",
+    "path": "/levels/sacred-no/art/portraits/priya_approving.svg",
+    "sizeKB": 0.921875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Priya Nair, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "priya-pressured",
+    "path": "/levels/sacred-no/art/portraits/priya_pressured.svg",
+    "sizeKB": 0.9189453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Priya Nair, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "tess-neutral",
+    "path": "/levels/sacred-no/art/portraits/tess_neutral.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Tess Grant, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "tess-thinking",
+    "path": "/levels/sacred-no/art/portraits/tess_thinking.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Tess Grant, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "tess-annoyed",
+    "path": "/levels/sacred-no/art/portraits/tess_annoyed.svg",
+    "sizeKB": 0.8994140625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Tess Grant, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "tess-approving",
+    "path": "/levels/sacred-no/art/portraits/tess_approving.svg",
+    "sizeKB": 0.8955078125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Tess Grant, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "tess-pressured",
+    "path": "/levels/sacred-no/art/portraits/tess_pressured.svg",
+    "sizeKB": 0.892578125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Tess Grant, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "marlo-neutral",
+    "path": "/levels/sacred-no/art/portraits/marlo_neutral.svg",
+    "sizeKB": 0.8935546875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Marlo Chen, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "marlo-thinking",
+    "path": "/levels/sacred-no/art/portraits/marlo_thinking.svg",
+    "sizeKB": 0.8935546875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Marlo Chen, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "marlo-annoyed",
+    "path": "/levels/sacred-no/art/portraits/marlo_annoyed.svg",
+    "sizeKB": 0.8984375,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Marlo Chen, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "marlo-approving",
+    "path": "/levels/sacred-no/art/portraits/marlo_approving.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Marlo Chen, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "marlo-pressured",
+    "path": "/levels/sacred-no/art/portraits/marlo_pressured.svg",
+    "sizeKB": 0.8916015625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Marlo Chen, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "office",
+    "path": "/levels/sacred-no/art/backgrounds/office.svg",
+    "sizeKB": 0.8037109375,
+    "source": "PMForge layered background kit",
+    "license": "Project-authored original",
+    "alt": "Fictional office background",
+    "status": "placeholder"
+  },
+  {
+    "id": "boardroom",
+    "path": "/levels/sacred-no/art/backgrounds/boardroom.svg",
+    "sizeKB": 0.806640625,
+    "source": "PMForge layered background kit",
+    "license": "Project-authored original",
+    "alt": "Fictional boardroom background",
+    "status": "placeholder"
+  }
+]

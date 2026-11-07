@@ -1,0 +1,258 @@
+[
+  {
+    "id": "E01",
+    "speaker": "beatrice",
+    "title": "A renewal disappears",
+    "text": "Another account left without a complaint.",
+    "condition": "early",
+    "dataset": "segment"
+  },
+  {
+    "id": "E02",
+    "speaker": "marta",
+    "title": "That needs a ticket",
+    "text": "Restricted data needs context and a ticket.",
+    "condition": "lowRapport",
+    "dataset": "claims"
+  },
+  {
+    "id": "E03",
+    "speaker": "beatrice",
+    "title": "The commission theory",
+    "text": "My brokers say competitors are paying more.",
+    "condition": "early",
+    "dataset": "brokers"
+  },
+  {
+    "id": "E04",
+    "speaker": "walter",
+    "title": "The answer, please",
+    "text": "A thin sample is not a conclusion.",
+    "condition": "quickOnly",
+    "dataset": "price"
+  },
+  {
+    "id": "E05",
+    "speaker": "dolores",
+    "title": "Claims data is not a plaything",
+    "text": "Explain why you need those records.",
+    "condition": "deep",
+    "dataset": "claims"
+  },
+  {
+    "id": "E06",
+    "speaker": "gideon",
+    "title": "Wording first",
+    "text": "Put the approved wording in the pre-read.",
+    "condition": "coalition",
+    "dataset": "wording"
+  },
+  {
+    "id": "E07",
+    "speaker": "anand",
+    "title": "The rumour reaches IT",
+    "text": "Nobody asked me about the core.",
+    "condition": "bypass",
+    "dataset": "architecture"
+  },
+  {
+    "id": "E08",
+    "speaker": "elliot",
+    "title": "People are talking",
+    "text": "Off the record. Close one open loop.",
+    "condition": "lowCred",
+    "dataset": "capacity"
+  },
+  {
+    "id": "E09",
+    "speaker": "tobias",
+    "title": "A window is available",
+    "text": "Five working days. Tell me the boundary.",
+    "condition": "approved",
+    "dataset": "capacity"
+  },
+  {
+    "id": "E10",
+    "speaker": "tobias",
+    "title": "The smoke test fails",
+    "text": "The broad core change will not hold.",
+    "condition": "aggressive",
+    "dataset": "architecture"
+  },
+  {
+    "id": "E11",
+    "speaker": "elliot",
+    "title": "A quieter first result",
+    "text": "The status queue is getting less quiet.",
+    "condition": "phased",
+    "dataset": "claims"
+  },
+  {
+    "id": "E12",
+    "speaker": "anand",
+    "title": "The committee calls back",
+    "text": "The core is down. What is the recovery?",
+    "condition": "crash",
+    "dataset": "architecture"
+  },
+  {
+    "id": "E13",
+    "speaker": "marta",
+    "title": "A landmine in the extract",
+    "text": "The status field changes meaning between systems.",
+    "condition": "highRapport",
+    "dataset": "claims"
+  },
+  {
+    "id": "E14",
+    "speaker": "walter",
+    "title": "Keep it capped",
+    "text": "A pilot is not an open cheque.",
+    "condition": "walterFor",
+    "dataset": "capacity"
+  },
+  {
+    "id": "E15",
+    "speaker": "dolores",
+    "title": "A visit to your desk",
+    "text": "Show me the handoff, not the headline.",
+    "condition": "doloresNeutral",
+    "dataset": "process"
+  },
+  {
+    "id": "E16",
+    "speaker": "gideon",
+    "title": "Your own commitment",
+    "text": "You made a promise. Is it still true?",
+    "condition": "promised",
+    "dataset": "wording"
+  },
+  {
+    "id": "E17",
+    "speaker": "beatrice",
+    "title": "The broker briefing date",
+    "text": "My brokers need a date before the launch.",
+    "condition": "brokerPromise",
+    "dataset": "brokers"
+  },
+  {
+    "id": "E18",
+    "speaker": "elliot",
+    "title": "A cancellation call",
+    "text": "A high-value client is asking how to leave.",
+    "condition": "late",
+    "dataset": "segment"
+  },
+  {
+    "id": "E19",
+    "speaker": "elliot",
+    "title": "A stretch goal",
+    "text": "Could we do more after this pilot?",
+    "condition": "win",
+    "dataset": "capacity"
+  },
+  {
+    "id": "E20",
+    "speaker": "walter",
+    "title": "Your words, returned",
+    "text": "You put that reason in writing. Defend it.",
+    "condition": "receipt",
+    "dataset": "price"
+  },
+  {
+    "id": "E21",
+    "speaker": "marta",
+    "title": "A queue moves",
+    "text": "Your question helped us select the right extract.",
+    "condition": "pending",
+    "dataset": "claims"
+  },
+  {
+    "id": "E22",
+    "speaker": "tobias",
+    "title": "Friday freeze",
+    "text": "The batch does not move for our meeting.",
+    "condition": "late",
+    "dataset": "capacity"
+  },
+  {
+    "id": "E23",
+    "speaker": "gideon",
+    "title": "An approved sentence",
+    "text": "Factual wording is possible. Approval still matters.",
+    "condition": "wordingKnown",
+    "dataset": "wording"
+  },
+  {
+    "id": "E24",
+    "speaker": "beatrice",
+    "title": "A broker asks why",
+    "text": "What will a client know that they cannot see today?",
+    "condition": "claimsKnown",
+    "dataset": "brokers"
+  },
+  {
+    "id": "E25",
+    "speaker": "anand",
+    "title": "The safer boundary",
+    "text": "A side feed needs its own rollback.",
+    "condition": "architectureKnown",
+    "dataset": "architecture"
+  },
+  {
+    "id": "E26",
+    "speaker": "dolores",
+    "title": "Do not move the burden",
+    "text": "Name who will answer the extra calls.",
+    "condition": "coalition",
+    "dataset": "process"
+  },
+  {
+    "id": "E27",
+    "speaker": "marta",
+    "title": "The sample footnote",
+    "text": "Five percent is a starting point. Not certainty.",
+    "condition": "quickOnly",
+    "dataset": "claims"
+  },
+  {
+    "id": "E28",
+    "speaker": "elliot",
+    "title": "Reorganisation is coming",
+    "text": "I need a decision that survives my absence.",
+    "condition": "late",
+    "dataset": "capacity"
+  },
+  {
+    "id": "E29",
+    "speaker": "tobias",
+    "title": "A rehearsal slot",
+    "text": "We can rehearse before we touch production.",
+    "condition": "approved",
+    "dataset": "capacity"
+  },
+  {
+    "id": "E30",
+    "speaker": "gideon",
+    "title": "A promise in the minutes",
+    "text": "The minutes need the exact commitment.",
+    "condition": "promised",
+    "dataset": "wording"
+  },
+  {
+    "id": "E31",
+    "speaker": "anand",
+    "title": "The quiet after the batch",
+    "text": "No new incident is a result too.",
+    "condition": "win",
+    "dataset": "architecture"
+  },
+  {
+    "id": "E32",
+    "speaker": "marta",
+    "title": "A question about my job",
+    "text": "Nobody ever asks what I do all day.",
+    "condition": "veryHighRapport",
+    "dataset": "claims"
+  }
+]

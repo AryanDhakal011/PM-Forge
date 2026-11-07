@@ -1,0 +1,62 @@
+{
+  "id": "first-messages",
+  "type": "TOOL",
+  "background": "office",
+  "goal": "Sort three messages before promising a delivery.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "kian"
+  ],
+  "lines": [
+    {
+      "id": "line-1",
+      "speaker": "kian",
+      "expression": "thinking",
+      "text": "The board expects something ambitious tomorrow."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "messages",
+      "kind": "DragBins",
+      "title": "Three people need an answer",
+      "items": [
+        {
+          "id": "kian",
+          "label": "Kian’s voice note",
+          "detail": "The promise is already in an investor email.",
+          "effects": []
+        },
+        {
+          "id": "priya",
+          "label": "Priya’s warning",
+          "detail": "The payment queue needs a safeguard.",
+          "effects": []
+        },
+        {
+          "id": "tess",
+          "label": "Tess’s customer message",
+          "detail": "Sales wants a date before the demo.",
+          "effects": []
+        }
+      ],
+      "min": 3,
+      "max": 3,
+      "cost": 0,
+      "receiptId": "R_sacred-no_messages",
+      "bins": [
+        "Answer now",
+        "Answer in an hour",
+        "Ignore"
+      ]
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "triage"
+}

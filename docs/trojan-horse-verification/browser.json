@@ -1,0 +1,2180 @@
+{
+  "at": "2026-11-04T11:18:02.504Z",
+  "base": "http://localhost:3002",
+  "http": [],
+  "assets": [],
+  "pages": [
+    {
+      "path": "/app",
+      "url": "/app",
+      "loads": 1,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nPMForge\nYour next good decision\nEnter PMForge.\n\nReal scenarios. Decisions you can defend. A practice space that remembers where you left off.\n\nG\nContinue with Google\nOther sign-in options\n\nAccounts aren’t",
+      "failed": false
+    },
+    {
+      "path": "/app/projects/trojan-horse",
+      "url": "/app/projects/trojan-horse",
+      "loads": 2,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nProjects\nGILT / SIX WEEKS\n5×\n130,000 → 640,000 users\nFIELD SIMULATION / PROJECT 05\nThe Trojan Horses\n\nEveryone is celebrating the growth.\nYou need to find out what it costs.\n\n3 chapters + debrief\nAbout 20",
+      "failed": false
+    },
+    {
+      "path": "/app/projects/trojan-horse",
+      "url": "/app/projects/trojan-horse",
+      "loads": 3,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nProjects\nGILT / SIX WEEKS\n5×\n130,000 → 640,000 users\nFIELD SIMULATION / PROJECT 05\nThe Trojan Horses\n\nEveryone is celebrating the growth.\nYou need to find out what it costs.\n\n3 chapters + debrief\nAbout 20",
+      "failed": false
+    },
+    {
+      "path": "/app/projects/trojan-horse/play",
+      "url": "/app/projects/trojan-horse/play",
+      "loads": 4,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nProjects\nGILT / SIX WEEKS\n5×\n130,000 → 640,000 users\nFIELD SIMULATION / PROJECT 05\nThe Trojan Horses\n\nEveryone is celebrating the growth.\nYou need to find out what it costs.\n\n3 chapters + debrief\nAbout 20",
+      "failed": false
+    },
+    {
+      "path": "/app/projects/trojan-horse",
+      "url": "/app/projects/trojan-horse",
+      "loads": 5,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nProjects\nGILT / SIX WEEKS\n5×\n130,000 → 640,000 users\nFIELD SIMULATION / PROJECT 05\nThe Trojan Horses\n\nEveryone is celebrating the growth.\nYou need to find out what it costs.\n\n3 chapters + debrief\nAbout 20",
+      "failed": false
+    },
+    {
+      "path": "/app/projects/trojan-horse",
+      "url": "/app/projects/trojan-horse",
+      "loads": 6,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nProjects\nGILT / SIX WEEKS\n5×\n130,000 → 640,000 users\nFIELD SIMULATION / PROJECT 05\nThe Trojan Horses\n\nEveryone is celebrating the growth.\nYou need to find out what it costs.\n\n3 chapters + debrief\nAbout 20",
+      "failed": false
+    }
+  ],
+  "clicks": [],
+  "errors": [],
+  "checks": [
+    {
+      "pass": true,
+      "label": "entry is present without a workspace glimpse"
+    },
+    {
+      "pass": true,
+      "label": "entry fits 390"
+    },
+    {
+      "pass": true,
+      "label": "entry fits 320"
+    },
+    {
+      "pass": true,
+      "label": "enter begins the cold open"
+    },
+    {
+      "pass": true,
+      "label": "real recorded audio plays"
+    },
+    {
+      "pass": true,
+      "label": "voice pauses"
+    },
+    {
+      "pass": true,
+      "label": "full party dialogue leads to mismatch"
+    },
+    {
+      "pass": true,
+      "label": "mismatch leads to sample"
+    },
+    {
+      "pass": true,
+      "label": "sample gates progress"
+    },
+    {
+      "pass": true,
+      "label": "sample shows immediate outcome"
+    },
+    {
+      "pass": true,
+      "label": "sample fits 390"
+    },
+    {
+      "pass": true,
+      "label": "sample fits 320"
+    },
+    {
+      "pass": true,
+      "label": "role only follows completed sample"
+    },
+    {
+      "pass": true,
+      "label": "full cast briefing completes"
+    },
+    {
+      "pass": true,
+      "label": "public reply leads to evidence"
+    },
+    {
+      "pass": true,
+      "label": "three evidence pulls recorded"
+    },
+    {
+      "pass": true,
+      "label": "unopened reports lock after three pulls"
+    },
+    {
+      "pass": true,
+      "label": "case file contains opened evidence"
+    },
+    {
+      "pass": true,
+      "label": "evidence leads to Loop Lens"
+    },
+    {
+      "pass": true,
+      "label": "useless filter explains its cost"
+    },
+    {
+      "pass": true,
+      "label": "all three useful filters recorded"
+    },
+    {
+      "pass": true,
+      "label": "repeating a lens does not spend again"
+    },
+    {
+      "pass": true,
+      "label": "lens unlocks valve"
+    },
+    {
+      "pass": true,
+      "label": "valve controls affect saved model"
+    },
+    {
+      "pass": true,
+      "label": "valve fits 390"
+    },
+    {
+      "pass": true,
+      "label": "valve fits 320"
+    },
+    {
+      "pass": true,
+      "label": "valve commits a week"
+    },
+    {
+      "pass": true,
+      "label": "weekly consequence leads to commitment"
+    },
+    {
+      "pass": true,
+      "label": "exact public promise leads to Tomas call"
+    },
+    {
+      "pass": true,
+      "label": "full human Guild call leads to segment board"
+    },
+    {
+      "pass": true,
+      "label": "segments fits 390"
+    },
+    {
+      "pass": true,
+      "label": "segments fits 320"
+    },
+    {
+      "pass": true,
+      "label": "all segments required before grace gate"
+    },
+    {
+      "pass": true,
+      "label": "locking opens a complete confirmation"
+    },
+    {
+      "pass": true,
+      "label": "confirmation includes projected consequences"
+    },
+    {
+      "pass": true,
+      "label": "confirmed plan leads to composer"
+    },
+    {
+      "pass": true,
+      "label": "composer fits 390"
+    },
+    {
+      "pass": true,
+      "label": "composer fits 320"
+    },
+    {
+      "pass": true,
+      "label": "composer leads to exact screenshot test"
+    },
+    {
+      "pass": true,
+      "label": "screenshot compares actual prior commitment"
+    },
+    {
+      "pass": true,
+      "label": "publishing triggers hangover and community outcome"
+    },
+    {
+      "pass": true,
+      "label": "hangover is scoped to level"
+    },
+    {
+      "pass": true,
+      "label": "consequences lead to funding"
+    },
+    {
+      "pass": true,
+      "label": "funding leads to final allocation"
+    },
+    {
+      "pass": true,
+      "label": "final allocation leads to completed ledger"
+    },
+    {
+      "pass": true,
+      "label": "valuable Guild policy earns Gardener"
+    },
+    {
+      "pass": true,
+      "label": "ledger fits 390"
+    },
+    {
+      "pass": true,
+      "label": "ledger fits 320"
+    },
+    {
+      "pass": true,
+      "label": "missed tells remain visible and expandable"
+    },
+    {
+      "pass": true,
+      "label": "reflection completes and saves"
+    },
+    {
+      "pass": true,
+      "label": "resume restores complete state, not just scene index"
+    },
+    {
+      "pass": true,
+      "label": "hindsight starts at segment choice"
+    },
+    {
+      "pass": true,
+      "label": "original completed timeline remains intact"
+    },
+    {
+      "pass": true,
+      "label": "fork clears later decisions"
+    },
+    {
+      "pass": true,
+      "label": "pause exit actually returns to Projects"
+    },
+    {
+      "pass": true,
+      "label": "timeline registry removed after leaving"
+    },
+    {
+      "pass": true,
+      "label": "level palette does not leak"
+    },
+    {
+      "pass": true,
+      "label": "reduced motion respected"
+    },
+    {
+      "pass": true,
+      "label": "reduced motion skips particle work"
+    },
+    {
+      "pass": true,
+      "label": "reduced-motion opening remains skippable"
+    },
+    {
+      "pass": true,
+      "label": "corrupt save safely starts fresh"
+    },
+    {
+      "pass": true,
+      "label": "pause controls are physically above the scene"
+    },
+    {
+      "pass": true,
+      "label": "audio failure never advances automatically"
+    },
+    {
+      "pass": true,
+      "label": "audio failure leaves scene advanceable"
+    },
+    {
+      "pass": true,
+      "label": "transition clone cleared 1"
+    },
+    {
+      "pass": true,
+      "label": "transition clone cleared 2"
+    },
+    {
+      "pass": true,
+      "label": "transition clone cleared 3"
+    },
+    {
+      "pass": true,
+      "label": "transition clone cleared 4"
+    },
+    {
+      "pass": true,
+      "label": "transition clone cleared 5"
+    },
+    {
+      "pass": true,
+      "label": "transition clone cleared 6"
+    },
+    {
+      "pass": true,
+      "label": "transition clone cleared 7"
+    },
+    {
+      "pass": true,
+      "label": "transition clone cleared 8"
+    },
+    {
+      "pass": true,
+      "label": "transition clone cleared 9"
+    },
+    {
+      "pass": true,
+      "label": "transition clone cleared 10"
+    },
+    {
+      "pass": true,
+      "label": "transition clone cleared 11"
+    },
+    {
+      "pass": true,
+      "label": "transition clone cleared 12"
+    },
+    {
+      "pass": true,
+      "label": "transition clone cleared 13"
+    },
+    {
+      "pass": true,
+      "label": "transition clone cleared 14"
+    },
+    {
+      "pass": true,
+      "label": "transition clone cleared 15"
+    },
+    {
+      "pass": true,
+      "label": "transition clone cleared 16"
+    },
+    {
+      "pass": true,
+      "label": "transition clone cleared 17"
+    },
+    {
+      "pass": true,
+      "label": "transition clone cleared 18"
+    },
+    {
+      "pass": true,
+      "label": "transition clone cleared 19"
+    },
+    {
+      "pass": true,
+      "label": "transition clone cleared 20"
+    },
+    {
+      "pass": true,
+      "label": "twenty soft navigation cycles leave global listener count unchanged"
+    },
+    {
+      "pass": true,
+      "label": "departed scenes leave no active media or owned audio handlers"
+    },
+    {
+      "pass": true,
+      "label": "hostile branch reaches screenshot"
+    },
+    {
+      "pass": true,
+      "label": "contradictory promise is visibly identified"
+    },
+    {
+      "pass": true,
+      "label": "hostile rollout visibly causes revolt"
+    },
+    {
+      "pass": true,
+      "label": "overspending causes actual bridge terms"
+    },
+    {
+      "pass": true,
+      "label": "debrief explains the bridge cost"
+    }
+  ],
+  "listenersBefore": {
+    "window": [
+      {
+        "type": "pagehide",
+        "scriptId": "14",
+        "line": 0
+      },
+      {
+        "type": "pagehide",
+        "scriptId": "24",
+        "line": 0
+      },
+      {
+        "type": "pageshow",
+        "scriptId": "14",
+        "line": 0
+      },
+      {
+        "type": "pageshow",
+        "scriptId": "24",
+        "line": 0
+      },
+      {
+        "type": "pageshow",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "x-storagemutated-1",
+        "scriptId": "24",
+        "line": 0
+      },
+      {
+        "type": "pmforge:theme",
+        "scriptId": "20",
+        "line": 0
+      },
+      {
+        "type": "keydown",
+        "scriptId": "20",
+        "line": 0
+      },
+      {
+        "type": "storage",
+        "scriptId": "20",
+        "line": 0
+      },
+      {
+        "type": "pmforge:gate-close",
+        "scriptId": "13",
+        "line": 0
+      },
+      {
+        "type": "error",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "unhandledrejection",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "popstate",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "wheel",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "load",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "resize",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "pmforge:carry",
+        "scriptId": "20",
+        "line": 0
+      }
+    ],
+    "document": [
+      {
+        "type": "input",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "compositionstart",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "compositionupdate",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "compositionend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "drop",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "paste",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "keydown",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "keyup",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "keypress",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "abort",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "auxclick",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "beforetoggle",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "cancel",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "canplay",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "canplaythrough",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "click",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "click",
+        "scriptId": "13",
+        "line": 0
+      },
+      {
+        "type": "click",
+        "scriptId": "15",
+        "line": 0
+      },
+      {
+        "type": "close",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "contextmenu",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "copy",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "cut",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "drag",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragenter",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragexit",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragleave",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragover",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragstart",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "durationchange",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "emptied",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "encrypted",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "ended",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "error",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "fullscreenchange",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "fullscreenerror",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "gotpointercapture",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "invalid",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "load",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "loadeddata",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "loadedmetadata",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "loadstart",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "lostpointercapture",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "mousedown",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "mousemove",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "mouseout",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "mouseover",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "mouseup",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pause",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "play",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "playing",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointercancel",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointerdown",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointermove",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointerout",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointerover",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointerup",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "progress",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "ratechange",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "reset",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "resize",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "seeked",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "seeking",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "stalled",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "submit",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "suspend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "timeupdate",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "touchcancel",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "touchend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "touchstart",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "volumechange",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "scroll",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "toggle",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "touchmove",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "waiting",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "wheel",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "scrollend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "animationcancel",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "animationend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "animationiteration",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "animationstart",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dblclick",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "focusin",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "focusout",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "transitionrun",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "transitionstart",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "transitioncancel",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "transitionend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "change",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "textInput",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "input",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "compositionstart",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "compositionupdate",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "compositionend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "drop",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "paste",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "keydown",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "keyup",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "keypress",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "auxclick",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "click",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "contextmenu",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "copy",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "cut",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "drag",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragenter",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragexit",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragleave",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragover",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragstart",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "fullscreenchange",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "fullscreenerror",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "gotpointercapture",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "lostpointercapture",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "mousedown",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "mousedown",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "mousemove",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "mouseout",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "mouseover",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "mouseup",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "mouseup",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "pointercancel",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointerdown",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointerdown",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "pointermove",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointerout",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointerover",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointerup",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointerup",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "reset",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "submit",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "touchcancel",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "touchcancel",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "touchend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "touchend",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "touchstart",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "touchstart",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "scroll",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "touchmove",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "wheel",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "animationcancel",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "animationend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "animationiteration",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "animationstart",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dblclick",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "focusin",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "focusout",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "transitionrun",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "transitionstart",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "transitioncancel",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "transitionend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "change",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "textInput",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "visibilitychange",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "DOMContentLoaded",
+        "scriptId": "16",
+        "line": 0
+      }
+    ]
+  },
+  "leak": {
+    "cycles": 20,
+    "before": {
+      "documents": 4,
+      "nodes": 1915,
+      "jsEventListeners": 1611
+    },
+    "after": {
+      "documents": 2,
+      "nodes": 834,
+      "jsEventListeners": 773
+    },
+    "media": []
+  },
+  "listenersAfter": {
+    "window": [
+      {
+        "type": "pagehide",
+        "scriptId": "14",
+        "line": 0
+      },
+      {
+        "type": "pagehide",
+        "scriptId": "24",
+        "line": 0
+      },
+      {
+        "type": "pageshow",
+        "scriptId": "14",
+        "line": 0
+      },
+      {
+        "type": "pageshow",
+        "scriptId": "24",
+        "line": 0
+      },
+      {
+        "type": "pageshow",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "x-storagemutated-1",
+        "scriptId": "24",
+        "line": 0
+      },
+      {
+        "type": "pmforge:theme",
+        "scriptId": "20",
+        "line": 0
+      },
+      {
+        "type": "keydown",
+        "scriptId": "20",
+        "line": 0
+      },
+      {
+        "type": "storage",
+        "scriptId": "20",
+        "line": 0
+      },
+      {
+        "type": "pmforge:gate-close",
+        "scriptId": "13",
+        "line": 0
+      },
+      {
+        "type": "error",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "unhandledrejection",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "popstate",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "wheel",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "load",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "resize",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "pmforge:carry",
+        "scriptId": "20",
+        "line": 0
+      }
+    ],
+    "document": [
+      {
+        "type": "input",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "compositionstart",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "compositionupdate",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "compositionend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "drop",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "paste",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "keydown",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "keyup",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "keypress",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "abort",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "auxclick",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "beforetoggle",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "cancel",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "canplay",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "canplaythrough",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "click",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "click",
+        "scriptId": "13",
+        "line": 0
+      },
+      {
+        "type": "click",
+        "scriptId": "15",
+        "line": 0
+      },
+      {
+        "type": "close",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "contextmenu",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "copy",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "cut",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "drag",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragenter",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragexit",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragleave",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragover",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragstart",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "durationchange",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "emptied",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "encrypted",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "ended",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "error",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "fullscreenchange",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "fullscreenerror",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "gotpointercapture",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "invalid",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "load",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "loadeddata",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "loadedmetadata",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "loadstart",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "lostpointercapture",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "mousedown",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "mousemove",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "mouseout",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "mouseover",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "mouseup",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pause",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "play",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "playing",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointercancel",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointerdown",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointermove",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointerout",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointerover",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointerup",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "progress",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "ratechange",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "reset",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "resize",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "seeked",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "seeking",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "stalled",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "submit",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "suspend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "timeupdate",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "touchcancel",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "touchend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "touchstart",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "volumechange",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "scroll",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "toggle",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "touchmove",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "waiting",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "wheel",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "scrollend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "animationcancel",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "animationend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "animationiteration",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "animationstart",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dblclick",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "focusin",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "focusout",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "transitionrun",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "transitionstart",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "transitioncancel",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "transitionend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "change",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "textInput",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "input",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "compositionstart",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "compositionupdate",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "compositionend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "drop",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "paste",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "keydown",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "keyup",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "keypress",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "auxclick",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "click",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "contextmenu",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "copy",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "cut",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "drag",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragenter",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragexit",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragleave",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragover",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dragstart",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "fullscreenchange",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "fullscreenerror",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "gotpointercapture",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "lostpointercapture",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "mousedown",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "mousedown",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "mousemove",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "mouseout",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "mouseover",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "mouseup",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "mouseup",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "pointercancel",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointerdown",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointerdown",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "pointermove",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointerout",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointerover",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointerup",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "pointerup",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "reset",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "submit",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "touchcancel",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "touchcancel",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "touchend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "touchend",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "touchstart",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "touchstart",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "scroll",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "touchmove",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "wheel",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "animationcancel",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "animationend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "animationiteration",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "animationstart",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "dblclick",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "focusin",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "focusout",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "transitionrun",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "transitionstart",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "transitioncancel",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "transitionend",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "change",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "textInput",
+        "scriptId": "11",
+        "line": 0
+      },
+      {
+        "type": "visibilitychange",
+        "scriptId": "16",
+        "line": 0
+      },
+      {
+        "type": "DOMContentLoaded",
+        "scriptId": "16",
+        "line": 0
+      }
+    ]
+  }
+}

@@ -35,7 +35,7 @@ export async function PUT(request: Request) {
       { error: "Please retry shortly." },
       { status: 429, headers: { "Retry-After": "60" } },
     );
-  const text = await request.text();
+  let text:string;try{const {limitedBody}=await import('@/lib/portfolio/request');text=new TextDecoder().decode(await limitedBody(request,1024*1024))}catch{return Response.json({error:'Workspace exceeds the sync size limit. Export a local backup.'},{status:413})}
   if (new TextEncoder().encode(text).length > 1024 * 1024)
     return Response.json(
       {
@@ -61,6 +61,10 @@ export async function PUT(request: Request) {
       ...data.records,
       ...data.bookmarks,
       ...(data.projectRuns || []),
+      ...(data.career?.profiles || []),
+      ...(data.career?.cases || []),
+      ...(data.career?.resumes || []),
+      ...(data.career?.jobs || []),
     ].some((item) => item.ownerId !== session.user.id)
   )
     return Response.json({ error: "Ownership mismatch." }, { status: 403 });

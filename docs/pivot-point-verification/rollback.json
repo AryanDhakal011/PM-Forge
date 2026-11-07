@@ -1,0 +1,17 @@
+{
+  "flag": "PMFORGE_PIVOT_POINT_ENABLED=false",
+  "checks": [
+    {
+      "route": "/app/projects/pivot-point",
+      "status": 200,
+      "closed": true,
+      "preservesSave": true
+    },
+    {
+      "route": "/app/projects/pivot-point/play",
+      "status": 200,
+      "closed": true,
+      "preservesSave": true
+    }
+  ]
+}

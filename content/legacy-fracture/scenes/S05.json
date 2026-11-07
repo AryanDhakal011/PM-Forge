@@ -1,0 +1,23 @@
+{
+  "id": "S05",
+  "type": "FACE",
+  "background": "depot",
+  "goal": "Choose who to walk with",
+  "tools": [
+    "walk"
+  ],
+  "lines": [
+    {
+      "speaker": "renata",
+      "text": "My drivers are late. I'm the one explaining.",
+      "expression": "pressured",
+      "clip": null
+    },
+    {
+      "speaker": "leif",
+      "text": "I can rebuild routing. If someone lets me.",
+      "expression": "approving",
+      "clip": null
+    }
+  ]
+}

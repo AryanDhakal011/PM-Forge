@@ -1,0 +1,1668 @@
+{
+  "base": "http://localhost:3010",
+  "checks": [
+    {
+      "label": "takeover deadlock",
+      "pass": true
+    },
+    {
+      "label": "axe deadlock entrance",
+      "pass": true
+    },
+    {
+      "label": "entrance mobile deadlock",
+      "pass": true
+    },
+    {
+      "label": "click Step inside",
+      "pass": true
+    },
+    {
+      "label": "axe deadlock TOOL",
+      "pass": true
+    },
+    {
+      "label": "mobile deadlock cold-open",
+      "pass": true
+    },
+    {
+      "label": "axe deadlock FACE",
+      "pass": true
+    },
+    {
+      "label": "mobile deadlock role",
+      "pass": true
+    },
+    {
+      "label": "mobile deadlock lab",
+      "pass": true
+    },
+    {
+      "label": "mobile deadlock second-look",
+      "pass": true
+    },
+    {
+      "label": "mobile deadlock mediate-speed",
+      "pass": true
+    },
+    {
+      "label": "mobile deadlock mediate-recovery",
+      "pass": true
+    },
+    {
+      "label": "mobile deadlock mediate-learning",
+      "pass": true
+    },
+    {
+      "label": "mobile deadlock hallway",
+      "pass": true
+    },
+    {
+      "label": "mobile deadlock projector",
+      "pass": true
+    },
+    {
+      "label": "mobile deadlock forge",
+      "pass": true
+    },
+    {
+      "label": "mobile deadlock dry-run",
+      "pass": true
+    },
+    {
+      "label": "mobile deadlock proposal",
+      "pass": true
+    },
+    {
+      "label": "mobile deadlock demo-0",
+      "pass": true
+    },
+    {
+      "label": "mobile deadlock demo-1",
+      "pass": true
+    },
+    {
+      "label": "mobile deadlock demo-2",
+      "pass": true
+    },
+    {
+      "label": "mobile deadlock demo-3",
+      "pass": true
+    },
+    {
+      "label": "mobile deadlock demo-4",
+      "pass": true
+    },
+    {
+      "label": "UI ending matches engine deadlock",
+      "pass": true
+    },
+    {
+      "label": "review at 320 deadlock",
+      "pass": true
+    },
+    {
+      "label": "click Pause",
+      "pass": true
+    },
+    {
+      "label": "pause blocks deadlock",
+      "pass": true
+    },
+    {
+      "label": "resume unblocks deadlock",
+      "pass": true
+    },
+    {
+      "label": "click Pause",
+      "pass": true
+    },
+    {
+      "label": "click Save and return to entrance",
+      "pass": true
+    },
+    {
+      "label": "click Open result",
+      "pass": true
+    },
+    {
+      "label": "resume actual save deadlock",
+      "pass": true
+    },
+    {
+      "label": "read-only review deadlock",
+      "pass": true
+    },
+    {
+      "label": "takeover sacred-no",
+      "pass": true
+    },
+    {
+      "label": "axe sacred-no entrance",
+      "pass": true
+    },
+    {
+      "label": "entrance mobile sacred-no",
+      "pass": true
+    },
+    {
+      "label": "click Step inside",
+      "pass": true
+    },
+    {
+      "label": "axe sacred-no TOOL",
+      "pass": true
+    },
+    {
+      "label": "mobile sacred-no first-messages",
+      "pass": true
+    },
+    {
+      "label": "mobile sacred-no triage",
+      "pass": true
+    },
+    {
+      "label": "mobile sacred-no night-shift",
+      "pass": true
+    },
+    {
+      "label": "mobile sacred-no rehearsal",
+      "pass": true
+    },
+    {
+      "label": "mobile sacred-no duel",
+      "pass": true
+    },
+    {
+      "label": "axe sacred-no FACE",
+      "pass": true
+    },
+    {
+      "label": "mobile sacred-no cave-or-steady",
+      "pass": true
+    },
+    {
+      "label": "mobile sacred-no tell-negotiation",
+      "pass": true
+    },
+    {
+      "label": "mobile sacred-no blast-radius",
+      "pass": true
+    },
+    {
+      "label": "mobile sacred-no kill-switch",
+      "pass": true
+    },
+    {
+      "label": "mobile sacred-no board",
+      "pass": true
+    },
+    {
+      "label": "UI ending matches engine sacred-no",
+      "pass": true
+    },
+    {
+      "label": "review at 320 sacred-no",
+      "pass": true
+    },
+    {
+      "label": "click Pause",
+      "pass": true
+    },
+    {
+      "label": "pause blocks sacred-no",
+      "pass": true
+    },
+    {
+      "label": "resume unblocks sacred-no",
+      "pass": true
+    },
+    {
+      "label": "click Pause",
+      "pass": true
+    },
+    {
+      "label": "click Save and return to entrance",
+      "pass": true
+    },
+    {
+      "label": "click Open result",
+      "pass": true
+    },
+    {
+      "label": "resume actual save sacred-no",
+      "pass": true
+    },
+    {
+      "label": "read-only review sacred-no",
+      "pass": true
+    },
+    {
+      "label": "takeover ghost-metric",
+      "pass": true
+    },
+    {
+      "label": "axe ghost-metric entrance",
+      "pass": true
+    },
+    {
+      "label": "entrance mobile ghost-metric",
+      "pass": true
+    },
+    {
+      "label": "click Step inside",
+      "pass": true
+    },
+    {
+      "label": "axe ghost-metric TOOL",
+      "pass": true
+    },
+    {
+      "label": "mobile ghost-metric retry",
+      "pass": true
+    },
+    {
+      "label": "mobile ghost-metric drawer-cart",
+      "pass": true
+    },
+    {
+      "label": "mobile ghost-metric join",
+      "pass": true
+    },
+    {
+      "label": "mobile ghost-metric autopsy",
+      "pass": true
+    },
+    {
+      "label": "mobile ghost-metric bet",
+      "pass": true
+    },
+    {
+      "label": "axe ghost-metric FACE",
+      "pass": true
+    },
+    {
+      "label": "mobile ghost-metric promise",
+      "pass": true
+    },
+    {
+      "label": "mobile ghost-metric confession",
+      "pass": true
+    },
+    {
+      "label": "mobile ghost-metric slides",
+      "pass": true
+    },
+    {
+      "label": "mobile ghost-metric all-hands",
+      "pass": true
+    },
+    {
+      "label": "mobile ghost-metric definition",
+      "pass": true
+    },
+    {
+      "label": "mobile ghost-metric heist",
+      "pass": true
+    },
+    {
+      "label": "mobile ghost-metric board",
+      "pass": true
+    },
+    {
+      "label": "UI ending matches engine ghost-metric",
+      "pass": true
+    },
+    {
+      "label": "review at 320 ghost-metric",
+      "pass": true
+    },
+    {
+      "label": "click Pause",
+      "pass": true
+    },
+    {
+      "label": "pause blocks ghost-metric",
+      "pass": true
+    },
+    {
+      "label": "resume unblocks ghost-metric",
+      "pass": true
+    },
+    {
+      "label": "click Pause",
+      "pass": true
+    },
+    {
+      "label": "click Save and return to entrance",
+      "pass": true
+    },
+    {
+      "label": "click Open result",
+      "pass": true
+    },
+    {
+      "label": "resume actual save ghost-metric",
+      "pass": true
+    },
+    {
+      "label": "read-only review ghost-metric",
+      "pass": true
+    },
+    {
+      "label": "takeover trojan-horse",
+      "pass": true
+    },
+    {
+      "label": "axe trojan-horse entrance",
+      "pass": true
+    },
+    {
+      "label": "entrance mobile trojan-horse",
+      "pass": true
+    },
+    {
+      "label": "click Step inside",
+      "pass": true
+    },
+    {
+      "label": "axe trojan-horse TOOL",
+      "pass": true
+    },
+    {
+      "label": "mobile trojan-horse coin-press",
+      "pass": true
+    },
+    {
+      "label": "mobile trojan-horse party-floor",
+      "pass": true
+    },
+    {
+      "label": "mobile trojan-horse drawers",
+      "pass": true
+    },
+    {
+      "label": "mobile trojan-horse fraud-hunt",
+      "pass": true
+    },
+    {
+      "label": "mobile trojan-horse valve",
+      "pass": true
+    },
+    {
+      "label": "axe trojan-horse FACE",
+      "pass": true
+    },
+    {
+      "label": "mobile trojan-horse message",
+      "pass": true
+    },
+    {
+      "label": "mobile trojan-horse guild-visit",
+      "pass": true
+    },
+    {
+      "label": "mobile trojan-horse segments",
+      "pass": true
+    },
+    {
+      "label": "mobile trojan-horse grace",
+      "pass": true
+    },
+    {
+      "label": "axe trojan-horse NARR",
+      "pass": true
+    },
+    {
+      "label": "mobile trojan-horse hangover",
+      "pass": true
+    },
+    {
+      "label": "mobile trojan-horse launch-night",
+      "pass": true
+    },
+    {
+      "label": "mobile trojan-horse launch-interventions",
+      "pass": true
+    },
+    {
+      "label": "mobile trojan-horse last-request",
+      "pass": true
+    },
+    {
+      "label": "UI ending matches engine trojan-horse",
+      "pass": true
+    },
+    {
+      "label": "review at 320 trojan-horse",
+      "pass": true
+    },
+    {
+      "label": "click Pause",
+      "pass": true
+    },
+    {
+      "label": "pause blocks trojan-horse",
+      "pass": true
+    },
+    {
+      "label": "resume unblocks trojan-horse",
+      "pass": true
+    },
+    {
+      "label": "click Pause",
+      "pass": true
+    },
+    {
+      "label": "click Save and return to entrance",
+      "pass": true
+    },
+    {
+      "label": "click Open result",
+      "pass": true
+    },
+    {
+      "label": "resume actual save trojan-horse",
+      "pass": true
+    },
+    {
+      "label": "read-only review trojan-horse",
+      "pass": true
+    },
+    {
+      "label": "takeover last-mile",
+      "pass": true
+    },
+    {
+      "label": "axe last-mile entrance",
+      "pass": true
+    },
+    {
+      "label": "entrance mobile last-mile",
+      "pass": true
+    },
+    {
+      "label": "click Step inside",
+      "pass": true
+    },
+    {
+      "label": "axe last-mile TOOL",
+      "pass": true
+    },
+    {
+      "label": "mobile last-mile ride-along",
+      "pass": true
+    },
+    {
+      "label": "mobile last-mile ride-tick-0",
+      "pass": true
+    },
+    {
+      "label": "mobile last-mile ride-tick-1",
+      "pass": true
+    },
+    {
+      "label": "mobile last-mile field-reports",
+      "pass": true
+    },
+    {
+      "label": "mobile last-mile radio",
+      "pass": true
+    },
+    {
+      "label": "mobile last-mile threshold",
+      "pass": true
+    },
+    {
+      "label": "mobile last-mile shelters",
+      "pass": true
+    },
+    {
+      "label": "axe last-mile FACE",
+      "pass": true
+    },
+    {
+      "label": "mobile last-mile statement",
+      "pass": true
+    },
+    {
+      "label": "mobile last-mile face-ledger",
+      "pass": true
+    },
+    {
+      "label": "mobile last-mile rumors",
+      "pass": true
+    },
+    {
+      "label": "mobile last-mile reopen",
+      "pass": true
+    },
+    {
+      "label": "mobile last-mile cadence",
+      "pass": true
+    },
+    {
+      "label": "UI ending matches engine last-mile",
+      "pass": true
+    },
+    {
+      "label": "review at 320 last-mile",
+      "pass": true
+    },
+    {
+      "label": "click Pause",
+      "pass": true
+    },
+    {
+      "label": "pause blocks last-mile",
+      "pass": true
+    },
+    {
+      "label": "resume unblocks last-mile",
+      "pass": true
+    },
+    {
+      "label": "click Pause",
+      "pass": true
+    },
+    {
+      "label": "click Save and return to entrance",
+      "pass": true
+    },
+    {
+      "label": "click Open result",
+      "pass": true
+    },
+    {
+      "label": "resume actual save last-mile",
+      "pass": true
+    },
+    {
+      "label": "read-only review last-mile",
+      "pass": true
+    },
+    {
+      "label": "takeover toy-regression",
+      "pass": true
+    },
+    {
+      "label": "axe toy-regression entrance",
+      "pass": true
+    },
+    {
+      "label": "entrance mobile toy-regression",
+      "pass": true
+    },
+    {
+      "label": "click Step inside",
+      "pass": true
+    },
+    {
+      "label": "axe toy-regression NARR",
+      "pass": true
+    },
+    {
+      "label": "mobile toy-regression opening",
+      "pass": true
+    },
+    {
+      "label": "axe toy-regression FACE",
+      "pass": true
+    },
+    {
+      "label": "mobile toy-regression decision",
+      "pass": true
+    },
+    {
+      "label": "UI ending matches engine toy-regression",
+      "pass": true
+    },
+    {
+      "label": "review at 320 toy-regression",
+      "pass": true
+    },
+    {
+      "label": "click Pause",
+      "pass": true
+    },
+    {
+      "label": "pause blocks toy-regression",
+      "pass": true
+    },
+    {
+      "label": "resume unblocks toy-regression",
+      "pass": true
+    },
+    {
+      "label": "click Pause",
+      "pass": true
+    },
+    {
+      "label": "click Save and return to entrance",
+      "pass": true
+    },
+    {
+      "label": "click Open result",
+      "pass": true
+    },
+    {
+      "label": "resume actual save toy-regression",
+      "pass": true
+    },
+    {
+      "label": "read-only review toy-regression",
+      "pass": true
+    },
+    {
+      "label": "click Step inside",
+      "pass": true
+    },
+    {
+      "label": "native 400ms hold records stopping the arm",
+      "pass": true
+    },
+    {
+      "label": "Back preserves the active run",
+      "pass": true
+    },
+    {
+      "label": "click Close dialog",
+      "pass": true
+    },
+    {
+      "label": "click Step inside",
+      "pass": true
+    },
+    {
+      "label": "click Start 15-second run",
+      "pass": true
+    },
+    {
+      "label": "click Pause",
+      "pass": true
+    },
+    {
+      "label": "Pause freezes the live simulation clock",
+      "pass": true
+    },
+    {
+      "label": "click Close dialog",
+      "pass": true
+    },
+    {
+      "label": "click Hit kill switch",
+      "pass": true
+    },
+    {
+      "label": "native kill switch records its timing",
+      "pass": true
+    },
+    {
+      "label": "click Captions only",
+      "pass": true
+    },
+    {
+      "label": "click Step inside",
+      "pass": true
+    },
+    {
+      "label": "blocked storage has a visible export banner",
+      "pass": true
+    },
+    {
+      "label": "blocked audio and storage do not block play",
+      "pass": true
+    },
+    {
+      "label": "missing local save is calm",
+      "pass": true
+    },
+    {
+      "label": "no Enter or Resume on draft cards",
+      "pass": true
+    },
+    {
+      "label": "hooks removed on exit",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hooks 0",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hooks 1",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hooks 2",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hooks 3",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hooks 4",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hooks 5",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hooks 6",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hooks 7",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hooks 8",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hooks 9",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hooks 10",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hooks 11",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hooks 12",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hooks 13",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hooks 14",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hooks 15",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hooks 16",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hooks 17",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hooks 18",
+      "pass": true
+    },
+    {
+      "label": "click Projects",
+      "pass": true
+    },
+    {
+      "label": "disposed hooks 19",
+      "pass": true
+    },
+    {
+      "label": "global listeners stable after twenty soft entries",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "scenes": [
+    {
+      "id": "deadlock",
+      "scene": "cold-open"
+    },
+    {
+      "id": "deadlock",
+      "scene": "role"
+    },
+    {
+      "id": "deadlock",
+      "scene": "lab"
+    },
+    {
+      "id": "deadlock",
+      "scene": "second-look"
+    },
+    {
+      "id": "deadlock",
+      "scene": "mediate-speed"
+    },
+    {
+      "id": "deadlock",
+      "scene": "mediate-recovery"
+    },
+    {
+      "id": "deadlock",
+      "scene": "mediate-learning"
+    },
+    {
+      "id": "deadlock",
+      "scene": "hallway"
+    },
+    {
+      "id": "deadlock",
+      "scene": "projector"
+    },
+    {
+      "id": "deadlock",
+      "scene": "forge"
+    },
+    {
+      "id": "deadlock",
+      "scene": "dry-run"
+    },
+    {
+      "id": "deadlock",
+      "scene": "proposal"
+    },
+    {
+      "id": "deadlock",
+      "scene": "demo-0"
+    },
+    {
+      "id": "deadlock",
+      "scene": "demo-1"
+    },
+    {
+      "id": "deadlock",
+      "scene": "demo-2"
+    },
+    {
+      "id": "deadlock",
+      "scene": "demo-3"
+    },
+    {
+      "id": "deadlock",
+      "scene": "demo-4"
+    },
+    {
+      "id": "sacred-no",
+      "scene": "first-messages"
+    },
+    {
+      "id": "sacred-no",
+      "scene": "triage"
+    },
+    {
+      "id": "sacred-no",
+      "scene": "night-shift"
+    },
+    {
+      "id": "sacred-no",
+      "scene": "rehearsal"
+    },
+    {
+      "id": "sacred-no",
+      "scene": "duel"
+    },
+    {
+      "id": "sacred-no",
+      "scene": "cave-or-steady"
+    },
+    {
+      "id": "sacred-no",
+      "scene": "tell-negotiation"
+    },
+    {
+      "id": "sacred-no",
+      "scene": "blast-radius"
+    },
+    {
+      "id": "sacred-no",
+      "scene": "kill-switch"
+    },
+    {
+      "id": "sacred-no",
+      "scene": "board"
+    },
+    {
+      "id": "ghost-metric",
+      "scene": "retry"
+    },
+    {
+      "id": "ghost-metric",
+      "scene": "drawer-cart"
+    },
+    {
+      "id": "ghost-metric",
+      "scene": "join"
+    },
+    {
+      "id": "ghost-metric",
+      "scene": "autopsy"
+    },
+    {
+      "id": "ghost-metric",
+      "scene": "bet"
+    },
+    {
+      "id": "ghost-metric",
+      "scene": "promise"
+    },
+    {
+      "id": "ghost-metric",
+      "scene": "confession"
+    },
+    {
+      "id": "ghost-metric",
+      "scene": "slides"
+    },
+    {
+      "id": "ghost-metric",
+      "scene": "all-hands"
+    },
+    {
+      "id": "ghost-metric",
+      "scene": "definition"
+    },
+    {
+      "id": "ghost-metric",
+      "scene": "heist"
+    },
+    {
+      "id": "ghost-metric",
+      "scene": "board"
+    },
+    {
+      "id": "trojan-horse",
+      "scene": "coin-press"
+    },
+    {
+      "id": "trojan-horse",
+      "scene": "party-floor"
+    },
+    {
+      "id": "trojan-horse",
+      "scene": "drawers"
+    },
+    {
+      "id": "trojan-horse",
+      "scene": "fraud-hunt"
+    },
+    {
+      "id": "trojan-horse",
+      "scene": "valve"
+    },
+    {
+      "id": "trojan-horse",
+      "scene": "message"
+    },
+    {
+      "id": "trojan-horse",
+      "scene": "guild-visit"
+    },
+    {
+      "id": "trojan-horse",
+      "scene": "segments"
+    },
+    {
+      "id": "trojan-horse",
+      "scene": "grace"
+    },
+    {
+      "id": "trojan-horse",
+      "scene": "hangover"
+    },
+    {
+      "id": "trojan-horse",
+      "scene": "launch-night"
+    },
+    {
+      "id": "trojan-horse",
+      "scene": "launch-interventions"
+    },
+    {
+      "id": "trojan-horse",
+      "scene": "last-request"
+    },
+    {
+      "id": "last-mile",
+      "scene": "ride-along"
+    },
+    {
+      "id": "last-mile",
+      "scene": "ride-tick-0"
+    },
+    {
+      "id": "last-mile",
+      "scene": "ride-tick-1"
+    },
+    {
+      "id": "last-mile",
+      "scene": "field-reports"
+    },
+    {
+      "id": "last-mile",
+      "scene": "radio"
+    },
+    {
+      "id": "last-mile",
+      "scene": "threshold"
+    },
+    {
+      "id": "last-mile",
+      "scene": "shelters"
+    },
+    {
+      "id": "last-mile",
+      "scene": "statement"
+    },
+    {
+      "id": "last-mile",
+      "scene": "face-ledger"
+    },
+    {
+      "id": "last-mile",
+      "scene": "rumors"
+    },
+    {
+      "id": "last-mile",
+      "scene": "reopen"
+    },
+    {
+      "id": "last-mile",
+      "scene": "cadence"
+    },
+    {
+      "id": "toy-regression",
+      "scene": "opening"
+    },
+    {
+      "id": "toy-regression",
+      "scene": "decision"
+    }
+  ],
+  "screenshots": [
+    "deadlock-entrance-desktop",
+    "deadlock-entrance-mobile",
+    "scenes/deadlock-cold-open-desktop",
+    "scenes/deadlock-cold-open-mobile",
+    "scenes/deadlock-role-desktop",
+    "scenes/deadlock-role-mobile",
+    "scenes/deadlock-lab-desktop",
+    "scenes/deadlock-lab-mobile",
+    "scenes/deadlock-second-look-desktop",
+    "scenes/deadlock-second-look-mobile",
+    "scenes/deadlock-mediate-speed-desktop",
+    "scenes/deadlock-mediate-speed-mobile",
+    "scenes/deadlock-mediate-recovery-desktop",
+    "scenes/deadlock-mediate-recovery-mobile",
+    "scenes/deadlock-mediate-learning-desktop",
+    "scenes/deadlock-mediate-learning-mobile",
+    "scenes/deadlock-hallway-desktop",
+    "scenes/deadlock-hallway-mobile",
+    "scenes/deadlock-projector-desktop",
+    "scenes/deadlock-projector-mobile",
+    "scenes/deadlock-forge-desktop",
+    "scenes/deadlock-forge-mobile",
+    "scenes/deadlock-dry-run-desktop",
+    "scenes/deadlock-dry-run-mobile",
+    "scenes/deadlock-proposal-desktop",
+    "scenes/deadlock-proposal-mobile",
+    "scenes/deadlock-demo-0-desktop",
+    "scenes/deadlock-demo-0-mobile",
+    "scenes/deadlock-demo-1-desktop",
+    "scenes/deadlock-demo-1-mobile",
+    "scenes/deadlock-demo-2-desktop",
+    "scenes/deadlock-demo-2-mobile",
+    "scenes/deadlock-demo-3-desktop",
+    "scenes/deadlock-demo-3-mobile",
+    "scenes/deadlock-demo-4-desktop",
+    "scenes/deadlock-demo-4-mobile",
+    "deadlock-review-desktop",
+    "deadlock-review-mobile",
+    "sacred-no-entrance-desktop",
+    "sacred-no-entrance-mobile",
+    "scenes/sacred-no-first-messages-desktop",
+    "scenes/sacred-no-first-messages-mobile",
+    "scenes/sacred-no-triage-desktop",
+    "scenes/sacred-no-triage-mobile",
+    "scenes/sacred-no-night-shift-desktop",
+    "scenes/sacred-no-night-shift-mobile",
+    "scenes/sacred-no-rehearsal-desktop",
+    "scenes/sacred-no-rehearsal-mobile",
+    "scenes/sacred-no-duel-desktop",
+    "scenes/sacred-no-duel-mobile",
+    "scenes/sacred-no-cave-or-steady-desktop",
+    "scenes/sacred-no-cave-or-steady-mobile",
+    "scenes/sacred-no-tell-negotiation-desktop",
+    "scenes/sacred-no-tell-negotiation-mobile",
+    "scenes/sacred-no-blast-radius-desktop",
+    "scenes/sacred-no-blast-radius-mobile",
+    "scenes/sacred-no-kill-switch-desktop",
+    "scenes/sacred-no-kill-switch-mobile",
+    "scenes/sacred-no-board-desktop",
+    "scenes/sacred-no-board-mobile",
+    "sacred-no-review-desktop",
+    "sacred-no-review-mobile",
+    "ghost-metric-entrance-desktop",
+    "ghost-metric-entrance-mobile",
+    "scenes/ghost-metric-retry-desktop",
+    "scenes/ghost-metric-retry-mobile",
+    "scenes/ghost-metric-drawer-cart-desktop",
+    "scenes/ghost-metric-drawer-cart-mobile",
+    "scenes/ghost-metric-join-desktop",
+    "scenes/ghost-metric-join-mobile",
+    "scenes/ghost-metric-autopsy-desktop",
+    "scenes/ghost-metric-autopsy-mobile",
+    "scenes/ghost-metric-bet-desktop",
+    "scenes/ghost-metric-bet-mobile",
+    "scenes/ghost-metric-promise-desktop",
+    "scenes/ghost-metric-promise-mobile",
+    "scenes/ghost-metric-confession-desktop",
+    "scenes/ghost-metric-confession-mobile",
+    "scenes/ghost-metric-slides-desktop",
+    "scenes/ghost-metric-slides-mobile",
+    "scenes/ghost-metric-all-hands-desktop",
+    "scenes/ghost-metric-all-hands-mobile",
+    "scenes/ghost-metric-definition-desktop",
+    "scenes/ghost-metric-definition-mobile",
+    "scenes/ghost-metric-heist-desktop",
+    "scenes/ghost-metric-heist-mobile",
+    "scenes/ghost-metric-board-desktop",
+    "scenes/ghost-metric-board-mobile",
+    "ghost-metric-review-desktop",
+    "ghost-metric-review-mobile",
+    "trojan-horse-entrance-desktop",
+    "trojan-horse-entrance-mobile",
+    "scenes/trojan-horse-coin-press-desktop",
+    "scenes/trojan-horse-coin-press-mobile",
+    "scenes/trojan-horse-party-floor-desktop",
+    "scenes/trojan-horse-party-floor-mobile",
+    "scenes/trojan-horse-drawers-desktop",
+    "scenes/trojan-horse-drawers-mobile",
+    "scenes/trojan-horse-fraud-hunt-desktop",
+    "scenes/trojan-horse-fraud-hunt-mobile",
+    "scenes/trojan-horse-valve-desktop",
+    "scenes/trojan-horse-valve-mobile",
+    "scenes/trojan-horse-message-desktop",
+    "scenes/trojan-horse-message-mobile",
+    "scenes/trojan-horse-guild-visit-desktop",
+    "scenes/trojan-horse-guild-visit-mobile",
+    "scenes/trojan-horse-segments-desktop",
+    "scenes/trojan-horse-segments-mobile",
+    "scenes/trojan-horse-grace-desktop",
+    "scenes/trojan-horse-grace-mobile",
+    "scenes/trojan-horse-hangover-desktop",
+    "scenes/trojan-horse-hangover-mobile",
+    "scenes/trojan-horse-launch-night-desktop",
+    "scenes/trojan-horse-launch-night-mobile",
+    "scenes/trojan-horse-launch-interventions-desktop",
+    "scenes/trojan-horse-launch-interventions-mobile",
+    "scenes/trojan-horse-last-request-desktop",
+    "scenes/trojan-horse-last-request-mobile",
+    "trojan-horse-review-desktop",
+    "trojan-horse-review-mobile",
+    "last-mile-entrance-desktop",
+    "last-mile-entrance-mobile",
+    "scenes/last-mile-ride-along-desktop",
+    "scenes/last-mile-ride-along-mobile",
+    "scenes/last-mile-ride-tick-0-desktop",
+    "scenes/last-mile-ride-tick-0-mobile",
+    "scenes/last-mile-ride-tick-1-desktop",
+    "scenes/last-mile-ride-tick-1-mobile",
+    "scenes/last-mile-field-reports-desktop",
+    "scenes/last-mile-field-reports-mobile",
+    "scenes/last-mile-radio-desktop",
+    "scenes/last-mile-radio-mobile",
+    "scenes/last-mile-threshold-desktop",
+    "scenes/last-mile-threshold-mobile",
+    "scenes/last-mile-shelters-desktop",
+    "scenes/last-mile-shelters-mobile",
+    "scenes/last-mile-statement-desktop",
+    "scenes/last-mile-statement-mobile",
+    "scenes/last-mile-face-ledger-desktop",
+    "scenes/last-mile-face-ledger-mobile",
+    "scenes/last-mile-rumors-desktop",
+    "scenes/last-mile-rumors-mobile",
+    "scenes/last-mile-reopen-desktop",
+    "scenes/last-mile-reopen-mobile",
+    "scenes/last-mile-cadence-desktop",
+    "scenes/last-mile-cadence-mobile",
+    "last-mile-review-desktop",
+    "last-mile-review-mobile",
+    "toy-regression-entrance-desktop",
+    "toy-regression-entrance-mobile",
+    "scenes/toy-regression-opening-desktop",
+    "scenes/toy-regression-opening-mobile",
+    "scenes/toy-regression-decision-desktop",
+    "scenes/toy-regression-decision-mobile",
+    "toy-regression-review-desktop",
+    "toy-regression-review-mobile",
+    "hub-release-gates"
+  ],
+  "runs": [
+    {
+      "id": "deadlock",
+      "scene": "review",
+      "ending": "steady",
+      "seed": 41,
+      "receipts": 17
+    },
+    {
+      "id": "sacred-no",
+      "scene": "review",
+      "ending": "backed",
+      "seed": 41,
+      "receipts": 11
+    },
+    {
+      "id": "ghost-metric",
+      "scene": "review",
+      "ending": "calibrated",
+      "seed": 41,
+      "receipts": 12
+    },
+    {
+      "id": "trojan-horse",
+      "scene": "review",
+      "ending": "gardener",
+      "seed": 41,
+      "receipts": 12
+    },
+    {
+      "id": "last-mile",
+      "scene": "review",
+      "ending": "safe",
+      "seed": 41,
+      "receipts": 12
+    },
+    {
+      "id": "toy-regression",
+      "scene": "review",
+      "ending": "bounded",
+      "seed": 41,
+      "receipts": 1
+    }
+  ],
+  "accessibility": [
+    {
+      "label": "deadlock entrance",
+      "violations": []
+    },
+    {
+      "label": "deadlock TOOL",
+      "violations": []
+    },
+    {
+      "label": "deadlock FACE",
+      "violations": []
+    },
+    {
+      "label": "sacred-no entrance",
+      "violations": []
+    },
+    {
+      "label": "sacred-no TOOL",
+      "violations": []
+    },
+    {
+      "label": "sacred-no FACE",
+      "violations": []
+    },
+    {
+      "label": "ghost-metric entrance",
+      "violations": []
+    },
+    {
+      "label": "ghost-metric TOOL",
+      "violations": []
+    },
+    {
+      "label": "ghost-metric FACE",
+      "violations": []
+    },
+    {
+      "label": "trojan-horse entrance",
+      "violations": []
+    },
+    {
+      "label": "trojan-horse TOOL",
+      "violations": []
+    },
+    {
+      "label": "trojan-horse FACE",
+      "violations": []
+    },
+    {
+      "label": "trojan-horse NARR",
+      "violations": []
+    },
+    {
+      "label": "last-mile entrance",
+      "violations": []
+    },
+    {
+      "label": "last-mile TOOL",
+      "violations": []
+    },
+    {
+      "label": "last-mile FACE",
+      "violations": []
+    },
+    {
+      "label": "toy-regression entrance",
+      "violations": []
+    },
+    {
+      "label": "toy-regression NARR",
+      "violations": []
+    },
+    {
+      "label": "toy-regression FACE",
+      "violations": []
+    }
+  ],
+  "listenersBefore": [
+    {
+      "error": 2,
+      "unhandledrejection": 2,
+      "pagehide": 2,
+      "pageshow": 3,
+      "online": 2,
+      "x-storagemutated-1": 1,
+      "keydown": 2,
+      "pmforge:gate-close": 1,
+      "popstate": 1,
+      "wheel": 1,
+      "load": 1,
+      "resize": 1,
+      "pmforge:theme": 1,
+      "storage": 1,
+      "focus": 1,
+      "offline": 1
+    },
+    {
+      "input": 2,
+      "compositionstart": 2,
+      "compositionupdate": 2,
+      "compositionend": 2,
+      "drop": 2,
+      "paste": 2,
+      "keydown": 2,
+      "keyup": 2,
+      "keypress": 2,
+      "visibilitychange": 2,
+      "selectionchange": 1,
+      "abort": 1,
+      "auxclick": 2,
+      "beforetoggle": 1,
+      "cancel": 1,
+      "canplay": 1,
+      "canplaythrough": 1,
+      "click": 4,
+      "close": 1,
+      "contextmenu": 2,
+      "copy": 2,
+      "cut": 2,
+      "drag": 2,
+      "dragend": 2,
+      "dragenter": 2,
+      "dragexit": 2,
+      "dragleave": 2,
+      "dragover": 2,
+      "dragstart": 2,
+      "durationchange": 1,
+      "emptied": 1,
+      "encrypted": 1,
+      "ended": 1,
+      "error": 1,
+      "fullscreenchange": 2,
+      "fullscreenerror": 2,
+      "gotpointercapture": 2,
+      "invalid": 1,
+      "load": 1,
+      "loadeddata": 1,
+      "loadedmetadata": 1,
+      "loadstart": 1,
+      "lostpointercapture": 2,
+      "mousedown": 3,
+      "mousemove": 2,
+      "mouseout": 2,
+      "mouseover": 2,
+      "mouseup": 3,
+      "pause": 1,
+      "play": 1,
+      "playing": 1,
+      "pointercancel": 2,
+      "pointerdown": 3,
+      "pointermove": 2,
+      "pointerout": 2,
+      "pointerover": 2,
+      "pointerup": 3,
+      "progress": 1,
+      "ratechange": 1,
+      "reset": 2,
+      "resize": 1,
+      "seeked": 1,
+      "seeking": 1,
+      "stalled": 1,
+      "submit": 2,
+      "suspend": 1,
+      "timeupdate": 1,
+      "touchcancel": 3,
+      "touchend": 3,
+      "touchstart": 3,
+      "volumechange": 1,
+      "scroll": 2,
+      "toggle": 1,
+      "touchmove": 2,
+      "waiting": 1,
+      "wheel": 2,
+      "scrollend": 1,
+      "animationcancel": 2,
+      "animationend": 2,
+      "animationiteration": 2,
+      "animationstart": 2,
+      "dblclick": 2,
+      "focusin": 2,
+      "focusout": 2,
+      "transitionrun": 2,
+      "transitionstart": 2,
+      "transitioncancel": 2,
+      "transitionend": 2,
+      "change": 2,
+      "textInput": 2,
+      "DOMContentLoaded": 1
+    }
+  ],
+  "listenersAfter": [
+    {
+      "error": 2,
+      "unhandledrejection": 2,
+      "pagehide": 2,
+      "pageshow": 3,
+      "online": 2,
+      "x-storagemutated-1": 1,
+      "keydown": 2,
+      "pmforge:gate-close": 1,
+      "popstate": 1,
+      "wheel": 1,
+      "load": 1,
+      "resize": 1,
+      "pmforge:theme": 1,
+      "storage": 1,
+      "focus": 1,
+      "offline": 1
+    },
+    {
+      "input": 2,
+      "compositionstart": 2,
+      "compositionupdate": 2,
+      "compositionend": 2,
+      "drop": 2,
+      "paste": 2,
+      "keydown": 2,
+      "keyup": 2,
+      "keypress": 2,
+      "visibilitychange": 2,
+      "selectionchange": 1,
+      "abort": 1,
+      "auxclick": 2,
+      "beforetoggle": 1,
+      "cancel": 1,
+      "canplay": 1,
+      "canplaythrough": 1,
+      "click": 4,
+      "close": 1,
+      "contextmenu": 2,
+      "copy": 2,
+      "cut": 2,
+      "drag": 2,
+      "dragend": 2,
+      "dragenter": 2,
+      "dragexit": 2,
+      "dragleave": 2,
+      "dragover": 2,
+      "dragstart": 2,
+      "durationchange": 1,
+      "emptied": 1,
+      "encrypted": 1,
+      "ended": 1,
+      "error": 1,
+      "fullscreenchange": 2,
+      "fullscreenerror": 2,
+      "gotpointercapture": 2,
+      "invalid": 1,
+      "load": 1,
+      "loadeddata": 1,
+      "loadedmetadata": 1,
+      "loadstart": 1,
+      "lostpointercapture": 2,
+      "mousedown": 3,
+      "mousemove": 2,
+      "mouseout": 2,
+      "mouseover": 2,
+      "mouseup": 3,
+      "pause": 1,
+      "play": 1,
+      "playing": 1,
+      "pointercancel": 2,
+      "pointerdown": 3,
+      "pointermove": 2,
+      "pointerout": 2,
+      "pointerover": 2,
+      "pointerup": 3,
+      "progress": 1,
+      "ratechange": 1,
+      "reset": 2,
+      "resize": 1,
+      "seeked": 1,
+      "seeking": 1,
+      "stalled": 1,
+      "submit": 2,
+      "suspend": 1,
+      "timeupdate": 1,
+      "touchcancel": 3,
+      "touchend": 3,
+      "touchstart": 3,
+      "volumechange": 1,
+      "scroll": 2,
+      "toggle": 1,
+      "touchmove": 2,
+      "waiting": 1,
+      "wheel": 2,
+      "scrollend": 1,
+      "animationcancel": 2,
+      "animationend": 2,
+      "animationiteration": 2,
+      "animationstart": 2,
+      "dblclick": 2,
+      "focusin": 2,
+      "focusout": 2,
+      "transitionrun": 2,
+      "transitionstart": 2,
+      "transitioncancel": 2,
+      "transitionend": 2,
+      "change": 2,
+      "textInput": 2,
+      "DOMContentLoaded": 1
+    }
+  ]
+}

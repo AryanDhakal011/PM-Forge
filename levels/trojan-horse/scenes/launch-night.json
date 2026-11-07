@@ -1,0 +1,106 @@
+{
+  "id": "launch-night",
+  "type": "TOOL",
+  "background": "party",
+  "goal": "Compose the announcement and answer three live posts.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "rhea"
+  ],
+  "lines": [
+    {
+      "id": "line-12",
+      "speaker": "rhea",
+      "expression": "thinking",
+      "text": "Someone posted your week-one message."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "launch-night",
+      "kind": "LaunchNight",
+      "title": "Launch Night",
+      "items": [
+        {
+          "id": "own",
+          "label": "Own it",
+          "detail": "Acknowledge the earlier promise.",
+          "effects": [
+            {
+              "var": "community",
+              "op": "add",
+              "value": 4
+            }
+          ],
+          "reaction": "A clear answer travels further than another slogan.",
+          "speaker": "rhea"
+        },
+        {
+          "id": "explain",
+          "label": "Explain",
+          "detail": "Explain the mechanics without dismissing the cost.",
+          "effects": [
+            {
+              "var": "community",
+              "op": "add",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "escalate",
+          "label": "Escalate",
+          "detail": "Get the partner lead into the conversation.",
+          "effects": [
+            {
+              "var": "partner",
+              "op": "add",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "id": "dismiss",
+          "label": "Keep the policy. Decline individual replies.",
+          "detail": "Lower support load; higher community frustration.",
+          "effects": [
+            {
+              "var": "community",
+              "op": "add",
+              "value": -12
+            },
+            {
+              "var": "rating",
+              "op": "add",
+              "value": -4
+            }
+          ]
+        }
+      ],
+      "min": 3,
+      "max": 3,
+      "cost": 0,
+      "receiptId": "R_trojan-horse_launch-night",
+      "rounds": 3,
+      "lever": [
+        {
+          "id": "rolloutDays",
+          "label": "Rollout days",
+          "min": 0,
+          "max": 28,
+          "initial": 14,
+          "step": 1
+        }
+      ],
+      "resolution": "The posts and your stance are recorded. Rating Watch reflects the response."
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 28,
+  "act": 3,
+  "next": "launch-interventions"
+}

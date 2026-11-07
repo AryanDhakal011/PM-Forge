@@ -1,0 +1,10 @@
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+const base=process.env.PRODUCT_URL||'http://localhost:3001';
+const routes=[...new Set([...JSON.parse(readFileSync('.data/navigation-routes.json','utf8')).routes,'/app/projects/trojan-horse','/app/projects/trojan-horse/play'])];
+const report={base,buildId:readFileSync('.next/BUILD_ID','utf8').trim(),routes:[],assets:[],servedCurrentBuild:false},queue=[...routes],assets=new Set();
+await Promise.all(Array.from({length:6},async()=>{while(queue.length){const path=queue.shift();try{const r=await fetch(base+path),html=await r.text();report.routes.push({path,status:r.status});for(const m of html.matchAll(/(?:src|href)="([^"<>]+\.(?:js|css)(?:\?[^"<>]*)?)"/g))if(m[1].startsWith('/'))assets.add(m[1].replaceAll('&amp;','&'));if(path==='/app/projects/trojan-horse')report.servedCurrentBuild=html.includes(report.buildId);}catch(e){report.routes.push({path,error:e.message})}}}));
+for(const clip of Object.values(JSON.parse(readFileSync('content/projects/trojan-horse/audio-manifest.json','utf8')).lines))assets.add(clip.file);
+for(const file of ['party-bed','hangover-bed','tick','paper','chime','error'])assets.add('/trojan-horse/audio/'+file+'.wav');
+const aq=[...assets];await Promise.all(Array.from({length:6},async()=>{while(aq.length){const path=aq.shift();const r=await fetch(base+path);await r.arrayBuffer();report.assets.push({path,status:r.status})}}));
+mkdirSync('docs/trojan-horse-verification',{recursive:true});writeFileSync('docs/trojan-horse-verification/routes.json',JSON.stringify(report,null,2));
+const failed=[...report.routes,...report.assets].filter(r=>r.status!==200);console.log(JSON.stringify({routes:report.routes.length,assets:report.assets.length,servedCurrentBuild:report.servedCurrentBuild,failed},null,2));if(failed.length||!report.servedCurrentBuild)process.exitCode=1;

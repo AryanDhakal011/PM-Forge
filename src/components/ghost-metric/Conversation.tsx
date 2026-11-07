@@ -47,7 +47,8 @@ export default function Conversation({
 }) {
   const [index, setIndex] = useState(0),
     [ended, setEnded] = useState(false),
-    [replay, setReplay] = useState(0);
+    [replay, setReplay] = useState(0),
+    [captions, setCaptions] = useState(true);
   const voice = useVoice(sound, paused),
     line = plan.lines[index],
     lock = useRef(false),
@@ -122,7 +123,13 @@ export default function Conversation({
             <h3>{person.name}</h3>
           </div>
         </header>
-        <blockquote className={s.spokenLine}>{line.text}</blockquote>
+        {captions ? (
+          <blockquote className={s.spokenLine}>{line.text}</blockquote>
+        ) : (
+          <div className={s.captionsOff} aria-live="polite">
+            Captions are off
+          </div>
+        )}
         {plan.kind === "guide" && guide && (
           <dl className={s.guideReference}>
             <div>
@@ -153,11 +160,6 @@ export default function Conversation({
         <div className={s.conversationSecondary}>
           <button onClick={() => setReplay((v) => v + 1)}>Replay line</button>
           <button onClick={onPause}>Pause / leave</button>
-          <span role="status">
-            {voice.playing
-              ? "Recording playing"
-              : voice.status || "Caption stays until you continue."}
-          </span>
         </div>
         <footer className={s.conversationFooter}>
           <AudioControls
@@ -167,6 +169,9 @@ export default function Conversation({
             auto={auto}
             onSound={onSound}
             onAuto={onAuto}
+            captions={captions}
+            onCaptions={() => setCaptions((value) => !value)}
+            playing={voice.playing}
           />
           <div className={s.conversationUtilities}>
             {plan.kind === "guide" && (

@@ -1,0 +1,81 @@
+{
+  "id": "board",
+  "type": "FACE",
+  "background": "boardroom",
+  "goal": "Defend the boundary when the board asks what happened.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "marlo"
+  ],
+  "lines": [
+    {
+      "id": "line-10",
+      "speaker": "marlo",
+      "expression": "thinking",
+      "text": "Tell me what I can actually use."
+    }
+  ],
+  "choices": [
+    {
+      "id": "own",
+      "text": "Own the result and the stop condition.",
+      "effects": [
+        {
+          "var": "credibility",
+          "op": "add",
+          "value": 8
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_sacred-no_own",
+        "store": "text"
+      }
+    },
+    {
+      "id": "defend",
+      "text": "Defend the ambition without its limits.",
+      "effects": [
+        {
+          "var": "credibility",
+          "op": "add",
+          "value": -8
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_sacred-no_defend",
+        "store": "text"
+      }
+    },
+    {
+      "id": "rollback",
+      "text": "Restore the stable product and explain why.",
+      "effects": [
+        {
+          "var": "readiness",
+          "op": "add",
+          "value": 5
+        },
+        {
+          "var": "CT",
+          "op": "add",
+          "value": -4
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_sacred-no_rollback",
+        "store": "text"
+      }
+    }
+  ],
+  "tools": [],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 3,
+  "act": 3,
+  "next": "review"
+}

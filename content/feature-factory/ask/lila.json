@@ -1,0 +1,42 @@
+[
+  {
+    "id": "lila-0",
+    "topic": "Complaints",
+    "line": "Lost work is a broken promise."
+  },
+  {
+    "id": "lila-1",
+    "topic": "Churn",
+    "line": "Churn has a story behind it."
+  },
+  {
+    "id": "lila-2",
+    "topic": "What customers love",
+    "line": "Customers love work that stays saved."
+  },
+  {
+    "id": "lila-3",
+    "topic": "Requests",
+    "line": "Requests are clues, not commitments."
+  },
+  {
+    "id": "lila-4",
+    "topic": "Customer quotes",
+    "line": "Here is what a customer said."
+  },
+  {
+    "id": "lila-5",
+    "topic": "SLA fears",
+    "line": "An SLA becomes personal during outages."
+  },
+  {
+    "id": "lila-6",
+    "topic": "Renewal calendar",
+    "line": "Renewals arrive whether we are ready."
+  },
+  {
+    "id": "lila-7",
+    "topic": "Customer call",
+    "line": "I can bring a customer into this."
+  }
+]

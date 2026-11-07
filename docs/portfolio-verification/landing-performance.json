@@ -1,0 +1,31 @@
+{
+  "note": "Local cold-cache desktop sample, 14-second observation; not a field Core Web Vitals study.",
+  "rows": [
+    {
+      "label": "previous",
+      "url": "http://localhost:3002",
+      "lcpMs": 2304,
+      "longTaskMs": 6408,
+      "resourceKB": 1906,
+      "scriptKB": 518,
+      "resources": 46,
+      "canvases": 1,
+      "domNodes": 1313,
+      "ready": "complete",
+      "navigationMs": 1164
+    },
+    {
+      "label": "new",
+      "url": "http://localhost:3005",
+      "lcpMs": 464,
+      "longTaskMs": 0,
+      "resourceKB": 309,
+      "scriptKB": 144,
+      "resources": 29,
+      "canvases": 0,
+      "domNodes": 415,
+      "ready": "complete",
+      "navigationMs": 573
+    }
+  ]
+}

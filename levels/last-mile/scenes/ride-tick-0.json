@@ -1,0 +1,90 @@
+{
+  "id": "ride-tick-0",
+  "type": "TOOL",
+  "background": "street",
+  "goal": "Listen before setting the network policy.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "bikram"
+  ],
+  "lines": [
+    {
+      "id": "line-2",
+      "speaker": "bikram",
+      "expression": "thinking",
+      "text": "Water is at my knees. Orders still coming."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "ride-tick-0",
+      "kind": "RadioRoom",
+      "title": "Courier field tick",
+      "items": [
+        {
+          "id": "hold",
+          "label": "Hold at a safe location.",
+          "detail": "",
+          "effects": [
+            {
+              "var": "risk",
+              "op": "add",
+              "value": -4
+            },
+            {
+              "var": "backlog",
+              "op": "add",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "id": "caution",
+          "label": "Go with caution.",
+          "detail": "",
+          "effects": [
+            {
+              "var": "risk",
+              "op": "add",
+              "value": 3
+            },
+            {
+              "var": "backlog",
+              "op": "add",
+              "value": -2
+            }
+          ]
+        },
+        {
+          "id": "reroute",
+          "label": "Reroute away from the flooded segment.",
+          "detail": "",
+          "effects": [
+            {
+              "var": "risk",
+              "op": "add",
+              "value": -2
+            },
+            {
+              "var": "cash",
+              "op": "add",
+              "value": -2
+            }
+          ]
+        }
+      ],
+      "min": 1,
+      "max": 1,
+      "cost": 0,
+      "receiptId": "R_last-mile_ride-tick-0"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "ride-tick-1"
+}

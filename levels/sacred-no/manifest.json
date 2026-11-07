@@ -1,0 +1,66 @@
+{
+  "id": "sacred-no",
+  "title": "The Sacred No",
+  "tagline": "A promise leaves the room before you do.",
+  "company": "MIDNIGHT / THE BOARD DEMO",
+  "status": "draft",
+  "version": "2.0.0",
+  "minPlatformVersion": "1.0.0",
+  "palette": {
+    "bg": "#101b22",
+    "ink": "#f4f2e7",
+    "accent": "#d5d99a"
+  },
+  "fonts": [
+    "Inter",
+    "DM Serif Display"
+  ],
+  "difficulty": {
+    "guided": "Preview effects and see decision hints.",
+    "standard": "Read the situation without previews.",
+    "sharp": "Hide soft meters and handle extra check-ins."
+  },
+  "entranceArt": "/levels/sacred-no/art/backgrounds/office.svg",
+  "estimatedMinutes": 20,
+  "startScene": "first-messages",
+  "scenes": [
+    "first-messages",
+    "triage",
+    "night-shift",
+    "rehearsal",
+    "duel",
+    "cave-or-steady",
+    "tell-negotiation",
+    "blast-radius",
+    "kill-switch",
+    "board",
+    "review"
+  ],
+  "people": [
+    "kian",
+    "priya",
+    "tess",
+    "marlo"
+  ],
+  "assetsBudgetKB": 3072,
+  "voiceCast": {},
+  "labels": "Simulated company, authored scenarios, expert review pending",
+  "flagKey": "sacred-no",
+  "minEvents": 24,
+  "systemic": true,
+  "launchCandidate": false,
+  "reviewGates": {
+    "design": "pending",
+    "content": "pending",
+    "accessibility-manual": "pending",
+    "performance": "pending",
+    "security": "pending",
+    "playtest": "pending",
+    "domain": "pending"
+  },
+  "acts": [
+    "The Request",
+    "The Trade",
+    "The Demo"
+  ]
+}

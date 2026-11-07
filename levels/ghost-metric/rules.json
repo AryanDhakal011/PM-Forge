@@ -1,0 +1,142 @@
+{
+  "initial": {
+    "credibility": 60,
+    "readiness": 50,
+    "trust": 55,
+    "risk": 25,
+    "cash": 100,
+    "composure": 60,
+    "safeguards": 0,
+    "ghostShare": 88.2,
+    "ghostMass": 7.5,
+    "realMass": 1,
+    "confidence": 50,
+    "temperature": 50
+  },
+  "bounds": {
+    "credibility": [
+      0,
+      100
+    ],
+    "readiness": [
+      0,
+      100
+    ],
+    "trust": [
+      0,
+      100
+    ],
+    "risk": [
+      0,
+      100
+    ],
+    "cash": [
+      0,
+      100
+    ],
+    "composure": [
+      0,
+      100
+    ],
+    "safeguards": [
+      0,
+      100
+    ],
+    "ghostShare": [
+      0,
+      100
+    ],
+    "ghostMass": [
+      0,
+      11
+    ],
+    "realMass": [
+      0,
+      11
+    ],
+    "confidence": [
+      0,
+      100
+    ],
+    "temperature": [
+      0,
+      100
+    ]
+  },
+  "flags": [
+    "strong-promise",
+    "dedupe",
+    "exclude",
+    "quality",
+    "raw-count",
+    "retry-patched",
+    "dupe-patched",
+    "insider-patched"
+  ],
+  "clues": [
+    "gateway",
+    "billing",
+    "accounts",
+    "streams",
+    "cohorts",
+    "definition",
+    "request-proof",
+    "account-proof",
+    "billing-proof",
+    "account-layer",
+    "retry-layer",
+    "cohort-layer"
+  ],
+  "receipts": [
+    "R_ghost-metric_retry",
+    "R_ghost-metric_drawers",
+    "R_ghost-metric_join",
+    "R_ghost-metric_autopsy",
+    "R_ghost-metric_confidence",
+    "R_ghost-metric_confession",
+    "R_ghost-metric_slides",
+    "R_ghost-metric_reveal",
+    "R_ghost-metric_definition",
+    "R_ghost-metric_heist",
+    "R_ghost-metric_confident",
+    "R_ghost-metric_qualified",
+    "R_ghost-metric_evasive",
+    "R_ghost-metric_publish",
+    "R_ghost-metric_roadmap",
+    "R_ghost-metric_pilot"
+  ],
+  "endings": [
+    {
+      "id": "lie",
+      "title": "Roadmap on a lie",
+      "summary": "Your confidence bet and metric definition shaped the credibility you retained.",
+      "when": {
+        "var": "risk",
+        "op": ">=",
+        "value": 40
+      }
+    },
+    {
+      "id": "calibrated",
+      "title": "Calibrated correction",
+      "summary": "Your confidence bet and metric definition shaped the credibility you retained.",
+      "when": {
+        "all": [
+          {
+            "var": "credibility",
+            "op": ">=",
+            "value": 65
+          },
+          {
+            "flag": "retry-patched"
+          }
+        ]
+      }
+    },
+    {
+      "id": "quiet",
+      "title": "Quiet correction",
+      "summary": "Your confidence bet and metric definition shaped the credibility you retained."
+    }
+  ]
+}

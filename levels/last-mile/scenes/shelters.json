@@ -1,0 +1,135 @@
+{
+  "id": "shelters",
+  "type": "TOOL",
+  "background": "street",
+  "goal": "Place up to four shelters near exposed courier routes.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "joon"
+  ],
+  "lines": [
+    {
+      "id": "line-7",
+      "speaker": "joon",
+      "expression": "thinking",
+      "text": "Tell me where I can wait safely."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "shelters",
+      "kind": "MapShelters",
+      "title": "Shelter points",
+      "items": [
+        {
+          "id": "north",
+          "label": "North school",
+          "detail": "Covers the northern route.",
+          "effects": [
+            {
+              "var": "shelters",
+              "op": "add",
+              "value": 1
+            },
+            {
+              "var": "cash",
+              "op": "add",
+              "value": -5
+            },
+            {
+              "var": "risk",
+              "op": "add",
+              "value": -4
+            }
+          ],
+          "x": 0.22,
+          "y": 0.22
+        },
+        {
+          "id": "market",
+          "label": "Covered market",
+          "detail": "Covers the restaurant district.",
+          "effects": [
+            {
+              "var": "shelters",
+              "op": "add",
+              "value": 1
+            },
+            {
+              "var": "cash",
+              "op": "add",
+              "value": -5
+            },
+            {
+              "var": "risk",
+              "op": "add",
+              "value": -4
+            }
+          ],
+          "x": 0.52,
+          "y": 0.46
+        },
+        {
+          "id": "bridge",
+          "label": "Bridge approach",
+          "detail": "A safe waiting point before the closed crossing.",
+          "effects": [
+            {
+              "var": "shelters",
+              "op": "add",
+              "value": 1
+            },
+            {
+              "var": "cash",
+              "op": "add",
+              "value": -5
+            },
+            {
+              "var": "risk",
+              "op": "add",
+              "value": -4
+            }
+          ],
+          "x": 0.75,
+          "y": 0.35
+        },
+        {
+          "id": "south",
+          "label": "South depot",
+          "detail": "A staffed handover and charging point.",
+          "effects": [
+            {
+              "var": "shelters",
+              "op": "add",
+              "value": 1
+            },
+            {
+              "var": "cash",
+              "op": "add",
+              "value": -5
+            },
+            {
+              "var": "risk",
+              "op": "add",
+              "value": -4
+            }
+          ],
+          "x": 0.65,
+          "y": 0.76
+        }
+      ],
+      "min": 0,
+      "max": 4,
+      "cost": 0,
+      "receiptId": "R_last-mile_shelters"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "statement"
+}

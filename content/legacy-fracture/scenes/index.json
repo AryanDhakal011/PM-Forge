@@ -1,0 +1,484 @@
+[
+  {
+    "id": "S00",
+    "type": "ENTR",
+    "background": "dispatch",
+    "goal": "Ring the bell",
+    "tools": [],
+    "lines": []
+  },
+  {
+    "id": "S01",
+    "type": "CINEMA",
+    "background": "dispatch",
+    "goal": "Meet the company",
+    "tools": [],
+    "lines": [
+      {
+        "speaker": "narrator",
+        "text": "Granger and Sons Freight. One hundred twelve years of deliveries.",
+        "expression": "neutral",
+        "clip": null
+      },
+      {
+        "speaker": "narrator",
+        "text": "A brass bell opens every shift.",
+        "expression": "neutral",
+        "clip": null
+      },
+      {
+        "speaker": "narrator",
+        "text": "Peak season starts in nine weeks.",
+        "expression": "neutral",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S02",
+    "type": "TOOL",
+    "background": "dispatch",
+    "goal": "Sort the first late delivery",
+    "tools": [
+      "sort"
+    ],
+    "lines": [
+      {
+        "speaker": "renata",
+        "text": "Every late truck has a story. The pattern is the problem.",
+        "expression": "thinking",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S03",
+    "type": "FACE",
+    "background": "board",
+    "goal": "Answer Cora",
+    "tools": [
+      "reply"
+    ],
+    "lines": [
+      {
+        "speaker": "cora",
+        "text": "Cora. Operations. Welcome to Granger.",
+        "expression": "neutral",
+        "clip": null
+      },
+      {
+        "speaker": "cora",
+        "text": "Peak is in nine weeks. Nothing breaks before then.",
+        "expression": "pressured",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S04",
+    "type": "FACE",
+    "background": "server",
+    "goal": "Ask Oswald",
+    "tools": [
+      "question"
+    ],
+    "lines": [
+      {
+        "speaker": "oswald",
+        "text": "I built GRID-3. Back in ninety-four.",
+        "expression": "neutral",
+        "clip": null
+      },
+      {
+        "speaker": "oswald",
+        "text": "Everyone wants it gone. Nobody asks how it works.",
+        "expression": "thinking",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S05",
+    "type": "FACE",
+    "background": "depot",
+    "goal": "Choose who to walk with",
+    "tools": [
+      "walk"
+    ],
+    "lines": [
+      {
+        "speaker": "renata",
+        "text": "My drivers are late. I'm the one explaining.",
+        "expression": "pressured",
+        "clip": null
+      },
+      {
+        "speaker": "leif",
+        "text": "I can rebuild routing. If someone lets me.",
+        "expression": "approving",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S06",
+    "type": "DAYZERO",
+    "background": "dispatch",
+    "goal": "Practise the four tools",
+    "tools": [
+      "practice"
+    ],
+    "lines": [
+      {
+        "speaker": "coach",
+        "text": "Practice first. Nothing here counts.",
+        "expression": "neutral",
+        "clip": null
+      },
+      {
+        "speaker": "coach",
+        "text": "That is the loop. The real clock starts now.",
+        "expression": "approving",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S07",
+    "type": "DESK",
+    "background": "dispatch",
+    "goal": "Choose your first stops",
+    "tools": [
+      "planner"
+    ],
+    "lines": [
+      {
+        "speaker": "cora",
+        "text": "Six attention this week. Find what causes the delay.",
+        "expression": "thinking",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S08",
+    "type": "TOOL",
+    "background": "depot",
+    "goal": "Mark three mismatches",
+    "tools": [
+      "reel"
+    ],
+    "lines": [
+      {
+        "speaker": "renata",
+        "text": "Scrub the day. Mark where the plan and road disagree.",
+        "expression": "neutral",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S09",
+    "type": "TOOL",
+    "background": "server",
+    "goal": "Ask for the tapes",
+    "tools": [
+      "tape"
+    ],
+    "lines": [
+      {
+        "speaker": "oswald",
+        "text": "Ask your question. I'll answer what I remember.",
+        "expression": "neutral",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S10",
+    "type": "MAP",
+    "background": "server",
+    "goal": "Trace what breaks",
+    "tools": [
+      "map"
+    ],
+    "lines": [
+      {
+        "speaker": "leif",
+        "text": "Place what we know. See what breaks if we move it.",
+        "expression": "pressured",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S11",
+    "type": "FACE",
+    "background": "board",
+    "goal": "Choose the chapter move",
+    "tools": [
+      "move"
+    ],
+    "lines": [
+      {
+        "speaker": "alistair",
+        "text": "Cora tells me you have been busy.",
+        "expression": "neutral",
+        "clip": null
+      },
+      {
+        "speaker": "alistair",
+        "text": "Tell me a story. What is wrong with my system?",
+        "expression": "thinking",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S12a",
+    "type": "TOOL",
+    "background": "server",
+    "goal": "Build the replacement sample",
+    "tools": [
+      "poc"
+    ],
+    "lines": [
+      {
+        "speaker": "leif",
+        "text": "Two weeks. I'll show you something.",
+        "expression": "approving",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S12b",
+    "type": "FACE",
+    "background": "board",
+    "goal": "Present three evidence cards",
+    "tools": [
+      "board"
+    ],
+    "lines": [
+      {
+        "speaker": "alistair",
+        "text": "Show me.",
+        "expression": "neutral",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S13",
+    "type": "FACE",
+    "background": "dispatch",
+    "goal": "Read what your move changed",
+    "tools": [
+      "consequence"
+    ],
+    "lines": [
+      {
+        "speaker": "narrator",
+        "text": "The story now belongs to the people who heard it.",
+        "expression": "neutral",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S14",
+    "type": "CINEMA",
+    "background": "dispatch",
+    "goal": "Enter Chapter 2",
+    "tools": [],
+    "lines": [
+      {
+        "speaker": "narrator",
+        "text": "Week four. The coalition war begins.",
+        "expression": "neutral",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S15",
+    "type": "TOOL",
+    "background": "board",
+    "goal": "Choose who carries the proposal",
+    "tools": [
+      "coalition"
+    ],
+    "lines": [
+      {
+        "speaker": "renata",
+        "text": "Ops will back you. We feel the pain daily.",
+        "expression": "neutral",
+        "clip": null
+      },
+      {
+        "speaker": "isaac",
+        "text": "Finance will fund it. Show me the cost of failure.",
+        "expression": "thinking",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S16",
+    "type": "TOOL",
+    "background": "server",
+    "goal": "Plan the migration waves",
+    "tools": [
+      "migration"
+    ],
+    "lines": [
+      {
+        "speaker": "leif",
+        "text": "Waves, not a leap. Pick the order.",
+        "expression": "neutral",
+        "clip": null
+      },
+      {
+        "speaker": "oswald",
+        "text": "Move the night jobs last. Please.",
+        "expression": "thinking",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S17",
+    "type": "FACE",
+    "background": "board",
+    "goal": "Read the coalition cost",
+    "tools": [
+      "consequence"
+    ],
+    "lines": [
+      {
+        "speaker": "cora",
+        "text": "The board approved. Don't waste that trust.",
+        "expression": "thinking",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S18",
+    "type": "CINEMA",
+    "background": "night",
+    "goal": "Enter cutover week",
+    "tools": [],
+    "lines": [
+      {
+        "speaker": "narrator",
+        "text": "Week eight. The dispatch bell rings after dark.",
+        "expression": "neutral",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S19",
+    "type": "TOOL",
+    "background": "night",
+    "goal": "Prepare the guarded switch",
+    "tools": [
+      "cutover"
+    ],
+    "lines": [
+      {
+        "speaker": "cora",
+        "text": "Overnight, or in waves. I need an answer.",
+        "expression": "pressured",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S20",
+    "type": "CUTOVER",
+    "background": "night",
+    "goal": "Watch five fleet moments",
+    "tools": [
+      "fleet"
+    ],
+    "lines": [
+      {
+        "speaker": "leif",
+        "text": "We're live.",
+        "expression": "pressured",
+        "clip": null
+      },
+      {
+        "speaker": "renata",
+        "text": "Trucks are moving.",
+        "expression": "neutral",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S21",
+    "type": "CINEMA",
+    "background": "night",
+    "goal": "Read the outcome",
+    "tools": [
+      "outcome"
+    ],
+    "lines": [
+      {
+        "speaker": "narrator",
+        "text": "The maps settle. The consequences do not.",
+        "expression": "neutral",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S22",
+    "type": "FACE",
+    "background": "dispatch",
+    "goal": "Choose what happens next",
+    "tools": [
+      "final"
+    ],
+    "lines": [
+      {
+        "speaker": "oswald",
+        "text": "Keep the night jobs documented.",
+        "expression": "neutral",
+        "clip": null
+      },
+      {
+        "speaker": "renata",
+        "text": "Fix the driver app next.",
+        "expression": "neutral",
+        "clip": null
+      },
+      {
+        "speaker": "isaac",
+        "text": "Publish the savings.",
+        "expression": "neutral",
+        "clip": null
+      }
+    ]
+  },
+  {
+    "id": "S23",
+    "type": "REVIEW",
+    "background": "dispatch",
+    "goal": "Trace, compare and reflect",
+    "tools": [
+      "review"
+    ],
+    "lines": [
+      {
+        "speaker": "narrator",
+        "text": "The fleet remembers what the plan forgot.",
+        "expression": "neutral",
+        "clip": null
+      }
+    ]
+  }
+]

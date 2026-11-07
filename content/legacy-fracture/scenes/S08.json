@@ -1,0 +1,17 @@
+{
+  "id": "S08",
+  "type": "TOOL",
+  "background": "depot",
+  "goal": "Mark three mismatches",
+  "tools": [
+    "reel"
+  ],
+  "lines": [
+    {
+      "speaker": "renata",
+      "text": "Scrub the day. Mark where the plan and road disagree.",
+      "expression": "neutral",
+      "clip": null
+    }
+  ]
+}

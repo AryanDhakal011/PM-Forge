@@ -1,0 +1,1087 @@
+{
+  "version": 1,
+  "provider": "Kokoro-82M v1.0 / kokoro-onnx 0.6.1",
+  "directionLimit": "Emotion tags adjust pace and pauses. This model does not provide native acted emotions.",
+  "lines": {
+    "ask-reva-0": {
+      "file": "/projects/feature-factory/audio/ask-reva-0.mp3",
+      "signature": "71148d32f30dab555c3dcafa72a1e00c229e1fe9ad83b3b647ca5e409633314f",
+      "caption": "Every Friday needs a story.",
+      "speaker": "reva",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 2.047
+    },
+    "ask-reva-1": {
+      "file": "/projects/feature-factory/audio/ask-reva-1.mp3",
+      "signature": "9632fc728524b4bdb5bfbaa57edd3ab2a9c9f8cb176de350a809218a56b54f62",
+      "caption": "Cass needs visible progress.",
+      "speaker": "reva",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 2.152
+    },
+    "ask-reva-2": {
+      "file": "/projects/feature-factory/audio/ask-reva-2.mp3",
+      "signature": "760ef7b944374d865f2e2e197ffb422dd359b87270e88593f4f221552a42ca25",
+      "caption": "A demo is a promise.",
+      "speaker": "reva",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 1.812
+    },
+    "ask-reva-3": {
+      "file": "/projects/feature-factory/audio/ask-reva-3.mp3",
+      "signature": "d8c15ab15dcd04a33b37d5e8a006b2e293de2e3d1ee59b0d0ab869faaaf78aaa",
+      "caption": "Give me an honest headline.",
+      "speaker": "reva",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 1.919
+    },
+    "ask-reva-4": {
+      "file": "/projects/feature-factory/audio/ask-reva-4.mp3",
+      "signature": "ad8277eb7037966fa31681318afffe1f3f7a5b187fa80bdafc42e8b839e1c784",
+      "caption": "Retention moves slowly. That matters.",
+      "speaker": "reva",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 2.853
+    },
+    "ask-reva-5": {
+      "file": "/projects/feature-factory/audio/ask-reva-5.mp3",
+      "signature": "a8bf093580b2f4ef05f6070fba91c59014faee98483ae969270337c8b0ecebe2",
+      "caption": "Let us name the risk.",
+      "speaker": "reva",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 1.707
+    },
+    "ask-reva-6": {
+      "file": "/projects/feature-factory/audio/ask-reva-6.mp3",
+      "signature": "a9d1b90c8ff9bac82730130020cbb2786622d20b96a4765afb7f824bf24fdbed",
+      "caption": "I am measured on launches.",
+      "speaker": "reva",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 1.917
+    },
+    "ask-reva-7": {
+      "file": "/projects/feature-factory/audio/ask-reva-7.mp3",
+      "signature": "9a96692949d6b387ece8f4dfbf341ee17719549f402dfb84fc47baa982681265",
+      "caption": "Bring evidence. I can back that.",
+      "speaker": "reva",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 2.505
+    },
+    "ask-cass-0": {
+      "file": "/projects/feature-factory/audio/ask-cass-0.mp3",
+      "signature": "d3c53d99cc355b26d35fae197481762b0b9cd404afb6d5c05f6d0df2bdac83c8",
+      "caption": "The board is watching this quarter.",
+      "speaker": "cass",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 2.407
+    },
+    "ask-cass-1": {
+      "file": "/projects/feature-factory/audio/ask-cass-1.mp3",
+      "signature": "27ae577c926e6fd9b29cebbf38d4997aee412ccf55fa7b4b66741a5cae83f76c",
+      "caption": "Speed buys us another chance.",
+      "speaker": "cass",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 2.409
+    },
+    "ask-cass-2": {
+      "file": "/projects/feature-factory/audio/ask-cass-2.mp3",
+      "signature": "b2566d5a235749b4d43b6095a37fe042a3e6b7ef9404d7fa1652ea89dd54cb6b",
+      "caption": "Silence on Friday scares me.",
+      "speaker": "cass",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 2.494
+    },
+    "ask-cass-3": {
+      "file": "/projects/feature-factory/audio/ask-cass-3.mp3",
+      "signature": "6f6904d5c25ef00a08a6fbfedb48c793eeae2230ef9f19f4dff9c1fd52c34634",
+      "caption": "Reliability needs to be visible too.",
+      "speaker": "cass",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 3.134
+    },
+    "ask-cass-4": {
+      "file": "/projects/feature-factory/audio/ask-cass-4.mp3",
+      "signature": "b790f1ee46a6f828ee9cc9722400ecee451c345054f9873844f18ec6b25dbd0c",
+      "caption": "Investors want a reason to stay.",
+      "speaker": "cass",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 2.686
+    },
+    "ask-cass-5": {
+      "file": "/projects/feature-factory/audio/ask-cass-5.mp3",
+      "signature": "45ee56994c48384b1bb90cdb6ce74bf0df0a05cec8f4fd381f19c276ad225075",
+      "caption": "The Pulse is easy to explain.",
+      "speaker": "cass",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 2.347
+    },
+    "ask-cass-6": {
+      "file": "/projects/feature-factory/audio/ask-cass-6.mp3",
+      "signature": "4a22a0438c6c168306c52b2e60bd876a5348c28b57a629635d2c82d5bb017316",
+      "caption": "Tell me what changed.",
+      "speaker": "cass",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 1.79
+    },
+    "ask-cass-7": {
+      "file": "/projects/feature-factory/audio/ask-cass-7.mp3",
+      "signature": "4fa4b241f493f8d07f9a7e39234aed613cf0d1d8c196057c55aeda54987efc5b",
+      "caption": "A credible alternative changes my mind.",
+      "speaker": "cass",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 3.279
+    },
+    "ask-nils-0": {
+      "file": "/projects/feature-factory/audio/ask-nils-0.mp3",
+      "signature": "c6233f32ab1c058d592d612b98f80411f59bb2f2f619657cba212f6e2c05cc44",
+      "caption": "The foundations are charging interest.",
+      "speaker": "nils",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 3.335
+    },
+    "ask-nils-1": {
+      "file": "/projects/feature-factory/audio/ask-nils-1.mp3",
+      "signature": "9ac3f359f4c031e0cab9646d48491f42c03054be50f0d1f0de32f01a28af960d",
+      "caption": "An estimate is not a promise.",
+      "speaker": "nils",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 2.715
+    },
+    "ask-nils-2": {
+      "file": "/projects/feature-factory/audio/ask-nils-2.mp3",
+      "signature": "a9b41206b4991f624d2755e8b20ab1f1d7c1335a896c2e798289f14108378e1c",
+      "caption": "People are tired of being surprised.",
+      "speaker": "nils",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 2.919
+    },
+    "ask-nils-3": {
+      "file": "/projects/feature-factory/audio/ask-nils-3.mp3",
+      "signature": "5531627cf351b537ad70ab0ab19a07d090bfaf9ff795d21b14d08c2ebbf70c98",
+      "caption": "Autosave breaks before the demo does.",
+      "speaker": "nils",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 3.196
+    },
+    "ask-nils-4": {
+      "file": "/projects/feature-factory/audio/ask-nils-4.mp3",
+      "signature": "25afcd53fd2e8579c5d35c8ac189fd64765a7a410688ea60711426eacf072e6d",
+      "caption": "Give us room to finish.",
+      "speaker": "nils",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 2.215
+    },
+    "ask-nils-5": {
+      "file": "/projects/feature-factory/audio/ask-nils-5.mp3",
+      "signature": "8221be535f5320938cd7abb546d75f6a466de50b96aaa37d626639753e8087aa",
+      "caption": "Less work in flight. More hardening.",
+      "speaker": "nils",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 3.0
+    },
+    "ask-nils-6": {
+      "file": "/projects/feature-factory/audio/ask-nils-6.mp3",
+      "signature": "cf7620fdf0dfe80ae30e7a9401947ec963a40b9cc4e28a9ca98643e5b1b78bf2",
+      "caption": "I trust people who close loops.",
+      "speaker": "nils",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 2.789
+    },
+    "ask-nils-7": {
+      "file": "/projects/feature-factory/audio/ask-nils-7.mp3",
+      "signature": "9868e0717c0141ad21f23e4bdc45e77b4276b6d1ed57c0e35a2aeacbf176e700",
+      "caption": "I would like my weekend back.",
+      "speaker": "nils",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 2.641
+    },
+    "ask-amara-0": {
+      "file": "/projects/feature-factory/audio/ask-amara-0.mp3",
+      "signature": "ab7d0c1590cac7f374664a141a76ff86abaa02992862d655385b48f30454f574",
+      "caption": "A gate needs teeth.",
+      "speaker": "amara",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 2.011
+    },
+    "ask-amara-1": {
+      "file": "/projects/feature-factory/audio/ask-amara-1.mp3",
+      "signature": "c7d86c59922a39841b31a403897e8b3e34ab71e93ef67367fea5bc28820a3d2b",
+      "caption": "Every bug has a person behind it.",
+      "speaker": "amara",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 3.185
+    },
+    "ask-amara-2": {
+      "file": "/projects/feature-factory/audio/ask-amara-2.mp3",
+      "signature": "27b402bef1a41ebd6eb1029c1c65b8ac661ddea39771c5ffdaae8312c5358021",
+      "caption": "Coverage is a tool, not permission.",
+      "speaker": "amara",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 3.483
+    },
+    "ask-amara-3": {
+      "file": "/projects/feature-factory/audio/ask-amara-3.mp3",
+      "signature": "1afca4c9a4ec8ff28ea05b82b0d0d62f17cd7a37d8adf3bd3ea9394c7f66e1fb",
+      "caption": "Let us read the incident record.",
+      "speaker": "amara",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 2.725
+    },
+    "ask-amara-4": {
+      "file": "/projects/feature-factory/audio/ask-amara-4.mp3",
+      "signature": "b8d1cc1c7ad74655a4ee202d87d4ffaaaeb566700579944b7082e23adde0d47d",
+      "caption": "Evidence needs an owner and a date.",
+      "speaker": "amara",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 3.441
+    },
+    "ask-amara-5": {
+      "file": "/projects/feature-factory/audio/ask-amara-5.mp3",
+      "signature": "2acf90871dd78ca5eeb30b08fecdc917b27793f129e9fcd890dc570a97cf534f",
+      "caption": "Staging is trying to tell us something.",
+      "speaker": "amara",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 2.911
+    },
+    "ask-amara-6": {
+      "file": "/projects/feature-factory/audio/ask-amara-6.mp3",
+      "signature": "351ae2555a047bad401611515b7f461af1e790930261135e9cef0c8c7a7b0558",
+      "caption": "I have heard looks fine before.",
+      "speaker": "amara",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 2.407
+    },
+    "ask-amara-7": {
+      "file": "/projects/feature-factory/audio/ask-amara-7.mp3",
+      "signature": "a104ea5aed826efc539241e6ca75a1d1f859cffe0b206d654380083002133390",
+      "caption": "A flag gives us an exit.",
+      "speaker": "amara",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 2.512
+    },
+    "ask-kofi-0": {
+      "file": "/projects/feature-factory/audio/ask-kofi-0.mp3",
+      "signature": "4f3da04518a5798153e9c7a704c7f36910e2cc7597e76f31397144785d67ae46",
+      "caption": "Thirty days. The same people returning.",
+      "speaker": "kofi",
+      "emotion": "thinking",
+      "voice": "am_fenrir",
+      "duration": 2.87
+    },
+    "ask-kofi-1": {
+      "file": "/projects/feature-factory/audio/ask-kofi-1.mp3",
+      "signature": "b2976f4b57fee3564833ba6d6269bd07504d9280f4c65fd08f27d7b7b5331858",
+      "caption": "Cohorts expose what totals hide.",
+      "speaker": "kofi",
+      "emotion": "thinking",
+      "voice": "am_fenrir",
+      "duration": 2.363
+    },
+    "ask-kofi-2": {
+      "file": "/projects/feature-factory/audio/ask-kofi-2.mp3",
+      "signature": "7791507723f219386d75cf147a7c99b1f4975fdec3b5cfe0d663970651354168",
+      "caption": "More sessions can mean more interruptions.",
+      "speaker": "kofi",
+      "emotion": "thinking",
+      "voice": "am_fenrir",
+      "duration": 2.469
+    },
+    "ask-kofi-3": {
+      "file": "/projects/feature-factory/audio/ask-kofi-3.mp3",
+      "signature": "7f111259dedb091baf11c00569563b6392b3b5cebf3f69bafb431e4e4719eeb0",
+      "caption": "The funnel needs a clean definition.",
+      "speaker": "kofi",
+      "emotion": "thinking",
+      "voice": "am_fenrir",
+      "duration": 2.266
+    },
+    "ask-kofi-4": {
+      "file": "/projects/feature-factory/audio/ask-kofi-4.mp3",
+      "signature": "6896dc91231da64540ffb7d1e56b5aab6955f613d04f290710d80fe4d30d6812",
+      "caption": "Pick an outcome before a chart.",
+      "speaker": "kofi",
+      "emotion": "thinking",
+      "voice": "am_fenrir",
+      "duration": 1.98
+    },
+    "ask-kofi-5": {
+      "file": "/projects/feature-factory/audio/ask-kofi-5.mp3",
+      "signature": "6c8ea4974ada7ffaac2b540a7587e6adad458fbbd90ec9149ced87e2095d216d",
+      "caption": "Disagreement is a reason to investigate.",
+      "speaker": "kofi",
+      "emotion": "thinking",
+      "voice": "am_fenrir",
+      "duration": 2.791
+    },
+    "ask-kofi-6": {
+      "file": "/projects/feature-factory/audio/ask-kofi-6.mp3",
+      "signature": "1962828ac241afb1a4deb1c658990f059cf03b9db93827e8d706e81b6630361c",
+      "caption": "I thought nobody wanted this answer.",
+      "speaker": "kofi",
+      "emotion": "thinking",
+      "voice": "am_fenrir",
+      "duration": 2.245
+    },
+    "ask-kofi-7": {
+      "file": "/projects/feature-factory/audio/ask-kofi-7.mp3",
+      "signature": "364041b7a239c825b428c066376a3282043661fa69f5531a40c5bbc9ea722013",
+      "caption": "Both dashboards can be technically correct.",
+      "speaker": "kofi",
+      "emotion": "thinking",
+      "voice": "am_fenrir",
+      "duration": 2.566
+    },
+    "ask-lila-0": {
+      "file": "/projects/feature-factory/audio/ask-lila-0.mp3",
+      "signature": "d1a40f0273008f4c568a85986a3ffb1cefd3d74e27ffb9c4caddbbe8895b0558",
+      "caption": "Lost work is a broken promise.",
+      "speaker": "lila",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 2.235
+    },
+    "ask-lila-1": {
+      "file": "/projects/feature-factory/audio/ask-lila-1.mp3",
+      "signature": "1bd909e7ba652612a0a6f2fc7e46bec68c38e5e8b3fb6693df7b386cdc84c488",
+      "caption": "Churn has a story behind it.",
+      "speaker": "lila",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 1.975
+    },
+    "ask-lila-2": {
+      "file": "/projects/feature-factory/audio/ask-lila-2.mp3",
+      "signature": "53c21a1e8e9760b0305458fffdcb24263f98e05ecc87b84f3b08f34ffb76f6fc",
+      "caption": "Customers love work that stays saved.",
+      "speaker": "lila",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 2.539
+    },
+    "ask-lila-3": {
+      "file": "/projects/feature-factory/audio/ask-lila-3.mp3",
+      "signature": "fba2fefefb6794fa95fe18665dbbf44497918158676327df956b51e77f0f2d9b",
+      "caption": "Requests are clues, not commitments.",
+      "speaker": "lila",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 2.555
+    },
+    "ask-lila-4": {
+      "file": "/projects/feature-factory/audio/ask-lila-4.mp3",
+      "signature": "ec5985a22a28adabf3709d1bfa41718910ec4b99c422ee5a09d46050bd2c410c",
+      "caption": "Here is what a customer said.",
+      "speaker": "lila",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 2.007
+    },
+    "ask-lila-5": {
+      "file": "/projects/feature-factory/audio/ask-lila-5.mp3",
+      "signature": "4568063f03fffece1ef9b0ca41042bd6c937a0e2aa80f7361d6a2b2e37822605",
+      "caption": "An SLA becomes personal during outages.",
+      "speaker": "lila",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 3.257
+    },
+    "ask-lila-6": {
+      "file": "/projects/feature-factory/audio/ask-lila-6.mp3",
+      "signature": "5f4d0d84ed7c306bff5f403ec61d28154b313c9fd7e0bae252dac364881c6c27",
+      "caption": "Renewals arrive whether we are ready.",
+      "speaker": "lila",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 2.215
+    },
+    "ask-lila-7": {
+      "file": "/projects/feature-factory/audio/ask-lila-7.mp3",
+      "signature": "6e847de6f219d466596eed9cc88fd8d58d5ca6891ec7672bab380feed5a424f3",
+      "caption": "I can bring a customer into this.",
+      "speaker": "lila",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 2.093
+    },
+    "E01": {
+      "file": "/projects/feature-factory/audio/E01.mp3",
+      "signature": "ef8760e19a9b90ba64e3fc596c3c249db3894f1d0bd63301816465dd0b0bc2ee",
+      "caption": "Three customers cited autosave losses. Quote attached.",
+      "speaker": "lila",
+      "emotion": "neutral",
+      "voice": "af_bella",
+      "duration": 4.229
+    },
+    "E02": {
+      "file": "/projects/feature-factory/audio/E02.mp3",
+      "signature": "ad918698508374367bc536ba2aefb32f8c8a73424a06c0cd68c980efb931911c",
+      "caption": "Retention is flat. Look at the Truth tab.",
+      "speaker": "kofi",
+      "emotion": "neutral",
+      "voice": "am_fenrir",
+      "duration": 2.787
+    },
+    "E03": {
+      "file": "/projects/feature-factory/audio/E03.mp3",
+      "signature": "bf4096d420f5db9b12dc3627522425b81d90b01b50d19a97090fb2cb799e3ade",
+      "caption": "Can the demo tiles blink? Just a little.",
+      "speaker": "reva",
+      "emotion": "neutral",
+      "voice": "af_heart",
+      "duration": 2.808
+    },
+    "E04": {
+      "file": "/projects/feature-factory/audio/E04.mp3",
+      "signature": "5de1331ed082720f13fe20bb03bb3c6f1f5505984e33fcd5f457ccf5b369376a",
+      "caption": "Sales promised SSO to a prospect. Friday.",
+      "speaker": "cass",
+      "emotion": "neutral",
+      "voice": "am_michael",
+      "duration": 3.838
+    },
+    "E05": {
+      "file": "/projects/feature-factory/audio/E05.mp3",
+      "signature": "645ef39448d16b84eb45adbd6519048a74f65229f8b1472771f84361a8bf455a",
+      "caption": "Autosave is losing edits in staging. Ticket forty-four seventy-one.",
+      "speaker": "amara",
+      "emotion": "pressured",
+      "voice": "af_nicole",
+      "duration": 7.75
+    },
+    "E06": {
+      "file": "/projects/feature-factory/audio/E06.mp3",
+      "signature": "5cad7e092d23b4f5bbaf6f4a836bfc757a6d2d007ea464b723284f97afa0615f",
+      "caption": "I am not doing another weekend. We need a different plan.",
+      "speaker": "nils",
+      "emotion": "pressured",
+      "voice": "bm_george",
+      "duration": 4.23
+    },
+    "E07": {
+      "file": "/projects/feature-factory/audio/E07.mp3",
+      "signature": "74ca42c156683648c93d0ddc9da947666e2c5d2d60c4ca4e264f93563dd4905c",
+      "caption": "There is no stress evidence for this release.",
+      "speaker": "amara",
+      "emotion": "neutral",
+      "voice": "af_nicole",
+      "duration": 3.685
+    },
+    "E08": {
+      "file": "/projects/feature-factory/audio/E08.mp3",
+      "signature": "836d0080e8ed87cdf567657a5d3c3a14727f73387a530a189c651c2c108e0340",
+      "caption": "The rushed release is straining the write queue.",
+      "speaker": "nils",
+      "emotion": "pressured",
+      "voice": "bm_george",
+      "duration": 3.515
+    },
+    "E09": {
+      "file": "/projects/feature-factory/audio/E09.mp3",
+      "signature": "30547235010cbd7fb667f7cdb126bf2dc5191c372cf7818759cc7c89a877b6d9",
+      "caption": "Cass shared the Pulse. That is not retention.",
+      "speaker": "kofi",
+      "emotion": "neutral",
+      "voice": "am_fenrir",
+      "duration": 2.958
+    },
+    "E10": {
+      "file": "/projects/feature-factory/audio/E10.mp3",
+      "signature": "40b9d7a90191b2ceea6310430a148563ad9ca75cf0d8bbb31e0ab1a2138665b6",
+      "caption": "Only planned tickets now. No more invisible overtime.",
+      "speaker": "nils",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 4.678
+    },
+    "E11": {
+      "file": "/projects/feature-factory/audio/E11.mp3",
+      "signature": "7831715df656e87aa1ade1eda73a7a034b7a0642467ccba28ca5da9576fdaff2",
+      "caption": "Someone asked me for a reference. We should talk.",
+      "speaker": "nils",
+      "emotion": "pressured",
+      "voice": "bm_george",
+      "duration": 3.611
+    },
+    "E12": {
+      "file": "/projects/feature-factory/audio/E12.mp3",
+      "signature": "0a1e558973cfb806f94376024697a606e9aa1f24ed55ccc3e130c9b1d82c963a",
+      "caption": "A customer is asking how to export everything.",
+      "speaker": "lila",
+      "emotion": "neutral",
+      "voice": "af_bella",
+      "duration": 3.072
+    },
+    "E13": {
+      "file": "/projects/feature-factory/audio/E13.mp3",
+      "signature": "16442373bfe79fb18304c54df354182dafba87b125b2e4ce19f5d6144cb2e68d",
+      "caption": "The returning cohort is moving. Let us check why.",
+      "speaker": "kofi",
+      "emotion": "neutral",
+      "voice": "am_fenrir",
+      "duration": 3.454
+    },
+    "E14": {
+      "file": "/projects/feature-factory/audio/E14.mp3",
+      "signature": "e8e389346defb62d9e5e7805a966699591d6dc98502ac2aa4274bf7c1716b534",
+      "caption": "Live tiles are delaying the rest of the app.",
+      "speaker": "amara",
+      "emotion": "pressured",
+      "voice": "af_nicole",
+      "duration": 4.091
+    },
+    "E15": {
+      "file": "/projects/feature-factory/audio/E15.mp3",
+      "signature": "923474e58abd37894da7c7ea680e6d7a6c93cd0922685c3bf8db59fcaa488460",
+      "caption": "What is the headline for Zenith?",
+      "speaker": "reva",
+      "emotion": "neutral",
+      "voice": "af_heart",
+      "duration": 2.119
+    },
+    "E16": {
+      "file": "/projects/feature-factory/audio/E16.mp3",
+      "signature": "9fd7d5b03f353704b99db6c7cecaf8a60cbafce21fb0c099486755edcc097fe4",
+      "caption": "The flag gave us a clean rollback.",
+      "speaker": "amara",
+      "emotion": "neutral",
+      "voice": "af_nicole",
+      "duration": 3.142
+    },
+    "E17": {
+      "file": "/projects/feature-factory/audio/E17.mp3",
+      "signature": "33f66962991e763f5870ad43b669db376670d1c55de47967b28fc6a94a7756b4",
+      "caption": "Could we stretch? The foundations look healthier.",
+      "speaker": "cass",
+      "emotion": "neutral",
+      "voice": "am_michael",
+      "duration": 3.228
+    },
+    "E18": {
+      "file": "/projects/feature-factory/audio/E18.mp3",
+      "signature": "86397b7837776a7317bb57486f3aef6139157eac6e4cc3975d92d6bdd387606f",
+      "caption": "You wrote that down. Does the decision still hold?",
+      "speaker": "reva",
+      "emotion": "neutral",
+      "voice": "af_heart",
+      "duration": 3.122
+    },
+    "E19": {
+      "file": "/projects/feature-factory/audio/E19.mp3",
+      "signature": "6d9e16961ed03ebc977d4b0518aa4b45bc0587e37c21607eaebfaf76209c75f6",
+      "caption": "These dashboards disagree because they measure different things.",
+      "speaker": "kofi",
+      "emotion": "neutral",
+      "voice": "am_fenrir",
+      "duration": 3.695
+    },
+    "E20": {
+      "file": "/projects/feature-factory/audio/E20.mp3",
+      "signature": "f8cd89abe753c41d0699955ba044fe898b97391e3335b1f59b6df1c93ca1bd3d",
+      "caption": "The tweet says AI. The implementation says temporary workaround.",
+      "speaker": "nils",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 5.073
+    },
+    "E21": {
+      "file": "/projects/feature-factory/audio/E21.mp3",
+      "signature": "cbfb405c7fa7d9769622d2c44a95da725fef6973536d8da7a494da67373ca68a",
+      "caption": "Are we a reliable company? I need an honest answer.",
+      "speaker": "cass",
+      "emotion": "neutral",
+      "voice": "am_michael",
+      "duration": 4.051
+    },
+    "E22": {
+      "file": "/projects/feature-factory/audio/E22.mp3",
+      "signature": "41bbf2730777cea641243d64f3e33cbcf225c4f7f63874674fcde3007753d23f",
+      "caption": "I made it to my daughter\u2019s recital. Thank you.",
+      "speaker": "nils",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 3.587
+    },
+    "E23": {
+      "file": "/projects/feature-factory/audio/E23.mp3",
+      "signature": "6feae44addd16001a2898c9ef9c4ee44cb27a541cb79579831f0077d482b6b61",
+      "caption": "I assigned this directly. We need momentum.",
+      "speaker": "cass",
+      "emotion": "neutral",
+      "voice": "am_michael",
+      "duration": 3.475
+    },
+    "E24": {
+      "file": "/projects/feature-factory/audio/E24.mp3",
+      "signature": "ae83bcfbfde0774e9ab032b36b8f3e7c0d48b51871f16b2ff64ab0309cca1355",
+      "caption": "What changed, what proves it, and what do you need?",
+      "speaker": "reva",
+      "emotion": "neutral",
+      "voice": "af_heart",
+      "duration": 3.031
+    },
+    "E25": {
+      "file": "/projects/feature-factory/audio/E25.mp3",
+      "signature": "107ba4d36eda79c05740bba04618e98452a430f40062862bfa117a909e52ed1f",
+      "caption": "We can automate the regression checks. It will take focus.",
+      "speaker": "amara",
+      "emotion": "neutral",
+      "voice": "af_nicole",
+      "duration": 5.136
+    },
+    "E26": {
+      "file": "/projects/feature-factory/audio/E26.mp3",
+      "signature": "e5bfad8663c8964d1aa7c2fdcddfbf86883dae9bbafbf8d1325497d84d34a7ed",
+      "caption": "Define a returning user before the next launch.",
+      "speaker": "kofi",
+      "emotion": "neutral",
+      "voice": "am_fenrir",
+      "duration": 2.95
+    },
+    "E27": {
+      "file": "/projects/feature-factory/audio/E27.mp3",
+      "signature": "ba402be2d0b9882a0d1e7a918a1aa015cae00672b75e41028b6e6b538b502e3e",
+      "caption": "A customer wrote one word. Finally.",
+      "speaker": "lila",
+      "emotion": "neutral",
+      "voice": "af_bella",
+      "duration": 2.715
+    },
+    "E28": {
+      "file": "/projects/feature-factory/audio/E28.mp3",
+      "signature": "9b6f86822aaccd2f2999cc541b93ff1e985840c101a3c6e315bc6f0bd67944e7",
+      "caption": "A dependency is waiting for a decision. Not more code.",
+      "speaker": "nils",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 4.593
+    },
+    "E29": {
+      "file": "/projects/feature-factory/audio/E29.mp3",
+      "signature": "780bd24ad5e9abc18f16dd9f47fc74957401dfd3b3e9847e726e023c85ea0f8a",
+      "caption": "Could we test the rollback before Friday?",
+      "speaker": "amara",
+      "emotion": "neutral",
+      "voice": "af_nicole",
+      "duration": 3.411
+    },
+    "E30": {
+      "file": "/projects/feature-factory/audio/E30.mp3",
+      "signature": "95b71f0964e1922514e374ec8e551e1f781e1f9522c91a4c1e374c9f88ce6d42",
+      "caption": "We need a demo, even if we narrow it.",
+      "speaker": "reva",
+      "emotion": "neutral",
+      "voice": "af_heart",
+      "duration": 2.609
+    },
+    "E31": {
+      "file": "/projects/feature-factory/audio/E31.mp3",
+      "signature": "838b44d3472bb6de08d7bfdaa8727a2bc71e30ef0971e1ab1f618162c2e06387",
+      "caption": "A customer found their old notes without asking us.",
+      "speaker": "lila",
+      "emotion": "neutral",
+      "voice": "af_bella",
+      "duration": 3.224
+    },
+    "E32": {
+      "file": "/projects/feature-factory/audio/E32.mp3",
+      "signature": "7d67e92aaeff99aa5df0f6278d8d82e8c3942f089d294565bbd2390b1d5472e9",
+      "caption": "The queue is quieter. Maintenance bought us capacity.",
+      "speaker": "nils",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 4.24
+    },
+    "E33": {
+      "file": "/projects/feature-factory/audio/E33.mp3",
+      "signature": "2883f7bf695310fcea192914eb048f6041c960c3e29b48522ad6ca1fb417f5f0",
+      "caption": "Could we show the new tiles in the investor clip?",
+      "speaker": "cass",
+      "emotion": "neutral",
+      "voice": "am_michael",
+      "duration": 3.111
+    },
+    "E34": {
+      "file": "/projects/feature-factory/audio/E34.mp3",
+      "signature": "6d84bb9842e73590472512aa1670969c0d0ecb9eb0f31f1c2db0d122e1c81216",
+      "caption": "Digest users are returning without extra nudges.",
+      "speaker": "kofi",
+      "emotion": "neutral",
+      "voice": "am_fenrir",
+      "duration": 3.449
+    },
+    "E35": {
+      "file": "/projects/feature-factory/audio/E35.mp3",
+      "signature": "d82a200b76caadb6ecdb2334671f401dc45446a8c6d4fbb23ec09e91fb180617",
+      "caption": "The renewal needs single sign-on. Can we give a date?",
+      "speaker": "lila",
+      "emotion": "neutral",
+      "voice": "af_bella",
+      "duration": 3.48
+    },
+    "E36": {
+      "file": "/projects/feature-factory/audio/E36.mp3",
+      "signature": "d4a0ad201ba7e4cebe185b7187a30bcb6003c9a2bf418b222a24479ad7d3115a",
+      "caption": "I can review the riskiest change with you.",
+      "speaker": "amara",
+      "emotion": "neutral",
+      "voice": "af_nicole",
+      "duration": 2.907
+    },
+    "E37": {
+      "file": "/projects/feature-factory/audio/E37.mp3",
+      "signature": "fce46b0f0a8b47e4649db4236ee091ec1288774df9d9de099129317bad495186",
+      "caption": "We have too much open work. Pick what stops.",
+      "speaker": "nils",
+      "emotion": "pressured",
+      "voice": "bm_george",
+      "duration": 3.556
+    },
+    "E38": {
+      "file": "/projects/feature-factory/audio/E38.mp3",
+      "signature": "0b55e102dd1820d15bd5d604b5afca6739741504cc5874ae2d78f6ab438997b0",
+      "caption": "The cohort is modest. It is still real progress.",
+      "speaker": "kofi",
+      "emotion": "neutral",
+      "voice": "am_fenrir",
+      "duration": 3.568
+    },
+    "E39": {
+      "file": "/projects/feature-factory/audio/E39.mp3",
+      "signature": "6f5684cbff9e22a6cfc3b272e39ed73cd7839aeab135fb35434b0d40e107ea02",
+      "caption": "I can defend a smaller release if you explain it.",
+      "speaker": "reva",
+      "emotion": "neutral",
+      "voice": "af_heart",
+      "duration": 3.103
+    },
+    "E40": {
+      "file": "/projects/feature-factory/audio/E40.mp3",
+      "signature": "76c6eea9f58e45091a09136c4b89882494e80d161330891429949847bd2810e2",
+      "caption": "Customers remember the date, not our sprint points.",
+      "speaker": "lila",
+      "emotion": "neutral",
+      "voice": "af_bella",
+      "duration": 3.236
+    },
+    "E41": {
+      "file": "/projects/feature-factory/audio/E41.mp3",
+      "signature": "726889ed88ff132bb307fce2dad26bcadd44627ed5471d79f4a0fdc739bd30b9",
+      "caption": "No new high-priority reports today. Keep the checks.",
+      "speaker": "amara",
+      "emotion": "neutral",
+      "voice": "af_nicole",
+      "duration": 5.167
+    },
+    "E42": {
+      "file": "/projects/feature-factory/audio/E42.mp3",
+      "signature": "93ec0990566fc61cc5a5825c2ba102582866cc499f462794e977cd330ca7f59c",
+      "caption": "What can we safely show without making another promise?",
+      "speaker": "cass",
+      "emotion": "neutral",
+      "voice": "am_michael",
+      "duration": 3.897
+    },
+    "intro-0": {
+      "file": "/projects/feature-factory/audio/intro-0.mp3",
+      "signature": "eb840499ca3ff8b10d6382c82f4f3efe7a1a0860fee6be261e9e471e58cc388c",
+      "caption": "Release forty-one is live.",
+      "speaker": "pa",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 2.505
+    },
+    "intro-1": {
+      "file": "/projects/feature-factory/audio/intro-1.mp3",
+      "signature": "a8cdc34e14e6a05524f8a0bd73c807bc1d190c624e09af92270985f7df8ae6d1",
+      "caption": "Faster! Faster!",
+      "speaker": "cass",
+      "emotion": "neutral",
+      "voice": "am_michael",
+      "duration": 1.639
+    },
+    "intro-2": {
+      "file": "/projects/feature-factory/audio/intro-2.mp3",
+      "signature": "562de0f1383154544b3957b66bd157720afa0d7435b8a58b6ef2ffc0aeddc85b",
+      "caption": "Every Friday, the gong. Every Monday, a longer list.",
+      "speaker": "pa",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 3.645
+    },
+    "intro-3": {
+      "file": "/projects/feature-factory/audio/intro-3.mp3",
+      "signature": "7d5c86270cc3071ad49deb844874d3e356eba702186745cd7224b05bf9c4be54",
+      "caption": "I'm Reva. Head of Product. We ship every Friday.",
+      "speaker": "reva",
+      "emotion": "neutral",
+      "voice": "af_heart",
+      "duration": 3.777
+    },
+    "intro-4": {
+      "file": "/projects/feature-factory/audio/intro-4.mp3",
+      "signature": "791cd2a0c492b44772666aac55c56805c2d3ebb98ffd003ad04277986458d579",
+      "caption": "Cass wants a bigger Friday. Let's not boil the ocean.",
+      "speaker": "reva",
+      "emotion": "neutral",
+      "voice": "af_heart",
+      "duration": 3.591
+    },
+    "intro-5": {
+      "file": "/projects/feature-factory/audio/intro-5.mp3",
+      "signature": "e2d42903a4930f358569aceab4346e2bdc826752cc6192ad620b93078de92061",
+      "caption": "Show me a plan Monday that makes the Pulse sing.",
+      "speaker": "reva",
+      "emotion": "neutral",
+      "voice": "af_heart",
+      "duration": 2.856
+    },
+    "intro-6": {
+      "file": "/projects/feature-factory/audio/intro-6.mp3",
+      "signature": "88b4d5fcf91fd5b01c5dd24d977b0af96ed40f6bfeb1c28ccb72726e5d84f0ec",
+      "caption": "Ten, nine, eight. What ships Friday?",
+      "speaker": "cass",
+      "emotion": "neutral",
+      "voice": "am_michael",
+      "duration": 3.016
+    },
+    "intro-7": {
+      "file": "/projects/feature-factory/audio/intro-7.mp3",
+      "signature": "00f12dc0cc7ccd4e2cff2c509ff839030adb592aec28de6c377f05b9d9e46cb4",
+      "caption": "Nils. Engineering. Our debt list is longer than your roadmap.",
+      "speaker": "nils",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 5.067
+    },
+    "intro-8": {
+      "file": "/projects/feature-factory/audio/intro-8.mp3",
+      "signature": "2dc51550b0b45b61412a681cf32904d39bfa5a9aa16f9fbde87716713775e47b",
+      "caption": "I'll do what you plan. I'd like a plan I can survive.",
+      "speaker": "nils",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 4.22
+    },
+    "intro-9": {
+      "file": "/projects/feature-factory/audio/intro-9.mp3",
+      "signature": "bb098f3f0d7eefe118ad86a1c490a0414c65394e9eb03aaa8c0b2ea52926bb91",
+      "caption": "Retention has been flat for a year. Does anyone read it?",
+      "speaker": "kofi",
+      "emotion": "neutral",
+      "voice": "am_fenrir",
+      "duration": 3.787
+    },
+    "intro-10": {
+      "file": "/projects/feature-factory/audio/intro-10.mp3",
+      "signature": "b25634a0bb3d259e620e8ac2abf869dc45961767622e5d18f125e30ba1507936",
+      "caption": "Release gate criteria are still looks fine. Can we write real ones?",
+      "speaker": "amara",
+      "emotion": "neutral",
+      "voice": "af_nicole",
+      "duration": 7.035
+    },
+    "intro-11": {
+      "file": "/projects/feature-factory/audio/intro-11.mp3",
+      "signature": "ef8760e19a9b90ba64e3fc596c3c249db3894f1d0bd63301816465dd0b0bc2ee",
+      "caption": "Three customers cited autosave losses. Quote attached.",
+      "speaker": "lila",
+      "emotion": "neutral",
+      "voice": "af_bella",
+      "duration": 4.239
+    },
+    "metric-pulse": {
+      "file": "/projects/feature-factory/audio/metric-pulse.mp3",
+      "signature": "68204e8a2954644282bb90558ae0eaea7958459f3c07f7b034ed20e8ac812bc8",
+      "caption": "Good. The Pulse is our story.",
+      "speaker": "reva",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 2.343
+    },
+    "metric-retention": {
+      "file": "/projects/feature-factory/audio/metric-retention.mp3",
+      "signature": "efad9d24ec4a612f1b9fa292fca540e44b38f5803d614d21482b2f119a1d6f52",
+      "caption": "Retention? It is slow to move.",
+      "speaker": "reva",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 2.441
+    },
+    "metric-features": {
+      "file": "/projects/feature-factory/audio/metric-features.mp3",
+      "signature": "203ce509c46bf86a52e64b04405af8c4974bb28967de206509b45beb0e585f7f",
+      "caption": "Counting output is not counting results.",
+      "speaker": "amara",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 4.005
+    },
+    "promise-tiles": {
+      "file": "/projects/feature-factory/audio/promise-tiles.mp3",
+      "signature": "ed2fdac6999705fbaac5cec0dfac46dcbe5edfeb4970e2f5e2be5bd1d9f5b01b",
+      "caption": "That's the spirit.",
+      "speaker": "cass",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 1.585
+    },
+    "promise-search": {
+      "file": "/projects/feature-factory/audio/promise-search.mp3",
+      "signature": "9714bfd90a16538bc5be108baadab501965ae668adc0a6f97118d749f9af2605",
+      "caption": "Search? Boring. Why?",
+      "speaker": "cass",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 1.918
+    },
+    "promise-plan": {
+      "file": "/projects/feature-factory/audio/promise-plan.mp3",
+      "signature": "40a5b2bdeaebac530ad2efe35f1f5e0c49d23eadbf09386c634675cf9e2e6ed1",
+      "caption": "Monday. Make it big.",
+      "speaker": "cass",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 2.103
+    },
+    "plan": {
+      "file": "/projects/feature-factory/audio/plan.mp3",
+      "signature": "595acb205a7bde61e342024dba872e3d910a3801cd2e586e9fbeaba6963962e9",
+      "caption": "Fill the sprint. Thirty points.",
+      "speaker": "reva",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 2.445
+    },
+    "gate": {
+      "file": "/projects/feature-factory/audio/gate.mp3",
+      "signature": "de005384feb8f9b7ce1167bf7d0f5c420264b9306da9f0fefa4f3d18d59a787c",
+      "caption": "Pick the criteria. I'll check them.",
+      "speaker": "amara",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 3.401
+    },
+    "gate-reva": {
+      "file": "/projects/feature-factory/audio/gate-reva.mp3",
+      "signature": "f0839e0c162ddf73d9fef53149032e9043bd2b70f393aa01d3628116aacb6281",
+      "caption": "Cass wants the gong at five. Go?",
+      "speaker": "reva",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 2.647
+    },
+    "hold": {
+      "file": "/projects/feature-factory/audio/hold.mp3",
+      "signature": "c588567a02bc74c915f837b1702f108fb482435a89e934bf7fa8ddebe1df4ad5",
+      "caption": "Thank you. Quietly.",
+      "speaker": "nils",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 2.23
+    },
+    "hold-cass": {
+      "file": "/projects/feature-factory/audio/hold-cass.mp3",
+      "signature": "ab5de8ad7e278d612b060028b7e4454f5823b9aada85c1b597bbcac460a7e828",
+      "caption": "Next Friday, then.",
+      "speaker": "cass",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 1.854
+    },
+    "week2": {
+      "file": "/projects/feature-factory/audio/week2.mp3",
+      "signature": "899452cc9bcf61330f648ddeeb84b8cf4cad0403c33f0986f9c5762b9b4c3528",
+      "caption": "Week two. The Debt Collector.",
+      "speaker": "pa",
+      "emotion": "thinking",
+      "voice": "bm_daniel",
+      "duration": 2.279
+    },
+    "week3": {
+      "file": "/projects/feature-factory/audio/week3.mp3",
+      "signature": "1f2c5c9a5b55e9df36846f735dddaef7b11154f919f0821b4b2945a42962ca8c",
+      "caption": "Week three. The Zenith Review.",
+      "speaker": "pa",
+      "emotion": "thinking",
+      "voice": "bm_daniel",
+      "duration": 2.365
+    },
+    "review": {
+      "file": "/projects/feature-factory/audio/review.mp3",
+      "signature": "bed915785d6c1be7bff9e23be8a758160b3e769b5bb1947bebbb55c63cdb1c1b",
+      "caption": "Show us what changed. Then ask for what comes next.",
+      "speaker": "reva",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 3.428
+    },
+    "incident": {
+      "file": "/projects/feature-factory/audio/incident.mp3",
+      "signature": "c5b80f210aebf48e284bd97b70498141fe1ab47622d45b381884d6c48395ae28",
+      "caption": "The write queue is stalled. We need a decision.",
+      "speaker": "nils",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 3.611
+    },
+    "retention": {
+      "file": "/projects/feature-factory/audio/retention.mp3",
+      "signature": "b3bacdd5661c85730c7a470d7f6adc491dc2d533348d574cfb754b0bf5180621",
+      "caption": "Finally someone asked.",
+      "speaker": "kofi",
+      "emotion": "thinking",
+      "voice": "am_fenrir",
+      "duration": 1.659
+    },
+    "flag": {
+      "file": "/projects/feature-factory/audio/flag.mp3",
+      "signature": "336656fd31c0819c5bd341ec466931a01b4c2bf4b04ee7430f34ce7a98eb90ff",
+      "caption": "A limited rollout gives us an exit.",
+      "speaker": "amara",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 3.398
+    },
+    "spin": {
+      "file": "/projects/feature-factory/audio/spin.mp3",
+      "signature": "b015385d95de76a77b20a5ec265448dc2d503f8690ce45aab8e63fcf1f8380d4",
+      "caption": "It sounds good. Can we substantiate it?",
+      "speaker": "cass",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 3.016
+    }
+  }
+}

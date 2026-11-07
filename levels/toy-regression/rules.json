@@ -1,0 +1,73 @@
+{
+  "initial": {
+    "credibility": 60,
+    "readiness": 50,
+    "trust": 55,
+    "risk": 25,
+    "cash": 100,
+    "composure": 60,
+    "safeguards": 5,
+    "resolve": 70,
+    "jitter": 20,
+    "availability": 80,
+    "CT": 55
+  },
+  "bounds": {
+    "credibility": [
+      0,
+      100
+    ],
+    "readiness": [
+      0,
+      100
+    ],
+    "trust": [
+      0,
+      100
+    ],
+    "risk": [
+      0,
+      100
+    ],
+    "cash": [
+      0,
+      100
+    ],
+    "composure": [
+      0,
+      100
+    ],
+    "safeguards": [
+      0,
+      24
+    ],
+    "resolve": [
+      0,
+      100
+    ],
+    "jitter": [
+      0,
+      100
+    ],
+    "availability": [
+      0,
+      100
+    ],
+    "CT": [
+      0,
+      100
+    ]
+  },
+  "flags": [],
+  "clues": [],
+  "receipts": [
+    "R_toy-regression_1"
+  ],
+  "endings": [
+    {
+      "id": "bounded",
+      "title": "A bounded beginning",
+      "summary": "The next step has a scope and an owner."
+    }
+  ]
+}

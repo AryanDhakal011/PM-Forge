@@ -1,0 +1,23 @@
+{
+  "id": "S00",
+  "type": "ENTR",
+  "background": "terminal",
+  "speakers": [
+    "narration"
+  ],
+  "lines": [
+    {
+      "id": "s00-1",
+      "speaker": "narration",
+      "expression": "thinking",
+      "text": "Something is stopping the model. Nobody will say what.",
+      "voiceId": "narration",
+      "phase": "before"
+    }
+  ],
+  "choices": [],
+  "tool": "entry",
+  "goal": "Badge in",
+  "canStill": "Choose captions or recorded voices, then enter.",
+  "next": "S01"
+}

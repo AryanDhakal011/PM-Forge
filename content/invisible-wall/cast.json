@@ -1,0 +1,65 @@
+{
+  "mags": {
+    "name": "Mags Dufour",
+    "role": "Head of Security",
+    "accent": "#7FE7FF",
+    "voice": "bf_emma",
+    "speed": 0.94,
+    "want": "A documented door, not a secret route.",
+    "fear": "An unlogged entry."
+  },
+  "soren": {
+    "name": "Soren Vidal",
+    "role": "Lead Architect",
+    "accent": "#FFB03B",
+    "voice": "bm_george",
+    "speed": 0.94,
+    "want": "Keep the machine running.",
+    "fear": "A preventable outage."
+  },
+  "tavi": {
+    "name": "Tavi Osei",
+    "role": "Infrastructure Engineer",
+    "accent": "#9BE3C5",
+    "voice": "am_michael",
+    "speed": 1.01,
+    "want": "Have the evidence taken seriously.",
+    "fear": "Being wrong in public."
+  },
+  "jonas": {
+    "name": "Jonas Reiter",
+    "role": "CEO",
+    "accent": "#8CB9FF",
+    "voice": "am_fenrir",
+    "speed": 0.98,
+    "want": "Gate Five by Friday.",
+    "fear": "A down round."
+  },
+  "imani": {
+    "name": "Imani Okoro",
+    "role": "Co-founder / Chief Scientist",
+    "accent": "#D5C2F2",
+    "voice": "af_heart",
+    "speed": 0.93,
+    "want": "Honor the capability review agreement.",
+    "fear": "Being proved right too late."
+  },
+  "pa": {
+    "name": "Terminal PA",
+    "role": "Halcyon night shift",
+    "accent": "#EAF6FF",
+    "voice": "bf_isabella",
+    "speed": 0.94,
+    "want": "",
+    "fear": ""
+  },
+  "narration": {
+    "name": "The terminal",
+    "role": "Narration",
+    "accent": "#EAF6FF",
+    "voice": "bm_daniel",
+    "speed": 0.97,
+    "want": "",
+    "fear": ""
+  }
+}

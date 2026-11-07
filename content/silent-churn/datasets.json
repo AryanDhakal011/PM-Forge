@@ -1,0 +1,42 @@
+[
+  {
+    "id": "segment",
+    "title": "Renewal cohort",
+    "concern": "COST"
+  },
+  {
+    "id": "claims",
+    "title": "Claims-to-renewal timeline",
+    "concern": "RISK"
+  },
+  {
+    "id": "price",
+    "title": "Price comparison",
+    "concern": "COST"
+  },
+  {
+    "id": "brokers",
+    "title": "Broker and competitor notes",
+    "concern": "BROKERS"
+  },
+  {
+    "id": "process",
+    "title": "Claims contact process",
+    "concern": "RISK"
+  },
+  {
+    "id": "wording",
+    "title": "Wording review",
+    "concern": "COMPLIANCE"
+  },
+  {
+    "id": "architecture",
+    "title": "Adjuster-system boundary",
+    "concern": "STABILITY"
+  },
+  {
+    "id": "capacity",
+    "title": "Pilot effort and on-call",
+    "concern": "STABILITY"
+  }
+]

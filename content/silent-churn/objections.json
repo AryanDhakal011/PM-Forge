@@ -1,0 +1,278 @@
+[
+  {
+    "id": "O01",
+    "person": "walter",
+    "text": "What is the total cost?",
+    "evidence": [
+      "cap",
+      "capacity"
+    ],
+    "commitments": [
+      "cap"
+    ]
+  },
+  {
+    "id": "O02",
+    "person": "walter",
+    "text": "Why not just lower the price?",
+    "evidence": [
+      "price"
+    ],
+    "commitments": [
+      "measure"
+    ]
+  },
+  {
+    "id": "O03",
+    "person": "walter",
+    "text": "How do you know it pays back?",
+    "evidence": [
+      "segment"
+    ],
+    "commitments": [
+      "measure"
+    ]
+  },
+  {
+    "id": "O04",
+    "person": "walter",
+    "text": "What happens if the pilot expands?",
+    "evidence": [
+      "capacity"
+    ],
+    "commitments": [
+      "cap"
+    ]
+  },
+  {
+    "id": "O05",
+    "person": "dolores",
+    "text": "More updates mean more calls.",
+    "evidence": [
+      "process"
+    ],
+    "commitments": [
+      "call-track"
+    ]
+  },
+  {
+    "id": "O06",
+    "person": "dolores",
+    "text": "What if the pilot backfires?",
+    "evidence": [
+      "process"
+    ],
+    "commitments": [
+      "rollback"
+    ]
+  },
+  {
+    "id": "O07",
+    "person": "dolores",
+    "text": "Who owns the handoff?",
+    "evidence": [
+      "claims",
+      "process"
+    ],
+    "commitments": [
+      "call-track"
+    ]
+  },
+  {
+    "id": "O08",
+    "person": "dolores",
+    "text": "Show me the process before changing it.",
+    "evidence": [
+      "claims",
+      "process"
+    ],
+    "commitments": [
+      "call-track"
+    ]
+  },
+  {
+    "id": "O09",
+    "person": "anand",
+    "text": "What breaks if this touches the core?",
+    "evidence": [
+      "architecture"
+    ],
+    "commitments": [
+      "side-feed",
+      "warn"
+    ]
+  },
+  {
+    "id": "O10",
+    "person": "anand",
+    "text": "Who gets paged at three in the morning?",
+    "evidence": [
+      "capacity"
+    ],
+    "commitments": [
+      "oncall"
+    ]
+  },
+  {
+    "id": "O11",
+    "person": "anand",
+    "text": "How do we recover the nightly batch?",
+    "evidence": [
+      "architecture"
+    ],
+    "commitments": [
+      "rollback"
+    ]
+  },
+  {
+    "id": "O12",
+    "person": "anand",
+    "text": "Does this write into the policy core?",
+    "evidence": [
+      "architecture"
+    ],
+    "commitments": [
+      "side-feed"
+    ]
+  },
+  {
+    "id": "O13",
+    "person": "beatrice",
+    "text": "Brokers will hear this from clients first.",
+    "evidence": [
+      "brokers"
+    ],
+    "commitments": [
+      "brokers"
+    ]
+  },
+  {
+    "id": "O14",
+    "person": "beatrice",
+    "text": "Do competitors pay more?",
+    "evidence": [
+      "brokers",
+      "price"
+    ],
+    "commitments": [
+      "brokers"
+    ]
+  },
+  {
+    "id": "O15",
+    "person": "beatrice",
+    "text": "Who tells our brokers what changed?",
+    "evidence": [
+      "brokers"
+    ],
+    "commitments": [
+      "brokers"
+    ]
+  },
+  {
+    "id": "O16",
+    "person": "beatrice",
+    "text": "What does this do for renewals?",
+    "evidence": [
+      "segment",
+      "claims"
+    ],
+    "commitments": [
+      "measure"
+    ]
+  },
+  {
+    "id": "O17",
+    "person": "gideon",
+    "text": "Who writes the messages?",
+    "evidence": [
+      "wording"
+    ],
+    "commitments": [
+      "wording"
+    ]
+  },
+  {
+    "id": "O18",
+    "person": "gideon",
+    "text": "Is this in writing?",
+    "evidence": [
+      "wording"
+    ],
+    "commitments": [
+      "signoff"
+    ]
+  },
+  {
+    "id": "O19",
+    "person": "gideon",
+    "text": "Who approves the exact wording?",
+    "evidence": [
+      "wording"
+    ],
+    "commitments": [
+      "wording"
+    ]
+  },
+  {
+    "id": "O20",
+    "person": "gideon",
+    "text": "What promise does this message make?",
+    "evidence": [
+      "wording"
+    ],
+    "commitments": [
+      "wording"
+    ]
+  },
+  {
+    "id": "B1",
+    "person": "walter",
+    "text": "Why am I hearing this for the first time?",
+    "evidence": [],
+    "commitments": [
+      "followup"
+    ],
+    "reframe": "acknowledge"
+  },
+  {
+    "id": "B2",
+    "person": "dolores",
+    "text": "Why am I hearing this for the first time?",
+    "evidence": [],
+    "commitments": [
+      "followup"
+    ],
+    "reframe": "acknowledge"
+  },
+  {
+    "id": "B3",
+    "person": "anand",
+    "text": "Why am I hearing this for the first time?",
+    "evidence": [],
+    "commitments": [
+      "followup"
+    ],
+    "reframe": "acknowledge"
+  },
+  {
+    "id": "B4",
+    "person": "beatrice",
+    "text": "Why am I hearing this for the first time?",
+    "evidence": [],
+    "commitments": [
+      "followup"
+    ],
+    "reframe": "acknowledge"
+  },
+  {
+    "id": "B5",
+    "person": "gideon",
+    "text": "Why am I hearing this for the first time?",
+    "evidence": [],
+    "commitments": [
+      "followup"
+    ],
+    "reframe": "acknowledge"
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "id": "hallway",
+  "type": "TOOL",
+  "background": "office",
+  "goal": "Choose which private conversation comes first.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "mara"
+  ],
+  "lines": [
+    {
+      "id": "line-13",
+      "speaker": "mara",
+      "expression": "thinking",
+      "text": "A hallway conversation can change the next one."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "asides",
+      "kind": "PartyFloor",
+      "title": "Two private asides",
+      "items": [
+        {
+          "id": "dev-first",
+          "label": "Speak to Dev",
+          "detail": "I just want Northgate to see it move.",
+          "effects": [
+            {
+              "var": "TRUST.dev",
+              "op": "add",
+              "value": 3
+            }
+          ],
+          "reaction": "I just want Northgate to see it move.",
+          "speaker": "dev"
+        },
+        {
+          "id": "ines-first",
+          "label": "Speak to Ines",
+          "detail": "I just want nobody hurt.",
+          "effects": [
+            {
+              "var": "TRUST.ines",
+              "op": "add",
+              "value": 3
+            }
+          ],
+          "reaction": "I just want nobody hurt.",
+          "speaker": "ines"
+        }
+      ],
+      "min": 2,
+      "max": 2,
+      "cost": 0,
+      "receiptId": "R_deadlock_asides"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "projector"
+}

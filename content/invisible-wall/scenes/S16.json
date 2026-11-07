@@ -1,0 +1,88 @@
+{
+  "id": "S16",
+  "type": "FACE",
+  "background": "annex",
+  "speakers": [
+    "imani"
+  ],
+  "lines": [
+    {
+      "id": "s16-1",
+      "speaker": "imani",
+      "expression": "neutral",
+      "text": "You found it. Faster than I expected.",
+      "voiceId": "imani",
+      "phase": "before"
+    },
+    {
+      "id": "s16-2",
+      "speaker": "imani",
+      "expression": "thinking",
+      "text": "What do you think it is?",
+      "voiceId": "imani",
+      "phase": "before"
+    },
+    {
+      "id": "s16-3",
+      "speaker": "imani",
+      "expression": "approving",
+      "text": "Yes. At index seventy-four, the model stops.",
+      "voiceId": "imani",
+      "phase": "after",
+      "when": "choice:A"
+    },
+    {
+      "id": "s16-4",
+      "speaker": "imani",
+      "expression": "annoyed",
+      "text": "Cost? No.",
+      "voiceId": "imani",
+      "phase": "after",
+      "when": "choice:B"
+    },
+    {
+      "id": "s16-5",
+      "speaker": "imani",
+      "expression": "approving",
+      "text": "Good. Say that more often.",
+      "voiceId": "imani",
+      "phase": "after",
+      "when": "choice:C"
+    },
+    {
+      "id": "s16-6",
+      "speaker": "imani",
+      "expression": "pressured",
+      "text": "We agreed on a line. Jonas wants to cross it.",
+      "voiceId": "imani",
+      "phase": "after"
+    }
+  ],
+  "choices": [
+    {
+      "id": "A",
+      "text": "A safety limit.",
+      "effects": {},
+      "receipt": "R04",
+      "next": "S17"
+    },
+    {
+      "id": "B",
+      "text": "A cost control.",
+      "effects": {},
+      "receipt": "R04",
+      "next": "S17"
+    },
+    {
+      "id": "C",
+      "text": "I don't know yet.",
+      "effects": {},
+      "receipt": "R04",
+      "next": "S17"
+    }
+  ],
+  "tool": "theory",
+  "goal": "Explain your current theory",
+  "canStill": "Answer Imani without claiming evidence you do not have.",
+  "next": "S17"
+}

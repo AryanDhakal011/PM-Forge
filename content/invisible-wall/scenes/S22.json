@@ -1,0 +1,32 @@
+{
+  "id": "S22",
+  "type": "CINEMA",
+  "background": "server",
+  "speakers": [
+    "narration",
+    "pa"
+  ],
+  "lines": [
+    {
+      "id": "s22-1",
+      "speaker": "pa",
+      "expression": "neutral",
+      "text": "Investor load test begins in one minute.",
+      "voiceId": "pa",
+      "phase": "before"
+    },
+    {
+      "id": "s22-2",
+      "speaker": "narration",
+      "expression": "thinking",
+      "text": "Your choice is recorded. Inspect the result before moving on.",
+      "voiceId": "narration",
+      "phase": "after"
+    }
+  ],
+  "choices": [],
+  "tool": "evals",
+  "goal": "Prepare for the investor test",
+  "canStill": "Resolve safety evaluations before the final stability run.",
+  "next": "S23"
+}

@@ -1,5 +1,5 @@
 "use client";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
@@ -42,6 +42,7 @@ import {
   METRICS,
   remainingEvidence,
   requestEvidence,
+  evidenceUnavailableReason,
   scoreRun,
   STAGES,
   stageIssue,
@@ -55,6 +56,14 @@ import { Dialog } from "@/components/ui/Dialog";
 import { useWorkspace } from "./WorkspaceProvider";
 import styles from "./Product.module.css";
 import VoiceNote from "./VoiceNote";
+import dynamic from 'next/dynamic';
+import {createLive} from '@/lib/product/interview-live';
+import {nextMove,interviewStageOf,workbenchCue} from '@/lib/product/interview-ux';
+import InterviewStageRail from './interview/InterviewStageRail';
+import {warmups} from '@/lib/product/interview-prompts';
+import liveStyles from './interview/LiveInterview.module.css';
+const LiveInterviewDesk=dynamic(()=>import('./interview/LiveInterviewDesk'),{loading:()=> <section role="status">Preparing the interview room…</section>});
+const RealityChecks=dynamic(()=>import('./interview/RealityChecks'));
 import { CategoryWorkbench } from "./CategoryWorkbench";
 import SpokenSynthesis from "./SpokenSynthesis";
 import KeepRun from "./KeepRun";
@@ -171,6 +180,9 @@ export default function InterviewRunner({ runId }: { runId: string }) {
     ((run: Run, lock?: boolean) => Promise<boolean>) | null
   >(null);
   const [deskOpen, setDeskOpen] = useState(false);
+  const [liveBusy,setLiveBusy]=useState(false);
+  const [microphoneActive,setMicrophoneActive]=useState(false);
+  const liveBusyRef=useRef(false);
   useEffect(() => {
     if (run?.stage !== "reflection") return;
     const update = () =>
@@ -211,10 +223,11 @@ export default function InterviewRunner({ runId }: { runId: string }) {
         );
         return;
       }
-      current.current = saved;
+      const restored:Run=saved.live?saved:{...saved,live:{...createLive(),mode:"typing"}};
+      current.current = restored;
       revision.current = saved.revision;
       elapsedRef.current = saved.elapsedSeconds;
-      setRun(saved);
+      setRun(restored);
       setClock(saved.elapsedSeconds);
       setConflict(false);
       setError("");
@@ -296,8 +309,8 @@ export default function InterviewRunner({ runId }: { runId: string }) {
     const timer = setInterval(() => {
       const active = current.current;
       if (
-        !active ||
-        pausedRef.current ||
+        !active || active.stage==='primer' ||
+        pausedRef.current || liveBusyRef.current ||
         active.status === "paused" ||
         (active.completedAt &&
           !(
@@ -332,7 +345,7 @@ export default function InterviewRunner({ runId }: { runId: string }) {
       window.removeEventListener("beforeunload", beforeUnload);
     };
   }, [persist]);
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!run || reducedMotion) return;
     const context = gsap.context(() => {
       gsap.fromTo(
@@ -348,10 +361,11 @@ export default function InterviewRunner({ runId }: { runId: string }) {
       );
     }, stageRef);
     stageRef.current
-      ?.querySelector<HTMLElement>("h1")
+      ?.querySelector<HTMLElement>("h1,h2[data-stage-heading]")
       ?.focus({ preventScroll: true });
     return () => context.revert();
   }, [run?.stage, run?.eventIndex, reducedMotion]);
+  useLayoutEffect(()=>{const shell=stageRef.current?.closest<HTMLElement>('[data-interview-shell]');if(!shell)return;const header=shell.querySelector<HTMLElement>('header'),bar=shell.querySelector<HTMLElement>('ol[aria-label="Interview stages"]');const measure=()=>{shell.style.setProperty('--interview-header-height',`${header?.getBoundingClientRect().height||80}px`);shell.style.setProperty('--interview-phase-height',`${bar?.getBoundingClientRect().height||72}px`)};measure();if(typeof ResizeObserver==='undefined')return;const observer=new ResizeObserver(measure);if(header)observer.observe(header);if(bar)observer.observe(bar);return()=>observer.disconnect()},[run?.id,loading]);
   if (loading)
     return (
       <div className={styles.runMain}>
@@ -373,6 +387,8 @@ export default function InterviewRunner({ runId }: { runId: string }) {
       </div>
     );
   const score = scoreRun(run, q);
+  const nextLevel=score.band==='Strong'?(q.level==='easy'?'medium':'hard'):score.band==='Developing'?'easy':q.level;
+  const nextPractice=questions.find(item=>item.category===q.category&&item.level===nextLevel&&item.id!==q.id)||questions.find(item=>item.category===q.category&&item.id!==q.id)||questions[0];
   const resultStages = [
     "feedback",
     "replay",
@@ -399,12 +415,14 @@ export default function InterviewRunner({ runId }: { runId: string }) {
     q.category === "estimation" ? estimate(q.id, run.dials, run.seed) : null;
   const next = async () => {
     const issue = stageIssue(current.current!);
+    if (liveBusyRef.current) return;
     if (issue) {
       setError(issue);
       return;
     }
     clearTimeout(saveTimer.current);
     saveTimer.current = undefined;
+    if(run.stage==='primer'){elapsedRef.current=0;setClock(0)}
     const nextRun = advance(current.current!);
     current.current = nextRun;
     setRun(nextRun);
@@ -448,6 +466,7 @@ export default function InterviewRunner({ runId }: { runId: string }) {
   };
   const retry = async () => {
     const nextRun = createRun(q, profile!.id, (run.seed + 1) % 3);
+    nextRun.live={...createLive(),mode:run.live?.mode||"voice",retryFocus:score.lowest.label};
     nextRun.stage = q.category === "root-cause" ? "investigate" : "workbench";
     nextRun.objectivePinned = true;
     nextRun.locked = ["primer", "fundamentals", "clarify"];
@@ -476,7 +495,7 @@ export default function InterviewRunner({ runId }: { runId: string }) {
           .filter((e) => run.evidenceIds.includes(e.id))
           .map((e) => `${e.id}: ${e.text}`)
           .join("\n\n"),
-        assumptions: run.synthesis.note,
+        assumptions: [run.synthesis.note, run.live ? "Interview notes:\n"+Object.entries(run.live.acceptedOutline).map(([k,v])=>k+": "+v).join("\n") : ""].filter(Boolean).join("\n\n"),
         options: q.choices
           .filter((c) => !c.trap)
           .map((c) => c.label)
@@ -508,7 +527,7 @@ export default function InterviewRunner({ runId }: { runId: string }) {
   const timeText = `${Math.floor(clock / 60)}:${String(clock % 60).padStart(2, "0")}`;
   const showExhausted = budget === 0 && run.stage === "investigate";
   return (
-    <div className={styles.runPage}>
+    <div className={styles.runPage} data-interview-shell>
       <header className={styles.runHeader}>
         <div className={styles.runTitle}>
           <Link href="/app" className={styles.brand}>
@@ -520,6 +539,7 @@ export default function InterviewRunner({ runId }: { runId: string }) {
             <br />
             <strong>
               {q.id} · Variant {run.seed + 1}
+              <span className={liveStyles.caseTitle}>{q.title}</span>
             </strong>
           </div>
         </div>
@@ -527,18 +547,10 @@ export default function InterviewRunner({ runId }: { runId: string }) {
           <span
             className={`${styles.pill} ${styles.small}`}
             role="timer"
-            aria-label={
-              run.guided
-                ? `${Math.max(0, 480 - clock)} seconds remaining in guided timebox`
-                : `${timeText} time practised`
-            }
-          >
-            <Clock size={13} />
-            {run.guided
-              ? `${Math.floor(Math.max(0, 480 - clock) / 60)}:${String(Math.max(0, 480 - clock) % 60).padStart(2, "0")} left · guided`
-              : timeText}
+            aria-label={run.stage==='primer'?'Interview not started':run.pressureSeconds!==null?`${Math.max(0,run.pressureSeconds-clock)} seconds remaining in optional timebox`:`${timeText} time practised`}
+          ><Clock size={13}/>{run.stage==='primer'?'Not started':run.pressureSeconds!==null?`${Math.floor(Math.max(0,run.pressureSeconds-clock)/60)}:${String(Math.max(0,run.pressureSeconds-clock)%60).padStart(2,'0')} · optional timebox`:timeText}
           </span>
-          {!inDebrief && (
+          {!inDebrief && (run.stage!=='primer'||paused) && (
             <button className={styles.secondary} onClick={pause}>
               {paused ? <Play size={12} /> : <Pause size={12} />}{" "}
               {paused ? "Resume" : "Pause"}
@@ -550,7 +562,8 @@ export default function InterviewRunner({ runId }: { runId: string }) {
           </button>
         </div>
       </header>
-      <div className={styles.goalPin}>
+      <InterviewStageRail stage={run.stage}/>
+      {run.stage!=='primer'&&<div className={styles.goalPin}>
         <Pin size={14} style={{ flex: "none" }} />
         <p>
           {run.objectivePinned
@@ -558,94 +571,16 @@ export default function InterviewRunner({ runId }: { runId: string }) {
             : "Your first job: understand the decision before solving it."}
         </p>
         <span>{q.status} content · local-first</span>
-      </div>
-      <div className={styles.runGrid}>
-        <details
-          className={styles.evidenceDesk}
-          open={deskOpen}
-          onToggle={(event) => setDeskOpen(event.currentTarget.open)}
-        >
-          <summary>
-            Evidence desk{" "}
-            <span className={styles.row}>
-              <span className={styles.badge}>
-                {budget}/{evidenceBudget(q.level)}
-              </span>
-              <ChevronDown size={13} />
-            </span>
-          </summary>
-          <p className={styles.finePrint} style={{ marginTop: 12 }}>
-            Ask the interviewer. Every request has a cost; every observation is
-            saved.
-          </p>
-          {q.evidence.map((card) => {
-            const opened = run.evidenceIds.includes(card.id);
-            return opened ? (
-              <article
-                key={card.id}
-                className={styles.evidenceCard}
-                data-open="true"
-              >
-                <div className={styles.spread}>
-                  <span className={styles.badge}>{card.id}</span>
-                  <span className={styles.badge}>
-                    {card.tag === "REFERENCE"
-                      ? "Unverified reference"
-                      : "Simulated"}
-                  </span>
-                </div>
-                <h3>{card.title}</h3>
-                <p>{card.text}</p>
-                {card.tag === "REFERENCE" && (
-                  <small>Source in supplied handoff · SME review pending</small>
-                )}
-              </article>
-            ) : (
-              <button
-                key={card.id}
-                className={styles.evidenceCard}
-                disabled={
-                  budget < card.cost ||
-                  run.locked.includes("synthesis") ||
-                  !run.objectivePinned ||
-                  paused
-                }
-                onClick={() => change(requestEvidence(run, card.id), true)}
-              >
-                <span className={styles.spread}>
-                  <span className={styles.badge}>{card.id}</span>
-                  <LockKeyhole size={12} />
-                </span>
-                <h3>{card.title}</h3>
-                <small>
-                  {card.cost} evidence credit{card.cost === 1 ? "" : "s"} ·
-                  Request this cut
-                </small>
-              </button>
-            );
-          })}
-          <p className={styles.finePrint} style={{ marginTop: 18 }}>
-            Internal metrics are simulated, never private data from real
-            companies. {reviewStatus(q)}.
-          </p>
-        </details>
+      </div>}
+      {run.stage==='primer'?<section className={liveStyles.prepare} data-testid="interview-prepare"><div className={liveStyles.prepareBrief}><span className={styles.eyebrow}>{category.label} · {q.level} · {q.minutes} min estimated practice</span><h1 data-stage-heading tabIndex={-1}>{q.title}</h1><p className={liveStyles.prepareLead}>{q.primer[0]}</p><p><strong>Your decision:</strong> {q.goal}</p><details><summary>Keep these in mind</summary>{q.primer.slice(1).map((text,i)=><p key={i}>{text}</p>)}</details></div><LiveInterviewDesk preparing run={run} question={q} change={change} onBusy={busy=>{liveBusyRef.current=busy;setLiveBusy(busy)}} onAudioState={setMicrophoneActive}/><div className={liveStyles.prepareActions}><div><strong>Your next move</strong><p>{paused?'Resume preparation before beginning.':stageIssue(run)||nextMove.primer.cue}</p><small>{saving?'Saving…':savedAt?'Saved on device · '+savedAt:'Saved on this device'} · The interview clock has not started.</small>{error&&<p role="alert">{error}</p>}</div>{paused?<button className={styles.primary} onClick={pause}>Resume preparation</button>:<button className={styles.primary} disabled={saving||conflict||!!stageIssue(run)} onClick={()=>void next()}>Begin interview <ArrowRight size={17}/></button>}</div></section>:<>
+      <div className={run.live?liveStyles.sessionGrid:styles.runGrid}>
         <div className={styles.runMain} ref={stageRef}>
-          <div className={styles.runStage}>
-            <div className={styles.stageTop}>
-              <span>
-                {String(stepIndex + 1).padStart(2, "0")} /{" "}
-                {stageLabel[run.stage]}
-              </span>
-              <div
-                className={styles.steps}
-                aria-label={`Step ${stepIndex + 1} of ${stages.length}`}
-              >
-                {stages.map((s, i) => (
-                  <i key={s} title={stageLabel[s]} data-on={i <= stepIndex} />
-                ))}
-              </div>
-            </div>
-            {run.guided && (
+          <div className={run.live?liveStyles.sessionStage:styles.runStage}>
+            <div className={liveStyles.nextMove}><span>Your next move · {['Prepare','Frame','Investigate','Decide','Reflect'][interviewStageOf(run.stage)]}</span><p>{run.live?.pending?'Address the interviewer’s current challenge before returning to your work.':run.stage==='workbench'?(workbenchCue[q.category]||nextMove.workbench.cue):nextMove[run.stage].cue}</p></div>
+            <div className={run.live?liveStyles.roomGrid:undefined}>
+            {run.live&&<div className={liveStyles.conversation}><LiveInterviewDesk run={run} question={q} change={change} onBusy={busy=>{liveBusyRef.current=busy;setLiveBusy(busy)}} onAudioState={setMicrophoneActive}/></div>}
+            <div className={liveStyles.work}>
+            {run.guided && run.stage==='fundamentals' && (
               <p className={styles.finePrint}>
                 Brief → evidence & workbench → one pushback → 90-second spoken
                 call → debrief & reflection. About 8 minutes; take longer
@@ -730,55 +665,8 @@ export default function InterviewRunner({ runId }: { runId: string }) {
                 </button>
               </section>
             ) : (
-              <div data-stage-content>
-                {run.stage === "primer" && (
-                  <>
-                    <span className={styles.eyebrow}>
-                      {category.studio} · preflight
-                    </span>
-                    <h1 tabIndex={-1}>Before you take the room.</h1>
-                    <p className={styles.lead}>
-                      Three things to hold in mind. This is context, not a
-                      script.
-                    </p>
-                    <div className={styles.primer}>
-                      {q.primer.map((text, i) => (
-                        <article className={styles.primerCard} key={i}>
-                          <span>{i + 1}.</span>
-                          <div>
-                            <h3>{primerTitles[i]}</h3>
-                            <p>{text}</p>
-                          </div>
-                        </article>
-                      ))}
-                    </div>
-                    <div className={styles.settingRow}>
-                      <div>
-                        <h3>Optional pressure mode</h3>
-                        <p>
-                          A soft timebox. You can extend it; time never lowers
-                          your score.
-                        </p>
-                      </div>
-                      <button
-                        role="switch"
-                        aria-label="Pressure mode"
-                        aria-checked={run.pressureSeconds !== null}
-                        className={styles.switch}
-                        onClick={() =>
-                          change({
-                            pressureSeconds:
-                              run.pressureSeconds === null
-                                ? q.minutes * 60
-                                : null,
-                          })
-                        }
-                      >
-                        <span />
-                      </button>
-                    </div>
-                  </>
-                )}
+              <div data-stage-content inert={liveBusy}>
+                {run.live&&<RealityChecks run={run} question={q} change={change}/>}
                 {run.stage === "fundamentals" && (
                   <>
                     <span className={styles.eyebrow}>A short warm-up</span>
@@ -787,7 +675,7 @@ export default function InterviewRunner({ runId }: { runId: string }) {
                       Choose what you would do. We’ll discuss the reasoning in
                       your debrief, without interrupting the run.
                     </p>
-                    {fundamentalQuestions.map((f, i) => (
+                    {(run.live?warmups(q.category):fundamentalQuestions).map((f, i) => (
                       <section key={f.id} style={{ marginTop: 25 }}>
                         <h3>
                           {i + 1}. {f.question}
@@ -1482,7 +1370,9 @@ export default function InterviewRunner({ runId }: { runId: string }) {
                 {run.stage === "synthesis" && (
                   <>
                     <SpokenSynthesis
-                      paused={paused}
+                      paused={paused||liveBusy}
+                      microphoneActive={microphoneActive}
+                      liveMode={run.live?.mode}
                       value={
                         run.spoken || {
                           seconds: 0,
@@ -1967,9 +1857,9 @@ export default function InterviewRunner({ runId }: { runId: string }) {
                       )}
                       <Link
                         className={styles.secondary}
-                        href={`/app/practice/${questions[(questions.findIndex((question) => question.id === q.id) + 1) % questions.length].slug}`}
+                        href={`/app/practice/${nextPractice.slug}`}
                       >
-                        Explore the next scenario
+                        Practice another {category.label.toLowerCase()} scenario
                         <ArrowRight size={15} />
                       </Link>
                       <Link className={styles.textButton} href="/app/practice">
@@ -2008,7 +1898,7 @@ export default function InterviewRunner({ runId }: { runId: string }) {
             {!paused && !review && run.stage !== "complete" && (
               <footer className={styles.runFooter}>
                 <div>
-                  <p aria-live="polite">
+                  {stageIssue(run)&&<p className={liveStyles.actionIssue}>{stageIssue(run)}</p>}<p aria-live="polite">
                     {saving
                       ? "Saving…"
                       : savedAt
@@ -2030,23 +1920,20 @@ export default function InterviewRunner({ runId }: { runId: string }) {
                 </div>
                 <button
                   className={styles.primary}
-                  disabled={saving || conflict}
+                  disabled={saving || conflict || liveBusy}
                   onClick={() => void next()}
                 >
-                  {run.stage === "synthesis"
-                    ? "Commit & see feedback"
-                    : run.stage === "reflection"
-                      ? "Unlock the expert trace"
-                      : run.stage === "expert"
-                        ? "Choose your next move"
-                        : "Lock & continue"}
+                  {nextMove[run.stage].action}
                   <ArrowRight size={15} />
                 </button>
               </footer>
             )}
+            </div>
+            </div>
           </div>
         </div>
-        <aside className={styles.runNotes}>
+        <details className={styles.evidenceDesk} open={deskOpen} onToggle={e=>setDeskOpen(e.currentTarget.open)}><summary>Evidence & context <span className={styles.badge}>{budget}/{evidenceBudget(q.level)}</span></summary><p className={liveStyles.evidenceHint}>Choose a cut that could change your conclusion. Each request spends the credits shown.</p>{[{label:'Available',cards:q.evidence.filter(c=>!run.evidenceIds.includes(c.id)&&!evidenceUnavailableReason(run,q,c.id))},{label:'Requested',cards:q.evidence.filter(c=>run.evidenceIds.includes(c.id))},{label:'Not yet available',cards:q.evidence.filter(c=>!run.evidenceIds.includes(c.id)&&!!evidenceUnavailableReason(run,q,c.id))}].filter(g=>g.cards.length).map(group=><section key={group.label} className={liveStyles.evidenceGroup}><h2>{group.label}</h2>{group.cards.map(card=>{const opened=run.evidenceIds.includes(card.id),reason=evidenceUnavailableReason(run,q,card.id);return <div key={card.id}>{opened?<article className={styles.evidenceCard} data-open="true"><span className={styles.badge}>{card.tag==='REFERENCE'?'Unverified reference':'Simulated data'}</span><h3>{card.title}</h3><p>{card.text}</p></article>:<><button className={styles.evidenceCard} disabled={!!reason} aria-describedby={reason?'evidence-reason-'+card.id:undefined} onClick={()=>change(requestEvidence(run,card.id),true)}><span>{card.cost} credit{card.cost===1?'':'s'}</span><h3>{card.title}</h3><span>Request evidence →</span></button>{reason&&<p id={'evidence-reason-'+card.id} className={liveStyles.lockReason}>{reason}</p>}</>}</div>})}</section>)}{run.evidenceIds.length>0&&<p role="status" className={liveStyles.evidenceHint}>Requested: {q.evidence.find(c=>c.id===run.evidenceIds.at(-1))?.title}. {budget} credits remain.</p>}<details><summary>Decision trail · {run.decisions.length} actions</summary><ol>{run.decisions.slice(-15).map((d,i)=><li key={i}>{d.action}: {d.value}</li>)}</ol></details><p className={liveStyles.evidenceHint}>Simulated operating data and unverified reference material are labeled separately.</p></details>
+        {!run.live&&<aside className={styles.runNotes}>
           <section>
             <h3>Your session</h3>
             <p>{q.title}</p>
@@ -2076,8 +1963,8 @@ export default function InterviewRunner({ runId }: { runId: string }) {
               syncs only after sign-in.
             </p>
           </section>
-        </aside>
-      </div>
+        </aside>}
+      </div></>}
       <Dialog
         open={exit}
         onClose={() => setExit(false)}

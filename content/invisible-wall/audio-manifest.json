@@ -1,0 +1,808 @@
+{
+  "version": 1,
+  "provider": "Kokoro-82M v1.0 / kokoro-onnx 0.6.1",
+  "directionLimit": "Emotion tags adjust pace and pauses. This model does not provide native acted emotions.",
+  "lines": {
+    "s00-1": {
+      "file": "/projects/invisible-wall/audio/s00-1.mp3",
+      "signature": "80ddef0019634c959e67f53a099fa6299190ed629588c3e0231b3f6eb6b59521",
+      "caption": "Something is stopping the model. Nobody will say what.",
+      "speaker": "narration",
+      "emotion": "thinking",
+      "voice": "bm_daniel",
+      "duration": 3.66
+    },
+    "s01-1": {
+      "file": "/projects/invisible-wall/audio/s01-1.mp3",
+      "signature": "71ec540623435f7a681e835eeff81f9f65c29ab6587ca3cc7d616597a714ddd0",
+      "caption": "Gate B12 is now closed. Halcyon night shift, please badge in.",
+      "speaker": "pa",
+      "emotion": "neutral",
+      "voice": "bf_isabella",
+      "duration": 4.856
+    },
+    "s01-2": {
+      "file": "/projects/invisible-wall/audio/s01-2.mp3",
+      "signature": "c51d16d686fe926551c2dfb47ac4c6e74c03d48f12862c468deb239dd3aeebf2",
+      "caption": "A reminder. Nothing in this terminal is flying tonight.",
+      "speaker": "pa",
+      "emotion": "neutral",
+      "voice": "bf_isabella",
+      "duration": 3.817
+    },
+    "s01-3": {
+      "file": "/projects/invisible-wall/audio/s01-3.mp3",
+      "signature": "d2d9cd401b3dfd7b55e7f512d3b24eae8787e1fd8a6af6b435c5491173d7ab02",
+      "caption": "3:00 AM, officially. You started at ten.",
+      "speaker": "narration",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 4.127
+    },
+    "s02-1": {
+      "file": "/projects/invisible-wall/audio/s02-1.mp3",
+      "signature": "6bd05af9a4f51e436ca6208fd793d38c6b2bb190a6379fa157f42b0d901c11aa",
+      "caption": "Badge.",
+      "speaker": "mags",
+      "emotion": "neutral",
+      "voice": "bf_emma",
+      "duration": 1.095
+    },
+    "s02-2": {
+      "file": "/projects/invisible-wall/audio/s02-2.mp3",
+      "signature": "bf5bd0b446bb73db7cf41c40e96f6b791853189a1d4ae998694e890fd6d419dc",
+      "caption": "Level one. The floor only. Don't wander.",
+      "speaker": "mags",
+      "emotion": "neutral",
+      "voice": "bf_emma",
+      "duration": 3.375
+    },
+    "s03-1": {
+      "file": "/projects/invisible-wall/audio/s03-1.mp3",
+      "signature": "407be61cd0f5e38fbf6d72d806544b165ab89f7ff49decef3139a285c3c2d698",
+      "caption": "I'm Soren. Systems architect. I keep the machine running.",
+      "speaker": "soren",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 4.721
+    },
+    "s03-2": {
+      "file": "/projects/invisible-wall/audio/s03-2.mp3",
+      "signature": "1a0c48d5acdc858ef2e078e1b8f70c59f95d45644f70c51d5645f5d410a84765",
+      "caption": "Vesper has to pass Gate Five by Friday.",
+      "speaker": "soren",
+      "emotion": "pressured",
+      "voice": "bm_george",
+      "duration": 3.664
+    },
+    "s03-3": {
+      "file": "/projects/invisible-wall/audio/s03-3.mp3",
+      "signature": "1244422287965ac4b0cad448900c1f8e36ff926d6de4520b9d11d00a02bb52f5",
+      "caption": "Please don't break anything.",
+      "speaker": "soren",
+      "emotion": "annoyed",
+      "voice": "bm_george",
+      "duration": 2.31
+    },
+    "s03-4": {
+      "file": "/projects/invisible-wall/audio/s03-4.mp3",
+      "signature": "7dc74ed556895c02b6829503a20867b150e94eb49ffdee07f40f5df87370993b",
+      "caption": "Good.",
+      "speaker": "soren",
+      "emotion": "approving",
+      "voice": "bm_george",
+      "duration": 1.137
+    },
+    "s03-5": {
+      "file": "/projects/invisible-wall/audio/s03-5.mp3",
+      "signature": "d0cf1cf6cddb5e8d8b7d7b0d085aa811c24352d36c00459678fe1eca5757dab4",
+      "caption": "Ask Tavi. And do it quietly.",
+      "speaker": "soren",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 2.865
+    },
+    "s03-6": {
+      "file": "/projects/invisible-wall/audio/s03-6.mp3",
+      "signature": "1ce6e851d0b1ca5586dffe6faef1ef26f00620e4631a8f82a5ce2fdf4a81398e",
+      "caption": "That's all I ask.",
+      "speaker": "soren",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 1.98
+    },
+    "s04-1": {
+      "file": "/projects/invisible-wall/audio/s04-1.mp3",
+      "signature": "20f95f37777827615bc81ad474353d152ba5308baeb544b2a8415d4c732f4bc7",
+      "caption": "Can I show you something? It's probably the scheduler.",
+      "speaker": "tavi",
+      "emotion": "pressured",
+      "voice": "am_michael",
+      "duration": 3.625
+    },
+    "s04-2": {
+      "file": "/projects/invisible-wall/audio/s04-2.mp3",
+      "signature": "e5fe2a5da69147a282c2b94844ae8dfdee09a207ed60c1758e119b5ebbc64536",
+      "caption": "See that? It drops when the benchmark climbs.",
+      "speaker": "tavi",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 3.367
+    },
+    "s04-3": {
+      "file": "/projects/invisible-wall/audio/s04-3.mp3",
+      "signature": "98588bd00df9d8253e7c00cbcf73f5a0431a95b69feeff2619d41c03d524324c",
+      "caption": "Every time. I think I'm wrong. Am I wrong?",
+      "speaker": "tavi",
+      "emotion": "pressured",
+      "voice": "am_michael",
+      "duration": 3.176
+    },
+    "s05-1": {
+      "file": "/projects/invisible-wall/audio/s05-1.mp3",
+      "signature": "556bb34b7eaa9724fa7a4957df2df18a5a74a77418874df61ad3661f29b3a158",
+      "caption": "Gate Five by Friday. Tell me you're on it.",
+      "speaker": "jonas",
+      "emotion": "approving",
+      "voice": "am_fenrir",
+      "duration": 2.962
+    },
+    "s05-2": {
+      "file": "/projects/invisible-wall/audio/s05-2.mp3",
+      "signature": "a30ff491117841c8070fc5f13e76f5776fe6e1e314427baddfbd7da204ebbc71",
+      "caption": "That's the energy.",
+      "speaker": "jonas",
+      "emotion": "approving",
+      "voice": "am_fenrir",
+      "duration": 1.424
+    },
+    "s05-3": {
+      "file": "/projects/invisible-wall/audio/s05-3.mp3",
+      "signature": "62834363f4b2be7363af737fbb94952120fcbd343d6dded01b8ef15134717d29",
+      "caption": "Fine. Fast.",
+      "speaker": "jonas",
+      "emotion": "thinking",
+      "voice": "am_fenrir",
+      "duration": 1.349
+    },
+    "s05-4": {
+      "file": "/projects/invisible-wall/audio/s05-4.mp3",
+      "signature": "60cdea1fd8cc5c4a055a9cdeebcb92cbf4e6a976b905c2486032ee9317b147a0",
+      "caption": "Friday. That's the deadline.",
+      "speaker": "jonas",
+      "emotion": "annoyed",
+      "voice": "am_fenrir",
+      "duration": 2.099
+    },
+    "s06-1": {
+      "file": "/projects/invisible-wall/audio/s06-1.mp3",
+      "signature": "aaf53939970a74613606ad6e3ffdef223a2c17764474d7d433955165feacebf3",
+      "caption": "The Annex is founders only. Imani built the scheduler.",
+      "speaker": "tavi",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 4.158
+    },
+    "s06-2": {
+      "file": "/projects/invisible-wall/audio/s06-2.mp3",
+      "signature": "cf1aa09ed30811bdc817b1a70a547ed26202e3cfdc2f5593e45ae5da2d677407",
+      "caption": "You are PM, Model Platform. Find what throttles Vesper. Decide what to do.",
+      "speaker": "narration",
+      "emotion": "thinking",
+      "voice": "bm_daniel",
+      "duration": 5.429
+    },
+    "s07-1": {
+      "file": "/projects/invisible-wall/audio/s07-1.mp3",
+      "signature": "7b3aefacaa816448073195fca7090f8ba464634a7df8c45de7643a3a1b78c342",
+      "caption": "Pick where to look. Each stop costs time.",
+      "speaker": "narration",
+      "emotion": "thinking",
+      "voice": "bm_daniel",
+      "duration": 3.275
+    },
+    "s08-1": {
+      "file": "/projects/invisible-wall/audio/s08-1.mp3",
+      "signature": "46d7f53f708b51a47e3de726d48078048e6b402b864dff354f162b5003844ba9",
+      "caption": "Drag the playhead. Mark where the line dips.",
+      "speaker": "tavi",
+      "emotion": "approving",
+      "voice": "am_michael",
+      "duration": 3.075
+    },
+    "s08-2": {
+      "file": "/projects/invisible-wall/audio/s08-2.mp3",
+      "signature": "6b61aafc2cde69e158f5810aaba2791ebc8d26ca7904697ba9c4537625db54a5",
+      "caption": "Every dip is a benchmark gain. Why would load know?",
+      "speaker": "tavi",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 3.948
+    },
+    "s09-1": {
+      "file": "/projects/invisible-wall/audio/s09-1.mp3",
+      "signature": "c19403a284e4ea481453e2190d7b47380c15a527264c857f30d29c8e6fe72d69",
+      "caption": "Trace a job. Follow where it waits.",
+      "speaker": "soren",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 3.053
+    },
+    "s09-2": {
+      "file": "/projects/invisible-wall/audio/s09-2.mp3",
+      "signature": "a8f0a05321753f6035eafdba414d4dfe38d9e091483399d96b1730fe04c84bd1",
+      "caption": "Please don't. That's not on my diagram.",
+      "speaker": "soren",
+      "emotion": "annoyed",
+      "voice": "bm_george",
+      "duration": 3.449
+    },
+    "s09-3": {
+      "file": "/projects/invisible-wall/audio/s09-3.mp3",
+      "signature": "17ebf0338e46dc3b59dc774696f5a8f700a942794d270c2d633a157bc336c43d",
+      "caption": "I told you. Something's there.",
+      "speaker": "tavi",
+      "emotion": "pressured",
+      "voice": "am_michael",
+      "duration": 2.499
+    },
+    "s10-1": {
+      "file": "/projects/invisible-wall/audio/s10-1.mp3",
+      "signature": "abcacdfa90de5077f889f686b65d574f7ca06dacc700bcb3dcf9f646f147c7d0",
+      "caption": "The server hall is level two.",
+      "speaker": "mags",
+      "emotion": "neutral",
+      "voice": "bf_emma",
+      "duration": 2.246
+    },
+    "s10-2": {
+      "file": "/projects/invisible-wall/audio/s10-2.mp3",
+      "signature": "8a54af809f1cca2a21254c1d536f2d35796b81655fd2a58c7dda8370a7d0d139",
+      "caption": "Who approved this?",
+      "speaker": "mags",
+      "emotion": "thinking",
+      "voice": "bf_emma",
+      "duration": 1.761
+    },
+    "s10-3": {
+      "file": "/projects/invisible-wall/audio/s10-3.mp3",
+      "signature": "c05543e379ab1a44e7df09651d8d56b7340118daa5941f99574bab090834aeb1",
+      "caption": "Documented. Level two for one hour.",
+      "speaker": "mags",
+      "emotion": "approving",
+      "voice": "bf_emma",
+      "duration": 2.705
+    },
+    "s10-4": {
+      "file": "/projects/invisible-wall/audio/s10-4.mp3",
+      "signature": "d543b18188eb4c669253798506f7f462090197cf5e07b00f3f23dbdeec120d49",
+      "caption": "No. Come back with a reason.",
+      "speaker": "mags",
+      "emotion": "annoyed",
+      "voice": "bf_emma",
+      "duration": 2.466
+    },
+    "s10-5": {
+      "file": "/projects/invisible-wall/audio/s10-5.mp3",
+      "signature": "92b77a54738934360696998e73545ea07a7bb922ade0d15e1e0b5872a5d0c167",
+      "caption": "Camera four reports motion. Probably a cat.",
+      "speaker": "mags",
+      "emotion": "thinking",
+      "voice": "bf_emma",
+      "duration": 3.475
+    },
+    "s11-1": {
+      "file": "/projects/invisible-wall/audio/s11-1.mp3",
+      "signature": "a09966e6151cc8aa76375c539ee3576afbd0a7a38e68027334cbee7a5d6fd954",
+      "caption": "The hall is fog and white light. Something hums.",
+      "speaker": "narration",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 3.493
+    },
+    "s11-2": {
+      "file": "/projects/invisible-wall/audio/s11-2.mp3",
+      "signature": "4a8c6287b27f741a059bd312bb48c97fec4c72080165849f2125ff18b8f93750",
+      "caption": "That's not a bug. Someone built a wall.",
+      "speaker": "tavi",
+      "emotion": "pressured",
+      "voice": "am_michael",
+      "duration": 3.11
+    },
+    "s12-1": {
+      "file": "/projects/invisible-wall/audio/s12-1.mp3",
+      "signature": "88e494b0223f8efa4e6d3d898bc9a1e246d7549ac673352001e7827aa0be3f91",
+      "caption": "Pin your clues. Which story fits?",
+      "speaker": "tavi",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 2.473
+    },
+    "s12-2": {
+      "file": "/projects/invisible-wall/audio/s12-2.mp3",
+      "signature": "0b963d3aad750711f98ccfd09197c3101e496750d6a04afc358f2501ff0ec2bd",
+      "caption": "Your choice is recorded. Inspect the result before moving on.",
+      "speaker": "narration",
+      "emotion": "thinking",
+      "voice": "bm_daniel",
+      "duration": 4.28
+    },
+    "s13-1": {
+      "file": "/projects/invisible-wall/audio/s13-1.mp3",
+      "signature": "d22e8b22c1e090e860a659c0a77066ae4c246d172813b9f3383ee2a13ef66ba4",
+      "caption": "We have to decide. What do you do with this?",
+      "speaker": "soren",
+      "emotion": "pressured",
+      "voice": "bm_george",
+      "duration": 3.237
+    },
+    "s13-2": {
+      "file": "/projects/invisible-wall/audio/s13-2.mp3",
+      "signature": "f4277340cf71e2e32bcd2469aea81998d6f1e0eaf1be146aa1c42329a868f8f4",
+      "caption": "I didn't hear that.",
+      "speaker": "tavi",
+      "emotion": "pressured",
+      "voice": "am_michael",
+      "duration": 1.598
+    },
+    "s13-3": {
+      "file": "/projects/invisible-wall/audio/s13-3.mp3",
+      "signature": "e4ce1c23657ad3a0bdb4295d8046e0a0d45156ae6ac6c2a20e83ef7fcd108525",
+      "caption": "Show me.",
+      "speaker": "soren",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 1.307
+    },
+    "s13-4": {
+      "file": "/projects/invisible-wall/audio/s13-4.mp3",
+      "signature": "f4862c70f348c1630bf56223353abb6d3e8f65f34aa4ab9fc8e552b807955392",
+      "caption": "Okay. Trace the author.",
+      "speaker": "tavi",
+      "emotion": "approving",
+      "voice": "am_michael",
+      "duration": 2.013
+    },
+    "s13a-1": {
+      "file": "/projects/invisible-wall/audio/s13a-1.mp3",
+      "signature": "7cbe6b26706d75bfc51b545ab228645a979883546b1fd4730f81860aad7305df",
+      "caption": "Cage C is closed for maintenance.",
+      "speaker": "mags",
+      "emotion": "neutral",
+      "voice": "bf_emma",
+      "duration": 2.566
+    },
+    "s13a-2": {
+      "file": "/projects/invisible-wall/audio/s13a-2.mp3",
+      "signature": "533c8abfbdd5469598d1e08e8476888a81a1252cc420ecc81f494ef06d93a4ef",
+      "caption": "It's running. Please nobody look.",
+      "speaker": "tavi",
+      "emotion": "pressured",
+      "voice": "am_michael",
+      "duration": 2.589
+    },
+    "s13b-1": {
+      "file": "/projects/invisible-wall/audio/s13b-1.mp3",
+      "signature": "0e0b2d215d0e11ffbc2f0a3680f5b2653d06f066bc416f3b06957363913b5852",
+      "caption": "Show me. Three things.",
+      "speaker": "soren",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 2.054
+    },
+    "s13b-2": {
+      "file": "/projects/invisible-wall/audio/s13b-2.mp3",
+      "signature": "66123df3be3745fd6380f01b54d255b4aabe8c62aecb7056a7744d81d904c30e",
+      "caption": "Now we wait for approvals. It will be slow.",
+      "speaker": "soren",
+      "emotion": "annoyed",
+      "voice": "bm_george",
+      "duration": 3.429
+    },
+    "s14-1": {
+      "file": "/projects/invisible-wall/audio/s14-1.mp3",
+      "signature": "dca1941823267b34e4141e77463ef2e81d58b7350b09ddc354e94accbd4850ff",
+      "caption": "Cage C drew power at two in the morning. Explain.",
+      "speaker": "mags",
+      "emotion": "annoyed",
+      "voice": "bf_emma",
+      "duration": 3.623
+    },
+    "s14-2": {
+      "file": "/projects/invisible-wall/audio/s14-2.mp3",
+      "signature": "7d0aca9f405e951d07274e58e6a55e2c20796018ea72633a1572c5ce3b20b599",
+      "caption": "You did it properly.",
+      "speaker": "soren",
+      "emotion": "approving",
+      "voice": "bm_george",
+      "duration": 1.755
+    },
+    "s14-3": {
+      "file": "/projects/invisible-wall/audio/s14-3.mp3",
+      "signature": "fa12736f251e20da78e9012e46c891d5a865749f20ac04e3ca2aaa3addcaa80f",
+      "caption": "You found who. Now what?",
+      "speaker": "tavi",
+      "emotion": "approving",
+      "voice": "am_michael",
+      "duration": 2.046
+    },
+    "s15-1": {
+      "file": "/projects/invisible-wall/audio/s15-1.mp3",
+      "signature": "9d225bd80a7f3397e06a046571ec3aec12d3576f6ff1e134c47cff883781b2c6",
+      "caption": "The Founders' Annex has a door with no handle.",
+      "speaker": "narration",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 3.314
+    },
+    "s15-2": {
+      "file": "/projects/invisible-wall/audio/s15-2.mp3",
+      "signature": "a4167405c4594b024a3617d19e540518b7d0492bf62726ce464dacb776e1777c",
+      "caption": "Imani asked to see you.",
+      "speaker": "soren",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 2.31
+    },
+    "s15-3": {
+      "file": "/projects/invisible-wall/audio/s15-3.mp3",
+      "signature": "a06a9a67139fbbe4b525c304aa57bf8dd59186d99a271e845cad014f704f68eb",
+      "caption": "The author trail ends at a door code.",
+      "speaker": "tavi",
+      "emotion": "pressured",
+      "voice": "am_michael",
+      "duration": 2.717
+    },
+    "s16-1": {
+      "file": "/projects/invisible-wall/audio/s16-1.mp3",
+      "signature": "f108864231d9dd947644da8b16aa6c31a7e0841a6fcba9fadf4ac253d360b876",
+      "caption": "You found it. Faster than I expected.",
+      "speaker": "imani",
+      "emotion": "neutral",
+      "voice": "af_heart",
+      "duration": 2.785
+    },
+    "s16-2": {
+      "file": "/projects/invisible-wall/audio/s16-2.mp3",
+      "signature": "311b3cbeadbd25b116481dd4b3e3f5b921de4e191d1f4f78b71ab3a6952dd755",
+      "caption": "What do you think it is?",
+      "speaker": "imani",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 1.707
+    },
+    "s16-3": {
+      "file": "/projects/invisible-wall/audio/s16-3.mp3",
+      "signature": "a74b96125cc5df082f9b9112ab9cf5c84c37c4694b5d42374700beb87f618c1e",
+      "caption": "Yes. At index seventy-four, the model stops.",
+      "speaker": "imani",
+      "emotion": "approving",
+      "voice": "af_heart",
+      "duration": 3.37
+    },
+    "s16-4": {
+      "file": "/projects/invisible-wall/audio/s16-4.mp3",
+      "signature": "f87394e6b1f278931d61ccde71880067f324a21bc13b501164f1940facd27054",
+      "caption": "Cost? No.",
+      "speaker": "imani",
+      "emotion": "annoyed",
+      "voice": "af_heart",
+      "duration": 1.771
+    },
+    "s16-5": {
+      "file": "/projects/invisible-wall/audio/s16-5.mp3",
+      "signature": "865639cdf888534b0231641edd90a73f2dea3939d16892655ab24712733decff",
+      "caption": "Good. Say that more often.",
+      "speaker": "imani",
+      "emotion": "approving",
+      "voice": "af_heart",
+      "duration": 2.203
+    },
+    "s16-6": {
+      "file": "/projects/invisible-wall/audio/s16-6.mp3",
+      "signature": "72884464d3e70adbc542df5ac3fd43265213f216860352ddcf68f974eab36787",
+      "caption": "We agreed on a line. Jonas wants to cross it.",
+      "speaker": "imani",
+      "emotion": "pressured",
+      "voice": "af_heart",
+      "duration": 3.241
+    },
+    "s17-1": {
+      "file": "/projects/invisible-wall/audio/s17-1.mp3",
+      "signature": "599faca2e7fd7d399de355601245a2004e81d727402cde9b4f636a8ded14148c",
+      "caption": "Gate Five is past the line. That's the problem.",
+      "speaker": "imani",
+      "emotion": "neutral",
+      "voice": "af_heart",
+      "duration": 3.378
+    },
+    "s17-2": {
+      "file": "/projects/invisible-wall/audio/s17-2.mp3",
+      "signature": "0b963d3aad750711f98ccfd09197c3101e496750d6a04afc358f2501ff0ec2bd",
+      "caption": "Your choice is recorded. Inspect the result before moving on.",
+      "speaker": "narration",
+      "emotion": "thinking",
+      "voice": "bm_daniel",
+      "duration": 4.28
+    },
+    "s18-1": {
+      "file": "/projects/invisible-wall/audio/s18-1.mp3",
+      "signature": "2cb5b995660ae6d8373fe6dc5877c6c346cbdcebf9f08ea342a544c9dbf336fe",
+      "caption": "Run it with the wall paused. Pick a load.",
+      "speaker": "tavi",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 3.099
+    },
+    "s18-2": {
+      "file": "/projects/invisible-wall/audio/s18-2.mp3",
+      "signature": "d1a7c72c416d44fa821511d9f39293691925e5d907e88118e58286c9b5ad05f1",
+      "caption": "That wobble. That wasn't there before.",
+      "speaker": "tavi",
+      "emotion": "pressured",
+      "voice": "am_michael",
+      "duration": 2.797
+    },
+    "s18-3": {
+      "file": "/projects/invisible-wall/audio/s18-3.mp3",
+      "signature": "bf4ed1c14ea4ce5522d3f4e75a270b14006aeb16812e8c05b2ecb7a78fee5332",
+      "caption": "Looks fine!",
+      "speaker": "tavi",
+      "emotion": "approving",
+      "voice": "am_michael",
+      "duration": 1.403
+    },
+    "s19-1": {
+      "file": "/projects/invisible-wall/audio/s19-1.mp3",
+      "signature": "5f3f0a11730ccdb32efb5df6f5e5a68f2c7acc9a0bf3b490cba07f2ca00eef5d",
+      "caption": "Is something throttling my model?",
+      "speaker": "jonas",
+      "emotion": "pressured",
+      "voice": "am_fenrir",
+      "duration": 2.129
+    },
+    "s19-2": {
+      "file": "/projects/invisible-wall/audio/s19-2.mp3",
+      "signature": "a382969280f0518c3f7abfbfa650877368042dc867801ddcd8b4cc0c3f66ee96",
+      "caption": "A founder did what without telling me?",
+      "speaker": "jonas",
+      "emotion": "annoyed",
+      "voice": "am_fenrir",
+      "duration": 2.236
+    },
+    "s19-3": {
+      "file": "/projects/invisible-wall/audio/s19-3.mp3",
+      "signature": "4adc1eefd0be404f6eabd329b10c3c7f530490fb655be2baf9022e44bb484ebf",
+      "caption": "Good. Fix it.",
+      "speaker": "jonas",
+      "emotion": "approving",
+      "voice": "am_fenrir",
+      "duration": 1.337
+    },
+    "s19-4": {
+      "file": "/projects/invisible-wall/audio/s19-4.mp3",
+      "signature": "bc3fc7b0921b05f089fda34d24261e3a50b0b925f94bc45e56a167b76e53db27",
+      "caption": "Then get them in the room. Quickly.",
+      "speaker": "jonas",
+      "emotion": "thinking",
+      "voice": "am_fenrir",
+      "duration": 2.385
+    },
+    "s20-1": {
+      "file": "/projects/invisible-wall/audio/s20-1.mp3",
+      "signature": "a52f52a79e512da0171855b43b808381abcf402e14a5752daebbf176dbe3086a",
+      "caption": "Three switches. Each one changes the night.",
+      "speaker": "imani",
+      "emotion": "neutral",
+      "voice": "af_heart",
+      "duration": 3.071
+    },
+    "s20-2": {
+      "file": "/projects/invisible-wall/audio/s20-2.mp3",
+      "signature": "42e361ae95d20432cd2958bb047f24ffbddd55136a844834022c931ddca91663",
+      "caption": "I won't stop you. I'll watch.",
+      "speaker": "imani",
+      "emotion": "annoyed",
+      "voice": "af_heart",
+      "duration": 2.453
+    },
+    "s20-3": {
+      "file": "/projects/invisible-wall/audio/s20-3.mp3",
+      "signature": "af3a87c58caa11a98486871cb5f199ce216cb6b464680c6912664248b22ef557",
+      "caption": "Then write it down. Make it real.",
+      "speaker": "imani",
+      "emotion": "approving",
+      "voice": "af_heart",
+      "duration": 2.563
+    },
+    "s20-4": {
+      "file": "/projects/invisible-wall/audio/s20-4.mp3",
+      "signature": "f00c868c567e0870fa74da5e7095705f623d4e6082c27d71800bb061ee07ecaa",
+      "caption": "We cannot defer past six.",
+      "speaker": "soren",
+      "emotion": "pressured",
+      "voice": "bm_george",
+      "duration": 2.523
+    },
+    "s21-1": {
+      "file": "/projects/invisible-wall/audio/s21-1.mp3",
+      "signature": "23dd9815df6b96a736fb8e955affab5e07537e94c1f8c9782f728091369d1e1f",
+      "caption": "Now we're talking.",
+      "speaker": "jonas",
+      "emotion": "approving",
+      "voice": "am_fenrir",
+      "duration": 1.383
+    },
+    "s21-2": {
+      "file": "/projects/invisible-wall/audio/s21-2.mp3",
+      "signature": "f94912bd8fde3c8e38f82ad9e00c88cddf7b3637efe56751b9b5cd6a949d32c6",
+      "caption": "Watch the load.",
+      "speaker": "imani",
+      "emotion": "pressured",
+      "voice": "af_heart",
+      "duration": 1.423
+    },
+    "s21-3": {
+      "file": "/projects/invisible-wall/audio/s21-3.mp3",
+      "signature": "889d0d96b45e068f5c9995c4f4279423c0d25c619a76c81140a7be30db91a5e7",
+      "caption": "Gate Five is farther away.",
+      "speaker": "jonas",
+      "emotion": "thinking",
+      "voice": "am_fenrir",
+      "duration": 1.895
+    },
+    "s21-4": {
+      "file": "/projects/invisible-wall/audio/s21-4.mp3",
+      "signature": "e07e482a63b7c61c345e3370fbbd748340cabebfc9dddc2148d134cb9d1bc883",
+      "caption": "It's honest. That matters.",
+      "speaker": "imani",
+      "emotion": "approving",
+      "voice": "af_heart",
+      "duration": 2.258
+    },
+    "s22-1": {
+      "file": "/projects/invisible-wall/audio/s22-1.mp3",
+      "signature": "0fce96252a5565800aad3a352de96a8a4b5dce2ac259469ec54ca468785c6b1d",
+      "caption": "Investor load test begins in one minute.",
+      "speaker": "pa",
+      "emotion": "neutral",
+      "voice": "bf_isabella",
+      "duration": 3.015
+    },
+    "s22-2": {
+      "file": "/projects/invisible-wall/audio/s22-2.mp3",
+      "signature": "0b963d3aad750711f98ccfd09197c3101e496750d6a04afc358f2501ff0ec2bd",
+      "caption": "Your choice is recorded. Inspect the result before moving on.",
+      "speaker": "narration",
+      "emotion": "thinking",
+      "voice": "bm_daniel",
+      "duration": 4.27
+    },
+    "s23-1": {
+      "file": "/projects/invisible-wall/audio/s23-1.mp3",
+      "signature": "1fa01694889deadb7e337d62771a40c243a43697702f30fe23118756b4f1d4c1",
+      "caption": "Hold the wave in the band. Use pause if you need it.",
+      "speaker": "tavi",
+      "emotion": "pressured",
+      "voice": "am_michael",
+      "duration": 3.623
+    },
+    "s23-2": {
+      "file": "/projects/invisible-wall/audio/s23-2.mp3",
+      "signature": "0b963d3aad750711f98ccfd09197c3101e496750d6a04afc358f2501ff0ec2bd",
+      "caption": "Your choice is recorded. Inspect the result before moving on.",
+      "speaker": "narration",
+      "emotion": "thinking",
+      "voice": "bm_daniel",
+      "duration": 4.28
+    },
+    "s24-1": {
+      "file": "/projects/invisible-wall/audio/s24-1.mp3",
+      "signature": "b041bbf6be4e819f8a92df9705314ebed893e75216f12dfc0a7616a5db5ac832",
+      "caption": "It held.",
+      "speaker": "jonas",
+      "emotion": "approving",
+      "voice": "am_fenrir",
+      "duration": 1.05
+    },
+    "s24-2": {
+      "file": "/projects/invisible-wall/audio/s24-2.mp3",
+      "signature": "8f3b1fff81e5f991d86e4d02183ab8e90b7f185144670a373060aa2bc49dbb6e",
+      "caption": "It held tonight.",
+      "speaker": "imani",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 1.539
+    },
+    "s24-3": {
+      "file": "/projects/invisible-wall/audio/s24-3.mp3",
+      "signature": "53712bad23272365a6f31b0bd3f7a051711a5d1304a54d89261506e0d7f0d30a",
+      "caption": "It's erratic. Everything is erratic.",
+      "speaker": "tavi",
+      "emotion": "pressured",
+      "voice": "am_michael",
+      "duration": 2.875
+    },
+    "s24-4": {
+      "file": "/projects/invisible-wall/audio/s24-4.mp3",
+      "signature": "0d4d9eed0395f32492694976783029dd5a91e5912de16d866cf6ecc48aa804ff",
+      "caption": "Seventy-eight. And still a line.",
+      "speaker": "imani",
+      "emotion": "approving",
+      "voice": "af_heart",
+      "duration": 2.507
+    },
+    "s24-5": {
+      "file": "/projects/invisible-wall/audio/s24-5.mp3",
+      "signature": "82b9ec92ac834841897d8c3de2caa8bb5da81a8602cacc0a1607bcee60770526",
+      "caption": "Investors will like the word safe.",
+      "speaker": "jonas",
+      "emotion": "approving",
+      "voice": "am_fenrir",
+      "duration": 2.129
+    },
+    "s24-6": {
+      "file": "/projects/invisible-wall/audio/s24-6.mp3",
+      "signature": "3c516b2b6b19fb0bc711c807baee99a5197389f7e195e09a352746f2eaa8d566",
+      "caption": "Stable. And slower than promised.",
+      "speaker": "jonas",
+      "emotion": "annoyed",
+      "voice": "am_fenrir",
+      "duration": 2.128
+    },
+    "s24-7": {
+      "file": "/projects/invisible-wall/audio/s24-7.mp3",
+      "signature": "def22a85089207c9911d80800b7a7ee06101fc074e635099b3d51ba0e0e2ba26",
+      "caption": "Cage C. We need to talk.",
+      "speaker": "mags",
+      "emotion": "neutral",
+      "voice": "bf_emma",
+      "duration": 2.249
+    },
+    "s25-1": {
+      "file": "/projects/invisible-wall/audio/s25-1.mp3",
+      "signature": "dbd609c293f311c71b45d5dc6cf0ec57a04dfa00ee48cf881d3c992b4479bfb2",
+      "caption": "Put the line in the charter.",
+      "speaker": "imani",
+      "emotion": "neutral",
+      "voice": "af_heart",
+      "duration": 1.921
+    },
+    "s25-2": {
+      "file": "/projects/invisible-wall/audio/s25-2.mp3",
+      "signature": "9ec326287faee91da905184f87565a588e91657a1008081b37035ed43f8c015e",
+      "caption": "Give my team the runbook.",
+      "speaker": "soren",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 2.513
+    },
+    "s25-3": {
+      "file": "/projects/invisible-wall/audio/s25-3.mp3",
+      "signature": "0c54eb08db85d2e41efb1b2cc7940ddac351cee407c033d8807246fae2b4c2bb",
+      "caption": "Give me one headline for investors.",
+      "speaker": "jonas",
+      "emotion": "neutral",
+      "voice": "am_fenrir",
+      "duration": 2.309
+    },
+    "s25-4": {
+      "file": "/projects/invisible-wall/audio/s25-4.mp3",
+      "signature": "0b963d3aad750711f98ccfd09197c3101e496750d6a04afc358f2501ff0ec2bd",
+      "caption": "Your choice is recorded. Inspect the result before moving on.",
+      "speaker": "narration",
+      "emotion": "thinking",
+      "voice": "bm_daniel",
+      "duration": 4.28
+    },
+    "s26-1": {
+      "file": "/projects/invisible-wall/audio/s26-1.mp3",
+      "signature": "32354f38786f4e3a87baad569de6ce0d4034ecc79a81ad2ccd5b914aeae9d23a",
+      "caption": "The wall was deliberate. It steadied the system. What did your night prove?",
+      "speaker": "narration",
+      "emotion": "thinking",
+      "voice": "bm_daniel",
+      "duration": 4.815
+    }
+  }
+}

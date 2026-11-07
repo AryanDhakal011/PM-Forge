@@ -1,0 +1,7 @@
+{
+  "id": "S17",
+  "type": "CINEMA",
+  "goal": "Respond to the outcome",
+  "background": "office",
+  "tools": []
+}

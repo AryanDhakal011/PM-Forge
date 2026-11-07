@@ -1,0 +1,23 @@
+{
+  "id": "S03",
+  "type": "FACE",
+  "background": "board",
+  "goal": "Answer Cora",
+  "tools": [
+    "reply"
+  ],
+  "lines": [
+    {
+      "speaker": "cora",
+      "text": "Cora. Operations. Welcome to Granger.",
+      "expression": "neutral",
+      "clip": null
+    },
+    {
+      "speaker": "cora",
+      "text": "Peak is in nine weeks. Nothing breaks before then.",
+      "expression": "pressured",
+      "clip": null
+    }
+  ]
+}

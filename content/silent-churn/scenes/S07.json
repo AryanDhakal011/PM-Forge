@@ -1,0 +1,14 @@
+{
+  "id": "S07",
+  "type": "DESK",
+  "goal": "Find the problem behind the problem",
+  "background": "desk",
+  "tools": [
+    "dredger",
+    "pattern",
+    "coalition",
+    "preread",
+    "window",
+    "gauntlet"
+  ]
+}

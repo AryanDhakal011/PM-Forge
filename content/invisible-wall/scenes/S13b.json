@@ -1,0 +1,31 @@
+{
+  "id": "S13b",
+  "type": "FACE",
+  "background": "floor",
+  "speakers": [
+    "soren"
+  ],
+  "lines": [
+    {
+      "id": "s13b-1",
+      "speaker": "soren",
+      "expression": "neutral",
+      "text": "Show me. Three things.",
+      "voiceId": "soren",
+      "phase": "before"
+    },
+    {
+      "id": "s13b-2",
+      "speaker": "soren",
+      "expression": "annoyed",
+      "text": "Now we wait for approvals. It will be slow.",
+      "voiceId": "soren",
+      "phase": "after"
+    }
+  ],
+  "choices": [],
+  "tool": "brief",
+  "goal": "Present three pieces of evidence",
+  "canStill": "Select three different clues for Soren.",
+  "next": "S14"
+}

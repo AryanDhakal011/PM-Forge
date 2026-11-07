@@ -1,0 +1,54 @@
+{
+  "buildId": "umT35aMHwxCE5s9DkjtJ9",
+  "preview": "http://localhost:3001/app/projects/feature-factory/play",
+  "unitTests": 185,
+  "fullQuarterStrategyRuns": 30,
+  "eachStrategyReplayedForDeterminism": true,
+  "browserChecks": 89,
+  "resourceChecks": 25,
+  "incidentAndAudioFallbackChecks": 12,
+  "navigationChecks": 18,
+  "failures": [],
+  "errors": [],
+  "routes": 315,
+  "assets": 190,
+  "failedRoutes": [],
+  "servedCurrentBuild": true,
+  "landingIncludesLevelCode": false,
+  "accessibility": 1,
+  "resources": {
+    "cycles": 20,
+    "contexts": 20,
+    "lost": 20,
+    "listenersBefore": 173,
+    "listenersAfter": 173
+  },
+  "sameSeedEventVariation": 0.9117647058823529,
+  "variationDefinition": "Jaccard difference of (day,event) pairs for the same seed under two policies",
+  "rollback": [
+    {
+      "path": "/app/projects/feature-factory",
+      "status": 200,
+      "closed": true,
+      "noEntry": true
+    },
+    {
+      "path": "/app/projects/feature-factory/play",
+      "status": 200,
+      "closed": true,
+      "noEntry": true
+    }
+  ],
+  "content": {
+    "screens": 23,
+    "events": 42,
+    "askTopics": 48,
+    "backlogItems": 12,
+    "recordedLines": 120
+  },
+  "limitations": [
+    "Synthetic prerecorded speech; generated state follow-ups are typed",
+    "Physical Safari/iOS, Firefox and representative Android GPU not certified",
+    "Human playtesting, expert review and subjective acting review pending"
+  ]
+}

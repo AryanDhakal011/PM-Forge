@@ -891,8 +891,8 @@
   position: fixed;
   inset: 0;
   z-index: 80;
-  background: var(--case-bg);
-  color: var(--case-ink);
+  background: var(--case-bg, #101b22);
+  color: var(--case-ink, #f4f2e7);
   display: flex;
   flex-direction: column;
   overflow: hidden;

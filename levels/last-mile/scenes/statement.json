@@ -1,0 +1,76 @@
+{
+  "id": "statement",
+  "type": "FACE",
+  "background": "office",
+  "goal": "Publish a statement the field can verify.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "mina"
+  ],
+  "lines": [
+    {
+      "id": "line-8",
+      "speaker": "mina",
+      "expression": "thinking",
+      "text": "People will compare your words with the door they reach."
+    }
+  ],
+  "choices": [
+    {
+      "id": "safety-first",
+      "text": "We are closing unsafe routes and supporting affected couriers.",
+      "effects": [
+        {
+          "var": "narrativeRisk",
+          "op": "add",
+          "value": -5
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_last-mile_safety-first",
+        "store": "text"
+      }
+    },
+    {
+      "id": "online",
+      "text": "Service remains online across the city.",
+      "effects": [
+        {
+          "var": "narrativeRisk",
+          "op": "add",
+          "value": 22
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_last-mile_online",
+        "store": "text"
+      }
+    },
+    {
+      "id": "limited",
+      "text": "Service is limited. Reopening depends on verified routes.",
+      "effects": [
+        {
+          "var": "narrativeRisk",
+          "op": "add",
+          "value": -3
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_last-mile_limited",
+        "store": "text"
+      }
+    }
+  ],
+  "tools": [],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "face-ledger"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "S13",
+  "type": "FACE",
+  "background": "dispatch",
+  "goal": "Read what your move changed",
+  "tools": [
+    "consequence"
+  ],
+  "lines": [
+    {
+      "speaker": "narrator",
+      "text": "The story now belongs to the people who heard it.",
+      "expression": "neutral",
+      "clip": null
+    }
+  ]
+}

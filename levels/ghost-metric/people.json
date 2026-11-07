@@ -1,0 +1,177 @@
+[
+  {
+    "id": "joyce",
+    "name": "Joyce Lin",
+    "role": "Analytics lead",
+    "look": {
+      "silhouette": 0,
+      "skin": "#b98463",
+      "hair": "#34383c",
+      "outfit": "#476872",
+      "props": [
+        "tablet"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "It is probably fine.",
+    "accent": "#c3b6e4",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "ravi",
+    "name": "Ravi Shah",
+    "role": "Engineering lead",
+    "look": {
+      "silhouette": 1,
+      "skin": "#d7a381",
+      "hair": "#5d473e",
+      "outfit": "#7c6355",
+      "props": [
+        "headset"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "Send me the query.",
+    "accent": "#c3b6e4",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "anders",
+    "name": "Anders Cole",
+    "role": "CEO",
+    "look": {
+      "silhouette": 2,
+      "skin": "#925f46",
+      "hair": "#2d343a",
+      "outfit": "#657b5b",
+      "props": [
+        "tablet"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "The number is already in the board deck.",
+    "accent": "#c3b6e4",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "elena",
+    "name": "Elena Ruiz",
+    "role": "Commercial lead",
+    "look": {
+      "silhouette": 3,
+      "skin": "#d8b49a",
+      "hair": "#a8a49a",
+      "outfit": "#5c687e",
+      "props": [
+        "tablet"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "Customers read the headline.",
+    "accent": "#c3b6e4",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "retrier",
+    "name": "The Retrier",
+    "role": "Red-team role",
+    "look": {
+      "silhouette": 4,
+      "skin": "#b98a72",
+      "hair": "#34383c",
+      "outfit": "#476872",
+      "props": [
+        "tablet"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "I repeat what you let me count.",
+    "accent": "#c3b6e4",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "duper",
+    "name": "The Duper",
+    "role": "Red-team role",
+    "look": {
+      "silhouette": 0,
+      "skin": "#735044",
+      "hair": "#5d473e",
+      "outfit": "#7c6355",
+      "props": [
+        "tablet"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "Your definition is my instruction.",
+    "accent": "#c3b6e4",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  },
+  {
+    "id": "insider",
+    "name": "The Insider",
+    "role": "Red-team role",
+    "look": {
+      "silhouette": 1,
+      "skin": "#b98463",
+      "hair": "#2d343a",
+      "outfit": "#657b5b",
+      "props": [
+        "tablet"
+      ]
+    },
+    "want": "A defensible outcome for the people relying on this team.",
+    "fear": "A hidden cost becoming an irreversible promise.",
+    "tell": "I know which accounts you exclude.",
+    "accent": "#c3b6e4",
+    "expressions": [
+      "neutral",
+      "thinking",
+      "annoyed",
+      "approving",
+      "pressured"
+    ]
+  }
+]

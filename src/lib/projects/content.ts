@@ -1,3 +1,4 @@
+import {projectDuration} from "./durations";
 import type {
   Project,
   ProjectChapter,
@@ -39,6 +40,7 @@ function project(
     skill,
     category,
     tags,
+    duration: projectDuration(id),
     palette: { bg: colors[0], ink: colors[1], accent: colors[2] },
     variables: vars.map((v) => {
       const [key, label, start, max, bad] = v.split("|");
@@ -952,7 +954,7 @@ export const projects: Project[] = [
   ),
   project(
     "trojan-horse",
-    "The Trojan Horse",
+    "The Trojan Horses",
     "A hyper-growth consumer company inside a permanent victory party",
     "Separate accidental growth engines from expensive bugs",
     "product-sense",

@@ -36,8 +36,8 @@ export function InstrumentDrawing({ coverage = 0 }: { coverage?: number }) {
         return (
           <circle
             key={i}
-            cx={200 + Math.cos(angle) * 120}
-            cy={139 + Math.sin(angle) * 120}
+            cx={(200 + Math.cos(angle) * 120).toFixed(4)}
+            cy={(139 + Math.sin(angle) * 120).toFixed(4)}
             r={done ? 2.8 : 1.6}
             fill={done ? "#e3cc83" : "#6c816c"}
           />

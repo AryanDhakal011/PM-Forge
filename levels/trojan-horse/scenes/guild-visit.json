@@ -1,0 +1,82 @@
+{
+  "id": "guild-visit",
+  "type": "TOOL",
+  "background": "bakery",
+  "goal": "Visit Tomas’s bakery if you discovered the Guilds.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "tomas"
+  ],
+  "lines": [
+    {
+      "id": "line-7",
+      "speaker": "tomas",
+      "expression": "thinking",
+      "text": "We refer each other every week. Take a loaf."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "guild-visit",
+      "kind": "GuildVisit",
+      "title": "At the bakery",
+      "items": [
+        {
+          "id": "loaf",
+          "label": "Accept a loaf",
+          "detail": "A human moment before the spreadsheet.",
+          "effects": [
+            {
+              "var": "TRUST.tomas",
+              "op": "add",
+              "value": 5
+            }
+          ],
+          "reaction": "The end piece is for whoever asks the hardest question.",
+          "speaker": "tomas"
+        },
+        {
+          "id": "card",
+          "label": "Inspect the referral card",
+          "detail": "Three shops, three devices, recurring revenue.",
+          "effects": [
+            {
+              "flag": "guilds-certain",
+              "value": true
+            }
+          ],
+          "group": "guild-proof"
+        },
+        {
+          "id": "revenue",
+          "label": "Follow a real purchase",
+          "detail": "Legitimate Guild revenue is $190k per week.",
+          "effects": [
+            {
+              "var": "credibility",
+              "op": "add",
+              "value": 3
+            }
+          ],
+          "group": "revenue"
+        }
+      ],
+      "min": 3,
+      "max": 3,
+      "cost": 0,
+      "receiptId": "R_trojan-horse_guild-visit",
+      "duration": 90
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 14,
+  "act": 2,
+  "when": {
+    "flag": "guilds-named"
+  },
+  "next": "angry-call"
+}

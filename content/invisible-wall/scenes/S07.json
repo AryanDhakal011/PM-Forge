@@ -1,0 +1,23 @@
+{
+  "id": "S07",
+  "type": "MAP",
+  "background": "floor",
+  "speakers": [
+    "narration"
+  ],
+  "lines": [
+    {
+      "id": "s07-1",
+      "speaker": "narration",
+      "expression": "thinking",
+      "text": "Pick where to look. Each stop costs time.",
+      "voiceId": "narration",
+      "phase": "before"
+    }
+  ],
+  "choices": [],
+  "tool": "map",
+  "goal": "Choose where to investigate",
+  "canStill": "Visit the Ops wall and Rack row, then Security.",
+  "next": "S08"
+}

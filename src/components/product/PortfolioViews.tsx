@@ -1,4 +1,5 @@
 "use client";
+import CareerStudio from "@/components/portfolio/CareerStudio";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -51,74 +52,7 @@ const labels: Record<keyof RecordFields, string> = {
   metric: "Success metric & guardrails",
   nextCheck: "The next check",
 };
-export function PortfolioView() {
-  const { records } = useWorkspaceData();
-  return (
-    <>
-      <div className={styles.pageHead} data-enter>
-        <div>
-          <span className={styles.eyebrow}>
-            A shelf of decisions, not just outcomes
-          </span>
-          <h1>Keep the thinking that matters.</h1>
-          <p>
-            Your decision records turn practice into something you can revisit,
-            refine, and explain.
-          </p>
-        </div>
-        <Link className={styles.primary} href="/app/portfolio/new">
-          <Plus size={15} />
-          New decision record
-        </Link>
-      </div>
-      {records.length ? (
-        <div className={styles.grid3}>
-          {records.map((record) => (
-            <article key={record.id} className={styles.questionCard}>
-              <div className={styles.spread}>
-                <span className={styles.badge}>
-                  {record.source === "Demo"
-                    ? "Demo · excluded from progress"
-                    : record.source === "run"
-                      ? "From a practice session"
-                      : "Your decision"}
-                </span>
-                <FileText size={17} color="var(--p-brass)" />
-              </div>
-              <h3>
-                <Link href={`/app/portfolio/${record.id}`}>{record.title}</Link>
-              </h3>
-              <p>
-                {record.fields.decision.slice(0, 140) ||
-                  "A decision waiting to be made explicit."}
-              </p>
-              <div className={styles.cardFoot}>
-                <span>{new Date(record.updatedAt).toLocaleDateString()}</span>
-                <Link href={`/app/portfolio/${record.id}`}>
-                  Open record
-                  <ArrowRight size={13} />
-                </Link>
-              </div>
-            </article>
-          ))}
-        </div>
-      ) : (
-        <EmptyState
-          kind="portfolio"
-          title="Your first record starts with a call."
-          href="/app/portfolio/new"
-          action="Write a record"
-        >
-          Keep the evidence, options and tradeoffs behind a real decision.
-        </EmptyState>
-      )}
-      <p className={styles.finePrint} style={{ marginTop: 25 }}>
-        Private to this workspace. Copy, download Markdown, or print a record at
-        any time. No public sharing links are created.
-      </p>
-    </>
-  );
-}
+export function PortfolioView() { return <CareerStudio/>; }
 export function RecordEditor({ id }: { id?: string }) {
   const { profile } = useWorkspace();
   const router = useRouter();

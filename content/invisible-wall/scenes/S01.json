@@ -1,0 +1,40 @@
+{
+  "id": "S01",
+  "type": "CINEMA",
+  "background": "terminal",
+  "speakers": [
+    "narration",
+    "pa"
+  ],
+  "lines": [
+    {
+      "id": "s01-1",
+      "speaker": "pa",
+      "expression": "neutral",
+      "text": "Gate B12 is now closed. Halcyon night shift, please badge in.",
+      "voiceId": "pa",
+      "phase": "before"
+    },
+    {
+      "id": "s01-2",
+      "speaker": "pa",
+      "expression": "neutral",
+      "text": "A reminder. Nothing in this terminal is flying tonight.",
+      "voiceId": "pa",
+      "phase": "before"
+    },
+    {
+      "id": "s01-3",
+      "speaker": "narration",
+      "expression": "neutral",
+      "text": "3:00 AM, officially. You started at ten.",
+      "voiceId": "narration",
+      "phase": "before"
+    }
+  ],
+  "choices": [],
+  "tool": "continue",
+  "goal": "Arrive at Halcyon",
+  "canStill": "Watch the arrival or skip ahead.",
+  "next": "S02"
+}

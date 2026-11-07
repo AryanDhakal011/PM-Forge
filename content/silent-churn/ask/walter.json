@@ -1,0 +1,32 @@
+[
+  {
+    "id": "walter-0",
+    "topic": "Revenue at risk",
+    "line": "Revenue is leaking at renewal."
+  },
+  {
+    "id": "walter-1",
+    "topic": "Price",
+    "line": "Pricing is the problem. It always is."
+  },
+  {
+    "id": "walter-2",
+    "topic": "Cost caps",
+    "line": "Capped. Then we can talk."
+  },
+  {
+    "id": "walter-3",
+    "topic": "What changes your mind",
+    "line": "Show me what would disprove my theory."
+  },
+  {
+    "id": "walter-4",
+    "topic": "Payback",
+    "line": "Payback needs a customer outcome."
+  },
+  {
+    "id": "walter-5",
+    "topic": "Who you trust",
+    "line": "Beatrice knows the accounts behind the spreadsheet."
+  }
+]

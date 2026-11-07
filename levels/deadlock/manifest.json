@@ -1,0 +1,75 @@
+{
+  "id": "deadlock",
+  "title": "The Deadlock",
+  "tagline": "Two teams. One prototype. Feel the tradeoff.",
+  "company": "HALYARD ROBOTICS",
+  "status": "draft",
+  "version": "2.0.0",
+  "minPlatformVersion": "1.0.0",
+  "palette": {
+    "bg": "#101b22",
+    "ink": "#f4f2e7",
+    "accent": "#c6dca2"
+  },
+  "fonts": [
+    "Inter",
+    "DM Serif Display"
+  ],
+  "difficulty": {
+    "guided": "Preview effects and see decision hints.",
+    "standard": "Read the situation without previews.",
+    "sharp": "Hide soft meters and handle extra check-ins."
+  },
+  "entranceArt": "/levels/deadlock/art/backgrounds/lab.svg",
+  "estimatedMinutes": 25,
+  "startScene": "cold-open",
+  "scenes": [
+    "cold-open",
+    "role",
+    "lab",
+    "second-look",
+    "mediate-speed",
+    "mediate-recovery",
+    "mediate-learning",
+    "hallway",
+    "projector",
+    "forge",
+    "dry-run",
+    "proposal",
+    "demo-0",
+    "demo-1",
+    "demo-2",
+    "demo-3",
+    "demo-4",
+    "technician",
+    "review"
+  ],
+  "people": [
+    "mara",
+    "dev",
+    "ines",
+    "theo",
+    "nadia"
+  ],
+  "assetsBudgetKB": 3072,
+  "voiceCast": {},
+  "labels": "Simulated company, authored scenarios, expert review pending",
+  "flagKey": "deadlock",
+  "minEvents": 24,
+  "systemic": true,
+  "launchCandidate": true,
+  "reviewGates": {
+    "design": "pending",
+    "content": "pending",
+    "accessibility-manual": "pending",
+    "performance": "pending",
+    "security": "pending",
+    "playtest": "pending",
+    "domain": "pending"
+  },
+  "acts": [
+    "Two Teams",
+    "The Table",
+    "The Demo"
+  ]
+}

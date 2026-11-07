@@ -1,0 +1,128 @@
+{
+  "at": "2026-11-05T05:51:11.347Z",
+  "base": "http://localhost:3002",
+  "http": [],
+  "assets": [],
+  "pages": [
+    {
+      "path": "/app/projects/feature-factory/play?qa=1",
+      "url": "/app/projects/feature-factory/play?qa=1",
+      "loads": 1,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nSHIP FRIDAY\nIGNIS WORKS / RELEASE FLOOR 03\nProjects\nREAL WORLD PROJECT / 03\nHow to play\n\nIGNIS / CORE PLATFORM / ONE QUARTER\n\nThe Feature\nFactory.\n\nShip every Friday.\nFind out what it costs.\n\nA living PM ",
+      "failed": false
+    }
+  ],
+  "clicks": [],
+  "errors": [],
+  "checks": [
+    {
+      "pass": true,
+      "label": "hooks removed on exit"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 1"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 2"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 3"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 4"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 5"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 6"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 7"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 8"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 9"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 10"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 11"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 12"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 13"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 14"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 15"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 16"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 17"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 18"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 19"
+    },
+    {
+      "pass": true,
+      "label": "owned hook removed cycle 20"
+    },
+    {
+      "pass": true,
+      "label": "all twenty-entry GPU resources disposed"
+    },
+    {
+      "pass": true,
+      "label": "global listener count remains stable across twenty entries"
+    },
+    {
+      "pass": true,
+      "label": "no-WebGL fallback keeps numerical information"
+    },
+    {
+      "pass": true,
+      "label": "system reduced motion applies"
+    }
+  ],
+  "screens": [],
+  "resources": {
+    "cycles": 20,
+    "contexts": 20,
+    "lost": 20,
+    "listenersBefore": 173,
+    "listenersAfter": 173
+  }
+}

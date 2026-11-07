@@ -1,0 +1,28 @@
+{
+  "slots": [
+    "day",
+    "finding",
+    "headline",
+    "commitment",
+    "stance",
+    "daysLeft",
+    "reason"
+  ],
+  "variants": {
+    "warm": [
+      "You wrote “{headline}”. I can back that.",
+      "The {finding} record helps.",
+      "We have {daysLeft} days."
+    ],
+    "neutral": [
+      "Your headline says “{headline}”.",
+      "Your record is {finding}.",
+      "Day {day}: the window is narrowing."
+    ],
+    "cold": [
+      "You promised “{commitment}”.",
+      "“{reason}” still needs evidence.",
+      "{daysLeft} days. Name the trade-off."
+    ]
+  }
+}

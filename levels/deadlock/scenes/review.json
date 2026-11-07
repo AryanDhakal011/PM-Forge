@@ -1,0 +1,26 @@
+{
+  "id": "review",
+  "type": "REVIEW",
+  "background": "lab",
+  "goal": "Scrub three turning points and compare another approach.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "mara"
+  ],
+  "lines": [
+    {
+      "id": "line-25",
+      "speaker": "mara",
+      "expression": "thinking",
+      "text": "I stopped arguing years ago. Thank you for listening."
+    }
+  ],
+  "choices": [],
+  "tools": [],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": true,
+  "minInteractions": 0,
+  "day": 84,
+  "act": 3
+}

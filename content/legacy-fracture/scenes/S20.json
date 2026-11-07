@@ -1,0 +1,23 @@
+{
+  "id": "S20",
+  "type": "CUTOVER",
+  "background": "night",
+  "goal": "Watch five fleet moments",
+  "tools": [
+    "fleet"
+  ],
+  "lines": [
+    {
+      "speaker": "leif",
+      "text": "We're live.",
+      "expression": "pressured",
+      "clip": null
+    },
+    {
+      "speaker": "renata",
+      "text": "Trucks are moving.",
+      "expression": "neutral",
+      "clip": null
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "S01",
+  "type": "CINEMA",
+  "goal": "Notice the missing complaint",
+  "background": "office",
+  "tools": []
+}

@@ -1,0 +1,7 @@
+{
+  "id": "S00",
+  "type": "ENTR",
+  "goal": "Take the elevator",
+  "background": "office",
+  "tools": []
+}

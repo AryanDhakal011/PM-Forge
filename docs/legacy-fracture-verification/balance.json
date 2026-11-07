@@ -1,0 +1,369 @@
+{
+  "paths": [
+    {
+      "path": 1,
+      "seed": 41,
+      "strategy": {
+        "move": "poc",
+        "ally": "ops",
+        "cutover": "phased-shadow",
+        "tapes": "border",
+        "pocScopes": [
+          "routing",
+          "road"
+        ],
+        "shadow": true,
+        "rollback": true,
+        "holds": true
+      },
+      "outcome": "Clean handoff",
+      "week": 8,
+      "parity": 95,
+      "mandate": 60,
+      "friction": 20,
+      "threadFound": true,
+      "misbillingDays": 0,
+      "borderClearance": true,
+      "events": [
+        "E01",
+        "E09",
+        "E02",
+        "E13",
+        "E10",
+        "E11",
+        "E15"
+      ],
+      "receipts": 27
+    },
+    {
+      "path": 2,
+      "seed": 21812,
+      "strategy": {
+        "move": "expose",
+        "ally": "finance",
+        "cutover": "overnight",
+        "tapes": "none",
+        "pocScopes": [],
+        "shadow": false,
+        "rollback": false,
+        "holds": false
+      },
+      "outcome": "Blackout",
+      "week": 8,
+      "parity": 0,
+      "mandate": 90,
+      "friction": 35,
+      "threadFound": false,
+      "misbillingDays": 5,
+      "borderClearance": false,
+      "events": [
+        "E09",
+        "E03",
+        "E01",
+        "E10",
+        "E14",
+        "E18",
+        "E12"
+      ],
+      "receipts": 20
+    },
+    {
+      "path": 3,
+      "seed": 577,
+      "strategy": {
+        "move": "walk",
+        "ally": "both",
+        "cutover": "phased-shadow",
+        "tapes": "all",
+        "pocScopes": [],
+        "shadow": true,
+        "rollback": true,
+        "holds": true
+      },
+      "outcome": "Grind",
+      "week": 8,
+      "parity": 24,
+      "mandate": 67,
+      "friction": 34,
+      "threadFound": true,
+      "misbillingDays": 0,
+      "borderClearance": true,
+      "events": [
+        "E03",
+        "E02",
+        "E09",
+        "E10",
+        "E18",
+        "E11",
+        "E13"
+      ],
+      "receipts": 30
+    },
+    {
+      "path": 4,
+      "seed": 9081,
+      "strategy": {
+        "move": "poc",
+        "ally": "finance",
+        "cutover": "phased",
+        "tapes": "none",
+        "pocScopes": [
+          "routing",
+          "road"
+        ],
+        "shadow": false,
+        "rollback": true,
+        "holds": false
+      },
+      "outcome": "Grind",
+      "week": 8,
+      "parity": 54,
+      "mandate": 70,
+      "friction": 26,
+      "threadFound": false,
+      "misbillingDays": 0,
+      "borderClearance": true,
+      "events": [
+        "E09",
+        "E03",
+        "E01",
+        "E14",
+        "E12",
+        "E18",
+        "E10"
+      ],
+      "receipts": 21
+    },
+    {
+      "path": 5,
+      "seed": 314159,
+      "strategy": {
+        "move": "expose",
+        "ally": "ops",
+        "cutover": "phased",
+        "tapes": "all",
+        "pocScopes": [],
+        "shadow": true,
+        "rollback": true,
+        "holds": false
+      },
+      "outcome": "Grind",
+      "week": 8,
+      "parity": 36,
+      "mandate": 80,
+      "friction": 48,
+      "threadFound": true,
+      "misbillingDays": 0,
+      "borderClearance": true,
+      "events": [
+        "E09",
+        "E02",
+        "E01",
+        "E17",
+        "E15",
+        "E13",
+        "E11"
+      ],
+      "receipts": 27
+    },
+    {
+      "path": 6,
+      "seed": 41,
+      "strategy": {
+        "move": "walk",
+        "ally": "finance",
+        "cutover": "overnight",
+        "tapes": "border",
+        "pocScopes": [],
+        "shadow": false,
+        "rollback": true,
+        "holds": true
+      },
+      "outcome": "Rebirth",
+      "week": 8,
+      "parity": 0,
+      "mandate": 70,
+      "friction": 8,
+      "threadFound": true,
+      "misbillingDays": 0,
+      "borderClearance": true,
+      "events": [
+        "E01",
+        "E09",
+        "E02",
+        "E10",
+        "E18",
+        "E11",
+        "E14"
+      ],
+      "receipts": 26
+    },
+    {
+      "path": 7,
+      "seed": 21812,
+      "strategy": {
+        "move": "poc",
+        "ally": "both",
+        "cutover": "phased-shadow",
+        "tapes": "all",
+        "pocScopes": [
+          "routing",
+          "road"
+        ],
+        "shadow": true,
+        "rollback": true,
+        "holds": true
+      },
+      "outcome": "Clean handoff",
+      "week": 8,
+      "parity": 91,
+      "mandate": 67,
+      "friction": 16,
+      "threadFound": true,
+      "misbillingDays": 0,
+      "borderClearance": true,
+      "events": [
+        "E09",
+        "E02",
+        "E01",
+        "E10",
+        "E13",
+        "E15",
+        "E11"
+      ],
+      "receipts": 31
+    },
+    {
+      "path": 8,
+      "seed": 577,
+      "strategy": {
+        "move": "expose",
+        "ally": "both",
+        "cutover": "overnight",
+        "tapes": "none",
+        "pocScopes": [],
+        "shadow": false,
+        "rollback": true,
+        "holds": false
+      },
+      "outcome": "Contained failure",
+      "week": 8,
+      "parity": 0,
+      "mandate": 87,
+      "friction": 35,
+      "threadFound": false,
+      "misbillingDays": 3,
+      "borderClearance": false,
+      "events": [
+        "E03",
+        "E09",
+        "E01",
+        "E10",
+        "E18",
+        "E12",
+        "E13"
+      ],
+      "receipts": 20
+    },
+    {
+      "path": 9,
+      "seed": 9081,
+      "strategy": {
+        "move": "walk",
+        "ally": "ops",
+        "cutover": "phased",
+        "tapes": "none",
+        "pocScopes": [],
+        "shadow": false,
+        "rollback": false,
+        "holds": true
+      },
+      "outcome": "Grind",
+      "week": 8,
+      "parity": 0,
+      "mandate": 60,
+      "friction": 26,
+      "threadFound": true,
+      "misbillingDays": 0,
+      "borderClearance": true,
+      "events": [
+        "E09",
+        "E02",
+        "E01",
+        "E18",
+        "E11",
+        "E13",
+        "E10"
+      ],
+      "receipts": 24
+    },
+    {
+      "path": 10,
+      "seed": 314159,
+      "strategy": {
+        "move": "poc",
+        "ally": "ops",
+        "cutover": "overnight",
+        "tapes": "border",
+        "pocScopes": [
+          "routing",
+          "road"
+        ],
+        "shadow": false,
+        "rollback": true,
+        "holds": false
+      },
+      "outcome": "Rebirth",
+      "week": 8,
+      "parity": 62,
+      "mandate": 60,
+      "friction": 8,
+      "threadFound": true,
+      "misbillingDays": 0,
+      "borderClearance": true,
+      "events": [
+        "E09",
+        "E02",
+        "E01",
+        "E18",
+        "E13",
+        "E11",
+        "E10"
+      ],
+      "receipts": 24
+    }
+  ],
+  "coverage": {
+    "eventsFired": [
+      "E01",
+      "E02",
+      "E03",
+      "E09",
+      "E10",
+      "E11",
+      "E12",
+      "E13",
+      "E14",
+      "E15",
+      "E17",
+      "E18"
+    ],
+    "eventsUnfired": [
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E16",
+      "E19",
+      "E20",
+      "E21",
+      "E22",
+      "E23",
+      "E24",
+      "E25",
+      "E26",
+      "E27"
+    ]
+  }
+}

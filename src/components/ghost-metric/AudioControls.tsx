@@ -4,23 +4,37 @@ export default function AudioControls({
   sound,
   auto,
   ambient,
+  captions,
+  playing,
   onSound,
   onAuto,
   onAmbient,
+  onCaptions,
 }: {
   sound: boolean;
   auto: boolean;
   ambient: boolean;
+  captions: boolean;
+  playing: boolean;
   onSound: () => void;
   onAuto: (value: boolean) => void;
   onAmbient: () => void;
+  onCaptions: () => void;
 }) {
   return (
     <div
       className={s.audioControls}
       aria-label="Conversation playback preferences"
     >
-      <span className={s.captionState}>Captions: On</span>
+      <button
+        type="button"
+        role="switch"
+        aria-checked={captions}
+        aria-label="Dialogue captions"
+        onClick={onCaptions}
+      >
+        Captions: {captions ? "On" : "Off"}
+      </button>
       <button
         type="button"
         role="switch"
@@ -29,19 +43,19 @@ export default function AudioControls({
         onClick={onSound}
       >
         Sound: {sound ? "On" : "Off"}
+        {sound && playing && <span className={s.playingIndicator}>Playing…</span>}
       </button>
-      <label
-        title={
-          !sound ? "Enable sound to use automatic advancement." : undefined
-        }
+      <button
+        type="button"
+        role="switch"
+        aria-checked={auto}
+        aria-label="Automatic line advancement"
+        title={!sound ? "Enable sound to use automatic advancement." : undefined}
+        disabled={!sound}
+        onClick={() => onAuto(!auto)}
       >
-        <input
-          type="checkbox"
-          checked={auto}
-          onChange={(e) => onAuto(e.target.checked)}
-        />
         Auto-advance: {auto ? "On" : "Off"}
-      </label>
+      </button>
       <button
         type="button"
         role="switch"
@@ -51,7 +65,6 @@ export default function AudioControls({
       >
         Ambient: {ambient ? "On" : "Off"}
       </button>
-      {!sound && <small>Next is required while sound is off.</small>}
     </div>
   );
 }

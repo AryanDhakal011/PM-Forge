@@ -1,10 +1,11 @@
 import "server-only";
+import {mailConfigured,queueAuthMail,drainAuthMail} from "./auth-mail";
 import { betterAuth } from "better-auth";
 import type { BetterAuthOptions } from "better-auth";
 import { getMigrations } from "better-auth/db/migration";
 import { DatabaseSync } from "node:sqlite";
 import { mkdirSync } from "node:fs";
-import { join } from "node:path";
+import { join,dirname } from "node:path";
 
 const globalState = globalThis as unknown as {
   pmfAuth?: ReturnType<typeof betterAuth>;
@@ -12,6 +13,7 @@ const globalState = globalThis as unknown as {
   pmfMigration?: Promise<void>;
 };
 export const providersConfigured = () => ({
+  email: !!process.env.BETTER_AUTH_SECRET && process.env.BETTER_AUTH_SECRET.length>=32 && mailConfigured(),
   google: !!(
     process.env.BETTER_AUTH_SECRET &&
     process.env.GOOGLE_CLIENT_ID &&
@@ -25,7 +27,7 @@ export const providersConfigured = () => ({
 });
 export function serverDatabase() {
   if (!globalState.pmfSqlite) {
-    mkdirSync(join(process.cwd(), ".data"), { recursive: true });
+    mkdirSync(process.env.PMFORGE_DATABASE_PATH ? dirname(process.env.PMFORGE_DATABASE_PATH) : join(process.cwd(), ".data"), { recursive: true, mode:0o700 });
     const database = new DatabaseSync(
       process.env.PMFORGE_DATABASE_PATH ||
         join(process.cwd(), ".data", "pmforge.sqlite"),
@@ -38,6 +40,7 @@ export function serverDatabase() {
   return globalState.pmfSqlite;
 }
 export async function getAuth() {
+  if(process.env.NODE_ENV==='production'&&(!process.env.BETTER_AUTH_URL||!process.env.BETTER_AUTH_URL.startsWith('https://')))return null;
   if (
     !process.env.BETTER_AUTH_SECRET ||
     process.env.BETTER_AUTH_SECRET.length < 32
@@ -47,7 +50,11 @@ export async function getAuth() {
     const configured = providersConfigured();
     const options: BetterAuthOptions = {
       appName: "PMForge",
-      baseURL: process.env.BETTER_AUTH_URL || "http://localhost:3001",
+      baseURL: process.env.BETTER_AUTH_URL || "http://localhost:3002",
+      trustedOrigins:[new URL(process.env.BETTER_AUTH_URL || "http://localhost:3002").origin],
+      emailAndPassword:{enabled:configured.email,requireEmailVerification:true,minPasswordLength:12,maxPasswordLength:128,revokeSessionsOnPasswordReset:true,resetPasswordTokenExpiresIn:1800,sendResetPassword:async({user,url})=>queueAuthMail({to:user.email,subject:"Reset your PMForge password",text:`Reset your password with this single-use link (expires in 30 minutes):\n${url}\nIf you did not request this, ignore it.`})},
+      emailVerification:{sendOnSignUp:true,sendOnSignIn:true,autoSignInAfterVerification:true,expiresIn:3600,sendVerificationEmail:async({user,url})=>queueAuthMail({to:user.email,subject:"Verify your PMForge email",text:`Verify your email to finish creating your workspace (expires in one hour):\n${url}`})},
+      advanced:{useSecureCookies:(process.env.BETTER_AUTH_URL||'').startsWith('https://'),ipAddress:{ipAddressHeaders:[process.env.AUTH_TRUSTED_IP_HEADER||'x-pmforge-client-ip']}},
       secret: process.env.BETTER_AUTH_SECRET,
       database: serverDatabase(),
       socialProviders: {
@@ -80,7 +87,7 @@ export async function getAuth() {
         },
       },
       account: { accountLinking: { enabled: false } },
-      rateLimit: { enabled: true, window: 60, max: 10 },
+      rateLimit: { enabled: true, storage:"database", window: 60, max: 60,customRules:{"/sign-in/email":{window:60,max:5},"/sign-up/email":{window:60,max:5},"/request-password-reset":{window:60,max:3},"/send-verification-email":{window:60,max:3}} },
     };
     globalState.pmfAuth = betterAuth(options);
     globalState.pmfMigration = getMigrations(options).then((plan) =>
@@ -88,6 +95,7 @@ export async function getAuth() {
     );
   }
   await globalState.pmfMigration;
+  void drainAuthMail();
   return globalState.pmfAuth;
 }
 export async function memberSession(request: Request) {
@@ -114,3 +122,5 @@ export function rateLimited(key: string, max = 120) {
   state.count++;
   return state.count > max;
 }
+
+export const clientKey=(request:Request)=>request.headers.get(process.env.AUTH_TRUSTED_IP_HEADER||'x-pmforge-client-ip')||'unattributed';

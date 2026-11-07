@@ -1,0 +1,2072 @@
+{
+  "base": "http://localhost:3001",
+  "buildId": "UfeSNkKv_VbIngqPBV8SD",
+  "routes": [
+    {
+      "path": "/app",
+      "status": 200
+    },
+    {
+      "path": "/about",
+      "status": 200
+    },
+    {
+      "path": "/app/account",
+      "status": 200
+    },
+    {
+      "path": "/app/bookmarks",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/app/history",
+      "status": 200
+    },
+    {
+      "path": "/app/practice",
+      "status": 200
+    },
+    {
+      "path": "/app/portfolio/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/portfolio",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ait-e-3-on-device-or-cloud-for-tagging-kids-photos",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ait-e-2-a-shop-assistant-whose-answers-change-hourly",
+      "status": 200
+    },
+    {
+      "path": "/app/portfolio/new",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ait-e-1-live-translation-three-seconds-or-instant",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ait-h-1-the-assistant-is-inventing-fees-in-one-region",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ait-h-2-an-agent-that-can-spend-money",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ait-m-2-a-support-copilot-with-three-goals-fighting",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ait-m-1-a-medical-scribe-with-a-hard-safety-floor",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ait-h-3-monday-8-a-m-10-000-clinicians-at-once",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ait-m-3-search-relevance-with-a-300-ms-budget",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/beh-e-1-you-disagreed-with-a-designer-about-feature-placement",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/beh-e-3-customer-feedback-changed-your-decision",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/beh-e-2-you-learned-something-fast-to-ship-something",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/beh-h-1-the-project-is-failing-in-front-of-the-board",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/beh-h-2-an-incident-harmed-users-and-you-owned-the-response",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/beh-h-3-you-found-your-own-number-was-wrong-after-presenting-it",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/beh-m-1-stability-versus-the-hard-date",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/beh-m-3-a-dependency-slipped-and-two-teams-wanted-different-things",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/est-e-1-is-a-flagship-phone-store-on-durbar-marg-worth-the-rent",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/est-e-2-how-many-quick-pay-uses-per-week-should-we-buy-capacity-for",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/est-e-3-how-many-support-agents-for-launch-day-chat",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/beh-m-2-saying-no-to-a-senior-stakeholder-s-idea",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/est-h-1-terminal-outage-where-do-60-manual-agents-go",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/est-h-2-results-day-web-sms-or-phone-which-will-break-first",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/est-h-3-the-festival-exodus-charging-capacity-on-a-highway-corridor",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/est-m-1-rainstorm-in-new-york-how-many-extra-drivers-to-incentivise",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/est-m-2-ticket-on-sale-how-fast-should-the-waiting-room-admit-fans",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/est-m-3-tihar-week-do-we-have-enough-riders-for-sweets-and-gifts",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/exe-e-1-daily-actives-fell-10-in-three-weeks",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/exe-e-2-how-to-prove-save-for-later-works",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/exe-h-1-watch-time-is-at-a-record-but-is-it-healthy",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/exe-e-3-more-orders-how-will-you-know-it-is-healthy",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/exe-h-2-active-users-are-up-22-is-anyone-new-actually-there",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/exe-h-3-the-test-says-3-revenue-retention-says-otherwise",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/exe-m-1-notifications-lift-daily-actives-and-uninstalls",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/exe-m-3-a-referral-program-with-suspicious-signups",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ps-e-1-finding-items-in-a-huge-grocery-store",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ps-e-2-parents-keep-returning-kids-clothes",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ps-e-3-new-gym-members-stop-after-three-weeks",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/exe-m-2-raise-checkout-conversion-by-5",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ps-h-1-how-older-residents-of-tokyo-move-through-the-transit-system",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ps-h-2-designing-for-first-time-flyers",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ps-h-3-fair-price-information-for-a-farmers-cooperative",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ps-m-1-a-first-ikea-visit-for-a-new-homeowner",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ps-m-2-first-time-riders-and-the-intercity-bus",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ps-m-3-a-telehealth-app-for-adults-over-45",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/rca-e-1-sign-ups-dropped-12-after-the-app-update",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/rca-e-2-new-seller-activations-fell-15",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/rca-e-3-add-to-cart-conversion-fell-after-the-layout-refresh",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/rca-h-1-drivers-are-leaving-slowly-in-six-cities",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/rca-h-2-customer-satisfaction-is-sliding-while-resolution-times-improve",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/rca-h-3-revenue-per-paying-user-is-eroding-by-7",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/rca-m-1-search-conversion-fell-while-crash-rates-spiked",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/rca-m-2-delivery-times-rose-three-minutes-yet-every-city-got-faster",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/rca-m-3-daily-users-are-up-8-but-week-one-retention-is-down",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/str-e-2-when-should-the-paywall-appear",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/str-e-3-raise-the-take-rate-for-new-sellers",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/str-e-1-students-churn-at-re-verification-cut-price-or-something-else",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/str-h-1-ai-answers-help-users-and-starve-publishers",
+      "status": 200
+    },
+    {
+      "path": "/app/progress",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/str-h-2-a-minimum-pay-rule-hits-the-biggest-market",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/str-h-3-a-wallet-s-three-growth-paths-all-depend-on-one-another",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/str-m-2-launching-a-streamer-where-local-telcos-own-distribution",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/deadlock/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/str-m-1-a-rival-adds-a-concierge-match-copy-or-pivot",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/deadlock/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/deadlock/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/deadlock/debrief/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/str-m-3-an-ai-native-rival-is-winning-the-mid-market",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/deadlock/play/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/deadlock/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/debrief/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/feature-factory/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/feature-factory/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/feature-factory/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/feature-factory/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/ghost-metric/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/ghost-metric/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/ghost-metric/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/deadlock",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/ghost-metric/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/invisible-wall",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/invisible-wall/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/invisible-wall/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/invisible-wall/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/invisible-wall/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/last-mile/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/last-mile/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/feature-factory",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/last-mile/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/last-mile/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/legacy-fracture/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/legacy-fracture/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/legacy-fracture/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/ghost-metric",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/legacy-fracture/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/pivot-point/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/pivot-point/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/pivot-point/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/last-mile",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/pivot-point/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/public-fracture/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/public-fracture/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/public-fracture/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/public-fracture/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/legacy-fracture",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/sacred-no/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/sacred-no/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/sacred-no/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/pivot-point",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/sacred-no/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/shadow-roadmap/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/shadow-roadmap/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/shadow-roadmap/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/shadow-roadmap/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/public-fracture",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/silent-churn/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/silent-churn/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/silent-churn/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/silent-churn/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/trojan-horse/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/sacred-no",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/trojan-horse/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/shadow-roadmap",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/trojan-horse/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/trojan-horse/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/run/00000000-0000-4000-8000-000000000000/debrief",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/silent-churn",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/trojan-horse",
+      "status": 200
+    },
+    {
+      "path": "/app/settings",
+      "status": 200
+    },
+    {
+      "path": "/auth/error",
+      "status": 200
+    },
+    {
+      "path": "/auth/callback",
+      "status": 200
+    },
+    {
+      "path": "/career",
+      "status": 200
+    },
+    {
+      "path": "/changelog",
+      "status": 200
+    },
+    {
+      "path": "/content-policy",
+      "status": 200
+    },
+    {
+      "path": "/credits",
+      "status": 200
+    },
+    {
+      "path": "/contribute",
+      "status": 200
+    },
+    {
+      "path": "/dashboard",
+      "status": 200
+    },
+    {
+      "path": "/frameworks",
+      "status": 200
+    },
+    {
+      "path": "/frameworks/ai-product-management",
+      "status": 200
+    },
+    {
+      "path": "/frameworks/customer-discovery",
+      "status": 200
+    },
+    {
+      "path": "/frameworks/data-and-experimentation",
+      "status": 200
+    },
+    {
+      "path": "/frameworks/execution-and-delivery",
+      "status": 200
+    },
+    {
+      "path": "/frameworks/foundation-and-product-strategy",
+      "status": 200
+    },
+    {
+      "path": "/frameworks/job-ready",
+      "status": 200
+    },
+    {
+      "path": "/frameworks/prioritization-and-decision-making",
+      "status": 200
+    },
+    {
+      "path": "/frameworks/stakeholder-leadership",
+      "status": 200
+    },
+    {
+      "path": "/frameworks/technical-fluency",
+      "status": 200
+    },
+    {
+      "path": "/learn/ai-product-management",
+      "status": 200
+    },
+    {
+      "path": "/frameworks/ui-ux-collaboration",
+      "status": 200
+    },
+    {
+      "path": "/help",
+      "status": 200
+    },
+    {
+      "path": "/learn/customer-discovery",
+      "status": 200
+    },
+    {
+      "path": "/learn/execution-and-delivery",
+      "status": 200
+    },
+    {
+      "path": "/learn/data-and-experimentation",
+      "status": 200
+    },
+    {
+      "path": "/learn/foundation-and-product-strategy",
+      "status": 200
+    },
+    {
+      "path": "/how-it-works",
+      "status": 200
+    },
+    {
+      "path": "/learn/job-ready",
+      "status": 200
+    },
+    {
+      "path": "/learn/stakeholder-leadership",
+      "status": 200
+    },
+    {
+      "path": "/learn/prioritization-and-decision-making",
+      "status": 200
+    },
+    {
+      "path": "/learn/technical-fluency",
+      "status": 200
+    },
+    {
+      "path": "/learn/ui-ux-collaboration",
+      "status": 200
+    },
+    {
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "path": "/practice/ait-e-1-live-translation-three-seconds-or-instant",
+      "status": 200
+    },
+    {
+      "path": "/practice/ait-e-2-a-shop-assistant-whose-answers-change-hourly",
+      "status": 200
+    },
+    {
+      "path": "/practice/ait-e-3-on-device-or-cloud-for-tagging-kids-photos",
+      "status": 200
+    },
+    {
+      "path": "/practice/ait-h-1-the-assistant-is-inventing-fees-in-one-region",
+      "status": 200
+    },
+    {
+      "path": "/practice/ait-h-2-an-agent-that-can-spend-money",
+      "status": 200
+    },
+    {
+      "path": "/learn",
+      "status": 200
+    },
+    {
+      "path": "/maintenance",
+      "status": 200
+    },
+    {
+      "path": "/offline",
+      "status": 200
+    },
+    {
+      "path": "/practice/ait-h-3-monday-8-a-m-10-000-clinicians-at-once",
+      "status": 200
+    },
+    {
+      "path": "/onboarding",
+      "status": 200
+    },
+    {
+      "path": "/practice/ait-m-1-a-medical-scribe-with-a-hard-safety-floor",
+      "status": 200
+    },
+    {
+      "path": "/practice",
+      "status": 200
+    },
+    {
+      "path": "/practice/ait-m-3-search-relevance-with-a-300-ms-budget",
+      "status": 200
+    },
+    {
+      "path": "/practice/ait-m-2-a-support-copilot-with-three-goals-fighting",
+      "status": 200
+    },
+    {
+      "path": "/practice/beh-e-1-you-disagreed-with-a-designer-about-feature-placement",
+      "status": 200
+    },
+    {
+      "path": "/practice/beh-e-2-you-learned-something-fast-to-ship-something",
+      "status": 200
+    },
+    {
+      "path": "/practice/beh-e-3-customer-feedback-changed-your-decision",
+      "status": 200
+    },
+    {
+      "path": "/practice/beh-h-1-the-project-is-failing-in-front-of-the-board",
+      "status": 200
+    },
+    {
+      "path": "/practice/beh-h-2-an-incident-harmed-users-and-you-owned-the-response",
+      "status": 200
+    },
+    {
+      "path": "/practice/beh-h-3-you-found-your-own-number-was-wrong-after-presenting-it",
+      "status": 200
+    },
+    {
+      "path": "/practice/beh-m-1-stability-versus-the-hard-date",
+      "status": 200
+    },
+    {
+      "path": "/practice/beh-m-2-saying-no-to-a-senior-stakeholder-s-idea",
+      "status": 200
+    },
+    {
+      "path": "/practice/beh-m-3-a-dependency-slipped-and-two-teams-wanted-different-things",
+      "status": 200
+    },
+    {
+      "path": "/practice/est-e-3-how-many-support-agents-for-launch-day-chat",
+      "status": 200
+    },
+    {
+      "path": "/practice/est-e-1-is-a-flagship-phone-store-on-durbar-marg-worth-the-rent",
+      "status": 200
+    },
+    {
+      "path": "/practice/est-e-2-how-many-quick-pay-uses-per-week-should-we-buy-capacity-for",
+      "status": 200
+    },
+    {
+      "path": "/practice/est-h-1-terminal-outage-where-do-60-manual-agents-go",
+      "status": 200
+    },
+    {
+      "path": "/practice/est-h-2-results-day-web-sms-or-phone-which-will-break-first",
+      "status": 200
+    },
+    {
+      "path": "/practice/est-h-3-the-festival-exodus-charging-capacity-on-a-highway-corridor",
+      "status": 200
+    },
+    {
+      "path": "/practice/est-m-2-ticket-on-sale-how-fast-should-the-waiting-room-admit-fans",
+      "status": 200
+    },
+    {
+      "path": "/practice/est-m-3-tihar-week-do-we-have-enough-riders-for-sweets-and-gifts",
+      "status": 200
+    },
+    {
+      "path": "/practice/est-m-1-rainstorm-in-new-york-how-many-extra-drivers-to-incentivise",
+      "status": 200
+    },
+    {
+      "path": "/practice/exe-e-1-daily-actives-fell-10-in-three-weeks",
+      "status": 200
+    },
+    {
+      "path": "/practice/exe-e-2-how-to-prove-save-for-later-works",
+      "status": 200
+    },
+    {
+      "path": "/practice/exe-e-3-more-orders-how-will-you-know-it-is-healthy",
+      "status": 200
+    },
+    {
+      "path": "/practice/exe-h-3-the-test-says-3-revenue-retention-says-otherwise",
+      "status": 200
+    },
+    {
+      "path": "/practice/exe-h-2-active-users-are-up-22-is-anyone-new-actually-there",
+      "status": 200
+    },
+    {
+      "path": "/practice/exe-h-1-watch-time-is-at-a-record-but-is-it-healthy",
+      "status": 200
+    },
+    {
+      "path": "/practice/exe-m-1-notifications-lift-daily-actives-and-uninstalls",
+      "status": 200
+    },
+    {
+      "path": "/practice/exe-m-2-raise-checkout-conversion-by-5",
+      "status": 200
+    },
+    {
+      "path": "/practice/ps-e-1-finding-items-in-a-huge-grocery-store",
+      "status": 200
+    },
+    {
+      "path": "/practice/ps-e-2-parents-keep-returning-kids-clothes",
+      "status": 200
+    },
+    {
+      "path": "/practice/ps-e-3-new-gym-members-stop-after-three-weeks",
+      "status": 200
+    },
+    {
+      "path": "/practice/exe-m-3-a-referral-program-with-suspicious-signups",
+      "status": 200
+    },
+    {
+      "path": "/practice/ps-h-1-how-older-residents-of-tokyo-move-through-the-transit-system",
+      "status": 200
+    },
+    {
+      "path": "/practice/ps-h-2-designing-for-first-time-flyers",
+      "status": 200
+    },
+    {
+      "path": "/practice/ps-h-3-fair-price-information-for-a-farmers-cooperative",
+      "status": 200
+    },
+    {
+      "path": "/practice/ps-m-1-a-first-ikea-visit-for-a-new-homeowner",
+      "status": 200
+    },
+    {
+      "path": "/practice/ps-m-3-a-telehealth-app-for-adults-over-45",
+      "status": 200
+    },
+    {
+      "path": "/practice/ps-m-2-first-time-riders-and-the-intercity-bus",
+      "status": 200
+    },
+    {
+      "path": "/practice/rca-e-1-sign-ups-dropped-12-after-the-app-update",
+      "status": 200
+    },
+    {
+      "path": "/practice/rca-e-2-new-seller-activations-fell-15",
+      "status": 200
+    },
+    {
+      "path": "/practice/rca-h-2-customer-satisfaction-is-sliding-while-resolution-times-improve",
+      "status": 200
+    },
+    {
+      "path": "/practice/rca-h-3-revenue-per-paying-user-is-eroding-by-7",
+      "status": 200
+    },
+    {
+      "path": "/practice/rca-e-3-add-to-cart-conversion-fell-after-the-layout-refresh",
+      "status": 200
+    },
+    {
+      "path": "/practice/rca-h-1-drivers-are-leaving-slowly-in-six-cities",
+      "status": 200
+    },
+    {
+      "path": "/practice/rca-m-1-search-conversion-fell-while-crash-rates-spiked",
+      "status": 200
+    },
+    {
+      "path": "/practice/rca-m-2-delivery-times-rose-three-minutes-yet-every-city-got-faster",
+      "status": 200
+    },
+    {
+      "path": "/practice/rca-m-3-daily-users-are-up-8-but-week-one-retention-is-down",
+      "status": 200
+    },
+    {
+      "path": "/practice/str-e-1-students-churn-at-re-verification-cut-price-or-something-else",
+      "status": 200
+    },
+    {
+      "path": "/practice/str-e-2-when-should-the-paywall-appear",
+      "status": 200
+    },
+    {
+      "path": "/practice/str-e-3-raise-the-take-rate-for-new-sellers",
+      "status": 200
+    },
+    {
+      "path": "/practice/str-h-2-a-minimum-pay-rule-hits-the-biggest-market",
+      "status": 200
+    },
+    {
+      "path": "/practice/str-h-1-ai-answers-help-users-and-starve-publishers",
+      "status": 200
+    },
+    {
+      "path": "/practice/str-h-3-a-wallet-s-three-growth-paths-all-depend-on-one-another",
+      "status": 200
+    },
+    {
+      "path": "/practice/str-m-1-a-rival-adds-a-concierge-match-copy-or-pivot",
+      "status": 200
+    },
+    {
+      "path": "/practice/str-m-2-launching-a-streamer-where-local-telcos-own-distribution",
+      "status": 200
+    },
+    {
+      "path": "/practice/str-m-3-an-ai-native-rival-is-winning-the-mid-market",
+      "status": 200
+    },
+    {
+      "path": "/questions",
+      "status": 200
+    },
+    {
+      "path": "/privacy",
+      "status": 200
+    },
+    {
+      "path": "/projects",
+      "status": 200
+    },
+    {
+      "path": "/questions/ait-e-1-live-translation-three-seconds-or-instant",
+      "status": 200
+    },
+    {
+      "path": "/questions/ait-e-2-a-shop-assistant-whose-answers-change-hourly",
+      "status": 200
+    },
+    {
+      "path": "/questions/ait-h-1-the-assistant-is-inventing-fees-in-one-region",
+      "status": 200
+    },
+    {
+      "path": "/questions/ait-e-3-on-device-or-cloud-for-tagging-kids-photos",
+      "status": 200
+    },
+    {
+      "path": "/questions/ait-h-2-an-agent-that-can-spend-money",
+      "status": 200
+    },
+    {
+      "path": "/questions/ait-m-1-a-medical-scribe-with-a-hard-safety-floor",
+      "status": 200
+    },
+    {
+      "path": "/questions/ait-m-2-a-support-copilot-with-three-goals-fighting",
+      "status": 200
+    },
+    {
+      "path": "/questions/ait-m-3-search-relevance-with-a-300-ms-budget",
+      "status": 200
+    },
+    {
+      "path": "/questions/ait-h-3-monday-8-a-m-10-000-clinicians-at-once",
+      "status": 200
+    },
+    {
+      "path": "/questions/beh-e-1-you-disagreed-with-a-designer-about-feature-placement",
+      "status": 200
+    },
+    {
+      "path": "/questions/beh-e-3-customer-feedback-changed-your-decision",
+      "status": 200
+    },
+    {
+      "path": "/questions/beh-e-2-you-learned-something-fast-to-ship-something",
+      "status": 200
+    },
+    {
+      "path": "/questions/beh-h-1-the-project-is-failing-in-front-of-the-board",
+      "status": 200
+    },
+    {
+      "path": "/questions/beh-h-2-an-incident-harmed-users-and-you-owned-the-response",
+      "status": 200
+    },
+    {
+      "path": "/questions/beh-h-3-you-found-your-own-number-was-wrong-after-presenting-it",
+      "status": 200
+    },
+    {
+      "path": "/questions/beh-m-1-stability-versus-the-hard-date",
+      "status": 200
+    },
+    {
+      "path": "/questions/beh-m-3-a-dependency-slipped-and-two-teams-wanted-different-things",
+      "status": 200
+    },
+    {
+      "path": "/questions/beh-m-2-saying-no-to-a-senior-stakeholder-s-idea",
+      "status": 200
+    },
+    {
+      "path": "/questions/est-e-1-is-a-flagship-phone-store-on-durbar-marg-worth-the-rent",
+      "status": 200
+    },
+    {
+      "path": "/questions/est-e-2-how-many-quick-pay-uses-per-week-should-we-buy-capacity-for",
+      "status": 200
+    },
+    {
+      "path": "/questions/est-e-3-how-many-support-agents-for-launch-day-chat",
+      "status": 200
+    },
+    {
+      "path": "/questions/est-h-1-terminal-outage-where-do-60-manual-agents-go",
+      "status": 200
+    },
+    {
+      "path": "/questions/est-h-2-results-day-web-sms-or-phone-which-will-break-first",
+      "status": 200
+    },
+    {
+      "path": "/questions/est-m-1-rainstorm-in-new-york-how-many-extra-drivers-to-incentivise",
+      "status": 200
+    },
+    {
+      "path": "/questions/est-h-3-the-festival-exodus-charging-capacity-on-a-highway-corridor",
+      "status": 200
+    },
+    {
+      "path": "/questions/est-m-2-ticket-on-sale-how-fast-should-the-waiting-room-admit-fans",
+      "status": 200
+    },
+    {
+      "path": "/questions/est-m-3-tihar-week-do-we-have-enough-riders-for-sweets-and-gifts",
+      "status": 200
+    },
+    {
+      "path": "/questions/exe-e-1-daily-actives-fell-10-in-three-weeks",
+      "status": 200
+    },
+    {
+      "path": "/questions/exe-e-2-how-to-prove-save-for-later-works",
+      "status": 200
+    },
+    {
+      "path": "/questions/exe-e-3-more-orders-how-will-you-know-it-is-healthy",
+      "status": 200
+    },
+    {
+      "path": "/questions/exe-h-1-watch-time-is-at-a-record-but-is-it-healthy",
+      "status": 200
+    },
+    {
+      "path": "/questions/exe-h-2-active-users-are-up-22-is-anyone-new-actually-there",
+      "status": 200
+    },
+    {
+      "path": "/questions/exe-h-3-the-test-says-3-revenue-retention-says-otherwise",
+      "status": 200
+    },
+    {
+      "path": "/questions/exe-m-1-notifications-lift-daily-actives-and-uninstalls",
+      "status": 200
+    },
+    {
+      "path": "/questions/exe-m-2-raise-checkout-conversion-by-5",
+      "status": 200
+    },
+    {
+      "path": "/questions/exe-m-3-a-referral-program-with-suspicious-signups",
+      "status": 200
+    },
+    {
+      "path": "/questions/ps-e-1-finding-items-in-a-huge-grocery-store",
+      "status": 200
+    },
+    {
+      "path": "/questions/ps-e-2-parents-keep-returning-kids-clothes",
+      "status": 200
+    },
+    {
+      "path": "/questions/ps-e-3-new-gym-members-stop-after-three-weeks",
+      "status": 200
+    },
+    {
+      "path": "/questions/ps-h-1-how-older-residents-of-tokyo-move-through-the-transit-system",
+      "status": 200
+    },
+    {
+      "path": "/questions/ps-h-2-designing-for-first-time-flyers",
+      "status": 200
+    },
+    {
+      "path": "/questions/ps-h-3-fair-price-information-for-a-farmers-cooperative",
+      "status": 200
+    },
+    {
+      "path": "/questions/ps-m-1-a-first-ikea-visit-for-a-new-homeowner",
+      "status": 200
+    },
+    {
+      "path": "/questions/ps-m-2-first-time-riders-and-the-intercity-bus",
+      "status": 200
+    },
+    {
+      "path": "/questions/ps-m-3-a-telehealth-app-for-adults-over-45",
+      "status": 200
+    },
+    {
+      "path": "/questions/rca-e-1-sign-ups-dropped-12-after-the-app-update",
+      "status": 200
+    },
+    {
+      "path": "/questions/rca-e-2-new-seller-activations-fell-15",
+      "status": 200
+    },
+    {
+      "path": "/questions/rca-e-3-add-to-cart-conversion-fell-after-the-layout-refresh",
+      "status": 200
+    },
+    {
+      "path": "/questions/rca-h-1-drivers-are-leaving-slowly-in-six-cities",
+      "status": 200
+    },
+    {
+      "path": "/questions/rca-h-2-customer-satisfaction-is-sliding-while-resolution-times-improve",
+      "status": 200
+    },
+    {
+      "path": "/questions/rca-h-3-revenue-per-paying-user-is-eroding-by-7",
+      "status": 200
+    },
+    {
+      "path": "/questions/rca-m-2-delivery-times-rose-three-minutes-yet-every-city-got-faster",
+      "status": 200
+    },
+    {
+      "path": "/questions/rca-m-3-daily-users-are-up-8-but-week-one-retention-is-down",
+      "status": 200
+    },
+    {
+      "path": "/questions/rca-m-1-search-conversion-fell-while-crash-rates-spiked",
+      "status": 200
+    },
+    {
+      "path": "/questions/str-e-1-students-churn-at-re-verification-cut-price-or-something-else",
+      "status": 200
+    },
+    {
+      "path": "/questions/str-e-2-when-should-the-paywall-appear",
+      "status": 200
+    },
+    {
+      "path": "/questions/str-e-3-raise-the-take-rate-for-new-sellers",
+      "status": 200
+    },
+    {
+      "path": "/questions/str-h-1-ai-answers-help-users-and-starve-publishers",
+      "status": 200
+    },
+    {
+      "path": "/questions/str-h-2-a-minimum-pay-rule-hits-the-biggest-market",
+      "status": 200
+    },
+    {
+      "path": "/resources",
+      "status": 200
+    },
+    {
+      "path": "/questions/str-h-3-a-wallet-s-three-growth-paths-all-depend-on-one-another",
+      "status": 200
+    },
+    {
+      "path": "/reset.html",
+      "status": 200
+    },
+    {
+      "path": "/questions/str-m-1-a-rival-adds-a-concierge-match-copy-or-pivot",
+      "status": 200
+    },
+    {
+      "path": "/signup",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/invisible-wall/play",
+      "status": 200
+    },
+    {
+      "path": "/questions/str-m-2-launching-a-streamer-where-local-telcos-own-distribution",
+      "status": 200
+    },
+    {
+      "path": "/questions/str-m-3-an-ai-native-rival-is-winning-the-mid-market",
+      "status": 200
+    },
+    {
+      "path": "/terms",
+      "status": 200
+    },
+    {
+      "path": "/tools",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/trojan-horse/play",
+      "status": 200
+    }
+  ],
+  "assets": [
+    {
+      "path": "/_next/static/chunks/0pagaevu-hwt3.css",
+      "status": 200,
+      "bytes": 20912
+    },
+    {
+      "path": "/_next/static/chunks/1x6obpmlu1_c2.js",
+      "status": 200,
+      "bytes": 5361
+    },
+    {
+      "path": "/_next/static/chunks/2n86e7h60o0qo.js",
+      "status": 200,
+      "bytes": 33153
+    },
+    {
+      "path": "/_next/static/chunks/3b9fv7tn_u96y.css",
+      "status": 200,
+      "bytes": 118637
+    },
+    {
+      "path": "/_next/static/chunks/turbopack-3-ry682tkyiqk.js",
+      "status": 200,
+      "bytes": 10030
+    },
+    {
+      "path": "/_next/static/chunks/2pgxx1eld5ef_.js",
+      "status": 200,
+      "bytes": 163941
+    },
+    {
+      "path": "/_next/static/chunks/2lm9hziozm92t.js",
+      "status": 200,
+      "bytes": 29605
+    },
+    {
+      "path": "/_next/static/chunks/0753wj3rfoxy6.js",
+      "status": 200,
+      "bytes": 36040
+    },
+    {
+      "path": "/_next/static/chunks/34k3wq8i73w1w.js",
+      "status": 200,
+      "bytes": 44812
+    },
+    {
+      "path": "/_next/static/chunks/3qx02_6--t5rb.js",
+      "status": 200,
+      "bytes": 215
+    },
+    {
+      "path": "/_next/static/chunks/2-wt8plhhhcje.js",
+      "status": 200,
+      "bytes": 2150
+    },
+    {
+      "path": "/_next/static/chunks/3wbm-994r45kr.js",
+      "status": 200,
+      "bytes": 229820
+    },
+    {
+      "path": "/_next/static/chunks/2yhk9aeug-aqs.js",
+      "status": 200,
+      "bytes": 70153
+    },
+    {
+      "path": "/_next/static/chunks/0_51vpcr6w7_z.js",
+      "status": 200,
+      "bytes": 25885
+    },
+    {
+      "path": "/_next/static/chunks/18jxa_wnt61ff.js",
+      "status": 200,
+      "bytes": 816
+    },
+    {
+      "path": "/_next/static/chunks/28u3hi9voacto.js",
+      "status": 200,
+      "bytes": 64948
+    },
+    {
+      "path": "/_next/static/chunks/3zdys3te7nz5i.js",
+      "status": 200,
+      "bytes": 31586
+    },
+    {
+      "path": "/_next/static/chunks/0t44jqia8uj3f.js",
+      "status": 200,
+      "bytes": 24325
+    },
+    {
+      "path": "/_next/static/chunks/0znvig3c7j_ah.js",
+      "status": 200,
+      "bytes": 45793
+    },
+    {
+      "path": "/_next/static/chunks/0acf-ixvp15zy.js",
+      "status": 200,
+      "bytes": 110752
+    },
+    {
+      "path": "/_next/static/chunks/0zoetdzyhnyl-.js",
+      "status": 200,
+      "bytes": 97931
+    },
+    {
+      "path": "/_next/static/chunks/38kogmg_8p45n.js",
+      "status": 200,
+      "bytes": 120097
+    },
+    {
+      "path": "/_next/static/chunks/07_w6e0b2lz5_.js",
+      "status": 200,
+      "bytes": 17999
+    },
+    {
+      "path": "/_next/static/chunks/3bsz9ab6ovj_b.js",
+      "status": 200,
+      "bytes": 41504
+    },
+    {
+      "path": "/_next/static/chunks/1kk4plz7w3-84.js",
+      "status": 200,
+      "bytes": 34329
+    },
+    {
+      "path": "/_next/static/chunks/1moy1y3xb4wtf.css",
+      "status": 200,
+      "bytes": 95646
+    },
+    {
+      "path": "/_next/static/chunks/0cz1d0mv5g_q7.js",
+      "status": 200,
+      "bytes": 112594
+    },
+    {
+      "path": "/_next/static/chunks/0f9vyd016z1v1.js",
+      "status": 200,
+      "bytes": 11387
+    },
+    {
+      "path": "/_next/static/chunks/0gp-24s9rttfd.css",
+      "status": 200,
+      "bytes": 106349
+    },
+    {
+      "path": "/_next/static/chunks/3mqb_geiyipxr.js",
+      "status": 200,
+      "bytes": 450
+    },
+    {
+      "path": "/_next/static/chunks/2_sy0hpi2wcm2.js",
+      "status": 200,
+      "bytes": 33453
+    },
+    {
+      "path": "/_next/static/chunks/2qx9x96xwk40k.js",
+      "status": 200,
+      "bytes": 18895
+    },
+    {
+      "path": "/_next/static/chunks/1np8cbzp3lhlo.js",
+      "status": 200,
+      "bytes": 1325
+    },
+    {
+      "path": "/_next/static/chunks/1_cdr39ofd3nn.js",
+      "status": 200,
+      "bytes": 140513
+    },
+    {
+      "path": "/_next/static/chunks/35982eedy-_8n.js",
+      "status": 200,
+      "bytes": 175315
+    },
+    {
+      "path": "/_next/static/chunks/0a7gqzgwyv-2q.js",
+      "status": 200,
+      "bytes": 551
+    },
+    {
+      "path": "/_next/static/chunks/1_s1je1y9n9n3.js",
+      "status": 200,
+      "bytes": 41110
+    },
+    {
+      "path": "/_next/static/chunks/13_dvtrft-thi.js",
+      "status": 200,
+      "bytes": 47849
+    },
+    {
+      "path": "/_next/static/chunks/3l2l0kayd23tk.css",
+      "status": 200,
+      "bytes": 61375
+    },
+    {
+      "path": "/_next/static/chunks/351ofwjcg4wsl.js",
+      "status": 200,
+      "bytes": 25946
+    },
+    {
+      "path": "/_next/static/chunks/44z61kdcg1rlj.js",
+      "status": 200,
+      "bytes": 57034
+    },
+    {
+      "path": "/_next/static/chunks/3kzjajm6zipq2.css",
+      "status": 200,
+      "bytes": 29150
+    },
+    {
+      "path": "/_next/static/chunks/12_teonr6q-2n.js",
+      "status": 200,
+      "bytes": 7827
+    },
+    {
+      "path": "/_next/static/chunks/3h5fpsjzdscl2.js",
+      "status": 200,
+      "bytes": 281
+    },
+    {
+      "path": "/_next/static/chunks/2727ddb7l_5z-.js",
+      "status": 200,
+      "bytes": 3025
+    },
+    {
+      "path": "/_next/static/chunks/0qqk38qdo9j2o.js",
+      "status": 200,
+      "bytes": 214
+    },
+    {
+      "path": "/_next/static/chunks/0prkfgi3e4v05.js",
+      "status": 200,
+      "bytes": 217804
+    },
+    {
+      "path": "/_next/static/chunks/05ye7b3v6euer.js",
+      "status": 200,
+      "bytes": 38209
+    },
+    {
+      "path": "/_next/static/chunks/2_q-bnj2gxqx9.js",
+      "status": 200,
+      "bytes": 5015
+    },
+    {
+      "path": "/_next/static/chunks/09elsopw0t-9e.js",
+      "status": 200,
+      "bytes": 2930
+    },
+    {
+      "path": "/_next/static/chunks/28oueyxn7l38c.js",
+      "status": 200,
+      "bytes": 87741
+    },
+    {
+      "path": "/_next/static/chunks/24xfqfrdb-req.js",
+      "status": 200,
+      "bytes": 704643
+    },
+    {
+      "path": "/_next/static/chunks/35xrlgxd8-f0a.js",
+      "status": 200,
+      "bytes": 54537
+    },
+    {
+      "path": "/_next/static/chunks/3ijqjcnag21e1.js",
+      "status": 200,
+      "bytes": 140737
+    },
+    {
+      "path": "/_next/static/chunks/1c5x2uz6kgqqm.js",
+      "status": 200,
+      "bytes": 2821
+    },
+    {
+      "path": "/_next/static/chunks/2-dm-0dlthnvs.js",
+      "status": 200,
+      "bytes": 3864
+    },
+    {
+      "path": "/_next/static/chunks/2a39q_bhxsf5l.css",
+      "status": 200,
+      "bytes": 27377
+    },
+    {
+      "path": "/_next/static/chunks/1ks6-jaw8us0l.js",
+      "status": 200,
+      "bytes": 1607
+    },
+    {
+      "path": "/_next/static/chunks/3-m9a6hd8h4t2.js",
+      "status": 200,
+      "bytes": 80084
+    },
+    {
+      "path": "/_next/static/chunks/3i_k3mh4t2luk.js",
+      "status": 200,
+      "bytes": 6325
+    },
+    {
+      "path": "/_next/static/chunks/074k8rl1ghp43.js",
+      "status": 200,
+      "bytes": 6599
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s00-1.mp3",
+      "status": 200,
+      "bytes": 44870
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s01-1.mp3",
+      "status": 200,
+      "bytes": 58976
+    },
+    {
+      "path": "/_next/static/chunks/2xsxyprh2k079.js",
+      "status": 200,
+      "bytes": 29963
+    },
+    {
+      "path": "/reset-workspace.js",
+      "status": 200,
+      "bytes": 4611
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s01-2.mp3",
+      "status": 200,
+      "bytes": 46750
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s01-3.mp3",
+      "status": 200,
+      "bytes": 50199
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s02-1.mp3",
+      "status": 200,
+      "bytes": 13836
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s02-2.mp3",
+      "status": 200,
+      "bytes": 41422
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s03-2.mp3",
+      "status": 200,
+      "bytes": 44870
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s03-1.mp3",
+      "status": 200,
+      "bytes": 57408
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s03-3.mp3",
+      "status": 200,
+      "bytes": 28569
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s03-4.mp3",
+      "status": 200,
+      "bytes": 14463
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s03-5.mp3",
+      "status": 200,
+      "bytes": 35152
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s03-6.mp3",
+      "status": 200,
+      "bytes": 24494
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s04-1.mp3",
+      "status": 200,
+      "bytes": 44243
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s04-2.mp3",
+      "status": 200,
+      "bytes": 41108
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s05-1.mp3",
+      "status": 200,
+      "bytes": 36406
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s04-3.mp3",
+      "status": 200,
+      "bytes": 38914
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s05-2.mp3",
+      "status": 200,
+      "bytes": 17911
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s05-3.mp3",
+      "status": 200,
+      "bytes": 16971
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s05-4.mp3",
+      "status": 200,
+      "bytes": 26062
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s06-1.mp3",
+      "status": 200,
+      "bytes": 50826
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s07-1.mp3",
+      "status": 200,
+      "bytes": 40168
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s08-1.mp3",
+      "status": 200,
+      "bytes": 37660
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s06-2.mp3",
+      "status": 200,
+      "bytes": 65872
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s08-2.mp3",
+      "status": 200,
+      "bytes": 48318
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s09-2.mp3",
+      "status": 200,
+      "bytes": 42362
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s09-1.mp3",
+      "status": 200,
+      "bytes": 37346
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s09-3.mp3",
+      "status": 200,
+      "bytes": 30764
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s10-1.mp3",
+      "status": 200,
+      "bytes": 27629
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s10-3.mp3",
+      "status": 200,
+      "bytes": 33271
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s10-2.mp3",
+      "status": 200,
+      "bytes": 21986
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s10-4.mp3",
+      "status": 200,
+      "bytes": 30450
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s10-5.mp3",
+      "status": 200,
+      "bytes": 42675
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s11-1.mp3",
+      "status": 200,
+      "bytes": 42675
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s11-2.mp3",
+      "status": 200,
+      "bytes": 38287
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s12-2.mp3",
+      "status": 200,
+      "bytes": 52079
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s12-1.mp3",
+      "status": 200,
+      "bytes": 30450
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s13-3.mp3",
+      "status": 200,
+      "bytes": 16657
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s13-2.mp3",
+      "status": 200,
+      "bytes": 20106
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s13-1.mp3",
+      "status": 200,
+      "bytes": 39541
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s13-4.mp3",
+      "status": 200,
+      "bytes": 25121
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s13a-1.mp3",
+      "status": 200,
+      "bytes": 31704
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s13a-2.mp3",
+      "status": 200,
+      "bytes": 32017
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s13b-1.mp3",
+      "status": 200,
+      "bytes": 25435
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s13b-2.mp3",
+      "status": 200,
+      "bytes": 42048
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s14-1.mp3",
+      "status": 200,
+      "bytes": 44243
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s14-2.mp3",
+      "status": 200,
+      "bytes": 21986
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s14-3.mp3",
+      "status": 200,
+      "bytes": 25435
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s15-1.mp3",
+      "status": 200,
+      "bytes": 40481
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s15-2.mp3",
+      "status": 200,
+      "bytes": 28569
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s15-3.mp3",
+      "status": 200,
+      "bytes": 33585
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s16-1.mp3",
+      "status": 200,
+      "bytes": 34212
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s16-2.mp3",
+      "status": 200,
+      "bytes": 21359
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s16-3.mp3",
+      "status": 200,
+      "bytes": 41422
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s16-4.mp3",
+      "status": 200,
+      "bytes": 21986
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s16-5.mp3",
+      "status": 200,
+      "bytes": 27315
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s16-6.mp3",
+      "status": 200,
+      "bytes": 39854
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s17-1.mp3",
+      "status": 200,
+      "bytes": 41422
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s18-1.mp3",
+      "status": 200,
+      "bytes": 37973
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s17-2.mp3",
+      "status": 200,
+      "bytes": 52079
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s18-2.mp3",
+      "status": 200,
+      "bytes": 34525
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s18-3.mp3",
+      "status": 200,
+      "bytes": 17598
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s19-1.mp3",
+      "status": 200,
+      "bytes": 26375
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s19-3.mp3",
+      "status": 200,
+      "bytes": 16971
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s19-4.mp3",
+      "status": 200,
+      "bytes": 29510
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s19-2.mp3",
+      "status": 200,
+      "bytes": 27629
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s20-1.mp3",
+      "status": 200,
+      "bytes": 37660
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s20-2.mp3",
+      "status": 200,
+      "bytes": 30137
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s20-3.mp3",
+      "status": 200,
+      "bytes": 31704
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s20-4.mp3",
+      "status": 200,
+      "bytes": 31077
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s21-2.mp3",
+      "status": 200,
+      "bytes": 17911
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s21-1.mp3",
+      "status": 200,
+      "bytes": 17284
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s21-3.mp3",
+      "status": 200,
+      "bytes": 23554
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s21-4.mp3",
+      "status": 200,
+      "bytes": 27942
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s22-1.mp3",
+      "status": 200,
+      "bytes": 37033
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s22-2.mp3",
+      "status": 200,
+      "bytes": 52079
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s23-1.mp3",
+      "status": 200,
+      "bytes": 44243
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s23-2.mp3",
+      "status": 200,
+      "bytes": 52079
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s24-1.mp3",
+      "status": 200,
+      "bytes": 13523
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s24-2.mp3",
+      "status": 200,
+      "bytes": 19165
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s24-3.mp3",
+      "status": 200,
+      "bytes": 35466
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s24-4.mp3",
+      "status": 200,
+      "bytes": 30764
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s24-5.mp3",
+      "status": 200,
+      "bytes": 26375
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s24-6.mp3",
+      "status": 200,
+      "bytes": 26375
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s24-7.mp3",
+      "status": 200,
+      "bytes": 27942
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s25-1.mp3",
+      "status": 200,
+      "bytes": 23867
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s25-3.mp3",
+      "status": 200,
+      "bytes": 28569
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s25-2.mp3",
+      "status": 200,
+      "bytes": 31077
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s26-1.mp3",
+      "status": 200,
+      "bytes": 58662
+    },
+    {
+      "path": "/projects/invisible-wall/audio/s25-4.mp3",
+      "status": 200,
+      "bytes": 52079
+    },
+    {
+      "path": "/projects/invisible-wall/audio/chime.wav",
+      "status": 200,
+      "bytes": 24044
+    },
+    {
+      "path": "/projects/invisible-wall/audio/error.wav",
+      "status": 200,
+      "bytes": 7724
+    },
+    {
+      "path": "/projects/invisible-wall/audio/footsteps.wav",
+      "status": 200,
+      "bytes": 28844
+    },
+    {
+      "path": "/projects/invisible-wall/audio/paper.wav",
+      "status": 200,
+      "bytes": 4844
+    },
+    {
+      "path": "/projects/invisible-wall/audio/hum.wav",
+      "status": 200,
+      "bytes": 52844
+    },
+    {
+      "path": "/projects/invisible-wall/audio/tick.wav",
+      "status": 200,
+      "bytes": 2924
+    },
+    {
+      "path": "/projects/invisible-wall/audio/shatter.wav",
+      "status": 200,
+      "bytes": 57644
+    },
+    {
+      "path": "/projects/invisible-wall/audio/heartbeat-bed.wav",
+      "status": 200,
+      "bytes": 768044
+    },
+    {
+      "path": "/projects/invisible-wall/audio/party-bed.wav",
+      "status": 200,
+      "bytes": 768044
+    }
+  ],
+  "servedCurrentBuild": true,
+  "landingIncludesLevelCode": false,
+  "traceIncludesLocalTooling": false
+}

@@ -1,0 +1,722 @@
+[
+  {
+    "id": "ask-reva-0",
+    "speaker": "reva",
+    "text": "Every Friday needs a story.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-reva-1",
+    "speaker": "reva",
+    "text": "Cass needs visible progress.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-reva-2",
+    "speaker": "reva",
+    "text": "A demo is a promise.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-reva-3",
+    "speaker": "reva",
+    "text": "Give me an honest headline.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-reva-4",
+    "speaker": "reva",
+    "text": "Retention moves slowly. That matters.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-reva-5",
+    "speaker": "reva",
+    "text": "Let us name the risk.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-reva-6",
+    "speaker": "reva",
+    "text": "I am measured on launches.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-reva-7",
+    "speaker": "reva",
+    "text": "Bring evidence. I can back that.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-cass-0",
+    "speaker": "cass",
+    "text": "The board is watching this quarter.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-cass-1",
+    "speaker": "cass",
+    "text": "Speed buys us another chance.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-cass-2",
+    "speaker": "cass",
+    "text": "Silence on Friday scares me.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-cass-3",
+    "speaker": "cass",
+    "text": "Reliability needs to be visible too.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-cass-4",
+    "speaker": "cass",
+    "text": "Investors want a reason to stay.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-cass-5",
+    "speaker": "cass",
+    "text": "The Pulse is easy to explain.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-cass-6",
+    "speaker": "cass",
+    "text": "Tell me what changed.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-cass-7",
+    "speaker": "cass",
+    "text": "A credible alternative changes my mind.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-nils-0",
+    "speaker": "nils",
+    "text": "The foundations are charging interest.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-nils-1",
+    "speaker": "nils",
+    "text": "An estimate is not a promise.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-nils-2",
+    "speaker": "nils",
+    "text": "People are tired of being surprised.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-nils-3",
+    "speaker": "nils",
+    "text": "Autosave breaks before the demo does.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-nils-4",
+    "speaker": "nils",
+    "text": "Give us room to finish.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-nils-5",
+    "speaker": "nils",
+    "text": "Less work in flight. More hardening.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-nils-6",
+    "speaker": "nils",
+    "text": "I trust people who close loops.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-nils-7",
+    "speaker": "nils",
+    "text": "I would like my weekend back.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-amara-0",
+    "speaker": "amara",
+    "text": "A gate needs teeth.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-amara-1",
+    "speaker": "amara",
+    "text": "Every bug has a person behind it.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-amara-2",
+    "speaker": "amara",
+    "text": "Coverage is a tool, not permission.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-amara-3",
+    "speaker": "amara",
+    "text": "Let us read the incident record.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-amara-4",
+    "speaker": "amara",
+    "text": "Evidence needs an owner and a date.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-amara-5",
+    "speaker": "amara",
+    "text": "Staging is trying to tell us something.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-amara-6",
+    "speaker": "amara",
+    "text": "I have heard looks fine before.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-amara-7",
+    "speaker": "amara",
+    "text": "A flag gives us an exit.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-kofi-0",
+    "speaker": "kofi",
+    "text": "Thirty days. The same people returning.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-kofi-1",
+    "speaker": "kofi",
+    "text": "Cohorts expose what totals hide.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-kofi-2",
+    "speaker": "kofi",
+    "text": "More sessions can mean more interruptions.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-kofi-3",
+    "speaker": "kofi",
+    "text": "The funnel needs a clean definition.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-kofi-4",
+    "speaker": "kofi",
+    "text": "Pick an outcome before a chart.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-kofi-5",
+    "speaker": "kofi",
+    "text": "Disagreement is a reason to investigate.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-kofi-6",
+    "speaker": "kofi",
+    "text": "I thought nobody wanted this answer.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-kofi-7",
+    "speaker": "kofi",
+    "text": "Both dashboards can be technically correct.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-lila-0",
+    "speaker": "lila",
+    "text": "Lost work is a broken promise.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-lila-1",
+    "speaker": "lila",
+    "text": "Churn has a story behind it.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-lila-2",
+    "speaker": "lila",
+    "text": "Customers love work that stays saved.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-lila-3",
+    "speaker": "lila",
+    "text": "Requests are clues, not commitments.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-lila-4",
+    "speaker": "lila",
+    "text": "Here is what a customer said.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-lila-5",
+    "speaker": "lila",
+    "text": "An SLA becomes personal during outages.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-lila-6",
+    "speaker": "lila",
+    "text": "Renewals arrive whether we are ready.",
+    "expression": "thinking"
+  },
+  {
+    "id": "ask-lila-7",
+    "speaker": "lila",
+    "text": "I can bring a customer into this.",
+    "expression": "thinking"
+  },
+  {
+    "id": "E01",
+    "speaker": "lila",
+    "text": "Three customers cited autosave losses. Quote attached.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E02",
+    "speaker": "kofi",
+    "text": "Retention is flat. Look at the Truth tab.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E03",
+    "speaker": "reva",
+    "text": "Can the demo tiles blink? Just a little.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E04",
+    "speaker": "cass",
+    "text": "Sales promised SSO to a prospect. Friday.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E05",
+    "speaker": "amara",
+    "text": "Autosave is losing edits in staging. Ticket forty-four seventy-one.",
+    "expression": "pressured"
+  },
+  {
+    "id": "E06",
+    "speaker": "nils",
+    "text": "I am not doing another weekend. We need a different plan.",
+    "expression": "pressured"
+  },
+  {
+    "id": "E07",
+    "speaker": "amara",
+    "text": "There is no stress evidence for this release.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E08",
+    "speaker": "nils",
+    "text": "The rushed release is straining the write queue.",
+    "expression": "pressured"
+  },
+  {
+    "id": "E09",
+    "speaker": "kofi",
+    "text": "Cass shared the Pulse. That is not retention.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E10",
+    "speaker": "nils",
+    "text": "Only planned tickets now. No more invisible overtime.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E11",
+    "speaker": "nils",
+    "text": "Someone asked me for a reference. We should talk.",
+    "expression": "pressured"
+  },
+  {
+    "id": "E12",
+    "speaker": "lila",
+    "text": "A customer is asking how to export everything.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E13",
+    "speaker": "kofi",
+    "text": "The returning cohort is moving. Let us check why.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E14",
+    "speaker": "amara",
+    "text": "Live tiles are delaying the rest of the app.",
+    "expression": "pressured"
+  },
+  {
+    "id": "E15",
+    "speaker": "reva",
+    "text": "What is the headline for Zenith?",
+    "expression": "neutral"
+  },
+  {
+    "id": "E16",
+    "speaker": "amara",
+    "text": "The flag gave us a clean rollback.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E17",
+    "speaker": "cass",
+    "text": "Could we stretch? The foundations look healthier.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E18",
+    "speaker": "reva",
+    "text": "You wrote that down. Does the decision still hold?",
+    "expression": "neutral"
+  },
+  {
+    "id": "E19",
+    "speaker": "kofi",
+    "text": "These dashboards disagree because they measure different things.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E20",
+    "speaker": "nils",
+    "text": "The tweet says AI. The implementation says temporary workaround.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E21",
+    "speaker": "cass",
+    "text": "Are we a reliable company? I need an honest answer.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E22",
+    "speaker": "nils",
+    "text": "I made it to my daughter’s recital. Thank you.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E23",
+    "speaker": "cass",
+    "text": "I assigned this directly. We need momentum.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E24",
+    "speaker": "reva",
+    "text": "What changed, what proves it, and what do you need?",
+    "expression": "neutral"
+  },
+  {
+    "id": "E25",
+    "speaker": "amara",
+    "text": "We can automate the regression checks. It will take focus.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E26",
+    "speaker": "kofi",
+    "text": "Define a returning user before the next launch.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E27",
+    "speaker": "lila",
+    "text": "A customer wrote one word. Finally.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E28",
+    "speaker": "nils",
+    "text": "A dependency is waiting for a decision. Not more code.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E29",
+    "speaker": "amara",
+    "text": "Could we test the rollback before Friday?",
+    "expression": "neutral"
+  },
+  {
+    "id": "E30",
+    "speaker": "reva",
+    "text": "We need a demo, even if we narrow it.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E31",
+    "speaker": "lila",
+    "text": "A customer found their old notes without asking us.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E32",
+    "speaker": "nils",
+    "text": "The queue is quieter. Maintenance bought us capacity.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E33",
+    "speaker": "cass",
+    "text": "Could we show the new tiles in the investor clip?",
+    "expression": "neutral"
+  },
+  {
+    "id": "E34",
+    "speaker": "kofi",
+    "text": "Digest users are returning without extra nudges.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E35",
+    "speaker": "lila",
+    "text": "The renewal needs single sign-on. Can we give a date?",
+    "expression": "neutral"
+  },
+  {
+    "id": "E36",
+    "speaker": "amara",
+    "text": "I can review the riskiest change with you.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E37",
+    "speaker": "nils",
+    "text": "We have too much open work. Pick what stops.",
+    "expression": "pressured"
+  },
+  {
+    "id": "E38",
+    "speaker": "kofi",
+    "text": "The cohort is modest. It is still real progress.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E39",
+    "speaker": "reva",
+    "text": "I can defend a smaller release if you explain it.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E40",
+    "speaker": "lila",
+    "text": "Customers remember the date, not our sprint points.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E41",
+    "speaker": "amara",
+    "text": "No new high-priority reports today. Keep the checks.",
+    "expression": "neutral"
+  },
+  {
+    "id": "E42",
+    "speaker": "cass",
+    "text": "What can we safely show without making another promise?",
+    "expression": "neutral"
+  },
+  {
+    "id": "intro-0",
+    "speaker": "pa",
+    "text": "Release forty-one is live.",
+    "expression": "neutral"
+  },
+  {
+    "id": "intro-1",
+    "speaker": "cass",
+    "text": "Faster! Faster!",
+    "expression": "neutral"
+  },
+  {
+    "id": "intro-2",
+    "speaker": "pa",
+    "text": "Every Friday, the gong. Every Monday, a longer list.",
+    "expression": "neutral"
+  },
+  {
+    "id": "intro-3",
+    "speaker": "reva",
+    "text": "I'm Reva. Head of Product. We ship every Friday.",
+    "expression": "neutral"
+  },
+  {
+    "id": "intro-4",
+    "speaker": "reva",
+    "text": "Cass wants a bigger Friday. Let's not boil the ocean.",
+    "expression": "neutral"
+  },
+  {
+    "id": "intro-5",
+    "speaker": "reva",
+    "text": "Show me a plan Monday that makes the Pulse sing.",
+    "expression": "neutral"
+  },
+  {
+    "id": "intro-6",
+    "speaker": "cass",
+    "text": "Ten, nine, eight. What ships Friday?",
+    "expression": "neutral"
+  },
+  {
+    "id": "intro-7",
+    "speaker": "nils",
+    "text": "Nils. Engineering. Our debt list is longer than your roadmap.",
+    "expression": "thinking"
+  },
+  {
+    "id": "intro-8",
+    "speaker": "nils",
+    "text": "I'll do what you plan. I'd like a plan I can survive.",
+    "expression": "thinking"
+  },
+  {
+    "id": "intro-9",
+    "speaker": "kofi",
+    "text": "Retention has been flat for a year. Does anyone read it?",
+    "expression": "neutral"
+  },
+  {
+    "id": "intro-10",
+    "speaker": "amara",
+    "text": "Release gate criteria are still looks fine. Can we write real ones?",
+    "expression": "neutral"
+  },
+  {
+    "id": "intro-11",
+    "speaker": "lila",
+    "text": "Three customers cited autosave losses. Quote attached.",
+    "expression": "neutral"
+  },
+  {
+    "id": "metric-pulse",
+    "speaker": "reva",
+    "text": "Good. The Pulse is our story.",
+    "expression": "thinking"
+  },
+  {
+    "id": "metric-retention",
+    "speaker": "reva",
+    "text": "Retention? It is slow to move.",
+    "expression": "thinking"
+  },
+  {
+    "id": "metric-features",
+    "speaker": "amara",
+    "text": "Counting output is not counting results.",
+    "expression": "thinking"
+  },
+  {
+    "id": "promise-tiles",
+    "speaker": "cass",
+    "text": "That's the spirit.",
+    "expression": "thinking"
+  },
+  {
+    "id": "promise-search",
+    "speaker": "cass",
+    "text": "Search? Boring. Why?",
+    "expression": "thinking"
+  },
+  {
+    "id": "promise-plan",
+    "speaker": "cass",
+    "text": "Monday. Make it big.",
+    "expression": "thinking"
+  },
+  {
+    "id": "plan",
+    "speaker": "reva",
+    "text": "Fill the sprint. Thirty points.",
+    "expression": "thinking"
+  },
+  {
+    "id": "gate",
+    "speaker": "amara",
+    "text": "Pick the criteria. I'll check them.",
+    "expression": "thinking"
+  },
+  {
+    "id": "gate-reva",
+    "speaker": "reva",
+    "text": "Cass wants the gong at five. Go?",
+    "expression": "thinking"
+  },
+  {
+    "id": "hold",
+    "speaker": "nils",
+    "text": "Thank you. Quietly.",
+    "expression": "thinking"
+  },
+  {
+    "id": "hold-cass",
+    "speaker": "cass",
+    "text": "Next Friday, then.",
+    "expression": "thinking"
+  },
+  {
+    "id": "week2",
+    "speaker": "pa",
+    "text": "Week two. The Debt Collector.",
+    "expression": "thinking"
+  },
+  {
+    "id": "week3",
+    "speaker": "pa",
+    "text": "Week three. The Zenith Review.",
+    "expression": "thinking"
+  },
+  {
+    "id": "review",
+    "speaker": "reva",
+    "text": "Show us what changed. Then ask for what comes next.",
+    "expression": "thinking"
+  },
+  {
+    "id": "incident",
+    "speaker": "nils",
+    "text": "The write queue is stalled. We need a decision.",
+    "expression": "thinking"
+  },
+  {
+    "id": "retention",
+    "speaker": "kofi",
+    "text": "Finally someone asked.",
+    "expression": "thinking"
+  },
+  {
+    "id": "flag",
+    "speaker": "amara",
+    "text": "A limited rollout gives us an exit.",
+    "expression": "thinking"
+  },
+  {
+    "id": "spin",
+    "speaker": "cass",
+    "text": "It sounds good. Can we substantiate it?",
+    "expression": "thinking"
+  }
+]

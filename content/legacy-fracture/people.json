@@ -1,0 +1,68 @@
+[
+  {
+    "id": "oswald",
+    "name": "Oswald Price",
+    "role": "Chief Dispatch Engineer",
+    "want": "The rules he built to be understood.",
+    "fear": "A replacement that erases them.",
+    "prop": "pencil",
+    "accent": "#bc8d3e",
+    "voice": "bm_george",
+    "speed": 0.91
+  },
+  {
+    "id": "cora",
+    "name": "Cora Granger",
+    "role": "Chief Operating Officer",
+    "want": "A moving fleet through peak.",
+    "fear": "An outage on her watch.",
+    "prop": "keys",
+    "accent": "#873f36",
+    "voice": "af_nicole",
+    "speed": 0.95
+  },
+  {
+    "id": "isaac",
+    "name": "Isaac Nakamura",
+    "role": "Chief Financial Officer",
+    "want": "The cost of failure in writing.",
+    "fear": "An open-ended migration bill.",
+    "prop": "ledger",
+    "accent": "#b29768",
+    "voice": "am_michael",
+    "speed": 0.89
+  },
+  {
+    "id": "renata",
+    "name": "Renata Okafor",
+    "role": "Regional Operations Manager",
+    "want": "Drivers home on time.",
+    "fear": "Explaining delays she did not cause.",
+    "prop": "vest",
+    "accent": "#d2884d",
+    "voice": "af_bella",
+    "speed": 0.98
+  },
+  {
+    "id": "leif",
+    "name": "Leif Aaberg",
+    "role": "Platform Engineer",
+    "want": "A real replacement to build.",
+    "fear": "The part no diagram admits.",
+    "prop": "laptop",
+    "accent": "#71a293",
+    "voice": "bm_lewis",
+    "speed": 1.04
+  },
+  {
+    "id": "alistair",
+    "name": "Alistair Granger",
+    "role": "Chairman",
+    "want": "A firm that lasts another century.",
+    "fear": "A rushed change that loses its memory.",
+    "prop": "cane",
+    "accent": "#ddbd71",
+    "voice": "bm_daniel",
+    "speed": 0.86
+  }
+]

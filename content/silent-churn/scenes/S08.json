@@ -1,0 +1,14 @@
+{
+  "id": "S08",
+  "type": "TOOL",
+  "goal": "Trade sample depth for time",
+  "background": "desk",
+  "tools": [
+    "dredger",
+    "pattern",
+    "coalition",
+    "preread",
+    "window",
+    "gauntlet"
+  ]
+}

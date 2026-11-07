@@ -1,0 +1,965 @@
+[
+  {
+    "id": "retry",
+    "type": "TOOL",
+    "background": "office",
+    "goal": "Sort the first retry while the confetti says 340%.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "joyce"
+    ],
+    "lines": [
+      {
+        "id": "line-1",
+        "speaker": "joyce",
+        "expression": "thinking",
+        "text": "The dashboard and the sample do not agree."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "retry",
+        "kind": "DragBins",
+        "title": "Does this event count?",
+        "items": [
+          {
+            "id": "sample",
+            "label": "Retry of request R-12",
+            "detail": "Same request, same account, second completion event.",
+            "effects": [],
+            "answer": "Does not count"
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_ghost-metric_retry",
+        "bins": [
+          "Counts",
+          "Does not count"
+        ]
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "drawer-cart"
+  },
+  {
+    "id": "drawer-cart",
+    "type": "TOOL",
+    "background": "lab",
+    "goal": "Wheel three evidence drawers to the bench.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "ravi"
+    ],
+    "lines": [
+      {
+        "id": "line-2",
+        "speaker": "ravi",
+        "expression": "thinking",
+        "text": "Send me the query."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "drawers",
+        "kind": "EvidenceDrawers",
+        "title": "The drawer cart",
+        "items": [
+          {
+            "id": "gateway",
+            "label": "Gateway events",
+            "detail": "Shows request-level retries.",
+            "effects": [],
+            "group": "gateway",
+            "soWhat": "Shows repeated request events."
+          },
+          {
+            "id": "billing",
+            "label": "Billing ledger",
+            "detail": "Shows paid customer activity.",
+            "effects": [],
+            "group": "billing",
+            "soWhat": "Shows genuine paid activity."
+          },
+          {
+            "id": "accounts",
+            "label": "Account directory",
+            "detail": "Shows internal and sandbox accounts.",
+            "effects": [],
+            "group": "accounts",
+            "soWhat": "Shows which accounts belong inside the metric."
+          },
+          {
+            "id": "streams",
+            "label": "Stream log",
+            "detail": "Shows partial completions counted separately.",
+            "effects": [],
+            "group": "streams",
+            "soWhat": "Shows partial versus complete work."
+          },
+          {
+            "id": "cohorts",
+            "label": "Cohort history",
+            "detail": "Shows denominator changes over time.",
+            "effects": [],
+            "group": "cohorts",
+            "soWhat": "Shows whether the denominator changed."
+          },
+          {
+            "id": "definition",
+            "label": "Metric definition",
+            "detail": "Shows what the original dashboard promised.",
+            "effects": [],
+            "group": "definition",
+            "soWhat": "Shows what the original number promised."
+          }
+        ],
+        "min": 3,
+        "max": 3,
+        "cost": 1,
+        "receiptId": "R_ghost-metric_drawers"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "join"
+  },
+  {
+    "id": "join",
+    "type": "TOOL",
+    "background": "lab",
+    "goal": "Connect the source to a defensible identity key.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "ravi"
+    ],
+    "lines": [
+      {
+        "id": "line-3",
+        "speaker": "ravi",
+        "expression": "thinking",
+        "text": "A join can multiply a story before anyone notices."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "join",
+        "kind": "GraphView",
+        "title": "The join bench",
+        "items": [
+          {
+            "id": "request",
+            "label": "Trace request identity",
+            "detail": "Request ID exposes duplicated retry events.",
+            "effects": [],
+            "group": "request-proof"
+          },
+          {
+            "id": "account",
+            "label": "Trace account identity",
+            "detail": "Account ID exposes internal traffic.",
+            "effects": [],
+            "group": "account-proof"
+          },
+          {
+            "id": "billing",
+            "label": "Reconcile paid activity",
+            "detail": "Billing links activity to customers, not promises.",
+            "effects": [],
+            "group": "billing-proof",
+            "soWhat": "Shows genuine paid activity."
+          }
+        ],
+        "min": 2,
+        "max": 2,
+        "cost": 0,
+        "receiptId": "R_ghost-metric_join"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "autopsy"
+  },
+  {
+    "id": "autopsy",
+    "type": "TOOL",
+    "background": "lab",
+    "goal": "Use three instruments to separate real growth from counting noise.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "joyce"
+    ],
+    "lines": [
+      {
+        "id": "line-4",
+        "speaker": "joyce",
+        "expression": "thinking",
+        "text": "The bubble is a claim. Find its layers."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "autopsy",
+        "kind": "MetricAutopsy",
+        "title": "The metric autopsy",
+        "items": [
+          {
+            "id": "scalpel",
+            "label": "Scalpel: filter by account",
+            "detail": "Internal traffic is part of the apparent increase.",
+            "effects": [
+              {
+                "var": "ghostMass",
+                "op": "add",
+                "value": -2
+              }
+            ],
+            "group": "account-layer"
+          },
+          {
+            "id": "probe",
+            "label": "Probe: trace a request",
+            "detail": "Retries contribute repeated completion events.",
+            "effects": [
+              {
+                "var": "ghostMass",
+                "op": "add",
+                "value": -3.5
+              }
+            ],
+            "group": "retry-layer"
+          },
+          {
+            "id": "microscope",
+            "label": "Microscope: inspect a cohort",
+            "detail": "Streams and cohort shifts add more counting noise.",
+            "effects": [
+              {
+                "var": "ghostMass",
+                "op": "add",
+                "value": -2
+              }
+            ],
+            "group": "cohort-layer"
+          },
+          {
+            "id": "hammer",
+            "label": "Hammer: delete the headline",
+            "detail": "A headline is not a data filter.",
+            "effects": [
+              {
+                "var": "HOURS",
+                "op": "add",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "min": 3,
+        "max": 3,
+        "cost": 0,
+        "receiptId": "R_ghost-metric_autopsy"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "bet"
+  },
+  {
+    "id": "bet",
+    "type": "TOOL",
+    "background": "office",
+    "goal": "Stake credibility on an interval before the reveal.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "joyce"
+    ],
+    "lines": [
+      {
+        "id": "line-5",
+        "speaker": "joyce",
+        "expression": "thinking",
+        "text": "A narrow range is a stronger claim. Price it honestly."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "confidence",
+        "kind": "ConfidenceBet",
+        "title": "Confidence betting",
+        "items": [],
+        "min": 0,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_ghost-metric_confidence",
+        "lever": [
+          {
+            "id": "low",
+            "label": "Lower ghost-share bound",
+            "min": 0,
+            "max": 100,
+            "initial": 70,
+            "step": 1
+          },
+          {
+            "id": "high",
+            "label": "Upper ghost-share bound",
+            "min": 0,
+            "max": 100,
+            "initial": 95,
+            "step": 1
+          },
+          {
+            "id": "stake",
+            "label": "Credibility chips",
+            "min": 1,
+            "max": 10,
+            "initial": 3,
+            "step": 1
+          }
+        ]
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "promise"
+  },
+  {
+    "id": "promise",
+    "type": "FACE",
+    "background": "office",
+    "goal": "Choose the exact promise Anders can quote.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "anders"
+    ],
+    "lines": [
+      {
+        "id": "line-6",
+        "speaker": "anders",
+        "expression": "thinking",
+        "text": "The number is already in the board deck."
+      }
+    ],
+    "choices": [
+      {
+        "id": "confident",
+        "text": "The increase is verified.",
+        "effects": [
+          {
+            "flag": "strong-promise",
+            "value": true
+          },
+          {
+            "schedule": {
+              "fuse": "promise-quote",
+              "inDays": 7
+            }
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_ghost-metric_confident",
+          "store": "text"
+        }
+      },
+      {
+        "id": "qualified",
+        "text": "The increase includes counting noise. Verification continues.",
+        "effects": [
+          {
+            "var": "credibility",
+            "op": "add",
+            "value": 3
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_ghost-metric_qualified",
+          "store": "text"
+        }
+      },
+      {
+        "id": "evasive",
+        "text": "The story is directionally useful.",
+        "effects": [
+          {
+            "var": "credibility",
+            "op": "add",
+            "value": -5
+          },
+          {
+            "flag": "strong-promise",
+            "value": true
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_ghost-metric_evasive",
+          "store": "text"
+        }
+      }
+    ],
+    "tools": [],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 1,
+    "act": 1,
+    "next": "confession"
+  },
+  {
+    "id": "confession",
+    "type": "TOOL",
+    "background": "office",
+    "goal": "Choose how to correct the promise when it fails.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "anders"
+    ],
+    "lines": [
+      {
+        "id": "line-7",
+        "speaker": "anders",
+        "expression": "thinking",
+        "text": "Read your original promise back to me."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "confession",
+        "kind": "SentenceBuilder",
+        "title": "The confession booth",
+        "items": [
+          {
+            "id": "own",
+            "label": "I overstated the verification. Here is the corrected evidence.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "credibility",
+                "op": "add",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "id": "blame",
+            "label": "The data team supplied the number.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "trust",
+                "op": "add",
+                "value": -10
+              }
+            ]
+          },
+          {
+            "id": "hide",
+            "label": "We can quietly replace the chart.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "risk",
+                "op": "add",
+                "value": 10
+              }
+            ]
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_ghost-metric_confession"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 7,
+    "act": 2,
+    "when": {
+      "flag": "strong-promise"
+    },
+    "next": "slides"
+  },
+  {
+    "id": "slides",
+    "type": "TOOL",
+    "background": "office",
+    "goal": "Build the slide and watch the room’s faces.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "elena"
+    ],
+    "lines": [
+      {
+        "id": "line-8",
+        "speaker": "elena",
+        "expression": "thinking",
+        "text": "The headline will travel without your footnotes."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "slides",
+        "kind": "PosterComposer",
+        "title": "Read the room",
+        "items": [
+          {
+            "id": "direct",
+            "label": "Correct the number explicitly.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "temperature",
+                "op": "add",
+                "value": -5
+              },
+              {
+                "var": "credibility",
+                "op": "add",
+                "value": 5
+              }
+            ]
+          },
+          {
+            "id": "evolution",
+            "label": "Explain how the measurement improved.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "temperature",
+                "op": "add",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "id": "bury",
+            "label": "Move the caveat into the appendix.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "temperature",
+                "op": "add",
+                "value": -12
+              },
+              {
+                "var": "risk",
+                "op": "add",
+                "value": 8
+              }
+            ]
+          }
+        ],
+        "min": 1,
+        "max": 1,
+        "cost": 0,
+        "receiptId": "R_ghost-metric_slides"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 7,
+    "act": 2,
+    "next": "all-hands"
+  },
+  {
+    "id": "all-hands",
+    "type": "TOOL",
+    "background": "boardroom",
+    "goal": "Present on stage and respond to the audience.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "anders"
+    ],
+    "lines": [
+      {
+        "id": "line-9",
+        "speaker": "anders",
+        "expression": "thinking",
+        "text": "Tell the room what was true, and what changed."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "reveal",
+        "kind": "AllHands",
+        "title": "The all-hands reveal",
+        "items": [
+          {
+            "id": "own",
+            "label": "Own the correction.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "temperature",
+                "op": "add",
+                "value": 4
+              },
+              {
+                "var": "credibility",
+                "op": "add",
+                "value": 4
+              }
+            ]
+          },
+          {
+            "id": "limits",
+            "label": "Name the remaining uncertainty.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "temperature",
+                "op": "add",
+                "value": 2
+              },
+              {
+                "var": "confidence",
+                "op": "add",
+                "value": -3
+              }
+            ]
+          },
+          {
+            "id": "celebrate",
+            "label": "Celebrate the cleaned growth alone.",
+            "detail": "",
+            "effects": [
+              {
+                "var": "temperature",
+                "op": "add",
+                "value": -4
+              }
+            ]
+          }
+        ],
+        "min": 2,
+        "max": 2,
+        "cost": 0,
+        "receiptId": "R_ghost-metric_reveal"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 8,
+    "act": 2,
+    "next": "definition"
+  },
+  {
+    "id": "definition",
+    "type": "TOOL",
+    "background": "office",
+    "goal": "Write the metric the heist crew will try to game.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "ravi"
+    ],
+    "lines": [
+      {
+        "id": "line-10",
+        "speaker": "ravi",
+        "expression": "thinking",
+        "text": "A definition is a contract with everyone optimizing it."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "definition",
+        "kind": "SentenceBuilder",
+        "title": "Metric definition",
+        "items": [
+          {
+            "id": "dedupe",
+            "label": "Count one completion per stable request.",
+            "detail": "",
+            "effects": [
+              {
+                "flag": "dedupe",
+                "value": true
+              }
+            ]
+          },
+          {
+            "id": "exclude",
+            "label": "Exclude verified internal and sandbox accounts.",
+            "detail": "",
+            "effects": [
+              {
+                "flag": "exclude",
+                "value": true
+              }
+            ]
+          },
+          {
+            "id": "quality",
+            "label": "Pair completion with quality and latency guardrails.",
+            "detail": "",
+            "effects": [
+              {
+                "flag": "quality",
+                "value": true
+              }
+            ]
+          },
+          {
+            "id": "raw",
+            "label": "Count every completion event.",
+            "detail": "",
+            "effects": [
+              {
+                "flag": "raw-count",
+                "value": true
+              }
+            ]
+          }
+        ],
+        "min": 2,
+        "max": 3,
+        "cost": 0,
+        "receiptId": "R_ghost-metric_definition"
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 14,
+    "act": 3,
+    "next": "heist"
+  },
+  {
+    "id": "heist",
+    "type": "TOOL",
+    "background": "lab",
+    "goal": "Catch the Retrier, the Duper, and the Insider.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "retrier"
+    ],
+    "lines": [
+      {
+        "id": "line-11",
+        "speaker": "retrier",
+        "expression": "thinking",
+        "text": "I repeat what you let me count."
+      }
+    ],
+    "choices": [],
+    "tools": [
+      {
+        "id": "heist",
+        "kind": "HeistCrew",
+        "title": "The heist crew",
+        "items": [
+          {
+            "id": "retrier",
+            "label": "Patch the Retrier",
+            "detail": "I retry until your count grows.",
+            "effects": [
+              {
+                "flag": "retry-patched",
+                "value": true
+              },
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "id": "duper",
+            "label": "Patch the Duper",
+            "detail": "I duplicated the customer identity.",
+            "effects": [
+              {
+                "flag": "dupe-patched",
+                "value": true
+              },
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "id": "insider",
+            "label": "Patch the Insider",
+            "detail": "Your exclusion depends on a label I control.",
+            "effects": [
+              {
+                "flag": "insider-patched",
+                "value": true
+              },
+              {
+                "var": "readiness",
+                "op": "add",
+                "value": 3
+              }
+            ]
+          }
+        ],
+        "min": 3,
+        "max": 3,
+        "cost": 0,
+        "receiptId": "R_ghost-metric_heist",
+        "rounds": 3
+      }
+    ],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 14,
+    "act": 3,
+    "next": "board"
+  },
+  {
+    "id": "board",
+    "type": "FACE",
+    "background": "boardroom",
+    "goal": "Choose the story you will defend after the heist.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "anders"
+    ],
+    "lines": [
+      {
+        "id": "line-12",
+        "speaker": "anders",
+        "expression": "thinking",
+        "text": "A smaller honest number can still support a strategy."
+      }
+    ],
+    "choices": [
+      {
+        "id": "publish",
+        "text": "Publish the definition, correction, and guardrails.",
+        "effects": [
+          {
+            "var": "credibility",
+            "op": "add",
+            "value": 8
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_ghost-metric_publish",
+          "store": "text"
+        }
+      },
+      {
+        "id": "roadmap",
+        "text": "Continue the roadmap using the old number.",
+        "effects": [
+          {
+            "var": "risk",
+            "op": "add",
+            "value": 15
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_ghost-metric_roadmap",
+          "store": "text"
+        }
+      },
+      {
+        "id": "pilot",
+        "text": "Run a bounded independent measurement pilot.",
+        "effects": [
+          {
+            "var": "readiness",
+            "op": "add",
+            "value": 4
+          },
+          {
+            "var": "cash",
+            "op": "add",
+            "value": -3
+          }
+        ],
+        "unlocks": [],
+        "receipt": {
+          "id": "R_ghost-metric_pilot",
+          "store": "text"
+        }
+      }
+    ],
+    "tools": [],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": false,
+    "minInteractions": 1,
+    "day": 21,
+    "act": 3,
+    "next": "review"
+  },
+  {
+    "id": "review",
+    "type": "REVIEW",
+    "background": "lab",
+    "goal": "Compare the claim, the audit, the bet, and the replacement.",
+    "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+    "speakers": [
+      "joyce"
+    ],
+    "lines": [
+      {
+        "id": "line-14",
+        "speaker": "joyce",
+        "expression": "thinking",
+        "text": "The number should survive the people rewarded for growing it."
+      }
+    ],
+    "choices": [],
+    "tools": [],
+    "onEnter": [],
+    "onExit": [],
+    "skippable": true,
+    "minInteractions": 0,
+    "day": 21,
+    "act": 3
+  }
+]

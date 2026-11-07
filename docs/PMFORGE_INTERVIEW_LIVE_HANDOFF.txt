@@ -1,0 +1,183 @@
+PMForge Interview Section — Complete Bulletproof HandoffGoal
+
+Transform the existing structured practice simulator into a high-fidelity live interview experience. The candidate must feel they are in a real PM loop (Meta Product Sense / Analytical Thinking, Google product vision + analysis, Amazon Leadership Principles-style behavioral, etc.), not completing a multi-step form with delayed pop-ups.This document is the single source of truth for design, engineering, content, and QA. It incorporates the five critical structural vulnerabilities and all mitigations required to reach production-grade interview realism.0. Non-Negotiable Design Principles
+Conversation over form. The system must feel like a responsive interviewer, not a staged wizard.
+Structure is tested, not gifted. Tools help the candidate organize their own thinking; they never write the answer for them.
+Voice is the primary interface. Text is the accessibility and low-bandwidth fallback.
+Pushback is live and contextual, not purely gate-based.
+Cognitive load is managed through clear macro-phases and aggressive autosave.
+Scoring remains transparent, provisional, and primarily rule-based. Spoken analysis is diagnostic only.
+1. Five Critical Vulnerabilities & Complete Mitigations1.1 The “Form in Disguise” TrapProblem: Delayed text messages after field submission feel like a survey with simulated pop-ups.Complete Fix:
+Interviewer presence is continuous and ambient.
+Primary interaction mode is spoken or free-form typed thinking that the interviewer reacts to in near real time.
+Fixed workflow gates still exist for evidence and decision recording, but the conversational layer sits on top of them.
+Interviewer messages use natural TTS (ElevenLabs / OpenAI TTS or equivalent) with short, human pacing.
+Visual interviewer card shows continuous state: listening, taking notes, thinking, speaking.
+Candidate never “submits a form and waits.” They speak or type, the system processes, and the interviewer responds as a human would.
+1.2 Audio & PM-Jargon Parsing FragilityProblem: Generic STT destroys PM vocabulary (CAC, LTV, MAU, k-factor, p99, RICE, cannibalization, etc.).Complete Fix:
+Domain-specific STT pipeline:
+Inject ~300–400 PM terms, metrics, frameworks, and technical concepts via Whisper initial_prompt, Deepgram custom keywords, or equivalent.
+Maintain a living vocabulary list owned by content + engineering.
+
+Raw transcript is preserved with filler words intact.
+Filler words (“um”, “like”, “you know”, “kind of”, “basically”) are visually muted (gray underline) so candidates can review verbal ticks in replay.
+Auto-punctuation is applied, but raw version remains available.
+Fallback: one-tap “Fast-Typing Mode” with keyboard shortcuts (Enter = temporary commit, Esc = cancel, Markdown support).
+1.3 The “Structure This” Crutch ParadoxProblem: Instant perfect CIRCLES/STAR outlines remove the skill being tested.Complete Fix — Guardrail System:
+Two-Way Diff Editor (always shown):
+Left: candidate’s raw transcript / notes.
+Right: structured outline.
+Unsupported claims and missing required elements are highlighted (e.g., “Solution present but Target Persona not linked”, “Missing Guardrail metric”).
+
+Friction by Difficulty:
+Easy: Full framework generation available. Diff still shown.
+Medium: Skeleton only. System populates only what the candidate explicitly stated. Empty slots remain empty.
+Hard + Interview Mode: “Structure This” disabled or limited to a 10-second read-only scaffold glance. Candidate must organize themselves.
+
+Tool never auto-replaces the candidate’s text. Candidate must actively accept or edit.
+1.4 Asynchronous Pushback vs. Live InterruptionProblem: Pushback only at fixed gates feels scripted.Complete Fix — Dynamic Interruption & Barge-in:
+Pivot Bell: Distinct, subtle audio cue + visual pulse when the interviewer intervenes.
+Mid-stream or immediately after a major assertion, the system can pause the candidate’s active timer and inject a spoken challenge via TTS:“Before you go into solutions, I want to challenge your assumption about churn — why aren’t we focusing on activation instead?”
+Workbench / next action is locked until the candidate gives a spoken or typed acknowledgment/defense (minimum ~20–30 seconds of response).
+Interruption logic combines:
+Scripted high-value probes (authored per scenario).
+Lightweight detection of key assertions (metric named, recommendation stated, segment chosen) to trigger contextual pushback.
+
+Hard mode increases interruption frequency and introduces constraint changes mid-flow.
+1.5 Session Momentum & Cognitive OverloadProblem: 12 discrete steps + evidence credits + mic + structure + timers + workbenches causes drop-off.Complete Fix:
+Global Phase Bar with only three macro-phases:
+Framing & Discovery
+Solution & Defend
+Synthesis & Feedback
+
+All detailed stages live inside these three phases. Progress is always visible at the phase level.
+Aggressive Session Autosave: every meaningful action is persisted. Closing the tab shows an “Interview in Progress” drawer on return with exact resume state.
+Optional “Interview Mode” toggle that tightens timing and increases interruptions without adding extra UI steps.
+Mobile-first consideration: Fast-Typing Mode + offline audio-level checks + graceful network fallback.
+2. Voice & Audio Architecture (Complete Spec)Preflight Audio Check
+Before any spoken scenario starts, detect input volume.
+If zero (or near-zero) decibels for the first 3 seconds of a test recording → instant alert: “We can’t hear you. Check your microphone input.”
+User can re-test or switch to Fast-Typing Mode.
+During Session
+Voice Activity Detection (VAD). Pause > 3.5 seconds triggers soft prompt: “Take a breath, or wrap up your point.”
+Continuous ambient interviewer cues:
+Active Listening: subtle head-nod animation or pulsing sound-wave indicator.
+Taking Notes: pencil/icon animation after candidate states a metric, recommendation, or major claim.
+
+Spoken practice reps (Make the Call + Behavioral) support optional local recording for self-review only. No permanent cloud storage required unless user opts in.
+Privacy: explicit consent, clear “this is practice only” labeling, easy discard.
+Mobile / Low-Bandwidth
+Client-side audio level checks.
+One-tap switch to Fast-Typing Mode.
+Graceful degradation if STT upload fails.
+3. Structure This — Full Guardrail Spec
+Always presents Two-Way Diff.
+Difficulty-gated behavior as defined above.
+Category-native skeletons (never generic):
+RCA: Clarify metric → Segment → Ranked hypotheses → Evidence → Recommendation + next check
+Product Sense: Goal → User → Needs → Prioritize → Solutions → Trade-offs → Recommendation
+Behavioral: Situation → Stakes → Actions (I…) → Result → Learning → Later application
+Estimation: Approach → Drivers → Assumptions → Calculation → Sanity check → Unit
+etc.
+
+Diff highlights both missing required elements and claims that appear in the structured side without support in the raw transcript.
+4. Category-Specific Polishing & Reality Checks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CategoryMissing Reality CheckHigh-Fidelity UX FixRoot Cause AnalysisJump straight to data cuts without clarifying definitionsClarification Gate: Before any paid evidence credits can be spent, candidate must select or speak 2 clarifying questions (metric definition, population, time window, instrumentation change, internal vs external, etc.).Product SenseCIRCLES feels mechanicalDelight / 10x Insight Probe (especially Hard): “Competitor X launched this yesterday. What is our non-obvious defensibility?”Market StrategyStrategy without baseline sizingQuick-Math Sanity Check: Force a lightweight TAM/SAM or order-of-magnitude check before aggressive expansion vs niche lock-in.Execution & MetricsIgnoring second-order effectsCounter-Metric Stress Test: Immediately after primary metric selection, interviewer attacks: “If this metric jumps 40%, what metric breaks in another org?”EstimationSliders break mental mathHybrid Scratchpad: Interactive whiteboard/scratchpad. Typing or handwriting is parsed into formulas. Unit mismatches and implausible ranges are highlighted in real time.AI & TechnicalName-dropping without trade-offsTrilemma Constraint Card: Latency vs Cost vs Quality. Selecting an LLM tier locks a latency/cost floor the candidate must defend in the spoken rep.BehavioralPassive voice (“We decided”)“I” Detector: Real-time flagging of sentences starting with “We”. Triggers interviewer probe: “What was your specific ownership versus the tech lead’s?”All existing workbench mechanics, evidence credits, decision records, and scoring dimensions remain. The above are additive reality checks that increase interview fidelity.5. Complete Session Flow (Macro + Micro)Macro Phases (always visible)
+Framing & Discovery
+Solution & Defend
+Synthesis & Feedback
+Detailed Sequence (inside the phases)Phase 1 – Framing & Discovery
+Preflight (situation, constraint, what must be defended, pressure mode toggle, audio check)
+Warm-up (Easy only; make category-specific)
+Clarification Gate where required (RCA, etc.)
+Pin / lightly negotiate the goal
+Evidence desk (credits, order matters)
+Phase 2 – Solution & Defend
+Category workbench (with all reality-check gates above)
+Live / contextual interviewer interruptions (Pivot Bell + TTS)
+Defend / Adjust / Pivot responses required
+Make the Call (structured decision record + spoken practice rep with structure checklist)
+Phase 3 – Synthesis & Feedback
+Immediate band + weakest dimension + practice tip
+Decision replay (raw + structured + spoken notes + filler analysis)
+Self-calibration (with Blind Spot detection vs engine score)
+Expert reasoning (authored + alternative defensible paths)
+Next move (targeted retry, Portfolio save, next scenario, progress)
+Guided first-run remains shortened. After first run, full flow is available. Interview Mode increases interruption density and tightens timing.6. Spoken Delivery Analysis (Diagnostic Only)Shown after the spoken practice rep. Never replaces the core rule-based score.textSpoken Delivery Analysis (Diagnostic)
+────────────────────────────────────
+[✓] Bottom-Line-Up-Front     Recommendation in first 15s
+[!] Verbal Pacing            178 WPM (Slightly rushed; target ~140)
+[✓] Ownership Bias           78% “I” vs 22% “We” (Behavioral)
+[!] Structural Signposts     Missing: Guardrail metric
+[✓] Filler Word Density      1.2% (Excellent; benchmark < 3%)Additional self-calibration signal:
+Compare candidate’s self-rating on a dimension with the deterministic coverage of that dimension.
+Flag large positive deltas as potential blind spots: “You rated risk mitigation 5/5, but the scenario required an explicit guardrail that was not selected.”
+Core scoring engine remains the existing weighted, rule-based system (segmentation, hypothesis ranking, evidence efficiency, decision quality, traps, etc.). Spoken analysis is purely additive and labeled as diagnostic.7. Edge Cases, Failures & Validation Traps (Must Implement)
+Silent microphone → Preflight volume check + mid-rep zero-decibel alert.
+Mobile / iOS Chrome / low bandwidth → Fast-Typing Mode + client-side checks + graceful STT fallback.
+LLM evaluation risk → Never use LLM as primary scorer for the spoken rep. Stick to structural markers (presence of “My recommendation is…”, “The primary trade-off is…”, “We will track X…” and absence of heavy hedging).
+Endless session abandonment → 3-phase progress bar + aggressive autosave + resume drawer.
+STT jargon failure → Domain vocabulary injection + raw transcript always available.
+Over-reliance on Structure This → Difficulty-gated friction + mandatory Two-Way Diff.
+Scripted feel → Contextual barge-in + ambient listening cues + TTS with natural timing.
+8. Implementation Priority Order
+Audio preflight + VAD + PM-custom STT vocabulary + filler preservation.
+Continuous interviewer presence + ambient cues + Pivot Bell + TTS barge-in.
+Structure This with Two-Way Diff + difficulty friction.
+Three-phase progress bar + aggressive autosave + resume.
+Category reality-check gates (Clarification Gate, Counter-Metric, Trilemma, “I” Detector, Hybrid Scratchpad, etc.).
+Spoken Delivery Analysis (diagnostic) + Blind Spot self-calibration signal.
+Mobile Fast-Typing Mode and network resilience.
+Polish of expert reasoning, Portfolio export, and targeted retries.
+9. Success Criteria (Definition of Done)
+Candidate reports “felt like a real interview probe / interruption.”
+Structure This usage is high, but acceptance rate of unedited output is low (candidates edit).
+Spoken practice completion rate > 80% on Medium/Hard.
+Drop-off before Synthesis phase is materially lower than current multi-step wizard.
+STT accuracy on PM jargon is measurably higher than baseline generic model.
+Zero silent-audio failures that reach the end of a 90-second rep without warning.
+Scoring remains explainable and never claims to fully replace human judgment.

@@ -1,0 +1,138 @@
+{
+  "id": "rehearsal",
+  "type": "TOOL",
+  "background": "office",
+  "goal": "Test three arguments against Kian’s resolve.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "kian"
+  ],
+  "lines": [
+    {
+      "id": "line-4",
+      "speaker": "kian",
+      "expression": "thinking",
+      "text": "The board needs conviction. Show me yours."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "rehearsal",
+      "kind": "ArgumentDeck",
+      "title": "Argument deck",
+      "items": [
+        {
+          "id": "data-card",
+          "label": "The trace shows production latency increasing.",
+          "detail": "Evidence: latency.",
+          "effects": [
+            {
+              "var": "resolve",
+              "op": "add",
+              "value": -8
+            }
+          ],
+          "requires": {
+            "has": "data"
+          },
+          "reaction": "Fine. Convince me.",
+          "speaker": "kian"
+        },
+        {
+          "id": "revenue-card",
+          "label": "Pipeline is not contracted revenue.",
+          "detail": "Evidence: commercial risk.",
+          "effects": [
+            {
+              "var": "resolve",
+              "op": "add",
+              "value": -4
+            }
+          ],
+          "requires": {
+            "has": "revenue"
+          },
+          "reaction": "Then give Tess a smaller offer.",
+          "speaker": "kian"
+        },
+        {
+          "id": "burnout-card",
+          "label": "This requires another unsupported night shift.",
+          "detail": "Evidence: staffing.",
+          "effects": [
+            {
+              "var": "resolve",
+              "op": "add",
+              "value": -5
+            }
+          ],
+          "requires": {
+            "has": "burnout"
+          },
+          "reaction": "Who can actually support the pilot?",
+          "speaker": "kian"
+        },
+        {
+          "id": "alternative-card",
+          "label": "Show the stable product and a bounded pilot.",
+          "detail": "Evidence: alternative.",
+          "effects": [
+            {
+              "var": "resolve",
+              "op": "add",
+              "value": -10
+            }
+          ],
+          "requires": {
+            "has": "alternative"
+          },
+          "reaction": "That still gives the board a direction.",
+          "speaker": "kian"
+        },
+        {
+          "id": "reputation-card",
+          "label": "A crash can interrupt existing customer payments.",
+          "detail": "Evidence: reliability.",
+          "effects": [
+            {
+              "var": "resolve",
+              "op": "add",
+              "value": -8
+            }
+          ],
+          "requires": {
+            "has": "reputation"
+          }
+        },
+        {
+          "id": "board-card",
+          "label": "The board can approve a measurable checkpoint.",
+          "detail": "Evidence: board agenda.",
+          "effects": [
+            {
+              "var": "resolve",
+              "op": "add",
+              "value": -7
+            }
+          ],
+          "requires": {
+            "has": "board"
+          }
+        }
+      ],
+      "min": 3,
+      "max": 3,
+      "cost": 0,
+      "receiptId": "R_sacred-no_rehearsal",
+      "rounds": 3
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "duel"
+}

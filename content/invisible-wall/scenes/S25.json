@@ -1,0 +1,86 @@
+{
+  "id": "S25",
+  "type": "FACE",
+  "background": "annex",
+  "speakers": [
+    "imani",
+    "jonas",
+    "narration",
+    "soren"
+  ],
+  "lines": [
+    {
+      "id": "s25-1",
+      "speaker": "imani",
+      "expression": "neutral",
+      "text": "Put the line in the charter.",
+      "voiceId": "imani",
+      "phase": "before"
+    },
+    {
+      "id": "s25-2",
+      "speaker": "soren",
+      "expression": "neutral",
+      "text": "Give my team the runbook.",
+      "voiceId": "soren",
+      "phase": "before"
+    },
+    {
+      "id": "s25-3",
+      "speaker": "jonas",
+      "expression": "neutral",
+      "text": "Give me one headline for investors.",
+      "voiceId": "jonas",
+      "phase": "before"
+    },
+    {
+      "id": "s25-4",
+      "speaker": "narration",
+      "expression": "thinking",
+      "text": "Your choice is recorded. Inspect the result before moving on.",
+      "voiceId": "narration",
+      "phase": "after"
+    }
+  ],
+  "choices": [
+    {
+      "id": "charter",
+      "text": "Put the line in the charter",
+      "effects": {},
+      "receipt": null,
+      "next": "S26"
+    },
+    {
+      "id": "runbook",
+      "text": "Give the team the runbook",
+      "effects": {},
+      "receipt": null,
+      "next": "S26"
+    },
+    {
+      "id": "headline",
+      "text": "Give investors a headline",
+      "effects": {},
+      "receipt": null,
+      "next": "S26"
+    },
+    {
+      "id": "split",
+      "text": "Split the commitment",
+      "effects": {},
+      "receipt": null,
+      "next": "S26"
+    },
+    {
+      "id": "none",
+      "text": "Make no additional promise",
+      "effects": {},
+      "receipt": null,
+      "next": "S26"
+    }
+  ],
+  "tool": "final",
+  "goal": "Make one final commitment",
+  "canStill": "Choose the charter, runbook, headline, a split or none.",
+  "next": "S26"
+}

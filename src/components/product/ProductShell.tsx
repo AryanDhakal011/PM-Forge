@@ -39,6 +39,8 @@ import { exportWorkspace } from "@/lib/product/db";
 import OfflineSupport from "./OfflineSupport";
 import GuestImportPrompt from "./GuestImportPrompt";
 import LandingCarryPrompt from "./LandingCarryPrompt";
+import dynamic from "next/dynamic";
+const PlatformGateway = dynamic(() => import("@/components/projects/PlatformGateway"));
 
 const links = [
   { href: "/app", label: "Today", icon: House },
@@ -55,6 +57,17 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
   const [thought, setThought] = useState("Clarity is a practice.");
   const { profile, loading, error, reload, sync } = useWorkspace();
   const { reducedMotion } = useSettings();
+  useEffect(()=>{
+    if(!profile)return;
+    const project=pathname.match(/^\/app\/projects\/([a-z0-9-]+)/)?.[1];
+    if(!project||!projects.some(p=>p.id===project))return;
+    const url=new URL(location.href);
+    if(!/\/(play|run|debrief|branch)(\/|$)/.test(pathname)&&!url.searchParams.has('run'))return;
+    const remember=()=>{try{localStorage.setItem('pmforge.last-project-activity',JSON.stringify({ownerId:profile.id,path:url.pathname+url.search,at:new Date().toISOString()}))}catch{}};
+    const timer=setTimeout(remember,1000);
+    return()=>clearTimeout(timer);
+  },[pathname,profile?.id]);
+
   const [theme, setTheme] = useState("light");
   const [searchOpen, setSearchOpen] = useState(false);
   const [more, setMore] = useState(false);
@@ -93,10 +106,23 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
     }, root);
     return () => context.revert();
   }, [pathname, collapsed, loading, profile?.id, reducedMotion]);
+  const isInvisibleWall = pathname === "/app/projects/invisible-wall" || pathname === "/app/projects/invisible-wall/play";
+  const isFeatureFactory = pathname === "/app/projects/feature-factory" || pathname === "/app/projects/feature-factory/play";
+  const isSilentChurn = pathname === "/app/projects/silent-churn" || pathname === "/app/projects/silent-churn/play";
+  const isLegacyFracture = pathname === "/app/projects/legacy-fracture" || pathname === "/app/projects/legacy-fracture/play";
+  const isPivotPoint = pathname === "/app/projects/pivot-point" || pathname === "/app/projects/pivot-point/play";
+  const isPlatformProject = /^\/app\/projects\/(?!debrief(?:\/|$))[a-z0-9-]+(?:\/(?:play|debrief|branch)(?:\/[^/]+)?)?\/?$/.test(pathname);
   const isDeadlock =
     pathname === "/app/projects/deadlock" ||
     pathname === "/app/projects/sacred-no" ||
     pathname === "/app/projects/ghost-metric" ||
+    pathname === "/app/projects/trojan-horse" ||
+    isInvisibleWall ||
+    isFeatureFactory ||
+    isSilentChurn ||
+    isLegacyFracture ||
+    isPivotPoint ||
+    /^\/app\/projects\/trojan-horse\/play\/?/.test(pathname) ||
     /^\/app\/projects\/deadlock\/(play|debrief)\//.test(pathname);
   const isRun =
     pathname.startsWith("/app/run/") ||
@@ -124,7 +150,8 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
     window.addEventListener("pmforge:theme", update);
     let prefixAt = 0;
     const key = (event: KeyboardEvent) => {
-      if (window.location.pathname.startsWith("/app/projects/deadlock") || ["/app/projects/sacred-no", "/app/projects/ghost-metric"].includes(window.location.pathname)) return;
+      if (/^\/app\/projects\/(?!debrief(?:\/|$))[a-z0-9-]+/.test(window.location.pathname)) return;
+      if (window.location.pathname.startsWith("/app/projects/pivot-point") || window.location.pathname.startsWith("/app/projects/deadlock") || window.location.pathname.startsWith("/app/projects/trojan-horse") || (window.location.pathname === "/app/projects/invisible-wall" || window.location.pathname === "/app/projects/invisible-wall/play") || ["/app/projects/sacred-no", "/app/projects/ghost-metric", "/app/projects/feature-factory", "/app/projects/feature-factory/play", "/app/projects/silent-churn", "/app/projects/silent-churn/play", "/app/projects/legacy-fracture", "/app/projects/legacy-fracture/play"].includes(window.location.pathname)) return;
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
         event.preventDefault();
         setSearchOpen((o) => !o);
@@ -163,8 +190,8 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
       window.removeEventListener("pmforge:theme", update);
     };
   }, []);
-  useEffect(() => {
-    if (reducedMotion || loading || !profile) return;
+  useLayoutEffect(() => {
+    if (reducedMotion || loading || !profile || !content.current?.querySelector("[data-enter]")) return;
     const context = gsap.context(() => {
       gsap.fromTo(
         "[data-enter]",
@@ -202,9 +229,15 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
       setBackupStatus("Export failed. Please retry in Settings.");
     }
   };
+  useEffect(()=>{const close=(event:PointerEvent)=>{document.querySelectorAll<HTMLDetailsElement>('details[data-popover-menu][open]').forEach(menu=>{if(!menu.contains(event.target as Node))menu.open=false})};const key=(event:KeyboardEvent)=>{if(event.key==='Escape')document.querySelectorAll<HTMLDetailsElement>('details[data-popover-menu][open]').forEach(menu=>{menu.open=false;menu.querySelector<HTMLElement>('summary')?.focus()})};const links=(event:MouseEvent)=>{if((event.target as Element)?.closest('a'))document.querySelectorAll<HTMLDetailsElement>('details[data-popover-menu][open]').forEach(menu=>menu.open=false)};document.addEventListener('pointerdown',close,true);document.addEventListener('keydown',key);document.addEventListener('click',links,true);return()=>{document.removeEventListener('pointerdown',close,true);document.removeEventListener('keydown',key);document.removeEventListener('click',links,true)}},[]);
+  useEffect(()=>{setMore(false);setSearchOpen(false);document.querySelectorAll<HTMLDetailsElement>('details[data-popover-menu][open]').forEach(menu=>menu.open=false)},[pathname]);
   const active = (href: string) =>
     href === "/app" ? pathname === href : pathname.startsWith(href);
   const title = pathname.split("/")[2] || "Today";
+  // This self-contained simulation also supports a first visit without a
+  // workspace profile. Its versioned local saves do not require account state.
+  if (isPlatformProject) return <PlatformGateway>{children}</PlatformGateway>;
+  if (isInvisibleWall || isFeatureFactory || isSilentChurn || isLegacyFracture || isPivotPoint) return <>{children}</>;
   if (loading)
     return (
       <div className={styles.product}>
@@ -358,7 +391,7 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
                 <span>{title}</span>
               </div>
               <div className={styles.topActions}>
-                <details className={styles.storageMenu}>
+                <details className={styles.storageMenu} data-popover-menu>
                   <summary className={styles.storage}>
                     <i />
                     {profile.identity === "guest"
@@ -375,12 +408,13 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
                       Your practice and notes are stored in this browser.
                       Browser data can be cleared. Keep a backup.
                     </p>
-                    <button onClick={() => void backup()}>
+                    <button className={styles.menuAccent} onClick={() => void backup()}>
                       <Download size={16} />
                       Export backup
                     </button>
                     {profile.identity === "guest" && (
                       <Link
+                        className={styles.menuPrimary}
                         href={entryHref(pathname, "storage") + "&upgrade=1"}
                       >
                         Create account ↗
@@ -398,7 +432,7 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
                   <span>Find a scenario</span>
                   <kbd>⌘ K</kbd>
                 </button>
-                <details className={styles.accountMenu}>
+                <details className={styles.accountMenu} data-popover-menu>
                   <summary
                     className={styles.avatar}
                     aria-label="Your workspace menu"
@@ -410,14 +444,14 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
                     )}
                   </summary>
                   <div className={styles.popover}>
-                    <Link href="/app/settings">Settings</Link>
-                    <button onClick={() => void backup()}>Export backup</button>
+                    <strong>{profile.name||"Your workspace"}</strong><p>{profile.identity==="guest"?"Saved on this device":"Your account & preferences"}</p><Link href="/app/settings"><Settings size={16}/>Settings</Link>
+                    <button className={styles.menuAccent} onClick={() => void backup()}><Download size={16}/>Export backup</button>
                     {profile.identity === "guest" && (
-                      <Link href={entryHref(pathname, "avatar") + "&upgrade=1"}>
+                      <Link className={styles.menuPrimary} href={entryHref(pathname, "avatar") + "&upgrade=1"}>
                         Create account
                       </Link>
                     )}
-                    <Link href="/">Back to PMForge ↗</Link>
+                    <div className={styles.menuDivider}/><Link href="/"><ArrowLeft size={16}/>Back to PMForge ↗</Link>
                   </div>
                 </details>
               </div>
@@ -553,7 +587,7 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
           data-theme={theme}
           style={{ minHeight: 0, background: "none" }}
         >
-          <label className={styles.field}>
+          <div className={styles.commandSearch}><label>
             Search the scenario library
             <input
               autoFocus
@@ -565,6 +599,7 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
           <p className={styles.small}>
             Shortcuts: g then h for Today, p for Practice, r for Projects.
           </p>
+          </div>
           <div className={styles.commandList} aria-live="polite">
             <h3>Pages & actions</h3>
             {[
@@ -601,7 +636,7 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
                   onClick={() => setSearchOpen(false)}
                 >
                   {p.title}
-                  <small>Real World Project · 3 chapters · 45–75 min</small>
+                  <small>Real World Project · 3 chapters · {p.duration.label}</small>
                 </Link>
               ))}
             <h3>Scenarios</h3>

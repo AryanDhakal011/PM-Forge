@@ -1,0 +1,22 @@
+[
+  {
+    "id": "speed-quote",
+    "receiptId": "R_deadlock_mediation-speed",
+    "fireCondition": {
+      "day": {
+        "between": [
+          84,
+          200
+        ]
+      }
+    },
+    "lines": [
+      {
+        "id": "line-24",
+        "speaker": "dev",
+        "expression": "thinking",
+        "text": "Your speed decision is still in my notebook."
+      }
+    ]
+  }
+]

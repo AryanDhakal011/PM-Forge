@@ -1,0 +1,17 @@
+{
+  "id": "S17",
+  "type": "FACE",
+  "background": "board",
+  "goal": "Read the coalition cost",
+  "tools": [
+    "consequence"
+  ],
+  "lines": [
+    {
+      "speaker": "cora",
+      "text": "The board approved. Don't waste that trust.",
+      "expression": "thinking",
+      "clip": null
+    }
+  ]
+}

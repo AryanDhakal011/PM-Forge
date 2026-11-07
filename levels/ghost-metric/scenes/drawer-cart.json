@@ -1,0 +1,87 @@
+{
+  "id": "drawer-cart",
+  "type": "TOOL",
+  "background": "lab",
+  "goal": "Wheel three evidence drawers to the bench.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "ravi"
+  ],
+  "lines": [
+    {
+      "id": "line-2",
+      "speaker": "ravi",
+      "expression": "thinking",
+      "text": "Send me the query."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "drawers",
+      "kind": "EvidenceDrawers",
+      "title": "The drawer cart",
+      "items": [
+        {
+          "id": "gateway",
+          "label": "Gateway events",
+          "detail": "Shows request-level retries.",
+          "effects": [],
+          "group": "gateway",
+          "soWhat": "Shows repeated request events."
+        },
+        {
+          "id": "billing",
+          "label": "Billing ledger",
+          "detail": "Shows paid customer activity.",
+          "effects": [],
+          "group": "billing",
+          "soWhat": "Shows genuine paid activity."
+        },
+        {
+          "id": "accounts",
+          "label": "Account directory",
+          "detail": "Shows internal and sandbox accounts.",
+          "effects": [],
+          "group": "accounts",
+          "soWhat": "Shows which accounts belong inside the metric."
+        },
+        {
+          "id": "streams",
+          "label": "Stream log",
+          "detail": "Shows partial completions counted separately.",
+          "effects": [],
+          "group": "streams",
+          "soWhat": "Shows partial versus complete work."
+        },
+        {
+          "id": "cohorts",
+          "label": "Cohort history",
+          "detail": "Shows denominator changes over time.",
+          "effects": [],
+          "group": "cohorts",
+          "soWhat": "Shows whether the denominator changed."
+        },
+        {
+          "id": "definition",
+          "label": "Metric definition",
+          "detail": "Shows what the original dashboard promised.",
+          "effects": [],
+          "group": "definition",
+          "soWhat": "Shows what the original number promised."
+        }
+      ],
+      "min": 3,
+      "max": 3,
+      "cost": 1,
+      "receiptId": "R_ghost-metric_drawers"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "join"
+}

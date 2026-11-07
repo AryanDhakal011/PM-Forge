@@ -1,0 +1,31 @@
+{
+  "id": "S02",
+  "type": "FACE",
+  "background": "terminal",
+  "speakers": [
+    "mags"
+  ],
+  "lines": [
+    {
+      "id": "s02-1",
+      "speaker": "mags",
+      "expression": "neutral",
+      "text": "Badge.",
+      "voiceId": "mags",
+      "phase": "before"
+    },
+    {
+      "id": "s02-2",
+      "speaker": "mags",
+      "expression": "neutral",
+      "text": "Level one. The floor only. Don't wander.",
+      "voiceId": "mags",
+      "phase": "after"
+    }
+  ],
+  "choices": [],
+  "tool": "badge",
+  "goal": "Scan your badge",
+  "canStill": "Drag your badge to the scanner, or tap Scan.",
+  "next": "S03"
+}

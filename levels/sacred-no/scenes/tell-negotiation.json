@@ -1,0 +1,91 @@
+{
+  "id": "tell-negotiation",
+  "type": "TOOL",
+  "background": "office",
+  "goal": "Read Tess’s tells before accepting the offer.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "tess"
+  ],
+  "lines": [
+    {
+      "id": "line-7",
+      "speaker": "tess",
+      "expression": "thinking",
+      "text": "Say yes and I stop asking."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "tells",
+      "kind": "TellNegotiation",
+      "title": "The trade table",
+      "items": [
+        {
+          "id": "accept",
+          "label": "Accept the fast offer",
+          "detail": "Tess answers before you finish the condition.",
+          "effects": [
+            {
+              "var": "jitter",
+              "op": "add",
+              "value": 8
+            },
+            {
+              "var": "TRUST.tess",
+              "op": "add",
+              "value": 4
+            }
+          ],
+          "reaction": "I can sell that. What exactly ships?",
+          "speaker": "tess"
+        },
+        {
+          "id": "counter",
+          "label": "Counter with one scoped pilot",
+          "detail": "The hedge is hiding a missing acceptance criterion.",
+          "effects": [
+            {
+              "var": "jitter",
+              "op": "add",
+              "value": -4
+            },
+            {
+              "var": "readiness",
+              "op": "add",
+              "value": 5
+            }
+          ],
+          "reaction": "One pilot. Named customer. Written limits.",
+          "speaker": "tess"
+        },
+        {
+          "id": "hold",
+          "label": "Hold until the condition is explicit",
+          "detail": "She repeats the date but avoids the support owner.",
+          "effects": [
+            {
+              "var": "jitter",
+              "op": "add",
+              "value": -3
+            }
+          ],
+          "reaction": "Let me name the owner before we promise.",
+          "speaker": "tess"
+        }
+      ],
+      "min": 1,
+      "max": 1,
+      "cost": 0,
+      "receiptId": "R_sacred-no_tells"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 2,
+  "act": 2,
+  "next": "blast-radius"
+}

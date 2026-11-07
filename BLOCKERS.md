@@ -38,7 +38,7 @@ This file lists what is missing, simulated, or deliberately out of scope. Nothin
 
 **What is missing:** A commissioned or licensed photo set for the project, interview, career, and learning plates.
 
-**Impact:** Two photographs are used — a mountain image by Eberhard Grossgasteiger via Pexels (`public/assets/images/plates/final-mountains.jpg`) and a warm workspace plate whose provenance is unrecorded (`public/assets/images/plates/Cozy Sunlit Workspace Backdrop.png`). The wood surface uses Poly Haven's CC0 `wood_table_001` diffuse and roughness maps. Every other plate is a CSS/SVG composition. Four further candidate plates remain in the folder but are not referenced by the app.
+**Impact:** Two photographs are used — a mountain image by Eberhard Grossgasteiger via Pexels (`public/assets/images/plates/final-mountains.webp`) and a warm workspace plate whose provenance is unrecorded (`public/assets/images/plates/cozy-sunlit-workspace.webp`). Their uncompressed originals are archived in `docs/assets-source/plates/`. The wood surface uses Poly Haven's CC0 `wood_table_001` diffuse and roughness maps. Every other plate is a CSS/SVG composition. Four further candidate plates are archived in `docs/assets-source/plates/` and are not referenced by the app.
 
 **Current workaround:** Art-directed CSS/SVG plates that match the paper-and-ink system. They are original, lightweight, and licence-clear.
 

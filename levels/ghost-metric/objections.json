@@ -1,0 +1,71 @@
+[
+  {
+    "id": "evidence-objection",
+    "concern": "Unverified claim",
+    "text": "Show me the evidence behind that claim.",
+    "resolvers": [
+      {
+        "type": "evidence",
+        "ref": "gateway"
+      },
+      {
+        "type": "evidence",
+        "ref": "billing"
+      },
+      {
+        "type": "evidence",
+        "ref": "accounts"
+      },
+      {
+        "type": "evidence",
+        "ref": "streams"
+      },
+      {
+        "type": "evidence",
+        "ref": "cohorts"
+      },
+      {
+        "type": "evidence",
+        "ref": "definition"
+      },
+      {
+        "type": "evidence",
+        "ref": "request-proof"
+      },
+      {
+        "type": "evidence",
+        "ref": "account-proof"
+      },
+      {
+        "type": "evidence",
+        "ref": "billing-proof"
+      },
+      {
+        "type": "evidence",
+        "ref": "account-layer"
+      },
+      {
+        "type": "evidence",
+        "ref": "retry-layer"
+      },
+      {
+        "type": "evidence",
+        "ref": "cohort-layer"
+      }
+    ],
+    "onResolve": [
+      {
+        "var": "credibility",
+        "op": "add",
+        "value": 5
+      }
+    ],
+    "onFail": [
+      {
+        "var": "credibility",
+        "op": "add",
+        "value": -5
+      }
+    ]
+  }
+]

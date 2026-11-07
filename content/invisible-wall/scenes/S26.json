@@ -1,0 +1,23 @@
+{
+  "id": "S26",
+  "type": "TOOL",
+  "background": "annex",
+  "speakers": [
+    "narration"
+  ],
+  "lines": [
+    {
+      "id": "s26-1",
+      "speaker": "narration",
+      "expression": "thinking",
+      "text": "The wall was deliberate. It steadied the system. What did your night prove?",
+      "voiceId": "narration",
+      "phase": "before"
+    }
+  ],
+  "choices": [],
+  "tool": "debrief",
+  "goal": "The Glass Wall",
+  "canStill": "Review your night, inspect the truth, reflect and fork a different decision.",
+  "next": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": "review",
+  "type": "REVIEW",
+  "background": "office",
+  "goal": "Review your decision.",
+  "canStill": "Inspect your receipt, replay, or export.",
+  "speakers": [
+    "guide"
+  ],
+  "lines": [
+    {
+      "id": "review-line",
+      "speaker": "guide",
+      "expression": "neutral",
+      "text": "The pilot has a boundary and a person responsible."
+    }
+  ],
+  "choices": [],
+  "tools": [],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 0,
+  "day": 2,
+  "act": 3
+}

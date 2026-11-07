@@ -272,7 +272,7 @@ const info: Record<
       },
       {
         title: "Voice typing",
-        text: "Voice typing is optional. Your browser’s speech service may send audio to its provider. PMForge does not record or store audio. Only recognised text you keep is saved with your story.",
+        text: "Speech is optional. Browser dictation may use the browser’s speech provider; configured server transcription sends short consented chunks to that provider. Local recording is a separate opt-in and stays in this browser. Transcript sync is optional. Portfolio audio is uploaded only with separate explicit publishing consent.",
       },
       {
         title: "Your controls",

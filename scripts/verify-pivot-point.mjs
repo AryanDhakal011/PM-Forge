@@ -1,0 +1,61 @@
+import {spawn} from 'node:child_process';
+import {mkdirSync,mkdtempSync,writeFileSync} from 'node:fs';
+import {join} from 'node:path';
+import {tmpdir} from 'node:os';
+const base=process.env.PRODUCT_URL||'http://localhost:3001',out='docs/pivot-point-verification';mkdirSync(out,{recursive:true});
+const report={base,checks:[],errors:[],console:[]},port=9305;
+const browser=spawn('C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',['--headless=new',`--remote-debugging-port=${port}`,`--user-data-dir=${mkdtempSync(join(tmpdir(),'pmf-pivot-'))}`,'--no-first-run','about:blank'],{stdio:'ignore',windowsHide:true});
+const wait=ms=>new Promise(r=>setTimeout(r,ms));let ws;
+try{
+ let target;for(let i=0;i<60;i++){try{target=await fetch(`http://127.0.0.1:${port}/json/new?about:blank`,{method:'PUT'}).then(r=>r.json());break}catch{await wait(200)}}
+ ws=new WebSocket(target.webSocketDebuggerUrl);await new Promise((r,j)=>{ws.onopen=r;ws.onerror=j});let seq=0;const pending=new Map();
+ ws.onmessage=e=>{const m=JSON.parse(e.data);if(m.id){const p=pending.get(m.id);pending.delete(m.id);m.error?p?.reject(Error(JSON.stringify(m.error))):p?.resolve(m.result)}if(m.method==='Runtime.exceptionThrown')report.errors.push(m.params.exceptionDetails.exception?.description||m.params.exceptionDetails.text);if(m.method==='Runtime.consoleAPICalled'&&m.params.type==='error')report.console.push(m.params.args.map(a=>a.value||a.description).join(' '))};
+ const send=(method,params={})=>new Promise((resolve,reject)=>{const id=++seq;pending.set(id,{resolve,reject});ws.send(JSON.stringify({id,method,params}))});
+ const ev=async expression=>{const r=await send('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw Error(r.exceptionDetails.exception?.description||r.exceptionDetails.text);return r.result.value};
+ const check=(ok,label)=>{report.checks.push({label,pass:!!ok});if(!ok)throw Error(label)};
+ const until=async(expr,label)=>{for(let i=0;i<150;i++){if(await ev(expr))return;await wait(100)}throw Error('Timeout: '+label+' '+(await ev('document.body.innerText')).slice(-600))};
+ const click=async label=>{const ok=await ev(`(()=>{const scope=document.querySelector('[role=dialog]')||document;const el=[...scope.querySelectorAll('button,a')].find(e=>!e.disabled&&(e.textContent+' '+e.getAttribute('aria-label')).includes(${JSON.stringify(label)}));el?.click();return !!el})()`);check(ok,'click '+label);await wait(80)};
+ const choose=async(type,extra={})=>{await ev(`window.__projectTest.choose(${JSON.stringify(type)},${JSON.stringify(extra)})`);await wait(35)};
+ const snap=async name=>{await wait(180);const r=await send('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});writeFileSync(join(out,name+'.png'),Buffer.from(r.data,'base64'))};
+ const viewport=async(width,height=900)=>{await send('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:width<700});await wait(100)};
+ const get=()=>ev('window.__projectTest.state()');
+ const through=async target=>{for(let i=0;i<40;i++){const st=await get();if(st.scene===target){if(st.reaction)await choose('reaction');return}await ev('window.__projectTest.advance()');await wait(35)}throw Error('Cannot reach '+target)};
+ const fits=async label=>check(await ev('document.documentElement.scrollWidth<=innerWidth+1'),label);
+ await send('Page.enable');await send('Runtime.enable');await send('Performance.enable');await viewport(1440);
+ await send('Page.navigate',{url:base+'/app/projects/pivot-point/play?qa=1'});await until('!!window.__projectTest','hook ready');await until('!!document.querySelector("[data-testid=pivot-point]")','entrance');
+ check((await ev('document.body.innerText')).includes('Step inside'),'entrance visible');check(!(await ev('document.body.innerText')).includes('Try without an account'),'no workspace gate');check(!await ev('!!document.querySelector("nav[aria-label=Workspace]")'),'no workspace navigation');await snap('entrance-desktop');
+ for(const width of [390,320]){await viewport(width,844);await fits('entrance fits '+width);if(width===390)await snap('entrance-mobile')}
+ await viewport(1440);await click('Step inside');await until('window.__projectTest.state()?.scene==="S01"','start');await snap('opening');
+ await through('S02');await snap('first-place');await click('Community Network');await choose('reaction');await click('Who gets left out');await choose('reaction');await click('What would change');await choose('reaction');await click('Show me the numbers');await choose('reaction');await click('Walk a community');await choose('reaction');
+ for(const id of ['lens','case','lever','frontier'])await choose('practice',{id});await through('S08');await click('Start with who cannot');
+ for(const id of ['outcomes','equity','staff']){await choose('report',{id});await choose('reaction')};await snap('evidence-drawers');await click('Case file');check((await ev('document.body.innerText')).includes('Specialists fear quality drops'),'case file includes opened evidence');await click('Close dialog');
+ await through('S10');await click('Income');await snap('access-map-desktop');await viewport(390,844);await fits('map fits mobile');await snap('access-map-mobile');await viewport(1440);await through('S11');await click('Per recovered');await through('S12');await snap('triage');
+ for(const [i,id] of ['raman','sita','alvarez','maya','dev','ama','leo','nima','rosa','arun','zuri','min'].entries())await choose('assign',{id,text:i<5?'flagship':i<10?'community':'waitlist'});
+ await through('S13');await choose('draft',{text:'Reach working families while accepting lower average recovery.'});await click('Pivot to the lower-cost');await through('S16');await click('Walk me through');await choose('reaction');await choose('preset',{id:'hybrid'});await choose('simulate');await choose('reaction');await snap('scalability');await through('S18');
+ for(const [id,value] of [['supervision',10],['escalation',2],['audit',1]])await choose('guard',{id,value});await snap('guardrails');await click('Record these commitments');await choose('reaction');
+ for(const id of ['outcomes','equity','scale'])await choose('evidence',{id});await click('Present the design');await through('S22');await snap('launch-day');
+ for(const id of ['staff','escalate','watch','hours','watch']){await choose('launch',{id});await choose('reaction')};await through('S23');for(const id of ['outcomes','equity'])await choose('evidence',{id});await choose('draft',{text:'We accept fewer intensive places to fund broader local access.'});await click('Ask for the board');await through('S24');await snap('patient-letters');await through('S25');await click('Fund the community workers');await choose('reaction');await until('document.body.innerText.includes("THE YEAR IN REVIEW")','review');
+ check((await get()).completed,'complete run');check((await ev('document.body.innerText')).includes('Balanced and defended'),'hybrid ending');await snap('review-desktop');for(const width of [390,320]){await viewport(width,844);await fits('review fits '+width);if(width===390)await snap('review-mobile')}
+ await click('Pause');await snap('pause-mobile');await click('Save & return');await click('Resume ·');check((await get()).completed,'resume completed run');
+ const runBranch=async(route,safe,seed)=>{
+  await ev(`window.__projectTest.setSeed(${seed})`);await through('S02');
+  const act=async(type,extra={})=>{if((await get()).reaction)await choose('reaction');await choose(type,extra)};
+  await act('first',{id:'flagship'});await act('reply',{id:'board'});await act('reply',{id:'worry'});await act('reply',{id:'numbers'});await act('walk',{id:'jun'});for(const id of ['lens','case','lever','frontier'])await act('practice',{id});await through('S08');await act('planner',{id:'cost'});for(const id of ['cost','waitlist','funding'])await act('report',{id});await through('S10');await act('lens',{id:'Severity'});await through('S11');await act('cost-mode',{id:'recovered'});await through('S12');
+  for(const [i,id] of ['raman','sita','alvarez','maya','dev','ama','leo','nima','rosa','arun','zuri','min'].entries())await act('assign',{id,text:i<7?'flagship':'waitlist'});await through('S13');await act('draft',{text:'Protect depth while making the access downside visible.'});await act('direction',{id:route});await through('S16');await act('reply',{id:'listen'});await act('simulate');await through('S18');if(safe)for(const [id,value] of [['supervision',10],['escalation',2],['audit',1]])await act('guard',{id,value});await act('guard-confirm');for(const id of ['cost','waitlist','scale'])await act('evidence',{id});await act('present');await through('S22');for(let i=0;i<5;i++)await act('launch',{id:'watch'});await through('S23');for(const id of ['cost','waitlist'])await act('evidence',{id});await act('draft',{text:'We accept the access and quality constraints stated in the evidence.'});await act('vote');await through('S24');await viewport(1440);await snap('ending-'+route+(safe?'':'-unsafe'));await through('S25');await act('final',{id:'publish'});await act('reaction');check((await get()).completed,'branch completed '+route);return await ev('document.body.innerText');
+ };
+ check((await runBranch('flagship',true,711)).includes('Excellence for few'),'intensive branch ending');
+ check((await runBranch('premium',true,712)).includes('Talent drain'),'premium branch ending');
+ check((await runBranch('community',false,713)).includes('Resource strain'),'unsupervised branch ending');
+ await viewport(1440);await click('Projects');await until('location.pathname==="/app/projects"','gallery');
+ for(let i=0;i<40;i++){if(await ev('!!document.querySelector("#project-pivot-point a")'))break;await ev(`(()=>{for(const text of ['Try without an account','Skip setup'])[...document.querySelectorAll('button,a')].find(e=>e.textContent.includes(text))?.click()})()`);await wait(100)}
+ await until('!!document.querySelector("#project-pivot-point a")','gallery card');check(!await ev('!!window.__projectTest'),'test hook disposed');
+ await ev('document.querySelector("#project-pivot-point a").click()');await until('!!document.querySelector("[data-testid=pivot-point]")','gallery entry');check(await ev('location.pathname==="/app/projects/pivot-point/play"'),'gallery links to takeover');
+ const globalListeners=async()=>{const r=await send('Runtime.evaluate',{expression:'[window,document].map(target=>Object.fromEntries(Object.entries(getEventListeners(target)).map(([key,list])=>[key,list.length])))',includeCommandLineAPI:true,returnByValue:true});return r.result.value};
+ await send('HeapProfiler.collectGarbage');report.globalListenersBefore=await globalListeners();report.beforeMetrics=(await send('Performance.getMetrics')).metrics.filter(m=>['JSHeapUsedSize','Nodes','JSEventListeners'].includes(m.name));
+ for(let i=0;i<20;i++){await click('Projects');await until('!!document.querySelector("#project-pivot-point a")','gallery cycle');check(!await ev('!!window.__projectTest'),'disposed hook '+i);await ev('document.querySelector("#project-pivot-point a").click()');await until('!!window.__projectTest','level cycle');check(await ev('!document.querySelector("nav[aria-label=Workspace]")'),'takeover '+i)}
+ await send('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]});await until('document.querySelector("[data-testid=pivot-point]")?.dataset.still==="true"','reduced motion');check(true,'reduced motion honored');
+ await send('HeapProfiler.collectGarbage');report.metrics=(await send('Performance.getMetrics')).metrics.filter(m=>['JSHeapUsedSize','Nodes','JSEventListeners'].includes(m.name));
+ report.globalListenersAfter=await globalListeners();check(JSON.stringify(report.globalListenersBefore)===JSON.stringify(report.globalListenersAfter),'global listeners stable after 20 entries');
+ console.log('PIVOT BROWSER CHECKS',report.checks.length);
+}catch(e){report.errors.push(e.stack)}finally{writeFileSync(join(out,'browser.json'),JSON.stringify(report,null,2));ws?.close();browser.kill()}
+console.log(JSON.stringify({checks:report.checks.length,failed:report.checks.filter(c=>!c.pass),errors:report.errors,console:report.console},null,2));if(report.errors.length||report.console.length||report.checks.some(c=>!c.pass))process.exitCode=1;

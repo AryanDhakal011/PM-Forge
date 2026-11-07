@@ -1,0 +1,81 @@
+[
+  {
+    "id": "deadlock",
+    "runs": 1000,
+    "endings": {
+      "guard": 497,
+      "quiet": 72,
+      "babysitter": 73,
+      "steady": 195,
+      "shared": 134,
+      "fracture": 29
+    },
+    "unvisitedScenes": [],
+    "unfiredEvents": [],
+    "unseenLines": []
+  },
+  {
+    "id": "sacred-no",
+    "runs": 1000,
+    "endings": {
+      "crash": 357,
+      "tolerated": 326,
+      "backed": 225,
+      "standoff": 92
+    },
+    "unvisitedScenes": [],
+    "unfiredEvents": [],
+    "unseenLines": []
+  },
+  {
+    "id": "ghost-metric",
+    "runs": 1000,
+    "endings": {
+      "quiet": 435,
+      "lie": 398,
+      "calibrated": 167
+    },
+    "unvisitedScenes": [],
+    "unfiredEvents": [],
+    "unseenLines": []
+  },
+  {
+    "id": "trojan-horse",
+    "runs": 1000,
+    "endings": {
+      "blanket": 440,
+      "pragmatist": 281,
+      "gardener": 150,
+      "runway": 70,
+      "bridge": 47,
+      "revolt": 12
+    },
+    "unvisitedScenes": [],
+    "unfiredEvents": [],
+    "unseenLines": []
+  },
+  {
+    "id": "last-mile",
+    "runs": 1000,
+    "endings": {
+      "safe": 983,
+      "recovery": 15,
+      "narrative": 2
+    },
+    "unvisitedScenes": [],
+    "unfiredEvents": [],
+    "unseenLines": []
+  },
+  {
+    "id": "toy-regression",
+    "runs": 1000,
+    "endings": {
+      "bounded": 1000
+    },
+    "unvisitedScenes": [],
+    "unfiredEvents": [
+      "check-in"
+    ],
+    "unseenLines": []
+  }
+]

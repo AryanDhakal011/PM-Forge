@@ -1,0 +1,1366 @@
+{
+  "version": 1,
+  "provider": "Kokoro-82M v1.0 / kokoro-onnx 0.6.1",
+  "directionLimit": "Emotion tags adjust pace and pauses. This model does not provide native acted emotions.",
+  "lines": {
+    "ask-elliot-0": {
+      "file": "/projects/silent-churn/audio/ask-elliot-0.mp3",
+      "signature": "e26f87d241660dd16a98bc0d5bad538efdcee61a35f3bc274d5989e31c565e95",
+      "caption": "I can sponsor you. I cannot order them.",
+      "speaker": "elliot",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 3.397
+    },
+    "ask-elliot-1": {
+      "file": "/projects/silent-churn/audio/ask-elliot-1.mp3",
+      "signature": "02526a0fd97735c88bea274db020cb6a54767349f89a8fc3ffc9235113b855d2",
+      "caption": "Start with what each person could lose.",
+      "speaker": "elliot",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 3.035
+    },
+    "ask-elliot-2": {
+      "file": "/projects/silent-churn/audio/ask-elliot-2.mp3",
+      "signature": "70e543a7f7909ee84787a6dce644f22512cfb6ab98a65f84387b5d42f73bc2f4",
+      "caption": "The review wants a decision we can deliver.",
+      "speaker": "elliot",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 3.697
+    },
+    "ask-elliot-3": {
+      "file": "/projects/silent-churn/audio/ask-elliot-3.mp3",
+      "signature": "9d02b8de5a4e46435ee95b3064d5666fc04d4b4b1040662e47e15d07ba1bac4b",
+      "caption": "Off the record. I need this to hold.",
+      "speaker": "elliot",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 3.159
+    },
+    "ask-elliot-4": {
+      "file": "/projects/silent-churn/audio/ask-elliot-4.mp3",
+      "signature": "801ed23ae375aadda9048b712e93957c7d0ba2f4e6b1d29443a940d2352a3547",
+      "caption": "Every seat has a veto.",
+      "speaker": "elliot",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 2.566
+    },
+    "ask-elliot-5": {
+      "file": "/projects/silent-churn/audio/ask-elliot-5.mp3",
+      "signature": "8354cd0754b081d208daa40891f8cca7131cdf3a2f1f07a35a88dc45c1eabd99",
+      "caption": "The last programme forgot the people running it.",
+      "speaker": "elliot",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 3.559
+    },
+    "ask-walter-0": {
+      "file": "/projects/silent-churn/audio/ask-walter-0.mp3",
+      "signature": "2545f267c286bc361742d015e36024e89011619358159ba73cd298ae2bd48223",
+      "caption": "Revenue is leaking at renewal.",
+      "speaker": "walter",
+      "emotion": "thinking",
+      "voice": "bm_daniel",
+      "duration": 2.503
+    },
+    "ask-walter-1": {
+      "file": "/projects/silent-churn/audio/ask-walter-1.mp3",
+      "signature": "634c92ba5d590ed65e6e4833d9583ab6ca81af7a13502ca16f5a6fa48d68bcda",
+      "caption": "Pricing is the problem. It always is.",
+      "speaker": "walter",
+      "emotion": "thinking",
+      "voice": "bm_daniel",
+      "duration": 3.056
+    },
+    "ask-walter-2": {
+      "file": "/projects/silent-churn/audio/ask-walter-2.mp3",
+      "signature": "02070d9394e2c69010ae75e8a56313ca86d5e9fba233d39b31143fd78f88ee4e",
+      "caption": "Capped. Then we can talk.",
+      "speaker": "walter",
+      "emotion": "thinking",
+      "voice": "bm_daniel",
+      "duration": 1.99
+    },
+    "ask-walter-3": {
+      "file": "/projects/silent-churn/audio/ask-walter-3.mp3",
+      "signature": "b84b71d4181b768618012deb97caaef67363437df8386887cb8beef1c0557fc2",
+      "caption": "Show me what would disprove my theory.",
+      "speaker": "walter",
+      "emotion": "thinking",
+      "voice": "bm_daniel",
+      "duration": 2.631
+    },
+    "ask-walter-4": {
+      "file": "/projects/silent-churn/audio/ask-walter-4.mp3",
+      "signature": "d20e287b8eccb7117ccc82524bda26816b0d7ed284849080301d5cda6b5eeddb",
+      "caption": "Payback needs a customer outcome.",
+      "speaker": "walter",
+      "emotion": "thinking",
+      "voice": "bm_daniel",
+      "duration": 2.653
+    },
+    "ask-walter-5": {
+      "file": "/projects/silent-churn/audio/ask-walter-5.mp3",
+      "signature": "d05cd3651021460deb4f0d65f91b14bb9ecf68ff1f3912f75b9a27991b66455e",
+      "caption": "Beatrice knows the accounts behind the spreadsheet.",
+      "speaker": "walter",
+      "emotion": "thinking",
+      "voice": "bm_daniel",
+      "duration": 3.251
+    },
+    "ask-dolores-0": {
+      "file": "/projects/silent-churn/audio/ask-dolores-0.mp3",
+      "signature": "18c77fb5184eec5983c1d7fdd1355f248944a680d8f2d1be3be2e0ea9c35e781",
+      "caption": "Show me the process.",
+      "speaker": "dolores",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 1.755
+    },
+    "ask-dolores-1": {
+      "file": "/projects/silent-churn/audio/ask-dolores-1.mp3",
+      "signature": "2cd9aad8c030e5d84dfeba90b9f028f01fb5a8de6d5048bba36f9abc5563110f",
+      "caption": "More updates can mean more calls.",
+      "speaker": "dolores",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 2.735
+    },
+    "ask-dolores-2": {
+      "file": "/projects/silent-churn/audio/ask-dolores-2.mp3",
+      "signature": "26131bd7a5d870e18a226abd173d2ee9505bec101c9b37a27525ab0df7f294ab",
+      "caption": "A service level needs an owner.",
+      "speaker": "dolores",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 2.855
+    },
+    "ask-dolores-3": {
+      "file": "/projects/silent-churn/audio/ask-dolores-3.mp3",
+      "signature": "a606c082510fb5b529aa98405506d065fdc8edc52fa0f6200bbd9d062fdbc28c",
+      "caption": "Do not move the cost into my team.",
+      "speaker": "dolores",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 3.003
+    },
+    "ask-dolores-4": {
+      "file": "/projects/silent-churn/audio/ask-dolores-4.mp3",
+      "signature": "c0e7bd13c193801bb7c88afc405f2b48014edf56141167aeca1077fe1cecac13",
+      "caption": "Prove it in a small pilot.",
+      "speaker": "dolores",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 2.468
+    },
+    "ask-dolores-5": {
+      "file": "/projects/silent-churn/audio/ask-dolores-5.mp3",
+      "signature": "38de4e0479abfa000c699a9ead5a2ebe1269977544b8fce1dfa8cca1b5483c41",
+      "caption": "Intake hands the claim to an adjuster.",
+      "speaker": "dolores",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 3.483
+    },
+    "ask-anand-0": {
+      "file": "/projects/silent-churn/audio/ask-anand-0.mp3",
+      "signature": "a4688f0e074c52884bbb36a24962364064f2c93a3a9d87255b65cefe1f7dc78e",
+      "caption": "Nothing writes into the core without review.",
+      "speaker": "anand",
+      "emotion": "thinking",
+      "voice": "bm_lewis",
+      "duration": 3.28
+    },
+    "ask-anand-1": {
+      "file": "/projects/silent-churn/audio/ask-anand-1.mp3",
+      "signature": "99950f00da922cbfd5c359aad956f52f44692ab16184bf90cecfc81053d742f0",
+      "caption": "Not every weekday is a change window.",
+      "speaker": "anand",
+      "emotion": "thinking",
+      "voice": "bm_lewis",
+      "duration": 3.077
+    },
+    "ask-anand-2": {
+      "file": "/projects/silent-churn/audio/ask-anand-2.mp3",
+      "signature": "7488a3c6fb5f1ddf77518f9c691f32b1f4f2286f5882f68b9582d28289af4fff",
+      "caption": "Four hundred days since the last outage.",
+      "speaker": "anand",
+      "emotion": "thinking",
+      "voice": "bm_lewis",
+      "duration": 3.247
+    },
+    "ask-anand-3": {
+      "file": "/projects/silent-churn/audio/ask-anand-3.mp3",
+      "signature": "27f0c3226d78ba6d4e7386036425e9da9085a12ae6ef2a3bd7514008c49b1050",
+      "caption": "Beside the core, not inside it.",
+      "speaker": "anand",
+      "emotion": "thinking",
+      "voice": "bm_lewis",
+      "duration": 2.661
+    },
+    "ask-anand-4": {
+      "file": "/projects/silent-churn/audio/ask-anand-4.mp3",
+      "signature": "7b55ab2a9db6e7cfb0ea9ef6f14f5e1f29d58263c3e9922924c47ce3c9714e57",
+      "caption": "Tobias knows what the diagrams leave out.",
+      "speaker": "anand",
+      "emotion": "thinking",
+      "voice": "bm_lewis",
+      "duration": 3.505
+    },
+    "ask-anand-5": {
+      "file": "/projects/silent-churn/audio/ask-anand-5.mp3",
+      "signature": "44dd32480e722fe16b77ade67922aa4c5f88fc9629f5a381156b1f1f18552dc6",
+      "caption": "A boundary, a rollback, and an owner.",
+      "speaker": "anand",
+      "emotion": "thinking",
+      "voice": "bm_lewis",
+      "duration": 2.971
+    },
+    "ask-beatrice-0": {
+      "file": "/projects/silent-churn/audio/ask-beatrice-0.mp3",
+      "signature": "20edd325c0f131a4f91acad0140cac8f2566c709fef711f10e3b5d04084d4d70",
+      "caption": "My brokers want to hear it first.",
+      "speaker": "beatrice",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 2.23
+    },
+    "ask-beatrice-1": {
+      "file": "/projects/silent-churn/audio/ask-beatrice-1.mp3",
+      "signature": "ce371da40d846c325ff2bbc2873a29af09eec66b458ad8c7893f35b3138eb4bf",
+      "caption": "Competitors pay more. Or so I hear.",
+      "speaker": "beatrice",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 2.619
+    },
+    "ask-beatrice-2": {
+      "file": "/projects/silent-churn/audio/ask-beatrice-2.mp3",
+      "signature": "0d9ed737e55018a16fd77482acc2cfdd244028bf9e0a94dc69f9775be2e9dd8c",
+      "caption": "Bring a comparison, not a rumour.",
+      "speaker": "beatrice",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 2.265
+    },
+    "ask-beatrice-3": {
+      "file": "/projects/silent-churn/audio/ask-beatrice-3.mp3",
+      "signature": "cd71e19270ede3d9df00e01c13c5deb993f7eec2997979ab457e0ca89dcf727b",
+      "caption": "Tell brokers before clients tell them.",
+      "speaker": "beatrice",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 2.479
+    },
+    "ask-beatrice-4": {
+      "file": "/projects/silent-churn/audio/ask-beatrice-4.mp3",
+      "signature": "ec8c6984707681e17be72665f5727c1af6e21abafbed9faaafb5b0f36d7ead72",
+      "caption": "Walter listens when an account has a name.",
+      "speaker": "beatrice",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 2.853
+    },
+    "ask-beatrice-5": {
+      "file": "/projects/silent-churn/audio/ask-beatrice-5.mp3",
+      "signature": "2457e6f1fdca5fa59e36bac34f090c999120d10f5bf275d641ae5b2e7ba73e26",
+      "caption": "I back what protects the relationship.",
+      "speaker": "beatrice",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 2.359
+    },
+    "ask-gideon-0": {
+      "file": "/projects/silent-churn/audio/ask-gideon-0.mp3",
+      "signature": "7b8b27ee05f394c7395602bff921cfb10ea22882e912a925270878a78c568364",
+      "caption": "Approved factual wording. No invented promises.",
+      "speaker": "gideon",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 4.143
+    },
+    "ask-gideon-1": {
+      "file": "/projects/silent-churn/audio/ask-gideon-1.mp3",
+      "signature": "b91cf02cbc70cf3133fe7d8cfb142d99873e2b7d844ebbede72a6ecc141d8f64",
+      "caption": "A message can outlive the meeting that approved it.",
+      "speaker": "gideon",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 3.603
+    },
+    "ask-gideon-2": {
+      "file": "/projects/silent-churn/audio/ask-gideon-2.mp3",
+      "signature": "346be8d993bd3fdf857f159c7568d87ec5097d9d45fa8ea4344992c76cc03f26",
+      "caption": "In writing, please.",
+      "speaker": "gideon",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 2.005
+    },
+    "ask-gideon-3": {
+      "file": "/projects/silent-churn/audio/ask-gideon-3.mp3",
+      "signature": "0da3a0b9f64271977e1a2b61c8aae7dc42038a605310b150ba30bd6d7ef78c85",
+      "caption": "Templates keep the boundary clear.",
+      "speaker": "gideon",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 2.558
+    },
+    "ask-gideon-4": {
+      "file": "/projects/silent-churn/audio/ask-gideon-4.mp3",
+      "signature": "79827172e76a720794563eea79fdd45d15ac4f1684055a4397d039aeff60d971",
+      "caption": "Legal review also needs working days.",
+      "speaker": "gideon",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 3.295
+    },
+    "ask-gideon-5": {
+      "file": "/projects/silent-churn/audio/ask-gideon-5.mp3",
+      "signature": "3f3f7903149fcc0e01ce7daefefbfcd6a9e6f0bef744b7e758aaf5a66c80a6f5",
+      "caption": "Name who signs the wording.",
+      "speaker": "gideon",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 2.302
+    },
+    "ask-marta-0": {
+      "file": "/projects/silent-churn/audio/ask-marta-0.mp3",
+      "signature": "9cbc4fedf850224f32cb1fad7c1b19e3d3e303ecb3837aaaae0c316e2274a416",
+      "caption": "I prefer a question to everything.",
+      "speaker": "marta",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 2.388
+    },
+    "ask-marta-1": {
+      "file": "/projects/silent-churn/audio/ask-marta-1.mp3",
+      "signature": "03f03c2e78bf2283d7719aa56435d848229c5e6eacf08fb7bf3d125e9347c16f",
+      "caption": "Restricted extracts need a ticket.",
+      "speaker": "marta",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 2.388
+    },
+    "ask-marta-2": {
+      "file": "/projects/silent-churn/audio/ask-marta-2.mp3",
+      "signature": "79147757c5c82f9d7644c0c4d0f5ad0a6b70868dca1c171d3e1c0066bf412304",
+      "caption": "A ticket can be a useful conversation.",
+      "speaker": "marta",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 2.739
+    },
+    "ask-marta-3": {
+      "file": "/projects/silent-churn/audio/ask-marta-3.mp3",
+      "signature": "6edbdbcd295e123abdb760c5870dfc8705fc3a09e978ac7cf84c11c03e2953b5",
+      "caption": "There are traps in the old status field.",
+      "speaker": "marta",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 2.443
+    },
+    "ask-marta-4": {
+      "file": "/projects/silent-churn/audio/ask-marta-4.mp3",
+      "signature": "f373078edb718d70f18e5c61664a97d4d5dbb35ed9f0240b8b55e6e6cc4948a7",
+      "caption": "The field changed meaning between systems.",
+      "speaker": "marta",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 2.783
+    },
+    "ask-marta-5": {
+      "file": "/projects/silent-churn/audio/ask-marta-5.mp3",
+      "signature": "9eb6361328ae305e71554415604da07e2f28bfdeb26f3d79008eac38877c9a28",
+      "caption": "Ask what you need to decide.",
+      "speaker": "marta",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 1.963
+    },
+    "ask-tobias-0": {
+      "file": "/projects/silent-churn/audio/ask-tobias-0.mp3",
+      "signature": "650761c9d878a3e19981de5ac16de48eff2546f1503e8c759277d2a0ef7d78a0",
+      "caption": "Not on a Friday.",
+      "speaker": "tobias",
+      "emotion": "thinking",
+      "voice": "am_fenrir",
+      "duration": 1.457
+    },
+    "ask-tobias-1": {
+      "file": "/projects/silent-churn/audio/ask-tobias-1.mp3",
+      "signature": "297360fb84135936be905f41319a32c78b56ee65cc04da378ba0c71cbaf33553",
+      "caption": "Tell me how we get back.",
+      "speaker": "tobias",
+      "emotion": "thinking",
+      "voice": "am_fenrir",
+      "duration": 1.595
+    },
+    "ask-tobias-2": {
+      "file": "/projects/silent-churn/audio/ask-tobias-2.mp3",
+      "signature": "fa1469d4c4600c7e825d882f3d20f6c726e0f2bb198741e69816832abe9bd3d9",
+      "caption": "The batch does not care about our deadline.",
+      "speaker": "tobias",
+      "emotion": "thinking",
+      "voice": "am_fenrir",
+      "duration": 2.459
+    },
+    "ask-tobias-3": {
+      "file": "/projects/silent-churn/audio/ask-tobias-3.mp3",
+      "signature": "5fae92426907faa7d634c26f9c33b4fb9b94b6b56e7243c8d5c6c8279888ad37",
+      "caption": "Nightly means nightly. It is not a live feed.",
+      "speaker": "tobias",
+      "emotion": "thinking",
+      "voice": "am_fenrir",
+      "duration": 3.232
+    },
+    "ask-tobias-4": {
+      "file": "/projects/silent-churn/audio/ask-tobias-4.mp3",
+      "signature": "a85f3a91216e8732312e81f240144a1ec54f02952106ab86cb4ce2c904cf87a8",
+      "caption": "A feed beside the core. Flag it.",
+      "speaker": "tobias",
+      "emotion": "thinking",
+      "voice": "am_fenrir",
+      "duration": 2.459
+    },
+    "ask-tobias-5": {
+      "file": "/projects/silent-churn/audio/ask-tobias-5.mp3",
+      "signature": "9dcc4727efb25d29bef8b4b2a17afd1e8427d3f3d74eeffa0bad4dc5afe870fe",
+      "caption": "Leave five working days after approval.",
+      "speaker": "tobias",
+      "emotion": "thinking",
+      "voice": "am_fenrir",
+      "duration": 2.641
+    },
+    "O01": {
+      "file": "/projects/silent-churn/audio/O01.mp3",
+      "signature": "4afc23f488ca282a26d96559ca01cc1703b2197bc5f927a771509ad77d5dbaea",
+      "caption": "What is the total cost?",
+      "speaker": "walter",
+      "emotion": "pressured",
+      "voice": "bm_daniel",
+      "duration": 2.203
+    },
+    "O02": {
+      "file": "/projects/silent-churn/audio/O02.mp3",
+      "signature": "a62a2dc681d5724b1ac8c82d37d2c98d355b1cb9ea0c41617fdd48bccfcc23ef",
+      "caption": "Why not just lower the price?",
+      "speaker": "walter",
+      "emotion": "pressured",
+      "voice": "bm_daniel",
+      "duration": 2.365
+    },
+    "O03": {
+      "file": "/projects/silent-churn/audio/O03.mp3",
+      "signature": "0ebbf0285d7e64fbbe303c4f9edef91fe5851addcf2eb0c36a714835515940ac",
+      "caption": "How do you know it pays back?",
+      "speaker": "walter",
+      "emotion": "pressured",
+      "voice": "bm_daniel",
+      "duration": 2.162
+    },
+    "O04": {
+      "file": "/projects/silent-churn/audio/O04.mp3",
+      "signature": "7d11c8f16788a7d5923cbdf99274a28a812df09e140f9984a7d51ab3e975a36f",
+      "caption": "What happens if the pilot expands?",
+      "speaker": "walter",
+      "emotion": "pressured",
+      "voice": "bm_daniel",
+      "duration": 2.631
+    },
+    "O05": {
+      "file": "/projects/silent-churn/audio/O05.mp3",
+      "signature": "21e3d76bff4a7562c76d458945694b000eed382d65480b9fddc7c2b2b0f6db55",
+      "caption": "More updates mean more calls.",
+      "speaker": "dolores",
+      "emotion": "pressured",
+      "voice": "af_nicole",
+      "duration": 2.533
+    },
+    "O06": {
+      "file": "/projects/silent-churn/audio/O06.mp3",
+      "signature": "6473a9500cc71630f678915e89eb33cf1e381b3fee56b306a09116961feab82d",
+      "caption": "What if the pilot backfires?",
+      "speaker": "dolores",
+      "emotion": "pressured",
+      "voice": "af_nicole",
+      "duration": 2.437
+    },
+    "O07": {
+      "file": "/projects/silent-churn/audio/O07.mp3",
+      "signature": "9738c8752650f4e3bbdfc7773bd2bc1543b6c6be785eabee67a50d15ca5fd4cd",
+      "caption": "Who owns the handoff?",
+      "speaker": "dolores",
+      "emotion": "pressured",
+      "voice": "af_nicole",
+      "duration": 2.044
+    },
+    "O08": {
+      "file": "/projects/silent-churn/audio/O08.mp3",
+      "signature": "49d1b12506291dc0a5cf5dcd32aaa1e6f5c3041742436a2f66e515d2c9ce026a",
+      "caption": "Show me the process before changing it.",
+      "speaker": "dolores",
+      "emotion": "pressured",
+      "voice": "af_nicole",
+      "duration": 3.387
+    },
+    "O09": {
+      "file": "/projects/silent-churn/audio/O09.mp3",
+      "signature": "654750e9b4304a242b976da98effef227087b26fcb5478cc5e6e963dfa202f90",
+      "caption": "What breaks if this touches the core?",
+      "speaker": "anand",
+      "emotion": "pressured",
+      "voice": "bm_lewis",
+      "duration": 2.735
+    },
+    "O10": {
+      "file": "/projects/silent-churn/audio/O10.mp3",
+      "signature": "7763b7719a6246a89122f10231998709f26c5e2b3503fb869afeca1977f20a07",
+      "caption": "Who gets paged at three in the morning?",
+      "speaker": "anand",
+      "emotion": "pressured",
+      "voice": "bm_lewis",
+      "duration": 2.586
+    },
+    "O11": {
+      "file": "/projects/silent-churn/audio/O11.mp3",
+      "signature": "ad7adc7cc7c562b0debf6482728f1a0a8a16a09af5b4aa7228f1c3474b93663e",
+      "caption": "How do we recover the nightly batch?",
+      "speaker": "anand",
+      "emotion": "pressured",
+      "voice": "bm_lewis",
+      "duration": 2.799
+    },
+    "O12": {
+      "file": "/projects/silent-churn/audio/O12.mp3",
+      "signature": "f4d299042c89ecf837221f309200e2b8c00f8d3d751e3c0021ab8aacfbff7b34",
+      "caption": "Does this write into the policy core?",
+      "speaker": "anand",
+      "emotion": "pressured",
+      "voice": "bm_lewis",
+      "duration": 3.013
+    },
+    "O13": {
+      "file": "/projects/silent-churn/audio/O13.mp3",
+      "signature": "a69bdcfd3fdf190b937c9d5e655336a22ef35005bf42c55b25deb5949de58d0e",
+      "caption": "Brokers will hear this from clients first.",
+      "speaker": "beatrice",
+      "emotion": "pressured",
+      "voice": "af_bella",
+      "duration": 2.539
+    },
+    "O14": {
+      "file": "/projects/silent-churn/audio/O14.mp3",
+      "signature": "d8f2843acb90d8c8e6fe45581377e92d9b992d862c155519be1168a5c61dd50c",
+      "caption": "Do competitors pay more?",
+      "speaker": "beatrice",
+      "emotion": "pressured",
+      "voice": "af_bella",
+      "duration": 1.783
+    },
+    "O15": {
+      "file": "/projects/silent-churn/audio/O15.mp3",
+      "signature": "3bc1b5bbd98aa597316658827fe96f391fd54a88ca254fb3542be596b1d01bb3",
+      "caption": "Who tells our brokers what changed?",
+      "speaker": "beatrice",
+      "emotion": "pressured",
+      "voice": "af_bella",
+      "duration": 2.275
+    },
+    "O16": {
+      "file": "/projects/silent-churn/audio/O16.mp3",
+      "signature": "573d91b2bf0eb51420b716deac84c959747a57ca3388e7d80150006c56ce3dda",
+      "caption": "What does this do for renewals?",
+      "speaker": "beatrice",
+      "emotion": "pressured",
+      "voice": "af_bella",
+      "duration": 1.934
+    },
+    "O17": {
+      "file": "/projects/silent-churn/audio/O17.mp3",
+      "signature": "00919a8dabc2aaee94adcbad14ffbc90ce81cc0cabc4eb51122f1a5713507f5f",
+      "caption": "Who writes the messages?",
+      "speaker": "gideon",
+      "emotion": "pressured",
+      "voice": "am_michael",
+      "duration": 2.056
+    },
+    "O18": {
+      "file": "/projects/silent-churn/audio/O18.mp3",
+      "signature": "5ad02e93d6a6d323247b69915caf42fbaa05d048a915048bb4536402c677078e",
+      "caption": "Is this in writing?",
+      "speaker": "gideon",
+      "emotion": "pressured",
+      "voice": "am_michael",
+      "duration": 1.811
+    },
+    "O19": {
+      "file": "/projects/silent-churn/audio/O19.mp3",
+      "signature": "6046d28bb20957c9ec6f69aa61f8e15364d1dca7b00bc1a79240de591d8727ec",
+      "caption": "Who approves the exact wording?",
+      "speaker": "gideon",
+      "emotion": "pressured",
+      "voice": "am_michael",
+      "duration": 2.494
+    },
+    "O20": {
+      "file": "/projects/silent-churn/audio/O20.mp3",
+      "signature": "46e580609afc68b1c58f3eba43a165481e12828546f8aed88bd69e4e36595a14",
+      "caption": "What promise does this message make?",
+      "speaker": "gideon",
+      "emotion": "pressured",
+      "voice": "am_michael",
+      "duration": 2.735
+    },
+    "B1": {
+      "file": "/projects/silent-churn/audio/B1.mp3",
+      "signature": "0eb7aede6573d08ba3383e531445ed629df7528bc6cc74a07e10073b9b720ef6",
+      "caption": "Why am I hearing this for the first time?",
+      "speaker": "walter",
+      "emotion": "annoyed",
+      "voice": "bm_daniel",
+      "duration": 2.791
+    },
+    "B2": {
+      "file": "/projects/silent-churn/audio/B2.mp3",
+      "signature": "6a858cf102f84812c313fe95a427fc1919b624c9008df05828a160b43f21b1e7",
+      "caption": "Why am I hearing this for the first time?",
+      "speaker": "dolores",
+      "emotion": "annoyed",
+      "voice": "af_nicole",
+      "duration": 3.126
+    },
+    "B3": {
+      "file": "/projects/silent-churn/audio/B3.mp3",
+      "signature": "af7d3edc37cb54d096c2c02e478477743df13d8c5fdff7d6504c8ecf3c9f9c19",
+      "caption": "Why am I hearing this for the first time?",
+      "speaker": "anand",
+      "emotion": "annoyed",
+      "voice": "bm_lewis",
+      "duration": 2.852
+    },
+    "B4": {
+      "file": "/projects/silent-churn/audio/B4.mp3",
+      "signature": "a100c3abccefaf72661ceba8a66b5e55642cd8e68302760d12cf73865be325c9",
+      "caption": "Why am I hearing this for the first time?",
+      "speaker": "beatrice",
+      "emotion": "annoyed",
+      "voice": "af_bella",
+      "duration": 2.381
+    },
+    "B5": {
+      "file": "/projects/silent-churn/audio/B5.mp3",
+      "signature": "d3f44e7ff2c1a0b1530ff982173455295669f25180963725272b3909507808f6",
+      "caption": "Why am I hearing this for the first time?",
+      "speaker": "gideon",
+      "emotion": "annoyed",
+      "voice": "am_michael",
+      "duration": 2.921
+    },
+    "E01": {
+      "file": "/projects/silent-churn/audio/E01.mp3",
+      "signature": "5104a27130bebf75e46f4037b587e3fdb7701be4dcf398e9f3e3642646495c66",
+      "caption": "Another account left without a complaint.",
+      "speaker": "beatrice",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 2.757
+    },
+    "E02": {
+      "file": "/projects/silent-churn/audio/E02.mp3",
+      "signature": "89001ae257e03898806362fea33b38e93f0a5cb6112d5c25c8bfdb772ea5c643",
+      "caption": "Restricted data needs context and a ticket.",
+      "speaker": "marta",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 3.102
+    },
+    "E03": {
+      "file": "/projects/silent-churn/audio/E03.mp3",
+      "signature": "ddd2eafbea1868457f32666743d8989150476f700515083da71e62b7265845fe",
+      "caption": "My brokers say competitors are paying more.",
+      "speaker": "beatrice",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 3.003
+    },
+    "E04": {
+      "file": "/projects/silent-churn/audio/E04.mp3",
+      "signature": "4f04e28d75318a4983a2bd3ed6dceeebe0bbeb7642bf3559e9c9dfc1743cddf1",
+      "caption": "A thin sample is not a conclusion.",
+      "speaker": "walter",
+      "emotion": "thinking",
+      "voice": "bm_daniel",
+      "duration": 2.803
+    },
+    "E05": {
+      "file": "/projects/silent-churn/audio/E05.mp3",
+      "signature": "64f44edc011dee91b20f781b9967d10c30564a406d16747dfead5813d6766943",
+      "caption": "Explain why you need those records.",
+      "speaker": "dolores",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 3.279
+    },
+    "E06": {
+      "file": "/projects/silent-churn/audio/E06.mp3",
+      "signature": "8522bc8e37267b61b2f6aa8613fc99f5cd13f834297e547283221954f0d92fa0",
+      "caption": "Put the approved wording in the pre-read.",
+      "speaker": "gideon",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 2.75
+    },
+    "E07": {
+      "file": "/projects/silent-churn/audio/E07.mp3",
+      "signature": "b7e38a763c2f1bb45c52b860c344fe083c8e92f32ee8d0f0d66f72c2681f28b6",
+      "caption": "Nobody asked me about the core.",
+      "speaker": "anand",
+      "emotion": "thinking",
+      "voice": "bm_lewis",
+      "duration": 2.479
+    },
+    "E08": {
+      "file": "/projects/silent-churn/audio/E08.mp3",
+      "signature": "988b4847d54571edcdd0fff5b59c36209af477a7441482f9afa4f0013d0e647c",
+      "caption": "Off the record. Close one open loop.",
+      "speaker": "elliot",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 3.365
+    },
+    "E09": {
+      "file": "/projects/silent-churn/audio/E09.mp3",
+      "signature": "3fab31cc8e7129d38b8082d9d04e7d1ef3d8edafeb9c5a73cbbef5869406c5aa",
+      "caption": "Five working days. Tell me the boundary.",
+      "speaker": "tobias",
+      "emotion": "thinking",
+      "voice": "am_fenrir",
+      "duration": 2.807
+    },
+    "E10": {
+      "file": "/projects/silent-churn/audio/E10.mp3",
+      "signature": "f0707e4de7452f8b58373c20d7dd94c24c1af491445981c000bbd4c8fc7543d9",
+      "caption": "The broad core change will not hold.",
+      "speaker": "tobias",
+      "emotion": "thinking",
+      "voice": "am_fenrir",
+      "duration": 2.3
+    },
+    "E11": {
+      "file": "/projects/silent-churn/audio/E11.mp3",
+      "signature": "0b4c2178f7a8088a7fe1da164a29c0b9658acecb37935eb01ec401e60524a6da",
+      "caption": "The status queue is getting less quiet.",
+      "speaker": "elliot",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 3.462
+    },
+    "E12": {
+      "file": "/projects/silent-churn/audio/E12.mp3",
+      "signature": "0f895848effc69ad36569eb4634b776946b40e5a9b545d7d5d552cc03919758d",
+      "caption": "The core is down. What is the recovery?",
+      "speaker": "anand",
+      "emotion": "thinking",
+      "voice": "bm_lewis",
+      "duration": 3.247
+    },
+    "E13": {
+      "file": "/projects/silent-churn/audio/E13.mp3",
+      "signature": "33e98a7923d0b81859af3b4e7c09939b8449d9ecd75616f1cd42aab0dff7a373",
+      "caption": "The status field changes meaning between systems.",
+      "speaker": "marta",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 3.452
+    },
+    "E14": {
+      "file": "/projects/silent-churn/audio/E14.mp3",
+      "signature": "ac24997a2c3786a5da54d0d457de8f5c075850798bc15649ac79660439f1fe73",
+      "caption": "A pilot is not an open cheque.",
+      "speaker": "walter",
+      "emotion": "thinking",
+      "voice": "bm_daniel",
+      "duration": 2.653
+    },
+    "E15": {
+      "file": "/projects/silent-churn/audio/E15.mp3",
+      "signature": "1a862b994250127914a3cce92add2bb822f9db22342ef62c1b415ad631444214",
+      "caption": "Show me the handoff, not the headline.",
+      "speaker": "dolores",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 3.26
+    },
+    "E16": {
+      "file": "/projects/silent-churn/audio/E16.mp3",
+      "signature": "23f90b153cbe2f747daaa7d9d867a8e1cb0988f92ba440de86e09c58d9c64625",
+      "caption": "You made a promise. Is it still true?",
+      "speaker": "gideon",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 3.041
+    },
+    "E17": {
+      "file": "/projects/silent-churn/audio/E17.mp3",
+      "signature": "bd2db7dcd7e4e35ed78c6a3ca2d0c140ba6558057d6d2e4113a7c8d243f13460",
+      "caption": "My brokers need a date before the launch.",
+      "speaker": "beatrice",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 2.667
+    },
+    "E18": {
+      "file": "/projects/silent-churn/audio/E18.mp3",
+      "signature": "3e2cde13d841620ea12cc2daa4c8a1a03442f95f260dfb024f77fb6452221425",
+      "caption": "A high-value client is asking how to leave.",
+      "speaker": "elliot",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 3.611
+    },
+    "E19": {
+      "file": "/projects/silent-churn/audio/E19.mp3",
+      "signature": "9c318bff9389e3f68abd984f8c11d761ff76a720899878579f6e6d9570c7907d",
+      "caption": "Could we do more after this pilot?",
+      "speaker": "elliot",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 3.015
+    },
+    "E20": {
+      "file": "/projects/silent-churn/audio/E20.mp3",
+      "signature": "97f05fa5ba55a8a62fc3f88d39f254d9456bf031285595d43471d3afd88c93ab",
+      "caption": "You put that reason in writing. Defend it.",
+      "speaker": "walter",
+      "emotion": "thinking",
+      "voice": "bm_daniel",
+      "duration": 3.183
+    },
+    "E21": {
+      "file": "/projects/silent-churn/audio/E21.mp3",
+      "signature": "27a9d19ebb2252d615e065d4c966c5c190278508b4a1f28801d8144494891e67",
+      "caption": "Your question helped us select the right extract.",
+      "speaker": "marta",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 2.933
+    },
+    "E22": {
+      "file": "/projects/silent-churn/audio/E22.mp3",
+      "signature": "f7d9653c78e8354aebf97f381d0bab2e04b9ffd36e6ad1473cf9ccdc10d0e239",
+      "caption": "The batch does not move for our meeting.",
+      "speaker": "tobias",
+      "emotion": "thinking",
+      "voice": "am_fenrir",
+      "duration": 2.257
+    },
+    "E23": {
+      "file": "/projects/silent-churn/audio/E23.mp3",
+      "signature": "3a93775d54eb39528c65741128115c8fb9af570eb249b467b90529d5b7b6f876",
+      "caption": "Factual wording is possible. Approval still matters.",
+      "speaker": "gideon",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 4.05
+    },
+    "E24": {
+      "file": "/projects/silent-churn/audio/E24.mp3",
+      "signature": "335c32f56a64805cccb5cf2bd9f178534df28a4574e6d818bec36f46c213ea9e",
+      "caption": "What will a client know that they cannot see today?",
+      "speaker": "beatrice",
+      "emotion": "thinking",
+      "voice": "af_bella",
+      "duration": 2.819
+    },
+    "E25": {
+      "file": "/projects/silent-churn/audio/E25.mp3",
+      "signature": "a795d87c8d12e8785008bf2987bb098330b57befb30aabbfdb6b5de1afd39115",
+      "caption": "A side feed needs its own rollback.",
+      "speaker": "anand",
+      "emotion": "thinking",
+      "voice": "bm_lewis",
+      "duration": 3.206
+    },
+    "E26": {
+      "file": "/projects/silent-churn/audio/E26.mp3",
+      "signature": "98fce007885c8c35022f9524faf38d9322a3269a3a68bfdc4e62283f2dd234d9",
+      "caption": "Name who will answer the extra calls.",
+      "speaker": "dolores",
+      "emotion": "thinking",
+      "voice": "af_nicole",
+      "duration": 3.024
+    },
+    "E27": {
+      "file": "/projects/silent-churn/audio/E27.mp3",
+      "signature": "2cf5dd596ad8b398f0588c8715acc8dd6ef5260b359fb2585d61073c54366b3a",
+      "caption": "Five percent is a starting point. Not certainty.",
+      "speaker": "marta",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 3.432
+    },
+    "E28": {
+      "file": "/projects/silent-churn/audio/E28.mp3",
+      "signature": "d3c7e72d774db607460105b5ae85f30405c0197dec6a709bd911070bfb90a9ef",
+      "caption": "I need a decision that survives my absence.",
+      "speaker": "elliot",
+      "emotion": "thinking",
+      "voice": "bm_george",
+      "duration": 3.836
+    },
+    "E29": {
+      "file": "/projects/silent-churn/audio/E29.mp3",
+      "signature": "b28cb15d941c021751a68172856d6a863b9da163b7dce5b0507c5f2ce4818e09",
+      "caption": "We can rehearse before we touch production.",
+      "speaker": "tobias",
+      "emotion": "thinking",
+      "voice": "am_fenrir",
+      "duration": 2.619
+    },
+    "E30": {
+      "file": "/projects/silent-churn/audio/E30.mp3",
+      "signature": "bcbf47cb1831625d3467c7eba7fc011412289d3f3dcd02d4517165764086eddc",
+      "caption": "The minutes need the exact commitment.",
+      "speaker": "gideon",
+      "emotion": "thinking",
+      "voice": "am_michael",
+      "duration": 2.729
+    },
+    "E31": {
+      "file": "/projects/silent-churn/audio/E31.mp3",
+      "signature": "42b2eb150d8656593eb49c8d975d6d566d3e7719116205f58d873393fd81b948",
+      "caption": "No new incident is a result too.",
+      "speaker": "anand",
+      "emotion": "thinking",
+      "voice": "bm_lewis",
+      "duration": 2.96
+    },
+    "E32": {
+      "file": "/projects/silent-churn/audio/E32.mp3",
+      "signature": "f178dbea3063ab439d05cc82d7811a470d97d0894f0b108657d684185472ae86",
+      "caption": "Nobody ever asks what I do all day.",
+      "speaker": "marta",
+      "emotion": "thinking",
+      "voice": "af_heart",
+      "duration": 2.591
+    },
+    "intro-0": {
+      "file": "/projects/silent-churn/audio/intro-0.mp3",
+      "signature": "753b801ff0e7c99ebc50c71eaf3f597ed0e9656755c5eb30859a75a99051af87",
+      "caption": "Meridian Mutual. One hundred forty years of paper.",
+      "speaker": "pa",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 3.903
+    },
+    "intro-1": {
+      "file": "/projects/silent-churn/audio/intro-1.mp3",
+      "signature": "a92be9b2961d63ba65ae707d2ddceb6c4375d2aed45f5bdb56e92b3f5f65688e",
+      "caption": "Another one left. No complaint. No call. Just gone.",
+      "speaker": "broker",
+      "emotion": "neutral",
+      "voice": "bf_emma",
+      "duration": 4.071
+    },
+    "intro-2": {
+      "file": "/projects/silent-churn/audio/intro-2.mp3",
+      "signature": "992206f95eff830bce8f46a407efa8e997d5e5ca002e77b4d9e37d08de44d1d8",
+      "caption": "Twenty-one working days until the Quarterly Review.",
+      "speaker": "pa",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 3.539
+    },
+    "intro-3": {
+      "file": "/projects/silent-churn/audio/intro-3.mp3",
+      "signature": "bf23f33eec335a2b7a4b6144ae4eb91a54c22c617937b142b10b0db7ae876884",
+      "caption": "Elliot. Strategy. I'm your sponsor. That's all I can be.",
+      "speaker": "elliot",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 4.921
+    },
+    "intro-4": {
+      "file": "/projects/silent-churn/audio/intro-4.mp3",
+      "signature": "68a40dac17c268904a29d7da2b5040b1535fb6f49cbf614c3f3b61ed3bf1c879",
+      "caption": "Nobody owns the churn. Everybody has a theory.",
+      "speaker": "elliot",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 4.092
+    },
+    "intro-5": {
+      "file": "/projects/silent-churn/audio/intro-5.mp3",
+      "signature": "bd81123a1fa8c41466a966859901605447d81e2955098d6b61a7dd0e79a3d07b",
+      "caption": "Off the record. Find the real reason before the review.",
+      "speaker": "elliot",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 4.327
+    },
+    "pricing": {
+      "file": "/projects/silent-churn/audio/pricing.mp3",
+      "signature": "e7145089f2db68fad843b7eacf7f5a8a1f50ff383aa68504085077fab597b4a5",
+      "caption": "Walter will like that answer.",
+      "speaker": "elliot",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 2.545
+    },
+    "service": {
+      "file": "/projects/silent-churn/audio/service.mp3",
+      "signature": "f66543f0760f9652cf363eaedf1ffe6061d4950452fc018ac025b11d5166938a",
+      "caption": "Interesting. Prove it.",
+      "speaker": "elliot",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 2.383
+    },
+    "unknown": {
+      "file": "/projects/silent-churn/audio/unknown.mp3",
+      "signature": "9b4c8cb12319e98786f463d293f70ca490c53ddc912a7fc0903e8b582140416c",
+      "caption": "Honest. Start there.",
+      "speaker": "elliot",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 1.991
+    },
+    "sandbox": {
+      "file": "/projects/silent-churn/audio/sandbox.mp3",
+      "signature": "50a0577033d0581b95316317089112fb4e9180d91234f8586ff6cb515869bfff",
+      "caption": "Practice first. Nothing here counts.",
+      "speaker": "pa",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 2.883
+    },
+    "sandbox-done": {
+      "file": "/projects/silent-churn/audio/sandbox-done.mp3",
+      "signature": "c47117b2f05138a2c7c61ddd3d8a56d675b0958a83fdb06ab217642819fc6819",
+      "caption": "That's the loop. The real clock starts now.",
+      "speaker": "pa",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 3.221
+    },
+    "intro-walter": {
+      "file": "/projects/silent-churn/audio/intro-walter.mp3",
+      "signature": "634c92ba5d590ed65e6e4833d9583ab6ca81af7a13502ca16f5a6fa48d68bcda",
+      "caption": "Pricing is the problem. It always is.",
+      "speaker": "walter",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 3.056
+    },
+    "intro-dolores": {
+      "file": "/projects/silent-churn/audio/intro-dolores.mp3",
+      "signature": "bd0f4a8644346d52d28c5e9147e17f46769114d15b2cac9398b29285554b24ef",
+      "caption": "Show me the process before you change a word.",
+      "speaker": "dolores",
+      "emotion": "neutral",
+      "voice": "af_nicole",
+      "duration": 3.589
+    },
+    "intro-anand": {
+      "file": "/projects/silent-churn/audio/intro-anand.mp3",
+      "signature": "231324af177ac007b43fbbe4fd674461ce0c14e1a11f715af404c5d91adc7f59",
+      "caption": "The core has not crashed in four hundred days.",
+      "speaker": "anand",
+      "emotion": "neutral",
+      "voice": "bm_lewis",
+      "duration": 3.226
+    },
+    "intro-beatrice": {
+      "file": "/projects/silent-churn/audio/intro-beatrice.mp3",
+      "signature": "547adc522eecf2da97e0e49df68ba1a520f0996e76fac76930fabc70dcf6718a",
+      "caption": "Brokers tell me everything. Competitors pay more.",
+      "speaker": "beatrice",
+      "emotion": "neutral",
+      "voice": "af_bella",
+      "duration": 3.334
+    },
+    "intro-gideon": {
+      "file": "/projects/silent-churn/audio/intro-gideon.mp3",
+      "signature": "a9560419fbf03bc67589dba11b3238e4ac68b5a619c5e8fe56c21c6f251f7061",
+      "caption": "Put it in writing. Approved wording only.",
+      "speaker": "gideon",
+      "emotion": "neutral",
+      "voice": "am_michael",
+      "duration": 3.326
+    },
+    "intro-marta": {
+      "file": "/projects/silent-churn/audio/intro-marta.mp3",
+      "signature": "99d360b35fd84d4661ac743b4d1832f710709b8481ef10f77754e5b38cc3b2c8",
+      "caption": "Marta. Data stewardship. Restricted extracts need a ticket.",
+      "speaker": "marta",
+      "emotion": "neutral",
+      "voice": "af_heart",
+      "duration": 4.082
+    },
+    "marta-question": {
+      "file": "/projects/silent-churn/audio/marta-question.mp3",
+      "signature": "df0026a1c010aa76a7c1876c1cd35ddc551699ede19ea9989e9a6e9e3cd8f956",
+      "caption": "Most people ask for everything. I prefer a question.",
+      "speaker": "marta",
+      "emotion": "neutral",
+      "voice": "af_heart",
+      "duration": 3.623
+    },
+    "standard-hint": {
+      "file": "/projects/silent-churn/audio/standard-hint.mp3",
+      "signature": "2632f2d1aa0b3933a6843a0b3913de426b489930d2e5d1e9531c082d52b5f057",
+      "caption": "That sample is thin. A standard pull would tell you more.",
+      "speaker": "marta",
+      "emotion": "neutral",
+      "voice": "af_heart",
+      "duration": 3.539
+    },
+    "quick": {
+      "file": "/projects/silent-churn/audio/quick.mp3",
+      "signature": "06bc9ace3f83abd27773726bcc26c64fce3964bd0ae9376b618237c18399eb2d",
+      "caption": "Quick: a rough shape. Low confidence.",
+      "speaker": "marta",
+      "emotion": "neutral",
+      "voice": "af_heart",
+      "duration": 2.918
+    },
+    "standard": {
+      "file": "/projects/silent-churn/audio/standard.mp3",
+      "signature": "4d724f44203982b1f219eb617587b3a35a32cc87e0ae1dabb39f577c7a8ae27f",
+      "caption": "Standard: a clear trend.",
+      "speaker": "marta",
+      "emotion": "neutral",
+      "voice": "af_heart",
+      "duration": 2.031
+    },
+    "deep": {
+      "file": "/projects/silent-churn/audio/deep.mp3",
+      "signature": "0204ff2aacd863bf28727bebbc1f04b9a5c44e6414531c776e3117861826091a",
+      "caption": "Deep: the full picture. Costs days.",
+      "speaker": "marta",
+      "emotion": "neutral",
+      "voice": "af_heart",
+      "duration": 2.915
+    },
+    "thin": {
+      "file": "/projects/silent-churn/audio/thin.mp3",
+      "signature": "d82d1fe1afdee2676e63d93387c7b547ae2e43d31b80cce1d88ffd22f0cbf5b8",
+      "caption": "That's thin. Walter will eat it alive.",
+      "speaker": "elliot",
+      "emotion": "pressured",
+      "voice": "bm_george",
+      "duration": 3.185
+    },
+    "pattern": {
+      "file": "/projects/silent-churn/audio/pattern.mp3",
+      "signature": "21b51db3256e7e65f21330ccfeb1695be15323aabafdbc7b5b9223644bb9c7fc",
+      "caption": "A named problem is half a fix.",
+      "speaker": "pa",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 2.557
+    },
+    "listen-walter": {
+      "file": "/projects/silent-churn/audio/listen-walter.mp3",
+      "signature": "637cf87fb40136d5523196fe23c98acc3b6b7e2627be2aa9fb8a8759a10a4035",
+      "caption": "Revenue is leaking at renewal. I want to know why.",
+      "speaker": "walter",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 3.474
+    },
+    "listen-dolores": {
+      "file": "/projects/silent-churn/audio/listen-dolores.mp3",
+      "signature": "c11e7b198804ed0798101dbdb8a2759d258c3abd5403f6a75c6d770ac6b85ad9",
+      "caption": "Faster updates mean more calls. Calls cost money.",
+      "speaker": "dolores",
+      "emotion": "neutral",
+      "voice": "af_nicole",
+      "duration": 5.137
+    },
+    "listen-anand": {
+      "file": "/projects/silent-churn/audio/listen-anand.mp3",
+      "signature": "439bb9454f0024f92334f3d7d90181ef540ad1e5a8f1f8a497bf9a7ce04aaa80",
+      "caption": "We do not touch the core. A feed beside it, maybe.",
+      "speaker": "anand",
+      "emotion": "neutral",
+      "voice": "bm_lewis",
+      "duration": 3.935
+    },
+    "listen-beatrice": {
+      "file": "/projects/silent-churn/audio/listen-beatrice.mp3",
+      "signature": "19f18332eab2b48ec29a28429df168dda5179f1f5f1770ac069ab4f9310b30f1",
+      "caption": "Brokers will want to know first.",
+      "speaker": "beatrice",
+      "emotion": "neutral",
+      "voice": "af_bella",
+      "duration": 2.135
+    },
+    "listen-gideon": {
+      "file": "/projects/silent-churn/audio/listen-gideon.mp3",
+      "signature": "7859fef73efe0296db4a2ce6a055881f5956034d3e1ac157772ebdadfc75a17f",
+      "caption": "Who writes the wording? Who approves it?",
+      "speaker": "gideon",
+      "emotion": "neutral",
+      "voice": "am_michael",
+      "duration": 3.022
+    },
+    "match-walter": {
+      "file": "/projects/silent-churn/audio/match-walter.mp3",
+      "signature": "4f3fba0d16be9f229b734e022ac551d3fbe5624c2313d2b1f4de5f3910ea61fd",
+      "caption": "Hm. Then it isn't price.",
+      "speaker": "walter",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 2.313
+    },
+    "match-dolores": {
+      "file": "/projects/silent-churn/audio/match-dolores.mp3",
+      "signature": "a15eb0815ba72eda2b0332d547bc18d978d1eaee187165ffc97e4dc65fd851d2",
+      "caption": "Prove it in the pilot.",
+      "speaker": "dolores",
+      "emotion": "neutral",
+      "voice": "af_nicole",
+      "duration": 2.011
+    },
+    "match-anand": {
+      "file": "/projects/silent-churn/audio/match-anand.mp3",
+      "signature": "0ae07cc409648206c9c80aa0c72eae30637359a37ca17db5034c994ad4ceaf7d",
+      "caption": "Beside, not inside. Acceptable.",
+      "speaker": "anand",
+      "emotion": "neutral",
+      "voice": "bm_lewis",
+      "duration": 3.131
+    },
+    "match-beatrice": {
+      "file": "/projects/silent-churn/audio/match-beatrice.mp3",
+      "signature": "9f48c3b67b5768f374e800d4e77daab04a7611dcfb45923a43752ac25ceb6435",
+      "caption": "Then commissions are not it. Good to know.",
+      "speaker": "beatrice",
+      "emotion": "neutral",
+      "voice": "af_bella",
+      "duration": 2.709
+    },
+    "match-gideon": {
+      "file": "/projects/silent-churn/audio/match-gideon.mp3",
+      "signature": "ccdfa3ec9c94b909e931bdabb908ae8e3aacd64254dcdc582127205e91f6c2cc",
+      "caption": "In writing. Then I can support it.",
+      "speaker": "gideon",
+      "emotion": "neutral",
+      "voice": "am_michael",
+      "duration": 2.887
+    },
+    "second": {
+      "file": "/projects/silent-churn/audio/second.mp3",
+      "signature": "74dafa5be1c99ce7f72559d1e5af1470fb4869875373526b3ac8559ae76f6ef1",
+      "caption": "I've seen this with my own brokers.",
+      "speaker": "beatrice",
+      "emotion": "neutral",
+      "voice": "af_bella",
+      "duration": 2.274
+    },
+    "window": {
+      "file": "/projects/silent-churn/audio/window.mp3",
+      "signature": "650761c9d878a3e19981de5ac16de48eff2546f1503e8c759277d2a0ef7d78a0",
+      "caption": "Not on a Friday.",
+      "speaker": "tobias",
+      "emotion": "neutral",
+      "voice": "am_fenrir",
+      "duration": 1.457
+    },
+    "safe-window": {
+      "file": "/projects/silent-churn/audio/safe-window.mp3",
+      "signature": "3ef57211962a6a3a639a0c650af74189f950792c099e33ceaa7a5dc097ec8977",
+      "caption": "A feed beside the core. Flag it. Tell me the rollback.",
+      "speaker": "tobias",
+      "emotion": "neutral",
+      "voice": "am_fenrir",
+      "duration": 3.735
+    },
+    "danger-window": {
+      "file": "/projects/silent-churn/audio/danger-window.mp3",
+      "signature": "30b895845fb75e756db58bda52a4ef3497d3eddf104ce3d46fb42f620943d0b0",
+      "caption": "That will not hold. I'm telling you now.",
+      "speaker": "tobias",
+      "emotion": "pressured",
+      "voice": "am_fenrir",
+      "duration": 2.573
+    },
+    "crash": {
+      "file": "/projects/silent-churn/audio/crash.mp3",
+      "signature": "8919f2cac2c03c6a140d193b6cc488e34134b3bd2d30b24755d37bfce82f7d95",
+      "caption": "Core is down. The batch collided.",
+      "speaker": "tobias",
+      "emotion": "pressured",
+      "voice": "am_fenrir",
+      "duration": 2.213
+    },
+    "warned": {
+      "file": "/projects/silent-churn/audio/warned.mp3",
+      "signature": "152b6dbf467d461c2051e558b0e48946589614462af88686d3607358a0ce5823",
+      "caption": "You said this could happen. We should have listened.",
+      "speaker": "anand",
+      "emotion": "neutral",
+      "voice": "bm_lewis",
+      "duration": 3.185
+    },
+    "unwarned": {
+      "file": "/projects/silent-churn/audio/unwarned.mp3",
+      "signature": "5c0aa68ef69d2ced76cd96a53501f8efb33c2a5e41ec427d11f51d6c542c5edb",
+      "caption": "You were warned.",
+      "speaker": "anand",
+      "emotion": "neutral",
+      "voice": "bm_lewis",
+      "duration": 1.393
+    },
+    "win": {
+      "file": "/projects/silent-churn/audio/win.mp3",
+      "signature": "546982ae4f9d2a812d51b1e4afec709c13ab66cfbaf9cc315bb9239c6da8edd2",
+      "caption": "Eleven days to three. Quietly.",
+      "speaker": "elliot",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 3.117
+    },
+    "trust": {
+      "file": "/projects/silent-churn/audio/trust.mp3",
+      "signature": "6b8f38521e61aecab5e345c73b896cfbe73ea7aa52e11a0074a0746ac35f0340",
+      "caption": "Trust is a slow variable. Today was a good day.",
+      "speaker": "pa",
+      "emotion": "neutral",
+      "voice": "bm_daniel",
+      "duration": 3.751
+    },
+    "human-anand": {
+      "file": "/projects/silent-churn/audio/human-anand.mp3",
+      "signature": "c18a0aeff2f00bd714639f67909575d3b92848117dc00744ff987a7a477d00eb",
+      "caption": "I have not slept well since the outage. Thank you for asking.",
+      "speaker": "anand",
+      "emotion": "neutral",
+      "voice": "bm_lewis",
+      "duration": 4.037
+    },
+    "human-marta": {
+      "file": "/projects/silent-churn/audio/human-marta.mp3",
+      "signature": "f178dbea3063ab439d05cc82d7811a470d97d0894f0b108657d684185472ae86",
+      "caption": "Nobody ever asks what I do all day.",
+      "speaker": "marta",
+      "emotion": "neutral",
+      "voice": "af_heart",
+      "duration": 2.591
+    },
+    "human-elliot": {
+      "file": "/projects/silent-churn/audio/human-elliot.mp3",
+      "signature": "479fe1eef26055e3496d28556728262ab9d139531d6d498d4f878ca6b204c46a",
+      "caption": "I almost didn't hire you. I'm glad I did.",
+      "speaker": "elliot",
+      "emotion": "neutral",
+      "voice": "bm_george",
+      "duration": 3.503
+    }
+  }
+}

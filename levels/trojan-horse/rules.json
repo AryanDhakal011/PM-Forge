@@ -1,0 +1,186 @@
+{
+  "initial": {
+    "credibility": 60,
+    "readiness": 50,
+    "trust": 55,
+    "risk": 25,
+    "cash": 100,
+    "composure": 60,
+    "safeguards": 0,
+    "multiplier": 2,
+    "runway": 12,
+    "rating": 47,
+    "guildRevenue": 190000,
+    "community": 60,
+    "partner": 60,
+    "graceDays": 14,
+    "rolloutDays": 14
+  },
+  "bounds": {
+    "credibility": [
+      0,
+      100
+    ],
+    "readiness": [
+      0,
+      100
+    ],
+    "trust": [
+      0,
+      100
+    ],
+    "risk": [
+      0,
+      100
+    ],
+    "cash": [
+      0,
+      100
+    ],
+    "composure": [
+      0,
+      100
+    ],
+    "safeguards": [
+      0,
+      100
+    ],
+    "multiplier": [
+      0,
+      2
+    ],
+    "runway": [
+      0,
+      52
+    ],
+    "rating": [
+      10,
+      50
+    ],
+    "guildRevenue": [
+      0,
+      300000
+    ],
+    "community": [
+      0,
+      100
+    ],
+    "partner": [
+      0,
+      100
+    ],
+    "graceDays": [
+      0,
+      30
+    ],
+    "rolloutDays": [
+      0,
+      28
+    ]
+  },
+  "flags": [
+    "double-paid",
+    "guilds-named",
+    "fraud-cut",
+    "promised-today",
+    "guilds-certain"
+  ],
+  "clues": [
+    "ledger",
+    "graph",
+    "cohort",
+    "devices",
+    "guilds",
+    "contracts",
+    "cash",
+    "fraud",
+    "guild-proof",
+    "revenue"
+  ],
+  "receipts": [
+    "R_trojan-horse_coin-press",
+    "R_trojan-horse_party-floor",
+    "R_trojan-horse_drawers",
+    "R_trojan-horse_fraud-hunt",
+    "R_trojan-horse_valve",
+    "R_trojan-horse_guild-visit",
+    "R_trojan-horse_segments",
+    "R_trojan-horse_grace",
+    "R_trojan-horse_launch-night",
+    "R_trojan-horse_fix-today",
+    "R_trojan-horse_review",
+    "R_trojan-horse_together",
+    "R_trojan-horse_listen-call",
+    "R_trojan-horse_defend-call",
+    "R_trojan-horse_delay",
+    "R_trojan-horse_faq",
+    "R_trojan-horse_dm",
+    "R_trojan-horse_fund-support",
+    "R_trojan-horse_publish-payouts",
+    "R_trojan-horse_restore"
+  ],
+  "endings": [
+    {
+      "id": "revolt",
+      "title": "Community revolt",
+      "summary": "The loop you changed affected cash, trust, and legitimate trade.",
+      "when": {
+        "var": "community",
+        "op": "<",
+        "value": 40
+      }
+    },
+    {
+      "id": "runway",
+      "title": "Cash cliff",
+      "summary": "The loop you changed affected cash, trust, and legitimate trade.",
+      "when": {
+        "var": "runway",
+        "op": "<",
+        "value": 6
+      }
+    },
+    {
+      "id": "gardener",
+      "title": "The Gardener",
+      "summary": "The loop you changed affected cash, trust, and legitimate trade.",
+      "when": {
+        "all": [
+          {
+            "flag": "guilds-certain"
+          },
+          {
+            "var": "partner",
+            "op": ">=",
+            "value": 60
+          }
+        ]
+      }
+    },
+    {
+      "id": "blanket",
+      "title": "Clean cut, lost partners",
+      "summary": "The loop you changed affected cash, trust, and legitimate trade.",
+      "when": {
+        "var": "partner",
+        "op": "<",
+        "value": 45
+      }
+    },
+    {
+      "id": "bridge",
+      "title": "The bridge",
+      "summary": "The loop you changed affected cash, trust, and legitimate trade.",
+      "when": {
+        "var": "cash",
+        "op": "<",
+        "value": 50
+      }
+    },
+    {
+      "id": "pragmatist",
+      "title": "Bounded transition",
+      "summary": "The loop you changed affected cash, trust, and legitimate trade."
+    }
+  ]
+}

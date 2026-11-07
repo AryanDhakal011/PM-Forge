@@ -1,0 +1,40 @@
+{
+  "buildId": "UfeSNkKv_VbIngqPBV8SD",
+  "preview": "http://localhost:3001/app/projects/invisible-wall/play",
+  "unitTests": 141,
+  "engineSmokePaths": 4,
+  "browserChecks": 211,
+  "browserFailures": [],
+  "browserErrors": [],
+  "authoredScenes": 29,
+  "capturedScenes": 35,
+  "recordedLines": 89,
+  "sharedNavigationChecks": 17,
+  "navigationFailures": [],
+  "routes": 314,
+  "assets": 161,
+  "routeFailures": [],
+  "servedCurrentBuild": true,
+  "accessibility": 1,
+  "resources": {
+    "cycles": 20,
+    "contexts": 20,
+    "lostContexts": 20,
+    "listenersBefore": 173,
+    "listenersAfter": 173,
+    "memoryBefore": {
+      "documents": 2,
+      "nodes": 820,
+      "jsEventListeners": 489
+    },
+    "memoryAfter": {
+      "documents": 2,
+      "nodes": 827,
+      "jsEventListeners": 659
+    }
+  },
+  "limitations": [
+    "Physical Safari/iOS, Firefox and mid-range Android GPU not certified",
+    "Synthetic voice direction and expert review remain pending"
+  ]
+}

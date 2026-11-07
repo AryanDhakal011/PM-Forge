@@ -36,7 +36,7 @@ export default function Page() {
               Explore all 12 campaigns →
             </Link>
             <p className={u.finePrint}>
-              45–75 minutes per campaign, with pause/resume. Guest work is saved
+              15–75 minutes per campaign, with pause/resume. Guest work is saved
               on this device. Configured accounts can sync. All data is
               simulated; authored content awaits expert review.
             </p>
@@ -61,7 +61,7 @@ export default function Page() {
                 <h2>{p.title}</h2>
                 <p>{p.skill}.</p>
                 <div className={s.cardFoot}>
-                  <span>45–75 min · {p.tags[0]}</span>
+                  <span>{p.duration.label} · {p.tags[0]}</span>
                   <Link href={`/app/projects/${p.id}`}>Read the brief →</Link>
                 </div>
               </article>

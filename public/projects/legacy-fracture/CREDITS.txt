@@ -1,0 +1,3 @@
+Granger & Sons Freight is fictional. All portraits, stage scenes, graph and fleet visuals, and effects are original PMForge code assets.
+Dialogue: Kokoro-82M v1.0, Apache-2.0, prerecorded synthetic speech with matching captions. No acted voices or runtime synthesis. See the shipped license.
+Subframe MCP inspiration consulted: Atoms industrial gold and The Vessel editorial warmth. No source copied.

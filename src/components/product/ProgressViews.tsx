@@ -1,5 +1,7 @@
 "use client";
 import Link from "next/link";
+import DeviceProjectActivity from "@/components/projects/DeviceProjectActivity";
+import PortfolioProgress from "@/components/portfolio/PortfolioProgress";
 import { Fragment, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import {
@@ -43,16 +45,16 @@ export function ProgressView() {
         <div>
           <span className={styles.eyebrow}>Your practice, made visible</span>
           <h1>Notice what’s getting clearer.</h1>
-          <p>Coverage and reasoning patterns from your completed sessions.</p>
+          <p>Coverage and reasoning patterns from your assessed decisions.</p>
         </div>
       </div>
-      <ProgressTabs active="overview" />
+      <ProgressTabs active="overview" /><p className={styles.finePrint}>{complete.length} decisions assessed · {runs.filter(r=>r.stage==="complete").length} full learning loops finished. Coverage lights at the decision audit; reflection and expert review are tracked separately.</p>
       <FirstWin />
-      <ProjectActivity />
+      <DeviceProjectActivity /><ProjectActivity /><PortfolioProgress />
       <div className={styles.statStrip}>
         <div>
           <strong>{complete.length}</strong>
-          <span>Completed runs</span>
+          <span>Decisions assessed</span>
         </div>
         <div>
           <strong>
@@ -205,7 +207,7 @@ export function HistoryView() {
         </Link>
       </nav>
       {isProjects ? (
-        <ProjectActivity mode="history" />
+        <><DeviceProjectActivity /><ProjectActivity mode="history" /></>
       ) : (
         <>
           <nav className={styles.historyFilters} aria-label="Session status">

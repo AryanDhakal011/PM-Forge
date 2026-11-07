@@ -1,0 +1,758 @@
+[
+  {
+    "id": "E01",
+    "speaker": "lila",
+    "title": "Lost work, three customers",
+    "text": "Three customers cited autosave losses. Quote attached.",
+    "condition": "always",
+    "feature": "05",
+    "kind": "customer",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E02",
+    "speaker": "kofi",
+    "title": "The number nobody opens",
+    "text": "Retention is flat. Look at the Truth tab.",
+    "condition": "fog",
+    "feature": "",
+    "kind": "truth",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E03",
+    "speaker": "reva",
+    "title": "A little more sparkle",
+    "text": "Can the demo tiles blink? Just a little.",
+    "condition": "tiles",
+    "feature": "02",
+    "kind": "polish",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E04",
+    "speaker": "cass",
+    "title": "A promise from Sales",
+    "text": "Sales promised SSO to a prospect. Friday.",
+    "condition": "scope",
+    "feature": "08",
+    "kind": "scope",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E05",
+    "speaker": "amara",
+    "title": "Ticket 4471 · P1",
+    "text": "Autosave is losing edits in staging. Ticket forty-four seventy-one.",
+    "condition": "autosaveRisk",
+    "feature": "05",
+    "kind": "bug",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E06",
+    "speaker": "nils",
+    "title": "The weekend boundary",
+    "text": "I am not doing another weekend. We need a different plan.",
+    "condition": "debtHigh",
+    "feature": "10",
+    "kind": "boundary",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E07",
+    "speaker": "amara",
+    "title": "A gate without evidence",
+    "text": "There is no stress evidence for this release.",
+    "condition": "untested",
+    "feature": "",
+    "kind": "tests",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E08",
+    "speaker": "nils",
+    "title": "Tuesday, the bill arrives",
+    "text": "The rushed release is straining the write queue.",
+    "condition": "rushed",
+    "feature": "11",
+    "kind": "outage",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E09",
+    "speaker": "kofi",
+    "title": "A chart leaves the building",
+    "text": "Cass shared the Pulse. That is not retention.",
+    "condition": "vanity",
+    "feature": "",
+    "kind": "truth",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E10",
+    "speaker": "nils",
+    "title": "Work to rule",
+    "text": "Only planned tickets now. No more invisible overtime.",
+    "condition": "nilsLow",
+    "feature": "",
+    "kind": "trust",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E11",
+    "speaker": "nils",
+    "title": "A resignation draft",
+    "text": "Someone asked me for a reference. We should talk.",
+    "condition": "moraleLow",
+    "feature": "",
+    "kind": "boundary",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E12",
+    "speaker": "lila",
+    "title": "A renewal goes quiet",
+    "text": "A customer is asking how to export everything.",
+    "condition": "lilaLow",
+    "feature": "09",
+    "kind": "customer",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E13",
+    "speaker": "kofi",
+    "title": "An actual return visit",
+    "text": "The returning cohort is moving. Let us check why.",
+    "condition": "retentionUp",
+    "feature": "",
+    "kind": "win",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E14",
+    "speaker": "amara",
+    "title": "The tiles are expensive",
+    "text": "Live tiles are delaying the rest of the app.",
+    "condition": "tilesShipped",
+    "feature": "02",
+    "kind": "bug",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E15",
+    "speaker": "reva",
+    "title": "The Zenith headline",
+    "text": "What is the headline for Zenith?",
+    "condition": "week2",
+    "feature": "",
+    "kind": "headline",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E16",
+    "speaker": "amara",
+    "title": "An exit that worked",
+    "text": "The flag gave us a clean rollback.",
+    "condition": "flagged",
+    "feature": "",
+    "kind": "win",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E17",
+    "speaker": "cass",
+    "title": "Room for one more?",
+    "text": "Could we stretch? The foundations look healthier.",
+    "condition": "debtLow",
+    "feature": "06",
+    "kind": "scope",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E18",
+    "speaker": "reva",
+    "title": "Your own words",
+    "text": "You wrote that down. Does the decision still hold?",
+    "condition": "receipt",
+    "feature": "",
+    "kind": "receipt",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E19",
+    "speaker": "kofi",
+    "title": "Two dashboards, two stories",
+    "text": "These dashboards disagree because they measure different things.",
+    "condition": "fogLate",
+    "feature": "",
+    "kind": "truth",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E20",
+    "speaker": "nils",
+    "title": "A very public summary",
+    "text": "The tweet says AI. The implementation says temporary workaround.",
+    "condition": "ai",
+    "feature": "07",
+    "kind": "scope",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E21",
+    "speaker": "cass",
+    "title": "The reliability question",
+    "text": "Are we a reliable company? I need an honest answer.",
+    "condition": "manyIncidents",
+    "feature": "",
+    "kind": "headline",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E22",
+    "speaker": "nils",
+    "title": "A quiet thank you",
+    "text": "I made it to my daughter’s recital. Thank you.",
+    "condition": "healthy",
+    "feature": "",
+    "kind": "win",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E23",
+    "speaker": "cass",
+    "title": "A ticket over your head",
+    "text": "I assigned this directly. We need momentum.",
+    "condition": "cassLow",
+    "feature": "02",
+    "kind": "scope",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E24",
+    "speaker": "reva",
+    "title": "Before the board arrives",
+    "text": "What changed, what proves it, and what do you need?",
+    "condition": "week3",
+    "feature": "",
+    "kind": "headline",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E25",
+    "speaker": "amara",
+    "title": "The test suite is manual",
+    "text": "We can automate the regression checks. It will take focus.",
+    "condition": "manual",
+    "feature": "",
+    "kind": "automate",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E26",
+    "speaker": "kofi",
+    "title": "Instrument the return path",
+    "text": "Define a returning user before the next launch.",
+    "condition": "fog",
+    "feature": "",
+    "kind": "truth",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E27",
+    "speaker": "lila",
+    "title": "Finally",
+    "text": "A customer wrote one word. Finally.",
+    "condition": "reliable",
+    "feature": "",
+    "kind": "win",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E28",
+    "speaker": "nils",
+    "title": "A blocked pull request",
+    "text": "A dependency is waiting for a decision. Not more code.",
+    "condition": "inflight",
+    "feature": "",
+    "kind": "unblock",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E29",
+    "speaker": "amara",
+    "title": "A rehearsal, not a release",
+    "text": "Could we test the rollback before Friday?",
+    "condition": "noRollback",
+    "feature": "",
+    "kind": "rollback",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E30",
+    "speaker": "reva",
+    "title": "The room is watching",
+    "text": "We need a demo, even if we narrow it.",
+    "condition": "pulsePlan",
+    "feature": "01",
+    "kind": "polish",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E31",
+    "speaker": "lila",
+    "title": "Search feels different",
+    "text": "A customer found their old notes without asking us.",
+    "condition": "searchDone",
+    "feature": "",
+    "kind": "win",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E32",
+    "speaker": "nils",
+    "title": "Interest, paid down",
+    "text": "The queue is quieter. Maintenance bought us capacity.",
+    "condition": "debtLow",
+    "feature": "",
+    "kind": "win",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E33",
+    "speaker": "cass",
+    "title": "An investor clip",
+    "text": "Could we show the new tiles in the investor clip?",
+    "condition": "pulsePlan",
+    "feature": "02",
+    "kind": "polish",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E34",
+    "speaker": "kofi",
+    "title": "A cohort worth following",
+    "text": "Digest users are returning without extra nudges.",
+    "condition": "retentionUp",
+    "feature": "",
+    "kind": "win",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E35",
+    "speaker": "lila",
+    "title": "The enterprise request",
+    "text": "The renewal needs single sign-on. Can we give a date?",
+    "condition": "always",
+    "feature": "08",
+    "kind": "scope",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E36",
+    "speaker": "amara",
+    "title": "A second pair of eyes",
+    "text": "I can review the riskiest change with you.",
+    "condition": "bugsHigh",
+    "feature": "",
+    "kind": "tests",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E37",
+    "speaker": "nils",
+    "title": "Finish before starting",
+    "text": "We have too much open work. Pick what stops.",
+    "condition": "overloaded",
+    "feature": "",
+    "kind": "boundary",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E38",
+    "speaker": "kofi",
+    "title": "A small honest chart",
+    "text": "The cohort is modest. It is still real progress.",
+    "condition": "truth",
+    "feature": "",
+    "kind": "win",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E39",
+    "speaker": "reva",
+    "title": "Tell me the trade-off",
+    "text": "I can defend a smaller release if you explain it.",
+    "condition": "healthy",
+    "feature": "",
+    "kind": "receipt",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E40",
+    "speaker": "lila",
+    "title": "A promise has a date",
+    "text": "Customers remember the date, not our sprint points.",
+    "condition": "debtHigh",
+    "feature": "05",
+    "kind": "customer",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E41",
+    "speaker": "amara",
+    "title": "Quiet is evidence too",
+    "text": "No new high-priority reports today. Keep the checks.",
+    "condition": "reliable",
+    "feature": "",
+    "kind": "win",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  },
+  {
+    "id": "E42",
+    "speaker": "cass",
+    "title": "Friday is getting louder",
+    "text": "What can we safely show without making another promise?",
+    "condition": "vanity",
+    "feature": "01",
+    "kind": "headline",
+    "cooldown": 2,
+    "choices": [
+      "do",
+      "schedule",
+      "delegate",
+      "decline",
+      "ask"
+    ],
+    "window": 2
+  }
+]

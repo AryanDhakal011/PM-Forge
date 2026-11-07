@@ -1,0 +1,69 @@
+{
+  "id": "second-look",
+  "type": "TOOL",
+  "background": "lab",
+  "goal": "Spend one attention point on a second look.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "ines"
+  ],
+  "lines": [
+    {
+      "id": "line-6",
+      "speaker": "ines",
+      "expression": "thinking",
+      "text": "The first viewing is not the whole story."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "second-look",
+      "kind": "TimelineScrubber",
+      "title": "Second look: the rehearsal",
+      "items": [
+        {
+          "id": "marker",
+          "label": "Inspect 00:47",
+          "detail": "The sleeve passes through the stopping envelope.",
+          "effects": [
+            {
+              "var": "readiness",
+              "op": "add",
+              "value": 3
+            }
+          ],
+          "group": "near-miss"
+        },
+        {
+          "id": "beyond",
+          "label": "Scrub past 01:52",
+          "detail": "A second near-miss appears beyond the original marker.",
+          "effects": [
+            {
+              "var": "readiness",
+              "op": "add",
+              "value": 5
+            },
+            {
+              "flag": "near-miss-mitigated",
+              "value": true
+            }
+          ],
+          "group": "second-near-miss"
+        }
+      ],
+      "min": 1,
+      "max": 1,
+      "cost": 1,
+      "receiptId": "R_deadlock_second-look"
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "mediate-speed"
+}

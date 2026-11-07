@@ -1,0 +1,25 @@
+{
+  "slots": [
+    "week",
+    "parity",
+    "mandate",
+    "friction",
+    "finding",
+    "reason",
+    "ally"
+  ],
+  "variants": {
+    "warm": [
+      "Week {week}. The {finding} changed my mind.",
+      "Parity {parity}. That is a measured sample."
+    ],
+    "neutral": [
+      "Mandate {mandate}; friction {friction}.",
+      "The {ally} choice changes who carries the work."
+    ],
+    "cold": [
+      "You wrote “{reason}”. Show the route.",
+      "A lower parity is a decision, too."
+    ]
+  }
+}

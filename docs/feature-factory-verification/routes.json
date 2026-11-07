@@ -1,0 +1,2221 @@
+{
+  "base": "http://localhost:3001",
+  "buildId": "umT35aMHwxCE5s9DkjtJ9",
+  "routes": [
+    {
+      "path": "/app/account",
+      "status": 200
+    },
+    {
+      "path": "/app/bookmarks",
+      "status": 200
+    },
+    {
+      "path": "/about",
+      "status": 200
+    },
+    {
+      "path": "/app",
+      "status": 200
+    },
+    {
+      "path": "/app/history",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/app/practice",
+      "status": 200
+    },
+    {
+      "path": "/app/portfolio/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/portfolio",
+      "status": 200
+    },
+    {
+      "path": "/app/portfolio/new",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ait-e-1-live-translation-three-seconds-or-instant",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ait-e-3-on-device-or-cloud-for-tagging-kids-photos",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ait-e-2-a-shop-assistant-whose-answers-change-hourly",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ait-h-1-the-assistant-is-inventing-fees-in-one-region",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ait-h-2-an-agent-that-can-spend-money",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ait-m-2-a-support-copilot-with-three-goals-fighting",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ait-h-3-monday-8-a-m-10-000-clinicians-at-once",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ait-m-3-search-relevance-with-a-300-ms-budget",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ait-m-1-a-medical-scribe-with-a-hard-safety-floor",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/beh-e-1-you-disagreed-with-a-designer-about-feature-placement",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/beh-e-2-you-learned-something-fast-to-ship-something",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/beh-e-3-customer-feedback-changed-your-decision",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/beh-h-1-the-project-is-failing-in-front-of-the-board",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/beh-h-2-an-incident-harmed-users-and-you-owned-the-response",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/beh-m-1-stability-versus-the-hard-date",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/beh-h-3-you-found-your-own-number-was-wrong-after-presenting-it",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/est-e-1-is-a-flagship-phone-store-on-durbar-marg-worth-the-rent",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/est-e-2-how-many-quick-pay-uses-per-week-should-we-buy-capacity-for",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/est-e-3-how-many-support-agents-for-launch-day-chat",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/est-h-1-terminal-outage-where-do-60-manual-agents-go",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/beh-m-3-a-dependency-slipped-and-two-teams-wanted-different-things",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/beh-m-2-saying-no-to-a-senior-stakeholder-s-idea",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/est-h-3-the-festival-exodus-charging-capacity-on-a-highway-corridor",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/est-m-2-ticket-on-sale-how-fast-should-the-waiting-room-admit-fans",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/est-m-3-tihar-week-do-we-have-enough-riders-for-sweets-and-gifts",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/est-h-2-results-day-web-sms-or-phone-which-will-break-first",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/exe-e-1-daily-actives-fell-10-in-three-weeks",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/est-m-1-rainstorm-in-new-york-how-many-extra-drivers-to-incentivise",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/exe-e-2-how-to-prove-save-for-later-works",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/exe-e-3-more-orders-how-will-you-know-it-is-healthy",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/exe-h-1-watch-time-is-at-a-record-but-is-it-healthy",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/exe-h-2-active-users-are-up-22-is-anyone-new-actually-there",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/exe-h-3-the-test-says-3-revenue-retention-says-otherwise",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/exe-m-1-notifications-lift-daily-actives-and-uninstalls",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/exe-m-2-raise-checkout-conversion-by-5",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/exe-m-3-a-referral-program-with-suspicious-signups",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ps-e-2-parents-keep-returning-kids-clothes",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ps-e-1-finding-items-in-a-huge-grocery-store",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ps-e-3-new-gym-members-stop-after-three-weeks",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ps-h-1-how-older-residents-of-tokyo-move-through-the-transit-system",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ps-h-3-fair-price-information-for-a-farmers-cooperative",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ps-h-2-designing-for-first-time-flyers",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ps-m-2-first-time-riders-and-the-intercity-bus",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ps-m-3-a-telehealth-app-for-adults-over-45",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/ps-m-1-a-first-ikea-visit-for-a-new-homeowner",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/rca-e-1-sign-ups-dropped-12-after-the-app-update",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/rca-e-3-add-to-cart-conversion-fell-after-the-layout-refresh",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/rca-h-1-drivers-are-leaving-slowly-in-six-cities",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/rca-h-2-customer-satisfaction-is-sliding-while-resolution-times-improve",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/rca-e-2-new-seller-activations-fell-15",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/rca-h-3-revenue-per-paying-user-is-eroding-by-7",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/rca-m-1-search-conversion-fell-while-crash-rates-spiked",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/str-e-1-students-churn-at-re-verification-cut-price-or-something-else",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/rca-m-3-daily-users-are-up-8-but-week-one-retention-is-down",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/str-e-2-when-should-the-paywall-appear",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/rca-m-2-delivery-times-rose-three-minutes-yet-every-city-got-faster",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/str-e-3-raise-the-take-rate-for-new-sellers",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/str-h-1-ai-answers-help-users-and-starve-publishers",
+      "status": 200
+    },
+    {
+      "path": "/app/progress",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/str-h-3-a-wallet-s-three-growth-paths-all-depend-on-one-another",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/str-h-2-a-minimum-pay-rule-hits-the-biggest-market",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/str-m-1-a-rival-adds-a-concierge-match-copy-or-pivot",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/str-m-2-launching-a-streamer-where-local-telcos-own-distribution",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/deadlock/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/deadlock/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/deadlock/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/practice/str-m-3-an-ai-native-rival-is-winning-the-mid-market",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/deadlock/debrief/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/deadlock/play/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/deadlock/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/debrief/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/feature-factory",
+      "status": 200
+    },
+    {
+      "path": "/app/projects",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/feature-factory/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/feature-factory/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/feature-factory/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/feature-factory/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/ghost-metric/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/ghost-metric/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/ghost-metric/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/ghost-metric/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/invisible-wall",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/invisible-wall/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/invisible-wall/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/deadlock",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/invisible-wall/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/invisible-wall/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/last-mile/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/last-mile/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/last-mile/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/last-mile/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/legacy-fracture/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/legacy-fracture/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/legacy-fracture/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/legacy-fracture/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/ghost-metric",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/pivot-point/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/pivot-point/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/pivot-point/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/pivot-point/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/public-fracture/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/public-fracture/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/last-mile",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/legacy-fracture",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/public-fracture/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/public-fracture/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/sacred-no/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/sacred-no/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/sacred-no/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/sacred-no/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/pivot-point",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/shadow-roadmap/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/shadow-roadmap/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/shadow-roadmap/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/public-fracture",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/shadow-roadmap/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/silent-churn/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/silent-churn/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/silent-churn/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/silent-churn/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/trojan-horse/c/1",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/sacred-no",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/trojan-horse/c/2",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/trojan-horse/c/3",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/trojan-horse/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/run/00000000-0000-4000-8000-000000000000",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/shadow-roadmap",
+      "status": 200
+    },
+    {
+      "path": "/app/run/00000000-0000-4000-8000-000000000000/debrief",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/silent-churn",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/trojan-horse",
+      "status": 200
+    },
+    {
+      "path": "/app/settings",
+      "status": 200
+    },
+    {
+      "path": "/auth/callback",
+      "status": 200
+    },
+    {
+      "path": "/career",
+      "status": 200
+    },
+    {
+      "path": "/auth/error",
+      "status": 200
+    },
+    {
+      "path": "/changelog",
+      "status": 200
+    },
+    {
+      "path": "/content-policy",
+      "status": 200
+    },
+    {
+      "path": "/credits",
+      "status": 200
+    },
+    {
+      "path": "/contribute",
+      "status": 200
+    },
+    {
+      "path": "/frameworks",
+      "status": 200
+    },
+    {
+      "path": "/dashboard",
+      "status": 200
+    },
+    {
+      "path": "/frameworks/ai-product-management",
+      "status": 200
+    },
+    {
+      "path": "/frameworks/customer-discovery",
+      "status": 200
+    },
+    {
+      "path": "/frameworks/execution-and-delivery",
+      "status": 200
+    },
+    {
+      "path": "/frameworks/job-ready",
+      "status": 200
+    },
+    {
+      "path": "/frameworks/data-and-experimentation",
+      "status": 200
+    },
+    {
+      "path": "/frameworks/foundation-and-product-strategy",
+      "status": 200
+    },
+    {
+      "path": "/frameworks/prioritization-and-decision-making",
+      "status": 200
+    },
+    {
+      "path": "/frameworks/stakeholder-leadership",
+      "status": 200
+    },
+    {
+      "path": "/learn/ai-product-management",
+      "status": 200
+    },
+    {
+      "path": "/learn/customer-discovery",
+      "status": 200
+    },
+    {
+      "path": "/learn/data-and-experimentation",
+      "status": 200
+    },
+    {
+      "path": "/frameworks/technical-fluency",
+      "status": 200
+    },
+    {
+      "path": "/frameworks/ui-ux-collaboration",
+      "status": 200
+    },
+    {
+      "path": "/learn/execution-and-delivery",
+      "status": 200
+    },
+    {
+      "path": "/learn/foundation-and-product-strategy",
+      "status": 200
+    },
+    {
+      "path": "/how-it-works",
+      "status": 200
+    },
+    {
+      "path": "/help",
+      "status": 200
+    },
+    {
+      "path": "/learn/job-ready",
+      "status": 200
+    },
+    {
+      "path": "/learn/prioritization-and-decision-making",
+      "status": 200
+    },
+    {
+      "path": "/learn/stakeholder-leadership",
+      "status": 200
+    },
+    {
+      "path": "/learn/technical-fluency",
+      "status": 200
+    },
+    {
+      "path": "/learn/ui-ux-collaboration",
+      "status": 200
+    },
+    {
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "path": "/practice/ait-e-1-live-translation-three-seconds-or-instant",
+      "status": 200
+    },
+    {
+      "path": "/practice/ait-e-2-a-shop-assistant-whose-answers-change-hourly",
+      "status": 200
+    },
+    {
+      "path": "/practice/ait-e-3-on-device-or-cloud-for-tagging-kids-photos",
+      "status": 200
+    },
+    {
+      "path": "/practice/ait-h-1-the-assistant-is-inventing-fees-in-one-region",
+      "status": 200
+    },
+    {
+      "path": "/practice/ait-h-2-an-agent-that-can-spend-money",
+      "status": 200
+    },
+    {
+      "path": "/maintenance",
+      "status": 200
+    },
+    {
+      "path": "/offline",
+      "status": 200
+    },
+    {
+      "path": "/learn",
+      "status": 200
+    },
+    {
+      "path": "/practice/ait-h-3-monday-8-a-m-10-000-clinicians-at-once",
+      "status": 200
+    },
+    {
+      "path": "/onboarding",
+      "status": 200
+    },
+    {
+      "path": "/practice",
+      "status": 200
+    },
+    {
+      "path": "/practice/ait-m-1-a-medical-scribe-with-a-hard-safety-floor",
+      "status": 200
+    },
+    {
+      "path": "/practice/ait-m-2-a-support-copilot-with-three-goals-fighting",
+      "status": 200
+    },
+    {
+      "path": "/practice/ait-m-3-search-relevance-with-a-300-ms-budget",
+      "status": 200
+    },
+    {
+      "path": "/practice/beh-e-1-you-disagreed-with-a-designer-about-feature-placement",
+      "status": 200
+    },
+    {
+      "path": "/practice/beh-e-2-you-learned-something-fast-to-ship-something",
+      "status": 200
+    },
+    {
+      "path": "/practice/beh-e-3-customer-feedback-changed-your-decision",
+      "status": 200
+    },
+    {
+      "path": "/practice/beh-h-1-the-project-is-failing-in-front-of-the-board",
+      "status": 200
+    },
+    {
+      "path": "/practice/beh-h-3-you-found-your-own-number-was-wrong-after-presenting-it",
+      "status": 200
+    },
+    {
+      "path": "/practice/beh-h-2-an-incident-harmed-users-and-you-owned-the-response",
+      "status": 200
+    },
+    {
+      "path": "/practice/beh-m-1-stability-versus-the-hard-date",
+      "status": 200
+    },
+    {
+      "path": "/practice/beh-m-2-saying-no-to-a-senior-stakeholder-s-idea",
+      "status": 200
+    },
+    {
+      "path": "/practice/beh-m-3-a-dependency-slipped-and-two-teams-wanted-different-things",
+      "status": 200
+    },
+    {
+      "path": "/practice/est-e-2-how-many-quick-pay-uses-per-week-should-we-buy-capacity-for",
+      "status": 200
+    },
+    {
+      "path": "/practice/est-e-3-how-many-support-agents-for-launch-day-chat",
+      "status": 200
+    },
+    {
+      "path": "/practice/est-e-1-is-a-flagship-phone-store-on-durbar-marg-worth-the-rent",
+      "status": 200
+    },
+    {
+      "path": "/practice/est-h-1-terminal-outage-where-do-60-manual-agents-go",
+      "status": 200
+    },
+    {
+      "path": "/practice/est-h-2-results-day-web-sms-or-phone-which-will-break-first",
+      "status": 200
+    },
+    {
+      "path": "/practice/est-h-3-the-festival-exodus-charging-capacity-on-a-highway-corridor",
+      "status": 200
+    },
+    {
+      "path": "/practice/est-m-1-rainstorm-in-new-york-how-many-extra-drivers-to-incentivise",
+      "status": 200
+    },
+    {
+      "path": "/practice/est-m-3-tihar-week-do-we-have-enough-riders-for-sweets-and-gifts",
+      "status": 200
+    },
+    {
+      "path": "/practice/est-m-2-ticket-on-sale-how-fast-should-the-waiting-room-admit-fans",
+      "status": 200
+    },
+    {
+      "path": "/practice/exe-e-1-daily-actives-fell-10-in-three-weeks",
+      "status": 200
+    },
+    {
+      "path": "/practice/exe-e-2-how-to-prove-save-for-later-works",
+      "status": 200
+    },
+    {
+      "path": "/practice/exe-e-3-more-orders-how-will-you-know-it-is-healthy",
+      "status": 200
+    },
+    {
+      "path": "/practice/exe-h-3-the-test-says-3-revenue-retention-says-otherwise",
+      "status": 200
+    },
+    {
+      "path": "/practice/exe-h-1-watch-time-is-at-a-record-but-is-it-healthy",
+      "status": 200
+    },
+    {
+      "path": "/practice/exe-h-2-active-users-are-up-22-is-anyone-new-actually-there",
+      "status": 200
+    },
+    {
+      "path": "/practice/exe-m-1-notifications-lift-daily-actives-and-uninstalls",
+      "status": 200
+    },
+    {
+      "path": "/practice/exe-m-2-raise-checkout-conversion-by-5",
+      "status": 200
+    },
+    {
+      "path": "/practice/exe-m-3-a-referral-program-with-suspicious-signups",
+      "status": 200
+    },
+    {
+      "path": "/practice/ps-e-1-finding-items-in-a-huge-grocery-store",
+      "status": 200
+    },
+    {
+      "path": "/practice/ps-e-2-parents-keep-returning-kids-clothes",
+      "status": 200
+    },
+    {
+      "path": "/practice/ps-e-3-new-gym-members-stop-after-three-weeks",
+      "status": 200
+    },
+    {
+      "path": "/practice/ps-h-1-how-older-residents-of-tokyo-move-through-the-transit-system",
+      "status": 200
+    },
+    {
+      "path": "/practice/ps-h-2-designing-for-first-time-flyers",
+      "status": 200
+    },
+    {
+      "path": "/practice/ps-h-3-fair-price-information-for-a-farmers-cooperative",
+      "status": 200
+    },
+    {
+      "path": "/practice/ps-m-2-first-time-riders-and-the-intercity-bus",
+      "status": 200
+    },
+    {
+      "path": "/practice/ps-m-3-a-telehealth-app-for-adults-over-45",
+      "status": 200
+    },
+    {
+      "path": "/practice/ps-m-1-a-first-ikea-visit-for-a-new-homeowner",
+      "status": 200
+    },
+    {
+      "path": "/practice/rca-e-1-sign-ups-dropped-12-after-the-app-update",
+      "status": 200
+    },
+    {
+      "path": "/practice/rca-e-2-new-seller-activations-fell-15",
+      "status": 200
+    },
+    {
+      "path": "/practice/rca-e-3-add-to-cart-conversion-fell-after-the-layout-refresh",
+      "status": 200
+    },
+    {
+      "path": "/practice/rca-h-1-drivers-are-leaving-slowly-in-six-cities",
+      "status": 200
+    },
+    {
+      "path": "/practice/rca-h-2-customer-satisfaction-is-sliding-while-resolution-times-improve",
+      "status": 200
+    },
+    {
+      "path": "/practice/rca-h-3-revenue-per-paying-user-is-eroding-by-7",
+      "status": 200
+    },
+    {
+      "path": "/practice/rca-m-1-search-conversion-fell-while-crash-rates-spiked",
+      "status": 200
+    },
+    {
+      "path": "/practice/rca-m-2-delivery-times-rose-three-minutes-yet-every-city-got-faster",
+      "status": 200
+    },
+    {
+      "path": "/practice/rca-m-3-daily-users-are-up-8-but-week-one-retention-is-down",
+      "status": 200
+    },
+    {
+      "path": "/practice/str-e-3-raise-the-take-rate-for-new-sellers",
+      "status": 200
+    },
+    {
+      "path": "/practice/str-e-1-students-churn-at-re-verification-cut-price-or-something-else",
+      "status": 200
+    },
+    {
+      "path": "/practice/str-e-2-when-should-the-paywall-appear",
+      "status": 200
+    },
+    {
+      "path": "/practice/str-h-1-ai-answers-help-users-and-starve-publishers",
+      "status": 200
+    },
+    {
+      "path": "/practice/str-h-2-a-minimum-pay-rule-hits-the-biggest-market",
+      "status": 200
+    },
+    {
+      "path": "/practice/str-h-3-a-wallet-s-three-growth-paths-all-depend-on-one-another",
+      "status": 200
+    },
+    {
+      "path": "/practice/str-m-1-a-rival-adds-a-concierge-match-copy-or-pivot",
+      "status": 200
+    },
+    {
+      "path": "/practice/str-m-2-launching-a-streamer-where-local-telcos-own-distribution",
+      "status": 200
+    },
+    {
+      "path": "/practice/str-m-3-an-ai-native-rival-is-winning-the-mid-market",
+      "status": 200
+    },
+    {
+      "path": "/questions",
+      "status": 200
+    },
+    {
+      "path": "/projects",
+      "status": 200
+    },
+    {
+      "path": "/privacy",
+      "status": 200
+    },
+    {
+      "path": "/questions/ait-e-2-a-shop-assistant-whose-answers-change-hourly",
+      "status": 200
+    },
+    {
+      "path": "/questions/ait-e-3-on-device-or-cloud-for-tagging-kids-photos",
+      "status": 200
+    },
+    {
+      "path": "/questions/ait-e-1-live-translation-three-seconds-or-instant",
+      "status": 200
+    },
+    {
+      "path": "/questions/ait-h-1-the-assistant-is-inventing-fees-in-one-region",
+      "status": 200
+    },
+    {
+      "path": "/questions/ait-h-2-an-agent-that-can-spend-money",
+      "status": 200
+    },
+    {
+      "path": "/questions/ait-h-3-monday-8-a-m-10-000-clinicians-at-once",
+      "status": 200
+    },
+    {
+      "path": "/questions/ait-m-1-a-medical-scribe-with-a-hard-safety-floor",
+      "status": 200
+    },
+    {
+      "path": "/questions/ait-m-2-a-support-copilot-with-three-goals-fighting",
+      "status": 200
+    },
+    {
+      "path": "/questions/beh-e-1-you-disagreed-with-a-designer-about-feature-placement",
+      "status": 200
+    },
+    {
+      "path": "/questions/ait-m-3-search-relevance-with-a-300-ms-budget",
+      "status": 200
+    },
+    {
+      "path": "/questions/beh-e-2-you-learned-something-fast-to-ship-something",
+      "status": 200
+    },
+    {
+      "path": "/questions/beh-h-1-the-project-is-failing-in-front-of-the-board",
+      "status": 200
+    },
+    {
+      "path": "/questions/beh-h-2-an-incident-harmed-users-and-you-owned-the-response",
+      "status": 200
+    },
+    {
+      "path": "/questions/beh-h-3-you-found-your-own-number-was-wrong-after-presenting-it",
+      "status": 200
+    },
+    {
+      "path": "/questions/beh-m-1-stability-versus-the-hard-date",
+      "status": 200
+    },
+    {
+      "path": "/questions/beh-e-3-customer-feedback-changed-your-decision",
+      "status": 200
+    },
+    {
+      "path": "/questions/beh-m-2-saying-no-to-a-senior-stakeholder-s-idea",
+      "status": 200
+    },
+    {
+      "path": "/questions/est-e-1-is-a-flagship-phone-store-on-durbar-marg-worth-the-rent",
+      "status": 200
+    },
+    {
+      "path": "/questions/beh-m-3-a-dependency-slipped-and-two-teams-wanted-different-things",
+      "status": 200
+    },
+    {
+      "path": "/questions/est-e-2-how-many-quick-pay-uses-per-week-should-we-buy-capacity-for",
+      "status": 200
+    },
+    {
+      "path": "/questions/est-e-3-how-many-support-agents-for-launch-day-chat",
+      "status": 200
+    },
+    {
+      "path": "/questions/est-h-1-terminal-outage-where-do-60-manual-agents-go",
+      "status": 200
+    },
+    {
+      "path": "/questions/est-h-2-results-day-web-sms-or-phone-which-will-break-first",
+      "status": 200
+    },
+    {
+      "path": "/questions/est-m-2-ticket-on-sale-how-fast-should-the-waiting-room-admit-fans",
+      "status": 200
+    },
+    {
+      "path": "/questions/est-h-3-the-festival-exodus-charging-capacity-on-a-highway-corridor",
+      "status": 200
+    },
+    {
+      "path": "/questions/est-m-1-rainstorm-in-new-york-how-many-extra-drivers-to-incentivise",
+      "status": 200
+    },
+    {
+      "path": "/questions/est-m-3-tihar-week-do-we-have-enough-riders-for-sweets-and-gifts",
+      "status": 200
+    },
+    {
+      "path": "/questions/exe-e-1-daily-actives-fell-10-in-three-weeks",
+      "status": 200
+    },
+    {
+      "path": "/questions/exe-e-3-more-orders-how-will-you-know-it-is-healthy",
+      "status": 200
+    },
+    {
+      "path": "/questions/exe-e-2-how-to-prove-save-for-later-works",
+      "status": 200
+    },
+    {
+      "path": "/questions/exe-h-1-watch-time-is-at-a-record-but-is-it-healthy",
+      "status": 200
+    },
+    {
+      "path": "/questions/exe-h-3-the-test-says-3-revenue-retention-says-otherwise",
+      "status": 200
+    },
+    {
+      "path": "/questions/exe-m-1-notifications-lift-daily-actives-and-uninstalls",
+      "status": 200
+    },
+    {
+      "path": "/questions/exe-h-2-active-users-are-up-22-is-anyone-new-actually-there",
+      "status": 200
+    },
+    {
+      "path": "/questions/exe-m-2-raise-checkout-conversion-by-5",
+      "status": 200
+    },
+    {
+      "path": "/questions/exe-m-3-a-referral-program-with-suspicious-signups",
+      "status": 200
+    },
+    {
+      "path": "/questions/ps-e-1-finding-items-in-a-huge-grocery-store",
+      "status": 200
+    },
+    {
+      "path": "/questions/ps-e-2-parents-keep-returning-kids-clothes",
+      "status": 200
+    },
+    {
+      "path": "/questions/ps-e-3-new-gym-members-stop-after-three-weeks",
+      "status": 200
+    },
+    {
+      "path": "/questions/ps-h-1-how-older-residents-of-tokyo-move-through-the-transit-system",
+      "status": 200
+    },
+    {
+      "path": "/questions/ps-h-3-fair-price-information-for-a-farmers-cooperative",
+      "status": 200
+    },
+    {
+      "path": "/questions/ps-m-1-a-first-ikea-visit-for-a-new-homeowner",
+      "status": 200
+    },
+    {
+      "path": "/questions/ps-m-2-first-time-riders-and-the-intercity-bus",
+      "status": 200
+    },
+    {
+      "path": "/questions/ps-m-3-a-telehealth-app-for-adults-over-45",
+      "status": 200
+    },
+    {
+      "path": "/questions/rca-e-1-sign-ups-dropped-12-after-the-app-update",
+      "status": 200
+    },
+    {
+      "path": "/questions/ps-h-2-designing-for-first-time-flyers",
+      "status": 200
+    },
+    {
+      "path": "/questions/rca-e-2-new-seller-activations-fell-15",
+      "status": 200
+    },
+    {
+      "path": "/questions/rca-e-3-add-to-cart-conversion-fell-after-the-layout-refresh",
+      "status": 200
+    },
+    {
+      "path": "/questions/rca-h-2-customer-satisfaction-is-sliding-while-resolution-times-improve",
+      "status": 200
+    },
+    {
+      "path": "/questions/rca-h-1-drivers-are-leaving-slowly-in-six-cities",
+      "status": 200
+    },
+    {
+      "path": "/questions/rca-h-3-revenue-per-paying-user-is-eroding-by-7",
+      "status": 200
+    },
+    {
+      "path": "/questions/rca-m-1-search-conversion-fell-while-crash-rates-spiked",
+      "status": 200
+    },
+    {
+      "path": "/questions/rca-m-3-daily-users-are-up-8-but-week-one-retention-is-down",
+      "status": 200
+    },
+    {
+      "path": "/questions/str-e-1-students-churn-at-re-verification-cut-price-or-something-else",
+      "status": 200
+    },
+    {
+      "path": "/questions/str-e-2-when-should-the-paywall-appear",
+      "status": 200
+    },
+    {
+      "path": "/questions/rca-m-2-delivery-times-rose-three-minutes-yet-every-city-got-faster",
+      "status": 200
+    },
+    {
+      "path": "/questions/str-h-1-ai-answers-help-users-and-starve-publishers",
+      "status": 200
+    },
+    {
+      "path": "/questions/str-e-3-raise-the-take-rate-for-new-sellers",
+      "status": 200
+    },
+    {
+      "path": "/reset.html",
+      "status": 200
+    },
+    {
+      "path": "/resources",
+      "status": 200
+    },
+    {
+      "path": "/signup",
+      "status": 200
+    },
+    {
+      "path": "/questions/str-h-2-a-minimum-pay-rule-hits-the-biggest-market",
+      "status": 200
+    },
+    {
+      "path": "/questions/str-h-3-a-wallet-s-three-growth-paths-all-depend-on-one-another",
+      "status": 200
+    },
+    {
+      "path": "/questions/str-m-1-a-rival-adds-a-concierge-match-copy-or-pivot",
+      "status": 200
+    },
+    {
+      "path": "/questions/str-m-2-launching-a-streamer-where-local-telcos-own-distribution",
+      "status": 200
+    },
+    {
+      "path": "/questions/str-m-3-an-ai-native-rival-is-winning-the-mid-market",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/invisible-wall/play",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/feature-factory/play",
+      "status": 200
+    },
+    {
+      "path": "/terms",
+      "status": 200
+    },
+    {
+      "path": "/tools",
+      "status": 200
+    },
+    {
+      "path": "/app/projects/trojan-horse/play",
+      "status": 200
+    }
+  ],
+  "assets": [
+    {
+      "path": "/_next/static/chunks/1x6obpmlu1_c2.js",
+      "status": 200,
+      "bytes": 5361
+    },
+    {
+      "path": "/_next/static/chunks/0pagaevu-hwt3.css",
+      "status": 200,
+      "bytes": 20912
+    },
+    {
+      "path": "/_next/static/chunks/2n86e7h60o0qo.js",
+      "status": 200,
+      "bytes": 33153
+    },
+    {
+      "path": "/_next/static/chunks/turbopack-3-ry682tkyiqk.js",
+      "status": 200,
+      "bytes": 10030
+    },
+    {
+      "path": "/_next/static/chunks/3b9fv7tn_u96y.css",
+      "status": 200,
+      "bytes": 118637
+    },
+    {
+      "path": "/_next/static/chunks/2lm9hziozm92t.js",
+      "status": 200,
+      "bytes": 29605
+    },
+    {
+      "path": "/_next/static/chunks/2pgxx1eld5ef_.js",
+      "status": 200,
+      "bytes": 163941
+    },
+    {
+      "path": "/_next/static/chunks/3b78k2dm4yr5j.js",
+      "status": 200,
+      "bytes": 36040
+    },
+    {
+      "path": "/_next/static/chunks/2-wt8plhhhcje.js",
+      "status": 200,
+      "bytes": 2150
+    },
+    {
+      "path": "/_next/static/chunks/0_re1x_qp-gr6.js",
+      "status": 200,
+      "bytes": 44812
+    },
+    {
+      "path": "/_next/static/chunks/3qx02_6--t5rb.js",
+      "status": 200,
+      "bytes": 215
+    },
+    {
+      "path": "/_next/static/chunks/3wbm-994r45kr.js",
+      "status": 200,
+      "bytes": 229820
+    },
+    {
+      "path": "/_next/static/chunks/3c90rmm1r9nxb.js",
+      "status": 200,
+      "bytes": 70162
+    },
+    {
+      "path": "/_next/static/chunks/19h911n_8a_bc.js",
+      "status": 200,
+      "bytes": 26043
+    },
+    {
+      "path": "/_next/static/chunks/28u3hi9voacto.js",
+      "status": 200,
+      "bytes": 64948
+    },
+    {
+      "path": "/_next/static/chunks/18jxa_wnt61ff.js",
+      "status": 200,
+      "bytes": 816
+    },
+    {
+      "path": "/_next/static/chunks/07_w6e0b2lz5_.js",
+      "status": 200,
+      "bytes": 17999
+    },
+    {
+      "path": "/_next/static/chunks/0zoetdzyhnyl-.js",
+      "status": 200,
+      "bytes": 97931
+    },
+    {
+      "path": "/_next/static/chunks/0acf-ixvp15zy.js",
+      "status": 200,
+      "bytes": 110752
+    },
+    {
+      "path": "/_next/static/chunks/1kk4plz7w3-84.js",
+      "status": 200,
+      "bytes": 34329
+    },
+    {
+      "path": "/_next/static/chunks/38kogmg_8p45n.js",
+      "status": 200,
+      "bytes": 120097
+    },
+    {
+      "path": "/_next/static/chunks/0mipg0kxfztt9.js",
+      "status": 200,
+      "bytes": 31586
+    },
+    {
+      "path": "/_next/static/chunks/0cz1d0mv5g_q7.js",
+      "status": 200,
+      "bytes": 112594
+    },
+    {
+      "path": "/_next/static/chunks/3mqb_geiyipxr.js",
+      "status": 200,
+      "bytes": 450
+    },
+    {
+      "path": "/_next/static/chunks/01h-k048wj15r.js",
+      "status": 200,
+      "bytes": 24325
+    },
+    {
+      "path": "/_next/static/chunks/1vui2wgx9aori.js",
+      "status": 200,
+      "bytes": 45958
+    },
+    {
+      "path": "/_next/static/chunks/3bsz9ab6ovj_b.js",
+      "status": 200,
+      "bytes": 41504
+    },
+    {
+      "path": "/_next/static/chunks/1moy1y3xb4wtf.css",
+      "status": 200,
+      "bytes": 95646
+    },
+    {
+      "path": "/_next/static/chunks/3ekmih-o7gq7s.js",
+      "status": 200,
+      "bytes": 33453
+    },
+    {
+      "path": "/_next/static/chunks/3_nlpunc4awey.js",
+      "status": 200,
+      "bytes": 11722
+    },
+    {
+      "path": "/_next/static/chunks/0gp-24s9rttfd.css",
+      "status": 200,
+      "bytes": 106349
+    },
+    {
+      "path": "/_next/static/chunks/35982eedy-_8n.js",
+      "status": 200,
+      "bytes": 175315
+    },
+    {
+      "path": "/_next/static/chunks/025ve5aft8mz9.js",
+      "status": 200,
+      "bytes": 18895
+    },
+    {
+      "path": "/_next/static/chunks/0pgip0p1fs8g-.js",
+      "status": 200,
+      "bytes": 1325
+    },
+    {
+      "path": "/_next/static/chunks/273jwr-dtkak_.js",
+      "status": 200,
+      "bytes": 41110
+    },
+    {
+      "path": "/_next/static/chunks/185270wgtg668.js",
+      "status": 200,
+      "bytes": 551
+    },
+    {
+      "path": "/_next/static/chunks/2wr3tk2h-simz.js",
+      "status": 200,
+      "bytes": 47849
+    },
+    {
+      "path": "/_next/static/chunks/2nq3srkv5lf63.js",
+      "status": 200,
+      "bytes": 140246
+    },
+    {
+      "path": "/_next/static/chunks/3l2l0kayd23tk.css",
+      "status": 200,
+      "bytes": 61375
+    },
+    {
+      "path": "/_next/static/chunks/01p575534smba.js",
+      "status": 200,
+      "bytes": 8388
+    },
+    {
+      "path": "/_next/static/chunks/0juls2uj50c83.js",
+      "status": 200,
+      "bytes": 57034
+    },
+    {
+      "path": "/_next/static/chunks/0tph-q_kg8qnc.css",
+      "status": 200,
+      "bytes": 38524
+    },
+    {
+      "path": "/_next/static/chunks/2ko2bg9ubh_p4.js",
+      "status": 200,
+      "bytes": 3915
+    },
+    {
+      "path": "/_next/static/chunks/1-q7ayj33i6go.js",
+      "status": 200,
+      "bytes": 25946
+    },
+    {
+      "path": "/_next/static/chunks/3kzjajm6zipq2.css",
+      "status": 200,
+      "bytes": 29150
+    },
+    {
+      "path": "/_next/static/chunks/21hyadnjj63fs.js",
+      "status": 200,
+      "bytes": 7827
+    },
+    {
+      "path": "/_next/static/chunks/2727ddb7l_5z-.js",
+      "status": 200,
+      "bytes": 3025
+    },
+    {
+      "path": "/_next/static/chunks/0tkp3codx-yjd.js",
+      "status": 200,
+      "bytes": 281
+    },
+    {
+      "path": "/_next/static/chunks/0prkfgi3e4v05.js",
+      "status": 200,
+      "bytes": 217804
+    },
+    {
+      "path": "/_next/static/chunks/0qqk38qdo9j2o.js",
+      "status": 200,
+      "bytes": 214
+    },
+    {
+      "path": "/_next/static/chunks/24xfqfrdb-req.js",
+      "status": 200,
+      "bytes": 704643
+    },
+    {
+      "path": "/_next/static/chunks/077_nav3u427u.js",
+      "status": 200,
+      "bytes": 38209
+    },
+    {
+      "path": "/_next/static/chunks/05_f1ytv6nttp.js",
+      "status": 200,
+      "bytes": 5015
+    },
+    {
+      "path": "/_next/static/chunks/09elsopw0t-9e.js",
+      "status": 200,
+      "bytes": 2930
+    },
+    {
+      "path": "/_next/static/chunks/04p2ywtrev5mp.js",
+      "status": 200,
+      "bytes": 54537
+    },
+    {
+      "path": "/_next/static/chunks/1c5x2uz6kgqqm.js",
+      "status": 200,
+      "bytes": 2821
+    },
+    {
+      "path": "/_next/static/chunks/2qnb47fl85lv5.js",
+      "status": 200,
+      "bytes": 87741
+    },
+    {
+      "path": "/_next/static/chunks/1ibt37n3vp354.js",
+      "status": 200,
+      "bytes": 140737
+    },
+    {
+      "path": "/_next/static/chunks/2-dm-0dlthnvs.js",
+      "status": 200,
+      "bytes": 3864
+    },
+    {
+      "path": "/_next/static/chunks/2a39q_bhxsf5l.css",
+      "status": 200,
+      "bytes": 27377
+    },
+    {
+      "path": "/_next/static/chunks/2pr4hqw2wpeju.js",
+      "status": 200,
+      "bytes": 80084
+    },
+    {
+      "path": "/_next/static/chunks/1ks6-jaw8us0l.js",
+      "status": 200,
+      "bytes": 1607
+    },
+    {
+      "path": "/_next/static/chunks/3i_k3mh4t2luk.js",
+      "status": 200,
+      "bytes": 6325
+    },
+    {
+      "path": "/_next/static/chunks/35lcw_g9ju7qr.js",
+      "status": 200,
+      "bytes": 6599
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-reva-0.mp3",
+      "status": 200,
+      "bytes": 25435
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-reva-1.mp3",
+      "status": 200,
+      "bytes": 26688
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-reva-2.mp3",
+      "status": 200,
+      "bytes": 22613
+    },
+    {
+      "path": "/_next/static/chunks/3yhkibxglo008.js",
+      "status": 200,
+      "bytes": 29963
+    },
+    {
+      "path": "/reset-workspace.js",
+      "status": 200,
+      "bytes": 4611
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-reva-3.mp3",
+      "status": 200,
+      "bytes": 23867
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-reva-4.mp3",
+      "status": 200,
+      "bytes": 35152
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-reva-5.mp3",
+      "status": 200,
+      "bytes": 21359
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-reva-6.mp3",
+      "status": 200,
+      "bytes": 23867
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-reva-7.mp3",
+      "status": 200,
+      "bytes": 30764
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-cass-0.mp3",
+      "status": 200,
+      "bytes": 29823
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-cass-1.mp3",
+      "status": 200,
+      "bytes": 29823
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-cass-2.mp3",
+      "status": 200,
+      "bytes": 30764
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-cass-3.mp3",
+      "status": 200,
+      "bytes": 38287
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-cass-4.mp3",
+      "status": 200,
+      "bytes": 32958
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-cass-5.mp3",
+      "status": 200,
+      "bytes": 28883
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-cass-6.mp3",
+      "status": 200,
+      "bytes": 22300
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-cass-7.mp3",
+      "status": 200,
+      "bytes": 40168
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-nils-0.mp3",
+      "status": 200,
+      "bytes": 40795
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-nils-1.mp3",
+      "status": 200,
+      "bytes": 33271
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-nils-2.mp3",
+      "status": 200,
+      "bytes": 35779
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-nils-3.mp3",
+      "status": 200,
+      "bytes": 39227
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-nils-4.mp3",
+      "status": 200,
+      "bytes": 27315
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-nils-5.mp3",
+      "status": 200,
+      "bytes": 36719
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-nils-6.mp3",
+      "status": 200,
+      "bytes": 34212
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-nils-7.mp3",
+      "status": 200,
+      "bytes": 32644
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-amara-0.mp3",
+      "status": 200,
+      "bytes": 24808
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-amara-1.mp3",
+      "status": 200,
+      "bytes": 38914
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-amara-2.mp3",
+      "status": 200,
+      "bytes": 42675
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-amara-3.mp3",
+      "status": 200,
+      "bytes": 33585
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-amara-4.mp3",
+      "status": 200,
+      "bytes": 42048
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-amara-5.mp3",
+      "status": 200,
+      "bytes": 35779
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-amara-6.mp3",
+      "status": 200,
+      "bytes": 29823
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-amara-7.mp3",
+      "status": 200,
+      "bytes": 31077
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-kofi-0.mp3",
+      "status": 200,
+      "bytes": 35152
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-kofi-1.mp3",
+      "status": 200,
+      "bytes": 29196
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-kofi-2.mp3",
+      "status": 200,
+      "bytes": 30450
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-kofi-3.mp3",
+      "status": 200,
+      "bytes": 27942
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-kofi-4.mp3",
+      "status": 200,
+      "bytes": 24494
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-kofi-5.mp3",
+      "status": 200,
+      "bytes": 34212
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-kofi-6.mp3",
+      "status": 200,
+      "bytes": 27629
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-kofi-7.mp3",
+      "status": 200,
+      "bytes": 31704
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-lila-0.mp3",
+      "status": 200,
+      "bytes": 27629
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-lila-1.mp3",
+      "status": 200,
+      "bytes": 24494
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-lila-2.mp3",
+      "status": 200,
+      "bytes": 31390
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-lila-3.mp3",
+      "status": 200,
+      "bytes": 31390
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-lila-4.mp3",
+      "status": 200,
+      "bytes": 24808
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-lila-5.mp3",
+      "status": 200,
+      "bytes": 39854
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-lila-7.mp3",
+      "status": 200,
+      "bytes": 26062
+    },
+    {
+      "path": "/projects/feature-factory/audio/ask-lila-6.mp3",
+      "status": 200,
+      "bytes": 27315
+    },
+    {
+      "path": "/projects/feature-factory/audio/E01.mp3",
+      "status": 200,
+      "bytes": 51453
+    },
+    {
+      "path": "/projects/feature-factory/audio/E02.mp3",
+      "status": 200,
+      "bytes": 34212
+    },
+    {
+      "path": "/projects/feature-factory/audio/E03.mp3",
+      "status": 200,
+      "bytes": 34525
+    },
+    {
+      "path": "/projects/feature-factory/audio/E04.mp3",
+      "status": 200,
+      "bytes": 46750
+    },
+    {
+      "path": "/projects/feature-factory/audio/E05.mp3",
+      "status": 200,
+      "bytes": 93771
+    },
+    {
+      "path": "/projects/feature-factory/audio/E06.mp3",
+      "status": 200,
+      "bytes": 51453
+    },
+    {
+      "path": "/projects/feature-factory/audio/E07.mp3",
+      "status": 200,
+      "bytes": 45183
+    },
+    {
+      "path": "/projects/feature-factory/audio/E08.mp3",
+      "status": 200,
+      "bytes": 42989
+    },
+    {
+      "path": "/projects/feature-factory/audio/E09.mp3",
+      "status": 200,
+      "bytes": 36406
+    },
+    {
+      "path": "/projects/feature-factory/audio/E10.mp3",
+      "status": 200,
+      "bytes": 57095
+    },
+    {
+      "path": "/projects/feature-factory/audio/E11.mp3",
+      "status": 200,
+      "bytes": 44243
+    },
+    {
+      "path": "/projects/feature-factory/audio/E12.mp3",
+      "status": 200,
+      "bytes": 37660
+    },
+    {
+      "path": "/projects/feature-factory/audio/E13.mp3",
+      "status": 200,
+      "bytes": 42362
+    },
+    {
+      "path": "/projects/feature-factory/audio/E14.mp3",
+      "status": 200,
+      "bytes": 49885
+    },
+    {
+      "path": "/projects/feature-factory/audio/E15.mp3",
+      "status": 200,
+      "bytes": 26375
+    },
+    {
+      "path": "/projects/feature-factory/audio/E16.mp3",
+      "status": 200,
+      "bytes": 38600
+    },
+    {
+      "path": "/projects/feature-factory/audio/E17.mp3",
+      "status": 200,
+      "bytes": 39541
+    },
+    {
+      "path": "/projects/feature-factory/audio/E18.mp3",
+      "status": 200,
+      "bytes": 38287
+    },
+    {
+      "path": "/projects/feature-factory/audio/E19.mp3",
+      "status": 200,
+      "bytes": 45183
+    },
+    {
+      "path": "/projects/feature-factory/audio/E20.mp3",
+      "status": 200,
+      "bytes": 61797
+    },
+    {
+      "path": "/projects/feature-factory/audio/E21.mp3",
+      "status": 200,
+      "bytes": 49572
+    },
+    {
+      "path": "/projects/feature-factory/audio/E22.mp3",
+      "status": 200,
+      "bytes": 43929
+    },
+    {
+      "path": "/projects/feature-factory/audio/E23.mp3",
+      "status": 200,
+      "bytes": 42675
+    },
+    {
+      "path": "/projects/feature-factory/audio/E24.mp3",
+      "status": 200,
+      "bytes": 37346
+    },
+    {
+      "path": "/projects/feature-factory/audio/E25.mp3",
+      "status": 200,
+      "bytes": 62424
+    },
+    {
+      "path": "/projects/feature-factory/audio/E26.mp3",
+      "status": 200,
+      "bytes": 36093
+    },
+    {
+      "path": "/projects/feature-factory/audio/E27.mp3",
+      "status": 200,
+      "bytes": 33271
+    },
+    {
+      "path": "/projects/feature-factory/audio/E28.mp3",
+      "status": 200,
+      "bytes": 55841
+    },
+    {
+      "path": "/projects/feature-factory/audio/E29.mp3",
+      "status": 200,
+      "bytes": 41735
+    },
+    {
+      "path": "/projects/feature-factory/audio/E30.mp3",
+      "status": 200,
+      "bytes": 32017
+    },
+    {
+      "path": "/projects/feature-factory/audio/E31.mp3",
+      "status": 200,
+      "bytes": 39541
+    },
+    {
+      "path": "/projects/feature-factory/audio/E32.mp3",
+      "status": 200,
+      "bytes": 51766
+    },
+    {
+      "path": "/projects/feature-factory/audio/E33.mp3",
+      "status": 200,
+      "bytes": 38287
+    },
+    {
+      "path": "/projects/feature-factory/audio/E34.mp3",
+      "status": 200,
+      "bytes": 42362
+    },
+    {
+      "path": "/projects/feature-factory/audio/E35.mp3",
+      "status": 200,
+      "bytes": 42675
+    },
+    {
+      "path": "/projects/feature-factory/audio/E36.mp3",
+      "status": 200,
+      "bytes": 35779
+    },
+    {
+      "path": "/projects/feature-factory/audio/E37.mp3",
+      "status": 200,
+      "bytes": 43616
+    },
+    {
+      "path": "/projects/feature-factory/audio/E38.mp3",
+      "status": 200,
+      "bytes": 43616
+    },
+    {
+      "path": "/projects/feature-factory/audio/E39.mp3",
+      "status": 200,
+      "bytes": 37973
+    },
+    {
+      "path": "/projects/feature-factory/audio/E40.mp3",
+      "status": 200,
+      "bytes": 39541
+    },
+    {
+      "path": "/projects/feature-factory/audio/E41.mp3",
+      "status": 200,
+      "bytes": 62737
+    },
+    {
+      "path": "/projects/feature-factory/audio/E42.mp3",
+      "status": 200,
+      "bytes": 47691
+    },
+    {
+      "path": "/projects/feature-factory/audio/intro-1.mp3",
+      "status": 200,
+      "bytes": 20419
+    },
+    {
+      "path": "/projects/feature-factory/audio/intro-0.mp3",
+      "status": 200,
+      "bytes": 30764
+    },
+    {
+      "path": "/projects/feature-factory/audio/intro-2.mp3",
+      "status": 200,
+      "bytes": 44556
+    },
+    {
+      "path": "/projects/feature-factory/audio/intro-3.mp3",
+      "status": 200,
+      "bytes": 46124
+    },
+    {
+      "path": "/projects/feature-factory/audio/intro-4.mp3",
+      "status": 200,
+      "bytes": 43929
+    },
+    {
+      "path": "/projects/feature-factory/audio/intro-5.mp3",
+      "status": 200,
+      "bytes": 35152
+    },
+    {
+      "path": "/projects/feature-factory/audio/intro-6.mp3",
+      "status": 200,
+      "bytes": 37033
+    },
+    {
+      "path": "/projects/feature-factory/audio/intro-7.mp3",
+      "status": 200,
+      "bytes": 61484
+    },
+    {
+      "path": "/projects/feature-factory/audio/intro-8.mp3",
+      "status": 200,
+      "bytes": 51453
+    },
+    {
+      "path": "/projects/feature-factory/audio/intro-9.mp3",
+      "status": 200,
+      "bytes": 46124
+    },
+    {
+      "path": "/projects/feature-factory/audio/intro-10.mp3",
+      "status": 200,
+      "bytes": 85307
+    },
+    {
+      "path": "/projects/feature-factory/audio/intro-11.mp3",
+      "status": 200,
+      "bytes": 51766
+    },
+    {
+      "path": "/projects/feature-factory/audio/metric-pulse.mp3",
+      "status": 200,
+      "bytes": 28883
+    },
+    {
+      "path": "/projects/feature-factory/audio/metric-retention.mp3",
+      "status": 200,
+      "bytes": 30137
+    },
+    {
+      "path": "/projects/feature-factory/audio/metric-features.mp3",
+      "status": 200,
+      "bytes": 48945
+    },
+    {
+      "path": "/projects/feature-factory/audio/promise-tiles.mp3",
+      "status": 200,
+      "bytes": 19792
+    },
+    {
+      "path": "/projects/feature-factory/audio/promise-search.mp3",
+      "status": 200,
+      "bytes": 23867
+    },
+    {
+      "path": "/projects/feature-factory/audio/promise-plan.mp3",
+      "status": 200,
+      "bytes": 26062
+    },
+    {
+      "path": "/projects/feature-factory/audio/plan.mp3",
+      "status": 200,
+      "bytes": 30137
+    },
+    {
+      "path": "/projects/feature-factory/audio/gate.mp3",
+      "status": 200,
+      "bytes": 41735
+    },
+    {
+      "path": "/projects/feature-factory/audio/gate-reva.mp3",
+      "status": 200,
+      "bytes": 32644
+    },
+    {
+      "path": "/projects/feature-factory/audio/hold.mp3",
+      "status": 200,
+      "bytes": 27629
+    },
+    {
+      "path": "/projects/feature-factory/audio/hold-cass.mp3",
+      "status": 200,
+      "bytes": 22927
+    },
+    {
+      "path": "/projects/feature-factory/audio/week2.mp3",
+      "status": 200,
+      "bytes": 28256
+    },
+    {
+      "path": "/projects/feature-factory/audio/week3.mp3",
+      "status": 200,
+      "bytes": 29196
+    },
+    {
+      "path": "/projects/feature-factory/audio/review.mp3",
+      "status": 200,
+      "bytes": 42048
+    },
+    {
+      "path": "/projects/feature-factory/audio/incident.mp3",
+      "status": 200,
+      "bytes": 44243
+    },
+    {
+      "path": "/projects/feature-factory/audio/retention.mp3",
+      "status": 200,
+      "bytes": 20733
+    },
+    {
+      "path": "/projects/feature-factory/audio/flag.mp3",
+      "status": 200,
+      "bytes": 41735
+    },
+    {
+      "path": "/projects/feature-factory/audio/spin.mp3",
+      "status": 200,
+      "bytes": 37033
+    },
+    {
+      "path": "/projects/feature-factory/audio/factory.wav",
+      "status": 200,
+      "bytes": 176444
+    },
+    {
+      "path": "/projects/feature-factory/audio/gong.wav",
+      "status": 200,
+      "bytes": 154394
+    },
+    {
+      "path": "/projects/feature-factory/audio/incident.wav",
+      "status": 200,
+      "bytes": 88244
+    },
+    {
+      "path": "/projects/feature-factory/audio/hold.wav",
+      "status": 200,
+      "bytes": 79424
+    }
+  ],
+  "servedCurrentBuild": true,
+  "landingIncludesLevelCode": false,
+  "traceIncludesLocalTooling": false
+}

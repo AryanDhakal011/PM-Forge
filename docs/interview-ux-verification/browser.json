@@ -1,0 +1,713 @@
+{
+  "base": "http://localhost:3012",
+  "checks": [
+    {
+      "label": "seven categories by three levels",
+      "pass": true
+    },
+    {
+      "label": "five stages EST-E-1",
+      "pass": true
+    },
+    {
+      "label": "quiet prepare EST-E-1",
+      "pass": true
+    },
+    {
+      "label": "clock stays zero before Begin",
+      "pass": true
+    },
+    {
+      "label": "accessibility prepare desktop",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EST-E-1 320",
+      "pass": true
+    },
+    {
+      "label": "Begin visible at 320",
+      "pass": true
+    },
+    {
+      "label": "accessibility prepare mobile",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EST-E-1 375",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EST-E-1 768",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EST-E-1 1024",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EST-E-1 1440",
+      "pass": true
+    },
+    {
+      "label": "Begin enters active interview EST-E-1",
+      "pass": true
+    },
+    {
+      "label": "five stages EST-M-1",
+      "pass": true
+    },
+    {
+      "label": "quiet prepare EST-M-1",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EST-M-1 320",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EST-M-1 375",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EST-M-1 768",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EST-M-1 1024",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EST-M-1 1440",
+      "pass": true
+    },
+    {
+      "label": "Begin enters active interview EST-M-1",
+      "pass": true
+    },
+    {
+      "label": "five stages EST-H-1",
+      "pass": true
+    },
+    {
+      "label": "quiet prepare EST-H-1",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EST-H-1 320",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EST-H-1 375",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EST-H-1 768",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EST-H-1 1024",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EST-H-1 1440",
+      "pass": true
+    },
+    {
+      "label": "Begin enters active interview EST-H-1",
+      "pass": true
+    },
+    {
+      "label": "five stages RCA-E-1",
+      "pass": true
+    },
+    {
+      "label": "quiet prepare RCA-E-1",
+      "pass": true
+    },
+    {
+      "label": "prepare fits RCA-E-1 320",
+      "pass": true
+    },
+    {
+      "label": "prepare fits RCA-E-1 375",
+      "pass": true
+    },
+    {
+      "label": "prepare fits RCA-E-1 768",
+      "pass": true
+    },
+    {
+      "label": "prepare fits RCA-E-1 1024",
+      "pass": true
+    },
+    {
+      "label": "prepare fits RCA-E-1 1440",
+      "pass": true
+    },
+    {
+      "label": "Begin enters active interview RCA-E-1",
+      "pass": true
+    },
+    {
+      "label": "five stages RCA-M-1",
+      "pass": true
+    },
+    {
+      "label": "quiet prepare RCA-M-1",
+      "pass": true
+    },
+    {
+      "label": "prepare fits RCA-M-1 320",
+      "pass": true
+    },
+    {
+      "label": "prepare fits RCA-M-1 375",
+      "pass": true
+    },
+    {
+      "label": "prepare fits RCA-M-1 768",
+      "pass": true
+    },
+    {
+      "label": "prepare fits RCA-M-1 1024",
+      "pass": true
+    },
+    {
+      "label": "prepare fits RCA-M-1 1440",
+      "pass": true
+    },
+    {
+      "label": "Begin enters active interview RCA-M-1",
+      "pass": true
+    },
+    {
+      "label": "five stages RCA-H-1",
+      "pass": true
+    },
+    {
+      "label": "quiet prepare RCA-H-1",
+      "pass": true
+    },
+    {
+      "label": "prepare fits RCA-H-1 320",
+      "pass": true
+    },
+    {
+      "label": "prepare fits RCA-H-1 375",
+      "pass": true
+    },
+    {
+      "label": "prepare fits RCA-H-1 768",
+      "pass": true
+    },
+    {
+      "label": "prepare fits RCA-H-1 1024",
+      "pass": true
+    },
+    {
+      "label": "prepare fits RCA-H-1 1440",
+      "pass": true
+    },
+    {
+      "label": "Begin enters active interview RCA-H-1",
+      "pass": true
+    },
+    {
+      "label": "five stages STR-E-1",
+      "pass": true
+    },
+    {
+      "label": "quiet prepare STR-E-1",
+      "pass": true
+    },
+    {
+      "label": "prepare fits STR-E-1 320",
+      "pass": true
+    },
+    {
+      "label": "prepare fits STR-E-1 375",
+      "pass": true
+    },
+    {
+      "label": "prepare fits STR-E-1 768",
+      "pass": true
+    },
+    {
+      "label": "prepare fits STR-E-1 1024",
+      "pass": true
+    },
+    {
+      "label": "prepare fits STR-E-1 1440",
+      "pass": true
+    },
+    {
+      "label": "Begin enters active interview STR-E-1",
+      "pass": true
+    },
+    {
+      "label": "five stages STR-M-1",
+      "pass": true
+    },
+    {
+      "label": "quiet prepare STR-M-1",
+      "pass": true
+    },
+    {
+      "label": "prepare fits STR-M-1 320",
+      "pass": true
+    },
+    {
+      "label": "prepare fits STR-M-1 375",
+      "pass": true
+    },
+    {
+      "label": "prepare fits STR-M-1 768",
+      "pass": true
+    },
+    {
+      "label": "prepare fits STR-M-1 1024",
+      "pass": true
+    },
+    {
+      "label": "prepare fits STR-M-1 1440",
+      "pass": true
+    },
+    {
+      "label": "Begin enters active interview STR-M-1",
+      "pass": true
+    },
+    {
+      "label": "five stages STR-H-1",
+      "pass": true
+    },
+    {
+      "label": "quiet prepare STR-H-1",
+      "pass": true
+    },
+    {
+      "label": "prepare fits STR-H-1 320",
+      "pass": true
+    },
+    {
+      "label": "prepare fits STR-H-1 375",
+      "pass": true
+    },
+    {
+      "label": "prepare fits STR-H-1 768",
+      "pass": true
+    },
+    {
+      "label": "prepare fits STR-H-1 1024",
+      "pass": true
+    },
+    {
+      "label": "prepare fits STR-H-1 1440",
+      "pass": true
+    },
+    {
+      "label": "Begin enters active interview STR-H-1",
+      "pass": true
+    },
+    {
+      "label": "five stages AIT-E-1",
+      "pass": true
+    },
+    {
+      "label": "quiet prepare AIT-E-1",
+      "pass": true
+    },
+    {
+      "label": "prepare fits AIT-E-1 320",
+      "pass": true
+    },
+    {
+      "label": "prepare fits AIT-E-1 375",
+      "pass": true
+    },
+    {
+      "label": "prepare fits AIT-E-1 768",
+      "pass": true
+    },
+    {
+      "label": "prepare fits AIT-E-1 1024",
+      "pass": true
+    },
+    {
+      "label": "prepare fits AIT-E-1 1440",
+      "pass": true
+    },
+    {
+      "label": "Begin enters active interview AIT-E-1",
+      "pass": true
+    },
+    {
+      "label": "five stages AIT-M-1",
+      "pass": true
+    },
+    {
+      "label": "quiet prepare AIT-M-1",
+      "pass": true
+    },
+    {
+      "label": "prepare fits AIT-M-1 320",
+      "pass": true
+    },
+    {
+      "label": "prepare fits AIT-M-1 375",
+      "pass": true
+    },
+    {
+      "label": "prepare fits AIT-M-1 768",
+      "pass": true
+    },
+    {
+      "label": "prepare fits AIT-M-1 1024",
+      "pass": true
+    },
+    {
+      "label": "prepare fits AIT-M-1 1440",
+      "pass": true
+    },
+    {
+      "label": "Begin enters active interview AIT-M-1",
+      "pass": true
+    },
+    {
+      "label": "five stages AIT-H-1",
+      "pass": true
+    },
+    {
+      "label": "quiet prepare AIT-H-1",
+      "pass": true
+    },
+    {
+      "label": "prepare fits AIT-H-1 320",
+      "pass": true
+    },
+    {
+      "label": "prepare fits AIT-H-1 375",
+      "pass": true
+    },
+    {
+      "label": "prepare fits AIT-H-1 768",
+      "pass": true
+    },
+    {
+      "label": "prepare fits AIT-H-1 1024",
+      "pass": true
+    },
+    {
+      "label": "prepare fits AIT-H-1 1440",
+      "pass": true
+    },
+    {
+      "label": "Begin enters active interview AIT-H-1",
+      "pass": true
+    },
+    {
+      "label": "five stages BEH-E-1",
+      "pass": true
+    },
+    {
+      "label": "quiet prepare BEH-E-1",
+      "pass": true
+    },
+    {
+      "label": "prepare fits BEH-E-1 320",
+      "pass": true
+    },
+    {
+      "label": "prepare fits BEH-E-1 375",
+      "pass": true
+    },
+    {
+      "label": "prepare fits BEH-E-1 768",
+      "pass": true
+    },
+    {
+      "label": "prepare fits BEH-E-1 1024",
+      "pass": true
+    },
+    {
+      "label": "prepare fits BEH-E-1 1440",
+      "pass": true
+    },
+    {
+      "label": "Begin enters active interview BEH-E-1",
+      "pass": true
+    },
+    {
+      "label": "five stages BEH-M-1",
+      "pass": true
+    },
+    {
+      "label": "quiet prepare BEH-M-1",
+      "pass": true
+    },
+    {
+      "label": "prepare fits BEH-M-1 320",
+      "pass": true
+    },
+    {
+      "label": "prepare fits BEH-M-1 375",
+      "pass": true
+    },
+    {
+      "label": "prepare fits BEH-M-1 768",
+      "pass": true
+    },
+    {
+      "label": "prepare fits BEH-M-1 1024",
+      "pass": true
+    },
+    {
+      "label": "prepare fits BEH-M-1 1440",
+      "pass": true
+    },
+    {
+      "label": "Begin enters active interview BEH-M-1",
+      "pass": true
+    },
+    {
+      "label": "five stages BEH-H-1",
+      "pass": true
+    },
+    {
+      "label": "quiet prepare BEH-H-1",
+      "pass": true
+    },
+    {
+      "label": "prepare fits BEH-H-1 320",
+      "pass": true
+    },
+    {
+      "label": "prepare fits BEH-H-1 375",
+      "pass": true
+    },
+    {
+      "label": "prepare fits BEH-H-1 768",
+      "pass": true
+    },
+    {
+      "label": "prepare fits BEH-H-1 1024",
+      "pass": true
+    },
+    {
+      "label": "prepare fits BEH-H-1 1440",
+      "pass": true
+    },
+    {
+      "label": "Begin enters active interview BEH-H-1",
+      "pass": true
+    },
+    {
+      "label": "five stages PS-E-1",
+      "pass": true
+    },
+    {
+      "label": "quiet prepare PS-E-1",
+      "pass": true
+    },
+    {
+      "label": "prepare fits PS-E-1 320",
+      "pass": true
+    },
+    {
+      "label": "prepare fits PS-E-1 375",
+      "pass": true
+    },
+    {
+      "label": "prepare fits PS-E-1 768",
+      "pass": true
+    },
+    {
+      "label": "prepare fits PS-E-1 1024",
+      "pass": true
+    },
+    {
+      "label": "prepare fits PS-E-1 1440",
+      "pass": true
+    },
+    {
+      "label": "Begin enters active interview PS-E-1",
+      "pass": true
+    },
+    {
+      "label": "five stages PS-M-1",
+      "pass": true
+    },
+    {
+      "label": "quiet prepare PS-M-1",
+      "pass": true
+    },
+    {
+      "label": "prepare fits PS-M-1 320",
+      "pass": true
+    },
+    {
+      "label": "prepare fits PS-M-1 375",
+      "pass": true
+    },
+    {
+      "label": "prepare fits PS-M-1 768",
+      "pass": true
+    },
+    {
+      "label": "prepare fits PS-M-1 1024",
+      "pass": true
+    },
+    {
+      "label": "prepare fits PS-M-1 1440",
+      "pass": true
+    },
+    {
+      "label": "Begin enters active interview PS-M-1",
+      "pass": true
+    },
+    {
+      "label": "five stages PS-H-1",
+      "pass": true
+    },
+    {
+      "label": "quiet prepare PS-H-1",
+      "pass": true
+    },
+    {
+      "label": "prepare fits PS-H-1 320",
+      "pass": true
+    },
+    {
+      "label": "prepare fits PS-H-1 375",
+      "pass": true
+    },
+    {
+      "label": "prepare fits PS-H-1 768",
+      "pass": true
+    },
+    {
+      "label": "prepare fits PS-H-1 1024",
+      "pass": true
+    },
+    {
+      "label": "prepare fits PS-H-1 1440",
+      "pass": true
+    },
+    {
+      "label": "Begin enters active interview PS-H-1",
+      "pass": true
+    },
+    {
+      "label": "five stages EXE-E-1",
+      "pass": true
+    },
+    {
+      "label": "quiet prepare EXE-E-1",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EXE-E-1 320",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EXE-E-1 375",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EXE-E-1 768",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EXE-E-1 1024",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EXE-E-1 1440",
+      "pass": true
+    },
+    {
+      "label": "Begin enters active interview EXE-E-1",
+      "pass": true
+    },
+    {
+      "label": "five stages EXE-M-1",
+      "pass": true
+    },
+    {
+      "label": "quiet prepare EXE-M-1",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EXE-M-1 320",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EXE-M-1 375",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EXE-M-1 768",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EXE-M-1 1024",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EXE-M-1 1440",
+      "pass": true
+    },
+    {
+      "label": "Begin enters active interview EXE-M-1",
+      "pass": true
+    },
+    {
+      "label": "five stages EXE-H-1",
+      "pass": true
+    },
+    {
+      "label": "quiet prepare EXE-H-1",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EXE-H-1 320",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EXE-H-1 375",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EXE-H-1 768",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EXE-H-1 1024",
+      "pass": true
+    },
+    {
+      "label": "prepare fits EXE-H-1 1440",
+      "pass": true
+    },
+    {
+      "label": "Begin enters active interview EXE-H-1",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "accessibility": [
+    {
+      "label": "prepare desktop",
+      "violations": []
+    },
+    {
+      "label": "prepare mobile",
+      "violations": []
+    }
+  ],
+  "screenshots": [
+    "prepare-desktop",
+    "prepare-mobile"
+  ]
+}

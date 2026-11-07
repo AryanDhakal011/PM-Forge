@@ -1,0 +1,26 @@
+{
+  "id": "review",
+  "type": "REVIEW",
+  "background": "lab",
+  "goal": "Compare the claim, the audit, the bet, and the replacement.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "joyce"
+  ],
+  "lines": [
+    {
+      "id": "line-14",
+      "speaker": "joyce",
+      "expression": "thinking",
+      "text": "The number should survive the people rewarded for growing it."
+    }
+  ],
+  "choices": [],
+  "tools": [],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": true,
+  "minInteractions": 0,
+  "day": 21,
+  "act": 3
+}

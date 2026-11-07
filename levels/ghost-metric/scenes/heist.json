@@ -1,0 +1,88 @@
+{
+  "id": "heist",
+  "type": "TOOL",
+  "background": "lab",
+  "goal": "Catch the Retrier, the Duper, and the Insider.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "retrier"
+  ],
+  "lines": [
+    {
+      "id": "line-11",
+      "speaker": "retrier",
+      "expression": "thinking",
+      "text": "I repeat what you let me count."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "heist",
+      "kind": "HeistCrew",
+      "title": "The heist crew",
+      "items": [
+        {
+          "id": "retrier",
+          "label": "Patch the Retrier",
+          "detail": "I retry until your count grows.",
+          "effects": [
+            {
+              "flag": "retry-patched",
+              "value": true
+            },
+            {
+              "var": "readiness",
+              "op": "add",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "id": "duper",
+          "label": "Patch the Duper",
+          "detail": "I duplicated the customer identity.",
+          "effects": [
+            {
+              "flag": "dupe-patched",
+              "value": true
+            },
+            {
+              "var": "readiness",
+              "op": "add",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "id": "insider",
+          "label": "Patch the Insider",
+          "detail": "Your exclusion depends on a label I control.",
+          "effects": [
+            {
+              "flag": "insider-patched",
+              "value": true
+            },
+            {
+              "var": "readiness",
+              "op": "add",
+              "value": 3
+            }
+          ]
+        }
+      ],
+      "min": 3,
+      "max": 3,
+      "cost": 0,
+      "receiptId": "R_ghost-metric_heist",
+      "rounds": 3
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 14,
+  "act": 3,
+  "next": "board"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "S11",
+  "type": "FACE",
+  "background": "board",
+  "goal": "Choose the chapter move",
+  "tools": [
+    "move"
+  ],
+  "lines": [
+    {
+      "speaker": "alistair",
+      "text": "Cora tells me you have been busy.",
+      "expression": "neutral",
+      "clip": null
+    },
+    {
+      "speaker": "alistair",
+      "text": "Tell me a story. What is wrong with my system?",
+      "expression": "thinking",
+      "clip": null
+    }
+  ]
+}

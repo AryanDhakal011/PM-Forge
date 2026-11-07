@@ -1,0 +1,32 @@
+{
+  "id": "S17",
+  "type": "TOOL",
+  "background": "annex",
+  "speakers": [
+    "imani",
+    "narration"
+  ],
+  "lines": [
+    {
+      "id": "s17-1",
+      "speaker": "imani",
+      "expression": "neutral",
+      "text": "Gate Five is past the line. That's the problem.",
+      "voiceId": "imani",
+      "phase": "before"
+    },
+    {
+      "id": "s17-2",
+      "speaker": "narration",
+      "expression": "thinking",
+      "text": "Your choice is recorded. Inspect the result before moving on.",
+      "voiceId": "narration",
+      "phase": "after"
+    }
+  ],
+  "choices": [],
+  "tool": "threshold",
+  "goal": "Compare the milestone and the limit",
+  "canStill": "Inspect index 74 against Gate Five at 78.",
+  "next": "S18"
+}

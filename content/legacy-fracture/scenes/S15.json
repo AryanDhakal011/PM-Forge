@@ -1,0 +1,23 @@
+{
+  "id": "S15",
+  "type": "TOOL",
+  "background": "board",
+  "goal": "Choose who carries the proposal",
+  "tools": [
+    "coalition"
+  ],
+  "lines": [
+    {
+      "speaker": "renata",
+      "text": "Ops will back you. We feel the pain daily.",
+      "expression": "neutral",
+      "clip": null
+    },
+    {
+      "speaker": "isaac",
+      "text": "Finance will fund it. Show me the cost of failure.",
+      "expression": "thinking",
+      "clip": null
+    }
+  ]
+}

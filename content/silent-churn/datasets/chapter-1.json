@@ -1,0 +1,74 @@
+[
+  {
+    "id": "segment",
+    "title": "Renewal cohort",
+    "question": "Who is leaving?",
+    "concern": "COST",
+    "full": "High-value churn is 14%; overall churn is 6%. The segment contains 420 accounts.",
+    "quick": "A small sample suggests disproportionate commercial losses.",
+    "fragment": "High-value commercial clients"
+  },
+  {
+    "id": "claims",
+    "title": "Claims-to-renewal timeline",
+    "question": "What happened before renewal?",
+    "concern": "RISK",
+    "full": "71% of leavers had a claim in the prior 120 days. Leavers waited a median 11 days for status; retained clients waited 3.",
+    "quick": "Leavers appear to wait longer after a claim. The sample is thin.",
+    "fragment": "Eleven days without a status update"
+  },
+  {
+    "id": "price",
+    "title": "Price comparison",
+    "question": "Was it the premium?",
+    "concern": "COST",
+    "full": "Leavers were priced within 2% of market. This comparison does not support price as the main cause.",
+    "quick": "Prices appear near market. A small sample cannot rule out pricing.",
+    "fragment": "Price was near market"
+  },
+  {
+    "id": "brokers",
+    "title": "Broker and competitor notes",
+    "question": "Is commission the explanation?",
+    "concern": "BROKERS",
+    "full": "Commission differences do not explain this segment. Competitor interviews describe faster proactive claim updates.",
+    "quick": "A few brokers mention quicker updates. Commission remains untested.",
+    "fragment": "The relationship needs an update"
+  },
+  {
+    "id": "process",
+    "title": "Claims contact process",
+    "question": "Will messages raise costs?",
+    "concern": "RISK",
+    "full": "The sampled process has no increase in claim costs. Proactive factual status updates reduce chasing calls in the pilot model.",
+    "quick": "A few callers are asking for the status they cannot see.",
+    "fragment": "Fewer calls chasing status"
+  },
+  {
+    "id": "wording",
+    "title": "Wording review",
+    "question": "What is actually allowed?",
+    "concern": "COMPLIANCE",
+    "full": "In this fictional scenario, approved factual status templates are permitted. Gideon must approve the exact wording.",
+    "quick": "A preliminary note suggests factual templates may be possible. Approval remains necessary.",
+    "fragment": "Approved, factual wording"
+  },
+  {
+    "id": "architecture",
+    "title": "Adjuster-system boundary",
+    "question": "Can the core stay untouched?",
+    "concern": "STABILITY",
+    "full": "The policy core cannot push updates. A modern adjuster service can emit a limited status feed beside it. Sandbox isolation is available.",
+    "quick": "The adjuster system may have a usable feed. The boundary needs validation.",
+    "fragment": "A feed beside the core"
+  },
+  {
+    "id": "capacity",
+    "title": "Pilot effort and on-call",
+    "question": "Who carries the change?",
+    "concern": "STABILITY",
+    "full": "A delivery window needs five working days after approvals. A named on-call owner and rollback are required.",
+    "quick": "The operator estimates at least five working days, subject to a safe window.",
+    "fragment": "A five-day change window"
+  }
+]

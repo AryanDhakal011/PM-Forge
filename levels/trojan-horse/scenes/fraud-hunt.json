@@ -1,0 +1,99 @@
+{
+  "id": "fraud-hunt",
+  "type": "TOOL",
+  "background": "party",
+  "goal": "Cut shared-device rings. Shared locations alone do not prove fraud.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "rhea"
+  ],
+  "lines": [
+    {
+      "id": "line-4",
+      "speaker": "rhea",
+      "expression": "thinking",
+      "text": "Same street does not mean same person."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "fraud-hunt",
+      "kind": "FraudRing",
+      "title": "Device-fingerprint hunt",
+      "items": [
+        {
+          "id": "ring-a",
+          "label": "Accounts A1, A2, A3",
+          "detail": "Device P-17 · repeated payouts · no purchases.",
+          "effects": [
+            {
+              "flag": "fraud-cut",
+              "value": true
+            },
+            {
+              "var": "runway",
+              "op": "add",
+              "value": 3
+            }
+          ],
+          "answer": "cut",
+          "device": "P-17",
+          "location": "Market",
+          "group": "fraud"
+        },
+        {
+          "id": "guild-loop",
+          "label": "Leena, Asha, Tomas",
+          "detail": "Three devices · shared market · recurring purchases.",
+          "effects": [
+            {
+              "flag": "guilds-named",
+              "value": true
+            },
+            {
+              "var": "partner",
+              "op": "add",
+              "value": 3
+            }
+          ],
+          "answer": "keep",
+          "device": "P-81 / P-93 / P-24",
+          "location": "Market",
+          "group": "guilds"
+        },
+        {
+          "id": "ring-b",
+          "label": "Accounts B1, B2",
+          "detail": "Device P-42 · matching cash-out destination.",
+          "effects": [
+            {
+              "var": "runway",
+              "op": "add",
+              "value": 2
+            }
+          ],
+          "answer": "cut",
+          "device": "P-42",
+          "location": "Depot",
+          "group": "fraud"
+        }
+      ],
+      "min": 3,
+      "max": 3,
+      "cost": 0,
+      "receiptId": "R_trojan-horse_fraud-hunt",
+      "bins": [
+        "cut",
+        "keep"
+      ]
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "valve"
+}

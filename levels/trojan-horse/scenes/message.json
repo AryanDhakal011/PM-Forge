@@ -1,0 +1,81 @@
+{
+  "id": "message",
+  "type": "FACE",
+  "background": "office",
+  "goal": "Write one promise the community can quote later.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "rhea"
+  ],
+  "lines": [
+    {
+      "id": "line-6",
+      "speaker": "rhea",
+      "expression": "thinking",
+      "text": "They will screenshot this. Choose words you can keep."
+    }
+  ],
+  "choices": [
+    {
+      "id": "fix-today",
+      "text": "We will fix this today.",
+      "effects": [
+        {
+          "flag": "promised-today",
+          "value": true
+        },
+        {
+          "schedule": {
+            "fuse": "message-quote",
+            "inDays": 14
+          }
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_trojan-horse_fix-today",
+        "store": "text"
+      }
+    },
+    {
+      "id": "review",
+      "text": "We are reviewing rewards and will publish a date.",
+      "effects": [
+        {
+          "var": "community",
+          "op": "add",
+          "value": 3
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_trojan-horse_review",
+        "store": "text"
+      }
+    },
+    {
+      "id": "together",
+      "text": "We will protect legitimate value while changing incentives.",
+      "effects": [
+        {
+          "var": "partner",
+          "op": "add",
+          "value": 4
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_trojan-horse_together",
+        "store": "text"
+      }
+    }
+  ],
+  "tools": [],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "guild-visit"
+}

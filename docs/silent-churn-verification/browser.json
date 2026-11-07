@@ -1,0 +1,357 @@
+{
+  "at": "2026-11-05T15:51:09.046Z",
+  "base": "http://localhost:3001",
+  "http": [],
+  "assets": [],
+  "pages": [
+    {
+      "path": "/app/projects/silent-churn/play?qa=1",
+      "url": "/app/projects/silent-churn/play?qa=1",
+      "loads": 1,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nQUARTERLY REVIEW\nMERIDIAN MUTUAL / EST. 1886 / CUSTOMER JOURNEYS\nProjects\nREAL WORLD PROJECT / MERIDIAN MUTUAL\nHow to play\n\nCUSTOMER JOURNEYS / 21 WORKING DAYS\n\nThe Silent\nChurn.\n\nNobody is complaining.\nE",
+      "failed": false
+    },
+    {
+      "path": "/app/projects/silent-churn/play?qa=1",
+      "url": "/app/projects/silent-churn/play?qa=1",
+      "loads": 2,
+      "unexpectedReloads": 0,
+      "text": "Skip to content\nQUARTERLY REVIEW\nMERIDIAN MUTUAL / EST. 1886 / CUSTOMER JOURNEYS\nProjects\nREAL WORLD PROJECT / MERIDIAN MUTUAL\nHow to play\n\nCUSTOMER JOURNEYS / 21 WORKING DAYS\n\nThe Silent\nChurn.\n\nNobody is complaining.\nE",
+      "failed": false
+    }
+  ],
+  "clicks": [],
+  "errors": [],
+  "resources": {
+    "cycles": 20,
+    "listenersBefore": 173,
+    "listenersAfter": 173
+  },
+  "checks": [
+    {
+      "label": "standalone entrance",
+      "pass": true
+    },
+    {
+      "label": "entrance 390 fits",
+      "pass": true
+    },
+    {
+      "label": "entrance 320 fits",
+      "pass": true
+    },
+    {
+      "label": "find Take the elevator",
+      "pass": true
+    },
+    {
+      "label": "intro does not spend a day",
+      "pass": true
+    },
+    {
+      "label": "lost account",
+      "pass": true
+    },
+    {
+      "label": "find Unknown",
+      "pass": true
+    },
+    {
+      "label": "find Back to the task",
+      "pass": true
+    },
+    {
+      "label": "day zero",
+      "pass": true
+    },
+    {
+      "label": "committee introductions",
+      "pass": true
+    },
+    {
+      "label": "find Marta",
+      "pass": true
+    },
+    {
+      "label": "find Close dialog",
+      "pass": true
+    },
+    {
+      "label": "find Dredger",
+      "pass": true
+    },
+    {
+      "label": "real request queued",
+      "pass": true
+    },
+    {
+      "label": "day recap",
+      "pass": true
+    },
+    {
+      "label": "extract arrives on due day",
+      "pass": true
+    },
+    {
+      "label": "find Pattern",
+      "pass": true
+    },
+    {
+      "label": "desk 390 fits",
+      "pass": true
+    },
+    {
+      "label": "desk 320 fits",
+      "pass": true
+    },
+    {
+      "label": "coalition same clock",
+      "pass": true
+    },
+    {
+      "label": "find Coalition",
+      "pass": true
+    },
+    {
+      "label": "find Pre-read",
+      "pass": true
+    },
+    {
+      "label": "five-block pre-read saved",
+      "pass": true
+    },
+    {
+      "label": "committee opens",
+      "pass": true
+    },
+    {
+      "label": "committee reaches mandate",
+      "pass": true
+    },
+    {
+      "label": "full coalition policy reaches review",
+      "pass": true
+    },
+    {
+      "label": "review 390 fits",
+      "pass": true
+    },
+    {
+      "label": "review 320 fits",
+      "pass": true
+    },
+    {
+      "label": "reflection completes run",
+      "pass": true
+    },
+    {
+      "label": "find Pause",
+      "pass": true
+    },
+    {
+      "label": "save/export available",
+      "pass": true
+    },
+    {
+      "label": "find Save & return to entrance",
+      "pass": true
+    },
+    {
+      "label": "returns to entrance",
+      "pass": true
+    },
+    {
+      "label": "find Resume ·",
+      "pass": true
+    },
+    {
+      "label": "resume completed run",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "gallery card exists",
+      "pass": true
+    },
+    {
+      "label": "gallery opens standalone level",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed cycle 1",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed cycle 2",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed cycle 3",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed cycle 4",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed cycle 5",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed cycle 6",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed cycle 7",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed cycle 8",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed cycle 9",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed cycle 10",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed cycle 11",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed cycle 12",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed cycle 13",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed cycle 14",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed cycle 15",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed cycle 16",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed cycle 17",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed cycle 18",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed cycle 19",
+      "pass": true
+    },
+    {
+      "label": "find Projects",
+      "pass": true
+    },
+    {
+      "label": "QA hook removed cycle 20",
+      "pass": true
+    },
+    {
+      "label": "soft navigation does not reload document",
+      "pass": true
+    },
+    {
+      "label": "twenty entries leave global listener count stable",
+      "pass": true
+    },
+    {
+      "label": "system reduced motion uses still presentation",
+      "pass": true
+    }
+  ]
+}

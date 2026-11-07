@@ -1,0 +1,17 @@
+{
+  "id": "S02",
+  "type": "TOOL",
+  "background": "dispatch",
+  "goal": "Sort the first late delivery",
+  "tools": [
+    "sort"
+  ],
+  "lines": [
+    {
+      "speaker": "renata",
+      "text": "Every late truck has a story. The pattern is the problem.",
+      "expression": "thinking",
+      "clip": null
+    }
+  ]
+}

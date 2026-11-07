@@ -1,0 +1,445 @@
+{
+  "paths": [
+    {
+      "path": 1,
+      "strategy": {
+        "route": "flagship"
+      },
+      "ending": "Excellence for few",
+      "forecast": {
+        "flagship": 400,
+        "community": 0,
+        "reach": 400,
+        "recovered": 328,
+        "recovery": 82,
+        "left": 2814,
+        "spent": 3600000,
+        "budget": 3600000,
+        "unused": 0,
+        "costPerRecovered": 10976,
+        "qualityRisk": 5,
+        "underserved": 7,
+        "talent": 100,
+        "staffLoad": 50,
+        "safe": true,
+        "recoveryCommunity": 0.6300000000000001
+      },
+      "letters": [
+        {
+          "patient": "Raman Thapa",
+          "reached": false
+        },
+        {
+          "patient": "Sita Gurung",
+          "reached": false
+        },
+        {
+          "patient": "Mr. Alvarez",
+          "reached": true
+        }
+      ],
+      "receipts": 17
+    },
+    {
+      "path": 2,
+      "strategy": {
+        "route": "community",
+        "safe": false
+      },
+      "ending": "Resource strain",
+      "forecast": {
+        "flagship": 0,
+        "community": 3214,
+        "reach": 3214,
+        "recovered": 1736,
+        "recovery": 54,
+        "left": 0,
+        "spent": 2892600,
+        "budget": 3600000,
+        "unused": 707400,
+        "costPerRecovered": 1666,
+        "qualityRisk": 55,
+        "underserved": 100,
+        "talent": 100,
+        "staffLoad": 46,
+        "safe": false,
+        "recoveryCommunity": 0.54
+      },
+      "letters": [
+        {
+          "patient": "Raman Thapa",
+          "reached": true
+        },
+        {
+          "patient": "Sita Gurung",
+          "reached": true
+        },
+        {
+          "patient": "Mr. Alvarez",
+          "reached": true
+        }
+      ],
+      "receipts": 17
+    },
+    {
+      "path": 3,
+      "strategy": {
+        "route": "community"
+      },
+      "ending": "Reach with care",
+      "forecast": {
+        "flagship": 0,
+        "community": 3214,
+        "reach": 3214,
+        "recovered": 2025,
+        "recovery": 63,
+        "left": 0,
+        "spent": 3239712,
+        "budget": 3600000,
+        "unused": 360288,
+        "costPerRecovered": 1600,
+        "qualityRisk": 5,
+        "underserved": 100,
+        "talent": 100,
+        "staffLoad": 46,
+        "safe": true,
+        "recoveryCommunity": 0.6300000000000001
+      },
+      "letters": [
+        {
+          "patient": "Raman Thapa",
+          "reached": true
+        },
+        {
+          "patient": "Sita Gurung",
+          "reached": true
+        },
+        {
+          "patient": "Mr. Alvarez",
+          "reached": true
+        }
+      ],
+      "receipts": 17
+    },
+    {
+      "path": 4,
+      "strategy": {
+        "route": "premium"
+      },
+      "ending": "Talent drain",
+      "forecast": {
+        "flagship": 346,
+        "community": 1666,
+        "reach": 2012,
+        "recovered": 1333,
+        "recovery": 66,
+        "left": 1202,
+        "spent": 4793328,
+        "budget": 4800000,
+        "unused": 6672,
+        "costPerRecovered": 3596,
+        "qualityRisk": 5,
+        "underserved": 28,
+        "talent": 82,
+        "staffLoad": 85,
+        "safe": true,
+        "recoveryCommunity": 0.6300000000000001
+      },
+      "letters": [
+        {
+          "patient": "Raman Thapa",
+          "reached": true
+        },
+        {
+          "patient": "Sita Gurung",
+          "reached": true
+        },
+        {
+          "patient": "Mr. Alvarez",
+          "reached": true
+        }
+      ],
+      "receipts": 17
+    },
+    {
+      "path": 5,
+      "strategy": {
+        "route": "hybrid"
+      },
+      "ending": "Balanced and defended",
+      "forecast": {
+        "flagship": 120,
+        "community": 2499,
+        "reach": 2619,
+        "recovered": 1673,
+        "recovery": 64,
+        "left": 595,
+        "spent": 3598992,
+        "budget": 3600000,
+        "unused": 1008,
+        "costPerRecovered": 2151,
+        "qualityRisk": 5,
+        "underserved": 57,
+        "talent": 100,
+        "staffLoad": 60,
+        "safe": true,
+        "recoveryCommunity": 0.6300000000000001
+      },
+      "letters": [
+        {
+          "patient": "Raman Thapa",
+          "reached": true
+        },
+        {
+          "patient": "Sita Gurung",
+          "reached": true
+        },
+        {
+          "patient": "Mr. Alvarez",
+          "reached": true
+        }
+      ],
+      "receipts": 17
+    },
+    {
+      "path": 6,
+      "strategy": {
+        "route": "hybrid",
+        "reports": [
+          "outcomes",
+          "cost",
+          "staff"
+        ]
+      },
+      "ending": "Balanced and defended",
+      "forecast": {
+        "flagship": 120,
+        "community": 2499,
+        "reach": 2619,
+        "recovered": 1673,
+        "recovery": 64,
+        "left": 595,
+        "spent": 3598992,
+        "budget": 3600000,
+        "unused": 1008,
+        "costPerRecovered": 2151,
+        "qualityRisk": 5,
+        "underserved": 57,
+        "talent": 100,
+        "staffLoad": 60,
+        "safe": true,
+        "recoveryCommunity": 0.6300000000000001
+      },
+      "letters": [
+        {
+          "patient": "Raman Thapa",
+          "reached": true
+        },
+        {
+          "patient": "Sita Gurung",
+          "reached": true
+        },
+        {
+          "patient": "Mr. Alvarez",
+          "reached": true
+        }
+      ],
+      "receipts": 17
+    },
+    {
+      "path": 7,
+      "strategy": {
+        "route": "hybrid",
+        "scaleEvidence": false
+      },
+      "ending": "Balanced and defended",
+      "forecast": {
+        "flagship": 120,
+        "community": 2499,
+        "reach": 2619,
+        "recovered": 1673,
+        "recovery": 64,
+        "left": 595,
+        "spent": 3598992,
+        "budget": 3600000,
+        "unused": 1008,
+        "costPerRecovered": 2151,
+        "qualityRisk": 5,
+        "underserved": 57,
+        "talent": 100,
+        "staffLoad": 60,
+        "safe": true,
+        "recoveryCommunity": 0.6300000000000001
+      },
+      "letters": [
+        {
+          "patient": "Raman Thapa",
+          "reached": true
+        },
+        {
+          "patient": "Sita Gurung",
+          "reached": true
+        },
+        {
+          "patient": "Mr. Alvarez",
+          "reached": true
+        }
+      ],
+      "receipts": 17
+    },
+    {
+      "path": 8,
+      "strategy": {
+        "route": "flagship",
+        "maxHubs": true
+      },
+      "ending": "Excellence for few",
+      "forecast": {
+        "flagship": 400,
+        "community": 0,
+        "reach": 400,
+        "recovered": 328,
+        "recovery": 82,
+        "left": 2814,
+        "spent": 3600000,
+        "budget": 3600000,
+        "unused": 0,
+        "costPerRecovered": 10976,
+        "qualityRisk": 5,
+        "underserved": 7,
+        "talent": 100,
+        "staffLoad": 50,
+        "safe": true,
+        "recoveryCommunity": 0.6300000000000001
+      },
+      "letters": [
+        {
+          "patient": "Raman Thapa",
+          "reached": false
+        },
+        {
+          "patient": "Sita Gurung",
+          "reached": false
+        },
+        {
+          "patient": "Mr. Alvarez",
+          "reached": true
+        }
+      ],
+      "receipts": 17
+    },
+    {
+      "path": 9,
+      "strategy": {
+        "route": "community",
+        "safe": false,
+        "intervene": false
+      },
+      "ending": "Resource strain",
+      "forecast": {
+        "flagship": 0,
+        "community": 3214,
+        "reach": 3214,
+        "recovered": 1736,
+        "recovery": 54,
+        "left": 0,
+        "spent": 2892600,
+        "budget": 3600000,
+        "unused": 707400,
+        "costPerRecovered": 1666,
+        "qualityRisk": 55,
+        "underserved": 100,
+        "talent": 100,
+        "staffLoad": 46,
+        "safe": false,
+        "recoveryCommunity": 0.54
+      },
+      "letters": [
+        {
+          "patient": "Raman Thapa",
+          "reached": true
+        },
+        {
+          "patient": "Sita Gurung",
+          "reached": true
+        },
+        {
+          "patient": "Mr. Alvarez",
+          "reached": true
+        }
+      ],
+      "receipts": 17
+    },
+    {
+      "path": 10,
+      "strategy": {
+        "route": "community",
+        "reports": [
+          "outcomes",
+          "equity",
+          "funding"
+        ]
+      },
+      "ending": "Reach with care",
+      "forecast": {
+        "flagship": 0,
+        "community": 3214,
+        "reach": 3214,
+        "recovered": 2025,
+        "recovery": 63,
+        "left": 0,
+        "spent": 3239712,
+        "budget": 3600000,
+        "unused": 360288,
+        "costPerRecovered": 1600,
+        "qualityRisk": 5,
+        "underserved": 100,
+        "talent": 100,
+        "staffLoad": 46,
+        "safe": true,
+        "recoveryCommunity": 0.6300000000000001
+      },
+      "letters": [
+        {
+          "patient": "Raman Thapa",
+          "reached": true
+        },
+        {
+          "patient": "Sita Gurung",
+          "reached": true
+        },
+        {
+          "patient": "Mr. Alvarez",
+          "reached": true
+        }
+      ],
+      "receipts": 17
+    }
+  ],
+  "eventCoverage": [
+    "E1-00",
+    "E1-01",
+    "E2-08",
+    "E2-09",
+    "E3-16",
+    "E3-17",
+    "E1-02",
+    "E1-03",
+    "E2-10",
+    "E2-11",
+    "E3-18",
+    "E3-19",
+    "E1-06",
+    "E1-07",
+    "E2-14",
+    "E2-15",
+    "E3-22",
+    "E3-23",
+    "E1-04",
+    "E1-05",
+    "E2-12",
+    "E2-13",
+    "E3-20",
+    "E3-21"
+  ]
+}

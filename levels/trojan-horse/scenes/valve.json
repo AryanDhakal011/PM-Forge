@@ -1,0 +1,88 @@
+{
+  "id": "valve",
+  "type": "TOOL",
+  "background": "party",
+  "goal": "Change the payout multiplier and watch the coin press slow.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "omar"
+  ],
+  "lines": [
+    {
+      "id": "line-5",
+      "speaker": "omar",
+      "expression": "thinking",
+      "text": "The runway ring is a cash forecast, not confetti."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "valve",
+      "kind": "SliderForecast",
+      "title": "Payout valve",
+      "items": [],
+      "min": 0,
+      "max": 1,
+      "cost": 0,
+      "receiptId": "R_trojan-horse_valve",
+      "lever": [
+        {
+          "id": "multiplier",
+          "label": "Payout multiplier",
+          "min": 0,
+          "max": 2,
+          "initial": 1,
+          "step": 0.25
+        }
+      ]
+    }
+  ],
+  "onEnter": [],
+  "onExit": [
+    {
+      "when": {
+        "var": "multiplier",
+        "op": ">=",
+        "value": 1.5
+      },
+      "effects": [
+        {
+          "var": "runway",
+          "op": "add",
+          "value": -7
+        },
+        {
+          "var": "cash",
+          "op": "add",
+          "value": -35
+        },
+        {
+          "chip": "High payouts shorten runway and consume cash."
+        }
+      ]
+    },
+    {
+      "when": {
+        "var": "multiplier",
+        "op": "<=",
+        "value": 0.5
+      },
+      "effects": [
+        {
+          "var": "community",
+          "op": "add",
+          "value": -12
+        },
+        {
+          "chip": "A sharp payout cut creates an access and trust cost."
+        }
+      ]
+    }
+  ],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "message"
+}

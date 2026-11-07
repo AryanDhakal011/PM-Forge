@@ -1,0 +1,82 @@
+{
+  "id": "rumors",
+  "type": "TOOL",
+  "background": "office",
+  "goal": "Correct two rumors. Ignored claims continue to circulate.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "sana"
+  ],
+  "lines": [
+    {
+      "id": "line-10",
+      "speaker": "sana",
+      "expression": "thinking",
+      "text": "Corrections need the same reach as the rumor."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "rumors",
+      "kind": "RumorMill",
+      "title": "The rumor mill",
+      "items": [
+        {
+          "id": "gouging",
+          "label": "Price gouging rumor",
+          "detail": "Publish the actual surge policy.",
+          "effects": [
+            {
+              "var": "narrativeRisk",
+              "op": "add",
+              "value": -4
+            }
+          ]
+        },
+        {
+          "id": "closures",
+          "label": "Closure rumor",
+          "detail": "Publish the current closure map.",
+          "effects": [
+            {
+              "var": "narrativeRisk",
+              "op": "add",
+              "value": -4
+            }
+          ]
+        },
+        {
+          "id": "safe-route",
+          "label": "Unsafe shortcut rumor",
+          "detail": "Correct the route and give a safe alternative.",
+          "effects": [
+            {
+              "var": "risk",
+              "op": "add",
+              "value": -5
+            }
+          ]
+        }
+      ],
+      "min": 2,
+      "max": 2,
+      "cost": 0,
+      "receiptId": "R_last-mile_rumors",
+      "resultEffects": [
+        {
+          "var": "narrativeRisk",
+          "op": "add",
+          "value": 2
+        }
+      ]
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 2,
+  "act": 2,
+  "next": "reopen"
+}

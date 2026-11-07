@@ -1,0 +1,64 @@
+{
+  "id": "bet",
+  "type": "TOOL",
+  "background": "office",
+  "goal": "Stake credibility on an interval before the reveal.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "joyce"
+  ],
+  "lines": [
+    {
+      "id": "line-5",
+      "speaker": "joyce",
+      "expression": "thinking",
+      "text": "A narrow range is a stronger claim. Price it honestly."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "confidence",
+      "kind": "ConfidenceBet",
+      "title": "Confidence betting",
+      "items": [],
+      "min": 0,
+      "max": 1,
+      "cost": 0,
+      "receiptId": "R_ghost-metric_confidence",
+      "lever": [
+        {
+          "id": "low",
+          "label": "Lower ghost-share bound",
+          "min": 0,
+          "max": 100,
+          "initial": 70,
+          "step": 1
+        },
+        {
+          "id": "high",
+          "label": "Upper ghost-share bound",
+          "min": 0,
+          "max": 100,
+          "initial": 95,
+          "step": 1
+        },
+        {
+          "id": "stake",
+          "label": "Credibility chips",
+          "min": 1,
+          "max": 10,
+          "initial": 3,
+          "step": 1
+        }
+      ]
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 1,
+  "act": 1,
+  "next": "promise"
+}

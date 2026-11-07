@@ -1,4 +1,5 @@
 "use client";
+import type {MasterProfile,CaseStudy,ResumeVersion,CareerJob,CareerArtifact} from "../portfolio/model";
 import Dexie, { type EntityTable } from "dexie";
 import type {
   Bookmark,
@@ -9,9 +10,16 @@ import type {
   WorkspaceExport,
 } from "./types";
 import { exportSchema } from "./schema";
+import {preservePrivateInterview} from "./interview-live";
 import type { ProjectRun } from "../projects/types";
 
 class WorkspaceDatabase extends Dexie {
+  careerProfiles!:EntityTable<MasterProfile,"id">;
+  caseStudies!:EntityTable<CaseStudy,"id">;
+  resumeVersions!:EntityTable<ResumeVersion,"id">;
+  careerJobs!:EntityTable<CareerJob,"id">;
+  careerArtifacts!:EntityTable<CareerArtifact,"id">;
+  interviewAudio!: EntityTable<{id:string;ownerId:string;runId:string;blob:Blob;createdAt:string}, "id">;
   projectRuns!: EntityTable<ProjectRun, "id">;
   profiles!: EntityTable<Profile, "id">;
   runs!: EntityTable<Run, "id">;
@@ -30,6 +38,8 @@ class WorkspaceDatabase extends Dexie {
       meta: "key",
     });
     this.version(2).stores({ projectRuns: "id,ownerId,projectId,updatedAt" });
+    this.version(3).stores({interviewAudio:"id,ownerId,runId,createdAt"});
+    this.version(4).stores({careerProfiles:"id,ownerId",caseStudies:"id,ownerId,sourceId,updatedAt",resumeVersions:"id,ownerId,createdAt",careerJobs:"id,ownerId,updatedAt",careerArtifacts:"id,ownerId,caseId"});
   }
 }
 export const db = new WorkspaceDatabase();
@@ -102,11 +112,12 @@ export async function saveRun(
 export async function exportWorkspace(
   profile: Profile,
 ): Promise<WorkspaceExport> {
-  const [runs, records, bookmarks, projectRuns] = await Promise.all([
+  const [runs, records, bookmarks, projectRuns, careerProfiles,caseStudies,resumeVersions,careerJobs] = await Promise.all([
     db.runs.where("ownerId").equals(profile.id).toArray(),
     db.records.where("ownerId").equals(profile.id).toArray(),
     db.bookmarks.where("ownerId").equals(profile.id).toArray(),
     db.projectRuns.where("ownerId").equals(profile.id).toArray(),
+    db.careerProfiles.where("ownerId").equals(profile.id).toArray(),db.caseStudies.where("ownerId").equals(profile.id).toArray(),db.resumeVersions.where("ownerId").equals(profile.id).toArray(),db.careerJobs.where("ownerId").equals(profile.id).toArray(),
   ]);
   return {
     version: 1,
@@ -116,6 +127,7 @@ export async function exportWorkspace(
     records,
     bookmarks,
     projectRuns,
+    career:{profiles:careerProfiles,cases:caseStudies,resumes:resumeVersions,jobs:careerJobs},
   };
 }
 export async function importWorkspace(
@@ -147,7 +159,7 @@ export async function importWorkspace(
     );
   await db.transaction(
     "rw",
-    [db.runs, db.records, db.bookmarks, db.profiles, db.meta, db.projectRuns],
+    [db.runs, db.records, db.bookmarks, db.profiles, db.meta, db.projectRuns,db.careerProfiles,db.caseStudies,db.resumeVersions,db.careerJobs],
     async () => {
       for (const incoming of parsed.projectRuns || []) {
         const id = aliases.get(incoming.id) || incoming.id;
@@ -219,8 +231,9 @@ export async function importWorkspace(
           (current.ownerId === profile.id &&
             current.updatedAt < incoming.updatedAt)
         )
-          await db.runs.put({ ...incoming, id, ownerId: profile.id });
+          await db.runs.put({ ...preservePrivateInterview(current,incoming,!queueSync), id, ownerId: profile.id });
       }
+      if(parsed.career){const prefix=parsed.profile.id===profile.id?'':profile.id+':';for(const item of parsed.career.profiles){const current=await db.careerProfiles.get(profile.id);if(!current||current.updatedAt<item.updatedAt)await db.careerProfiles.put({...item,id:profile.id,ownerId:profile.id,selectedCases:item.selectedCases.map(id=>prefix+id)})}for(const item of parsed.career.cases){const id=prefix+item.id,current=await db.caseStudies.get(id);if(!current||current.ownerId===profile.id&&current.updatedAt<item.updatedAt)await db.caseStudies.put({...item,id,ownerId:profile.id,sourceId:item.sourceId?aliases.get(item.sourceId)||item.sourceId:undefined,artifactIds:prefix?[]:(current?.artifactIds||[])})}for(const item of parsed.career.resumes){const id=prefix+item.id;if(!await db.resumeVersions.get(id))await db.resumeVersions.put({...item,id,ownerId:profile.id,caseIds:item.caseIds.map(id=>prefix+id)})}for(const item of parsed.career.jobs){const id=prefix+item.id,current=await db.careerJobs.get(id);if(!current||current.updatedAt<item.updatedAt)await db.careerJobs.put({...item,id,ownerId:profile.id,caseIds:item.caseIds.map(id=>prefix+id),resumeId:item.resumeId?prefix+item.resumeId:undefined})}}
       for (const incoming of parsed.records) {
         const id = aliases.get(incoming.id) || incoming.id;
         const current = await db.records.get(id);
@@ -265,9 +278,12 @@ export async function clearLocalProfile(ownerId: string) {
       db.snapshots,
       db.meta,
       db.projectRuns,
+      db.interviewAudio,db.careerProfiles,db.caseStudies,db.resumeVersions,db.careerJobs,db.careerArtifacts,
     ],
     async () => {
       await Promise.all([
+        ...[db.careerProfiles,db.caseStudies,db.resumeVersions,db.careerJobs,db.careerArtifacts].map(table=>table.where("ownerId").equals(ownerId).delete()),
+        db.interviewAudio.where("ownerId").equals(ownerId).delete(),
         db.runs.where("ownerId").equals(ownerId).delete(),
         db.records.where("ownerId").equals(ownerId).delete(),
         db.bookmarks.where("ownerId").equals(ownerId).delete(),

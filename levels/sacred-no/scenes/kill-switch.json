@@ -1,0 +1,39 @@
+{
+  "id": "kill-switch",
+  "type": "TOOL",
+  "background": "boardroom",
+  "goal": "Use the kill switch once during the live demo ramp.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "priya"
+  ],
+  "lines": [
+    {
+      "id": "line-9",
+      "speaker": "priya",
+      "expression": "thinking",
+      "text": "Safeguard hours buy us a wider stopping window."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "demo-switch",
+      "kind": "KillSwitch",
+      "title": "The live demonstration",
+      "items": [],
+      "min": 0,
+      "max": 1,
+      "cost": 0,
+      "receiptId": "R_sacred-no_demo-switch",
+      "duration": 15
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 3,
+  "act": 3,
+  "next": "board"
+}

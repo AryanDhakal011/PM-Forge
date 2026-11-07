@@ -1,0 +1,322 @@
+[
+  {
+    "id": "D4401",
+    "planned": 8.1,
+    "actual": 8.9,
+    "cause": "road",
+    "location": "North gate",
+    "late": true
+  },
+  {
+    "id": "D4402",
+    "planned": 8.34,
+    "actual": 9.64,
+    "cause": "override",
+    "location": "Depot 2",
+    "late": true
+  },
+  {
+    "id": "D4403",
+    "planned": 8.58,
+    "actual": 10.28,
+    "cause": "window",
+    "location": "City ring",
+    "late": true
+  },
+  {
+    "id": "D4404",
+    "planned": 8.82,
+    "actual": 8.82,
+    "cause": "other",
+    "location": "East yard",
+    "late": false
+  },
+  {
+    "id": "D4405",
+    "planned": 9.06,
+    "actual": 10.36,
+    "cause": "road",
+    "location": "North gate",
+    "late": true
+  },
+  {
+    "id": "D4406",
+    "planned": 9.3,
+    "actual": 11.0,
+    "cause": "override",
+    "location": "Depot 2",
+    "late": true
+  },
+  {
+    "id": "D4407",
+    "planned": 9.54,
+    "actual": 10.34,
+    "cause": "window",
+    "location": "City ring",
+    "late": true
+  },
+  {
+    "id": "D4408",
+    "planned": 9.78,
+    "actual": 9.78,
+    "cause": "other",
+    "location": "East yard",
+    "late": false
+  },
+  {
+    "id": "D4409",
+    "planned": 10.02,
+    "actual": 11.72,
+    "cause": "road",
+    "location": "North gate",
+    "late": true
+  },
+  {
+    "id": "D4410",
+    "planned": 10.26,
+    "actual": 11.06,
+    "cause": "override",
+    "location": "Depot 2",
+    "late": true
+  },
+  {
+    "id": "D4411",
+    "planned": 10.5,
+    "actual": 11.8,
+    "cause": "window",
+    "location": "City ring",
+    "late": true
+  },
+  {
+    "id": "D4412",
+    "planned": 10.74,
+    "actual": 10.74,
+    "cause": "other",
+    "location": "East yard",
+    "late": false
+  },
+  {
+    "id": "D4413",
+    "planned": 10.98,
+    "actual": 11.78,
+    "cause": "road",
+    "location": "North gate",
+    "late": true
+  },
+  {
+    "id": "D4414",
+    "planned": 11.22,
+    "actual": 12.52,
+    "cause": "override",
+    "location": "Depot 2",
+    "late": true
+  },
+  {
+    "id": "D4415",
+    "planned": 11.46,
+    "actual": 13.16,
+    "cause": "window",
+    "location": "City ring",
+    "late": true
+  },
+  {
+    "id": "D4416",
+    "planned": 11.7,
+    "actual": 11.7,
+    "cause": "other",
+    "location": "East yard",
+    "late": false
+  },
+  {
+    "id": "D4417",
+    "planned": 11.94,
+    "actual": 13.24,
+    "cause": "road",
+    "location": "North gate",
+    "late": true
+  },
+  {
+    "id": "D4418",
+    "planned": 12.18,
+    "actual": 13.88,
+    "cause": "override",
+    "location": "Depot 2",
+    "late": true
+  },
+  {
+    "id": "D4419",
+    "planned": 12.42,
+    "actual": 13.22,
+    "cause": "window",
+    "location": "City ring",
+    "late": true
+  },
+  {
+    "id": "D4420",
+    "planned": 12.66,
+    "actual": 12.66,
+    "cause": "other",
+    "location": "East yard",
+    "late": false
+  },
+  {
+    "id": "D4421",
+    "planned": 12.9,
+    "actual": 14.6,
+    "cause": "road",
+    "location": "North gate",
+    "late": true
+  },
+  {
+    "id": "D4422",
+    "planned": 13.14,
+    "actual": 13.94,
+    "cause": "override",
+    "location": "Depot 2",
+    "late": true
+  },
+  {
+    "id": "D4423",
+    "planned": 13.38,
+    "actual": 14.68,
+    "cause": "window",
+    "location": "City ring",
+    "late": true
+  },
+  {
+    "id": "D4424",
+    "planned": 13.62,
+    "actual": 13.62,
+    "cause": "other",
+    "location": "East yard",
+    "late": false
+  },
+  {
+    "id": "D4425",
+    "planned": 13.86,
+    "actual": 14.66,
+    "cause": "road",
+    "location": "North gate",
+    "late": true
+  },
+  {
+    "id": "D4426",
+    "planned": 14.1,
+    "actual": 15.4,
+    "cause": "override",
+    "location": "Depot 2",
+    "late": true
+  },
+  {
+    "id": "D4427",
+    "planned": 14.34,
+    "actual": 16.04,
+    "cause": "window",
+    "location": "City ring",
+    "late": true
+  },
+  {
+    "id": "D4428",
+    "planned": 14.58,
+    "actual": 14.58,
+    "cause": "other",
+    "location": "East yard",
+    "late": false
+  },
+  {
+    "id": "D4429",
+    "planned": 14.82,
+    "actual": 16.12,
+    "cause": "road",
+    "location": "North gate",
+    "late": true
+  },
+  {
+    "id": "D4430",
+    "planned": 15.06,
+    "actual": 16.76,
+    "cause": "override",
+    "location": "Depot 2",
+    "late": true
+  },
+  {
+    "id": "D4431",
+    "planned": 15.3,
+    "actual": 16.1,
+    "cause": "window",
+    "location": "City ring",
+    "late": true
+  },
+  {
+    "id": "D4432",
+    "planned": 15.54,
+    "actual": 15.54,
+    "cause": "other",
+    "location": "East yard",
+    "late": false
+  },
+  {
+    "id": "D4433",
+    "planned": 15.78,
+    "actual": 17.48,
+    "cause": "road",
+    "location": "North gate",
+    "late": true
+  },
+  {
+    "id": "D4434",
+    "planned": 16.02,
+    "actual": 16.82,
+    "cause": "override",
+    "location": "Depot 2",
+    "late": true
+  },
+  {
+    "id": "D4435",
+    "planned": 16.26,
+    "actual": 17.56,
+    "cause": "window",
+    "location": "City ring",
+    "late": true
+  },
+  {
+    "id": "D4436",
+    "planned": 16.5,
+    "actual": 16.5,
+    "cause": "other",
+    "location": "East yard",
+    "late": false
+  },
+  {
+    "id": "D4437",
+    "planned": 16.74,
+    "actual": 17.54,
+    "cause": "road",
+    "location": "North gate",
+    "late": true
+  },
+  {
+    "id": "D4438",
+    "planned": 16.98,
+    "actual": 18.28,
+    "cause": "override",
+    "location": "Depot 2",
+    "late": true
+  },
+  {
+    "id": "D4439",
+    "planned": 17.22,
+    "actual": 18.92,
+    "cause": "window",
+    "location": "City ring",
+    "late": true
+  },
+  {
+    "id": "D4440",
+    "planned": 17.46,
+    "actual": 17.46,
+    "cause": "other",
+    "location": "East yard",
+    "late": false
+  }
+]

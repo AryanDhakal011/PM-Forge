@@ -1,0 +1,241 @@
+PMFORGE SHARED PROJECT PLATFORM SPECIFICATION (v1.0)
+For: the code editor (Claude Code) and the founder. This is the engine under every real-world project (Deadlock, Sacred No, Silent Churn, Feature Factory, Ghost Metric, Trojan Horses, Pivot Point, Legacy Fracture, Shadow Roadmap, Invisible Wall, Public Fracture, Last Mile). A level becomes CONTENT (JSON) plus a few custom tools. Build the platform once, test it hard, then every level is cheap, consistent and safe.
+Read Section 0 first. Sections 1 to 18 are the contract. Anything a level needs that is not here is added to the platform, not hacked into the level.
+
+======================================================================
+0. GOALS, NON-GOALS, VOCABULARY
+======================================================================
+Goals: (1) every level is immersive, complete and never hollow; (2) every level shares one runner, one engine, one save system, one design system; (3) content is data, validated by tools; (4) nothing a level does can break the main site; (5) every level is accessible and fast.
+Non-goals: no live LLM improvisation of story or outcomes; no server dependence for play; no per-level forks of core code.
+Vocabulary: LEVEL (a project), SCENE (one screen of story or interaction), BEAT (a small moment inside a scene), LINE (one dialogue unit), TOOL (an interactive widget such as Evidence Drawers), RECEIPT (the exact artifact of a choice, stored), FUSE (a delayed consequence that references a receipt), BECAUSE-TAG (the link from a consequence to its cause), SEED (the saved random seed), BRANCH (a replay fork with its own record).
+
+======================================================================
+1. ARCHITECTURE OVERVIEW
+======================================================================
+Layers (top depends on bottom, never the reverse):
+  [ Level content ]  /content/<levelId>/*.json + optional level tools
+  [ Level shell    ]  ProjectLayout, Entrance, Runner UI, tool host
+  [ Runtime        ]  Scene Runner, Engine, Event/Template/Ask engines, Receipts, Counterfactual
+  [ Services       ]  Save, Audio, Voice, Motion, Telemetry, Flags, Diagnostics
+  [ Foundations    ]  Design tokens, a11y utils, RNG, schema validators, i18n
+Module layout (monorepo packages or folders; names are binding):
+  /platform/core         types, schemas, rng, conditions, effects, clock, ids
+  /platform/runtime      scene-runner, engine, receipts, fuses, events, templates, ask, objections, counterfactual (worker)
+  /platform/ui           layout, entrance, dialogue, portrait, choices, strips, case-file, guide, pause, chips, toasts, tool-host
+  /platform/tools        shared tools (see Section 8)
+  /platform/services     save, audio, voice, motion, telemetry, flags, diagnostics
+  /platform/art          portrait generator, background kit, asset manifest tools
+  /platform/devtools     dev panel, CLI (validate, lint, simulate, snapshot), smoke runner
+  /levels/<levelId>      manifest.json, scenes/, people.json, events/, templates.json, tools/ (custom), art/, audio/
+Rules: levels import ONLY from /platform packages' public APIs; no level imports another level; no global state outside the platform store; every level loads as a lazy chunk (dynamic import) and adds 0 KB to the main bundle.
+
+======================================================================
+2. ROUTING AND SHELL
+======================================================================
+Routes: /app/projects (hub), /app/projects/<levelId> (level landing = entrance), /app/projects/<levelId>/play (run), /app/projects/<levelId>/debrief/<runId> (deep link to a debrief), /app/projects/<levelId>/branch/<branchId>.
+ProjectLayout: a separate layout from AppShell. It renders no workspace sidebar, no workspace top bar, no search. It provides: LevelHeader (64 px: Back, title, story clock, resource pips, Case file, Guide, Captions/Sound, Pause), a stage region, and portals for overlays. It scopes CSS variables (palette, fonts) to its root and restores everything on unmount.
+Entrance (shared component, level data fills it): background art, title, tagline, difficulty (Guided, Standard, Sharp), captions/sound choice, primary button, resume list (continue, open result, export), short note. Resume is built from saves. The primary button is disabled until the level chunk and first scene assets are ready; a skeleton shows meanwhile.
+Hub integration: the hub reads the level manifest and flags. A level is ENTERABLE only if: manifest.status is "ready", the scene linter passed in the build (a build artifact), and the flag is on. Otherwise the card shows "In development" with no Enter or Resume. Progress and hub badges come from real saves, never from seeded demo data.
+Exit: "Back" saves, then returns to the hub card using a reverse transition. Browser Back and Esc open the Pause overlay instead of leaving.
+Deep links: a debrief link opens the review scene read-only if the save exists on this device; otherwise a calm "not found on this device" screen with a hub link.
+
+======================================================================
+3. CONTENT MODEL AND SCHEMAS (binding)
+======================================================================
+All content is JSON validated at build time (and in dev on load). IDs are kebab or snake case, stable, unique within a level, and never reused.
+3.1 Level manifest (/levels/<id>/manifest.json)
+ { id, title, tagline, status ("draft"|"ready"|"hidden"), version, minPlatformVersion, palette{...}, fonts[], difficulty{guided,standard,sharp}, entranceArt, estimatedMinutes, startScene, scenes[], people, assetsBudgetKB, voiceCast{personId: voiceId}, labels ("simulated company, authored scenarios, expert review pending"), flagKey }
+3.2 Person (/people.json)
+ { id, name, role, look{silhouette, colors, props[]}, want, fear, tell, accent, voiceId, expressions["neutral","thinking","annoyed","approving","pressured"], portraitPath? }
+3.3 Scene
+ { id, type ("ENTR"|"CINEMA"|"FACE"|"PHONE"|"CHAT"|"DAYZERO"|"DESK"|"MAP"|"TOOL"|"GAUNTLET"|"INCIDENT"|"LAUNCH"|"REVIEW"|"NARR"), background, music?, goal, canStill, speakers[], lines[], choices[], tool?{id, config}, onEnter[], onExit[], next, skippable, minInteractions }
+3.4 Line
+ { id, speaker, expression, text, voiceId?, when?(Condition), slots?[], variants?{warm,neutral,cold}, wait?(ms), caption?(override), sfx? } Rule: text under 14 words (lint warns at 12).
+3.5 Choice
+ { id, text, requires?(Condition), effects[], receipt?{id, store("text"|"id"|"object")}, next?, unlocks[], logPrompt?(DecisionLog) }
+3.6 Condition (a small expression language over state, serialized as JSON)
+ { all:[...] } | { any:[...] } | { not:{...} } | { var:"TRUST.nils", op:">="|">"|"<"|"<="|"=="|"!=", value } | { flag:"threadFound" } | { has:"clue.C3" } | { receipt:"R04", equals:"..." } | { day:{ between:[3,9] } } | { seedBelow:0.3, key:"E08" }
+3.7 Effect
+ { var:"CT", op:"add"|"set"|"mul"|"min"|"max", value } | { flag, value } | { unlock:"drawer.partner" } | { addClue:"C3" } | { schedule:{ fuse:"quote-message", inDays:3 } } | { chip:"Because you ..." } | { receipt:{ id, text } } | { emit:"event.name" } | { sfx:"..." }
+3.8 Tool config: tool-specific JSON validated by that tool's schema (see Section 8).
+3.9 Event deck item
+ { id, window{dayMin, dayMax}, condition, weight, cooldown, once, lines[], choices[], effects[] }
+3.10 Template
+ { id, slots[], variants{warm,neutral,cold}, requires }
+3.11 Ask topic
+ { person, topic, cost, minTrust, answers[{ when, lines[] }], effects[] }
+3.12 Objection (for Gauntlet-type levels)
+ { id, concern, text, resolvers[{ type("evidence"|"commitment"|"reframe"), ref }], onResolve, onFail }
+3.13 Versioning: manifest.version is semver; breaking schema changes bump the major and ship a migration (Section 9).
+Example Line:
+ { "id":"s05-kavya-1","speaker":"kavya","expression":"approving","text":"Gilt, you did this! Keep the curve going!","voiceId":"v_kavya" }
+
+======================================================================
+4. RUNTIME
+======================================================================
+4.1 State container (single source of truth, serializable)
+ state = { level, seed, rngState, scene, lineIndex, clock{day, attention, hours}, vars{}, flags{}, clues[], unlocks[], people{id:{trust, mood, memory[]}}, receipts{}, fuses[], log[] (events), history[] (decisions), branch{parentId, forkAt}, difficulty, settings{captions, sound, motion}, completed{} }
+ All mutations go through reducers produced by applying Effects. No component mutates state.
+4.2 Scene Runner (finite-state machine)
+ States: LOADING > ENTER_TRANSITION > PLAYING_LINES > AWAITING_ACTION > (RESOLVING_ACTION) > REACTING > EXIT_TRANSITION > NEXT. Overlay states: PAUSED, CASEFILE, GUIDE, HISTORY, REWIND_CONFIRM.
+ Rules: Next advances lines only; AWAITING_ACTION requires a player action (choice, tool completion) unless scene.type is CINEMA or NARR; REACTING always shows a visible reaction (chip, portrait change, map change) before leaving; scenes with minInteractions require that many actions; skip is allowed only if skippable and logs a skip event.
+4.3 Engine services
+ - Condition evaluator (pure), Effect interpreter (pure), Clock (days, attention points, hours), Seeded RNG (mulberry32; draws are logged with a key for reproducibility), Event deck scheduler (picks eligible events by window, condition, weight, cooldown, seed), Template engine (fills slots, picks variant by mood, enforces the static-line ratio), Ask engine (topics by trust gates), Objection engine (generates and resolves), Fuse scheduler (fires receipts later with a because-tag), Decision Log (prompt, chips, 140-character line, receipt), Because-chain builder (cause list for any chip), Rewind (restores the previous snapshot, costs credibility), Counterfactual runner (re-simulates the same seed under preset policies; runs in a Worker or in 8 ms chunks).
+4.4 Because-tags and "Why did that happen?"
+ Every consequence chip stores { id, text, causes[{type, ref}] }. The UI button opens the chain (your choice, the rule that fired, the numbers). Required for any consequence that changes a variable by more than 5 or triggers a scene.
+4.5 Receipts and fuses
+ Receipt: { id, scene, ts, kind, payload }. Fuse: { id, receiptId, fireCondition, targetScene or event, lines[] }. When a fuse fires, the UI plays the Fuse Wipe (Section 7) with the original artifact on the left and the consequence on the right.
+4.6 Randomness rule (single policy for all levels)
+ Seeded randomness is allowed for event selection and incident timing only. Outcomes of explicit player choices are deterministic. Every random outcome carries a because-tag and is reproducible from the saved seed. Replays and counterfactuals use the same seed.
+4.7 Difficulty
+ Guided: more previews and hints, longer grace; Standard; Sharp: hides some meters, adds pressure events. Stored in state; changeable in Pause (with a note that it affects comparability).
+
+======================================================================
+5. UI COMPONENT CONTRACTS (names are binding)
+======================================================================
+ ProjectLayout({level, children}) | LevelHeader({title, clock, pips, onPause}) | Entrance({manifest, saves, onStart, onResume}) | Stage({background, layers, children}) | DialogueStage({speaker, line, onNext, onReplay, onSkip, captions}) | PortraitFrame({personId, expression, size, speaking}) | NamePlate({name, role}) | ChoiceCards({choices, onPick, layout}) | GoalStrip({goal}) | StillStrip({text}) | CaseFile({items, cue}) | Guide({cards, dismissible}) | PauseOverlay({actions}) | HistoryLog({lines}) | ConsequenceChip({chip, onWhy}) | WhyPanel({chain}) | FuseWipe({left, right}) | ProMoveCard({text, seconds}) | SaveIndicator | ToastHost | DifficultyPicker | CaptionSoundToggle | PeopleSheet({people}) | DecisionLogPrompt({chips, maxChars}) | ToolHost({tool, scene, onComplete, onProgress}).
+Requirements for every component: keyboard operable, focus visible, labelled, respects text scaling to 200%, uses design tokens, no layout shift, no inline pixel sizes below 13 px, supports reduced motion.
+Layout rules: dialogue 17 px, UI 15 px, meta 13 px; portrait zone left 34% on desktop; dialogue box bottom 60% wide; tool tray right 30% only when a tool is present; on mobile stage 35% top, portrait 120 x 160, tools in a bottom sheet; 44 px targets.
+
+======================================================================
+6. THE TOOL SDK
+======================================================================
+Every tool implements this interface and is registered by id:
+ interface ToolModule { id: string; schema: JSONSchema; mount(ctx: ToolContext): Disposable; }
+ ToolContext { config, state (read-only), dispatch(effects), emit(event), a11y{announce}, motion{timeline}, rng, size, onComplete(result), onProgress(partial), registerKeyHandlers(map) }
+ Rules: tools never touch global state; they return results via dispatch/onComplete; they must expose keyboard and touch alternatives for every drag; they must dispose everything on unmount; they must render a meaningful static fallback under reduced motion; they provide serialize()/restore() for save and resume.
+Tool acceptance: a tool without a keyboard path, a disposal test and a schema does not ship.
+
+======================================================================
+7. MOTION SYSTEM
+======================================================================
+ - GSAP is the only animation engine; every component creates timelines inside a gsap.context() and reverts on unmount.
+ - Timeline registry: registerTimeline(name, factory); devtools can fire any timeline; QA lists them per level.
+ - Tokens: ease-in-out cubic-bezier(.65,0,.35,1); ease-out cubic-bezier(.22,.61,.36,1); ease-in cubic-bezier(.55,0,.8,.3). Durations: micro 160, UI 240, card 400, panel 520, spectacle 1200 to 1600 ms. Stagger 50 to 80 ms.
+ - Shared transitions: scene crossfade 400 ms; portrait slide 400 ms; chip pop 240 ms; Fuse Wipe 600 ms vertical divider sweep with 1.5 s hold; Pro-move card slide 400 ms with an 8 s ring; Flip transition from hub card to level (700 ms).
+ - Spectacle budget manager: at most 6 spectacle moments per run; at most 2 looping animations visible; a flash limiter (no more than 3 flashes per second, brightness changes under 6% under 2 Hz); the manager refuses to start a spectacle if the budget is exceeded.
+ - Reduced motion: system setting or the in-level toggle swaps movement for 160 ms fades or instant final states; Calm effects removes shake, confetti and screen-wide effects but keeps small transitions.
+ - Quality tiers (via a performance monitor): high, medium, low; thresholds on frame time; tiers reduce particle counts, DPR and shadows; the level continues to work at every tier.
+
+======================================================================
+8. SHARED TOOLS LIBRARY (build once, reuse)
+======================================================================
+ EvidenceDrawers (N drawers, so-what lines, pulls budget, reaction-before-text) | ClueBoard (cards, hypotheses, strings, confidence) | DragBins (sort an item into bins with reading) | TimelineScrubber (playhead, marks, correct/incorrect feedback) | GraphView (nodes and edges, discovery states, blast radius) | MapCanvas (dots, lenses, rings, legend, left-out list) | PlannerBoard (cards into capacity, over-capacity feedback) | TugTriangle (3-way allocation with live forecast) | SliderForecast (levers + forecast bars) | LedgerSankey (who pays) | FrontierChart (scatter with highlighted point) | GaugeMeter (value, teaching line, benchmark rule) | SentenceBuilder (slots from collected cards) | PosterComposer (blocks into a poster with live reaction feed) | SwitchConsole (guarded switch with checklist) | WaveformRun (control sliders, band, assists) | Gauntlet (seats, objections, answer tray) | CaseCards (people stories into slots) | LetterReader (paper letters) | StressTest (10 to 20 s simulation) | DecisionLog | PeopleSheet | AskMenu | DayPlanner (attention points) | Inbox (items with triage actions) | CounterfactualPanel.
+Mapping (initial): Deadlock (EvidenceDrawers, SliderForecast, PlannerBoard, TugTriangle), Sacred No (EvidenceDrawers, SliderForecast, SentenceBuilder, MapCanvas), Silent Churn (GraphView, Gauntlet, TimelineScrubber), Feature Factory (Inbox, PlannerBoard, TugTriangle, StressTest), Ghost Metric (EvidenceDrawers, GraphView, GaugeMeter, SentenceBuilder), Trojan Horses (GraphView, SliderForecast, PosterComposer), Pivot Point (MapCanvas, CaseCards, FrontierChart, LetterReader), Legacy Fracture (TimelineScrubber, GraphView, SwitchConsole, MapCanvas), Invisible Wall (TimelineScrubber, GraphView, ClueBoard, WaveformRun, SwitchConsole), Last Mile (MapCanvas, SliderForecast, LedgerSankey), Public Fracture and Shadow Roadmap (ClueBoard, Gauntlet, PosterComposer).
+
+======================================================================
+9. PERSISTENCE AND SAVES
+======================================================================
+ - Storage: IndexedDB (primary) with a memory fallback if storage is blocked; a visible "not saved" banner appears when in memory; export is always available.
+ - Save record: { version, level, runId, branchId, createdAt, updatedAt, checksum, state }. Autosave after every decision and every scene exit using atomic write (write to a temp key, verify checksum, then swap).
+ - Migrations: save.version is checked on load; migrations run in order; unknown fields are preserved; if a migration fails, the save is quarantined (never deleted) and the user sees "This save cannot be opened. Export it for support."
+ - Corruption: if checksum fails, restore the last good snapshot (keep the last 5) and show a notice.
+ - Branches: replay forks are separate records pointing to a parent snapshot.
+ - Export/import: JSON file with a checksum; import validates and never overwrites without confirmation.
+ - Namespacing: keys are pmf:<levelId>:<runId>; the platform never touches other app storage.
+ - Privacy: user-written text (decision log, notes) is stored locally only; no analytics payload includes it; account sync is a future adapter with an explicit user choice.
+
+======================================================================
+10. AUDIO, VOICE AND CAPTIONS
+======================================================================
+ - AudioManager: one AudioContext, created on first user gesture, closed on exit; channels (voice, sfx, ambience, music); ducking (voice reduces others by 8 dB); master loudness target about -16 LUFS integrated for voice, ambience under -28 LUFS; user volume and mute; failure never blocks play (captions always shown; the scene advances only on user action).
+ - Captions: default on; every line has text; sound effects with meaning have captions ("[alarm]").
+ - TTS pipeline (build time): script lines are exported to a batch file { id, voiceId, text, direction }; a script calls the chosen TTS provider; outputs are normalized, named by line id, and listed in an audio manifest; the build fails if a line with voiceId has no file (when sound mode is shipped). Voice casting sheet per level: voiceId, character, age, pace, tone notes, 3 sample lines. Direction tags: [warm], [clipped], [tired], [hesitant], [measured]. Lines are short to help delivery.
+ - Playback: preload next 3 lines; replay button; speed 0.9x to 1.2x; audio description for key visuals (screen-reader text) available in the Case file.
+ - Placeholders: when no audio exists, sound mode falls back to captions only with a small "voice not available" note.
+
+======================================================================
+11. ART PIPELINE AND PLACEHOLDERS
+======================================================================
+ - Portrait spec: 1024 x 1280 transparent WebP, five expressions per person: neutral, thinking, annoyed, approving, pressured. Path /levels/<id>/art/portraits/{person}_{expression}.webp. Alt text per file.
+ - Placeholder generator (required, ships with the platform): a parametric SVG portrait builder from a person's look { silhouette (5 bodies), skin tone (6), hair (8 styles and colors), outfit color (from accent), prop (tablet, mug, headset, glasses, scarf, apron, cane, lanyard), expression (brows and mouth variants) }. It must produce distinct silhouettes per character and five readable expressions. Swapping to final art changes only the path resolver.
+ - Background kit: layered SVG/CSS scenes (3 to 5 layers with parallax values) built from presets (office, lab, street, boardroom, atrium, depot, control room) tinted by the level palette. Each scene names a background id.
+ - Asset manifest: /levels/<id>/art/manifest.json lists every asset with id, path, size KB, source, license, alt text, status (placeholder or final). CI fails if an asset is missing, over budget, or has no license.
+ - Budgets: entrance art under 250 KB; each portrait under 90 KB; backgrounds under 200 KB each; level art total under 3 MB; audio per level under 12 MB; lazy-load per chapter.
+
+======================================================================
+12. ACCESSIBILITY
+======================================================================
+ - Keyboard: Tab order follows header, goal strip, stage content, tool tray, dialogue controls; Enter/Space activates; arrows operate sliders, dials, graphs and lists; Esc closes overlays; S skips a cinematic; P pauses; H opens history; C opens the Case file; G opens the Guide.
+ - Focus management: on every scene change focus moves to the dialogue box or the first actionable control; after closing an overlay, focus returns to its opener.
+ - Live regions: polite announcements for new lines (optional setting), consequence chips, tool results and clock changes; never announce every second of a timer.
+ - Drag alternatives: every drag has click-to-pick and keyboard placement; touch uses tap-to-place.
+ - Text and contrast: body text 7:1 on stage backgrounds; text scaling to 200% without clipping; no information in color alone (icons and words); focus ring 2 px with 3 px offset.
+ - Motion: reduced motion and Calm effects; flash limiter; no autoplay audio.
+ - Cognitive: recap on resume; plain-language labels; goals always visible.
+ - Testing: axe in CI on entrance and one scene of each type; manual screen reader pass (VoiceOver and NVDA) on one scene of each type before a level is "ready".
+
+======================================================================
+13. TELEMETRY AND BALANCE TOOLING (LOCAL FIRST)
+======================================================================
+ - Event log: scene_enter, scene_exit, line_shown, choice_made, tool_complete, chip_shown, why_opened, rewind_used, pause, resume, difficulty_change, error_boundary. Stored locally; exportable by the user; no personal text.
+ - Balance dashboard (dev only): from exported logs show choice distributions, outcome distributions, average time per scene, drop-offs, rewind use, tool failure rates.
+ - Coverage report (CI): for each level, which events, objections, endings and lines never fired in the path tests.
+ - Telemetry to a server is OFF by default; if ever enabled it is opt-in, aggregate, and excludes any user-written text.
+
+======================================================================
+14. DEV TOOLS AND CLI
+======================================================================
+ - Dev panel (only in development): jump to any scene; set variables and flags; set seed; fire an event; trigger a fuse; run a named timeline; toggle placeholders vs final; show the because-chain; export state; run a path.
+ - CLI: pm-level validate (schemas), pm-level lint (rules in Section 15), pm-level simulate (runs N random or scripted paths and prints outcome distributions), pm-level snapshot (screenshots every scene at 1440 x 900 and 390 x 844), pm-level coverage, pm-level new (scaffolds a level from a template).
+ - Level template: manifest, one scene per type, people with placeholders, sample events, sample templates, path tests, smoke test, README with the definition of done.
+
+======================================================================
+15. LINTER RULES (fail the build)
+======================================================================
+ Structure: every scene has type, background, goal; every scene has at least one speaker or an explicit narration flag; at least one line; at least one player action unless CINEMA or NARR; TOOL scenes have canStill; every next resolves; no unreachable scenes; no dead ends except endings.
+ Text: lines under 14 words (warning at 12); no more than 3 consecutive non-interactive lines; no em dashes in product copy; generated lines at most 30% static in systemic levels; every line with voiceId has a person with that voiceId.
+ Data: all flags, clues, receipts, variables referenced exist; every condition uses defined variables; every receipt referenced in a later line is created earlier on at least one path; every fuse target exists.
+ Tools: scenes show at most 2 tools; no scene shows an undeclared tool; every tool config validates.
+ Characters: every speaker has five expressions or a placeholder; every expression used exists.
+ Content care: deny list for harmful or insensitive terms per level (configurable); "simulated" labels present; no real company or person names unless whitelisted.
+ Budget: asset budgets; JSON size per chapter under 300 KB; no scene with more than 40 lines.
+ Systemic levels: at least N events (level sets N), each person has at least 6 ask topics, each objection type has a resolver.
+
+======================================================================
+16. TESTING STRATEGY
+======================================================================
+ - Unit: condition evaluator, effect interpreter, RNG, clock, template engine, ask gating, fuse scheduler, save/migration, because-chain.
+ - Property tests: random choice fuzzing for 1,000 runs per level; assert no crash, no impossible state, all runs reach an ending, and variables stay in bounds.
+ - Path tests: level-defined canonical paths (10 each) with asserted endings and key lines.
+ - Smoke: a golden path through the real UI using test hooks in under the level's time budget.
+ - Visual: Playwright screenshots of every scene at 1440 x 900 and 390 x 844; diffs reviewed on change.
+ - Accessibility: axe plus the manual passes in Section 12.
+ - Performance: Lighthouse on the entrance; frame-time capture on the busiest scene; memory and listener leak test (enter and leave the level 20 times; heap and listener counts must be flat).
+ - Cross-browser: latest Chrome, Safari, Firefox, Edge; one low-end Android; one iPhone; keyboard-only; 200% zoom; 320 px width.
+ - Test hooks (required, same in every level): data-testid on scene root, speaker, line, Next, choices, tool roots; window.__projectTest with advance(), choose(id), state(), solve(toolId), setSeed(n), setVar(k, v), jump(sceneId), runPath(name).
+
+======================================================================
+17. SAFETY CONTRACT (do not break the site)
+======================================================================
+ 17.1 Isolation: each level is a lazy chunk; CI measures the main bundle and fails if it grows; styles are namespaced to the level root; no global listeners remain after unmount.
+ 17.2 Error boundaries at three levels (app, level, scene). A crash shows a calm card (progress saved; retry or exit) and never a white screen; exit always returns to the hub.
+ 17.3 Feature flags and kill switch: a small flags manifest fetched with cache revalidation lists each level's enabled state and minimum platform version; a disabled level shows "Temporarily unavailable"; flipping the flag is the rollback.
+ 17.4 Resource safety: one shared WebGL canvas (when used); dispose geometries, materials, textures, render targets, audio contexts, workers and timers on unmount; cancel animation frames; the 20-entry leak test must pass.
+ 17.5 Fallbacks: WebGL unavailable or lost, audio blocked, storage blocked, offline, reduced motion: each has a defined behavior and a test.
+ 17.6 Performance budgets: level JS chunk under 250 KB gzip (excluding shared platform chunk); frame time p95 under 12 ms desktop and 22 ms mid mobile; Lighthouse mobile Performance 85+ and Accessibility 100 on the entrance.
+ 17.7 Security and privacy: user text is rendered as text or sanitized markdown; no inline scripts; CSP compatible; no PII collected; saves are local; export contains only the user's own run data.
+ 17.8 Compatibility and release gates: matrix in Section 16; a regression suite on the core app (Today, Practice, Projects hub, Progress, Settings) runs before and after any level merge; rollout behind the flag to the founder, then a small group, then everyone.
+
+======================================================================
+18. LEVEL AUTHORING WORKFLOW AND DEFINITION OF DONE
+======================================================================
+ Steps to add a level: (1) copy the template with pm-level new; (2) fill the manifest, people and placeholders; (3) write the scene manifest and the script for the vertical slice; (4) implement or configure tools from the library; (5) run validate, lint and simulate; (6) screenshot gate review by the founder; (7) playtest with 6 to 8 PMs; (8) domain expert review; (9) accessibility pass; (10) flag on for a small group.
+ Definition of done for a level: all scenes pass the linter; smoke and path tests green; property fuzzing green; screenshots reviewed; accessibility passes; performance and leak tests pass; the Fun Rubric (see the corrections document) scores at least 4 of 5 on every criterion in playtests; the manifest shows "ready".
+ Review gates: design (story and fun), content (accuracy and tone), accessibility, performance, security. Each gate has an owner and a checklist.
+
+======================================================================
+19. MIGRATION PLAN FROM DEADLOCK
+======================================================================
+ 1 Freeze Deadlock behavior with path tests and screenshots (baseline).
+ 2 Extract Deadlock's reusable parts into /platform packages (entrance, dialogue stage, portraits, case file, guide, pause, history, saves, audio).
+ 3 Re-express Deadlock's content as JSON (people, scenes, lines, choices, datasets) without changing behavior; make the old and new runners produce identical paths.
+ 4 Replace Deadlock's runner with the platform runner; switch saves with a migration; keep a rollback.
+ 5 Apply the Deadlock retrofit (see the corrections document) on top of the platform.
+ Risk controls: feature flag per step; parallel run in test; no deletion of old saves; screenshot diff on every scene.
+
+======================================================================
+20. PLATFORM BUILD ORDER, ESTIMATES, ACCEPTANCE
+======================================================================
+ Order and size (T-shirt): (1) core types, schemas, validators, RNG, conditions, effects (M); (2) save service with migrations and export (M); (3) runtime: scene runner, engine, receipts, fuses, chips, why-chain (L); (4) UI kit and layout, entrance, portrait generator and backgrounds (L); (5) audio manager and TTS pipeline (M); (6) motion system, timeline registry, spectacle budget, quality tiers (M); (7) tool host and the first six shared tools (EvidenceDrawers, DragBins, TimelineScrubber, SliderForecast, PlannerBoard, GraphView) (L); (8) event, template, ask, objection engines and counterfactual worker (L); (9) devtools and CLI (M); (10) test suites, CI gates, safety contract checks (M); (11) Deadlock migration (M).
+ Acceptance (platform is done when): a new level can be scaffolded and played end to end with placeholders in under a day; the linter rejects every kind of hollow scene (no speaker, no line, no action, no goal); the leak test passes; the kill switch hides a level without a deploy; saves survive corruption and migration tests; every shared component passes keyboard and axe checks; a sample "toy level" ships as the platform's own regression level.

@@ -1,0 +1,14 @@
+{
+  "id": "S16",
+  "type": "DESK",
+  "goal": "Honour commitments during rollout",
+  "background": "desk",
+  "tools": [
+    "dredger",
+    "pattern",
+    "coalition",
+    "preread",
+    "window",
+    "gauntlet"
+  ]
+}

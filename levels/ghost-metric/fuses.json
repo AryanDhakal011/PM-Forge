@@ -1,0 +1,22 @@
+[
+  {
+    "id": "promise-quote",
+    "receiptId": "R_ghost-metric_confident",
+    "fireCondition": {
+      "day": {
+        "between": [
+          7,
+          200
+        ]
+      }
+    },
+    "lines": [
+      {
+        "id": "line-13",
+        "speaker": "anders",
+        "expression": "thinking",
+        "text": "Your promise was: {receipt.R_ghost-metric_confident}"
+      }
+    ]
+  }
+]

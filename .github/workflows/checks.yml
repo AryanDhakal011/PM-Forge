@@ -13,10 +13,49 @@ jobs:
           cache: npm
       - run: npm ci --legacy-peer-deps
       - run: npm run typecheck
+      - run: npm run test:portfolio
+      - run: npm run test:interview-live
+      - run: npm run test:platform
+      - run: npm run platform:fuzz
       - run: npm test
       - run: npm run test:deadlock
+      - run: npm run test:sacred-no
+      - run: npm run test:ghost-metric
+      - run: npm run test:trojan-horse
+      - run: node --import tsx scripts/check-invisible-wall.ts
+      - run: npm run test:invisible-wall
+      - run: npm run test:feature-factory
+      - run: npm run test:silent-churn
+      - run: npm run test:legacy-fracture
+      - run: npm run test:pivot-point
       - run: npm run build
       - run: node scripts/deadlock-budgets.mjs
+      - name: Check shared project browser flows
+        env:
+          PMFORGE_PROJECT_PREVIEW: 'true'
+          PRODUCT_URL: http://localhost:3002
+        run: |
+          npm start -- -p 3002 > /tmp/pmforge-preview.log 2>&1 &
+          PREVIEW_PID=$!
+          trap 'kill "$PREVIEW_PID" 2>/dev/null || true' EXIT
+          for attempt in {1..60}; do
+            if curl --fail --silent "$PRODUCT_URL/api/project-platform" > /dev/null; then break; fi
+            sleep 1
+          done
+          node --import tsx scripts/verify-shared-platform.mjs
+          node --import tsx scripts/verify-interview-live.mjs
+          node --import tsx scripts/verify-portfolio.mjs
+          node --import tsx scripts/verify-focused-desk.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: shared-platform-verification
+          path: docs/platform-verification/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: interview-live-verification
+          path: docs/interview-live-verification/
   deadlock-balance:
     runs-on: ubuntu-latest
     steps:

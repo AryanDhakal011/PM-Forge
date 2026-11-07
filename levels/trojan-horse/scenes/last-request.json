@@ -1,0 +1,86 @@
+{
+  "id": "last-request",
+  "type": "FACE",
+  "background": "office",
+  "goal": "Choose what the team funds next week.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "omar"
+  ],
+  "lines": [
+    {
+      "id": "line-14",
+      "speaker": "omar",
+      "expression": "thinking",
+      "text": "A reward has a cost even when customers love it."
+    }
+  ],
+  "choices": [
+    {
+      "id": "fund-support",
+      "text": "Fund support during the transition.",
+      "effects": [
+        {
+          "var": "community",
+          "op": "add",
+          "value": 7
+        },
+        {
+          "var": "cash",
+          "op": "add",
+          "value": -5
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_trojan-horse_fund-support",
+        "store": "text"
+      }
+    },
+    {
+      "id": "publish-payouts",
+      "text": "Publish payout and revenue separately.",
+      "effects": [
+        {
+          "var": "credibility",
+          "op": "add",
+          "value": 5
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_trojan-horse_publish-payouts",
+        "store": "text"
+      }
+    },
+    {
+      "id": "restore",
+      "text": "Restore full rewards.",
+      "effects": [
+        {
+          "var": "cash",
+          "op": "add",
+          "value": -12
+        },
+        {
+          "var": "community",
+          "op": "add",
+          "value": 6
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_trojan-horse_restore",
+        "store": "text"
+      }
+    }
+  ],
+  "tools": [],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 35,
+  "act": 3,
+  "next": "review"
+}

@@ -1,0 +1,254 @@
+[
+  {
+    "id": "kavya-neutral",
+    "path": "/levels/trojan-horse/art/portraits/kavya_neutral.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Kavya Mehta, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "kavya-thinking",
+    "path": "/levels/trojan-horse/art/portraits/kavya_thinking.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Kavya Mehta, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "kavya-annoyed",
+    "path": "/levels/trojan-horse/art/portraits/kavya_annoyed.svg",
+    "sizeKB": 0.8994140625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Kavya Mehta, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "kavya-approving",
+    "path": "/levels/trojan-horse/art/portraits/kavya_approving.svg",
+    "sizeKB": 0.8955078125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Kavya Mehta, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "kavya-pressured",
+    "path": "/levels/trojan-horse/art/portraits/kavya_pressured.svg",
+    "sizeKB": 0.892578125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Kavya Mehta, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "dani-neutral",
+    "path": "/levels/trojan-horse/art/portraits/dani_neutral.svg",
+    "sizeKB": 0.8935546875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Dani Kwon, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "dani-thinking",
+    "path": "/levels/trojan-horse/art/portraits/dani_thinking.svg",
+    "sizeKB": 0.8935546875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Dani Kwon, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "dani-annoyed",
+    "path": "/levels/trojan-horse/art/portraits/dani_annoyed.svg",
+    "sizeKB": 0.8984375,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Dani Kwon, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "dani-approving",
+    "path": "/levels/trojan-horse/art/portraits/dani_approving.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Dani Kwon, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "dani-pressured",
+    "path": "/levels/trojan-horse/art/portraits/dani_pressured.svg",
+    "sizeKB": 0.8916015625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Dani Kwon, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "omar-neutral",
+    "path": "/levels/trojan-horse/art/portraits/omar_neutral.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Omar Reyes, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "omar-thinking",
+    "path": "/levels/trojan-horse/art/portraits/omar_thinking.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Omar Reyes, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "omar-annoyed",
+    "path": "/levels/trojan-horse/art/portraits/omar_annoyed.svg",
+    "sizeKB": 0.8994140625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Omar Reyes, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "omar-approving",
+    "path": "/levels/trojan-horse/art/portraits/omar_approving.svg",
+    "sizeKB": 0.8955078125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Omar Reyes, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "omar-pressured",
+    "path": "/levels/trojan-horse/art/portraits/omar_pressured.svg",
+    "sizeKB": 0.892578125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Omar Reyes, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "rhea-neutral",
+    "path": "/levels/trojan-horse/art/portraits/rhea_neutral.svg",
+    "sizeKB": 0.8935546875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Rhea Sol, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "rhea-thinking",
+    "path": "/levels/trojan-horse/art/portraits/rhea_thinking.svg",
+    "sizeKB": 0.8935546875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Rhea Sol, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "rhea-annoyed",
+    "path": "/levels/trojan-horse/art/portraits/rhea_annoyed.svg",
+    "sizeKB": 0.8984375,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Rhea Sol, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "rhea-approving",
+    "path": "/levels/trojan-horse/art/portraits/rhea_approving.svg",
+    "sizeKB": 0.89453125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Rhea Sol, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "rhea-pressured",
+    "path": "/levels/trojan-horse/art/portraits/rhea_pressured.svg",
+    "sizeKB": 0.8916015625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Rhea Sol, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "tomas-neutral",
+    "path": "/levels/trojan-horse/art/portraits/tomas_neutral.svg",
+    "sizeKB": 0.8740234375,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Tomas Aranda, neutral",
+    "status": "placeholder"
+  },
+  {
+    "id": "tomas-thinking",
+    "path": "/levels/trojan-horse/art/portraits/tomas_thinking.svg",
+    "sizeKB": 0.8740234375,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Tomas Aranda, thinking",
+    "status": "placeholder"
+  },
+  {
+    "id": "tomas-annoyed",
+    "path": "/levels/trojan-horse/art/portraits/tomas_annoyed.svg",
+    "sizeKB": 0.87890625,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Tomas Aranda, annoyed",
+    "status": "placeholder"
+  },
+  {
+    "id": "tomas-approving",
+    "path": "/levels/trojan-horse/art/portraits/tomas_approving.svg",
+    "sizeKB": 0.875,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Tomas Aranda, approving",
+    "status": "placeholder"
+  },
+  {
+    "id": "tomas-pressured",
+    "path": "/levels/trojan-horse/art/portraits/tomas_pressured.svg",
+    "sizeKB": 0.8720703125,
+    "source": "PMForge parametric portrait generator",
+    "license": "Project-authored original",
+    "alt": "Tomas Aranda, pressured",
+    "status": "placeholder"
+  },
+  {
+    "id": "party",
+    "path": "/levels/trojan-horse/art/backgrounds/party.svg",
+    "sizeKB": 0.802734375,
+    "source": "PMForge layered background kit",
+    "license": "Project-authored original",
+    "alt": "Fictional party background",
+    "status": "placeholder"
+  },
+  {
+    "id": "office",
+    "path": "/levels/trojan-horse/art/backgrounds/office.svg",
+    "sizeKB": 0.8037109375,
+    "source": "PMForge layered background kit",
+    "license": "Project-authored original",
+    "alt": "Fictional office background",
+    "status": "placeholder"
+  },
+  {
+    "id": "bakery",
+    "path": "/levels/trojan-horse/art/backgrounds/bakery.svg",
+    "sizeKB": 0.8701171875,
+    "source": "PMForge layered background kit",
+    "license": "Project-authored original",
+    "alt": "Fictional bakery background",
+    "status": "placeholder"
+  }
+]

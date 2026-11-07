@@ -35,6 +35,8 @@ export type Project = {
   skill: string;
   category: string;
   tags: string[];
+  /** Planning estimate. `minutes` drives remaining-time math; `label` is the display copy. */
+  duration: { minutes: number; label: string };
   palette: { bg: string; ink: string; accent: string };
   variables: {
     id: string;

@@ -1,0 +1,81 @@
+{
+  "id": "launch-interventions",
+  "type": "FACE",
+  "background": "office",
+  "goal": "Choose a single operating intervention before the next wave.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "rhea"
+  ],
+  "lines": [
+    {
+      "id": "line-13",
+      "speaker": "rhea",
+      "expression": "thinking",
+      "text": "A public reply and an operational fix are different jobs."
+    }
+  ],
+  "choices": [
+    {
+      "id": "delay",
+      "text": "Delay twenty-four hours.",
+      "effects": [
+        {
+          "var": "cash",
+          "op": "add",
+          "value": -4
+        },
+        {
+          "var": "community",
+          "op": "add",
+          "value": 4
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_trojan-horse_delay",
+        "store": "text"
+      }
+    },
+    {
+      "id": "faq",
+      "text": "Publish an FAQ.",
+      "effects": [
+        {
+          "var": "community",
+          "op": "add",
+          "value": 5
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_trojan-horse_faq",
+        "store": "text"
+      }
+    },
+    {
+      "id": "dm",
+      "text": "Message the Guild leads.",
+      "effects": [
+        {
+          "var": "partner",
+          "op": "add",
+          "value": 7
+        }
+      ],
+      "unlocks": [],
+      "receipt": {
+        "id": "R_trojan-horse_dm",
+        "store": "text"
+      }
+    }
+  ],
+  "tools": [],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 28,
+  "act": 3,
+  "next": "last-request"
+}

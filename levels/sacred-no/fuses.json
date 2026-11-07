@@ -1,0 +1,22 @@
+[
+  {
+    "id": "duel-quote",
+    "receiptId": "R_sacred-no_duel",
+    "fireCondition": {
+      "day": {
+        "between": [
+          2,
+          200
+        ]
+      }
+    },
+    "lines": [
+      {
+        "id": "line-11",
+        "speaker": "kian",
+        "expression": "thinking",
+        "text": "Your words were: {receipt.R_sacred-no_duel}"
+      }
+    ]
+  }
+]

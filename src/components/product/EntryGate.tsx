@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ArrowRight, GitBranch, ShieldCheck, Compass } from "lucide-react";
 import { Dialog } from "@/components/ui/Dialog";
+import {AccountForm} from "./AccountForm";
 import { safeNext } from "@/lib/product/routes";
 import { InstrumentDrawing } from "./InstrumentDrawing";
 import styles from "./Product.module.css";
@@ -16,7 +17,7 @@ export function GatePanel({
   mode?: string;
 }) {
   const router = useRouter();
-  const [providers, setProviders] = useState({ google: false, github: false });
+  const [providers, setProviders] = useState({ google: false, github: false,email:false,emailPreview:false });
   const [busy, setBusy] = useState("");
   const [error, setError] = useState("");
   const target = safeNext(next);
@@ -78,44 +79,16 @@ export function GatePanel({
   return (
     <div className={styles.gate}>
       <span className={styles.eyebrow}>Your next good decision</span>
-      <h2>{mode === "login" ? "Welcome back." : "Enter PMForge."}</h2>
+      <h2>{mode === "login" ? "Welcome back." : "Create your practice space."}</h2>
       <p>
         Real scenarios. Decisions you can defend. A practice space that
         remembers where you left off.
       </p>
+      <AccountForm key={mode} mode={mode} next={target} enabled={providers.email} preview={providers.emailPreview}/>
+      {(providers.google||providers.github)&&<div className={styles.socialAccounts}><span className={styles.divider}>or use a connected account</span>{providers.google&&<button className={styles.secondary} disabled={!!busy} onClick={()=>void signIn('google')}>Continue with Google</button>}{providers.github&&<button className={styles.secondary} disabled={!!busy} onClick={()=>void signIn('github')}><GitBranch size={18}/>Continue with GitHub</button>}</div>}
+      <span className={styles.divider}>or explore first</span>
       <button
-        className={styles.primary}
-        disabled={!providers.google || !!busy}
-        onClick={() => void signIn("google")}
-      >
-        <span
-          aria-hidden="true"
-          style={{ fontWeight: 600, width: 19, textAlign: "center" }}
-        >
-          G
-        </span>
-        Continue with Google
-      </button>
-      <details>
-        <summary className={styles.textButton}>Other sign-in options</summary>
-        <button
-          className={styles.secondary}
-          disabled={!providers.github || !!busy}
-          onClick={() => void signIn("github")}
-        >
-          <GitBranch size={18} />
-          Continue with GitHub
-        </button>
-      </details>
-      {!providers.google && !providers.github && (
-        <p className={styles.finePrint}>
-          Accounts aren’t connected in this preview. The complete device
-          workspace is available below.
-        </p>
-      )}
-      <span className={styles.divider}>or start here</span>
-      <button
-        className={styles.primary}
+        className={styles.secondary}
         onClick={() => void guest()}
         disabled={!!busy}
       >
@@ -246,6 +219,7 @@ export function EntryGate() {
           if (
             profile &&
             url.pathname !== "/login" &&
+            url.searchParams.get("intent") === "practice" &&
             url.searchParams.get("upgrade") !== "1"
           ) {
             router.push(

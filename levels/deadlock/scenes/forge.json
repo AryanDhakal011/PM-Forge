@@ -1,0 +1,64 @@
+{
+  "id": "forge",
+  "type": "TOOL",
+  "background": "lab",
+  "goal": "Configure a robot you are willing to demonstrate.",
+  "canStill": "Inspect evidence, ask a question, review your commitments, or pause.",
+  "speakers": [
+    "dev"
+  ],
+  "lines": [
+    {
+      "id": "line-15",
+      "speaker": "dev",
+      "expression": "thinking",
+      "text": "Show me the build before asking for a signature."
+    }
+  ],
+  "choices": [],
+  "tools": [
+    {
+      "id": "forge",
+      "kind": "SliderForecast",
+      "title": "The Forge",
+      "items": [],
+      "min": 0,
+      "max": 1,
+      "cost": 0,
+      "receiptId": "R_deadlock_forge",
+      "lever": [
+        {
+          "id": "speed",
+          "label": "Arm speed",
+          "min": 5,
+          "max": 12,
+          "initial": 8,
+          "step": 1
+        },
+        {
+          "id": "assistance",
+          "label": "Recovery assistance",
+          "min": 0,
+          "max": 2,
+          "initial": 1,
+          "step": 1
+        },
+        {
+          "id": "learning",
+          "label": "Learning exposure",
+          "min": 0,
+          "max": 2,
+          "initial": 1,
+          "step": 1
+        }
+      ]
+    }
+  ],
+  "onEnter": [],
+  "onExit": [],
+  "skippable": false,
+  "minInteractions": 1,
+  "day": 42,
+  "act": 2,
+  "next": "dry-run"
+}
