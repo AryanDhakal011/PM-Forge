@@ -9,7 +9,7 @@
     "start": "node scripts/start-preview.mjs",
     "typecheck": "tsc --noEmit",
     "launch:check": "node --env-file-if-exists=.env.local scripts/check-launch.mjs",
-    "test": "node --import tsx --test tests/interview-engine.test.ts tests/calibration.test.ts tests/projects.test.ts tests/workspace-reset.test.ts tests/today-corrections.test.ts && node --conditions=react-server --import tsx --test tests/account-server.test.ts",
+    "test": "node --import tsx --test tests/interview-engine.test.ts tests/calibration.test.ts tests/projects.test.ts tests/workspace-reset.test.ts tests/today-corrections.test.ts tests/landing-story.test.ts && node --conditions=react-server --import tsx --test tests/account-server.test.ts",
     "test:deadlock": "node --import tsx --test tests/deadlock.test.ts tests/deadlock-v2.test.ts tests/deadlock-refinements.test.ts",
     "deadlock:sim": "node --import tsx scripts/deadlock-sim.ts",
     "prebuild": "node scripts/setup-hot-seat-voice.mjs && node scripts/setup-interview-ocr.mjs && node --import tsx scripts/build-platform-content.ts && node --import tsx scripts/check-sacred-no.ts && node --import tsx scripts/check-ghost-metric.ts && node --import tsx scripts/check-trojan-horse.ts && node --import tsx scripts/check-invisible-wall.ts && node --import tsx scripts/check-feature-factory.ts && node --import tsx scripts/check-silent-churn.ts && node --import tsx scripts/check-legacy-fracture.ts && node --import tsx scripts/check-pivot-point.ts",
