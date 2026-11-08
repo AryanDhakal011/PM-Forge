@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="PMForge">
-  <rect width="64" height="64" rx="14" fill="#f3ebdd" />
-  <g transform="translate(10 10) scale(1.5714)" fill="none" stroke="#2b2a24" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M4.2 14.9 23.6 5.4l-6.4 18.9-3.6-7.7-9.4-1.7Z" stroke-width="1.5" />
-    <path d="m13.6 16.6 4.1-4.2" stroke-width="1.5" />
-    <path d="M4.2 14.9 13.6 16.6" stroke="#8f4635" stroke-width="1.5" />
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="#203d2d"/><path d="M11 31V9H30L24 15H17V19H26L20 25H17V31H11Z" fill="#fff8e8"/><path d="M24 9H30L24 15V9Z" fill="#efbd85"/></svg>

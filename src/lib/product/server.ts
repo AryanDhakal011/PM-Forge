@@ -1,4 +1,5 @@
 import "server-only";
+import {authEmail} from "./auth-email-template";
 import {mailConfigured,queueAuthMail,drainAuthMail} from "./auth-mail";
 import { betterAuth } from "better-auth";
 import type { BetterAuthOptions } from "better-auth";
@@ -52,8 +53,8 @@ export async function getAuth() {
       appName: "PMForge",
       baseURL: process.env.BETTER_AUTH_URL || "http://localhost:3002",
       trustedOrigins:[new URL(process.env.BETTER_AUTH_URL || "http://localhost:3002").origin],
-      emailAndPassword:{enabled:configured.email,requireEmailVerification:true,minPasswordLength:12,maxPasswordLength:128,revokeSessionsOnPasswordReset:true,resetPasswordTokenExpiresIn:1800,sendResetPassword:async({user,url})=>queueAuthMail({to:user.email,subject:"Reset your PMForge password",text:`Reset your password with this single-use link (expires in 30 minutes):\n${url}\nIf you did not request this, ignore it.`})},
-      emailVerification:{sendOnSignUp:true,sendOnSignIn:true,autoSignInAfterVerification:true,expiresIn:3600,sendVerificationEmail:async({user,url})=>queueAuthMail({to:user.email,subject:"Verify your PMForge email",text:`Verify your email to finish creating your workspace (expires in one hour):\n${url}`})},
+      emailAndPassword:{enabled:configured.email,requireEmailVerification:true,minPasswordLength:12,maxPasswordLength:128,revokeSessionsOnPasswordReset:true,resetPasswordTokenExpiresIn:1800,sendResetPassword:async({user,url})=>queueAuthMail({to:user.email,...authEmail("reset",url)})},
+      emailVerification:{sendOnSignUp:true,sendOnSignIn:true,autoSignInAfterVerification:true,expiresIn:3600,sendVerificationEmail:async({user,url})=>queueAuthMail({to:user.email,...authEmail("verify",url)})},
       advanced:{useSecureCookies:(process.env.BETTER_AUTH_URL||'').startsWith('https://'),ipAddress:{ipAddressHeaders:[process.env.AUTH_TRUSTED_IP_HEADER||'x-pmforge-client-ip']}},
       secret: process.env.BETTER_AUTH_SECRET,
       database: serverDatabase(),

@@ -9,10 +9,15 @@ npm ci --legacy-peer-deps
 npm run dev
 # Production preview:
 npm run build
-npm run start -- --port 3001
+npm start
+# Both commands use http://localhost:3002. Stop one before starting the other.
 ```
 
 Guest mode needs no credentials. Email signup, verification and password recovery use a configured sender; Google and GitHub login are optional. See [.env.example](.env.example) for local settings and [the hosting guide](docs/HOSTING.md) for the Node container, HTTPS, persistent SQLite, backups and production configuration. Secrets and personal practice data must stay out of Git.
+
+## Project and deployment map
+
+See [architecture](docs/ARCHITECTURE.md), [free hosting](docs/FREE-HOSTING.md), [brand](docs/BRAND.md) and [email setup](docs/EMAIL-SETUP.md). The current durable backend needs a persistent Node host; the free serverless migration is not implemented.
 
 ## Navigation
 

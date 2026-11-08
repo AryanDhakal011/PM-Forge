@@ -1,0 +1,23 @@
+{
+  "build": "klsBaStTfnocJ38WvAAvG",
+  "productionBuild": "passed",
+  "authTests": {
+    "passed": 3,
+    "externalMailSent": false
+  },
+  "sourceSecretScan": "passed",
+  "currentClientChunks": {
+    "files": 134,
+    "rawBytes": 5562845,
+    "gzipBytes": 1726781
+  },
+  "precedingReviewedClientChunks": {
+    "files": 135,
+    "rawBytes": 5576068,
+    "gzipBytes": 1730353
+  },
+  "gzipDeltaBytes": -3572,
+  "measurementLimit": "All client chunks, not initial route transfer or measured frame rate.",
+  "publicDeployment": false,
+  "liveEmailConfigured": false
+}

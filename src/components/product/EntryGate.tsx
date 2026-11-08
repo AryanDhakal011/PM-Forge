@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import {Logo,BrandMark} from '@/components/ui/Logo';
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ArrowRight, GitBranch, ShieldCheck, Compass } from "lucide-react";
@@ -151,8 +152,7 @@ export function AuthPage({ next, mode }: { next?: string; mode?: string }) {
       <div className={styles.authPage}>
         <div className={styles.authArt}>
           <Link href="/" className={styles.brand}>
-            <Compass size={25} />
-            PMForge
+            <Logo/>
           </Link>
           <span className={styles.eyebrow} style={{ color: "#c9d6bc" }}>
             A practice ground for product minds

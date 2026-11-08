@@ -1,36 +1,9 @@
-import styles from "./Logo.module.css";
+import styles from './Logo.module.css';
 
-export function Logo({ light = false }: { light?: boolean }) {
-  return (
-    <span className={`${styles.logo} ${light ? styles.light : ""}`}>
-      <svg
-        className={styles.mark}
-        viewBox="0 0 28 28"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M4.2 14.9 23.6 5.4l-6.4 18.9-3.6-7.7-9.4-1.7Z"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinejoin="round"
-        />
-        <path
-          d="m13.6 16.6 4.1-4.2"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-        <path
-          d="M4.2 14.9 13.6 16.6"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinejoin="round"
-        />
-      </svg>
-      <span className={styles.word}>
-        PM<span className={styles.forge}>Forge</span>
-      </span>
-    </span>
-  );
+/** The Fold: a decision sheet folded into an F, with an amber turning point. */
+export function BrandMark({size=32}:{size?:number}) {
+  return <svg data-brand-mark="pmforge" width={size} height={size} viewBox="0 0 40 40" fill="none" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="10" fill="#203d2d"/><path d="M11 31V9H30L24 15H17V19H26L20 25H17V31H11Z" fill="#fff8e8"/><path d="M24 9H30L24 15V9Z" fill="#efbd85"/></svg>;
+}
+export function Logo({light=false}:{light?:boolean}) {
+  return <span className={`${styles.logo} ${light?styles.light:''}`}><BrandMark/><span className={styles.word}>PM<span className={styles.forge}>Forge</span></span></span>;
 }

@@ -1,5 +1,6 @@
 "use client";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import {Logo,BrandMark} from '@/components/ui/Logo';
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
@@ -545,8 +546,7 @@ export default function InterviewRunner({ runId }: { runId: string }) {
       <header className={styles.runHeader}>
         <div className={styles.runTitle}>
           <Link href="/app" className={styles.brand}>
-            <Compass size={22} />
-            PMForge
+            <Logo/>
           </Link>
           <div>
             {category.studio}

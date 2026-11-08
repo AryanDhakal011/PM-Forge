@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import {Logo,BrandMark} from '@/components/ui/Logo';
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { ArrowLeft, ArrowRight, Compass, FileText, Check } from "lucide-react";
@@ -89,8 +90,7 @@ export default function Onboarding() {
     <div className={styles.product}>
       <main ref={mainRef} className={styles.onboarding} id="main">
         <Link href="/" className={styles.brand}>
-          <Compass size={25} />
-          PMForge
+          <Logo/>
         </Link>
         <div className={styles.spread}>
           <span className={styles.eyebrow}>Make yourself at home</span>

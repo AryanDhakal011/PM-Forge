@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import {Logo,BrandMark} from '@/components/ui/Logo';
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import {
@@ -247,8 +248,7 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
           style={{ maxWidth: 900, paddingTop: 80 }}
         >
           <span className={styles.brand}>
-            <Compass />
-            PMForge
+            <BrandMark/><span>PMForge</span>
           </span>
           <WorkspaceLoading/>
           <noscript>
@@ -282,8 +282,7 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
       <div className={styles.product}>
         <div className={styles.onboarding}>
           <Link href="/" className={styles.brand}>
-            <Compass />
-            PMForge
+            <BrandMark/><span>PMForge</span>
           </Link>
           <GatePanel next={pathname} />
           <noscript>
@@ -320,8 +319,7 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
               className={styles.brand}
               aria-label="PMForge landing page"
             >
-              <Compass size={24} />
-              <span>PMForge</span>
+              <BrandMark/><span>PMForge</span>
             </Link>
             <button
               className={styles.collapseButton}

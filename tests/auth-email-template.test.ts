@@ -1,0 +1,5 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {authEmail} from '../src/lib/product/auth-email-template';
+test('account email has branded HTML, plain fallback, exact expiry and original link',()=>{for(const kind of ['verify','reset'] as const){const url='https://practice.example.test/api/auth/verify?token=fictional&next=%2Fapp';const mail=authEmail(kind,url);assert.ok(mail.text.includes(url));assert.ok(mail.html.includes('token=fictional&amp;next='));assert.ok(mail.html.includes('/brand/pmforge-mark.png'));assert.ok(mail.html.includes(kind==='reset'?'30 minutes':'one hour'));assert.ok(!mail.html.includes('<script'));assert.ok(!mail.html.includes('fonts.googleapis'));}});
+test('account links reject active protocols and escape injected attributes',()=>{assert.throws(()=>authEmail('verify','javascript:alert(1)'));assert.throws(()=>authEmail('reset','https://user:pass@example.test'));const mail=authEmail('verify','https://example.test/verify?token=" onmouseover="bad');assert.ok(!mail.html.includes('token="'));assert.ok(!mail.html.includes('onmouseover="bad'));});
