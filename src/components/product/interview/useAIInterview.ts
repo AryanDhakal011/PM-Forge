@@ -1,4 +1,5 @@
 'use client';
+import {showError} from '@/lib/ui-feedback';
 import {useEffect,useRef,useState} from 'react';
 import {aiStateSchema,initialAI,PROMPT_VERSION,type AIState,type BoundReply} from '@/lib/interview-ai/model';
 import {aiRequest,AIClientError,type Capabilities} from '@/lib/interview-ai/client';
@@ -27,7 +28,7 @@ export function useAIInterview(run:Run,q:Question,save:SaveAI){
    const turn:Turn={id:'ai-'+reply.requestId,role:'interviewer',raw:reply.message,at:new Date().toISOString(),seconds:0,source:'system',stage:latest.stage};
    const persisted=await current.current.save({live:{...l,turns:[...l.turns,turn].slice(-290),ai:{...state,pending:undefined,error:undefined,retryAt:undefined,serverRevision:reply.serverRevision,replies:[...state.replies,reply].slice(-16),closed:reply.intent==='close'}}});
    setNotice(!persisted?'The reply is on this screen but has not saved yet. Keep this tab open and retry saving.':state.enabled?'New reply ready.':'A late AI reply was saved in the transcript. Guided practice continues.');
-  }catch(error){const e=error instanceof AIClientError?error:new AIClientError('invalid-provider-output');await update({error:e.message,retryAt:e.retryAt});setNotice('Your answer is saved. The AI reply needs attention.')}
+  }catch(error){const e=error instanceof AIClientError?error:new AIClientError('invalid-provider-output');await update({error:e.message,retryAt:e.retryAt});setNotice('Your answer is saved. The AI reply needs attention.');showError(e.message)}
  };
  const submit=async(raw:string,cardId?:string)=>{
   if(locked.current||current.current.run.live?.ai?.pending)return;

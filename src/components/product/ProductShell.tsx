@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import {Logo,BrandMark} from '@/components/ui/Logo';
+import { resetPageScroll } from "@/lib/page-scroll";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import {
@@ -60,6 +61,7 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
   const [backupStatus, setBackupStatus] = useState("");
   const [thought, setThought] = useState("Clarity is a practice.");
   const { profile, loading, error, reload, sync } = useWorkspace();
+  useEffect(()=>{if(!loading && !profile)resetPageScroll();},[loading,profile?.id]);
   const { reducedMotion } = useSettings();
   useEffect(()=>{
     if(!profile)return;
@@ -266,7 +268,7 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
   if (error)
     return (
       <div className={styles.product}>
-        <div className={styles.onboarding}>
+        <div className={styles.workspaceGate}>
           <p role="alert" className={styles.error}>
             {error}
           </p>
@@ -282,7 +284,7 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
   if (!profile)
     return (
       <div className={styles.product}>
-        <div className={styles.onboarding}>
+        <div className={styles.workspaceGate}>
           <Link href="/" className={styles.brand}>
             <BrandMark/><span>PMForge</span>
           </Link>

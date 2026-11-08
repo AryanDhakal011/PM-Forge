@@ -1,6 +1,7 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { db } from "@/lib/product/db";
+import { showError, friendlyRequestError } from "@/lib/ui-feedback";
+import { db, IDENTITY_KEY } from "@/lib/product/db";
 import {
   createSeat,
   mergeSeat,
@@ -48,22 +49,12 @@ export const errorCopy: Record<string, string> = {
     "This conversation changed in another tab. Reload the saved server version before sending.",
 };
 export async function seatRequest(input: Record<string, unknown>) {
-  const response = await fetch("/api/hot-seat", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(input),
-    signal: AbortSignal.timeout(35000),
-  });
-  const data = await response.json();
-  if (!response.ok)
-    throw Object.assign(
-      Error(
-        errorCopy[data.error] ||
-          "The AI reply could not finish. Your answer is saved. Retry or continue guided.",
-      ),
-      { code: data.error, retryAfter: Number(data.retryAfter) || 0 },
-    );
-  return data;
+  try {
+    const response=await fetch("/api/hot-seat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(input),signal:AbortSignal.timeout(35000)});
+    const data=await response.json().catch(()=>({error:"invalid-response"}));
+    if(!response.ok)throw Object.assign(Error(errorCopy[data.error]||"The AI request could not finish. Retry or use guided practice."),{code:data.error,retryAfter:Number(data.retryAfter)||0});
+    return data;
+  }catch(error){throw Object.assign(Error(friendlyRequestError(error,input.action==="start"?"Opening the AI room":"The AI request")),{code:(error as any)?.code||"connection-error",retryAfter:(error as any)?.retryAfter||0})}
 }
 export function useSeat(ownerId: string) {
   const [session, setSession] = useState<SeatSession | null>(null),
@@ -79,12 +70,14 @@ export function useSeat(ownerId: string) {
     lock = useRef(false),
     draftTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const persist = useCallback(async (next: SeatSession) => {
+    if(localStorage.getItem(IDENTITY_KEY)!==ownerId)throw Error("This device workspace was reset or changed. Return to sign-in before continuing.");
     clearTimeout(draftTimer.current);
     current.current = next;
     setSession(next);
     const write = queue.current
       .catch(() => {})
       .then(async () => {
+        if(localStorage.getItem(IDENTITY_KEY)!==ownerId)throw Error("Device workspace changed.");
         await db.hotSeats.put(next);
         setStorageError(false);
       });
@@ -97,7 +90,7 @@ export function useSeat(ownerId: string) {
         "Device storage did not save. Keep this page open and export your conversation.",
       );
     }
-  }, []);
+  }, [ownerId]);
   const refresh = useCallback(async () => {
     setSaved(
       (await db.hotSeats.where("ownerId").equals(ownerId).toArray()).sort(
@@ -106,18 +99,14 @@ export function useSeat(ownerId: string) {
     );
   }, [ownerId]);
   useEffect(() => {
-    void refresh();
-    void fetch("/api/hot-seat", { cache: "no-store" })
-      .then((r) => r.json())
+    void refresh().catch(e=>{setNotice("Saved conversations could not load. Check device storage and retry.");showError("Saved conversations could not load. Check device storage and retry.")});
+    void fetch("/api/hot-seat", { cache: "no-store", signal:AbortSignal.timeout(10000) })
+      .then((r) => {if(!r.ok)throw Error("AI availability could not load");return r.json()})
       .then(setCap)
-      .catch(() =>
-        setNotice(
-          "AI availability could not load. Local guided conversations still work.",
-        ),
-      );
+      .catch(() => {const message="AI availability could not load. Local guided conversations still work.";setNotice(message);showError(message);setCap({available:false,reason:message,mode:"guided",model:"",mock:false,maxTurns:8,regions:[],geminiSpeech:false,localPilot:false,dataUse:"Local guided practice"})});
     return () => {
       if (draftTimer.current) clearTimeout(draftTimer.current);
-      if (current.current) void db.hotSeats.put(current.current);
+      if (current.current && localStorage.getItem(IDENTITY_KEY)===ownerId) void db.hotSeats.put(current.current).catch(()=>{});
     };
   }, [ownerId, refresh]);
   const merge = useCallback(
@@ -149,12 +138,13 @@ export function useSeat(ownerId: string) {
           options,
           consent,
         });
+        if(data.session?.id!==next.id || data.session?.ownerId!==ownerId)throw Error("The AI room returned an incomplete response. Please retry opening it.");
         next = data.session;
       }
       await persist(next);
       return true;
     } catch (e) {
-      setNotice((e as Error).message);
+      setNotice((e as Error).message); showError((e as Error).message);
       return false;
     } finally {
       lock.current = false;
@@ -189,7 +179,7 @@ export function useSeat(ownerId: string) {
       try {
         await recover({ ...local, status: "paused" });
       } catch (e) {
-        setNotice((e as Error).message);
+        setNotice((e as Error).message); showError((e as Error).message);
       }
     }
   }
@@ -205,7 +195,7 @@ export function useSeat(ownerId: string) {
     setSession(next);
     clearTimeout(draftTimer.current);
     draftTimer.current = setTimeout(
-      () => void persist(next).catch((e) => setNotice(e.message)),
+      () => void persist(next).catch((e) => {setNotice(e.message);showError(e.message)}),
       300,
     );
   }
@@ -235,7 +225,7 @@ export function useSeat(ownerId: string) {
       setNotice("");
       setRetryAt(0);
     } catch (e) {
-      setNotice((e as Error).message);
+      setNotice((e as Error).message); showError((e as Error).message);
       setRetryAt(Date.now() + ((e as any).retryAfter || 15) * 1000);
     } finally {
       setBusy(false);
@@ -255,7 +245,7 @@ export function useSeat(ownerId: string) {
     if (s.mode !== "guided" && cap?.mode === "free-pilot") {
       const issue = privacyIssue(text);
       if (issue) {
-        setNotice(issue);
+        setNotice(issue); showError(issue);
         return;
       }
     }
@@ -309,7 +299,7 @@ export function useSeat(ownerId: string) {
         });
       } else await generate(next, p);
     } catch (e) {
-      setNotice((e as Error).message);
+      setNotice((e as Error).message); showError((e as Error).message);
     } finally {
       lock.current = false;
     }
@@ -322,7 +312,7 @@ export function useSeat(ownerId: string) {
       const latest = await recover(s);
       if (latest.pending) await generate(latest, latest.pending);
     } catch (e) {
-      setNotice((e as Error).message);
+      setNotice((e as Error).message); showError((e as Error).message);
     } finally {
       lock.current = false;
     }

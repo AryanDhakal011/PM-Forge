@@ -70,6 +70,7 @@ export async function handleSeat(
       !existing
     )
       throw new AIError("wrong-session-type", 409);
+    if (input.options.persona === "ellis") throw new AIError("persona-retired",400);
     const session = createSeat(
       input.localOwnerId,
       input.options,

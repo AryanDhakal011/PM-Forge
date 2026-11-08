@@ -2,7 +2,8 @@
 import { useEffect, useState } from "react";
 import {Logo,BrandMark} from '@/components/ui/Logo';
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { resetPageScroll } from "@/lib/page-scroll";
+import { useRouter, usePathname } from "next/navigation";
 import { ArrowRight, GitBranch, ShieldCheck, Compass } from "lucide-react";
 import { Dialog } from "@/components/ui/Dialog";
 import {AccountForm} from "./AccountForm";
@@ -127,6 +128,7 @@ export function GatePanel({
 }
 export function AuthPage({ next, mode }: { next?: string; mode?: string }) {
   const router = useRouter();
+  useEffect(()=>{resetPageScroll();window.dispatchEvent(new Event("pmforge:gate-close"));},[]);
   useEffect(() => {
     let active = true;
     void fetch("/api/me", { cache: "no-store" })
@@ -179,6 +181,8 @@ export function AuthPage({ next, mode }: { next?: string; mode?: string }) {
 }
 export function EntryGate() {
   const router = useRouter();
+  const pathname = usePathname();
+  useEffect(()=>setOpen(false),[pathname]);
   const [open, setOpen] = useState(false);
   const [next, setNext] = useState("/app");
   const [mode, setMode] = useState("signup");

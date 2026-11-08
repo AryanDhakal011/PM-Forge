@@ -1,0 +1,271 @@
+{
+  "date": "2026-11-08",
+  "build": "7QvY3Ivgr7CuA_jJZT3IF",
+  "onboardingWidths": [
+    {
+      "width": 320,
+      "steps": [
+        {
+          "rect": {
+            "bottom": 697.3624877929688,
+            "height": 48,
+            "left": 104,
+            "right": 304,
+            "top": 649.3624877929688,
+            "width": 200,
+            "x": 104,
+            "y": 649.3624877929688
+          },
+          "scroll": 298,
+          "stage": 298,
+          "step": 1
+        },
+        {
+          "rect": {
+            "bottom": 696.3624877929688,
+            "height": 48,
+            "left": 104,
+            "right": 304,
+            "top": 648.3624877929688,
+            "width": 200,
+            "x": 104,
+            "y": 648.3624877929688
+          },
+          "scroll": 298,
+          "stage": 298,
+          "step": 2
+        },
+        {
+          "rect": {
+            "bottom": 696.3624877929688,
+            "height": 48,
+            "left": 104,
+            "right": 304,
+            "top": 648.3624877929688,
+            "width": 200,
+            "x": 104,
+            "y": 648.3624877929688
+          },
+          "scroll": 298,
+          "stage": 298,
+          "step": 3
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "steps": [
+        {
+          "rect": {
+            "bottom": 675.1500244140625,
+            "height": 48,
+            "left": 159.1999969482422,
+            "right": 359.1999969482422,
+            "top": 627.1500244140625,
+            "width": 200,
+            "x": 159.1999969482422,
+            "y": 627.1500244140625
+          },
+          "scroll": 298,
+          "stage": 298,
+          "width": 375
+        },
+        {
+          "rect": {
+            "bottom": 674.1500244140625,
+            "height": 48,
+            "left": 159.1999969482422,
+            "right": 359.1999969482422,
+            "top": 626.1500244140625,
+            "width": 200,
+            "x": 159.1999969482422,
+            "y": 626.1500244140625
+          },
+          "scroll": 298,
+          "stage": 298,
+          "width": 375
+        },
+        {
+          "rect": {
+            "bottom": 674.1500244140625,
+            "height": 48,
+            "left": 159.1999969482422,
+            "right": 359.1999969482422,
+            "top": 626.1500244140625,
+            "width": 200,
+            "x": 159.1999969482422,
+            "y": 626.1500244140625
+          },
+          "scroll": 298,
+          "stage": 298,
+          "width": 375
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "steps": [
+        {
+          "rect": {
+            "bottom": 717.1500244140625,
+            "height": 48,
+            "left": 510,
+            "right": 740,
+            "top": 669.1500244140625,
+            "width": 230,
+            "x": 510,
+            "y": 669.1500244140625
+          },
+          "scroll": 318,
+          "stage": 318,
+          "width": 768
+        },
+        {
+          "rect": {
+            "bottom": 716.1500244140625,
+            "height": 48,
+            "left": 510,
+            "right": 740,
+            "top": 668.1500244140625,
+            "width": 230,
+            "x": 510,
+            "y": 668.1500244140625
+          },
+          "scroll": 318,
+          "stage": 318,
+          "width": 768
+        },
+        {
+          "rect": {
+            "bottom": 716.1500244140625,
+            "height": 48,
+            "left": 510,
+            "right": 740,
+            "top": 668.1500244140625,
+            "width": 230,
+            "x": 510,
+            "y": 668.1500244140625
+          },
+          "scroll": 318,
+          "stage": 318,
+          "width": 768
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "steps": [
+        {
+          "rect": {
+            "bottom": 717.1500244140625,
+            "height": 48,
+            "left": 638,
+            "right": 868,
+            "top": 669.1500244140625,
+            "width": 230,
+            "x": 638,
+            "y": 669.1500244140625
+          },
+          "scroll": 318,
+          "stage": 318,
+          "width": 1024
+        },
+        {
+          "rect": {
+            "bottom": 716.1500244140625,
+            "height": 48,
+            "left": 638,
+            "right": 868,
+            "top": 668.1500244140625,
+            "width": 230,
+            "x": 638,
+            "y": 668.1500244140625
+          },
+          "scroll": 318,
+          "stage": 318,
+          "width": 1024
+        },
+        {
+          "rect": {
+            "bottom": 716.1500244140625,
+            "height": 48,
+            "left": 638,
+            "right": 868,
+            "top": 668.1500244140625,
+            "width": 230,
+            "x": 638,
+            "y": 668.1500244140625
+          },
+          "scroll": 318,
+          "stage": 318,
+          "width": 1024
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "steps": [
+        {
+          "rect": {
+            "bottom": 718.4625244140625,
+            "height": 48,
+            "left": 846,
+            "right": 1076,
+            "top": 670.4625244140625,
+            "width": 230,
+            "x": 846,
+            "y": 670.4625244140625
+          },
+          "scroll": 318,
+          "stage": 318,
+          "width": 1440
+        },
+        {
+          "rect": {
+            "bottom": 717.4625244140625,
+            "height": 48,
+            "left": 846,
+            "right": 1076,
+            "top": 669.4625244140625,
+            "width": 230,
+            "x": 846,
+            "y": 669.4625244140625
+          },
+          "scroll": 318,
+          "stage": 318,
+          "width": 1440
+        },
+        {
+          "rect": {
+            "bottom": 717.4625244140625,
+            "height": 48,
+            "left": 846,
+            "right": 1076,
+            "top": 669.4625244140625,
+            "width": 230,
+            "x": 846,
+            "y": 669.4625244140625
+          },
+          "scroll": 318,
+          "stage": 318,
+          "width": 1440
+        }
+      ]
+    }
+  ],
+  "checks": [
+    "Ellis absent from selectable personas",
+    "Speech engine controls removed; device speech note visible",
+    "Nora and Kai preview selection tested",
+    "Malformed backup rejected without import and visible dismissible error popup",
+    "Signup body scrolls; lower actions and policies reachable",
+    "No inner choice scrollbars at five viewport widths",
+    "Nested scroll cleanup and timeout popup events have unit coverage"
+  ],
+  "limitations": [
+    "Did not erase existing user storage",
+    "Did not exhaust live Gemini quotas or induce a real provider timeout",
+    "Device voice quality and voice count vary by operating system",
+    "Optional carry-over fourth step not exercised in current browser profile"
+  ]
+}

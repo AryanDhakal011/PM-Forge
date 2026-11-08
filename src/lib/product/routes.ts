@@ -2,7 +2,7 @@ const allowed = [
   /^\/app\/projects\/[a-z0-9-]+\/(?:play(?:\/[a-z0-9-]+)?|debrief\/[a-z0-9-]+|branch\/[a-z0-9-]+)$/,
   /^\/app\/projects(?:\/[a-z0-9-]+)?(?:\/(?:run\/[a-z0-9-]+|c\/[1-3]))?$/,
   /^\/app\/projects\/debrief\/[a-z0-9-]+$/,
-  /^\/app(?:\/(?:practice|progress|history|bookmarks|portfolio|settings|account))?$/,
+  /^\/app(?:\/(?:practice|progress|history|bookmarks|portfolio|settings|account|hot-seat|help))?$/,
   /^\/app\/practice\/[a-z0-9-]+$/,
   /^\/app\/run\/[a-z0-9-]+(?:\/debrief)?$/,
   /^\/app\/portfolio\/[a-z0-9-]+$/,

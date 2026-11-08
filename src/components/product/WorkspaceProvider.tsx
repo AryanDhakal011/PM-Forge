@@ -181,6 +181,13 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
       window.removeEventListener("online", online);
     };
   }, [profile, dirty?.value]);
+  useEffect(()=>{
+    if(loading)return;
+    const check=()=>{try{if(document.visibilityState==='visible' && profile && localStorage.getItem(IDENTITY_KEY)!==profile.id){setCurrent(null);initialSync.current="";setRevision(v=>v+1)}}catch{setError("Device storage is unavailable. Enable site storage and retry.")}};
+    window.addEventListener('focus',check);window.addEventListener('pageshow',check);document.addEventListener('visibilitychange',check);
+    const timer=window.setInterval(check,1500);
+    return()=>{clearInterval(timer);window.removeEventListener('focus',check);window.removeEventListener('pageshow',check);document.removeEventListener('visibilitychange',check)};
+  },[loading,profile?.id]);
   const setProfile = useCallback(async (next: Profile) => {
     await db.profiles.put(next);
     await markDirty(next.id);

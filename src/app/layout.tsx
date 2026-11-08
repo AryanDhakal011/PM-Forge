@@ -11,6 +11,7 @@ import "./globals.css";
 import { SettingsProvider } from "@/components/providers/SettingsProvider";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import { LOADER_BOOT_SCRIPT } from "@/lib/loaderBoot";
+import { ErrorFeedback } from "@/components/providers/ErrorFeedback";
 import { EntryGate } from "@/components/product/EntryGate";
 
 // Set NEXT_PUBLIC_SITE_URL when deploying. The localhost fallback keeps
@@ -77,6 +78,7 @@ export default async function RootLayout({
           <SmoothScroll />
           {children}
           <EntryGate />
+          <ErrorFeedback />
         </SettingsProvider>
       </body>
     </html>

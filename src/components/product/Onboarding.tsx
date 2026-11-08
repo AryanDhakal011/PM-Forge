@@ -62,7 +62,7 @@ export default function Onboarding() {
   const finish = async () => {
     if (!profile) return;
     if (carry && !decision) {
-      goToStep(2);
+      goToStep(3);
       setError(
         "Choose whether to keep or discard the landing-page preview work.",
       );
@@ -95,11 +95,11 @@ export default function Onboarding() {
         <div className={styles.spread}>
           <span className={styles.eyebrow}>Make yourself at home</span>
           <span className={`${styles.small} ${styles.muted}`}>
-            {step + 1} / 3
+            {step + 1} / {carry ? 4 : 3}
           </span>
         </div>
         <div className={styles.steps}>
-          {[0, 1, 2].map((i) => (
+          {Array.from({length:carry?4:3},(_,i)=>i).map((i) => (
             <i key={i} data-on={i <= step} />
           ))}
         </div>
@@ -109,11 +109,12 @@ export default function Onboarding() {
               "What are you working toward?",
               "Find your starting point.",
               "Give your practice a little space.",
+              "Keep your first decision?",
             ][step]
           }
         </h1>
         <p className={styles.prose}>
-          Three small choices to make the recommendations useful. Every scenario
+          A few small choices to make the recommendations useful. Every scenario
           stays open.
         </p>
         {profile ? (
@@ -188,8 +189,8 @@ export default function Onboarding() {
                     </button>
                   ))}
                 </div>
-              ) : (
-                <div className={styles.stack}>
+              ) : step === 2 ? (
+                <div className={styles.choiceGrid}>
                   {[
                     "Exploring",
                     "Interview in 2 weeks",
@@ -205,17 +206,13 @@ export default function Onboarding() {
                       {timeline}
                     </button>
                   ))}
+                </div>
+              ) : (
+                <div className={styles.stack}>
                   {carry && (
                     <div className={styles.notice}>
                       <FileText size={20} />
-                      <h3 style={{ margin: "12px 0" }}>
-                        Keep the work you started on the landing page?
-                      </h3>
-                      <p>
-                        Import the saved preview artifacts as clearly labelled
-                        Demo records. They won’t affect coverage or scores.
-                        Nothing is uploaded for guests.
-                      </p>
+                      <p>Keep your preview work as clearly labeled demo records. It won’t affect scores. Guest work stays on this device.</p>
                       <div className={styles.row} style={{ marginTop: 15 }}>
                         <button
                           aria-pressed={decision === "keep"}
@@ -270,12 +267,12 @@ export default function Onboarding() {
               <button
                 className={styles.primary}
                 disabled={busy}
-                onClick={() => (step < 2 ? goToStep(step + 1) : void finish())}
+                onClick={() => (step < (carry ? 3 : 2) ? goToStep(step + 1) : void finish())}
               >
                 {busy
                   ? "Opening…"
-                  : step === 2
-                    ? "Enter my workspace"
+                  : step === (carry ? 3 : 2)
+                    ? "Open workspace"
                     : "Continue"}
                 <ArrowRight size={15} />
               </button>

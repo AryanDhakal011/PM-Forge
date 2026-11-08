@@ -14,3 +14,11 @@ No real user transcripts were used as training/evaluation examples. Offline chec
 - A body-ported room at z-index 150 obscured shared dialogs at 90. The room now uses 60, above workspace chrome and below dialogs; a screenshot and hit-target check verified the visible End and review button receives pointer input.
 
 Final verification: 11 Hot Seat tests, 22 existing AI tests, 52 general/account tests and 28 offline evaluation checks passed. Type checking and the final production build passed. Production dependency audit reported zero known vulnerabilities. Current preview is the verified final build on port 3002. No live speech API or paid service was called.
+
+## Device-speech and recovery update
+
+- Browser speech previously chose the same first English voice for every persona. Nora/Kai now resolve stable, separate installed voices where available; stale callbacks cannot overwrite a new preview. Ellis is retired for new sessions and retained only for save compatibility.
+- Removed engine choices and the model-download requirement. Removed 37 packages; standalone output excludes archived neural speech assets.
+- Missing-profile signup inherited a fixed, overflow-hidden onboarding wrapper. It now has its own naturally scrollable entry layout. Shared counted scroll locks avoid stale locks after auth navigation or storage loss. Departed Hot Seat instances do not flush their old transcript back into a cleared identity.
+- Fixed mobile one-column choice overrides and wrapping action labels. Shared choices area has no inner scrollbars; primary action positions differ by no more than one pixel across the three exercised steps at 320/375/768/1024/1440 widths.
+- Persistent dismissible popups cover blocking alerts, recognized legacy failure statuses, explicit AI timeout/network failures and unexpected errors. A deliberately malformed local backup was rejected before import and produced the visible popup; no workspace data was imported or deleted.

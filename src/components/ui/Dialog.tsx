@@ -3,6 +3,7 @@
 import { useEffect, useId, useRef } from "react";
 import { createPortal } from "react-dom";
 import { X } from "lucide-react";
+import { lockPageScroll } from "@/lib/page-scroll";
 import styles from "./Dialog.module.css";
 
 type DialogProps = {
@@ -42,7 +43,7 @@ export function Dialog({
   useEffect(() => {
     if (!open) return;
     restoreRef.current = document.activeElement as HTMLElement | null;
-    document.body.classList.add("no-scroll");
+    const releaseScroll = lockPageScroll();
 
     const timer = window.setTimeout(() => {
       const field = panelRef.current?.querySelector<HTMLElement>(
@@ -86,7 +87,7 @@ export function Dialog({
     return () => {
       window.clearTimeout(timer);
       document.removeEventListener("keydown", onKeyDown);
-      document.body.classList.remove("no-scroll");
+      releaseScroll();
       restoreRef.current?.focus?.({preventScroll:true});
     };
   }, [open, dismissible, initialFocus]);

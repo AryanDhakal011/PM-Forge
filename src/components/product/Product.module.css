@@ -3123,3 +3123,25 @@ button.evidenceCard {
 .runStage .panel{overflow-wrap:anywhere}
 
 .accountForm{border:1px solid var(--p-line);padding:20px;border-radius:6px;margin:20px 0;background:var(--p-panel)}.accountForm h3{font:24px/1.2 var(--font-display);margin:0 0 20px}.accountForm .field{display:grid;gap:8px;margin:15px 0;font-size:14px}.accountForm input{width:100%;min-height:46px;border:1px solid var(--p-line);border-radius:4px;padding:10px 12px;background:var(--p-bg);color:var(--p-ink);font:16px var(--font-body)}.accountForm .primary{width:100%;justify-content:center}.accountForm .textButton{display:inline-flex;font-size:14px;min-height:44px}.accountMessage{border-left:3px solid var(--p-green);padding:12px;font-size:14px;line-height:1.7}.socialAccounts{display:grid;gap:10px}.socialAccounts button{width:100%;justify-content:center}.authRecovery{max-width:520px;padding:50px 24px;margin:auto;color:var(--ink,#253b2a);min-height:100svh}.authRecovery h1{font:42px/1.1 var(--font-display);margin:40px 0 24px}.authRecovery .field{display:grid;gap:10px;margin:20px 0}.authRecovery input{padding:12px;min-height:46px;width:100%;background:#fffdf5;color:#253b2a;border:1px solid #a3ad9b;border-radius:4px;font:16px var(--font-body)}.gate .finePrint{font-size:13px!important;line-height:1.7}.gate{max-width:480px}.gate>h2{font-size:36px}.authPanel{overflow:auto}
+
+/* Onboarding uses one shared content footprint, never a scrollable choices box. */
+.workspaceGate{width:min(760px,100%);min-height:100svh;box-sizing:border-box;padding:40px 24px;margin:auto;overflow:visible}.workspaceGate>.brand{margin-bottom:28px}
+.onboarding{height:auto;min-height:100svh;overflow:visible;padding-top:clamp(20px,4vh,44px)}
+.onboarding .brand{margin-bottom:20px}
+.onboarding h1{height:auto;min-height:100px;overflow:visible;margin:12px 0 8px}
+.onboarding>.prose{height:auto;min-height:48px;overflow:visible}
+.onboarding .onboardingStage{height:auto;min-height:320px;flex:0 0 auto;overflow:visible;scrollbar-gutter:auto;margin:12px 0 0;padding:20px}
+.onboarding .onboardingStage .choice{padding:12px;min-height:54px;gap:4px}
+.onboarding .onboardingStage .stack{gap:12px}
+.onboarding .onboardingStage .notice{padding:12px;margin:0}
+.onboardingMessage{height:auto;min-height:34px;overflow:visible}
+.onboardingActions{min-height:44px}.onboardingActions>.primary{min-width:210px;justify-content:center}
+.onboarding .finePrint{height:auto;min-height:36px;overflow:visible}
+@media(max-width:600px){.onboarding h1{min-height:110px;font-size:clamp(28px,8vw,36px)}.onboarding>.prose{min-height:64px}.onboarding .onboardingStage{min-height:360px;padding:14px}.onboarding .onboardingStage .choice small{font-size:12px}.onboardingActions>.primary{min-width:190px}.workspaceGate{padding:24px 16px}}
+
+.onboardingActions>.primary{width:230px;min-width:0;flex:none}
+@media(max-width:600px){.onboarding h1{min-height:84px}.onboarding>.prose{min-height:52px}.onboarding .onboardingStage{min-height:300px}.onboarding .onboardingStage .choice{padding:10px;font-size:14px;line-height:1.35}.onboarding .onboardingStage .choice small{line-height:1.35}.onboardingMessage{min-height:24px}.onboardingActions>.primary{width:200px;min-width:0}}
+
+.onboarding .choiceGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.onboardingActions>.primary{white-space:nowrap;height:48px;padding-inline:14px;font-size:14px}
+.onboardingActions{height:48px;gap:8px;align-items:center}.onboardingActions>.textButton{white-space:nowrap;font-size:14px;padding-inline:0}

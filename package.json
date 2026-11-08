@@ -2,7 +2,7 @@
   "name": "pmforge",
   "version": "1.0.0",
   "private": true,
-  "description": "PMForge — a practice platform for product decisions.",
+  "description": "PMForge \u2014 a practice platform for product decisions.",
   "scripts": {
     "dev": "node scripts/dev-preview.mjs",
     "build": "next build",
@@ -12,7 +12,7 @@
     "test": "node --import tsx --test tests/interview-engine.test.ts tests/calibration.test.ts tests/projects.test.ts tests/workspace-reset.test.ts tests/today-corrections.test.ts && node --conditions=react-server --import tsx --test tests/account-server.test.ts",
     "test:deadlock": "node --import tsx --test tests/deadlock.test.ts tests/deadlock-v2.test.ts tests/deadlock-refinements.test.ts",
     "deadlock:sim": "node --import tsx scripts/deadlock-sim.ts",
-    "prebuild": "node scripts/setup-hot-seat-voice.mjs && node scripts/setup-interview-ocr.mjs && node --import tsx scripts/build-platform-content.ts && node --import tsx scripts/check-sacred-no.ts && node --import tsx scripts/check-ghost-metric.ts && node --import tsx scripts/check-trojan-horse.ts && node --import tsx scripts/check-invisible-wall.ts && node --import tsx scripts/check-feature-factory.ts && node --import tsx scripts/check-silent-churn.ts && node --import tsx scripts/check-legacy-fracture.ts && node --import tsx scripts/check-pivot-point.ts",
+    "prebuild": "node scripts/setup-interview-ocr.mjs && node --import tsx scripts/build-platform-content.ts && node --import tsx scripts/check-sacred-no.ts && node --import tsx scripts/check-ghost-metric.ts && node --import tsx scripts/check-trojan-horse.ts && node --import tsx scripts/check-invisible-wall.ts && node --import tsx scripts/check-feature-factory.ts && node --import tsx scripts/check-silent-churn.ts && node --import tsx scripts/check-legacy-fracture.ts && node --import tsx scripts/check-pivot-point.ts",
     "test:trojan-horse": "node --import tsx --test tests/trojan-horse.test.ts",
     "test:invisible-wall": "node --import tsx --test tests/invisible-wall.test.ts && node --import tsx scripts/invisible-wall-smoke.ts",
     "test:ghost-metric": "node --import tsx --test tests/ghost-metric.test.ts tests/ghost-metric-presentation.test.ts",
@@ -34,7 +34,7 @@
     "ai:eval": "node --conditions=react-server --import tsx scripts/evaluate-interview-ai.ts",
     "ai:ops": "node --conditions=react-server --import tsx scripts/ai-ops.ts",
     "qa:release": "node scripts/qa-release.mjs",
-    "test:hot-seat": "node --conditions=react-server --import tsx --test tests/hot-seat.test.ts tests/hot-seat-route.test.ts",
+    "test:hot-seat": "node --conditions=react-server --import tsx --test tests/hot-seat.test.ts tests/hot-seat-route.test.ts tests/hot-seat-ux.test.ts",
     "hot-seat:eval": "node --conditions=react-server --import tsx scripts/evaluate-hot-seat.ts"
   },
   "dependencies": {
@@ -51,7 +51,6 @@
     "dexie": "4.4.7",
     "dexie-react-hooks": "4.4.0",
     "gsap": "3.15.0",
-    "kokoro-js": "1.2.1",
     "lenis": "1.3.27",
     "lucide-react": "1.61.0",
     "next": "16.4.3",
@@ -70,7 +69,6 @@
     "@types/react-dom": "19.3.0",
     "@types/three": "0.182.0",
     "axe-core": "4.14.0",
-    "onnxruntime-web": "1.22.0-dev.20250409-89f8206ba4",
     "tsx": "4.23.15",
     "typescript": "5.9.3"
   },

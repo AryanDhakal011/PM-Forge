@@ -41,6 +41,8 @@ import {
   type Options,
   type SeatSession,
 } from "@/lib/hot-seat/model";
+import { showError } from "@/lib/ui-feedback";
+import { lockPageScroll } from "@/lib/page-scroll";
 import { useSeat } from "./useSeat";
 import { SeatVoice, type VoiceMode } from "./voice";
 import { useMicrophone } from "./useMicrophone";
@@ -85,8 +87,7 @@ function Seat({ ownerId }: { ownerId: string }) {
     [region, setRegion] = useState(""),
     [input, setInput] = useState<"typed" | "voice">("typed"),
     [micConsent, setMicConsent] = useState(false),
-    [voiceMode, setVoiceMode] = useState<VoiceMode>("neural"),
-    [voiceReady, setVoiceReady] = useState(false),
+    [voiceMode] = useState<VoiceMode>("browser"),
     [voiceState, setVoiceState] = useState("idle"),
     [voiceProgress, setVoiceProgress] = useState(""),
     [voiceOn, setVoiceOn] = useState(true),
@@ -116,7 +117,7 @@ function Seat({ ownerId }: { ownerId: string }) {
         setAmplitude(amp);
         setChar(index);
       },
-      notice: seat.setNotice,
+      notice: text => {seat.setNotice(text);showError(text)},
     });
     voice.current = v;
     return () => {
@@ -134,14 +135,13 @@ function Seat({ ownerId }: { ownerId: string }) {
     finished = run?.status === "complete";
   useEffect(() => {
     if (!run || finished) return;
-    const oldOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    const releaseScroll = lockPageScroll();
     const main = document.getElementById("main");
     let root: HTMLElement | null = main;
     while (root?.parentElement && root.parentElement !== document.body) root = root.parentElement;
     const oldInert = root?.inert || false;
     if (root) root.inert = true;
-    return () => { document.body.style.overflow = oldOverflow; if (root) root.inert = oldInert; };
+    return () => { releaseScroll(); if (root) root.inert = oldInert; };
   }, [!!run, finished]);
   async function say(text: string, turnId?: string, force = false) {
     if (!voiceOn && !force) return;
@@ -174,7 +174,7 @@ function Seat({ ownerId }: { ownerId: string }) {
             : t,
         ),
       })
-      .catch((e) => seat.setNotice(e.message));
+      .catch((e) => {seat.setNotice(e.message);showError(e.message)});
   }
   const mic = useMicrophone((text, seconds) => {
     const r = runRef.current;
@@ -222,7 +222,7 @@ function Seat({ ownerId }: { ownerId: string }) {
           elapsedMs: current.elapsedMs + delta,
           updatedAt: stamp(),
         })
-        .catch((e) => seat.setNotice(e.message));
+        .catch((e) => {seat.setNotice(e.message);showError(e.message)});
     }, 1000);
     return () => clearInterval(timer);
   }, [run?.id, run?.status]);
@@ -471,7 +471,7 @@ function Seat({ ownerId }: { ownerId: string }) {
               <span className={s.eyebrow}>Step 2</span>
               <h2>Who is across the desk?</h2>
               <div className={s.people}>
-                {personas.map((person) => (
+                {personas.filter(person => person.id !== "ellis").map((person) => (
                   <article
                     key={person.id}
                     data-selected={options.persona === person.id}
@@ -606,76 +606,10 @@ function Seat({ ownerId }: { ownerId: string }) {
                 </div>
               )}
             </section>
-            <section className={s.step}>
-              <h2>A voice worth listening to.</h2>
-              <p className={s.fine}>
-                Every spoken line matches its caption. Natural voice uses the
-                same Kokoro voice family as our simulations; expression and
-                speed depend on your device.
-              </p>
-              <div className={s.segment} aria-label="Output voice">
-                <button
-                  aria-pressed={voiceMode === "neural"}
-                  onClick={() => {
-                    voice.current?.stop();
-                    setVoiceMode("neural");
-                  }}
-                >
-                  Natural neural voice
-                </button>
-                <button
-                  aria-pressed={voiceMode === "browser"}
-                  onClick={() => {
-                    voice.current?.stop();
-                    setVoiceMode("browser");
-                  }}
-                >
-                  Device voice
-                </button>
-                {seat.cap?.geminiSpeech && (
-                  <button
-                    aria-pressed={voiceMode === "gemini"}
-                    onClick={() => setVoiceMode("gemini")}
-                  >
-                    Gemini voice · limited
-                  </button>
-                )}
-              </div>
-              {voiceMode === "neural" && (
-                <>
-                  <p className={s.fine}>
-                    One-time model download from Hugging Face (about 90 MB, plus
-                    runtime). Speech is generated on this device; no TTS
-                    provider receives the text.
-                  </p>
-                  <button
-                    className={s.secondary}
-                    disabled={voiceState === "preparing" || voiceReady}
-                    onClick={() =>
-                      void voice.current?.prepare().then(setVoiceReady)
-                    }
-                  >
-                    {voiceReady
-                      ? "Natural voice ready ✓"
-                      : voiceState === "preparing"
-                        ? "Preparing natural voice…"
-                        : "Prepare natural voice · download"}
-                  </button>
-                  {voiceProgress && (
-                    <p role="status" className={s.fine}>
-                      {voiceProgress}
-                    </p>
-                  )}
-                </>
-              )}
-              {voiceMode === "browser" && (
-                <p className={s.fine}>
-                  Voice quality and processing depend on your browser and
-                  installed voices. Natural neural voice is the consistent
-                  female voice option.
-                </p>
-              )}
-            </section>
+            <aside className={s.notice} aria-label="Speech note">
+              <strong>Note about voices</strong>
+              <p>Speech uses the voices already available on your device. There is no large download or paid speech service. Nora and Kai use different voices when available; some devices provide only one. Captions and typing always work.</p>
+            </aside>
           </div>
           <aside className={s.summary}>
             <span className={s.eyebrow}>Your session</span>
@@ -757,7 +691,6 @@ function Seat({ ownerId }: { ownerId: string }) {
               className={s.primary}
               disabled={
                 seat.busy || !seat.cap ||
-                (voiceMode === "neural" && !voiceReady) ||
                 (ai &&
                   !!seat.cap?.available &&
                   (!adult || !fictional || !region))
@@ -767,14 +700,9 @@ function Seat({ ownerId }: { ownerId: string }) {
               {seat.busy ? "Opening your room…" : "Take the seat"}
               <ArrowRight size={18} />
             </button>
-            {voiceMode === "neural" && !voiceReady && (
-              <p className={s.fine}>
-                Prepare the natural voice first, or choose device voice.
-              </p>
-            )}
             <button
               className={s.textButton}
-              disabled={seat.busy || (voiceMode === "neural" && !voiceReady)}
+              disabled={seat.busy}
               onClick={() => void begin(true)}
             >
               Start a local guided conversation instead
@@ -1193,29 +1121,11 @@ function Seat({ ownerId }: { ownerId: string }) {
           </p>
         )}
         {mic.notice && (
-          <p className={s.roomNotice} role="status">
+          <p className={s.roomNotice} role={/denied|could not|unavailable|no clear input/i.test(mic.notice) ? "alert" : "status"}>
             {mic.notice}
           </p>
         )}
-        {voiceState === "error" && (
-          <div className={s.recovery}>
-            <button
-              onClick={() => {
-                setVoiceMode("browser");
-                seat.setNotice(
-                  "Device voice selected. Press Repeat to hear the current line.",
-                );
-              }}
-            >
-              Use device voice
-            </button>
-            <button
-              onClick={() => {setVoiceMode("neural"); void voice.current?.prepare().then(setVoiceReady);}}
-            >
-              Retry natural voice
-            </button>
-          </div>
-        )}
+        {voiceState === "error" && <div className={s.recovery}><button onClick={()=>lastAI && void say(lastAI.text,lastAI.id,true)}>Retry speech</button><span>Captions and typing remain available.</span></div>}
         {run.pending && !seat.busy && (
           <div className={s.recovery}>
             <button

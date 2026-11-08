@@ -1,5 +1,0 @@
-import {KokoroTTS,env} from './runtime/kokoro.web.js';
-env.wasmPaths=new URL('./runtime/',import.meta.url).href;
-let model,queue=Promise.resolve();
-async function ready(){if(!model)model=KokoroTTS.from_pretrained('onnx-community/Kokoro-82M-v1.0-ONNX',{dtype:'q8',device:'wasm',progress_callback:p=>{if(p.status==='progress')postMessage({progress:Math.round(p.progress||0),file:p.file});}});try{return await model}catch(e){model=null;throw e}}
-onmessage=({data})=>{queue=queue.catch(()=>{}).then(async()=>{try{const tts=await ready();if(data.type==='prepare'){postMessage({id:data.id,ready:true});return}if(data.type!=='speak'||typeof data.text!=='string'||data.text.length>800||!['af_heart','af_bella','bf_emma'].includes(data.voice))throw Error('Invalid local voice request');const audio=await tts.generate(data.text,{voice:data.voice,speed:.98});const samples=audio.audio;postMessage({id:data.id,samples,rate:audio.sampling_rate},[samples.buffer]);}catch(error){postMessage({id:data.id,error:'The local neural voice could not run on this device.',diagnostic:data.type==='prepare'?String(error?.message||error).slice(0,500):undefined})}})};
