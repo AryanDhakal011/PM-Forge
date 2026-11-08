@@ -34,7 +34,7 @@
     "ai:eval": "node --conditions=react-server --import tsx scripts/evaluate-interview-ai.ts",
     "ai:ops": "node --conditions=react-server --import tsx scripts/ai-ops.ts",
     "qa:release": "node scripts/qa-release.mjs",
-    "test:hot-seat": "node --conditions=react-server --import tsx --test tests/hot-seat.test.ts tests/hot-seat-route.test.ts tests/hot-seat-ux.test.ts",
+    "test:hot-seat": "node --conditions=react-server --import tsx --test tests/hot-seat.test.ts tests/hot-seat-route.test.ts tests/hot-seat-ux.test.ts tests/hot-seat-dictation.test.ts",
     "hot-seat:eval": "node --conditions=react-server --import tsx scripts/evaluate-hot-seat.ts"
   },
   "dependencies": {

@@ -108,7 +108,8 @@ function Seat({ ownerId }: { ownerId: string }) {
     activeSpeech = useRef(""),
     busyRef = useRef(false),
     nudgedTurn = useRef(""),
-    acknowledgedTurn = useRef("");
+    acknowledgedTurn = useRef(""),
+    pushToTalk = useRef(false);
   busyRef.current = seat.busy;
   useEffect(() => {
     const v = new SeatVoice({
@@ -146,6 +147,7 @@ function Seat({ ownerId }: { ownerId: string }) {
   }, [!!run, finished]);
   async function say(text: string, turnId?: string, force = false) {
     if (!voiceOn && !force) return;
+    if (mic.active || mic.starting) mic.stop();
     setSpoken(text);
     setChar(0);
     activeSpeech.current = turnId || "";
@@ -180,7 +182,9 @@ function Seat({ ownerId }: { ownerId: string }) {
   const mic = useMicrophone((text, seconds) => {
     const r = runRef.current;
     if (r) {
-      seat.draft([r.draft, text].filter(Boolean).join(" "));
+      const draft = [r.draft, text].filter(Boolean).join(" ").slice(0, 4000);
+      runRef.current = {...r, draft};
+      seat.draft(draft);
       setDeliverySeconds((n) => n + seconds);
       setSource("voice");
     }
@@ -200,7 +204,7 @@ function Seat({ ownerId }: { ownerId: string }) {
     const id = run?.pending?.turnId;
     if (!id || !seat.busy || paused || voiceMode !== "neural" || acknowledgedTurn.current === id) return;
     acknowledgedTurn.current = id;
-    void say("Mm-hm.", "authored-ack-" + id);
+    void say("Got it.", "authored-ack-" + id);
   }, [run?.pending?.turnId, seat.busy, paused]);
   useEffect(()=>{
     if(!run||run.status!=='complete'||run.debriefRead)return;
@@ -233,6 +237,7 @@ function Seat({ ownerId }: { ownerId: string }) {
       run.status !== "active" ||
       seat.busy ||
       mic.active ||
+      mic.starting ||
       moment ||
       run.draft ||
       voiceState !== "idle"
@@ -253,6 +258,7 @@ function Seat({ ownerId }: { ownerId: string }) {
     run?.status,
     seat.busy,
     mic.active,
+    mic.starting,
     moment,
     !!run?.draft,
     voiceState,
@@ -265,7 +271,7 @@ function Seat({ ownerId }: { ownerId: string }) {
     if (!run) return;
     mic.stop();
     voice.current?.pause();
-    await seat.persist({ ...run, status: "paused" });
+    await seat.persist({ ...(runRef.current || run), status: "paused" });
   }
   async function resume() {
     if (!run) return;
@@ -277,7 +283,7 @@ function Seat({ ownerId }: { ownerId: string }) {
     mic.stop();
     voice.current?.stop();
     setEndDialog(false);
-    await seat.persist({ ...run, status: "complete", updatedAt: stamp() });
+    await seat.persist({ ...(runRef.current || run), status: "complete", updatedAt: stamp() });
     if (run.mode !== "guided") {
       const { seatRequest } = await import("./useSeat");
       await seatRequest({ action: "release", id: run.id }).catch(() => {});
@@ -308,15 +314,18 @@ function Seat({ ownerId }: { ownerId: string }) {
         !e.repeat &&
         micConsent &&
         input === "voice" &&
+        !mic.active && !mic.starting &&
         !paused
       ) {
         e.preventDefault();
+        pushToTalk.current = true;
         void mic.start();
       }
     };
     const up = (e: KeyboardEvent) => {
-      if (e.code === "Space" && mic.active) {
+      if (e.code === "Space" && pushToTalk.current) {
         e.preventDefault();
+        pushToTalk.current = false;
         mic.stop();
       }
     };
@@ -326,7 +335,7 @@ function Seat({ ownerId }: { ownerId: string }) {
       window.removeEventListener("keydown", key);
       window.removeEventListener("keyup", up);
     };
-  }, [run?.id, paused, finished, lastAI?.id, mic.active, micConsent, input]);
+  }, [run?.id, paused, finished, lastAI?.id, mic.active, mic.starting, micConsent, input]);
   async function begin(guided = false) {
     voice.current?.unlock();
     if (voiceOn && !voiceReady) {
@@ -347,6 +356,10 @@ function Seat({ ownerId }: { ownerId: string }) {
     }
   }
   async function send() {
+    if (mic.active || mic.starting) {
+      seat.setNotice("Finish dictation first, then review and send your captured words.");
+      return;
+    }
     interrupt();
     setMoment(false);
     await seat.send(source, deliverySeconds);
@@ -591,7 +604,7 @@ function Seat({ ownerId }: { ownerId: string }) {
                   </label>
                   <button
                     className={s.secondary}
-                    disabled={!micConsent || mic.active}
+                    disabled={!micConsent || mic.active || mic.starting}
                     onClick={() => void mic.start(true)}
                   >
                     Test microphone · 3 seconds
@@ -602,6 +615,9 @@ function Seat({ ownerId }: { ownerId: string }) {
                     value={mic.level}
                     aria-label="Real microphone input"
                   />
+                  <p role="status" aria-live="polite">
+                    {mic.starting ? "Waiting for microphone permission…" : mic.active ? "Checking microphone input for three seconds…" : mic.notice}
+                  </p>
                   {!mic.supported && (
                     <p>
                       Dictation is unavailable in this browser. Typing still
@@ -1014,6 +1030,8 @@ function Seat({ ownerId }: { ownerId: string }) {
     ? "Paused"
     : seat.busy
       ? "Thinking"
+      : mic.starting
+        ? "Starting microphone"
       : mic.active
         ? "Listening"
         : voiceState === "preparing"
@@ -1152,6 +1170,8 @@ function Seat({ ownerId }: { ownerId: string }) {
         <div className={s.nextMove}>
           {seat.busy
             ? "Your answer is saved. A follow-up is being prepared."
+            : mic.starting
+              ? "Waiting for browser dictation. Allow microphone access if asked; press again to cancel."
             : mic.active
               ? "Speak naturally. Press the microphone again when you are done."
               : "Your next move: explain your decision, ask for clarification, or challenge the premise."}
@@ -1160,12 +1180,12 @@ function Seat({ ownerId }: { ownerId: string }) {
           <div className={s.micRow}>
             <button
               className={s.mic}
-              aria-label={mic.active ? "Finish dictation" : "Start dictation"}
-              aria-pressed={mic.active}
-              disabled={!micConsent || paused || seat.busy || !!run.pending}
-              onClick={() => (mic.active ? mic.stop() : void mic.start())}
+              aria-label={mic.starting ? "Cancel dictation" : mic.active ? "Finish dictation" : "Start dictation"}
+              aria-pressed={mic.active || mic.starting}
+              disabled={!micConsent || !mic.supported || paused || seat.busy || !!run.pending}
+              onClick={() => (mic.active || mic.starting ? mic.stop() : mic.start())}
             >
-              {mic.active ? <Square /> : <Mic />}
+              {mic.active || mic.starting ? <Square /> : <Mic />}
             </button>
             <span>
               {mic.supported
@@ -1201,6 +1221,7 @@ function Seat({ ownerId }: { ownerId: string }) {
               paused ||
               seat.busy ||
               !!run.pending ||
+              mic.active || mic.starting ||
               !run.draft.trim() ||
               seat.storageError
             }
