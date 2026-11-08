@@ -4,7 +4,7 @@ Hot Seat is `/app/hot-seat`, separate from the scenario Interview section. It ha
 
 ## Run locally
 
-Use Node 24 and `npm ci --legacy-peer-deps`. Run `npm run dev`. The existing preview wrapper uses port 3002; the normal start command does not silently claim additional ports. Build with `npm run build` and serve with `npm start`. The device-speech release needs no downloaded speech model, Kokoro dependency or Python runtime. Prior static voice assets are excluded from standalone deployments.
+Use Node 24 and `npm ci --legacy-peer-deps`. Run `npm run dev`. The existing preview wrapper uses port 3002; the normal start command does not silently claim additional ports. Build with `npm run build` and serve with `npm start`. Prebuild prepares the Kokoro browser runtime. Python is not required in deployment; the checked-in previews were rendered offline. Standalone deployments include only the v2 Hot Seat speech runtime, previews and worker, excluding obsolete speech assets.
 
 
 ## Configuration and external calls
@@ -17,7 +17,9 @@ In AI Studio inspect this exact project's model access and actual RPM, TPM and R
 
 ### Speech
 
-Browser/device speech is the single speech path. The interface has one note about voice availability, not competing engine buttons. Nora and Kai receive stable distinct voice assignments when the device has more than one suitable installed voice. Assignments do not depend on the last selected persona or array order. A device with only one voice necessarily shares it; captions and typing remain complete. No new model download, external TTS API or synthetic-speech cache is required. Stale callbacks and late voice-list loading cannot override a newly selected persona. If speech does not start within eight active seconds, a visible error offers repeat/captions instead of leaving a permanent preparing indicator.
+Kokoro is the single speech engine. Nora uses `af_bella` (Bella); Kai uses `af_sarah` (Sarah). These are female neural voice profiles, not operating-system voices. The worker accepts only those two IDs; retired saves use Bella. Browser speech and automatic paid speech substitution are absent from the playback adapter.
+
+Two offline-rendered Kokoro previews play without the model download. Their manifest binds voice, exact caption and WAV checksum. Live interview lines are synthesized by Kokoro in a Web Worker after explicit preparation/Begin (roughly 90 MB model download from Hugging Face plus local WASM runtime). The UI states that download plainly. The 1.2.1 Kokoro prebundle requires the exactly pinned ONNX runtime `1.22.0-dev.20250409-89f8206ba4`; prebuild copies the matching runtime. Do not upgrade one side alone. Synthetic audio caches use `kokoro-female-v2` plus the actual voice ID and exact text, preventing reuse of the previous engine/voice clips. Failure surfaces an error and offers retry or explicitly selected captions; it never falls back to browser speech.
 
 Optional microphone input still uses best-effort browser dictation with explicit permission, a real input meter and review-before-send. PMForge does not retain microphone recordings; browser processing is subject to its vendor's behavior.
 
@@ -63,3 +65,7 @@ Onboarding has a shared minimum content footprint and equal-width primary button
 Subframe inspiration was consulted again (The Salad Project, cream and forest-green composition); established PMForge components remain in use. Voice switching, cancellation, timeout messages, popup events, nested scroll locks and safe redirects have regression tests. This does not certify the quality of every operating system voice or eliminate every possible runtime failure.
 
 Verification for the device-speech/recovery update: 17 Hot Seat regression tests, 22 legacy AI tests, three authentication tests and 52 general/account tests passed, along with the production build and a zero-known-vulnerability production dependency audit. Browser evidence in `device-recovery.json` records five-width button measurements, scrollable signup and a real rejected-import error popup. Timeout event handling is tested with controlled failures, not by exhausting the provider. Existing user storage was not erased during QA. The current profile has no preview carry-over, so the optional fourth onboarding step was inspected in code rather than exercised in that browser run.
+
+## Voice regression correction
+
+The browser/device-speech simplification was a quality regression and is superseded by Kokoro female-only playback. The old device-speaker chooser is not used. The new engine guard test prevents browser speech or paid TTS calls from being reintroduced into the playback adapter. Voice/caption manifest checks verify two distinct audible mono 24 kHz previews with the intended Bella/Sarah assignments. These checks establish engine/voice identity and audio validity; listener preference remains subjective.

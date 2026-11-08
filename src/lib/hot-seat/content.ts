@@ -5,7 +5,7 @@ export const personas = [
     id: "nora",
     name: "Nora Vance",
     role: "Direct, data-minded product lead",
-    voice: "af_heart",
+    voice: "af_bella",
     geminiVoice: "Kore",
     color: "#D98B5F",
     sample:
@@ -15,7 +15,7 @@ export const personas = [
     id: "kai",
     name: "Kai Moreno",
     role: "Curious founder, restless with ideas",
-    voice: "af_bella",
+    voice: "af_sarah",
     geminiVoice: "Aoede",
     color: "#5E9C93",
     sample:
@@ -25,7 +25,7 @@ export const personas = [
     id: "ellis",
     name: "Ellis Park",
     role: "Skeptical finance lead, asks why twice",
-    voice: "bf_emma",
+    voice: "af_bella",
     geminiVoice: "Leda",
     color: "#B5C4A6",
     sample:

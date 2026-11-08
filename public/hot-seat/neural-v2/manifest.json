@@ -1,0 +1,21 @@
+{
+  "version": "kokoro-female-v2",
+  "engine": "Kokoro-82M v1.0",
+  "synthetic": true,
+  "previews": [
+    {
+      "voice": "af_bella",
+      "text": "Let\u2019s get specific. What would you need to know before making that call?",
+      "sha256": "2273e77cba8cd1e9acde53e258199207359a02915ff585df8ccafde5c305944e",
+      "sampleRate": 24000,
+      "path": "af_bella/preview.wav"
+    },
+    {
+      "voice": "af_sarah",
+      "text": "There might be something interesting there. What would you try first, and why?",
+      "sha256": "1d2a5ba38441cdccd5dd5870632f8964cacb85368fc341b5782669e131c9fbba",
+      "sampleRate": 24000,
+      "path": "af_sarah/preview.wav"
+    }
+  ]
+}

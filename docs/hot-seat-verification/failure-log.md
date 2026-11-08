@@ -22,3 +22,9 @@ Final verification: 11 Hot Seat tests, 22 existing AI tests, 52 general/account 
 - Missing-profile signup inherited a fixed, overflow-hidden onboarding wrapper. It now has its own naturally scrollable entry layout. Shared counted scroll locks avoid stale locks after auth navigation or storage loss. Departed Hot Seat instances do not flush their old transcript back into a cleared identity.
 - Fixed mobile one-column choice overrides and wrapping action labels. Shared choices area has no inner scrollbars; primary action positions differ by no more than one pixel across the three exercised steps at 320/375/768/1024/1440 widths.
 - Persistent dismissible popups cover blocking alerts, recognized legacy failure statuses, explicit AI timeout/network failures and unexpected errors. A deliberately malformed local backup was rejected before import and produced the visible popup; no workspace data was imported or deleted.
+
+## Restore natural female speech
+
+The browser/device voice simplification was a product quality regression. Restored Kokoro with Nora=af_bella and Kai=af_sarah; retired saves use Bella. Browser speech and automatic paid speech substitution are removed from the playback adapter. The cache namespace is now kokoro-female-v2 with actual voice ID and exact text. Old mixed/incorrect clips are not reused. Preview captions, model voice IDs and distinct mono 24 kHz audio are checked in tests.
+
+Browser verification: both neural previews played; the matching WASM runtime prepared; a new, non-preview Sarah interview opening was synthesized, replayed with measured nonzero audio levels, paused and resumed. First WASM synthesis was slow on this device, so no realtime latency claim is made. No further Gemini inference or paid speech service was invoked. The 18 Hot Seat tests and production build pass; production dependency audit reports zero known vulnerabilities.

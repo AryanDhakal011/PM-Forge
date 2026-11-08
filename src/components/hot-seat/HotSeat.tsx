@@ -87,7 +87,8 @@ function Seat({ ownerId }: { ownerId: string }) {
     [region, setRegion] = useState(""),
     [input, setInput] = useState<"typed" | "voice">("typed"),
     [micConsent, setMicConsent] = useState(false),
-    [voiceMode] = useState<VoiceMode>("browser"),
+    [voiceMode] = useState<VoiceMode>("neural"),
+    [voiceReady,setVoiceReady] = useState(false),
     [voiceState, setVoiceState] = useState("idle"),
     [voiceProgress, setVoiceProgress] = useState(""),
     [voiceOn, setVoiceOn] = useState(true),
@@ -328,6 +329,10 @@ function Seat({ ownerId }: { ownerId: string }) {
   }, [run?.id, paused, finished, lastAI?.id, mic.active, micConsent, input]);
   async function begin(guided = false) {
     voice.current?.unlock();
+    if (voiceOn && !voiceReady) {
+      const ready=await voice.current?.prepare();setVoiceReady(!!ready);
+      if(!ready)return;
+    }
     const started = await seat.start(
       options,
       !guided && ai && !!seat.cap?.available,
@@ -491,7 +496,7 @@ function Seat({ ownerId }: { ownerId: string }) {
                       </span>
                       <div>
                         <strong>{person.name}</strong>
-                        <small>{person.role}</small>
+                        <small>{person.role} · Kokoro {person.voice === "af_sarah" ? "Sarah" : "Bella"}</small>
                       </div>
                     </button>
                     <button
@@ -502,7 +507,7 @@ function Seat({ ownerId }: { ownerId: string }) {
                         void voice.current?.speak(
                           person.sample,
                           person.id,
-                          voiceMode === "gemini" ? "browser" : voiceMode,
+                          voiceMode,
                           { id: "preview-" + ownerId, ownerId },
                         );
                       }}
@@ -607,8 +612,11 @@ function Seat({ ownerId }: { ownerId: string }) {
               )}
             </section>
             <aside className={s.notice} aria-label="Speech note">
-              <strong>Note about voices</strong>
-              <p>Speech uses the voices already available on your device. There is no large download or paid speech service. Nora and Kai use different voices when available; some devices provide only one. Captions and typing always work.</p>
+              <strong>Natural female voices · Kokoro</strong>
+              <p>Nora uses Bella. Kai uses Sarah. Previews use those exact neural voices. Live speech runs on your device after a one-time voice-model download (about 90 MB). No paid speech service or robotic browser fallback.</p>
+              {voiceProgress && <p role="status">{voiceProgress}</p>}
+              {!voiceReady && voiceState !== "preparing" && <button className={s.secondary} onClick={()=>{voice.current?.unlock();void voice.current?.prepare().then(setVoiceReady)}}>Prepare natural voices</button>}
+              {voiceState === "error" && <button className={s.textButton} onClick={()=>{setVoiceOn(false);seat.setNotice("Speech is off. You can begin with captions and typing, then retry natural speech later.")}}>Continue with captions</button>}
             </aside>
           </div>
           <aside className={s.summary}>
@@ -690,19 +698,19 @@ function Seat({ ownerId }: { ownerId: string }) {
             <button
               className={s.primary}
               disabled={
-                seat.busy || !seat.cap ||
+                seat.busy || voiceState === "preparing" || !seat.cap ||
                 (ai &&
                   !!seat.cap?.available &&
                   (!adult || !fictional || !region))
               }
               onClick={() => void begin()}
             >
-              {seat.busy ? "Opening your room…" : "Take the seat"}
+              {voiceState === "preparing" ? "Preparing natural voices…" : seat.busy ? "Opening your room…" : "Take the seat"}
               <ArrowRight size={18} />
             </button>
             <button
               className={s.textButton}
-              disabled={seat.busy}
+              disabled={seat.busy || voiceState === "preparing"}
               onClick={() => void begin(true)}
             >
               Start a local guided conversation instead
@@ -1071,7 +1079,7 @@ function Seat({ ownerId }: { ownerId: string }) {
           {p.name} ·{" "}
           {run.mode === "guided" ? "guided synthetic persona" : "AI persona"} ·{" "}
           {voiceMode === "neural"
-            ? "local neural voice"
+            ? (p.voice === "af_sarah" ? "Kokoro Sarah" : "Kokoro Bella")
             : voiceMode === "browser"
               ? "device voice"
               : "Gemini voice"}

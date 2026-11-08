@@ -1,0 +1,20 @@
+{
+  "engine": "Kokoro-82M",
+  "voices": {
+    "nora": "af_bella",
+    "kai": "af_sarah"
+  },
+  "checks": [
+    "Both exact-caption neural previews played through the restored audio adapter",
+    "Matching WASM runtime prepared successfully",
+    "New non-preview interview opener synthesized with Sarah",
+    "Replay showed Speaking with measured nonzero waveform heights",
+    "Pause and resume retained Kokoro Sarah",
+    "No browser/system or paid speech fallback in adapter"
+  ],
+  "limitations": [
+    "First local WASM synthesis was slow on this test device; no realtime latency claim",
+    "Subjective voice preference requires listener review",
+    "No additional Gemini generation was needed for this speech regression check"
+  ]
+}

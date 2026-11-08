@@ -95,3 +95,5 @@ docs/navigation-verification/dev-diagnosis.json
 
 # Generated local neural speech runtime; reproduced by prebuild.
 public/hot-seat/runtime/
+
+public/hot-seat/runtime-v2/
