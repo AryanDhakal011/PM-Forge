@@ -22,6 +22,8 @@ export class AILedger{
    CREATE TABLE IF NOT EXISTS ai_daily (owner_hash TEXT NOT NULL,day TEXT NOT NULL,sessions INTEGER NOT NULL DEFAULT 0,PRIMARY KEY(owner_hash,day));
    CREATE TABLE IF NOT EXISTS ai_native (id TEXT PRIMARY KEY,run_id TEXT NOT NULL,expected INTEGER NOT NULL,result TEXT NOT NULL);
    CREATE TABLE IF NOT EXISTS ai_policies (run_id TEXT PRIMARY KEY,fingerprint TEXT NOT NULL,model TEXT NOT NULL,transport TEXT NOT NULL);
+   CREATE TABLE IF NOT EXISTS ai_seat_speech (key TEXT PRIMARY KEY,run_id TEXT NOT NULL,at INTEGER NOT NULL,day TEXT NOT NULL,status TEXT NOT NULL,audio BLOB);
+   CREATE TABLE IF NOT EXISTS ai_hotseat (run_id TEXT PRIMARY KEY,prompt TEXT NOT NULL);
    CREATE TABLE IF NOT EXISTS ai_consents (run_id TEXT PRIMARY KEY,accepted_at INTEGER NOT NULL,region TEXT NOT NULL,adult INTEGER NOT NULL,terms_version TEXT NOT NULL);
    CREATE INDEX IF NOT EXISTS ai_usage_at ON ai_usage(at);
    CREATE INDEX IF NOT EXISTS ai_sessions_owner ON ai_sessions(owner);
@@ -42,10 +44,10 @@ export class AILedger{
   this.db.prepare('DELETE FROM ai_usage WHERE at<?').run(now-90*86400000);
   this.db.prepare('DELETE FROM ai_daily WHERE day<?').run(new Date(now-90*86400000).toISOString().slice(0,10));
  }
- erase(run:string){for(const table of ['ai_requests','ai_turns','ai_native','ai_policies','ai_consents','ai_sessions'])this.db.prepare(`DELETE FROM ${table} WHERE run_id=?`).run(run)}
+ erase(run:string){for(const table of ['ai_seat_speech','ai_requests','ai_turns','ai_native','ai_policies','ai_consents','ai_hotseat','ai_sessions'])this.db.prepare(`DELETE FROM ${table} WHERE run_id=?`).run(run)}
  policy(c:AIConfig){return digest(JSON.stringify({prompt:PROMPT_VERSION,model:c.model,transport:c.transport,mode:c.mode,maxTurns:c.maxTurns,timebox:c.timebox}))}
  assertPolicy(row:SessionRow,c:AIConfig){const policy=this.db.prepare('SELECT fingerprint FROM ai_policies WHERE run_id=?').get(row.run_id) as {fingerprint:string}|undefined;if(!policy||policy.fingerprint!==this.policy(c))throw new AIError('configuration-changed',409)}
- start(run:Run,owner:string,c:AIConfig,style:'practice'|'assessment',quotaOwner?:string,region=''){
+ start(run:Pick<Run,'id'|'ownerId'>,owner:string,c:AIConfig,style:'practice'|'assessment',quotaOwner?:string,region=''){
   return this.transaction(()=>{this.cleanup();const existing=this.db.prepare('SELECT * FROM ai_sessions WHERE run_id=?').get(run.id) as SessionRow|undefined;
    if(existing){if(existing.owner!==owner)throw new AIError('session-not-owned',404);this.assertPolicy(existing,c);this.admit(c);this.ensureRoom(existing,c);return this.row(run.id,owner)}
    this.admit(c);
@@ -67,7 +69,7 @@ export class AILedger{
  ensureRoom(row:SessionRow,c:AIConfig){if(row.active_until<=Date.now()){const active=this.db.prepare('SELECT COUNT(*) n FROM ai_sessions WHERE active_until>? AND run_id<>?').get(Date.now(),row.run_id) as {n:number};if(active.n>=c.concurrent)throw new AIError('room-at-capacity',429,30);this.db.prepare('UPDATE ai_sessions SET active_until=? WHERE run_id=?').run(Date.now()+900000,row.run_id)}}
  saveState(row:SessionRow,run:Run,advance=false){if(row.lease_until>Date.now())throw new AIError('turn-in-flight',409,2);this.db.prepare('UPDATE ai_sessions SET state=?,revision=revision+?,active_until=? WHERE run_id=?').run(this.seal(run),advance?1:0,Date.now()+900000,row.run_id);return this.row(row.run_id,row.owner)}
  history(run:string){return (this.db.prepare('SELECT id,role,payload FROM ai_turns WHERE run_id=? ORDER BY created,rowid').all(run) as {id:string;role:'candidate'|'interviewer';payload:string}[]).map(t=>({id:t.id,role:t.role,text:this.read<string>(t.payload)}))}
- reserve(row:SessionRow,input:{requestId:string;turnId:string;hash:string;expected:number;candidate:string;state:Run;tokens:number},c:AIConfig){
+ reserve(row:SessionRow,input:{requestId:string;turnId:string;hash:string;expected:number;candidate:string;state:unknown;tokens:number},c:AIConfig){
   return this.transaction(()=>{
    this.admit(c);row=this.row(row.run_id,row.owner);
    const request=this.db.prepare('SELECT * FROM ai_requests WHERE id=? OR (run_id=? AND turn_id=?)').get(input.requestId,row.run_id,input.turnId) as RequestRow|undefined;
@@ -95,11 +97,12 @@ export class AILedger{
    return {attemptId,cached:null};
   });
  }
- finish(run:string,owner:string,requestId:string,attemptId:string,result:unknown,usage:{inputTokens:number;outputTokens:number;thoughtTokens:number;latencyMs:number},failure?:AIError){
+ finish(run:string,owner:string,requestId:string,attemptId:string,result:unknown,usage:{inputTokens:number;outputTokens:number;thoughtTokens:number;latencyMs:number},failure?:AIError,nextState?:unknown){
   return this.transaction(()=>{const row=this.row(run,owner);if(row.lease_key!==attemptId)throw new AIError('lease-expired',409);
    this.db.prepare('UPDATE ai_usage SET input_tokens=?,output_tokens=?,thought_tokens=?,latency_ms=?,outcome=? WHERE id=?').run(usage.inputTokens,usage.outputTokens,usage.thoughtTokens,usage.latencyMs,failure?.code||'success',attemptId);
    // Reservations stay charged when usage is unknown, including timeouts and rejected output.
    this.db.prepare('UPDATE ai_sessions SET lease_until=0,lease_key=NULL,revision=revision+? WHERE run_id=?').run(failure?0:1,run);
+   if(!failure&&nextState!==undefined)this.db.prepare('UPDATE ai_sessions SET state=? WHERE run_id=?').run(this.seal(nextState),run);
    if(failure){this.db.prepare("UPDATE ai_requests SET status='failed',retry_at=? WHERE id=?").run(Date.now()+failure.retryAfter*1000,requestId);const n=Number(this.control('failures'))+1;this.setControl('failures',String(n));if(n>=3||failure.code==='provider-quota')this.setControl('circuit-until',String(Date.now()+Math.max(60,failure.retryAfter)*1000))}
    else{this.db.prepare("UPDATE ai_requests SET status='complete',result=? WHERE id=?").run(this.seal(result),requestId);const message=(result as {message:string}).message;this.db.prepare('INSERT OR IGNORE INTO ai_turns VALUES(?,?,?,?,?)').run(run,'reply-'+requestId,'interviewer',this.seal(message),Date.now());this.setControl('failures','0')}
   });

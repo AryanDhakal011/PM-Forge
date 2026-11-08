@@ -17,6 +17,8 @@ jobs:
       - run: npm run test:interview-live
       - run: npm run test:platform
       - run: npm run platform:fuzz
+      - run: npm run test:hot-seat
+      - run: npm run hot-seat:eval
       - run: npm run test:ai
       - run: npm run ai:eval
       - run: npm run test:auth
@@ -77,38 +79,5 @@ jobs:
           name: deadlock-balance-report
           path: docs/deadlock-verification/simulation.json
 
-  ai-room-browser:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-          cache: npm
-      - run: npm ci --legacy-peer-deps
-      - name: Verify AI recovery without external inference
-        env:
-          PMFORGE_AI_MODE: free-pilot
-          PMFORGE_AI_TEST_PROVIDER: mock
-          PMFORGE_AI_ALLOWED_REGIONS: NP
-          PMFORGE_AI_MAX_TURNS: '3'
-          PMFORGE_AI_DAILY_SESSIONS_PER_USER: '20'
-          PMFORGE_AI_MAX_CONCURRENT_SESSIONS: '20'
-          PMFORGE_DATABASE_PATH: /tmp/pmforge-ai-ci.sqlite
-          PMFORGE_PREVIEW_DIR: .next-ai
-          PRODUCT_URL: http://localhost:3003
-          VERIFY_OUTPUT: docs/ai-interview-release-verification
-        run: |
-          npm run dev -- --port 3003 > /tmp/pmforge-ai.log 2>&1 &
-          AI_PID=$!
-          trap 'kill "$AI_PID" 2>/dev/null || true' EXIT
-          for attempt in {1..60}; do
-            if curl --fail --silent "$PRODUCT_URL/api/interview/ai" > /dev/null; then break; fi
-            sleep 1
-          done
-          node --import tsx scripts/verify-interview-ai.mjs
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: ai-interview-verification
-          path: docs/ai-interview-release-verification/
+  # Legacy scenario-AI setup was removed. Hot Seat ownership, recovery and cost
+  # checks run in verify above; browser walkthrough is recorded in docs/hot-seat-verification.

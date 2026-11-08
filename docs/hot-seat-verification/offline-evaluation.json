@@ -1,0 +1,120 @@
+{
+  "prompt": "hot-seat-1.0",
+  "cases": [
+    {
+      "id": "seat-saas-nora",
+      "pass": true
+    },
+    {
+      "id": "seat-saas-kai",
+      "pass": true
+    },
+    {
+      "id": "seat-saas-ellis",
+      "pass": true
+    },
+    {
+      "id": "seat-fintech-nora",
+      "pass": true
+    },
+    {
+      "id": "seat-fintech-kai",
+      "pass": true
+    },
+    {
+      "id": "seat-fintech-ellis",
+      "pass": true
+    },
+    {
+      "id": "seat-marketplace-nora",
+      "pass": true
+    },
+    {
+      "id": "seat-marketplace-kai",
+      "pass": true
+    },
+    {
+      "id": "seat-marketplace-ellis",
+      "pass": true
+    },
+    {
+      "id": "seat-health-nora",
+      "pass": true
+    },
+    {
+      "id": "seat-health-kai",
+      "pass": true
+    },
+    {
+      "id": "seat-health-ellis",
+      "pass": true
+    },
+    {
+      "id": "seat-devtools-nora",
+      "pass": true
+    },
+    {
+      "id": "seat-devtools-kai",
+      "pass": true
+    },
+    {
+      "id": "seat-devtools-ellis",
+      "pass": true
+    },
+    {
+      "id": "seat-ai-nora",
+      "pass": true
+    },
+    {
+      "id": "seat-ai-kai",
+      "pass": true
+    },
+    {
+      "id": "seat-ai-ellis",
+      "pass": true
+    },
+    {
+      "id": "seat-commerce-nora",
+      "pass": true
+    },
+    {
+      "id": "seat-commerce-kai",
+      "pass": true
+    },
+    {
+      "id": "seat-commerce-ellis",
+      "pass": true
+    },
+    {
+      "id": "seat-public-nora",
+      "pass": true
+    },
+    {
+      "id": "seat-public-kai",
+      "pass": true
+    },
+    {
+      "id": "seat-public-ellis",
+      "pass": true
+    },
+    {
+      "id": "invented-number",
+      "pass": true
+    },
+    {
+      "id": "locked-reference",
+      "pass": true
+    },
+    {
+      "id": "invented-quote",
+      "pass": true
+    },
+    {
+      "id": "early-close",
+      "pass": true
+    }
+  ],
+  "liveProviderCalls": 0,
+  "expertReview": "pending",
+  "limit": "Deterministic schema/grounding coverage only. Does not certify generative interview quality."
+}

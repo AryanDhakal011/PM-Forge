@@ -92,3 +92,6 @@ docs/navigation-verification/dev-diagnosis.json
 
 # Isolated development cache; the default preview stays on port 3002.
 .next-development/
+
+# Generated local neural speech runtime; reproduced by prebuild.
+public/hot-seat/runtime/

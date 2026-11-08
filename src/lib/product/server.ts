@@ -84,7 +84,7 @@ export async function getAuth() {
             const db=serverDatabase();
             if(db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='ai_sessions'").get()){
               const rows=db.prepare('SELECT run_id FROM ai_sessions WHERE owner=?').all('member:'+user.id) as {run_id:string}[];
-              for(const row of rows){for(const table of ['ai_requests','ai_turns','ai_native','ai_policies','ai_consents','ai_sessions'])if(db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name=?").get(table))db.prepare(`DELETE FROM ${table} WHERE run_id=?`).run(row.run_id)}
+              for(const row of rows){for(const table of ['ai_seat_speech','ai_hotseat','ai_requests','ai_turns','ai_native','ai_policies','ai_consents','ai_sessions'])if(db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name=?").get(table))db.prepare(`DELETE FROM ${table} WHERE run_id=?`).run(row.run_id)}
             }
             serverDatabase()
               .prepare("DELETE FROM workspace WHERE user_id = ?")

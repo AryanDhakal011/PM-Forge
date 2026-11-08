@@ -24,6 +24,7 @@ import {
   CircleHelp,
   UserRound,
   Download,
+  Armchair,
 } from "lucide-react";
 import gsap from "gsap";
 import { useWorkspace } from "./WorkspaceProvider";
@@ -47,6 +48,7 @@ const PlatformGateway = dynamic(() => import("@/components/projects/PlatformGate
 const links = [
   { href: "/app", label: "Today", icon: House },
   { href: "/app/practice", label: "Practice", icon: Library },
+  { href: "/app/hot-seat", label: "Hot Seat", icon: Armchair },
   { href: "/app/projects", label: "Projects", icon: BriefcaseBusiness },
   { href: "/app/progress", label: "Progress", icon: ChartNoAxesCombined },
   { href: "/app/portfolio", label: "Portfolio", icon: FileText },
@@ -562,6 +564,7 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
                 label: "Projects",
                 icon: BriefcaseBusiness,
               },
+              { href: "/app/hot-seat", label: "Hot Seat", icon: Armchair },
               { href: "/app/portfolio", label: "Portfolio", icon: FileText },
               { href: "/app/help", label: "Help", icon: CircleHelp },
               { href: "/app/settings", label: "Settings", icon: Settings },

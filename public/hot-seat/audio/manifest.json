@@ -1,0 +1,16 @@
+{
+  "provider": "Kokoro-82M v1.0, Apache-2.0, pre-rendered synthetic speech",
+  "lines": {
+    "ack": "Mm-hm.",
+    "right": "Right.",
+    "okay": "Okay.",
+    "time": "Take your time. You can also ask me to rephrase.",
+    "close": "The conversation is complete. Let\u2019s look at the reasoning you documented. This review is provisional, not a hiring verdict.",
+    "sample": "Let\u2019s get specific. What would you need to know before making that call?"
+  },
+  "voices": [
+    "af_heart",
+    "af_bella",
+    "bf_emma"
+  ]
+}

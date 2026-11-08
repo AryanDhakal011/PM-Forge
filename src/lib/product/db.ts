@@ -1,4 +1,5 @@
 "use client";
+import type {SeatSession} from '../hot-seat/model';
 import type {MasterProfile,CaseStudy,ResumeVersion,CareerJob,CareerArtifact} from "../portfolio/model";
 import {detachAIOnImport} from "../interview-ai/model";
 import Dexie, { type EntityTable } from "dexie";
@@ -15,6 +16,8 @@ import {preservePrivateInterview} from "./interview-live";
 import type { ProjectRun } from "../projects/types";
 
 class WorkspaceDatabase extends Dexie {
+  hotSeats!:EntityTable<SeatSession,"id">;
+  hotSeatAudio!:EntityTable<{id:string;ownerId:string;runId:string;blob:Blob;createdAt:string},"id">;
   careerProfiles!:EntityTable<MasterProfile,"id">;
   caseStudies!:EntityTable<CaseStudy,"id">;
   resumeVersions!:EntityTable<ResumeVersion,"id">;
@@ -41,6 +44,7 @@ class WorkspaceDatabase extends Dexie {
     this.version(2).stores({ projectRuns: "id,ownerId,projectId,updatedAt" });
     this.version(3).stores({interviewAudio:"id,ownerId,runId,createdAt"});
     this.version(4).stores({careerProfiles:"id,ownerId",caseStudies:"id,ownerId,sourceId,updatedAt",resumeVersions:"id,ownerId,createdAt",careerJobs:"id,ownerId,updatedAt",careerArtifacts:"id,ownerId,caseId"});
+    this.version(5).stores({hotSeats:"id,ownerId,updatedAt",hotSeatAudio:"id,ownerId,runId"});
   }
 }
 export const db = new WorkspaceDatabase();
@@ -279,11 +283,11 @@ export async function clearLocalProfile(ownerId: string) {
       db.snapshots,
       db.meta,
       db.projectRuns,
-      db.interviewAudio,db.careerProfiles,db.caseStudies,db.resumeVersions,db.careerJobs,db.careerArtifacts,
+      db.hotSeats,db.hotSeatAudio,db.interviewAudio,db.careerProfiles,db.caseStudies,db.resumeVersions,db.careerJobs,db.careerArtifacts,
     ],
     async () => {
       await Promise.all([
-        ...[db.careerProfiles,db.caseStudies,db.resumeVersions,db.careerJobs,db.careerArtifacts].map(table=>table.where("ownerId").equals(ownerId).delete()),
+        ...[db.hotSeats,db.hotSeatAudio,db.careerProfiles,db.caseStudies,db.resumeVersions,db.careerJobs,db.careerArtifacts].map(table=>table.where("ownerId").equals(ownerId).delete()),
         db.interviewAudio.where("ownerId").equals(ownerId).delete(),
         db.runs.where("ownerId").equals(ownerId).delete(),
         db.records.where("ownerId").equals(ownerId).delete(),

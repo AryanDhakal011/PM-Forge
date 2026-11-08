@@ -1,0 +1,163 @@
+{
+  "date": "2026-11-08",
+  "browser": "Chromium in-app",
+  "lobbySizes": [
+    {
+      "overflow": false,
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "overflow": false,
+      "scrollWidth": 360,
+      "width": 375
+    },
+    {
+      "overflow": false,
+      "scrollWidth": 753,
+      "width": 768
+    },
+    {
+      "overflow": false,
+      "scrollWidth": 1009,
+      "width": 1024
+    },
+    {
+      "overflow": false,
+      "scrollWidth": 1425,
+      "width": 1440
+    }
+  ],
+  "roomSizes": [
+    {
+      "submit": {
+        "bottom": 784.0000228881836,
+        "height": 75.5999984741211,
+        "left": 191,
+        "right": 306,
+        "top": 708.4000244140625,
+        "width": 115,
+        "x": 191,
+        "y": 708.4000244140625
+      },
+      "viewportOverflow": false,
+      "visible": "visible",
+      "width": 320
+    },
+    {
+      "submit": {
+        "bottom": 784.0000228881836,
+        "height": 75.5999984741211,
+        "left": 246.1999969482422,
+        "right": 361.1999969482422,
+        "top": 708.4000244140625,
+        "width": 115,
+        "x": 246.1999969482422,
+        "y": 708.4000244140625
+      },
+      "viewportOverflow": false,
+      "visible": "visible",
+      "width": 375
+    },
+    {
+      "submit": {
+        "bottom": 803.3999862670898,
+        "height": 75.5999984741211,
+        "left": 569.9625244140625,
+        "right": 744.9625244140625,
+        "top": 727.7999877929688,
+        "width": 175,
+        "x": 569.9625244140625,
+        "y": 727.7999877929688
+      },
+      "viewportOverflow": false,
+      "visible": "visible",
+      "width": 768
+    },
+    {
+      "submit": {
+        "bottom": 803.3999862670898,
+        "height": 75.5999984741211,
+        "left": 762,
+        "right": 937,
+        "top": 727.7999877929688,
+        "width": 175,
+        "x": 762,
+        "y": 727.7999877929688
+      },
+      "viewportOverflow": false,
+      "visible": "visible",
+      "width": 1024
+    },
+    {
+      "submit": {
+        "bottom": 803.3999862670898,
+        "height": 75.5999984741211,
+        "left": 970,
+        "right": 1145,
+        "top": 727.7999877929688,
+        "width": 175,
+        "x": 970,
+        "y": 727.7999877929688
+      },
+      "viewportOverflow": false,
+      "visible": "visible",
+      "width": 1440
+    }
+  ],
+  "debriefSizes": [
+    {
+      "overflow": false,
+      "width": 320,
+      "requested": 320
+    },
+    {
+      "overflow": false,
+      "width": 375,
+      "requested": 375
+    },
+    {
+      "overflow": false,
+      "width": 768,
+      "requested": 768
+    },
+    {
+      "overflow": false,
+      "width": 1024,
+      "requested": 1024
+    },
+    {
+      "overflow": false,
+      "width": 1440,
+      "requested": 1440
+    }
+  ],
+  "checks": [
+    "Live Gemini grounded follow-up",
+    "Natural Kokoro ready and playback",
+    "Pause and resume",
+    "Saved lobby and reload restored exact prompt, clock and unsent draft",
+    "Transcript preserves original typed answer",
+    "Decision trail save",
+    "Simulation case draft and repeated conversion deduplication",
+    "375x500 reduced-height viewport retains submit",
+    "Final production dialog visually visible and receives pointer input",
+    "Completed review remains completed after reopening",
+    "Local guided answer produces a labeled authored follow-up after soft timebox",
+    "Final production build SNNN380rapf9JHJ4JSrzB"
+  ],
+  "notVerified": [
+    "Microphone permissions/capture",
+    "Real iOS/Android keyboard",
+    "Safari/Firefox/Edge",
+    "Representative load/p95",
+    "Expert conversational review"
+  ],
+  "live": {
+    "count": 1,
+    "providerLatencyMs": 2385,
+    "inputTokens": 621,
+    "outputTokens": 309,
+    "thoughtTokens": 90
+  }
+}

@@ -79,8 +79,8 @@ Navigation regression QA: generate the concrete route inventory with `node --imp
 
 The Feature Factory is playable at `/app/projects/feature-factory/play`: a seeded fifteen-day PM desktop with 42 events, 48 ask topics, evidence-backed release gates and computed policy replays. See [the implementation notes](docs/FEATURE-FACTORY.md).
 
-## AI interview
+## Hot Seat — AI conversation
 
-The shared interview supports optional provider-backed follow-ups with durable limits and explicit data-use controls. Guided practice is the $0 default. See [AI setup and operations](docs/AI-INTERVIEW.md); installing a key does not enable inference or billing.
+Hot Seat is its own workspace destination at `/app/hot-seat`: eight fictional companies, three personas, bounded Gemini follow-ups, on-device neural speech and saved transcript-based reviews. Scenario interviews retain guided practice and legacy saved-run compatibility. Guided is the $0 default; installing a key does not enable inference or billing. See [Hot Seat setup, data handling and launch checks](docs/HOT-SEAT.md) and [legacy AI operations](docs/AI-INTERVIEW.md).
 
 Local review: **http://localhost:3002** (`npm start` after a build, or `npm run dev` with an isolated development cache). See [Pass 2 decisions](docs/PASS-TWO-DECISIONS.md) and [AI local review](docs/AI-INTERVIEW.md#current-local-review-8-november-2026).

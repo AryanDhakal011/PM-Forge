@@ -277,7 +277,7 @@ const info: Record<
     },
     {
       "title": "AI interviews and provider processing",
-      "text": "Guided practice makes no generative-AI inference calls. The fictional free pilot sends approved case positions and unlocked scenario facts to Google Gemini; it excludes arbitrary scratch notes and personal career stories. Google unpaid-service terms permit service improvement and human review. Do not submit personal, sensitive, confidential or employer-private material to the free pilot. Personal behavioral practice stays local/guided unless an appropriate production data configuration is explicitly approved. Provider processing and portfolio publication are separate choices."
+      "text": "Hot Seat is a separate fictional-company conversation. Committed answers and recent relevant turns are sent to Google in AI mode; unsent drafts stay local. On-device neural speech downloads Kokoro model assets from Hugging Face after consent, then synthesizes locally. Synthetic speech is cached for replay. Browser dictation may use the browser vendor’s service; PMForge does not retain microphone recordings. Guided practice makes no generative-AI inference calls. The fictional free pilot sends approved case positions and unlocked scenario facts to Google Gemini; it excludes arbitrary scratch notes and personal career stories. Google unpaid-service terms permit service improvement and human review. Do not submit personal, sensitive, confidential or employer-private material to the free pilot. Personal behavioral practice stays local/guided unless an appropriate production data configuration is explicitly approved. Provider processing and portfolio publication are separate choices."
     },
     {
       "title": "Microphone, transcription and speech",
@@ -293,7 +293,7 @@ const info: Record<
     },
     {
       "title": "Your choices, deletion and requests",
-      "text": "Use Settings to export or reset device work, delete a server account, or manage sync. Use interview Practice settings to delete private server AI sessions while keeping the local transcript. Use Share to revoke published links and assets. Account deletion, device reset and publication revocation are distinct operations; use each control that applies. You may request access, correction, deletion or other rights available in your jurisdiction through the live privacy contact. Never send passwords, full backups or confidential transcripts in a support request."
+      "text": "Use Settings to export or reset device work, delete a server account, or manage sync. Use interview Practice settings to delete private server AI sessions while keeping the local transcript. Hot Seat has separate conversation export and deletion controls; its transcripts and synthetic speech are not included in workspace cloud sync or the general workspace backup. Use Share to revoke published links and assets. Account deletion, device reset and publication revocation are distinct operations; use each control that applies. You may request access, correction, deletion or other rights available in your jurisdiction through the live privacy contact. Never send passwords, full backups or confidential transcripts in a support request."
     },
     {
       "title": "Security, transfers and changes",
