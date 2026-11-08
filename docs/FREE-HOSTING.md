@@ -28,6 +28,8 @@ The current public asset set measures approximately 81.8 MB across 1,193 files (
 
 The Supabase connector returned no projects. Vercel became connected during this pass; its project search returned no matching PMForge project. Git remote: `https://github.com/AryanDhakal011/PM-Forge.git`. Consult the release note for the actual pushed branch/commit; this document does not establish a deployment.
 
+After connection, Vercel account inspection confirmed the Hobby plan. The local repository is not linked to a Vercel project. The remaining deployment blocker is the durable database/queue migration described above, rather than connector access. No deployment or paid resource was created.
+
 ## Sources checked
 
 - [Vercel Hobby and non-commercial limits](https://vercel.com/docs/plans/hobby)
