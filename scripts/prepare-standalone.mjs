@@ -1,0 +1,11 @@
+import {cp,mkdir} from 'node:fs/promises';
+import {resolve,join,relative} from 'node:path';
+const root=process.cwd(),target=resolve(root,'.next/standalone');
+if(relative(root,target).startsWith('..'))throw Error('Standalone output escaped workspace.');
+await mkdir(target,{recursive:true});
+await cp(join(root,'public'),join(target,'public'),{recursive:true});
+await cp(join(root,'.next/static'),join(target,'.next/static'),{recursive:true});
+await mkdir(join(target,'ops'),{recursive:true});
+await cp(join(root,'deploy/ai-control.mjs'),join(target,'ops/ai-control.mjs'));
+await cp(join(root,'scripts/backup-data.mjs'),join(target,'ops/backup-data.mjs'));
+console.log('Standalone server includes public assets and versioned client files.');

@@ -1,0 +1,12 @@
+{
+  "at": "2026-11-07T23:23:39.111Z",
+  "model": "gemini-3.8-flash",
+  "mode": "bounded controlled fictional probe",
+  "projectPlan": "Free — owner confirmed",
+  "actualProjectQuotas": "not supplied",
+  "maximumExternalAttempts": 2,
+  "publicAdmission": "closed",
+  "p95Target": "not established by one sample",
+  "status": "blocked-or-failed",
+  "reason": "provider-unavailable"
+}

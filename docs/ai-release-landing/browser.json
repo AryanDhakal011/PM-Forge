@@ -1,0 +1,110 @@
+{
+  "base": "http://localhost:3016",
+  "checks": [
+    {
+      "label": "landing CTA destinations",
+      "pass": true
+    },
+    {
+      "label": "landing no overflow 320",
+      "pass": true
+    },
+    {
+      "label": "landing no overflow 375",
+      "pass": true
+    },
+    {
+      "label": "mobile account action",
+      "pass": true
+    },
+    {
+      "label": "Escape closes menu",
+      "pass": true
+    },
+    {
+      "label": "landing no overflow 768",
+      "pass": true
+    },
+    {
+      "label": "landing no overflow 1024",
+      "pass": true
+    },
+    {
+      "label": "landing no overflow 1440",
+      "pass": true
+    },
+    {
+      "label": "landing no overflow 1920",
+      "pass": true
+    },
+    {
+      "label": "demo choice explanation",
+      "pass": true
+    },
+    {
+      "label": "demo follow-up",
+      "pass": true
+    },
+    {
+      "label": "demo resets",
+      "pass": true
+    },
+    {
+      "label": "preview End key",
+      "pass": true
+    },
+    {
+      "label": "preview arrow key",
+      "pass": true
+    },
+    {
+      "label": "accessibility landing desktop",
+      "pass": true
+    },
+    {
+      "label": "accessibility landing mobile",
+      "pass": true
+    },
+    {
+      "label": "footer fits",
+      "pass": true
+    },
+    {
+      "label": "no canvas rendering dependency",
+      "pass": true
+    },
+    {
+      "label": "fresh nonce security policy",
+      "pass": true
+    },
+    {
+      "label": "nosniff header",
+      "pass": true
+    },
+    {
+      "label": "HTML not publicly cached",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "accessibility": [
+    {
+      "label": "landing desktop",
+      "violations": []
+    },
+    {
+      "label": "landing mobile",
+      "violations": []
+    }
+  ],
+  "screenshots": [
+    "landing-320",
+    "landing-375",
+    "landing-768",
+    "landing-1024",
+    "landing-1440",
+    "landing-1920",
+    "footer-mobile"
+  ]
+}

@@ -1,0 +1,29 @@
+
+> pmforge@1.0.0 test:legacy-fracture
+> node --import tsx --test tests/legacy-fracture.test.ts && node --import tsx scripts/check-legacy-fracture.ts && node --import tsx scripts/legacy-fracture-smoke.ts
+
+✔ seeded policies reproduce and diverge at the true cutover (67.3675ms)
+✔ reducer leaves input untouched, and first sort is a hypothesis (0.6369ms)
+✔ Day Zero completes four verbs without campaign cost (0.4754ms)
+✔ mismatch reel holds distinct causes; wrong marks cost only simulated minutes (0.8954ms)
+✔ hidden thread has oral and map-reading discovery paths (0.646ms)
+✔ a locked tape cannot invent the hidden thread (0.2781ms)
+✔ board accepts only held evidence and limits three cards (0.5759ms)
+✔ quiet POC reserves two weeks and computes sample parity (0.3699ms)
+✔ coalition benefits and costs are distinct and recorded (0.5838ms)
+✔ migration wave order and shadow affect parity and friction (1.0897ms)
+✔ overnight without the thread always breaks billing and border clearance (1.0618ms)
+✔ matching hold reduces risk; mismatched hold adds friction (0.5507ms)
+✔ Why receipts show actual before and after values; rewind restores one decision (0.4221ms)
+✔ telemetry strips player prose while backup keeps it (0.2615ms)
+✔ atomic saves reject tampering and recover a last-good backup (1.6245ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 465.9945
+Legacy Fracture: 25 scenes, 24 modules, 40 deliveries, 27 events, 69 caption-matched clips, two complete contrasting replays.
+Legacy Fracture: 10 complete seeded paths; 12/27 event types observed. Unfired events recorded.

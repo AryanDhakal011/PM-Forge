@@ -1,0 +1,634 @@
+{
+  "base": "http://localhost:3002",
+  "checks": [
+    {
+      "label": "isolated guest workspace created",
+      "pass": true
+    },
+    {
+      "label": "first run stays guided",
+      "pass": true
+    },
+    {
+      "label": "five shared stages",
+      "pass": true
+    },
+    {
+      "label": "input Think aloud",
+      "pass": true
+    },
+    {
+      "label": "committed raw words survive reload",
+      "pass": true
+    },
+    {
+      "label": "accessibility first-run",
+      "pass": true
+    },
+    {
+      "label": "native brief RCA-E-1",
+      "pass": true
+    },
+    {
+      "label": "accessibility RCA-E-1",
+      "pass": true
+    },
+    {
+      "label": "no overflow RCA-E-1 390",
+      "pass": true
+    },
+    {
+      "label": "no overflow RCA-E-1 320",
+      "pass": true
+    },
+    {
+      "label": "native brief EST-M-1",
+      "pass": true
+    },
+    {
+      "label": "accessibility EST-M-1",
+      "pass": true
+    },
+    {
+      "label": "no overflow EST-M-1 390",
+      "pass": true
+    },
+    {
+      "label": "no overflow EST-M-1 320",
+      "pass": true
+    },
+    {
+      "label": "input Equation",
+      "pass": true
+    },
+    {
+      "label": "scratchpad computes safely",
+      "pass": true
+    },
+    {
+      "label": "input Numerator unit",
+      "pass": true
+    },
+    {
+      "label": "input Denominator unit",
+      "pass": true
+    },
+    {
+      "label": "input Output unit",
+      "pass": true
+    },
+    {
+      "label": "scratchpad exposes unit mismatch",
+      "pass": true
+    },
+    {
+      "label": "local OCR recognizes the arithmetic fixture",
+      "pass": true
+    },
+    {
+      "label": "native brief STR-M-1",
+      "pass": true
+    },
+    {
+      "label": "accessibility STR-M-1",
+      "pass": true
+    },
+    {
+      "label": "no overflow STR-M-1 390",
+      "pass": true
+    },
+    {
+      "label": "no overflow STR-M-1 320",
+      "pass": true
+    },
+    {
+      "label": "native brief EXE-M-1",
+      "pass": true
+    },
+    {
+      "label": "accessibility EXE-M-1",
+      "pass": true
+    },
+    {
+      "label": "no overflow EXE-M-1 390",
+      "pass": true
+    },
+    {
+      "label": "no overflow EXE-M-1 320",
+      "pass": true
+    },
+    {
+      "label": "native brief PS-H-1",
+      "pass": true
+    },
+    {
+      "label": "accessibility PS-H-1",
+      "pass": true
+    },
+    {
+      "label": "no overflow PS-H-1 390",
+      "pass": true
+    },
+    {
+      "label": "no overflow PS-H-1 320",
+      "pass": true
+    },
+    {
+      "label": "hard mode cannot generate framework",
+      "pass": true
+    },
+    {
+      "label": "hard scaffold is read-only",
+      "pass": true
+    },
+    {
+      "label": "input Organize your own notes",
+      "pass": true
+    },
+    {
+      "label": "hard candidate-owned outline survives acceptance and replay",
+      "pass": true
+    },
+    {
+      "label": "accessibility hard-own-outline-replay",
+      "pass": true
+    },
+    {
+      "label": "native brief AIT-M-1",
+      "pass": true
+    },
+    {
+      "label": "accessibility AIT-M-1",
+      "pass": true
+    },
+    {
+      "label": "no overflow AIT-M-1 390",
+      "pass": true
+    },
+    {
+      "label": "no overflow AIT-M-1 320",
+      "pass": true
+    },
+    {
+      "label": "native brief BEH-M-1",
+      "pass": true
+    },
+    {
+      "label": "accessibility BEH-M-1",
+      "pass": true
+    },
+    {
+      "label": "no overflow BEH-M-1 390",
+      "pass": true
+    },
+    {
+      "label": "no overflow BEH-M-1 320",
+      "pass": true
+    },
+    {
+      "label": "input Think aloud",
+      "pass": true
+    },
+    {
+      "label": "ownership context reaches the interviewer",
+      "pass": true
+    },
+    {
+      "label": "input Address the interviewer",
+      "pass": true
+    },
+    {
+      "label": "interrupted response autosaved",
+      "pass": true
+    },
+    {
+      "label": "workbench locked during challenge",
+      "pass": true
+    },
+    {
+      "label": "response draft survives reload",
+      "pass": true
+    },
+    {
+      "label": "response releases the workbench",
+      "pass": true
+    },
+    {
+      "label": "silent microphone warned at preflight",
+      "pass": true
+    },
+    {
+      "label": "audible input passes local analyser",
+      "pass": true
+    },
+    {
+      "label": "mid-rep silence cannot pass without a warning",
+      "pass": true
+    },
+    {
+      "label": "input Think aloud",
+      "pass": true
+    },
+    {
+      "label": "late voice transcript preserves an uncommitted typed draft",
+      "pass": true
+    },
+    {
+      "label": "input Think aloud",
+      "pass": true
+    },
+    {
+      "label": "continuous voice is routed into the active response",
+      "pass": true
+    },
+    {
+      "label": "raw spoken defense is preserved",
+      "pass": true
+    },
+    {
+      "label": "voice raw transcript and filler retained",
+      "pass": true
+    },
+    {
+      "label": "optional audio clips stored locally",
+      "pass": true
+    },
+    {
+      "label": "failed transcription has a clear typing fallback",
+      "pass": true
+    },
+    {
+      "label": "input Think aloud",
+      "pass": true
+    },
+    {
+      "label": "typing continues after failed upload",
+      "pass": true
+    },
+    {
+      "label": "voice diagnostics shown",
+      "pass": true
+    },
+    {
+      "label": "blind spot is visible",
+      "pass": true
+    },
+    {
+      "label": "accessibility replay",
+      "pass": true
+    },
+    {
+      "label": "library offers exact run resume",
+      "pass": true
+    },
+    {
+      "label": "speech capabilities route available",
+      "pass": true
+    },
+    {
+      "label": "local OCR worker available",
+      "pass": true
+    },
+    {
+      "label": "local OCR language data available",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "accessibility": [
+    {
+      "label": "first-run",
+      "violations": []
+    },
+    {
+      "label": "RCA-E-1",
+      "violations": []
+    },
+    {
+      "label": "EST-M-1",
+      "violations": []
+    },
+    {
+      "label": "STR-M-1",
+      "violations": []
+    },
+    {
+      "label": "EXE-M-1",
+      "violations": []
+    },
+    {
+      "label": "PS-H-1",
+      "violations": []
+    },
+    {
+      "label": "hard-own-outline-replay",
+      "violations": []
+    },
+    {
+      "label": "AIT-M-1",
+      "violations": []
+    },
+    {
+      "label": "BEH-M-1",
+      "violations": []
+    },
+    {
+      "label": "replay",
+      "violations": []
+    }
+  ],
+  "screenshots": [
+    "first-run-desktop",
+    "RCA-E-1-desktop",
+    "RCA-E-1-mobile",
+    "EST-M-1-desktop",
+    "EST-M-1-mobile",
+    "STR-M-1-desktop",
+    "STR-M-1-mobile",
+    "EXE-M-1-desktop",
+    "EXE-M-1-mobile",
+    "PS-H-1-desktop",
+    "PS-H-1-mobile",
+    "hard-own-outline-replay",
+    "AIT-M-1-desktop",
+    "AIT-M-1-mobile",
+    "BEH-M-1-desktop",
+    "BEH-M-1-mobile",
+    "replay-desktop"
+  ],
+  "beforeReload": {
+    "id": "83416608-d8fe-4416-a4eb-65018125c103",
+    "ownerId": "guest-1740f4b5-3728-47bc-a30d-53664365c655",
+    "questionId": "EST-E-1",
+    "contentVersion": 1,
+    "seed": 0,
+    "revision": 5,
+    "stage": "workbench",
+    "status": "active",
+    "startedAt": "2026-11-08T06:36:15.994Z",
+    "updatedAt": "2026-11-08T06:36:16.988Z",
+    "evidenceIds": [
+      "E1",
+      "E2"
+    ],
+    "decisions": [
+      {
+        "stage": "primer",
+        "action": "Locked Preflight",
+        "value": "Continue",
+        "at": "2026-11-08T06:36:16.494Z"
+      }
+    ],
+    "locked": [
+      "primer"
+    ],
+    "objectivePinned": true,
+    "choiceId": "",
+    "rank": [
+      "shop-in-shop instead (accepts weaker brand control)",
+      "pilot or shorter lease first (accepts delay)",
+      "choosing \"flat 1% of population\" at the logic-path step.",
+      "sign if capture ≥ 4.2% is credible (accepts rent risk)"
+    ],
+    "segment": "",
+    "dials": {
+      "adults": 65,
+      "premium": 8,
+      "cycle": 3,
+      "capture": 5
+    },
+    "unitConfirmed": false,
+    "metrics": {
+      "primary": "",
+      "guardrail": "",
+      "test": ""
+    },
+    "architecture": [],
+    "story": {
+      "stakes": "",
+      "actions": [
+        "",
+        "",
+        ""
+      ],
+      "result": "",
+      "learning": "",
+      "later": "",
+      "observable": false,
+      "ownership": false
+    },
+    "eventResponse": "",
+    "eventIndex": 0,
+    "synthesis": {
+      "decision": "",
+      "evidenceId": "",
+      "tradeoff": "",
+      "notDoing": "",
+      "metric": "",
+      "guardrail": "",
+      "stopRule": "",
+      "note": ""
+    },
+    "reflection": {},
+    "reflectionNote": "",
+    "fundamentals": {},
+    "elapsedSeconds": 0,
+    "pressureSeconds": null,
+    "spoken": {
+      "seconds": 0,
+      "structure": false,
+      "clarity": false,
+      "skipped": false
+    },
+    "live": {
+      "version": 1,
+      "mode": "typing",
+      "interviewMode": false,
+      "consent": false,
+      "recordConsent": false,
+      "syncTranscript": false,
+      "audioCheck": "untested",
+      "draft": "",
+      "turns": [
+        {
+          "id": "a4197585-1b36-4afb-9c23-c75d28d16977",
+          "role": "interviewer",
+          "raw": "Talk me through your thinking. Which capture-share assumption makes the lease break even, and how would you verify it?",
+          "at": "2026-11-08T06:36:16.581Z",
+          "seconds": 0,
+          "source": "system",
+          "stage": "workbench"
+        },
+        {
+          "id": "0aa3580b-a4d7-411c-b24b-fe63042c2f0d",
+          "role": "candidate",
+          "raw": "My estimate starts with the eligible population and a monthly time window.",
+          "at": "2026-11-08T06:36:16.979Z",
+          "seconds": 0,
+          "source": "typed",
+          "stage": "workbench"
+        },
+        {
+          "id": "4752a9b8-b87b-4b90-a6f0-1ce00daa0aaf",
+          "role": "interviewer",
+          "raw": "I’ve noted that. Keep going: name the evidence and the uncertainty behind your point.",
+          "at": "2026-11-08T06:36:16.979Z",
+          "seconds": 0,
+          "source": "system",
+          "stage": "workbench"
+        }
+      ],
+      "outline": {},
+      "acceptedOutline": {},
+      "clarifications": [],
+      "reality": {},
+      "interruptions": [],
+      "events": [
+        {
+          "name": "stage:workbench",
+          "at": "2026-11-08T06:36:16.581Z"
+        }
+      ]
+    },
+    "guided": true,
+    "sessionId": "e3fb86b4-f85c-4ba0-8e77-cb8a60aa98d0"
+  },
+  "afterReload": {
+    "id": "83416608-d8fe-4416-a4eb-65018125c103",
+    "ownerId": "guest-1740f4b5-3728-47bc-a30d-53664365c655",
+    "questionId": "EST-E-1",
+    "contentVersion": 1,
+    "seed": 0,
+    "revision": 5,
+    "stage": "workbench",
+    "status": "active",
+    "startedAt": "2026-11-08T06:36:15.994Z",
+    "updatedAt": "2026-11-08T06:36:16.988Z",
+    "evidenceIds": [
+      "E1",
+      "E2"
+    ],
+    "decisions": [
+      {
+        "stage": "primer",
+        "action": "Locked Preflight",
+        "value": "Continue",
+        "at": "2026-11-08T06:36:16.494Z"
+      }
+    ],
+    "locked": [
+      "primer"
+    ],
+    "objectivePinned": true,
+    "choiceId": "",
+    "rank": [
+      "shop-in-shop instead (accepts weaker brand control)",
+      "pilot or shorter lease first (accepts delay)",
+      "choosing \"flat 1% of population\" at the logic-path step.",
+      "sign if capture ≥ 4.2% is credible (accepts rent risk)"
+    ],
+    "segment": "",
+    "dials": {
+      "adults": 65,
+      "premium": 8,
+      "cycle": 3,
+      "capture": 5
+    },
+    "unitConfirmed": false,
+    "metrics": {
+      "primary": "",
+      "guardrail": "",
+      "test": ""
+    },
+    "architecture": [],
+    "story": {
+      "stakes": "",
+      "actions": [
+        "",
+        "",
+        ""
+      ],
+      "result": "",
+      "learning": "",
+      "later": "",
+      "observable": false,
+      "ownership": false
+    },
+    "eventResponse": "",
+    "eventIndex": 0,
+    "synthesis": {
+      "decision": "",
+      "evidenceId": "",
+      "tradeoff": "",
+      "notDoing": "",
+      "metric": "",
+      "guardrail": "",
+      "stopRule": "",
+      "note": ""
+    },
+    "reflection": {},
+    "reflectionNote": "",
+    "fundamentals": {},
+    "elapsedSeconds": 0,
+    "pressureSeconds": null,
+    "spoken": {
+      "seconds": 0,
+      "structure": false,
+      "clarity": false,
+      "skipped": false
+    },
+    "live": {
+      "version": 1,
+      "mode": "typing",
+      "interviewMode": false,
+      "consent": false,
+      "recordConsent": false,
+      "syncTranscript": false,
+      "audioCheck": "untested",
+      "draft": "",
+      "turns": [
+        {
+          "id": "a4197585-1b36-4afb-9c23-c75d28d16977",
+          "role": "interviewer",
+          "raw": "Talk me through your thinking. Which capture-share assumption makes the lease break even, and how would you verify it?",
+          "at": "2026-11-08T06:36:16.581Z",
+          "seconds": 0,
+          "source": "system",
+          "stage": "workbench"
+        },
+        {
+          "id": "0aa3580b-a4d7-411c-b24b-fe63042c2f0d",
+          "role": "candidate",
+          "raw": "My estimate starts with the eligible population and a monthly time window.",
+          "at": "2026-11-08T06:36:16.979Z",
+          "seconds": 0,
+          "source": "typed",
+          "stage": "workbench"
+        },
+        {
+          "id": "4752a9b8-b87b-4b90-a6f0-1ce00daa0aaf",
+          "role": "interviewer",
+          "raw": "I’ve noted that. Keep going: name the evidence and the uncertainty behind your point.",
+          "at": "2026-11-08T06:36:16.979Z",
+          "seconds": 0,
+          "source": "system",
+          "stage": "workbench"
+        }
+      ],
+      "outline": {},
+      "acceptedOutline": {},
+      "clarifications": [],
+      "reality": {},
+      "interruptions": [],
+      "events": [
+        {
+          "name": "stage:workbench",
+          "at": "2026-11-08T06:36:16.581Z"
+        }
+      ]
+    },
+    "guided": true,
+    "sessionId": "e3fb86b4-f85c-4ba0-8e77-cb8a60aa98d0"
+  }
+}

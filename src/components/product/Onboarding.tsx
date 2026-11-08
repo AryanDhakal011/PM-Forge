@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { ArrowLeft, ArrowRight, Compass, FileText, Check } from "lucide-react";
@@ -17,12 +17,22 @@ import styles from "./Product.module.css";
 export default function Onboarding() {
   const router = useRouter();
   const params = useSearchParams();
+  const mainRef = useRef<HTMLElement>(null);
+  const stageRef = useRef<HTMLElement>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [step, setStep] = useState(0);
   const [carry, setCarry] = useState(false);
   const [decision, setDecision] = useState<"keep" | "discard" | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const goToStep = (nextStep: number) => {
+    setStep(nextStep);
+    mainRef.current?.scrollTo({ top: 0, behavior: "instant" });
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  };
+  useEffect(() => {
+    stageRef.current?.scrollTo({ top: 0, behavior: "instant" });
+  }, [step]);
   useEffect(() => {
     void getLocalProfile()
       .then((p) => {
@@ -51,7 +61,7 @@ export default function Onboarding() {
   const finish = async () => {
     if (!profile) return;
     if (carry && !decision) {
-      setStep(2);
+      goToStep(2);
       setError(
         "Choose whether to keep or discard the landing-page preview work.",
       );
@@ -77,7 +87,7 @@ export default function Onboarding() {
   };
   return (
     <div className={styles.product}>
-      <main className={styles.onboarding} id="main">
+      <main ref={mainRef} className={styles.onboarding} id="main">
         <Link href="/" className={styles.brand}>
           <Compass size={25} />
           PMForge
@@ -108,7 +118,7 @@ export default function Onboarding() {
         </p>
         {profile ? (
           <>
-            <section className={styles.panel}>
+            <section ref={stageRef} className={`${styles.panel} ${styles.onboardingStage}`}>
               {step === 0 ? (
                 <div className={styles.stack}>
                   <label className={styles.field}>
@@ -235,15 +245,17 @@ export default function Onboarding() {
                 </div>
               )}
             </section>
-            {error && (
-              <p role="alert" className={styles.error}>
-                {error}
-              </p>
-            )}
-            <div className={styles.spread}>
+            <div className={styles.onboardingMessage}>
+              {error && (
+                <p role="alert" className={styles.error}>
+                  {error}
+                </p>
+              )}
+            </div>
+            <div className={`${styles.spread} ${styles.onboardingActions}`}>
               <button
                 className={styles.textButton}
-                onClick={() => (step ? setStep(step - 1) : void finish())}
+                onClick={() => (step ? goToStep(step - 1) : void finish())}
                 disabled={busy}
               >
                 {step ? (
@@ -258,7 +270,7 @@ export default function Onboarding() {
               <button
                 className={styles.primary}
                 disabled={busy}
-                onClick={() => (step < 2 ? setStep(step + 1) : void finish())}
+                onClick={() => (step < 2 ? goToStep(step + 1) : void finish())}
               >
                 {busy
                   ? "Opening…"
@@ -268,7 +280,7 @@ export default function Onboarding() {
                 <ArrowRight size={15} />
               </button>
             </div>
-            <p className={styles.finePrint} style={{ marginTop: 26 }}>
+            <p className={styles.finePrint}>
               You can change these choices in Settings. Your profile stays on
               this device unless you sign in and sync.
             </p>

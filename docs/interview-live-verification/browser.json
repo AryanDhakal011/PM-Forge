@@ -216,10 +216,46 @@
     {
       "label": "silent microphone warned at preflight",
       "pass": true
+    },
+    {
+      "label": "audible input passes local analyser",
+      "pass": true
+    },
+    {
+      "label": "mid-rep silence cannot pass without a warning",
+      "pass": true
+    },
+    {
+      "label": "input Think aloud",
+      "pass": true
+    },
+    {
+      "label": "late voice transcript preserves an uncommitted typed draft",
+      "pass": true
+    },
+    {
+      "label": "input Think aloud",
+      "pass": true
+    },
+    {
+      "label": "continuous voice is routed into the active response",
+      "pass": true
+    },
+    {
+      "label": "raw spoken defense is preserved",
+      "pass": true
+    },
+    {
+      "label": "voice raw transcript and filler retained",
+      "pass": true
+    },
+    {
+      "label": "optional audio clips stored locally",
+      "pass": true
     }
   ],
   "errors": [
-    "Error: Timeout audible microphone vidence & context\n8/8\n\nChoose a cut that could change your conclusion. Each request spends the credits shown.\n\nAvailable\n1 credit\nEvidence 2\nRequest evidence →\n1 credit\nEvidence 3\nRequest evidence →\n1 credit\nEvidence 4\nRequest evidence →\nRequested\nSIMULATED DATA\nScenario brief\n\nRelease meeting: engineering wants two more weeks for stability\n\nRequested: Scenario brief. 8 credits remain.\n\nDecision trail · 1 actions\n\nSimulated operating data and unverified reference material are labeled separately.\n    at until (file:///C:/Users/aryan/Desktop/Beta%20PM%20Leetcode/scripts/verify-interview-live.mjs:15:197)\n    at async file:///C:/Users/aryan/Desktop/Beta%20PM%20Leetcode/scripts/verify-interview-live.mjs:34:1005"
+    "Error: Timeout network fallback vidence & context\n8/8\n\nChoose a cut that could change your conclusion. Each request spends the credits shown.\n\nAvailable\n1 credit\nEvidence 2\nRequest evidence →\n1 credit\nEvidence 3\nRequest evidence →\n1 credit\nEvidence 4\nRequest evidence →\nRequested\nSIMULATED DATA\nScenario brief\n\nRelease meeting: engineering wants two more weeks for stability\n\nRequested: Scenario brief. 8 credits remain.\n\nDecision trail · 2 actions\n\nSimulated operating data and unverified reference material are labeled separately.\n    at until (file:///C:/Users/aryan/Desktop/Beta%20PM%20Leetcode/scripts/verify-interview-live.mjs:15:197)\n    at async file:///C:/Users/aryan/Desktop/Beta%20PM%20Leetcode/scripts/verify-interview-live.mjs:35:962"
   ],
   "console": [],
   "accessibility": [
@@ -279,16 +315,16 @@
     "BEH-M-1-mobile"
   ],
   "beforeReload": {
-    "id": "e5249af6-75c2-4eac-8ae7-2aaac52083a4",
-    "ownerId": "guest-0d59720f-192e-435b-bbe1-87110393bd8e",
+    "id": "28fa8f37-4881-4f99-b431-2b371080612e",
+    "ownerId": "guest-db2f73f7-f7fb-4bb3-93b5-90adef1b17e4",
     "questionId": "EST-E-1",
     "contentVersion": 1,
     "seed": 0,
     "revision": 8,
     "stage": "workbench",
     "status": "active",
-    "startedAt": "2026-11-07T20:27:48.801Z",
-    "updatedAt": "2026-11-07T20:27:50.572Z",
+    "startedAt": "2026-11-07T22:31:29.107Z",
+    "updatedAt": "2026-11-07T22:31:31.048Z",
     "evidenceIds": [
       "E1",
       "E2"
@@ -298,7 +334,7 @@
         "stage": "primer",
         "action": "Locked Preflight",
         "value": "Continue",
-        "at": "2026-11-07T20:27:49.425Z"
+        "at": "2026-11-07T22:31:29.921Z"
       }
     ],
     "locked": [
@@ -373,28 +409,28 @@
       "draft": "",
       "turns": [
         {
-          "id": "d08a581b-db34-46d1-b385-65125685ec9e",
+          "id": "cc022437-95ef-4f8a-bcba-8a0cf7d8c21f",
           "role": "interviewer",
           "raw": "Talk me through your thinking. Which capture-share assumption makes the lease break even, and how would you verify it?",
-          "at": "2026-11-07T20:27:49.781Z",
+          "at": "2026-11-07T22:31:30.271Z",
           "seconds": 0,
           "source": "system",
           "stage": "workbench"
         },
         {
-          "id": "5570e1d2-9ebd-4b95-94fa-673a93e8db27",
+          "id": "f67d7e19-6986-45e0-a2ed-db6788b84d4d",
           "role": "candidate",
           "raw": "My estimate starts with the eligible population and a monthly time window.",
-          "at": "2026-11-07T20:27:50.421Z",
+          "at": "2026-11-07T22:31:30.933Z",
           "seconds": 0,
           "source": "typed",
           "stage": "workbench"
         },
         {
-          "id": "2b9045ff-bc19-47b3-aefe-fb884dc7652e",
+          "id": "92272ff7-f773-4cbd-a953-b68d398b92ae",
           "role": "interviewer",
           "raw": "I’ve noted that. Keep going: name the evidence and the uncertainty behind your point.",
-          "at": "2026-11-07T20:27:50.421Z",
+          "at": "2026-11-07T22:31:30.933Z",
           "seconds": 0,
           "source": "system",
           "stage": "workbench"
@@ -408,24 +444,24 @@
       "events": [
         {
           "name": "stage:workbench",
-          "at": "2026-11-07T20:27:49.781Z"
+          "at": "2026-11-07T22:31:30.271Z"
         }
       ]
     },
     "guided": true,
-    "sessionId": "14ae380e-8243-4f2f-a2ba-e9bd717c89d1"
+    "sessionId": "46b3c265-21c1-47a0-bda3-ac9c51a2fa64"
   },
   "afterReload": {
-    "id": "e5249af6-75c2-4eac-8ae7-2aaac52083a4",
-    "ownerId": "guest-0d59720f-192e-435b-bbe1-87110393bd8e",
+    "id": "28fa8f37-4881-4f99-b431-2b371080612e",
+    "ownerId": "guest-db2f73f7-f7fb-4bb3-93b5-90adef1b17e4",
     "questionId": "EST-E-1",
     "contentVersion": 1,
     "seed": 0,
     "revision": 8,
     "stage": "workbench",
     "status": "active",
-    "startedAt": "2026-11-07T20:27:48.801Z",
-    "updatedAt": "2026-11-07T20:27:50.572Z",
+    "startedAt": "2026-11-07T22:31:29.107Z",
+    "updatedAt": "2026-11-07T22:31:31.048Z",
     "evidenceIds": [
       "E1",
       "E2"
@@ -435,7 +471,7 @@
         "stage": "primer",
         "action": "Locked Preflight",
         "value": "Continue",
-        "at": "2026-11-07T20:27:49.425Z"
+        "at": "2026-11-07T22:31:29.921Z"
       }
     ],
     "locked": [
@@ -510,28 +546,28 @@
       "draft": "",
       "turns": [
         {
-          "id": "d08a581b-db34-46d1-b385-65125685ec9e",
+          "id": "cc022437-95ef-4f8a-bcba-8a0cf7d8c21f",
           "role": "interviewer",
           "raw": "Talk me through your thinking. Which capture-share assumption makes the lease break even, and how would you verify it?",
-          "at": "2026-11-07T20:27:49.781Z",
+          "at": "2026-11-07T22:31:30.271Z",
           "seconds": 0,
           "source": "system",
           "stage": "workbench"
         },
         {
-          "id": "5570e1d2-9ebd-4b95-94fa-673a93e8db27",
+          "id": "f67d7e19-6986-45e0-a2ed-db6788b84d4d",
           "role": "candidate",
           "raw": "My estimate starts with the eligible population and a monthly time window.",
-          "at": "2026-11-07T20:27:50.421Z",
+          "at": "2026-11-07T22:31:30.933Z",
           "seconds": 0,
           "source": "typed",
           "stage": "workbench"
         },
         {
-          "id": "2b9045ff-bc19-47b3-aefe-fb884dc7652e",
+          "id": "92272ff7-f773-4cbd-a953-b68d398b92ae",
           "role": "interviewer",
           "raw": "I’ve noted that. Keep going: name the evidence and the uncertainty behind your point.",
-          "at": "2026-11-07T20:27:50.421Z",
+          "at": "2026-11-07T22:31:30.933Z",
           "seconds": 0,
           "source": "system",
           "stage": "workbench"
@@ -545,11 +581,11 @@
       "events": [
         {
           "name": "stage:workbench",
-          "at": "2026-11-07T20:27:49.781Z"
+          "at": "2026-11-07T22:31:30.271Z"
         }
       ]
     },
     "guided": true,
-    "sessionId": "14ae380e-8243-4f2f-a2ba-e9bd717c89d1"
+    "sessionId": "46b3c265-21c1-47a0-bda3-ac9c51a2fa64"
   }
 }

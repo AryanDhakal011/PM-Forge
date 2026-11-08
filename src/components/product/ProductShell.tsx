@@ -40,6 +40,7 @@ import OfflineSupport from "./OfflineSupport";
 import GuestImportPrompt from "./GuestImportPrompt";
 import LandingCarryPrompt from "./LandingCarryPrompt";
 import dynamic from "next/dynamic";
+import {WorkspaceLoading} from "./WorkspaceArrival";
 const PlatformGateway = dynamic(() => import("@/components/projects/PlatformGateway"));
 
 const links = [
@@ -249,8 +250,7 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
             <Compass />
             PMForge
           </span>
-          <div className={styles.skeleton} />
-          <p className={styles.muted}>Opening your workspace…</p>
+          <WorkspaceLoading/>
           <noscript>
             <p>
               Enable JavaScript for saved interactive practice, or{" "}
@@ -374,7 +374,7 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
               <Settings size={20} />
               <span>Settings</span>
             </Link>
-            <Link href="/help" title="Help">
+            <Link href="/app/help" title="Help">
               <CircleHelp size={20} />
               <span>Help</span>
             </Link>
@@ -565,7 +565,7 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
                 icon: BriefcaseBusiness,
               },
               { href: "/app/portfolio", label: "Portfolio", icon: FileText },
-              { href: "/help", label: "Help", icon: CircleHelp },
+              { href: "/app/help", label: "Help", icon: CircleHelp },
               { href: "/app/settings", label: "Settings", icon: Settings },
             ].map((item) => (
               <Link key={item.href} href={item.href}>

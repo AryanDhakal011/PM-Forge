@@ -1,0 +1,22 @@
+{
+  "buildId": "Gkc6RjxJzZXiqlby3ZK1x",
+  "baselineBuild": "dzWZfu4VI1lsPxYJbtVrB",
+  "wholeApplicationClientJavaScript": {
+    "baseline": {
+      "files": 134,
+      "rawBytes": 5492617,
+      "gzipBytes": 1705641
+    },
+    "current": {
+      "files": 135,
+      "rawBytes": 5576068,
+      "gzipBytes": 1730353
+    },
+    "gzipDeltaBytes": 24712,
+    "note": "All generated client chunks, not initial-route transfer and not a frame-rate measurement."
+  },
+  "clientSecretScan": "PASS",
+  "secretMatches": [],
+  "privateEnvironmentPackaged": false,
+  "newRuntimeDependencies": 0
+}

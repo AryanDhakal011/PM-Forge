@@ -204,3 +204,8 @@
   .legend { grid-template-columns:1fr; }
   .actions { align-items:flex-start; }
 }
+
+@media (min-width:721px) {
+  .page { padding-top:16px; }
+  .greeting { min-height:52px; margin-bottom:-4px; }
+}

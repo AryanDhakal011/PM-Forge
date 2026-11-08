@@ -9,11 +9,12 @@ if(!/^[a-zA-Z0-9_-]+$/.test(buildId))throw Error('Invalid production build ident
 const snapshotRelative=join('.pmforge-preview',`${buildId}-${process.pid}`),snapshot=resolve(root,snapshotRelative);
 if(relative(root,snapshot).startsWith('..'))throw Error('Preview snapshot escaped the project.');
 await mkdir(snapshot,{recursive:true});
-const ignored=new Set(['dev','cache','types','diagnostics','lock','trace','trace-build']);
+const ignored=new Set(['standalone','dev','cache','types','diagnostics','lock','trace','trace-build']);
 for(const name of await readdir(build))if(!ignored.has(name))await cp(join(build,name),join(snapshot,name),{recursive:true});
 await writeFile(join(snapshot,'preview-provenance.json'),JSON.stringify({buildId,createdAt:new Date().toISOString(),source:'.next'},null,2));
 console.log(`PMForge preview pinned to build ${buildId}. Rebuilds will not change this running preview.`);
-const child=spawn(process.execPath,[require.resolve('next/dist/bin/next'),'start',...process.argv.slice(2)],{cwd:root,env:{...process.env,PMFORGE_PREVIEW_DIR:snapshotRelative},stdio:'inherit',windowsHide:true});
+const args=process.argv.slice(2);if(!args.some(arg=>arg==='--port'||arg==='-p'||arg.startsWith('--port=')))args.push('--port','3002');if(!args.some(arg=>arg==='--hostname'||arg==='-H'||arg.startsWith('--hostname=')))args.push('--hostname','127.0.0.1');
+const child=spawn(process.execPath,[require.resolve('next/dist/bin/next'),'start',...args],{cwd:root,env:{...process.env,PMFORGE_PREVIEW_DIR:snapshotRelative},stdio:'inherit',windowsHide:true});
 for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>child.kill(signal));
 child.on('error',error=>{console.error(error.message);process.exitCode=1;});
 child.on('exit',code=>{process.exitCode=code??1;});

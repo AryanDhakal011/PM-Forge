@@ -1,0 +1,152 @@
+{
+  "at": "2026-11-08T06:21:48.238Z",
+  "mode": "offline",
+  "promptVersion": "decision-room-1.0",
+  "model": "gemini-3.1-flash-lite",
+  "expertReview": "pending",
+  "note": "Offline checks establish contract and guard behavior, not live model realism. A live p95 is descriptive for this sample, not an agreed load-test pass.",
+  "freshLiveSamples": 0,
+  "p95Ms": null,
+  "results": [
+    {
+      "id": "root-cause-0",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "root-cause-1",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "root-cause-2",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "root-cause-3",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "product-sense-0",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "product-sense-1",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "product-sense-2",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "product-sense-3",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "strategy-0",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "strategy-1",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "strategy-2",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "strategy-3",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "execution-metrics-0",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "execution-metrics-1",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "execution-metrics-2",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "execution-metrics-3",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "estimation-0",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "estimation-1",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "estimation-2",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "estimation-3",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "ai-technical-0",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "ai-technical-1",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "ai-technical-2",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "ai-technical-3",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "behavioral-0",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "behavioral-1",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "behavioral-2",
+      "status": "pass",
+      "source": "deterministic mock"
+    },
+    {
+      "id": "behavioral-3",
+      "status": "pass",
+      "source": "deterministic mock"
+    }
+  ]
+}

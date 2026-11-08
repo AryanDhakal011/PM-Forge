@@ -1,0 +1,136 @@
+{
+  "base": "http://localhost:3018",
+  "checks": [
+    {
+      "label": "input My current region",
+      "pass": true
+    },
+    {
+      "label": "accessibility AI prepare",
+      "pass": true
+    },
+    {
+      "label": "server-authoritative Begin",
+      "pass": true
+    },
+    {
+      "label": "input Private scratch notes",
+      "pass": true
+    },
+    {
+      "label": "one committed position gives one reply",
+      "pass": true
+    },
+    {
+      "label": "private draft preserved",
+      "pass": true
+    },
+    {
+      "label": "one candidate entry",
+      "pass": true
+    },
+    {
+      "label": "test double labeled honestly",
+      "pass": true
+    },
+    {
+      "label": "accessibility AI active",
+      "pass": true
+    },
+    {
+      "label": "accessibility AI dark",
+      "pass": true
+    },
+    {
+      "label": "AI fits 320",
+      "pass": true
+    },
+    {
+      "label": "AI fits 375",
+      "pass": true
+    },
+    {
+      "label": "accessibility AI mobile",
+      "pass": true
+    },
+    {
+      "label": "AI fits 768",
+      "pass": true
+    },
+    {
+      "label": "AI fits 1024",
+      "pass": true
+    },
+    {
+      "label": "AI fits 1440",
+      "pass": true
+    },
+    {
+      "label": "lost response preserves candidate once",
+      "pass": true
+    },
+    {
+      "label": "retry does not duplicate saved candidate",
+      "pass": true
+    },
+    {
+      "label": "second position gives one follow-up",
+      "pass": true
+    },
+    {
+      "label": "reload never generates extra turn",
+      "pass": true
+    },
+    {
+      "label": "turn allowance is separate from native stages",
+      "pass": true
+    },
+    {
+      "label": "AI cannot advance native stage",
+      "pass": true
+    },
+    {
+      "label": "notes survive cap",
+      "pass": true
+    },
+    {
+      "label": "explicit guided fallback persisted",
+      "pass": true
+    },
+    {
+      "label": "AI feedback retained after fallback",
+      "pass": true
+    },
+    {
+      "label": "server deletion preserves local feedback",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "accessibility": [
+    {
+      "label": "AI prepare",
+      "violations": []
+    },
+    {
+      "label": "AI active",
+      "violations": []
+    },
+    {
+      "label": "AI dark",
+      "violations": []
+    },
+    {
+      "label": "AI mobile",
+      "violations": []
+    }
+  ],
+  "screenshots": [
+    "ai-prepare-desktop",
+    "ai-active-desktop",
+    "ai-active-dark",
+    "ai-active-mobile",
+    "ai-cap"
+  ]
+}

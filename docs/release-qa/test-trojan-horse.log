@@ -1,0 +1,26 @@
+
+> pmforge@1.0.0 test:trojan-horse
+> node --import tsx --test tests/trojan-horse.test.ts
+
+✔ opening reconciles the ledger and a finite baseline runway (1.594ms)
+✔ each payout control changes the actual forecast (0.3577ms)
+✔ required tasks cannot be skipped by the transition function (1.8354ms)
+✔ the segment pool sums to one hundred and preserves ordinary payouts (0.3153ms)
+✔ keeping valuable Guilds differs financially and relationally from cutting them (0.3048ms)
+✔ notice and gradual rollout both carry cash costs (0.1908ms)
+✔ cash charges one initial week, then four policy weeks after the Guild call (0.1618ms)
+✔ a promise returns as a real contradiction and owning it softens the consequence (0.1616ms)
+✔ a hostile, immediate rollout produces revolt; excessive spending can require a bridge (0.4114ms)
+✔ a segmented, honest path can reach the Gardener without emergency funding (0.2539ms)
+✔ every combination of segment policy has finite, bounded outcomes (0.6317ms)
+✔ a hindsight fork preserves the original and clears later decisions (0.368ms)
+✔ invalid storage is rejected and valid resume retains the whole decision state (1.4012ms)
+✔ all chapters have a defined objective and unique authored audio lines (0.2995ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 376.4372

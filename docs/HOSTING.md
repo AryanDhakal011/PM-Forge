@@ -27,7 +27,7 @@ The app runs without root privileges and its port is internal to Compose. Caddy 
 
 Smoke-check signup, email verification, login, logout, recovery, guest-to-account import, account sync, portfolio publication/revocation, microphone denial and a project resume on the actual HTTPS domain. OAuth must be exercised with real provider credentials. Auth pages use no-referrer and HTML uses a fresh CSP nonce; do not publicly cache HTML or replace the policy with a static nonce.
 
-A manual Node deployment may use `npm ci --legacy-peer-deps`, `npm run build`, then `npm run start:server -- --hostname 127.0.0.1 --port 3000`, behind an HTTPS proxy, with the same environment variables. `npm start` is the isolated local review preview, not the recommended hosted command.
+The post-build step assembles a self-contained `.next/standalone` directory with public and versioned client assets. A manual Node deployment may use `npm ci --legacy-peer-deps`, `npm run build`, then `HOSTNAME=127.0.0.1 PORT=3000 npm run start:server`, behind an HTTPS proxy, with the same environment variables. `npm start` is the isolated local review preview, not the recommended hosted command.
 
 ## Back up and restore
 
@@ -50,3 +50,14 @@ Monitor restarts, disk capacity, database backups, email delivery and HTTP failu
 ## Verification limits on the development machine
 
 The Docker client is installed, but the Docker engine is not running; an actual container build must be verified on the hosting machine. The standalone Next build and local browser flows are tested separately. Public deployment, real email delivery, DNS/TLS issuance and live OAuth need the production domain and provider credentials.
+
+
+## AI interview operations
+
+AI starts in `guided` mode and uses no external inference budget. The server-only key, three operating modes, data eligibility, model selection, durable limits, cleanup and measured pilot results are documented in [AI-INTERVIEW.md](AI-INTERVIEW.md). Keep public AI admission closed until its quota, terms, quality and load-test gates are satisfied. No paid speech service activates in $0 mode.
+
+The standalone and Docker artifacts include `ops/ai-control.mjs`. Run `node ops/ai-control.mjs status`, `kill`, `resume`, or `cleanup` with the same persistent database path as the app. Schedule cleanup and include encrypted AI state in the private backup policy. One Node/SQLite deployment can run multiple processes against one local database; this does not authorize replicas on independent disks or network-mounted SQLite. Provider inference charges remain separate from hosting, storage and bandwidth.
+
+On Windows local development, stop a server running from `.next/standalone` before rebuilding that directory. Use the pinned preview command for uninterrupted review during a rebuild; deploy new immutable artifacts rather than overwriting a running server folder.
+
+The single local review URL is http://localhost:3002. Both start commands default there; local development has an isolated cache. Disable `PMFORGE_AI_LOCAL_TEST` before public deployment. This flag exists only for the bounded local fictional pilot and does not establish real project quotas.

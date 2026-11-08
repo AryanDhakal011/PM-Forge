@@ -13,6 +13,7 @@ import {
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import DecisionDesk from "./DecisionDesk";
+import AIPracticeEntry from "./interview/AIPracticeEntry";
 import ResumeInterview from "./interview/ResumeInterview";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import {
@@ -214,8 +215,8 @@ export function LibraryView({
         (length === "short"
           ? q.minutes < 10
           : length === "medium"
-            ? q.minutes >= 10 && q.minutes < 15
-            : q.minutes >= 15)),
+            ? q.minutes >= 10 && q.minutes < 20
+            : q.minutes >= 20)),
   );
   const levelRank = (q: Question) =>
     ["easy", "medium", "hard"].indexOf(q.level);
@@ -353,8 +354,8 @@ export function LibraryView({
           options={[
             { value: "", label: "Any length" },
             { value: "short", label: "Under 10 min" },
-            { value: "medium", label: "10–15 min" },
-            { value: "long", label: "15+ min" },
+            { value: "medium", label: "10–under 20 min" },
+            { value: "long", label: "20+ min" },
           ]}
         />
         {(categories.length > 0 || level || length || search || status) && (
@@ -381,6 +382,7 @@ export function LibraryView({
           <p>63 specific situations. Seven ways to exercise your judgment.</p>
         </div>
       </div>
+      {view==="all"&&<AIPracticeEntry/>}
       <p className={s.draftNotice}>{DRAFT_NOTICE}</p>
       <nav className={u.tabs} aria-label="Practice views">
         {["all", "saved", "in-progress", "completed"].map((v) => (
@@ -482,8 +484,8 @@ export function LibraryView({
                   {length === "short"
                     ? "Under 10 min"
                     : length === "medium"
-                      ? "10–15 min"
-                      : "15+ min"}{" "}
+                      ? "10–under 20 min"
+                      : "20+ min"}{" "}
                   ×
                 </button>
               )}

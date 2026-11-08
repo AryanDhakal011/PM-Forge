@@ -20,7 +20,7 @@ export default function AuthReturn() {
         const user = result.user;
         const previous=localStorage.getItem(IDENTITY_KEY);if(previous&&previous!==user.id){const guest=await db.profiles.get(previous);if(guest?.identity==='guest')sessionStorage.setItem('pmforge.pendingGuest',previous)}
         let existing = await db.profiles.get(user.id);
-        if(!existing){try{const response=await fetch('/api/workspace',{cache:'no-store'});if(response.ok){const remote=await response.json();if(remote.data?.profile?.id===user.id){await importWorkspace(remote.data,{...remote.data.profile,identity:'member'},false);existing=await db.profiles.get(user.id)}}}catch{}}
+        if(!existing){const response=await fetch('/api/workspace',{cache:'no-store'});if(!response.ok)throw Error('Could not restore your account workspace. Please retry.');const remote=await response.json();if(remote.data){if(remote.data.profile?.id!==user.id)throw Error('The account identity changed. Please sign in again.');await importWorkspace(remote.data,{...remote.data.profile,identity:'member'},false);existing={...remote.data.profile,identity:'member'}}}
 
         const profile: Profile = existing || {
           id: user.id,

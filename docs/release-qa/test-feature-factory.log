@@ -1,0 +1,35 @@
+
+> pmforge@1.0.0 test:feature-factory
+> node --import tsx --test tests/feature-factory.test.ts && node --import tsx scripts/feature-factory-smoke.ts
+
+✔ seeded hidden effort is deterministic and bounded (2.8677ms)
+✔ six points are enforced; re-reading costs nothing (7.6868ms)
+✔ Friday protects one point for the release call (3.652ms)
+✔ allocation total cannot drift and invalid values do not apply (1.1838ms)
+✔ uncompleted cards never ship (0.5716ms)
+✔ go cannot bypass enforced criteria; hold can (0.7799ms)
+✔ flags limit impact without erasing debt (0.7459ms)
+✔ cut scope excludes high-debt completed cards (0.5321ms)
+✔ Truth matters and is instrumented once (0.8717ms)
+✔ all six people answer eight state-dependent topics; low trust gates depth (1.0609ms)
+✔ declines require a reason and preserve it verbatim (0.9772ms)
+✔ ignored messages age and expire with visible consequences (2.3444ms)
+✔ simulation functions do not mutate their input (0.6434ms)
+✔ stress results are seeded and a second same-day test costs nothing (0.8217ms)
+✔ a false evidence link cannot prove a gate (0.4686ms)
+✔ production advances once per day and authored reasons return in recap (0.7947ms)
+✔ incident diagnosis protects recovery attention and gates fixes (2.0163ms)
+✔ live metrics are not exposed by low-trust Kofi (0.3565ms)
+✔ atomic save corruption can recover previous good data (4.0121ms)
+✔ Velocity-first completes all three gates deterministically (86.45ms)
+✔ Stability-first completes all three gates deterministically (109.5643ms)
+✔ two seeds and strategies change at least 40% of day/event pairs (162.7319ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 787.8873
+Feature Factory: 30 deterministic full-quarter path runs; 91.2% day/event variation.

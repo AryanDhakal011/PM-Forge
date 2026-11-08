@@ -26,6 +26,14 @@
       "pass": true
     },
     {
+      "label": "guest run copied to member identity",
+      "pass": true
+    },
+    {
+      "label": "original guest copy preserved",
+      "pass": true
+    },
+    {
       "label": "accessibility authenticated practice",
       "pass": true
     },

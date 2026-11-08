@@ -86,3 +86,9 @@ docs/navigation-verification/dev-diagnosis.json
 .next-final/
 
 .auth-test-path
+
+# Isolated AI verification server
+.next-ai/
+
+# Isolated development cache; the default preview stays on port 3002.
+.next-development/

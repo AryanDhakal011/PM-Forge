@@ -1,0 +1,355 @@
+{
+  "base": "http://localhost:3016",
+  "checks": [
+    {
+      "label": "route loads /app",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app 320",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app 375",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app 768",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app 1024",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app 1440",
+      "pass": true
+    },
+    {
+      "label": "accessibility /app",
+      "pass": true
+    },
+    {
+      "label": "route loads /app/practice",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/practice 320",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/practice 375",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/practice 768",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/practice 1024",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/practice 1440",
+      "pass": true
+    },
+    {
+      "label": "accessibility /app/practice",
+      "pass": true
+    },
+    {
+      "label": "route loads /app/projects",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/projects 320",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/projects 375",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/projects 768",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/projects 1024",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/projects 1440",
+      "pass": true
+    },
+    {
+      "label": "accessibility /app/projects",
+      "pass": true
+    },
+    {
+      "label": "route loads /app/progress",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/progress 320",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/progress 375",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/progress 768",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/progress 1024",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/progress 1440",
+      "pass": true
+    },
+    {
+      "label": "accessibility /app/progress",
+      "pass": true
+    },
+    {
+      "label": "route loads /app/portfolio",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/portfolio 320",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/portfolio 375",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/portfolio 768",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/portfolio 1024",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/portfolio 1440",
+      "pass": true
+    },
+    {
+      "label": "accessibility /app/portfolio",
+      "pass": true
+    },
+    {
+      "label": "route loads /app/settings",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/settings 320",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/settings 375",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/settings 768",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/settings 1024",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/settings 1440",
+      "pass": true
+    },
+    {
+      "label": "accessibility /app/settings",
+      "pass": true
+    },
+    {
+      "label": "route loads /app/help",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/help 320",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/help 375",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/help 768",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/help 1024",
+      "pass": true
+    },
+    {
+      "label": "surface fits /app/help 1440",
+      "pass": true
+    },
+    {
+      "label": "accessibility /app/help",
+      "pass": true
+    },
+    {
+      "label": "project entry sacred-no",
+      "pass": true
+    },
+    {
+      "label": "project entry fits sacred-no",
+      "pass": true
+    },
+    {
+      "label": "project entry silent-churn",
+      "pass": true
+    },
+    {
+      "label": "project entry fits silent-churn",
+      "pass": true
+    },
+    {
+      "label": "project entry feature-factory",
+      "pass": true
+    },
+    {
+      "label": "project entry fits feature-factory",
+      "pass": true
+    },
+    {
+      "label": "project entry ghost-metric",
+      "pass": true
+    },
+    {
+      "label": "project entry fits ghost-metric",
+      "pass": true
+    },
+    {
+      "label": "project entry pivot-point",
+      "pass": true
+    },
+    {
+      "label": "project entry fits pivot-point",
+      "pass": true
+    },
+    {
+      "label": "project entry legacy-fracture",
+      "pass": true
+    },
+    {
+      "label": "project entry fits legacy-fracture",
+      "pass": true
+    },
+    {
+      "label": "project entry shadow-roadmap",
+      "pass": true
+    },
+    {
+      "label": "project entry fits shadow-roadmap",
+      "pass": true
+    },
+    {
+      "label": "project entry trojan-horse",
+      "pass": true
+    },
+    {
+      "label": "project entry fits trojan-horse",
+      "pass": true
+    },
+    {
+      "label": "project entry invisible-wall",
+      "pass": true
+    },
+    {
+      "label": "project entry fits invisible-wall",
+      "pass": true
+    },
+    {
+      "label": "project entry deadlock",
+      "pass": true
+    },
+    {
+      "label": "project entry fits deadlock",
+      "pass": true
+    },
+    {
+      "label": "project entry public-fracture",
+      "pass": true
+    },
+    {
+      "label": "project entry fits public-fracture",
+      "pass": true
+    },
+    {
+      "label": "project entry last-mile",
+      "pass": true
+    },
+    {
+      "label": "project entry fits last-mile",
+      "pass": true
+    },
+    {
+      "label": "accessibility today dark",
+      "pass": true
+    },
+    {
+      "label": "accessibility practice dark",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "accessibility": [
+    {
+      "label": "/app",
+      "violations": []
+    },
+    {
+      "label": "/app/practice",
+      "violations": []
+    },
+    {
+      "label": "/app/projects",
+      "violations": []
+    },
+    {
+      "label": "/app/progress",
+      "violations": []
+    },
+    {
+      "label": "/app/portfolio",
+      "violations": []
+    },
+    {
+      "label": "/app/settings",
+      "violations": []
+    },
+    {
+      "label": "/app/help",
+      "violations": []
+    },
+    {
+      "label": "today dark",
+      "violations": []
+    },
+    {
+      "label": "practice dark",
+      "violations": []
+    }
+  ],
+  "screenshots": [
+    "app",
+    "practice",
+    "projects",
+    "progress",
+    "portfolio",
+    "settings",
+    "help",
+    "today-dark"
+  ]
+}

@@ -50,7 +50,17 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
         const member = response.ok ? await response.json() : null;
         if (member?.user) {
           const id = member.user.id;
-          const saved = await db.profiles.get(id);
+          let saved = await db.profiles.get(id);
+          if(!saved){
+            const response=await fetch('/api/workspace',{cache:'no-store'});
+            if(!response.ok)throw Error('Could not restore your account workspace.');
+            const remote=await response.json();
+            if(remote.data){
+              if(remote.data.profile?.id!==id)throw Error('Account identity changed.');
+              await importWorkspace(remote.data,{...remote.data.profile,identity:'member'},false);
+              saved={...remote.data.profile,identity:'member'};
+            }
+          }
           const next: Profile = saved || {
             id,
             name: member.user.name || "",

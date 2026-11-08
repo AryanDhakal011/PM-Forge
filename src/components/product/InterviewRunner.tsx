@@ -58,6 +58,7 @@ import styles from "./Product.module.css";
 import VoiceNote from "./VoiceNote";
 import dynamic from 'next/dynamic';
 import {createLive} from '@/lib/product/interview-live';
+import {mirrorAdvance,releaseAI} from '@/lib/interview-ai/client';
 import {nextMove,interviewStageOf,workbenchCue} from '@/lib/product/interview-ux';
 import InterviewStageRail from './interview/InterviewStageRail';
 import {warmups} from '@/lib/product/interview-prompts';
@@ -183,6 +184,7 @@ export default function InterviewRunner({ runId }: { runId: string }) {
   const [liveBusy,setLiveBusy]=useState(false);
   const [microphoneActive,setMicrophoneActive]=useState(false);
   const liveBusyRef=useRef(false);
+  const advancing=useRef(false);
   useEffect(() => {
     if (run?.stage !== "reflection") return;
     const update = () =>
@@ -413,15 +415,24 @@ export default function InterviewRunner({ runId }: { runId: string }) {
   const stepIndex = stages.indexOf(run.stage);
   const estimateResult =
     q.category === "estimation" ? estimate(q.id, run.dials, run.seed) : null;
+  const saveForAI=async(patch:Partial<Run>)=>{
+    if(!current.current||conflict)return undefined;
+    clearTimeout(saveTimer.current);saveTimer.current=undefined;
+    current.current={...current.current,...patch};setRun(current.current);
+    return await persist(current.current,true)?current.current:undefined;
+  };
   const next = async () => {
     const issue = stageIssue(current.current!);
-    if (liveBusyRef.current) return;
+    if (liveBusyRef.current||advancing.current) return;
     if (issue) {
       setError(issue);
       return;
     }
+    advancing.current=true;
+    try {
     clearTimeout(saveTimer.current);
     saveTimer.current = undefined;
+    if(current.current?.live?.ai?.enabled){setSaving(true);current.current=await mirrorAdvance(current.current)}
     if(run.stage==='primer'){elapsedRef.current=0;setClock(0)}
     const nextRun = advance(current.current!);
     current.current = nextRun;
@@ -441,9 +452,12 @@ export default function InterviewRunner({ runId }: { runId: string }) {
     window.scrollTo({ top: 0, behavior: "instant" });
     if (nextRun.stage === "feedback")
       router.replace(`/app/run/${run.id}/debrief`, { scroll: false });
+    }catch(error){setError(error instanceof Error?error.message:'Could not open the next stage. Your work is preserved.')}
+    finally{advancing.current=false;setSaving(false)}
   };
   const pause = () => {
     pausedRef.current = !paused;
+    if(!paused)void releaseAI(current.current!);
     change({ status: paused ? "active" : "paused" }, true);
   };
   const restore = async () => {
@@ -544,6 +558,7 @@ export default function InterviewRunner({ runId }: { runId: string }) {
           </div>
         </div>
         <div className={styles.row}>
+          <span className={liveStyles.saveIndicator} role="status">{saving?"Saving…":error?"Check notice":savedAt?"Saved on device":"Device workspace"}</span>
           <span
             className={`${styles.pill} ${styles.small}`}
             role="timer"
@@ -572,13 +587,13 @@ export default function InterviewRunner({ runId }: { runId: string }) {
         </p>
         <span>{q.status} content · local-first</span>
       </div>}
-      {run.stage==='primer'?<section className={liveStyles.prepare} data-testid="interview-prepare"><div className={liveStyles.prepareBrief}><span className={styles.eyebrow}>{category.label} · {q.level} · {q.minutes} min estimated practice</span><h1 data-stage-heading tabIndex={-1}>{q.title}</h1><p className={liveStyles.prepareLead}>{q.primer[0]}</p><p><strong>Your decision:</strong> {q.goal}</p><details><summary>Keep these in mind</summary>{q.primer.slice(1).map((text,i)=><p key={i}>{text}</p>)}</details></div><LiveInterviewDesk preparing run={run} question={q} change={change} onBusy={busy=>{liveBusyRef.current=busy;setLiveBusy(busy)}} onAudioState={setMicrophoneActive}/><div className={liveStyles.prepareActions}><div><strong>Your next move</strong><p>{paused?'Resume preparation before beginning.':stageIssue(run)||nextMove.primer.cue}</p><small>{saving?'Saving…':savedAt?'Saved on device · '+savedAt:'Saved on this device'} · The interview clock has not started.</small>{error&&<p role="alert">{error}</p>}</div>{paused?<button className={styles.primary} onClick={pause}>Resume preparation</button>:<button className={styles.primary} disabled={saving||conflict||!!stageIssue(run)} onClick={()=>void next()}>Begin interview <ArrowRight size={17}/></button>}</div></section>:<>
+      {run.stage==='primer'?<section className={liveStyles.prepare} data-testid="interview-prepare"><div className={liveStyles.prepareBrief}><span className={styles.eyebrow}>{category.label} · {q.level} · {run.live?.ai?.enabled?Math.round(run.live.ai.timeboxSeconds/60):q.minutes} min {run.live?.ai?.enabled?'soft timebox':'estimated practice'}</span><h1 data-stage-heading tabIndex={-1}>{q.title}</h1><p className={liveStyles.prepareLead}>{q.primer[0]}</p><p><strong>Your decision:</strong> {q.goal}</p><details><summary>Keep these in mind</summary>{q.primer.slice(1).map((text,i)=><p key={i}>{text}</p>)}</details></div><LiveInterviewDesk preparing saveForAI={saveForAI} run={run} question={q} change={change} onBusy={busy=>{liveBusyRef.current=busy;setLiveBusy(busy)}} onAudioState={setMicrophoneActive}/><div className={liveStyles.prepareActions}><div><strong>Your next move</strong><p>{paused?'Resume preparation before beginning.':stageIssue(run)||nextMove.primer.cue}</p><small>{saving?'Saving…':savedAt?'Saved on device · '+savedAt:'Saved on this device'} · The interview clock has not started.</small>{error&&<p role="alert">{error}</p>}</div>{paused?<button className={styles.primary} onClick={pause}>Resume preparation</button>:<button className={styles.primary} disabled={saving||conflict||!!stageIssue(run)} onClick={()=>void next()}>Begin interview <ArrowRight size={17}/></button>}</div></section>:<>
       <div className={run.live?liveStyles.sessionGrid:styles.runGrid}>
         <div className={styles.runMain} ref={stageRef}>
           <div className={run.live?liveStyles.sessionStage:styles.runStage}>
             <div className={liveStyles.nextMove}><span>Your next move · {['Prepare','Frame','Investigate','Decide','Reflect'][interviewStageOf(run.stage)]}</span><p>{run.live?.pending?'Address the interviewer’s current challenge before returning to your work.':run.stage==='workbench'?(workbenchCue[q.category]||nextMove.workbench.cue):nextMove[run.stage].cue}</p></div>
             <div className={run.live?liveStyles.roomGrid:undefined}>
-            {run.live&&<div className={liveStyles.conversation}><LiveInterviewDesk run={run} question={q} change={change} onBusy={busy=>{liveBusyRef.current=busy;setLiveBusy(busy)}} onAudioState={setMicrophoneActive}/></div>}
+            {run.live&&<div className={liveStyles.conversation}><LiveInterviewDesk saveForAI={saveForAI} run={run} question={q} change={change} onBusy={busy=>{liveBusyRef.current=busy;setLiveBusy(busy)}} onAudioState={setMicrophoneActive}/></div>}
             <div className={liveStyles.work}>
             {run.guided && run.stage==='fundamentals' && (
               <p className={styles.finePrint}>
@@ -665,7 +680,7 @@ export default function InterviewRunner({ runId }: { runId: string }) {
                 </button>
               </section>
             ) : (
-              <div data-stage-content inert={liveBusy}>
+              <div id="native-interview-workbench" tabIndex={-1} data-stage-content inert={liveBusy}>
                 {run.live&&<RealityChecks run={run} question={q} change={change}/>}
                 {run.stage === "fundamentals" && (
                   <>
@@ -1932,7 +1947,7 @@ export default function InterviewRunner({ runId }: { runId: string }) {
             </div>
           </div>
         </div>
-        <details className={styles.evidenceDesk} open={deskOpen} onToggle={e=>setDeskOpen(e.currentTarget.open)}><summary>Evidence & context <span className={styles.badge}>{budget}/{evidenceBudget(q.level)}</span></summary><p className={liveStyles.evidenceHint}>Choose a cut that could change your conclusion. Each request spends the credits shown.</p>{[{label:'Available',cards:q.evidence.filter(c=>!run.evidenceIds.includes(c.id)&&!evidenceUnavailableReason(run,q,c.id))},{label:'Requested',cards:q.evidence.filter(c=>run.evidenceIds.includes(c.id))},{label:'Not yet available',cards:q.evidence.filter(c=>!run.evidenceIds.includes(c.id)&&!!evidenceUnavailableReason(run,q,c.id))}].filter(g=>g.cards.length).map(group=><section key={group.label} className={liveStyles.evidenceGroup}><h2>{group.label}</h2>{group.cards.map(card=>{const opened=run.evidenceIds.includes(card.id),reason=evidenceUnavailableReason(run,q,card.id);return <div key={card.id}>{opened?<article className={styles.evidenceCard} data-open="true"><span className={styles.badge}>{card.tag==='REFERENCE'?'Unverified reference':'Simulated data'}</span><h3>{card.title}</h3><p>{card.text}</p></article>:<><button className={styles.evidenceCard} disabled={!!reason} aria-describedby={reason?'evidence-reason-'+card.id:undefined} onClick={()=>change(requestEvidence(run,card.id),true)}><span>{card.cost} credit{card.cost===1?'':'s'}</span><h3>{card.title}</h3><span>Request evidence →</span></button>{reason&&<p id={'evidence-reason-'+card.id} className={liveStyles.lockReason}>{reason}</p>}</>}</div>})}</section>)}{run.evidenceIds.length>0&&<p role="status" className={liveStyles.evidenceHint}>Requested: {q.evidence.find(c=>c.id===run.evidenceIds.at(-1))?.title}. {budget} credits remain.</p>}<details><summary>Decision trail · {run.decisions.length} actions</summary><ol>{run.decisions.slice(-15).map((d,i)=><li key={i}>{d.action}: {d.value}</li>)}</ol></details><p className={liveStyles.evidenceHint}>Simulated operating data and unverified reference material are labeled separately.</p></details>
+        <details className={styles.evidenceDesk} open={deskOpen} onToggle={e=>setDeskOpen(e.currentTarget.open)}><summary>Evidence & context <span className={styles.badge}>{budget}/{evidenceBudget(q.level)}</span></summary><p className={liveStyles.evidenceHint}>Choose a cut that could change your conclusion. Each request spends the credits shown.</p>{[{label:'Available',cards:q.evidence.filter(c=>!run.evidenceIds.includes(c.id)&&!evidenceUnavailableReason(run,q,c.id))},{label:'Requested',cards:q.evidence.filter(c=>run.evidenceIds.includes(c.id))},{label:'Not yet available',cards:q.evidence.filter(c=>!run.evidenceIds.includes(c.id)&&!!evidenceUnavailableReason(run,q,c.id))}].filter(g=>g.cards.length).map(group=><section key={group.label} className={liveStyles.evidenceGroup}><h2>{group.label}</h2>{group.cards.map(card=>{const opened=run.evidenceIds.includes(card.id),reason=evidenceUnavailableReason(run,q,card.id);return <div key={card.id}>{opened?<article id={'evidence-'+card.id} tabIndex={-1} className={styles.evidenceCard} data-open="true"><span className={styles.badge}>{card.tag==='REFERENCE'?'Unverified reference':'Simulated data'}</span><h3>{card.title}</h3><p>{card.text}</p></article>:<><button className={styles.evidenceCard} disabled={!!reason} aria-describedby={reason?'evidence-reason-'+card.id:undefined} onClick={()=>change(requestEvidence(run,card.id),true)}><span>{card.cost} credit{card.cost===1?'':'s'}</span><h3>{card.title}</h3><span>Request evidence →</span></button>{reason&&<p id={'evidence-reason-'+card.id} className={liveStyles.lockReason}>{reason}</p>}</>}</div>})}</section>)}{run.evidenceIds.length>0&&<p role="status" className={liveStyles.evidenceHint}>Requested: {q.evidence.find(c=>c.id===run.evidenceIds.at(-1))?.title}. {budget} credits remain.</p>}<details><summary>Decision trail · {run.decisions.length} actions</summary><ol>{run.decisions.slice(-15).map((d,i)=><li key={i}>{d.action}: {d.value}</li>)}</ol></details><p className={liveStyles.evidenceHint}>Simulated operating data and unverified reference material are labeled separately.</p></details>
         {!run.live&&<aside className={styles.runNotes}>
           <section>
             <h3>Your session</h3>
@@ -1980,7 +1995,7 @@ export default function InterviewRunner({ runId }: { runId: string }) {
             className={styles.primary}
             onClick={async () => {
               clearTimeout(saveTimer.current);
-              if (await persist(current.current!, true)) router.push("/app");
+              if (await persist(current.current!, true)){await releaseAI(current.current!);router.push("/app")}
             }}
           >
             Save & exit

@@ -1,0 +1,41 @@
+
+> pmforge@1.0.0 test:ghost-metric
+> node --import tsx --test tests/ghost-metric.test.ts tests/ghost-metric-presentation.test.ts
+
+✔ briefing introduces four owners, the role, all resources and the suspicion before drawers (2.5925ms)
+✔ every first-use guide has recorded spoken teaching and three clear reference labels (3.7651ms)
+✔ paraphrases never repeat either of the previous two variants, and remain deterministic (7.4049ms)
+✔ malformed variant preferences do not break a guide (0.2525ms)
+✔ remaining-action text reflects affordable drawers, sequencing and exhausted fix hours (5.4113ms)
+✔ all regional Ravi clips use the recast; captions match every referenced file (10.5725ms)
+✔ authored anatomy adds to the headline without confusing growth and total share (1.5913ms)
+✔ P1 all causes, direct: truth lands with a skeptical owner and a second-source scene (14.8894ms)
+✔ P2 all causes, evolution: correction has a measurable delay and mandate is reachable (1.3578ms)
+✔ P3 private-first without briefing Marcus produces a leak and a specific trust cost (0.9244ms)
+✔ briefing Marcus before the chapter exits prevents the leak (0.8055ms)
+✔ P4 little evidence plus a confident promise returns in the crisis (1.2761ms)
+✔ P5 skipping all audit leaves a wide band and a consequential silence path (0.4024ms)
+✔ P6 overconfidence changes credibility but never reveals the hidden calibration before debrief (0.5406ms)
+✔ P7 a good-looking metric with leakage keeps those loopholes in the board result (0.9951ms)
+✔ P8 knowingly hiding a quantified ghost records the choice and heavier credibility loss (0.6426ms)
+✔ P9 verification uses prep once, consumes delay, and cannot be repeated for free (1.0212ms)
+✔ P10 a data room adds three days and lowers CEO trust without inventing a cause (1.1389ms)
+✔ Surgeon is reachable at the actual 11-hour minimum and requires the clean controls (0.9809ms)
+✔ drawers cannot overspend, reopen, or reveal retry/partner mass without their joins (0.7613ms)
+✔ a wrong join spends an hour, explains why, and never confirms a cause (0.7924ms)
+✔ the uncertainty band always contains the ground truth for every affordable audit and join order (99.7669ms)
+✔ a clean all-customer metric shows +40%; cohorts use their own denominators (0.4787ms)
+✔ red-team fixes spend a maximum of three hours; cohort transparency is free (3.7783ms)
+✔ slides cannot cite unopened sources or exceed the scramble capacity (1.4169ms)
+✔ range validation rejects NaN, reversed ranges, and out-of-range points (2.1769ms)
+✔ unknown action fields, flags, metric choices and scene jumps are rejected (0.9097ms)
+✔ replay is deterministic and a fork never mutates its source event array (0.4156ms)
+✔ every emitted conversation exists and no hidden cause is named by an unquantified private conversation (3.964ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 779.2808

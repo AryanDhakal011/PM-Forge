@@ -1,0 +1,80 @@
+{
+  "at": "2026-11-08T07:24:52.659Z",
+  "suites": [
+    {
+      "task": "test",
+      "exitCode": 0,
+      "seconds": 7.7
+    },
+    {
+      "task": "test:auth",
+      "exitCode": 0,
+      "seconds": 8.8
+    },
+    {
+      "task": "test:ai",
+      "exitCode": 0,
+      "seconds": 8.7
+    },
+    {
+      "task": "test:interview-live",
+      "exitCode": 0,
+      "seconds": 7.8
+    },
+    {
+      "task": "test:portfolio",
+      "exitCode": 0,
+      "seconds": 6.5
+    },
+    {
+      "task": "test:platform",
+      "exitCode": 0,
+      "seconds": 4.7
+    },
+    {
+      "task": "test:deadlock",
+      "exitCode": 0,
+      "seconds": 68.9
+    },
+    {
+      "task": "test:sacred-no",
+      "exitCode": 0,
+      "seconds": 1.1
+    },
+    {
+      "task": "test:ghost-metric",
+      "exitCode": 0,
+      "seconds": 1.4
+    },
+    {
+      "task": "test:trojan-horse",
+      "exitCode": 0,
+      "seconds": 1
+    },
+    {
+      "task": "test:invisible-wall",
+      "exitCode": 0,
+      "seconds": 1.3
+    },
+    {
+      "task": "test:feature-factory",
+      "exitCode": 0,
+      "seconds": 4.5
+    },
+    {
+      "task": "test:silent-churn",
+      "exitCode": 0,
+      "seconds": 3.6
+    },
+    {
+      "task": "test:legacy-fracture",
+      "exitCode": 0,
+      "seconds": 1.9
+    },
+    {
+      "task": "test:pivot-point",
+      "exitCode": 0,
+      "seconds": 2.5
+    }
+  ]
+}

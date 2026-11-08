@@ -1,0 +1,67 @@
+{
+  "base": "http://localhost:3002",
+  "checks": [
+    {
+      "label": "input My current region",
+      "pass": true
+    },
+    {
+      "label": "accessibility AI prepare",
+      "pass": true
+    },
+    {
+      "label": "server-authoritative Begin",
+      "pass": true
+    },
+    {
+      "label": "input Private scratch notes",
+      "pass": true
+    },
+    {
+      "label": "one committed position gives one reply",
+      "pass": true
+    },
+    {
+      "label": "private draft preserved",
+      "pass": true
+    },
+    {
+      "label": "one candidate entry",
+      "pass": true
+    },
+    {
+      "label": "real Gemini reply confirmed",
+      "pass": true
+    },
+    {
+      "label": "accessibility live AI room",
+      "pass": true
+    },
+    {
+      "label": "stop AI preserves run",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "accessibility": [
+    {
+      "label": "AI prepare",
+      "violations": []
+    },
+    {
+      "label": "live AI room",
+      "violations": []
+    }
+  ],
+  "screenshots": [
+    "ai-prepare-desktop",
+    "live-ai-follow-up"
+  ],
+  "live": {
+    "source": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "latencyMs": 1934,
+    "externalTurns": 1
+  }
+}

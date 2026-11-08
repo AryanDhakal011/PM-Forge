@@ -1,0 +1,7 @@
+'use client';
+import {useEffect,useState} from 'react';
+import {usePathname} from 'next/navigation';
+import s from './WorkspaceArrival.module.css';
+export function WorkspaceNavigation(){const path=usePathname(),[pending,setPending]=useState(false);useEffect(()=>setPending(false),[path]);useEffect(()=>{const go=(event:MouseEvent)=>{if(event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;const link=(event.target as Element)?.closest('a');if(!link||link.target||link.hasAttribute('download'))return;const url=new URL(link.href,location.href);if(url.origin===location.origin&&url.pathname.startsWith('/app')&&url.pathname!==location.pathname)setPending(true)};const reset=()=>setPending(false);document.addEventListener('click',go,true);window.addEventListener('popstate',reset);return()=>{document.removeEventListener('click',go,true);window.removeEventListener('popstate',reset)}},[]);useEffect(()=>{if(!pending)return;const id=setTimeout(()=>setPending(false),15000);return()=>clearTimeout(id)},[pending]);return pending?<div className={s.navigation} role="status"><span className={s.fold} aria-hidden="true"/>Opening your next page<span className={s.track}/></div>:null}
+export function WorkspaceLoading(){return <div className={s.loading} role="status"><div className={s.paper} aria-hidden="true"><i/><i/><i/></div><p>Making room for your next decision.</p></div>}
+export function WorkspaceArrival({children}:{children:React.ReactNode}){return <div className={s.arrival}>{children}</div>}

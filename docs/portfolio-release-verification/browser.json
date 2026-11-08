@@ -1,0 +1,200 @@
+{
+  "base": "http://localhost:3012",
+  "checks": [
+    {
+      "label": "input Full name",
+      "pass": true
+    },
+    {
+      "label": "input One-line value proposition",
+      "pass": true
+    },
+    {
+      "label": "input Contact email",
+      "pass": true
+    },
+    {
+      "label": "input About you",
+      "pass": true
+    },
+    {
+      "label": "accessibility profile",
+      "pass": true
+    },
+    {
+      "label": "profile persists on reload",
+      "pass": true
+    },
+    {
+      "label": "accessibility case editor",
+      "pass": true
+    },
+    {
+      "label": "case narrative",
+      "pass": true
+    },
+    {
+      "label": "honest provenance",
+      "pass": true
+    },
+    {
+      "label": "accessibility resume",
+      "pass": true
+    },
+    {
+      "label": "ATS PDF created",
+      "pass": true
+    },
+    {
+      "label": "PDF parsed entirely on the device",
+      "pass": true
+    },
+    {
+      "label": "input Company",
+      "pass": true
+    },
+    {
+      "label": "input Role",
+      "pass": true
+    },
+    {
+      "label": "input Next action",
+      "pass": true
+    },
+    {
+      "label": "accessibility applications",
+      "pass": true
+    },
+    {
+      "label": "input Portfolio handle",
+      "pass": true
+    },
+    {
+      "label": "signed page rejects missing token",
+      "pass": true
+    },
+    {
+      "label": "accessibility share",
+      "pass": true
+    },
+    {
+      "label": "accessibility public reader",
+      "pass": true
+    },
+    {
+      "label": "input Your question",
+      "pass": true
+    },
+    {
+      "label": "answer has exact case citation",
+      "pass": true
+    },
+    {
+      "label": "input Your question",
+      "pass": true
+    },
+    {
+      "label": "undocumented work refused",
+      "pass": true
+    },
+    {
+      "label": "public page fits 390",
+      "pass": true
+    },
+    {
+      "label": "public page fits 320",
+      "pass": true
+    },
+    {
+      "label": "portfolio count in progress",
+      "pass": true
+    },
+    {
+      "label": "interview reflected in progress",
+      "pass": true
+    },
+    {
+      "label": "accessibility progress",
+      "pass": true
+    },
+    {
+      "label": "all five authored project formats contribute completed progress",
+      "pass": true
+    },
+    {
+      "label": "evidence text contained 390",
+      "pass": true
+    },
+    {
+      "label": "evidence text contained 320",
+      "pass": true
+    },
+    {
+      "label": "help starts at top",
+      "pass": true
+    },
+    {
+      "label": "test publication revoked",
+      "pass": true
+    },
+    {
+      "label": "revocation closes signed page",
+      "pass": true
+    },
+    {
+      "label": "all visible projects playable with valid flags",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "accessibility": [
+    {
+      "label": "profile",
+      "violations": []
+    },
+    {
+      "label": "case editor",
+      "violations": []
+    },
+    {
+      "label": "resume",
+      "violations": []
+    },
+    {
+      "label": "applications",
+      "violations": []
+    },
+    {
+      "label": "share",
+      "violations": []
+    },
+    {
+      "label": "public reader",
+      "violations": []
+    },
+    {
+      "label": "progress",
+      "violations": []
+    }
+  ],
+  "screenshots": [
+    "profile-desktop",
+    "case-editor",
+    "case-deep-dive",
+    "resume",
+    "applications",
+    "share",
+    "public-desktop",
+    "public-390",
+    "public-320",
+    "progress",
+    "progress-with-authored-saves",
+    "evidence-390",
+    "evidence-320"
+  ],
+  "publication": {
+    "handle": "pmf-check-1794093840170",
+    "url": "http://localhost:3012/p/pmf-check-1794093840170?t=WObwVs_dYelq2XEU7MQP9_VJXpEu2OvzJyztjS92VXk"
+  }
+}

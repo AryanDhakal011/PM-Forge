@@ -125,7 +125,7 @@ const info: Record<
       },
       {
         title: "Why is voice typing unavailable?",
-        text: "Voice is optional in behavioral stories and depends on browser support, a secure connection, and your microphone permission. It may use the browser provider’s speech service. Type into the same fields if it is unavailable; PMForge never stores audio.",
+        text: "Voice is optional in behavioral stories and depends on browser support, a secure connection, and your microphone permission. It may use the browser provider’s speech service. Type into the same fields if it is unavailable; local audio recording requires a separate opt-in and stays on this device.",
       },
       {
         title: "Why is the expert trace locked?",
@@ -162,34 +162,36 @@ const info: Record<
     ],
   },
   "content-policy": {
-    eyebrow: "Trust is a product feature",
-    title: "Clear about what we know. Clear about what we don’t.",
-    intro:
-      "All 63 scenarios in this preview are draft content from the founder’s handoff. No question is labelled human-reviewed or published.",
-    sections: [
-      {
-        title: "Draft, not verified",
-        text: "AI-assisted material requires qualified human review before publication. Reviewers must check arithmetic, source dates, realistic choices, scoring paths, and accessibility. This preview does not imply reviewer approval.",
-      },
-      {
-        title: "Simulated companies and honest provenance",
-        text: "Internal company metrics are simulated for practice. Fictional company names avoid suggesting access to real private data. Public statistics supplied in the handoff are labelled unverified references until source verification is complete.",
-      },
-      {
-        title: "Deterministic, inspectable feedback",
-        text: "The engine scores structured choices, requested evidence, rankings, assumption bands, and verification checks. General free text is not scored. Behavioral stories receive a clearly labelled structure-based estimate, never a truthfulness verdict.",
-      },
-      {
-        title: "No single right script",
-        text: "Each scenario keeps at least two alternate defensible paths. Expert reasoning opens after feedback and one self-grade or two minutes of reflection. Provisional bands describe recorded actions and are not predictions of hiring outcomes.",
-      },
-      {
-        title: "Report a content issue",
-        text: "Include the question ID, content version, the exact claim, and an explanation or primary source. The Contribute page provides a local report template you can copy; reports are not silently sent anywhere.",
-      },
-    ],
-  },
-  changelog: {
+  "eyebrow": "Feedback policy · updated 8 November 2026",
+  "title": "Evidence before verdicts.",
+  "intro": "Practice feedback should help you inspect a decision, not pretend to certify your ability. Draft content and provisional evaluations stay visibly labeled.",
+  "sections": [
+    {
+      "title": "What the rubric evaluates",
+      "text": "The application calculates rubric results from recorded choices, evidence requests, rankings, assumptions and verification checks. AI conversation cannot change scores, evidence costs or stage permissions. General prose is not silently assigned a hiring score. Behavioral structure estimates are labeled and never claim to verify truthfulness."
+    },
+    {
+      "title": "AI interviewer limits",
+      "text": "AI may phrase a question, probe a candidate point, offer a grounded challenge and provide qualitative reflection with traceable quotes. It must not invent scenario metrics, expose locked evidence, fabricate something you said, publish your work or claim hiring readiness. Unsupported output is rejected and can lead to guided continuation. Automated validation reduces errors but does not guarantee every answer is correct."
+    },
+    {
+      "title": "Practice, assessment and delivery diagnostics",
+      "text": "Assessment-style runs do not reveal ideal answers during the attempt. Optional thinking prompts belong to explicitly selected practice. Timing is a soft learning aid and does not lower the rubric. Approximate speech pace, fillers and delivery observations are separate from reasoning quality; they do not judge accent, disability, personality, originality, truthfulness or employability."
+    },
+    {
+      "title": "Honest provenance and human review",
+      "text": "Simulated practice is labeled Strategic Teardown & Stress Test. Production Impact means candidate-reported real work with an ownership confirmation, not independent verification. AI prompt/scenario tuning is not model fine-tuning. Evaluation examples are fictional and separate from prompt examples; user transcripts are not silently repurposed as training data. Content receives human-reviewed status only when qualified review is actually recorded."
+    },
+    {
+      "title": "Inspect, challenge and correct",
+      "text": "Review your original transcript, evidence, decision trail and rubric explanation. When reporting an issue, include the scenario ID/version, affected step, expected behavior and a primary source where relevant. The Contribute page creates a local report template; it does not silently send feedback. Omit personal or confidential material. Corrections should retain version history and should not silently rewrite past user words or results."
+    },
+    {
+      "title": "Fairness, accessibility and appropriate use",
+      "text": "Practice supports typing, keyboard access, reduced motion and optional speech. Do not use provisional results to rank job applicants or make employment decisions. Cross-browser and physical-device coverage, bias review and expert calibration must be measured rather than assumed. Feedback labels will describe those limits until evidence supports stronger claims."
+    }
+  ]
+},  changelog: {
     eyebrow: "The workshop log",
     title: "What changed in this build.",
     intro: "MVP preview · 29 October 2026",
@@ -256,51 +258,83 @@ const info: Record<
       },
     ],
   },
-  privacy: {
-    eyebrow: "A plain-language privacy note",
-    title: "Your practice deserves a private room.",
-    intro:
-      "Guest data stays on your device. Connected account data is stored on the configured PMForge server. This preview has not completed legal review.",
-    sections: [
-      {
-        title: "Guest work",
-        text: "A random device profile, structured run decisions, written notes, bookmarks, records, and settings are stored locally in IndexedDB or browser preferences. No email is needed for guest mode. Export, import, and reset are available in Settings.",
-      },
-      {
-        title: "Configured accounts",
-        text: "Google or GitHub sign-in shares the basic provider identity needed for authentication. Better Auth stores account and session records on the configured server. Your workspace syncs only with an authenticated session. Provider credentials are never sent to the client.",
-      },
-      {
-        title: "Voice typing",
-        text: "Speech is optional. Browser dictation may use the browser’s speech provider; configured server transcription sends short consented chunks to that provider. Local recording is a separate opt-in and stays in this browser. Transcript sync is optional. Portfolio audio is uploaded only with separate explicit publishing consent.",
-      },
-      {
-        title: "Your controls",
-        text: "Download your device workspace, delete individual decision records, reset the current local profile, sign out, or delete a configured server account. Account deletion and local device reset are distinct operations. Clear a shared device’s profile separately after export.",
-      },
-    ],
-  },
-  terms: {
-    eyebrow: "Using this practice space",
-    title: "A rehearsal. Not a hiring promise.",
-    intro:
-      "PMForge is an educational MVP preview. These starter terms need legal review before a public account launch.",
-    sections: [
-      {
-        title: "Practice content",
-        text: "All scenarios are draft educational material. Simulated data and fictional company situations are not claims about real organisations. Do not rely on a scenario for medical, financial, legal, or operational decisions.",
-      },
-      {
-        title: "Scores and outcomes",
-        text: "Deterministic rubric feedback describes a particular practice run. It is not a validated hiring assessment or a promise of interview success. Behavioral scores estimate structure; they do not verify whether a story is true.",
-      },
-      {
-        title: "Your responsibility and control",
-        text: "Do not enter confidential information or personal data about others. Guest storage can be cleared by your browser, so export important work. You retain control of your local records and can delete configured account data through Account settings.",
-      },
-    ],
-  },
-};
+  "privacy": {
+  "eyebrow": "Privacy · updated 8 November 2026",
+  "title": "Your practice deserves a private room.",
+  "intro": "This notice describes what PMForge currently stores and sends. Private means not published to other users; it does not always mean data never leaves your device.",
+  "sections": [
+    {
+      "title": "Who operates this service",
+      "text": "PMForge is operated by the owner identified in the live service contact details. Operator identity, jurisdiction and a working privacy contact must be supplied before public launch. Until then, this is a local testing service."
+    },
+    {
+      "title": "Device storage and essential cookies",
+      "text": "Guest profiles, decisions, notes, settings, case drafts, applications and approved local media use IndexedDB and browser storage. Authentication and verified guest-AI sessions use essential cookies; these are not advertising cookies. We do not use third-party advertising trackers in Career Studio. Browser clearing, device loss or storage limits can remove local work. Export private backups; Studio backups include local evidence files and publishing keys."
+    },
+    {
+      "title": "Accounts and workspace synchronization",
+      "text": "An account stores identity, verification, hashed credentials, sessions and synced workspace text on the PMForge server. Email delivery uses the configured email provider; optional OAuth providers supply basic identity when you choose them. Account workspace synchronization may include private case and application text. Interview transcripts and outlines follow the separate transcript-sync choice. Local audio and evidence images are not automatically included in account sync."
+    },
+    {
+      "title": "AI interviews and provider processing",
+      "text": "Guided practice makes no generative-AI inference calls. The fictional free pilot sends approved case positions and unlocked scenario facts to Google Gemini; it excludes arbitrary scratch notes and personal career stories. Google unpaid-service terms permit service improvement and human review. Do not submit personal, sensitive, confidential or employer-private material to the free pilot. Personal behavioral practice stays local/guided unless an appropriate production data configuration is explicitly approved. Provider processing and portfolio publication are separate choices."
+    },
+    {
+      "title": "Microphone, transcription and speech",
+      "text": "Typing is complete without a microphone. Browser dictation or speech synthesis may use the browser vendor and is not guaranteed private or universally available. Microphone access, retaining local audio, and transcript synchronization are separate controls. Configured paid transcription or voice providers require explicit operational approval and never activate automatically in $0 mode. Switching to typing stops microphone capture and preserves captured work."
+    },
+    {
+      "title": "Portfolio publishing and visitors",
+      "text": "PDF profile parsing and image flattening/redaction run locally. Evidence files upload only when you publish an approved snapshot. A public link can be opened by anyone; an unlisted signed link can be opened by anyone possessing it until expiry or revocation. Pages default to noindex, which requests search engines not index them but is not access control. Published snapshots may contain your chosen contact details and case evidence. Revocation deletes that publication and uploaded assets, not copies a visitor already saved. Aggregate reading events are off unless the owner enables them for a published snapshot; those counts are events, not unique visitors, and use no tracking cookies."
+    },
+    {
+      "title": "Operational records and retention",
+      "text": "Private AI recovery state is encrypted on the server for up to 24 hours and removed on the next scheduled or admission cleanup; expired sessions are inaccessible. Operational AI usage counters are retained for up to 90 days and do not contain full answers. Account data remains until account deletion or the operator retention policy applies. Published snapshots expire on their configured date. Private host backups have a separate operator-managed retention schedule and must be covered in the live service notice; removal from backups is not promised to be immediate."
+    },
+    {
+      "title": "Your choices, deletion and requests",
+      "text": "Use Settings to export or reset device work, delete a server account, or manage sync. Use interview Practice settings to delete private server AI sessions while keeping the local transcript. Use Share to revoke published links and assets. Account deletion, device reset and publication revocation are distinct operations; use each control that applies. You may request access, correction, deletion or other rights available in your jurisdiction through the live privacy contact. Never send passwords, full backups or confidential transcripts in a support request."
+    },
+    {
+      "title": "Security, transfers and changes",
+      "text": "PMForge uses origin checks, bounded requests, HttpOnly authentication cookies, server-side ownership checks and configurable HTTPS. No system can guarantee absolute security. Hosting, email, AI or browser services may process data outside your country under their own terms. Check this notice and the chosen provider disclosures before using an external mode. Material changes should be dated and disclosed before new processing is enabled."
+    }
+  ]
+},  "terms": {
+  "eyebrow": "Terms · updated 8 November 2026",
+  "title": "A rehearsal. Not a hiring promise.",
+  "intro": "Use PMForge to practice product decisions and document your own work honestly. These terms describe the current preview and must be reviewed with the operator details before public launch.",
+  "sections": [
+    {
+      "title": "Eligibility and account responsibility",
+      "text": "Provider-backed AI practice is intended for adults 18 or older using it for professional product practice in supported regions. Do not misrepresent your eligibility. Keep credentials, signed links and publishing keys secure. You are responsible for activity you authorize and for the data you choose to sync or publish."
+    },
+    {
+      "title": "Educational content and feedback",
+      "text": "Scenarios, companies and operating metrics are fictional unless a source is explicitly identified. Draft references and provisional rubrics are labeled. Feedback is educational, may be incomplete or wrong, and is not a validated hiring assessment, credential, employment guarantee, or professional medical, financial, legal or operational advice. Review decisions in their real context."
+    },
+    {
+      "title": "Your content and permission to share",
+      "text": "You retain rights in your original content. You grant only the permissions needed to store, synchronize, process and display it according to the features you choose. Do not upload material you cannot lawfully use. Confirm ownership and confidentiality before publishing real work. Imported practice stays simulated; do not present fictional practice results as production impact or verified employment."
+    },
+    {
+      "title": "Acceptable use",
+      "text": "Do not harass people, upload unlawful content, disclose another person’s private information, misuse confidential employer material, impersonate others, bypass ownership or security checks, abuse infrastructure, evade quotas, or attempt to extract protected evidence or credentials. Candidate messages cannot grant the AI additional permissions. Report vulnerabilities privately through the operator’s security contact when configured."
+    },
+    {
+      "title": "Free practice, quotas and availability",
+      "text": "Guided practice remains useful without AI. AI availability depends on the configured mode, provider capacity, eligibility and operational limits; unlimited or permanently free AI is not promised. Reaching an AI turn cap does not reduce the rubric result. Provider failures preserve committed work where storage is available and offer retry or guided continuation. PMForge never automatically enables billing or substitutes a paid speech service in $0 mode."
+    },
+    {
+      "title": "Publishing, backups and removal",
+      "text": "Publishing is a separate deliberate action. Expiring or revoking a link stops future access through PMForge but cannot retract copies already downloaded. Keep private backups of important device work and treat backups as sensitive. Features may change, be suspended for abuse or outages, or be discontinued; reasonable notice should be provided where practical and required."
+    },
+    {
+      "title": "Service limitations and disputes",
+      "text": "The preview is supplied as available, with no promise of uninterrupted access or a particular career outcome. Liability, consumer protections and mandatory rights depend on applicable law; nothing here removes rights that cannot lawfully be excluded. Operator identity, governing jurisdiction, a dispute contact and any future paid-service cancellation terms must be completed before offering the corresponding public service."
+    }
+  ]
+},};
 export function PublicInfo({ kind }: { kind: string }) {
   const page = info[kind];
   return (
@@ -312,7 +346,7 @@ export function PublicInfo({ kind }: { kind: string }) {
           <p className={styles.prose} style={{ marginTop: 22 }}>
             {page.intro}
           </p>
-          <div className={styles.prose}>
+          {kind==='privacy'&&<p className={styles.prose}><a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noreferrer">Google Gemini processing terms ↗</a> · <a href="https://ai.google.dev/gemini-api/docs/available-regions" target="_blank" rel="noreferrer">Supported regions ↗</a></p>}<div className={styles.prose}>
             {page.sections.map((section) => (
               <section key={section.title}>
                 <h2>{section.title}</h2>

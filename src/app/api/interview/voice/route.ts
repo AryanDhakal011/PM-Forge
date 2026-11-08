@@ -4,7 +4,8 @@ import {getQuestion} from '@/lib/product/content';
 export const runtime='nodejs';
 const limits=new Map<string,{at:number;count:number}>();
 function allowed(request:Request){if(request.headers.get('origin')!==new URL(request.url).origin)return false;const now=Date.now();for(const [key,v] of limits)if(now-v.at>60000)limits.delete(key);const key=clientKey(request)?.split(',')[0]||'local',state=limits.get(key)||{at:now,count:0},global=limits.get('*')||{at:now,count:0};state.count++;global.count++;limits.set(key,state);limits.set('*',global);return state.count<=60&&global.count<=180}
-const configured=()=>({stt:process.env.PMFORGE_VOICE_ENABLED==='true'&&!!process.env.DEEPGRAM_API_KEY,tts:process.env.PMFORGE_VOICE_ENABLED==='true'&&!!process.env.ELEVENLABS_API_KEY&&!!process.env.ELEVENLABS_VOICE_ID});
+const paidSpeechApproved=()=>process.env.PMFORGE_AI_MODE==='production'&&Number(process.env.PMFORGE_AI_MONTHLY_BUDGET_USD)>0&&Number(process.env.PMFORGE_VOICE_MONTHLY_BUDGET_USD)>0&&process.env.PMFORGE_PAID_SPEECH_APPROVED==='true';
+const configured=()=>({stt:paidSpeechApproved()&&process.env.PMFORGE_VOICE_ENABLED==='true'&&!!process.env.DEEPGRAM_API_KEY,tts:paidSpeechApproved()&&process.env.PMFORGE_VOICE_ENABLED==='true'&&!!process.env.ELEVENLABS_API_KEY&&!!process.env.ELEVENLABS_VOICE_ID});
 async function limitedBody(request:Request,max:number){const reader=request.body?.getReader();if(!reader)return new Uint8Array();const chunks:Uint8Array[]= [];let length=0;try{while(true){const {done,value}=await reader.read();if(done)break;length+=value.length;if(length>max){await reader.cancel();throw Error('Body limit')}chunks.push(value)}}finally{reader.releaseLock()}const body=new Uint8Array(length);let offset=0;for(const chunk of chunks){body.set(chunk,offset);offset+=chunk.length}return body}
 export async function GET(){return Response.json(configured(),{headers:{'Cache-Control':'no-store'}})}
 export async function POST(request:Request){

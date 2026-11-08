@@ -26,7 +26,7 @@ export default function GuestImportPrompt() {
         (payload.runs.length ||
           payload.projectRuns?.length ||
           payload.records.length ||
-          payload.bookmarks.length)
+          payload.bookmarks.length || payload.career?.profiles.length || payload.career?.cases.length || payload.career?.resumes.length || payload.career?.jobs.length)
       )
         setData(payload);
       else {
@@ -50,7 +50,7 @@ export default function GuestImportPrompt() {
       title="Bring your guest work into this account?"
       description={
         data
-          ? `${data.runs.length} sessions, ${data.projectRuns?.length || 0} project campaigns, ${data.records.length} records, and ${data.bookmarks.length} bookmarks. Nothing is copied or uploaded until you choose Bring it.`
+          ? `${data.runs.length} sessions, ${data.projectRuns?.length || 0} project campaigns, ${data.records.length} records, and ${data.bookmarks.length} bookmarks, and ${data.career?.cases.length||0} portfolio cases. Nothing is copied or uploaded until you choose Bring it.`
           : ""
       }
       size="sm"

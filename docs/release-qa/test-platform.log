@@ -1,0 +1,34 @@
+
+> pmforge@1.0.0 test:platform
+> node --import tsx --test tests/shared-platform.test.ts && node --import tsx scripts/check-shared-platform.ts
+
+✔ canonical checksum is key-order independent and mulberry32 uses known deterministic draws (1.5443ms)
+✔ conditions evaluate all, any, not, values, trust, flags, clues, days and receipts without eval (1.5245ms)
+✔ effects clamp declared variables, keep original state unchanged, and attribute large consequences (1.1861ms)
+✔ Next cannot complete required interactions and reacting cannot be skipped by another choice (4.2937ms)
+✔ tool selections cannot overspend attention, invent items or grant uncollected evidence (23.2987ms)
+✔ pausing blocks the engine and changing difficulty is recorded without user text (0.7219ms)
+✔ asks enforce trust and attention; templates require every declared slot (4.482ms)
+✔ all corrected levels validate, including six ask topics per character and declared tool schemas (204.1203ms)
+✔ validator rejects hollow scenes, missing references, unreachable scenes, invalid tools and long lines (9.579ms)
+✔ release gates cannot be bypassed with a flag alone; only the nominated three are launch candidates (18.7708ms)
+✔ save writes are ordered, five snapshots recover corruption, and unrelated keys are untouched (7.9856ms)
+✔ storage failure remains playable in memory with an honest banner and export (3.1935ms)
+✔ unknown save fields survive updates; imports create a distinct branch without overwriting (17.224ms)
+✔ malformed or future saves remain exportable and are never deleted (2.2345ms)
+✔ telemetry excludes decision text and branch forks do not mutate the source run (35.7494ms)
+✔ resource scopes remove handlers and timers idempotently (39.0445ms)
+✔ same seed and policy reproduce exact corrected outcomes and delayed receipts (463.539ms)
+✔ counterfactuals finish the same seed off the live state without changing it (69.2239ms)
+✔ migration preserves unknown metadata and failures leave the original exportable (2.8978ms)
+✔ duel receipts keep the full three-round wording and remain valid saves (61.6063ms)
+✔ explicit draft play authorization preserves kill switches, lint and compatibility (16.3003ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1769.5577
+Shared platform: 60 complete canonical paths, valid content, bounds and receipts.

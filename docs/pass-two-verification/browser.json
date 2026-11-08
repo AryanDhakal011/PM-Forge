@@ -1,0 +1,568 @@
+{
+  "base": "http://localhost:3002",
+  "checks": [
+    {
+      "label": "clock scene enters",
+      "pass": true
+    },
+    {
+      "label": "signal chart reacts",
+      "pass": true
+    },
+    {
+      "label": "tour choices carry to portfolio",
+      "pass": true
+    },
+    {
+      "label": "tour resets",
+      "pass": true
+    },
+    {
+      "label": "microphone demo returns to typing without permission",
+      "pass": true
+    },
+    {
+      "label": "illustrative publication revokes locally",
+      "pass": true
+    },
+    {
+      "label": "landing fits 390",
+      "pass": true
+    },
+    {
+      "label": "accessibility landing 390",
+      "pass": true
+    },
+    {
+      "label": "landing fits 768",
+      "pass": true
+    },
+    {
+      "label": "accessibility landing 768",
+      "pass": true
+    },
+    {
+      "label": "landing fits 1100",
+      "pass": true
+    },
+    {
+      "label": "accessibility landing 1100",
+      "pass": true
+    },
+    {
+      "label": "landing fits 1440",
+      "pass": true
+    },
+    {
+      "label": "accessibility landing 1440",
+      "pass": true
+    },
+    {
+      "label": "landing fits 1920",
+      "pass": true
+    },
+    {
+      "label": "accessibility landing 1920",
+      "pass": true
+    },
+    {
+      "label": "landing fits 2560",
+      "pass": true
+    },
+    {
+      "label": "accessibility landing 2560",
+      "pass": true
+    },
+    {
+      "label": "proof breakdown dismisses outside",
+      "pass": true
+    },
+    {
+      "label": "portfolio tabs support End key",
+      "pass": true
+    },
+    {
+      "label": "input Full name",
+      "pass": true
+    },
+    {
+      "label": "input One-line value proposition",
+      "pass": true
+    },
+    {
+      "label": "empty import offers an active practice action",
+      "pass": true
+    },
+    {
+      "label": "input Case title",
+      "pass": true
+    },
+    {
+      "label": "input Context & your role",
+      "pass": true
+    },
+    {
+      "label": "input What problem mattered?",
+      "pass": true
+    },
+    {
+      "label": "input Success signal / metric",
+      "pass": true
+    },
+    {
+      "label": "input Metric source",
+      "pass": true
+    },
+    {
+      "label": "input Evidence, sources",
+      "pass": true
+    },
+    {
+      "label": "input Credible options",
+      "pass": true
+    },
+    {
+      "label": "input The decision & why",
+      "pass": true
+    },
+    {
+      "label": "input What did you trade off?",
+      "pass": true
+    },
+    {
+      "label": "input Observed outcome",
+      "pass": true
+    },
+    {
+      "label": "input What did you learn?",
+      "pass": true
+    },
+    {
+      "label": "input Name aliases",
+      "pass": true
+    },
+    {
+      "label": "input Private metric baseline",
+      "pass": true
+    },
+    {
+      "label": "input Private current value",
+      "pass": true
+    },
+    {
+      "label": "indexed metric hides absolute inputs",
+      "pass": true
+    },
+    {
+      "label": "input Caption / source",
+      "pass": true
+    },
+    {
+      "label": "local redaction and approval work",
+      "pass": true
+    },
+    {
+      "label": "accessibility case-builder",
+      "pass": true
+    },
+    {
+      "label": "builder ready state saved",
+      "pass": true
+    },
+    {
+      "label": "case type filter matches source labels",
+      "pass": true
+    },
+    {
+      "label": "studio backup includes local media",
+      "pass": true
+    },
+    {
+      "label": "backup restores profiles, cases and media",
+      "pass": true
+    },
+    {
+      "label": "resume uses reviewed source",
+      "pass": true
+    },
+    {
+      "label": "ATS PDF exports with source material",
+      "pass": true
+    },
+    {
+      "label": "input Company",
+      "pass": true
+    },
+    {
+      "label": "input Role",
+      "pass": true
+    },
+    {
+      "label": "input Job description",
+      "pass": true
+    },
+    {
+      "label": "input Next action",
+      "pass": true
+    },
+    {
+      "label": "input Due date",
+      "pass": true
+    },
+    {
+      "label": "application saved",
+      "pass": true
+    },
+    {
+      "label": "accessibility applications",
+      "pass": true
+    },
+    {
+      "label": "drag changes application stage",
+      "pass": true
+    },
+    {
+      "label": "keyboard stage changes retain history and closing reason",
+      "pass": true
+    },
+    {
+      "label": "input Portfolio handle",
+      "pass": true
+    },
+    {
+      "label": "accessibility share preflight",
+      "pass": true
+    },
+    {
+      "label": "one-case hidden-contact publish works",
+      "pass": true
+    },
+    {
+      "label": "input Type studio-qa-1794120847993",
+      "pass": true
+    },
+    {
+      "label": "typed confirmation revokes publication",
+      "pass": true
+    },
+    {
+      "label": "studio fits 390",
+      "pass": true
+    },
+    {
+      "label": "accessibility studio 390",
+      "pass": true
+    },
+    {
+      "label": "studio fits 768",
+      "pass": true
+    },
+    {
+      "label": "accessibility studio 768",
+      "pass": true
+    },
+    {
+      "label": "studio fits 1100",
+      "pass": true
+    },
+    {
+      "label": "accessibility studio 1100",
+      "pass": true
+    },
+    {
+      "label": "studio fits 1440",
+      "pass": true
+    },
+    {
+      "label": "accessibility studio 1440",
+      "pass": true
+    },
+    {
+      "label": "PDF toast never leaks to another tab",
+      "pass": true
+    },
+    {
+      "label": "studio tab fits light Overview",
+      "pass": true
+    },
+    {
+      "label": "accessibility studio light Overview",
+      "pass": true
+    },
+    {
+      "label": "studio tab fits light Master profile",
+      "pass": true
+    },
+    {
+      "label": "accessibility studio light Master profile",
+      "pass": true
+    },
+    {
+      "label": "studio tab fits light Case studies",
+      "pass": true
+    },
+    {
+      "label": "accessibility studio light Case studies",
+      "pass": true
+    },
+    {
+      "label": "studio tab fits light Resume studio",
+      "pass": true
+    },
+    {
+      "label": "accessibility studio light Resume studio",
+      "pass": true
+    },
+    {
+      "label": "studio tab fits light Applications",
+      "pass": true
+    },
+    {
+      "label": "accessibility studio light Applications",
+      "pass": true
+    },
+    {
+      "label": "studio tab fits light Share",
+      "pass": true
+    },
+    {
+      "label": "accessibility studio light Share",
+      "pass": true
+    },
+    {
+      "label": "studio tab fits dark Overview",
+      "pass": true
+    },
+    {
+      "label": "accessibility studio dark Overview",
+      "pass": true
+    },
+    {
+      "label": "studio tab fits dark Master profile",
+      "pass": true
+    },
+    {
+      "label": "accessibility studio dark Master profile",
+      "pass": true
+    },
+    {
+      "label": "studio tab fits dark Case studies",
+      "pass": true
+    },
+    {
+      "label": "accessibility studio dark Case studies",
+      "pass": true
+    },
+    {
+      "label": "studio tab fits dark Resume studio",
+      "pass": true
+    },
+    {
+      "label": "accessibility studio dark Resume studio",
+      "pass": true
+    },
+    {
+      "label": "studio tab fits dark Applications",
+      "pass": true
+    },
+    {
+      "label": "accessibility studio dark Applications",
+      "pass": true
+    },
+    {
+      "label": "studio tab fits dark Share",
+      "pass": true
+    },
+    {
+      "label": "accessibility studio dark Share",
+      "pass": true
+    },
+    {
+      "label": "accessibility share preview dark",
+      "pass": true
+    },
+    {
+      "label": "accessibility builder dark",
+      "pass": true
+    },
+    {
+      "label": "builder fits 390",
+      "pass": true
+    },
+    {
+      "label": "accessibility builder dark 390",
+      "pass": true
+    },
+    {
+      "label": "builder fits 768",
+      "pass": true
+    },
+    {
+      "label": "accessibility builder dark 768",
+      "pass": true
+    },
+    {
+      "label": "dated policy /privacy",
+      "pass": true
+    },
+    {
+      "label": "accessibility /privacy",
+      "pass": true
+    },
+    {
+      "label": "dated policy /terms",
+      "pass": true
+    },
+    {
+      "label": "accessibility /terms",
+      "pass": true
+    },
+    {
+      "label": "dated policy /content-policy",
+      "pass": true
+    },
+    {
+      "label": "accessibility /content-policy",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "accessibility": [
+    {
+      "label": "landing 390",
+      "violations": []
+    },
+    {
+      "label": "landing 768",
+      "violations": []
+    },
+    {
+      "label": "landing 1100",
+      "violations": []
+    },
+    {
+      "label": "landing 1440",
+      "violations": []
+    },
+    {
+      "label": "landing 1920",
+      "violations": []
+    },
+    {
+      "label": "landing 2560",
+      "violations": []
+    },
+    {
+      "label": "case-builder",
+      "violations": []
+    },
+    {
+      "label": "applications",
+      "violations": []
+    },
+    {
+      "label": "share preflight",
+      "violations": []
+    },
+    {
+      "label": "studio 390",
+      "violations": []
+    },
+    {
+      "label": "studio 768",
+      "violations": []
+    },
+    {
+      "label": "studio 1100",
+      "violations": []
+    },
+    {
+      "label": "studio 1440",
+      "violations": []
+    },
+    {
+      "label": "studio light Overview",
+      "violations": []
+    },
+    {
+      "label": "studio light Master profile",
+      "violations": []
+    },
+    {
+      "label": "studio light Case studies",
+      "violations": []
+    },
+    {
+      "label": "studio light Resume studio",
+      "violations": []
+    },
+    {
+      "label": "studio light Applications",
+      "violations": []
+    },
+    {
+      "label": "studio light Share",
+      "violations": []
+    },
+    {
+      "label": "studio dark Overview",
+      "violations": []
+    },
+    {
+      "label": "studio dark Master profile",
+      "violations": []
+    },
+    {
+      "label": "studio dark Case studies",
+      "violations": []
+    },
+    {
+      "label": "studio dark Resume studio",
+      "violations": []
+    },
+    {
+      "label": "studio dark Applications",
+      "violations": []
+    },
+    {
+      "label": "studio dark Share",
+      "violations": []
+    },
+    {
+      "label": "share preview dark",
+      "violations": []
+    },
+    {
+      "label": "builder dark",
+      "violations": []
+    },
+    {
+      "label": "builder dark 390",
+      "violations": []
+    },
+    {
+      "label": "builder dark 768",
+      "violations": []
+    },
+    {
+      "label": "/privacy",
+      "violations": []
+    },
+    {
+      "label": "/terms",
+      "violations": []
+    },
+    {
+      "label": "/content-policy",
+      "violations": []
+    }
+  ],
+  "screenshots": [
+    "landing-390",
+    "landing-1440",
+    "case-builder",
+    "application-board",
+    "studio-share"
+  ]
+}

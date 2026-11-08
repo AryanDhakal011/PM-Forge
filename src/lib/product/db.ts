@@ -1,5 +1,6 @@
 "use client";
 import type {MasterProfile,CaseStudy,ResumeVersion,CareerJob,CareerArtifact} from "../portfolio/model";
+import {detachAIOnImport} from "../interview-ai/model";
 import Dexie, { type EntityTable } from "dexie";
 import type {
   Bookmark,
@@ -231,7 +232,7 @@ export async function importWorkspace(
           (current.ownerId === profile.id &&
             current.updatedAt < incoming.updatedAt)
         )
-          await db.runs.put({ ...preservePrivateInterview(current,incoming,!queueSync), id, ownerId: profile.id });
+          await db.runs.put({ ...detachAIOnImport(preservePrivateInterview(current,incoming,!queueSync),id), id, ownerId: profile.id });
       }
       if(parsed.career){const prefix=parsed.profile.id===profile.id?'':profile.id+':';for(const item of parsed.career.profiles){const current=await db.careerProfiles.get(profile.id);if(!current||current.updatedAt<item.updatedAt)await db.careerProfiles.put({...item,id:profile.id,ownerId:profile.id,selectedCases:item.selectedCases.map(id=>prefix+id)})}for(const item of parsed.career.cases){const id=prefix+item.id,current=await db.caseStudies.get(id);if(!current||current.ownerId===profile.id&&current.updatedAt<item.updatedAt)await db.caseStudies.put({...item,id,ownerId:profile.id,sourceId:item.sourceId?aliases.get(item.sourceId)||item.sourceId:undefined,artifactIds:prefix?[]:(current?.artifactIds||[])})}for(const item of parsed.career.resumes){const id=prefix+item.id;if(!await db.resumeVersions.get(id))await db.resumeVersions.put({...item,id,ownerId:profile.id,caseIds:item.caseIds.map(id=>prefix+id)})}for(const item of parsed.career.jobs){const id=prefix+item.id,current=await db.careerJobs.get(id);if(!current||current.updatedAt<item.updatedAt)await db.careerJobs.put({...item,id,ownerId:profile.id,caseIds:item.caseIds.map(id=>prefix+id),resumeId:item.resumeId?prefix+item.resumeId:undefined})}}
       for (const incoming of parsed.records) {

@@ -1,5 +1,7 @@
 # Blockers and Limits
 
+**Current release note (2026-11-08):** The landing page has been replaced with the responsive editorial journey. Email signup, verification, recovery, optional OAuth, account sync and deployment configuration are implemented. Real email delivery/OAuth, public hosting and operational contact details require production configuration. Docker engine execution and physical-device microphone/browser testing remain outstanding. AI interviewing is implemented with guided/$0 defaults; public inference remains gated on actual quotas, data-term approval, expert review and a paced load test; authored interviews retain provisional rubric labels. See [HOSTING.md](docs/HOSTING.md). The older inventory below is retained as historical context and is superseded by this note where it differs.
+
 Last updated: **2026-10-26**
 
 This file lists what is missing, simulated, or deliberately out of scope. Nothing here is hidden behind marketing copy. Each entry states the impact, the current workaround, and what would actually unblock it.

@@ -1,0 +1,53 @@
+
+> pmforge@1.0.0 test:portfolio
+> node --import tsx --test tests/portfolio.test.ts tests/career-studio.test.ts && node --conditions=react-server --import tsx --test tests/portfolio-server.test.ts
+
+✔ a genuinely empty studio starts at zero and one selector accounts for all 100 points (6.7043ms)
+✔ legacy drafts parse through additive fields without rewriting original words (15.186ms)
+✔ case quality separates completeness from metric certainty and options checks (1.6522ms)
+✔ contact is hidden by explicit choice and private control keys never enter public snapshots (0.8791ms)
+✔ application schema retains stage history, closing reason and due dates (6.4531ms)
+✔ one selected case and hidden contact can satisfy the publication checklist honestly (0.9874ms)
+✔ JD coverage uses canonical room labels and word boundaries (2.7133ms)
+✔ privacy aliases cover nested rationale, captions and metric metadata without rewriting original records (5.0672ms)
+✔ interview imports always disclose simulation and use saved evidence (4.2229ms)
+✔ default portfolio has no selected cases and private fields are excluded (1.5767ms)
+✔ scrubber preserves percentages, numeric mappings and longest name aliases (1.4079ms)
+✔ metric detection never turns a percentage into a partial absolute number (1.4865ms)
+✔ profile text import remains reviewable and maps common sections (2.3104ms)
+✔ resume versions freeze selected case text and contact details (0.9467ms)
+✔ evidence answers cite exact text and refuse undocumented work (1.4778ms)
+✔ publication checks require reviewed evidence, a contact choice and confirmed real ownership (0.5797ms)
+✔ JD differential surfaces missing facts rather than inventing eligibility (2.5674ms)
+✔ desk chooses the most recent unfinished run and excludes unknown scenarios (29.3686ms)
+✔ desk streak uses local calendar days; repeats do not inflate coverage (2.0584ms)
+✔ all twelve projects have authored active-play estimates without generic long fallback (0.523ms)
+✔ career bullets enter the public evidence index only with explicit selection (0.6017ms)
+✔ desk recommendations expose actual strongest progress and are absent with no assessed data (0.884ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1262.6287
+(node:10048) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ signed snapshot needs exact token; forged and stale tokens do not open it (70.7584ms)
+✔ public pages expose only selected reviewed data and immutable owned handles (6.7731ms)
+✔ simulations cannot be promoted to production by modifying imported labels (2.9488ms)
+✔ events whitelist and revocation delete all share material (7.4062ms)
+✔ expiry closes public and private access (8.8579ms)
+✔ snapshot and media publish atomically; invalid replacements preserve the earlier page (74.1715ms)
+✔ mentor notes require a valid review token and selected case, never a public portfolio (13.38ms)
+✔ one reviewed ready case may publish with deliberately hidden contact and bounded expiry (8.8068ms)
+✔ private or explicitly unfinished cases cannot be published (2.8861ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4150.1019

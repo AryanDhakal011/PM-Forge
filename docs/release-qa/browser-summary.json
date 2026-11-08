@@ -1,0 +1,49 @@
+{
+  "buildId": "dzWZfu4VI1lsPxYJbtVrB",
+  "reports": [
+    {
+      "report": "docs/ai-interview-release-verification/browser.json",
+      "checks": 26,
+      "failed": 0,
+      "errors": 0,
+      "consoleErrors": 0
+    },
+    {
+      "report": "docs/ai-release-landing/browser.json",
+      "checks": 21,
+      "failed": 0,
+      "errors": 0,
+      "consoleErrors": 0
+    },
+    {
+      "report": "docs/ai-release-interview-ux/browser.json",
+      "checks": 173,
+      "failed": 0,
+      "errors": 0,
+      "consoleErrors": 0
+    },
+    {
+      "report": "docs/ai-release-interview-live/browser.json",
+      "checks": 73,
+      "failed": 0,
+      "errors": 0,
+      "consoleErrors": 0
+    },
+    {
+      "report": "docs/ai-release-surface/browser.json",
+      "checks": 75,
+      "failed": 0,
+      "errors": 0,
+      "consoleErrors": 0
+    },
+    {
+      "report": "docs/ai-release-portfolio/browser.json",
+      "checks": 36,
+      "failed": 0,
+      "errors": 0,
+      "consoleErrors": 0
+    }
+  ],
+  "liveAIP95": "not established",
+  "humanExpertReview": "pending"
+}

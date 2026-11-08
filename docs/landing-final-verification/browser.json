@@ -2,6 +2,10 @@
   "base": "http://localhost:3012",
   "checks": [
     {
+      "label": "landing CTA destinations",
+      "pass": true
+    },
+    {
       "label": "landing no overflow 320",
       "pass": true
     },

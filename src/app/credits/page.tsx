@@ -224,7 +224,7 @@ export default function CreditsPage() {
 
             <div className={styles.note} style={{ marginTop: "1.6rem" }}>
               Found an attribution error or a missing credit?{" "}
-              <Link href="/help">Use the help page</Link> to see how to reach
+              <Link href="/#help">Use the Help section</Link> to see how to reach
               the maintainer.
             </div>
           </div>

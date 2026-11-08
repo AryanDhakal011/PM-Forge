@@ -34,11 +34,20 @@ const LINK_GROUPS: {
     ],
   },
   {
-    title: "Career and company",
+    title: "Support and company",
     links: [
       { label: "Career tools", href: "/career" },
-      { label: "Help", href: "/help" },
+      { label: "Help", href: "/#help" },
       { label: "About", href: "/about" },
+      { label: "Credits", href: "/credits" },
+    ],
+  },
+  {
+    title: "Policies",
+    links: [
+      { label: "Privacy", href: "/privacy" },
+      { label: "Terms", href: "/terms" },
+      { label: "Feedback policy", href: "/content-policy" },
     ],
   },
 ];

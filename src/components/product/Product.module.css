@@ -1130,18 +1130,74 @@
 }
 .onboarding {
   max-width: 760px;
-  padding: 50px 24px;
+  height: 100svh;
+  box-sizing: border-box;
+  padding: 50px 24px 24px;
   margin: auto;
-  min-height: 100svh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .onboarding .brand {
-  margin-bottom: 60px;
+  margin-bottom: 36px;
+  flex: none;
+}
+.onboarding > .spread,
+.onboarding > .steps,
+.onboardingActions,
+.onboardingMessage,
+.onboarding .finePrint,
+.onboarding > .prose {
+  flex: none;
 }
 .onboarding h1 {
   margin: 16px 0 14px;
+  height: 62px;
+  overflow: hidden;
+  flex: none;
 }
 .onboarding .panel {
   margin: 28px 0;
+}
+.onboarding .onboardingStage {
+  height: 310px;
+  margin: 18px 0 8px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+  flex: 0 0 310px;
+}
+.onboarding .prose {
+  height: 52px;
+  overflow: hidden;
+}
+.onboardingMessage {
+  height: 44px;
+  overflow: hidden;
+}
+.onboardingMessage .error {
+  margin: 0;
+}
+.onboardingActions {
+  min-height: 44px;
+}
+.onboarding .finePrint {
+  height: 36px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+@media (min-width: 601px) and (max-height: 800px) {
+  .onboarding {
+    padding-top: 32px;
+  }
+  .onboarding .brand {
+    margin-bottom: 24px;
+  }
+  .onboarding .onboardingStage {
+    height: 250px;
+    flex-basis: 250px;
+  }
 }
 .choiceGrid {
   display: grid;
@@ -1982,6 +2038,39 @@ button.evidenceCard {
   }
 }
 @media (max-width: 600px) {
+  .onboarding {
+    padding: 20px 16px 16px;
+  }
+  .onboarding .brand {
+    margin-bottom: 20px;
+  }
+  .onboarding h1 {
+    height: 72px;
+    margin: 10px 0 8px;
+    font-size: clamp(2rem, 10vw, 2.6rem);
+  }
+  .onboarding .prose {
+    height: 68px;
+  }
+  .onboarding .onboardingStage {
+    height: clamp(220px, 34svh, 310px);
+    margin: 10px 0 6px;
+    flex-basis: clamp(220px, 34svh, 310px);
+  }
+  .onboardingMessage {
+    height: 40px;
+  }
+  .onboarding .finePrint {
+    height: 52px;
+    margin-top: 8px;
+  }
+  .choiceGrid {
+    gap: 8px;
+  }
+  .choice {
+    padding: 13px;
+    min-height: 56px;
+  }
   .content {
     padding: 25px 19px 100px;
   }
@@ -2534,6 +2623,22 @@ button.evidenceCard {
   margin-top: 16px;
   color: var(--p-muted);
 }
+@media (max-width: 600px) and (max-height: 700px) {
+  .onboarding h1 {
+    height: 58px;
+    font-size: 2rem;
+  }
+  .onboarding .prose {
+    height: 52px;
+  }
+  .onboarding .onboardingStage {
+    height: 180px;
+    flex-basis: 180px;
+  }
+  .onboarding .finePrint {
+    height: 40px;
+  }
+}
 @media (max-width: 1100px) {
   .product {
     --sidebar-width: 12rem;
@@ -3010,5 +3115,11 @@ button.evidenceCard {
 .popover{padding:8px;background:#fcf8ef;color:#27442f;border-radius:4px;border:1px solid #27442f2b;box-shadow:0 6px 24px #1b30251f,0 2px 5px #1b30250a}.popover>strong{display:block;padding:12px 12px 0;font-size:13px;line-height:1.6;color:#27442f}.popover>p{padding:0 12px 10px;margin:7px 0 6px;color:#626d5b;font-size:12px;line-height:1.8}.popover a,.popover button{width:100%;padding:10px 12px;border-radius:4px;min-height:44px;text-align:left;color:#27442f;text-decoration:none;font:13px/1.6 var(--font-body);transition:background .12s ease,color .12s ease}.popover a:hover,.popover button:hover{background:#eaf0e3}.popover a:focus-visible,.popover button:focus-visible{outline:2px solid #ad7d3c;outline-offset:-2px;background:#dfe9d6;font-weight:600}.popover a:active,.popover button:active,.popover a[aria-current=page]{background:#dbe6d1;font-weight:600}.popover .menuAccent{background:#e5eddd;font-weight:600;margin:5px 0}.popover .menuAccent:hover{background:#d6e3c9}.popover .menuPrimary{background:#244a35;color:#fff7e6;font-weight:600;margin:7px 0;justify-content:center}.popover .menuPrimary:hover{background:#315f42;color:#fff7e6}.popover .menuPrimary:active,.popover .menuPrimary:focus-visible{background:#193d2a;color:#fff7e6}.popover>span[role=status]:not(:empty){display:block;padding:10px 12px;font-size:11px;color:#52644d}.menuDivider{height:1px;background:#27442f24;margin:7px 5px}.storageMenu[open]>.storage,.accountMenu[open]>.avatar{background:var(--p-soft);box-shadow:0 0 0 1px var(--p-line)}@media(prefers-reduced-motion:reduce){.popover a,.popover button{transition:none}}
 
 @media(max-width:767px){.storageMenu>.popover,.accountMenu>.popover{position:fixed;top:66px;left:12px;right:12px;width:auto;max-width:none;max-height:calc(100svh - 90px);overflow-y:auto}}
+
+/* Native settings controls keep their disclosure arrow clear of the edge. */
+.field select,.filters select{padding-right:26px}
+/* Workbench content owns its full available column at every breakpoint. */
+.runMain,.runStage,.runStage>.panel,.runStage .panel,.runStage .choiceGrid,.runStage .stack{width:100%;max-width:none;min-width:0}
+.runStage .panel{overflow-wrap:anywhere}
 
 .accountForm{border:1px solid var(--p-line);padding:20px;border-radius:6px;margin:20px 0;background:var(--p-panel)}.accountForm h3{font:24px/1.2 var(--font-display);margin:0 0 20px}.accountForm .field{display:grid;gap:8px;margin:15px 0;font-size:14px}.accountForm input{width:100%;min-height:46px;border:1px solid var(--p-line);border-radius:4px;padding:10px 12px;background:var(--p-bg);color:var(--p-ink);font:16px var(--font-body)}.accountForm .primary{width:100%;justify-content:center}.accountForm .textButton{display:inline-flex;font-size:14px;min-height:44px}.accountMessage{border-left:3px solid var(--p-green);padding:12px;font-size:14px;line-height:1.7}.socialAccounts{display:grid;gap:10px}.socialAccounts button{width:100%;justify-content:center}.authRecovery{max-width:520px;padding:50px 24px;margin:auto;color:var(--ink,#253b2a);min-height:100svh}.authRecovery h1{font:42px/1.1 var(--font-display);margin:40px 0 24px}.authRecovery .field{display:grid;gap:10px;margin:20px 0}.authRecovery input{padding:12px;min-height:46px;width:100%;background:#fffdf5;color:#253b2a;border:1px solid #a3ad9b;border-radius:4px;font:16px var(--font-body)}.gate .finePrint{font-size:13px!important;line-height:1.7}.gate{max-width:480px}.gate>h2{font-size:36px}.authPanel{overflow:auto}

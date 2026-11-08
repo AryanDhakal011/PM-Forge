@@ -1,0 +1,18 @@
+
+> pmforge@1.0.0 test:auth
+> node --conditions=react-server --import tsx --test tests/auth-flow.test.ts
+
+(node:20996) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+2026-11-08T07:22:57.544Z WARN [Better Auth]: Rate limiting could not determine a client IP and is falling back to a single shared per-path bucket. Ensure your runtime forwards a trusted client IP header, then set `advanced.ipAddress.ipAddressHeaders` or `advanced.ipAddress.trustedProxies` so the address can be resolved.
+2026-11-08T07:22:58.115Z WARN [Better Auth]: Invalid password
+2026-11-08T07:22:58.127Z ERROR [Better Auth]: Invalid origin: https://evil.example
+✔ signup, verification, login, recovery, token reuse and cross-account/session protection use the real auth backend (4153.3981ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8046.5532

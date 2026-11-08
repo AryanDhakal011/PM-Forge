@@ -1,0 +1,42 @@
+
+> pmforge@1.0.0 test:invisible-wall
+> node --import tsx --test tests/invisible-wall.test.ts && node --import tsx scripts/invisible-wall-smoke.ts
+
+✔ P1 workaround then dismantle leaves a genuine safety and trust cost (9.5696ms)
+✔ P2 flag then integrate preserves the agreed line and safety (0.8027ms)
+✔ P3 author, charter, high load and reserved evals reach Cartographer (2.6975ms)
+✔ P4 low load conceals oscillation and an unprepared dismantled run can fail (1.7558ms)
+✔ P5 realistic testing reveals risk and skilled control can stabilize dismantling (2.3078ms)
+✔ P6 deferral never grants time or unlimited assists and must end in a binary choice (0.7553ms)
+✔ P7 an evasive briefing returns the exact quirk receipt with a trust cost (1.1399ms)
+✔ P8 HEAT lockout blocks every ordinary action until evidence is explained (0.4138ms)
+✔ P9 skipping required tools cannot advance the scene (0.3859ms)
+✔ P10 auto-stabilize is accessible, capped at 60 and never blocks the debrief (0.3668ms)
+✔ wrong marks cost five minutes; duplicate marks never grant extra clues (0.1934ms)
+✔ theory evidence can falsify rather than merely reward keyword matching (0.3705ms)
+✔ compute routes validate geometry and preserve camera costs after reset (1.0249ms)
+✔ quiet time cools heat by ten per hour without changing evidence (0.1698ms)
+✔ fixed-step simulation is deterministic for the same seed and controls (3.3954ms)
+✔ pause, slow-motion and undo share a bounded three-assist budget (0.2444ms)
+✔ all conditional lines resolve against actual flags, not future clues (0.4919ms)
+✔ a fork preserves the original seed and clears later commitments (1.674ms)
+✔ versioned checksum detects corruption and backup recovery preserves the last valid state (2.2436ms)
+✔ every scene has intentional visuals and only one declared tool (0.1551ms)
+✔ hindsight restores the real pre-decision clock and clears future discoveries (0.2561ms)
+✔ documented Level 2 access expires after its actual sixty-minute permit (0.1787ms)
+✔ a two-cell hop cannot jump over a camera without being observed (0.2302ms)
+✔ the ghost comparison projects the opposite policy without inventing a second run (0.2659ms)
+✔ an escort does not fabricate a commit trail, and chapter waiting never grants shift time (0.2195ms)
+✔ discovering a secret workload applies the documented relationship costs exactly once (0.1797ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 423.5982
+golden: 26 scenes → Governed edge / The Cartographer; 88 actions.
+flag: 26 scenes → Stable but safe / The Guardian; 83 actions.
+workaround: 26 scenes → Operator / The Operator; 84 actions.
+meltdown: 26 scenes → Meltdown / The Guardian; 83 actions.

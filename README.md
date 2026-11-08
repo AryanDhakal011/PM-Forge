@@ -73,3 +73,9 @@ Use `npm run build`, then `npm start -- --port 3001` for a stable user preview. 
 Navigation regression QA: generate the concrete route inventory with `node --import tsx scripts/navigation-routes.ts > .data/navigation-routes.json`, then run `node scripts/verify-navigation.mjs` against a running preview. The Windows Chrome harness uses a disposable profile, preserves your browser data, checks every concrete route and its client rendering, checks shared navigation links and mobile layouts, and records results under `docs/navigation-verification/`.
 
 The Feature Factory is playable at `/app/projects/feature-factory/play`: a seeded fifteen-day PM desktop with 42 events, 48 ask topics, evidence-backed release gates and computed policy replays. See [the implementation notes](docs/FEATURE-FACTORY.md).
+
+## AI interview
+
+The shared interview supports optional provider-backed follow-ups with durable limits and explicit data-use controls. Guided practice is the $0 default. See [AI setup and operations](docs/AI-INTERVIEW.md); installing a key does not enable inference or billing.
+
+Local review: **http://localhost:3002** (`npm start` after a build, or `npm run dev` with an isolated development cache). See [Pass 2 decisions](docs/PASS-TWO-DECISIONS.md) and [AI local review](docs/AI-INTERVIEW.md#current-local-review-8-november-2026).

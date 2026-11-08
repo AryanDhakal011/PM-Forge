@@ -1,5 +1,6 @@
 "use client";
 
+import {TodayCareer} from '@/components/portfolio/TodayCareer';
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -391,7 +392,7 @@ export default function DecisionDesk() {
       <div className={s.lowerGrid}>
         <article className={s.lowerCard}>
           <span className={s.cardEyebrow}>Resume</span>
-          {open && openQuestion ? <><h2>Pick up where you left off.</h2><p>{openQuestion.title}</p><div className={s.progressRing} style={{ "--step": `${Math.max(8, stageLabel[open.stage] ? 35 : 8)}%` } as React.CSSProperties}><span>{stageLabel[open.stage] || "Open"}</span></div><button onClick={() => void start(openQuestion)} className={s.cardAction}>Continue <ArrowRight size={15} /></button></> : <><h2>Pick up where you left off.</h2><div className={s.cleanDesk}><FileText size={38} /><Paperclip size={28} /></div><p>Nothing open. A clean desk.</p><Link href="/app/practice" className={s.cardAction}>Browse practice <ArrowRight size={15} /></Link></>}
+          {open && openQuestion ? <><h2>Pick up where you left off.</h2><p>{openQuestion.title}</p><div className={s.progressRing} style={{ "--step": `${Math.max(8, stageLabel[open.stage] ? 35 : 8)}%` } as React.CSSProperties}><span aria-label="Saved interview">Resume</span></div><button onClick={() => void start(openQuestion)} className={s.cardAction}>Continue <ArrowRight size={15} /></button></> : <><h2>Pick up where you left off.</h2><div className={s.cleanDesk}><FileText size={38} /><Paperclip size={28} /></div><p>Nothing open. A clean desk.</p><Link href="/app/practice" className={s.cardAction}>Browse practice <ArrowRight size={15} /></Link></>}
         </article>
         {warmup && <article className={s.lowerCard}>
           <span className={s.cardEyebrow}>Warm-up</span>
@@ -403,7 +404,7 @@ export default function DecisionDesk() {
         <article className={`${s.lowerCard} ${!warmup ? s.portfolioWide : ""}`}>
           <span className={s.cardEyebrow}>Portfolio</span>
           <h2>Your reasoning, so far.</h2>
-          {completed.length ? <><p>{completed[0].questionId ? getQuestion(completed[0].questionId)?.title : ""}</p><Link href="/app/portfolio" className={s.cardAction}>Open portfolio <ArrowRight size={15} /></Link></> : <><div className={s.ghostPaper}><i /><i /><i /><i /></div><p>Your first decision becomes a case study here.</p><Link href="/app/portfolio" className={s.cardAction}>See portfolio <ArrowRight size={15} /></Link></>}
+          {profile&&<TodayCareer owner={profile.id}/>}
         </article>
       </div>
     </div>

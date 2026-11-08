@@ -1,0 +1,79 @@
+{
+  "base": "http://localhost:3018",
+  "checks": [
+    {
+      "label": "input My current region",
+      "pass": true
+    },
+    {
+      "label": "accessibility AI prepare",
+      "pass": true
+    },
+    {
+      "label": "server-authoritative Begin",
+      "pass": true
+    },
+    {
+      "label": "input Private scratch notes",
+      "pass": true
+    },
+    {
+      "label": "one committed position gives one reply",
+      "pass": true
+    },
+    {
+      "label": "private draft preserved",
+      "pass": true
+    },
+    {
+      "label": "one candidate entry",
+      "pass": true
+    },
+    {
+      "label": "test double labeled honestly",
+      "pass": true
+    },
+    {
+      "label": "accessibility AI active",
+      "pass": true
+    },
+    {
+      "label": "accessibility AI dark",
+      "pass": false
+    }
+  ],
+  "errors": [
+    "Error: accessibility AI dark\n    at check (file:///C:/Users/aryan/Desktop/Beta%20PM%20Leetcode/scripts/verify-interview-ai.mjs:15:75)\n    at axe (file:///C:/Users/aryan/Desktop/Beta%20PM%20Leetcode/scripts/verify-interview-ai.mjs:21:442)\n    at async file:///C:/Users/aryan/Desktop/Beta%20PM%20Leetcode/scripts/verify-interview-ai.mjs:25:1937"
+  ],
+  "console": [],
+  "accessibility": [
+    {
+      "label": "AI prepare",
+      "violations": []
+    },
+    {
+      "label": "AI active",
+      "violations": []
+    },
+    {
+      "label": "AI dark",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            {
+              "target": [
+                ".LiveInterview-module__vfSfIW__caseTitle"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.06 (foreground color: #56604b, background color: #253029, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    "ai-prepare-desktop",
+    "ai-active-desktop"
+  ]
+}

@@ -1,0 +1,27 @@
+
+> pmforge@1.0.0 test:pivot-point
+> node --import tsx --test tests/pivot-point.test.ts && node --import tsx scripts/check-pivot-point.ts && node --import tsx scripts/pivot-point-smoke.ts
+
+✔ all four routes finish through real reducer actions with distinct outcomes (91.8593ms)
+✔ seed reproduces launch incidents, decisions and letters exactly (25.434ms)
+✔ reports cannot be forged, reopened for attention, or linked if unopened (0.4162ms)
+✔ three report budget creates blind spots without blocking a complete run (10.3428ms)
+✔ CMO full support requires both safeguards and simulation evidence (31.8944ms)
+✔ letters use the exact same reach predicate as the access map (41.6248ms)
+✔ budget, capacity, safeguards and eligibility stay bounded for extreme designs (5.0068ms)
+✔ seven intensive places enforced and case placement supports reassignment (0.8154ms)
+✔ missing evidence prevents a board vote; unexamined scale cannot be linked (0.759ms)
+✔ rewind once per chapter preserves seed and charges credibility (0.7452ms)
+✔ save envelope validates shape, bounds and checksum; damaged current save recovers backup (31.5392ms)
+✔ different strategies produce disjoint authored event reactions (20.0323ms)
+✔ receipts preserve exact player wording and later scenes expose it (10.7226ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 869.0045
+Pivot Point authoring gate: 27 scenes, 45 portraits, 5 backgrounds, 1,000 fictional patients, 12 cases, 7 reports, 24 events; all references valid.
+Pivot Point smoke: 10 complete reducer-driven paths, 24/24 events, deterministic saves and 25+ data-dependent observations.

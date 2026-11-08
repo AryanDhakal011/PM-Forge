@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-07T23:31:41.933Z",
+  "model": "gemini-3.1-flash-lite",
+  "transport": "generate-content",
+  "mode": "bounded controlled fictional probe",
+  "projectPlan": "Free — owner confirmed",
+  "actualProjectQuotas": "not supplied",
+  "maximumExternalAttempts": 5,
+  "publicAdmission": "closed",
+  "p95Target": "not established by one sample",
+  "status": "validated-reply",
+  "source": "gemini",
+  "latencyMs": 2735,
+  "message": "If the definition of a 'signup_complete' event has remained consistent, what specific segmentation or cross-reference check would you perform to determine if this 12% decline is a universal drop versus an issue localized to a specific platform or user segment?"
+}

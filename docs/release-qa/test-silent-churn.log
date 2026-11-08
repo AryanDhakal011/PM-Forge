@@ -1,0 +1,36 @@
+
+> pmforge@1.0.0 test:silent-churn
+> node --import tsx --test tests/silent-churn.test.ts && node --import tsx scripts/check-silent-churn.ts && node --import tsx scripts/silent-churn-smoke.ts
+
+✔ seeded worlds reproduce, and reducer never mutates input (7.0975ms)
+✔ Day Zero practises all four verbs without spending campaign resources (1.0357ms)
+✔ attention, duplicate rapport and restricted access are enforced (6.9161ms)
+✔ depth costs background days, ticket adds time, and max two jobs are active (2.7007ms)
+✔ rapport unlocks Standard and Deep without spending fictional sandbox benefits (10.4586ms)
+✔ answers never cite absent extract findings and cover six topics for eight people (1.4638ms)
+✔ only relevant evidence moves stance; repeat cards cannot farm support (1.9792ms)
+✔ influence propagates declared shifts instead of silently flipping votes (0.8467ms)
+✔ pre-read validates owned cards, five blocks and exact headline (2.3864ms)
+✔ bypassing adds about fifty percent more objections, not an automatic failure (0.8812ms)
+✔ wrong objection cards fail visibly, preserve the question, then allow recovery (1.7858ms)
+✔ rewind restores real prior state once per chapter and costs credibility (1.2621ms)
+✔ every numerical consequence carries actual before, after and rule (0.6272ms)
+✔ local telemetry excludes free text and real identity fields (0.6151ms)
+✔ delivery cannot compress the five-day window or bypass Friday freeze (1.1096ms)
+✔ crash risk is seeded, method dependent and does not imply prior disclosure (0.9694ms)
+✔ a capped pilot promise is broken by broad rollout and quoted exactly (0.7646ms)
+✔ curves cover two quarters, slow recovery and rushed relapses (0.5166ms)
+✔ saved state checksum, validation and last-good recovery (3.6034ms)
+✔ Coalition-first counterfactual terminates and reproduces (228.5782ms)
+✔ Bold counterfactual terminates and reproduces (185.9896ms)
+✔ coalition and bold differ in objections, with at least 25 real data references (203.1133ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1102.3351
+Silent Churn: 19 screens, 32 conditional events, 48 topics, 25 objections, 151 caption-matched clips, two complete policy replays.
+Silent Churn: 10 complete seeded paths; 25/32 event types, 25/25 objections observed. Unfired IDs recorded.

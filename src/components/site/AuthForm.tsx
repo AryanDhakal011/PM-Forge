@@ -388,7 +388,7 @@ export function AuthForm({ mode, intent }: { mode: Mode; intent?: string }) {
           <ShieldCheck size={14} strokeWidth={1.6} aria-hidden="true" /> This is
           a local-first preview. Clearing site data removes the profile and all
           practice.{" "}
-          <Link href="/help" className={styles.inlineLink}>
+          <Link href="/#help" className={styles.inlineLink}>
             How local data works
           </Link>
           .

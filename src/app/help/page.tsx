@@ -1,4 +1,5 @@
-import { PublicInfo } from "@/components/product/PublicReference";
+import { redirect } from "next/navigation";
+
 export default function Page() {
-  return <PublicInfo kind="help" />;
+  redirect("/#help");
 }

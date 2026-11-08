@@ -1,0 +1,43 @@
+
+> pmforge@1.0.0 test:interview-live
+> node --import tsx --test tests/interview-live.test.ts && node --conditions=react-server --import tsx --test tests/interview-voice-route.test.ts
+
+✔ all 63 scenarios have a native skeleton, unique authored probe, and category warm-up (3.5501ms)
+✔ PM vocabulary is unique, bounded and scenario requests respect the provider term budget (39.5421ms)
+✔ two-way structure never invents statements and flags unsupported edited claims (1.7962ms)
+✔ microphone check gates voice preflight; accessible typing does not require microphone consent (2.8587ms)
+✔ RCA paid evidence cannot bypass the two-topic clarification gate (0.8661ms)
+✔ an interruption needs a specific response, stance and twenty seconds, including after resume (0.506ms)
+✔ assertion detection and difficulty caps prevent endless probes or late feedback interruptions (0.531ms)
+✔ every category reality check is enforced without changing the original score (2.3423ms)
+✔ safe scratchpad arithmetic handles precedence and rejects executable, malformed and nonfinite input (1.6463ms)
+✔ delivery diagnostics use voice only, preserve fillers, and do not infer pacing from typed answers (1.2794ms)
+✔ conversation is private from account sync by default; opt-in is explicit and core decisions survive (0.512ms)
+✔ save schema round-trips pending interruptions, raw words, outline, mode, and existing legacy runs (17.7183ms)
+✔ blind spots compare explicit self-grades with recorded coverage without altering grades (0.8874ms)
+✔ all 63 live briefs complete with their native gates and preserve scoring on the accessible path (34.6443ms)
+✔ private interruption responses cannot leak through history or be overwritten by redacted account sync (1.2389ms)
+✔ a late voice transcript cannot erase a newer typed draft, while explicit typed commits clear only that draft (1.8104ms)
+✔ authored evidence identifiers are unique and references cannot open a paid card (1.8237ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1043.4624
+(node:14068) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ voice routes fail closed, never fabricate a transcript, and keep keys server-side (58.8766ms)
+✔ configured STT sends jargon hints and preserves raw filler wording; provider failures stay explicit (31.8996ms)
+✔ configured TTS uses a fixed upstream and server voice ID while bounding client text (4.1662ms)
+✔ zero AI budget blocks paid speech even with all provider keys configured (1.7096ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5818.6704

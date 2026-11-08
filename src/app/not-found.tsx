@@ -73,7 +73,7 @@ export default function NotFound() {
               category: "Support",
               title: "Read the help page",
               description: "Local data, microphone behaviour, and how to reset.",
-              href: "/help",
+              href: "/#help",
               action: "Open help",
             },
           ].map((item) => (

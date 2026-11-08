@@ -112,7 +112,7 @@ export const spentEvidence = (run: Run, q: Question) =>
     .reduce((sum, e) => sum + e.cost, 0);
 export const remainingEvidence = (run: Run, q: Question) =>
   evidenceBudget(q.level) - spentEvidence(run, q);
-export function evidenceUnavailableReason(run:Run,q:Question,id:string):string|null{const card=q.evidence.find(e=>e.id===id);if(!card)return 'This evidence is unavailable.';if(run.evidenceIds.includes(id))return 'Already requested; read it below.';if(run.status==='paused')return 'Resume the interview to request evidence.';if(run.live?.pending)return 'Respond to the interviewer first.';if(!run.objectivePinned)return 'Pin the goal in Frame before requesting evidence.';if(run.live&&q.category==='root-cause'&&run.live.clarifications.length<2&&card.cost>0)return 'Ask two clarifying questions before buying this cut.';if(run.locked.includes('synthesis'))return 'Evidence is locked after your final decision.';if(remainingEvidence(run,q)<card.cost)return 'Not enough evidence credits for this request.';return null}
+export function evidenceUnavailableReason(run:Run,q:Question,id:string):string|null{const card=q.evidence.find(e=>e.id===id);if(!card)return 'This evidence is unavailable.';if(run.evidenceIds.includes(id))return 'Already requested; read it below.';if(run.status==='paused')return 'Resume the interview to request evidence.';if(run.live?.ai?.enabled&&run.live.ai.pending)return 'Wait for the AI reply, retry it, or continue guided.';if(run.live?.pending)return 'Respond to the interviewer first.';if(!run.objectivePinned)return 'Pin the goal in Frame before requesting evidence.';if(run.live&&q.category==='root-cause'&&run.live.clarifications.length<2&&card.cost>0)return 'Ask two clarifying questions before buying this cut.';if(run.locked.includes('synthesis'))return 'Evidence is locked after your final decision.';if(remainingEvidence(run,q)<card.cost)return 'Not enough evidence credits for this request.';return null}
 export function requestEvidence(run:Run,id:string):Run{const q=getQuestion(run.questionId)!;if(evidenceUnavailableReason(run,q,id))return run;return {...run,evidenceIds:[...run.evidenceIds,id],decisions:[...run.decisions,{stage:run.stage,action:'Evidence requested',value:id,at:new Date().toISOString()}]}}
 export function stageIssue(run: Run): string | null {
   const q = getQuestion(run.questionId)!;
@@ -185,7 +185,7 @@ export function advance(run: Run): Run {
   const q = getQuestion(run.questionId)!;
   const stages = stagesFor(run);
   let next = stages[stages.indexOf(run.stage) + 1] || "complete";
-  if (next === "fundamentals" && q.level !== "easy") next = "clarify";
+  if (next === "fundamentals" && (q.level !== "easy" || run.live?.ai?.enabled)) next = "clarify";
   const at = new Date().toISOString();
   if (run.stage === "event" && run.eventIndex < eventTypes(q).length - 1)
     return {

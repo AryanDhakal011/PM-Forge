@@ -1,0 +1,75 @@
+
+> pmforge@1.0.0 test
+> node --import tsx --test tests/interview-engine.test.ts tests/calibration.test.ts tests/projects.test.ts tests/workspace-reset.test.ts tests/today-corrections.test.ts && node --conditions=react-server --import tsx --test tests/account-server.test.ts
+
+✔ calibration tooling blinds 30 samples, rejects missing ratings, and compares a fixed expert panel without enabling numbers (1331.5546ms)
+✔ 63 unique drafts form an exact 7×3×3 coverage grid (2.2691ms)
+✔ every question and all three variants have two defensible high-scoring paths (81.7059ms)
+✔ the uncorrected shortcut is a low-score trap; a considered revision can recover (3.6954ms)
+✔ free text does not change non-behavioral scores (4.0292ms)
+✔ evidence budget is enforced, duplicate requests are free, a committed synthesis cannot change evidence (7.2911ms)
+✔ every category reaches completion through the required debrief gates (8.9232ms)
+✔ goal and calibration gates cannot advance incomplete states (0.3547ms)
+✔ golden estimation calculation and simulated economic variants stay consistent (97.9587ms)
+✔ redirect targets reject external, encoded protocol, backslash, and control-character attacks (1.6639ms)
+✔ imports reject unknown fields, oversized notes, and malformed state (4.3095ms)
+✔ guided Easy first run combines setup, has one event, and records reflection completion separately (0.6127ms)
+✔ reflection releases after one self-grade or two minutes; timed release never fabricates a completed reflection (1.014ms)
+✔ spoken synthesis requires 90 seconds and both self-checks or an explicit accessibility path (0.3396ms)
+✔ bands and review status make no precision or reviewer claims without evidence (1.6962ms)
+✔ retry variants change simulated numbers, order, and scored constraints while keeping reference data intact (1.0237ms)
+✔ rising resentment reduces stakeholder capacity while rising trust increases it (2.0165ms)
+✔ commit readiness is shared by UI and engine and rejects invented evidence or incomplete ranking (2.9869ms)
+✔ twelve unique three-chapter campaigns have explicit bounded state, authored evidence and distinct tradeoffs (2.2048ms)
+✔ The Sacred No: all 18 authored paths reach a coherent deterministic debrief and replay every branch (43.0947ms)
+✔ The Silent Churn: all 8 authored paths reach a coherent deterministic debrief and replay every branch (11.9756ms)
+✔ The Feature Factory: all 8 authored paths reach a coherent deterministic debrief and replay every branch (8.3637ms)
+✔ The Ghost Metric: all 8 authored paths reach a coherent deterministic debrief and replay every branch (8.5943ms)
+✔ The Pivot Point: all 8 authored paths reach a coherent deterministic debrief and replay every branch (7.3325ms)
+✔ The Legacy Fracture: all 8 authored paths reach a coherent deterministic debrief and replay every branch (6.5417ms)
+✔ The Shadow Roadmap: all 8 authored paths reach a coherent deterministic debrief and replay every branch (6.9186ms)
+✔ The Trojan Horses: all 8 authored paths reach a coherent deterministic debrief and replay every branch (5.997ms)
+✔ The Invisible Wall: all 8 authored paths reach a coherent deterministic debrief and replay every branch (10.5178ms)
+✔ The Deadlock: all 8 authored paths reach a coherent deterministic debrief and replay every branch (7.1105ms)
+✔ The Public Fracture: all 8 authored paths reach a coherent deterministic debrief and replay every branch (6.3023ms)
+✔ The Last Mile: all 8 authored paths reach a coherent deterministic debrief and replay every branch (5.7033ms)
+✔ The Sacred No: paused, duplicate-lock and tampered-trail edge paths cannot silently mutate commitments (2.5928ms)
+✔ The Silent Churn: paused, duplicate-lock and tampered-trail edge paths cannot silently mutate commitments (0.8878ms)
+✔ The Feature Factory: paused, duplicate-lock and tampered-trail edge paths cannot silently mutate commitments (0.7754ms)
+✔ The Ghost Metric: paused, duplicate-lock and tampered-trail edge paths cannot silently mutate commitments (0.5431ms)
+✔ The Pivot Point: paused, duplicate-lock and tampered-trail edge paths cannot silently mutate commitments (0.5889ms)
+✔ The Legacy Fracture: paused, duplicate-lock and tampered-trail edge paths cannot silently mutate commitments (0.6326ms)
+✔ The Shadow Roadmap: paused, duplicate-lock and tampered-trail edge paths cannot silently mutate commitments (0.488ms)
+✔ The Trojan Horses: paused, duplicate-lock and tampered-trail edge paths cannot silently mutate commitments (0.4831ms)
+✔ The Invisible Wall: paused, duplicate-lock and tampered-trail edge paths cannot silently mutate commitments (0.6663ms)
+✔ The Deadlock: paused, duplicate-lock and tampered-trail edge paths cannot silently mutate commitments (1.1501ms)
+✔ The Public Fracture: paused, duplicate-lock and tampered-trail edge paths cannot silently mutate commitments (1.0991ms)
+✔ The Last Mile: paused, duplicate-lock and tampered-trail edge paths cannot silently mutate commitments (0.6351ms)
+✔ Sacred No: accepting then exposing the live feature produces the exact carried crash; a guarded demo avoids that rule (0.3509ms)
+✔ every named archetype is reachable by a real authored path (4.553ms)
+✔ project deep links remain local and malformed chapter paths cannot become redirects (0.964ms)
+✔ constellation geometry is deterministic and clear of the center (6.1462ms)
+✔ warm-up guard rejects authoring metadata and short warm-up content (0.6772ms)
+✔ full reset removes PMForge test data and databases only, and signs out first (24.6483ms)
+✔ cache-only recovery preserves identity and run databases (12.3236ms)
+✔ failed sign-out does not silently delete local work or claim a successful reset (4.3765ms)
+ℹ tests 51
+ℹ suites 0
+ℹ pass 51
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1797.9991
+(node:8280) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+2026-11-08T07:22:49.744Z WARN [Better Auth]: Rate limiting could not determine a client IP and is falling back to a single shared per-path bucket. Ensure your runtime forwards a trusted client IP header, then set `advanced.ipAddress.ipAddressHeaders` or `advanced.ipAddress.trustedProxies` so the address can be resolved.
+✔ configured account backend migrates and isolates two real signed test sessions (1374.7154ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5107.1226

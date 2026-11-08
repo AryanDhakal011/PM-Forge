@@ -110,7 +110,7 @@ export default function AboutPage() {
               procedurally in Three.js rather than delivered as Blender assets.
               The{" "}
               <Link href="/credits">credits page</Link> and{" "}
-              <Link href="/help">help page</Link> document the limits in detail.
+              <Link href="/#help">Help section</Link> documents the limits in detail.
             </p>
 
             <div className={styles.note} style={{ marginTop: "1.6rem" }}>

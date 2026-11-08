@@ -1,7 +1,2 @@
-export default function Loading() {
-  return (
-    <p role="status" style={{ padding: 24 }}>
-      Preparing your workspace…
-    </p>
-  );
-}
+import {WorkspaceLoading} from '@/components/product/WorkspaceArrival';
+export default WorkspaceLoading;

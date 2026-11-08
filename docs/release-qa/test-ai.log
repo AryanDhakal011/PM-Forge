@@ -1,0 +1,36 @@
+
+> pmforge@1.0.0 test:ai
+> node --conditions=react-server --import tsx --test tests/interview-ai.test.ts tests/interview-ai-provider.test.ts
+
+✔ official SDK uses bounded stateless structured output with no tools, retry or automatic continuation (595.5016ms)
+✔ provider quota response is sanitized, respects retry guidance, and is never automatically retried (6.9478ms)
+✔ adapter itself cannot bypass guided mode or a zero production budget (0.6043ms)
+✔ default Flash-Lite GenerateContent uses the supported bounded JSON configuration (7.9638ms)
+(node:23624) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 28 held-out fictional cases cover all categories and difficulties; exact citations and bounded questions validate (8.3045ms)
+✔ semantic guards reject fake numbers, locked IDs, invented quotes, duplicate questions, leading text and invalid debriefs (1.8187ms)
+✔ guided mode and unapproved budget/terms fail closed; a production mock flag never opens inference (0.7812ms)
+✔ the additive versioned AI state round-trips legacy saves and preserves local words (15.4884ms)
+✔ server ownership, consent, behavioral policy and initial stage are enforced (38.6288ms)
+✔ duplicate turns reuse one reply and one candidate; stale revisions and arbitrary pilot text are rejected (18.5072ms)
+✔ native progression is idempotent and cannot skip gates or spend ineligible evidence (5.4206ms)
+✔ native context never includes locked evidence or private draft/outline in the pilot (4.7889ms)
+✔ a durable shared kill switch prevents generation without discarding the run (5.3858ms)
+✔ two connections share atomic concurrency and daily session controls (147.3313ms)
+✔ failed attempts retain accounting and candidate text; retries have a strict bound and backoff (8.0186ms)
+✔ one active lease prevents simultaneous generations, and capacity/budget admission is conservative (7.4073ms)
+✔ deleting an AI session removes its private payloads while retaining only operational counters (6.7678ms)
+✔ import detaches stale AI ownership without losing saved words (0.4764ms)
+✔ an expired attempt cannot finish over a newer lease (5.6633ms)
+✔ releasing a room does not permit bypassing admission when resuming (6.2479ms)
+✔ separate Node instances share one atomic admission ceiling (3169.0707ms)
+✔ local live testing never becomes a deployed or paid-mode bypass (0.5109ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7700.454

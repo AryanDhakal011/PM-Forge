@@ -328,7 +328,7 @@ export function DashboardView() {
               The help page explains how to clear practice data, reset the
               profile, and what the interview lab does with your microphone.
             </p>
-            <Link href="/help" className={`${styles.cardLink} btn btnText`}>
+            <Link href="/#help" className={`${styles.cardLink} btn btnText`}>
               Open help
               <ArrowRight size={15} strokeWidth={1.8} aria-hidden="true" />
             </Link>
