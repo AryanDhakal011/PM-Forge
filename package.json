@@ -83,7 +83,7 @@
     "axe-core": "4.14.0",
     "onnxruntime-web": "1.22.0-dev.20250409-89f8206ba4",
     "tsx": "4.23.15",
-    "typescript": "5.9.3"
+    "typescript": "7.0.2"
   },
   "engines": {
     "node": ">=24.4 <25"
