@@ -32,6 +32,7 @@ export class RealtimeLedger {
       if(old){if(old.owner!==owner)throw new AIError('session-not-owned',404);const s=this.state(input.id,owner);if(s.ownerId!==input.localOwnerId||JSON.stringify(s.options)!==JSON.stringify(input.options))throw new AIError('idempotency-conflict',409);return s;}
       if(input.options.persona==='ellis')throw new AIError('persona-retired',400);
       const now=Date.now(),day=new Date(now).toISOString().slice(0,10),month=day.slice(0,7);
+      if(this.ledger.db.prepare("SELECT 1 FROM hotseat_rt_rooms r JOIN ai_sessions s ON s.run_id=r.run_id WHERE s.owner=? AND r.deadline>? AND r.status IN ('reserved','connecting','live')").get(owner,now))throw new AIError('active-session-exists',409);
       const active=this.ledger.db.prepare("SELECT COUNT(*) n FROM hotseat_rt_rooms WHERE deadline>? AND status IN ('reserved','connecting','live')").get(now) as {n:number};
       if(active.n>=c.concurrent)throw new AIError('room-at-capacity',429,30);
       for(const hash of [digest(owner),quotaOwner].filter(Boolean) as string[]) {
@@ -56,6 +57,7 @@ export class RealtimeLedger {
       if(r.status==='connecting')throw new AIError('room-connecting',409,3);
       if(r.status==='live')return {session:s,room:r,dispatch:false};
       if(r.status==='paused') {
+        if(this.ledger.db.prepare("SELECT 1 FROM hotseat_rt_rooms r JOIN ai_sessions s ON s.run_id=r.run_id WHERE s.owner=? AND r.run_id<>? AND r.deadline>? AND r.status IN ('reserved','connecting','live')").get(owner,id,Date.now()))throw new AIError('active-session-exists',409);
         const active=this.ledger.db.prepare("SELECT COUNT(*) n FROM hotseat_rt_rooms WHERE deadline>? AND status IN ('reserved','connecting','live')").get(Date.now()) as {n:number};
         if(active.n>=c.concurrent)throw new AIError('room-at-capacity',429,30);
         r.room='rt-'+randomUUID();s.status='active';s.revision++;this.save(s);

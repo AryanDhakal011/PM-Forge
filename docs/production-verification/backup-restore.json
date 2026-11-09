@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-09T08:14:11.725Z",
+  "source": "existing local application database; contents not logged",
+  "backup": "VACUUM INTO verified snapshot",
+  "restore": "independent private local copy; integrity, foreign keys and all table queries passed",
+  "tables": 23,
+  "offHostEncryptedRestore": "NOT TESTED",
+  "publicDeploymentRollback": "NOT TESTED"
+}

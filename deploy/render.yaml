@@ -1,0 +1,45 @@
+# REVIEW-ONLY pilot blueprint. Creating this service incurs hosting charges.
+# Current SQLite architecture requires ONE instance and a paid persistent disk.
+services:
+  - type: web
+    name: pmforge-pilot
+    runtime: docker
+    region: singapore
+    plan: starter
+    numInstances: 1
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    autoDeployTrigger: off
+    healthCheckPath: /api/health
+    disk:
+      name: pmforge-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: PMFORGE_DEPLOYMENT
+        value: production
+      - key: PMFORGE_DATABASE_PATH
+        value: /data/pmforge.sqlite
+      - key: PMFORGE_AI_MODE
+        value: guided
+      - key: PMFORGE_AI_MONTHLY_BUDGET_USD
+        value: '0'
+      - key: PMFORGE_REALTIME_ENABLED
+        value: 'false'
+      - key: PMFORGE_REALTIME_MONTHLY_BUDGET_USD
+        value: '0'
+      - key: BETTER_AUTH_URL
+        sync: false
+      - key: SITE_URL
+        sync: false
+      - key: BETTER_AUTH_SECRET
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: AUTH_EMAIL_FROM
+        sync: false
+      - key: AUTH_EMAIL_REPLY_TO
+        sync: false
+      # No guessed host header: supply only after ingress spoofing tests on staging.
+      - key: AUTH_TRUSTED_IP_HEADER
+        sync: false

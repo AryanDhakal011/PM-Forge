@@ -1,0 +1,958 @@
+{
+  "version": "kokoro-female-v2",
+  "profile": {
+    "engine": "kokoro-js",
+    "package": "1.2.1",
+    "model": "Kokoro-82M-v1.0-ONNX",
+    "dtype": "q8",
+    "speed": 0.98,
+    "sampleRate": 24000
+  },
+  "clips": [
+    {
+      "voice": "af_bella",
+      "text": "Got it.",
+      "path": "af_bella/a5f0bfcf5e098a6d.wav",
+      "sha256": "a5f0bfcf5e098a6de79e1f88afae0529373b38117b5f30e53126dbc2b8eaffab",
+      "durationMs": 1425,
+      "synthesisMs": 3866.6701
+    },
+    {
+      "voice": "af_bella",
+      "text": "Right.",
+      "path": "af_bella/baea3515e42c6bfd.wav",
+      "sha256": "baea3515e42c6bfdbdf8fdb0d6b0c94ed78dfa513774dba0d2f8301294ab2620",
+      "durationMs": 1350,
+      "synthesisMs": 3237.6736
+    },
+    {
+      "voice": "af_bella",
+      "text": "Okay.",
+      "path": "af_bella/a50f24a7551c3026.wav",
+      "sha256": "a50f24a7551c30267692dd9c1f4245c826dc018acec5cf5daea3ed1b5f87bb06",
+      "durationMs": 1475,
+      "synthesisMs": 3483.416300000001
+    },
+    {
+      "voice": "af_bella",
+      "text": "Take your time. You can also ask me to rephrase.",
+      "path": "af_bella/9f3c0cdf5a5737dc.wav",
+      "sha256": "9f3c0cdf5a5737dcfed8a50a2bad30e8bbf9e1dc3c9a44ea18ad93f86032343e",
+      "durationMs": 3800,
+      "synthesisMs": 8849.264899999998
+    },
+    {
+      "voice": "af_bella",
+      "text": "The conversation is complete. Let’s look at the reasoning you documented. This review is provisional, not a hiring verdict.",
+      "path": "af_bella/6db3ca7c567f79b8.wav",
+      "sha256": "6db3ca7c567f79b86aaebcc5591f604d3aa4b8f992d3a0d5353c68fb5c273ed6",
+      "durationMs": 8725,
+      "synthesisMs": 19527.9871
+    },
+    {
+      "voice": "af_bella",
+      "text": "Let’s get specific. What would you need to know before making that call?",
+      "path": "af_bella/79ad269992ce7d3a.wav",
+      "sha256": "79ad269992ce7d3ad64bd45456889e1b9234f7157a5c130ae9067ddad5ad2545",
+      "durationMs": 4650,
+      "synthesisMs": 10465.2615
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Ledgerline, our fictional series c company. Workspace activation is flat after a packaging change. Where would you spend your first week?",
+      "path": "af_bella/49040ea403650ff4.wav",
+      "sha256": "49040ea403650ff45b343247bb5ca17b432d6052eff1c820a371fcddfd2af8fc",
+      "durationMs": 11525,
+      "synthesisMs": 25090.112399999998
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Ledgerline, our fictional series c company. Workspace activation is flat after a packaging change. What should we learn before changing the roadmap?",
+      "path": "af_bella/b380379522c56e13.wav",
+      "sha256": "b380379522c56e131c05781a55ca1b4957e873faea3dfa8e68db5de2c2284253",
+      "durationMs": 12200,
+      "synthesisMs": 26650.295899999997
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Ledgerline, our fictional series c company. Workspace activation is flat after a packaging change. How would you decide whether packaging is the problem?",
+      "path": "af_bella/44643ccd4bfd3cb0.wav",
+      "sha256": "44643ccd4bfd3cb070956d70d61a693c44174482bec0d3c3594d8bf5f1531876",
+      "durationMs": 12725,
+      "synthesisMs": 26494.20210000001
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Ledgerline, our fictional series c company. Workspace activation is flat after a packaging change. Which customer would you want to hear from first?",
+      "path": "af_bella/42ef9c252ae817f1.wav",
+      "sha256": "42ef9c252ae817f196daa584d1bd9fbf6116987e88fce197c34f402d6be0879f",
+      "durationMs": 12225,
+      "synthesisMs": 28209.08339999999
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Ledgerline, our fictional series c company. Workspace activation is flat after a packaging change. What would you deliberately leave alone?",
+      "path": "af_bella/e5dfe1aceaafaf2c.wav",
+      "sha256": "e5dfe1aceaafaf2cc5946513ecf8617c2bbbcc054325927637eb92091b4c6284",
+      "durationMs": 12050,
+      "synthesisMs": 25216.370800000004
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Ledgerline, our fictional series c company. Workspace activation is flat after a packaging change. How would you bring sales and engineering to a decision?",
+      "path": "af_bella/5ded001015c851c5.wav",
+      "sha256": "5ded001015c851c5ab4daa6b38bad7fd42b6e67df21c814c9576402aa70331fd",
+      "durationMs": 13000,
+      "synthesisMs": 26753.04620000001
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Northwind Pay, our fictional series b company. Card spend per active user fell 8 percent after a release. What would you ask before calling this a product failure?",
+      "path": "af_bella/f8fbd936ffaf36a5.wav",
+      "sha256": "f8fbd936ffaf36a5f90fc0e3cc884224370a244e272884d7f5ac9f2bbc2af1e3",
+      "durationMs": 13425,
+      "synthesisMs": 28964.33110000001
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Northwind Pay, our fictional series b company. Card spend per active user fell 8 percent after a release. Where do you draw the line between growth and trust?",
+      "path": "af_bella/be3f15b76784560f.wav",
+      "sha256": "be3f15b76784560fda8057fc4fbe60567fa8a88285dfdd4fe881429237682566",
+      "durationMs": 13250,
+      "synthesisMs": 29949.892900000035
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Northwind Pay, our fictional series b company. Card spend per active user fell 8 percent after a release. What would you bring to the risk lead?",
+      "path": "af_bella/ee609679415b0126.wav",
+      "sha256": "ee609679415b0126520764c1b58fc23b4717f55544e8c4ed79da33d7429b7a70",
+      "durationMs": 12325,
+      "synthesisMs": 27213.47689999995
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Northwind Pay, our fictional series b company. Card spend per active user fell 8 percent after a release. Which customer behavior matters here?",
+      "path": "af_bella/5d5058cf05217915.wav",
+      "sha256": "5d5058cf0521791594ae4b1bfa7535090c477202b0ba632cec1c4cd7af8afdf2",
+      "durationMs": 12525,
+      "synthesisMs": 28446.401999999944
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Northwind Pay, our fictional series b company. Card spend per active user fell 8 percent after a release. How would you decide whether to roll back?",
+      "path": "af_bella/1b3e33c4de495c1a.wav",
+      "sha256": "1b3e33c4de495c1a3f23b0b188f8ae27c0f4d2c61bfd3c04edb6ecc39e964859",
+      "durationMs": 12625,
+      "synthesisMs": 26980.408799999976
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Northwind Pay, our fictional series b company. Card spend per active user fell 8 percent after a release. What would make your first recommendation reversible?",
+      "path": "af_bella/8506f26344bebe6f.wav",
+      "sha256": "8506f26344bebe6f528bd340d8f9b2f02427cf48eae4db192b3b5759ca21b3e7",
+      "durationMs": 13175,
+      "synthesisMs": 29505.043400000024
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Neighbourly, our fictional growth stage company. New buyers arrive, but repeat matches are falling. Which side would you investigate first?",
+      "path": "af_bella/23bb3e88b0b03fc1.wav",
+      "sha256": "23bb3e88b0b03fc1aaf4239e7099faed0f3807cb08da9c82d1dc46932bb07d1f",
+      "durationMs": 11700,
+      "synthesisMs": 25814.491299999994
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Neighbourly, our fictional growth stage company. New buyers arrive, but repeat matches are falling. How would you recognize a healthy marketplace?",
+      "path": "af_bella/ee12515219d95b67.wav",
+      "sha256": "ee12515219d95b6787ee03ab15e474e883733e0a28d6d02cf234465fba97b737",
+      "durationMs": 12250,
+      "synthesisMs": 25427.639399999985
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Neighbourly, our fictional growth stage company. New buyers arrive, but repeat matches are falling. What would you need to know before offering incentives?",
+      "path": "af_bella/10e98735b593f87b.wav",
+      "sha256": "10e98735b593f87b0bd6d4336598fb35de395c0b05c67c7e4854f32410a5c3e5",
+      "durationMs": 12300,
+      "synthesisMs": 26663.271299999964
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Neighbourly, our fictional growth stage company. New buyers arrive, but repeat matches are falling. Where might the average hide a local problem?",
+      "path": "af_bella/72cad580b560dd41.wav",
+      "sha256": "72cad580b560dd4176a4a530f15556e312c74891f2507e4e5a51cb8e728edf20",
+      "durationMs": 11975,
+      "synthesisMs": 25164.564700000046
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Neighbourly, our fictional growth stage company. New buyers arrive, but repeat matches are falling. What would you learn from a failed match?",
+      "path": "af_bella/1d46dad4cfb0f6d4.wav",
+      "sha256": "1d46dad4cfb0f6d47637be8ba3150b2b37e4d522d4c2a680b1e545789ca70288",
+      "durationMs": 11500,
+      "synthesisMs": 26896.28330000001
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Neighbourly, our fictional growth stage company. New buyers arrive, but repeat matches are falling. How would you prioritize growth against repeat use?",
+      "path": "af_bella/28924a19dcd05b90.wav",
+      "sha256": "28924a19dcd05b901164d929da7050599c92c84ebac0fe76fe23cdf2cfc46150",
+      "durationMs": 12650,
+      "synthesisMs": 27646.146999999997
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Clearpath, our fictional early growth company. Clinic teams abandon a new scheduling workflow. Whose workflow would you observe first?",
+      "path": "af_bella/7e4b71de08442a78.wav",
+      "sha256": "7e4b71de08442a78495f51f5cad90a744b07b4883637d5ea145bd6000059b6b0",
+      "durationMs": 11250,
+      "synthesisMs": 13047.28600000008
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Clearpath, our fictional early growth company. Clinic teams abandon a new scheduling workflow. How would you separate usability from safety concerns?",
+      "path": "af_bella/bf4ac4ede43dfa20.wav",
+      "sha256": "bf4ac4ede43dfa20d207c823323ffc4725da3b687345c86d5f5d306ba15531d8",
+      "durationMs": 12650,
+      "synthesisMs": 14026.198399999994
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Clearpath, our fictional early growth company. Clinic teams abandon a new scheduling workflow. What would you need before a rollout?",
+      "path": "af_bella/2b6de4d6ce4cfb61.wav",
+      "sha256": "2b6de4d6ce4cfb61af3acd57ee059fd9a7923332e8be0581f994b3586487c88a",
+      "durationMs": 11175,
+      "synthesisMs": 12948.737399999984
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Clearpath, our fictional early growth company. Clinic teams abandon a new scheduling workflow. Which task would you simplify first?",
+      "path": "af_bella/abaf4471c84cc0bd.wav",
+      "sha256": "abaf4471c84cc0bdc1091a439ac1833372f245dc17f7d96f5700bb4b79e2dbe8",
+      "durationMs": 11350,
+      "synthesisMs": 12637.492499999935
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Clearpath, our fictional early growth company. Clinic teams abandon a new scheduling workflow. What would you ask a clinic administrator?",
+      "path": "af_bella/d57a9621369c5c9a.wav",
+      "sha256": "d57a9621369c5c9a0a73be5a45fef35f2f737dc4e9ec3c9d6fe53392e495cecf",
+      "durationMs": 11400,
+      "synthesisMs": 12343.169999999925
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Clearpath, our fictional early growth company. Clinic teams abandon a new scheduling workflow. How would you test this without patient information?",
+      "path": "af_bella/5988ccd79e102e2e.wav",
+      "sha256": "5988ccd79e102e2e7002edc9ab29627590648b10d7a578c35d6c12bd827715b1",
+      "durationMs": 12100,
+      "synthesisMs": 13512.346400000039
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Stackline, our fictional series a company. Developers try the API but rarely reach a working integration. How would you investigate the first integration experience?",
+      "path": "af_bella/91f6cb2403426c46.wav",
+      "sha256": "91f6cb2403426c46039f0c1aecd48fddb685a53ba356e9c2d1f94e08f661cfa6",
+      "durationMs": 14125,
+      "synthesisMs": 15774.456600000034
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Stackline, our fictional series a company. Developers try the API but rarely reach a working integration. What makes a developer tool worth adopting?",
+      "path": "af_bella/d6bb5c428a1557f9.wav",
+      "sha256": "d6bb5c428a1557f9c129d5b4330990a185edf9a23735cd87d5b283c622ca9b6d",
+      "durationMs": 13025,
+      "synthesisMs": 14815.866900000023
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Stackline, our fictional series a company. Developers try the API but rarely reach a working integration. What would you measure before rewriting the docs?",
+      "path": "af_bella/916ebf50b32bfc52.wav",
+      "sha256": "916ebf50b32bfc52579252cc6b15f9f5871052b0085cf0729b3dd81022919050",
+      "durationMs": 13050,
+      "synthesisMs": 14641.630000000005
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Stackline, our fictional series a company. Developers try the API but rarely reach a working integration. Which failure deserves the first fix?",
+      "path": "af_bella/dd958ebe05268df7.wav",
+      "sha256": "dd958ebe05268df71d66e871c2e244a683773d89f8d6c07442b75a02f9e558ac",
+      "durationMs": 12725,
+      "synthesisMs": 14140.756599999964
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Stackline, our fictional series a company. Developers try the API but rarely reach a working integration. How would you weigh reliability against a requested feature?",
+      "path": "af_bella/ac3955f771f9494d.wav",
+      "sha256": "ac3955f771f9494dbbb74106e3b820400baa45be40b65ea98a8b3f0829940841",
+      "durationMs": 14050,
+      "synthesisMs": 15642.983600000036
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Stackline, our fictional series a company. Developers try the API but rarely reach a working integration. What would you ask before changing the API?",
+      "path": "af_bella/8f3465095acf57d4.wav",
+      "sha256": "8f3465095acf57d4ce18a6569f20a8e1063918a782be7f3f5b983445f79009ef",
+      "durationMs": 13400,
+      "synthesisMs": 15228.983099999954
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Draftwise, our fictional seed stage company. Usage grows while users report inconsistent outputs. What would you count as a useful AI result?",
+      "path": "af_bella/a97cd67eb956d25e.wav",
+      "sha256": "a97cd67eb956d25eba982fd946ebf69ac0849a5c0b0c1c44c4024b767cb799d6",
+      "durationMs": 12975,
+      "synthesisMs": 14531.206300000078
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Draftwise, our fictional seed stage company. Usage grows while users report inconsistent outputs. How would you investigate inconsistent quality?",
+      "path": "af_bella/0d7a99ef5864c758.wav",
+      "sha256": "0d7a99ef5864c758b6ac7417ab022b52ac80ec1eebb9c157fc21594890bfbd3a",
+      "durationMs": 13125,
+      "synthesisMs": 14912.292599999928
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Draftwise, our fictional seed stage company. Usage grows while users report inconsistent outputs. Where would you put a human in the loop?",
+      "path": "af_bella/1bfd6590bef17bde.wav",
+      "sha256": "1bfd6590bef17bde880c145ed02c20b26aa67affff75c63b8554988936bf9257",
+      "durationMs": 11900,
+      "synthesisMs": 13240.97259999998
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Draftwise, our fictional seed stage company. Usage grows while users report inconsistent outputs. What failure would you refuse to ship?",
+      "path": "af_bella/8de71da4fe6d7eda.wav",
+      "sha256": "8de71da4fe6d7edaf40e0c0f3cee650775a57514b0a77805489527814cec3407",
+      "durationMs": 12375,
+      "synthesisMs": 13410.282699999982
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Draftwise, our fictional seed stage company. Usage grows while users report inconsistent outputs. How would you choose between quality and speed?",
+      "path": "af_bella/e43c92532c24cb60.wav",
+      "sha256": "e43c92532c24cb60159ab8532f3c02606d086de7347a6bc7c23bc2a7e0d0945b",
+      "durationMs": 12700,
+      "synthesisMs": 14143.815500000026
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Draftwise, our fictional seed stage company. Usage grows while users report inconsistent outputs. What should we evaluate before changing the model?",
+      "path": "af_bella/bc8fb7b6fdf68181.wav",
+      "sha256": "bc8fb7b6fdf681819ba50ec5cbe26f39d70226c20284235fd999209f6b87a4eb",
+      "durationMs": 12950,
+      "synthesisMs": 18588.638400000054
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Fieldwork, our fictional established brand company. Discount campaigns grow orders while margins weaken. How would you judge whether this growth is useful?",
+      "path": "af_bella/a4b3e5feba01654b.wav",
+      "sha256": "a4b3e5feba01654bf8f43ccc47b6bd64ad08e397d356ed736d9188de6b9baca3",
+      "durationMs": 12775,
+      "synthesisMs": 23181.04799999995
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Fieldwork, our fictional established brand company. Discount campaigns grow orders while margins weaken. Which customer would you focus on first?",
+      "path": "af_bella/d6f0c4323b364764.wav",
+      "sha256": "d6f0c4323b3647649d8abaa6a7c7b48d03f443cfb28f4780ca3c6b06d358097d",
+      "durationMs": 12275,
+      "synthesisMs": 20743.757899999968
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Fieldwork, our fictional established brand company. Discount campaigns grow orders while margins weaken. What would you test before another promotion?",
+      "path": "af_bella/d32dfb90e196a24e.wav",
+      "sha256": "d32dfb90e196a24e702c73d249848ea95166a489edef2d5b425e5c59ab8280d8",
+      "durationMs": 12325,
+      "synthesisMs": 17906.784199999995
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Fieldwork, our fictional established brand company. Discount campaigns grow orders while margins weaken. Where might the unit economics mislead us?",
+      "path": "af_bella/7022dd096a153bec.wav",
+      "sha256": "7022dd096a153bec216941aeab774bb49ddc53a72891969d8d901bb095ec3f79",
+      "durationMs": 12350,
+      "synthesisMs": 14302.265699999989
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Fieldwork, our fictional established brand company. Discount campaigns grow orders while margins weaken. What should operations veto?",
+      "path": "af_bella/08fd7db163336cd8.wav",
+      "sha256": "08fd7db163336cd8c39659a95359ef21cd87d6925d7665d5f2ce0bef840b1523",
+      "durationMs": 11750,
+      "synthesisMs": 12990.123300000094
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Fieldwork, our fictional established brand company. Discount campaigns grow orders while margins weaken. How would you choose what to stop doing?",
+      "path": "af_bella/3ca8ea5087e91745.wav",
+      "sha256": "3ca8ea5087e91745ba9c6d3ec3f439db0a480af7b15d28672c1ca55a54bd3dea",
+      "durationMs": 11950,
+      "synthesisMs": 13213.137400000007
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Civic Bridge, our fictional public service company. Residents start applications but many need assisted support. Who might the dashboard be missing?",
+      "path": "af_bella/b1a390308db1e6a1.wav",
+      "sha256": "b1a390308db1e6a1d82fff4829b18b336e8058831d09aa9aeeccd74a957e65f8",
+      "durationMs": 12150,
+      "synthesisMs": 13457.940999999992
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Civic Bridge, our fictional public service company. Residents start applications but many need assisted support. What would you observe at the service desk?",
+      "path": "af_bella/502b2e5e590c53ac.wav",
+      "sha256": "502b2e5e590c53ac1c2f3397f29bd9fe240ff3ae03b3713f04859efd5bfc170c",
+      "durationMs": 12450,
+      "synthesisMs": 13826.737199999974
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Civic Bridge, our fictional public service company. Residents start applications but many need assisted support. How would you decide which barrier matters most?",
+      "path": "af_bella/375b74205fcb52a2.wav",
+      "sha256": "375b74205fcb52a21fd4fc15a901f5e35202bbc73db59c979bc1f2acda89d051",
+      "durationMs": 13275,
+      "synthesisMs": 15119.895200000028
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Civic Bridge, our fictional public service company. Residents start applications but many need assisted support. What does successful access mean here?",
+      "path": "af_bella/cee2b2feedf8f48d.wav",
+      "sha256": "cee2b2feedf8f48d398349912d1244ad3984cbec381663a883decd0930c8bcbb",
+      "durationMs": 12750,
+      "synthesisMs": 14481.28190000006
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Civic Bridge, our fictional public service company. Residents start applications but many need assisted support. Which trade-off would you explain publicly?",
+      "path": "af_bella/6921ea208594f7cb.wav",
+      "sha256": "6921ea208594f7cb097efa089e97fa0aae55b0ce740b2eb28884d026ad4ca384",
+      "durationMs": 13075,
+      "synthesisMs": 14839.712600000086
+    },
+    {
+      "voice": "af_bella",
+      "text": "I'm Nora Vance. You're joining Civic Bridge, our fictional public service company. Residents start applications but many need assisted support. How would you test a change on a constrained budget?",
+      "path": "af_bella/39cfb6fe72a68ab1.wav",
+      "sha256": "39cfb6fe72a68ab1a2c2edf83b5eb65ba1c76fc33ed144d123780c9015ade9e6",
+      "durationMs": 13400,
+      "synthesisMs": 15092.729199999943
+    },
+    {
+      "voice": "af_sarah",
+      "text": "Got it.",
+      "path": "af_sarah/961467c3009c77c1.wav",
+      "sha256": "961467c3009c77c1ac729cd7fcc8091a0884f6eb03e6d3680128b8f38dc5dbf4",
+      "durationMs": 1750,
+      "synthesisMs": 1889.7672999999486
+    },
+    {
+      "voice": "af_sarah",
+      "text": "Right.",
+      "path": "af_sarah/326361e672ad1406.wav",
+      "sha256": "326361e672ad14065a567e501799ceda3a611b7481f2ae1741aed4eb8a75d81b",
+      "durationMs": 1650,
+      "synthesisMs": 1884.5200000000186
+    },
+    {
+      "voice": "af_sarah",
+      "text": "Okay.",
+      "path": "af_sarah/bcce4d40dbad1e6e.wav",
+      "sha256": "bcce4d40dbad1e6e6b45bada82e3f691b04dad420f47941e99ab0fc3c3721b95",
+      "durationMs": 1800,
+      "synthesisMs": 2028.5324000000255
+    },
+    {
+      "voice": "af_sarah",
+      "text": "Take your time. You can also ask me to rephrase.",
+      "path": "af_sarah/5ad957788846e340.wav",
+      "sha256": "5ad957788846e340d0d4d5a0f1d53e56bc07feb2317116945eba614a49457a4c",
+      "durationMs": 4100,
+      "synthesisMs": 4659.3142000000225
+    },
+    {
+      "voice": "af_sarah",
+      "text": "The conversation is complete. Let’s look at the reasoning you documented. This review is provisional, not a hiring verdict.",
+      "path": "af_sarah/17f3f4991ac4a22c.wav",
+      "sha256": "17f3f4991ac4a22c8fc5ef33dff62b9679cc9eb2f7a26d918b2112ba263fbc06",
+      "durationMs": 8550,
+      "synthesisMs": 9794.864800000098
+    },
+    {
+      "voice": "af_sarah",
+      "text": "There might be something interesting there. What would you try first, and why?",
+      "path": "af_sarah/0eaf99865433aca4.wav",
+      "sha256": "0eaf99865433aca4496566bebe24f27190d1354c3f3357247134ff55ca3d1094",
+      "durationMs": 5000,
+      "synthesisMs": 5304.202200000058
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Ledgerline, our fictional series c company. Workspace activation is flat after a packaging change. Where would you spend your first week?",
+      "path": "af_sarah/73cc14ba14207c8b.wav",
+      "sha256": "73cc14ba14207c8ba8457091388ddb773134b8c0d8c57c8c017fb97664c166a0",
+      "durationMs": 10950,
+      "synthesisMs": 11924.52649999992
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Ledgerline, our fictional series c company. Workspace activation is flat after a packaging change. What should we learn before changing the roadmap?",
+      "path": "af_sarah/e2cad3ce6f098932.wav",
+      "sha256": "e2cad3ce6f098932da8bc950c89204a0c380be6025a6d67967b57a3ba25c66cf",
+      "durationMs": 11925,
+      "synthesisMs": 12796.109599999967
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Ledgerline, our fictional series c company. Workspace activation is flat after a packaging change. How would you decide whether packaging is the problem?",
+      "path": "af_sarah/158d179d62075d6b.wav",
+      "sha256": "158d179d62075d6be0147ff49cbe6bc354eb5aa2fcab74e2bfbb9aaec7ccdb13",
+      "durationMs": 12525,
+      "synthesisMs": 13553.55290000001
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Ledgerline, our fictional series c company. Workspace activation is flat after a packaging change. Which customer would you want to hear from first?",
+      "path": "af_sarah/8bdebe27cf6c8072.wav",
+      "sha256": "8bdebe27cf6c80726db79ef7d5710d36497a1233aa35e80d27b5c3d1fa377caf",
+      "durationMs": 11900,
+      "synthesisMs": 13182.902299999958
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Ledgerline, our fictional series c company. Workspace activation is flat after a packaging change. What would you deliberately leave alone?",
+      "path": "af_sarah/8f1be20626df9780.wav",
+      "sha256": "8f1be20626df9780eedd1fe573cd4f89433bf667cae3739a2c3140670fccbc7a",
+      "durationMs": 11375,
+      "synthesisMs": 12666.66240000003
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Ledgerline, our fictional series c company. Workspace activation is flat after a packaging change. How would you bring sales and engineering to a decision?",
+      "path": "af_sarah/d9b6ee28ed500415.wav",
+      "sha256": "d9b6ee28ed5004156203de3b34fabd32d07a4454e1b3d75aecda8fa6d5e94957",
+      "durationMs": 12525,
+      "synthesisMs": 14237.896300000139
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Northwind Pay, our fictional series b company. Card spend per active user fell 8 percent after a release. What would you ask before calling this a product failure?",
+      "path": "af_sarah/1c581c4382e9277c.wav",
+      "sha256": "1c581c4382e9277c6c83c91bc33eeac1a8d51e1a1ebe97f5737de30c6c8a5ade",
+      "durationMs": 12925,
+      "synthesisMs": 14771.487100000028
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Northwind Pay, our fictional series b company. Card spend per active user fell 8 percent after a release. Where do you draw the line between growth and trust?",
+      "path": "af_sarah/bbb0f65a20c0a327.wav",
+      "sha256": "bbb0f65a20c0a327a5e1f4c230ea97e6575aad3a708654275ca7f6881a6bc0ca",
+      "durationMs": 12525,
+      "synthesisMs": 15039.815599999856
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Northwind Pay, our fictional series b company. Card spend per active user fell 8 percent after a release. What would you bring to the risk lead?",
+      "path": "af_sarah/1d7b258225c7bee3.wav",
+      "sha256": "1d7b258225c7bee339381ad1d97b895050aae8683f93ccb9b2838a6ada96b7ad",
+      "durationMs": 11625,
+      "synthesisMs": 23157.48490000004
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Northwind Pay, our fictional series b company. Card spend per active user fell 8 percent after a release. Which customer behavior matters here?",
+      "path": "af_sarah/e4a175bfa7f0a095.wav",
+      "sha256": "e4a175bfa7f0a09503852bf2836e6024dd35fdc9a1fb55bc8a3d9ae84e85d67d",
+      "durationMs": 12125,
+      "synthesisMs": 24464.727900000056
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Northwind Pay, our fictional series b company. Card spend per active user fell 8 percent after a release. How would you decide whether to roll back?",
+      "path": "af_sarah/d1905a847dc96bf9.wav",
+      "sha256": "d1905a847dc96bf941c7f8bd26cc35969d6ea0b04dd0a546c391c4dccdfbb1ca",
+      "durationMs": 12175,
+      "synthesisMs": 26943.506199999945
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Northwind Pay, our fictional series b company. Card spend per active user fell 8 percent after a release. What would make your first recommendation reversible?",
+      "path": "af_sarah/a11c69295a89aba3.wav",
+      "sha256": "a11c69295a89aba341b9eee35ffdcc966f71881a1eaa50cc8e366957b643d5ba",
+      "durationMs": 12800,
+      "synthesisMs": 27958.383700000122
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Neighbourly, our fictional growth stage company. New buyers arrive, but repeat matches are falling. Which side would you investigate first?",
+      "path": "af_sarah/430305e3ecfb268a.wav",
+      "sha256": "430305e3ecfb268a6bb717a54adabe83a97dd233b7f30a48eb7bc7db2ee6e946",
+      "durationMs": 11350,
+      "synthesisMs": 24571.969999999972
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Neighbourly, our fictional growth stage company. New buyers arrive, but repeat matches are falling. How would you recognize a healthy marketplace?",
+      "path": "af_sarah/3cf0583656a9978b.wav",
+      "sha256": "3cf0583656a9978bddbdf5aca37fc7acaddfa25be2409ed73ed6963ac5063e73",
+      "durationMs": 11750,
+      "synthesisMs": 25442.379799999995
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Neighbourly, our fictional growth stage company. New buyers arrive, but repeat matches are falling. What would you need to know before offering incentives?",
+      "path": "af_sarah/e5481af71bd983a6.wav",
+      "sha256": "e5481af71bd983a64093ca9381f441346e9545361443c86c909ece8f44383c92",
+      "durationMs": 11950,
+      "synthesisMs": 25483.84260000009
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Neighbourly, our fictional growth stage company. New buyers arrive, but repeat matches are falling. Where might the average hide a local problem?",
+      "path": "af_sarah/1e8cd70fe2032361.wav",
+      "sha256": "1e8cd70fe20323610616072574ca75621ac51d685355913509eb46eabb55067e",
+      "durationMs": 11550,
+      "synthesisMs": 24820.021899999818
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Neighbourly, our fictional growth stage company. New buyers arrive, but repeat matches are falling. What would you learn from a failed match?",
+      "path": "af_sarah/83c32d930258fa41.wav",
+      "sha256": "83c32d930258fa410920c6496356301234bcca5134391ac3ded8a12376fbb863",
+      "durationMs": 11000,
+      "synthesisMs": 23781.573799999896
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Neighbourly, our fictional growth stage company. New buyers arrive, but repeat matches are falling. How would you prioritize growth against repeat use?",
+      "path": "af_sarah/73e533408ece37a5.wav",
+      "sha256": "73e533408ece37a50f27a993b0b6aa1bb939384d85d0ec7c0484e3d623658fb8",
+      "durationMs": 12225,
+      "synthesisMs": 26357.523800000083
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Clearpath, our fictional early growth company. Clinic teams abandon a new scheduling workflow. Whose workflow would you observe first?",
+      "path": "af_sarah/926e364dc6d265d9.wav",
+      "sha256": "926e364dc6d265d94b27fa5b1328c2e885ccb6eef3feb3236cb0bee93e7fbaff",
+      "durationMs": 11050,
+      "synthesisMs": 24447.544100000057
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Clearpath, our fictional early growth company. Clinic teams abandon a new scheduling workflow. How would you separate usability from safety concerns?",
+      "path": "af_sarah/b8c3b2d002781f8f.wav",
+      "sha256": "b8c3b2d002781f8f624b4bbf5783bae5bc88cd4ccb23873f9700b111d19d8a9b",
+      "durationMs": 12250,
+      "synthesisMs": 27231.81119999988
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Clearpath, our fictional early growth company. Clinic teams abandon a new scheduling workflow. What would you need before a rollout?",
+      "path": "af_sarah/e9f0b8176d11e328.wav",
+      "sha256": "e9f0b8176d11e3281b66d5047f28291547d73c955d49c60a2807032a19fb2662",
+      "durationMs": 10850,
+      "synthesisMs": 22614.00549999997
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Clearpath, our fictional early growth company. Clinic teams abandon a new scheduling workflow. Which task would you simplify first?",
+      "path": "af_sarah/c8219aec129b8be9.wav",
+      "sha256": "c8219aec129b8be989f6784555d729d2cab8ba2e8e838b8a3d7a9e3a5a27cb41",
+      "durationMs": 11000,
+      "synthesisMs": 21360.99959999998
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Clearpath, our fictional early growth company. Clinic teams abandon a new scheduling workflow. What would you ask a clinic administrator?",
+      "path": "af_sarah/f02ea91c5f46a57d.wav",
+      "sha256": "f02ea91c5f46a57d82ebfcd071eca71ed800400ad8ac856c58dbe392c78faab5",
+      "durationMs": 11075,
+      "synthesisMs": 13178.604800000088
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Clearpath, our fictional early growth company. Clinic teams abandon a new scheduling workflow. How would you test this without patient information?",
+      "path": "af_sarah/2332366668d893e1.wav",
+      "sha256": "2332366668d893e104b79a8a4acfbc2be6ae77b3e21bb6b40a32916b407b6300",
+      "durationMs": 11775,
+      "synthesisMs": 13369.244399999967
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Stackline, our fictional series a company. Developers try the API but rarely reach a working integration. How would you investigate the first integration experience?",
+      "path": "af_sarah/bc75bc261c9de55f.wav",
+      "sha256": "bc75bc261c9de55fe73d991e8c11f236a26b652a1030bdbc78dbe88c1329ca44",
+      "durationMs": 13500,
+      "synthesisMs": 15263.892299999949
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Stackline, our fictional series a company. Developers try the API but rarely reach a working integration. What makes a developer tool worth adopting?",
+      "path": "af_sarah/23795fab9c60b3e4.wav",
+      "sha256": "23795fab9c60b3e472685126665cd3c2da8d6fe7cf03ee871e02df340171af0d",
+      "durationMs": 12600,
+      "synthesisMs": 13893.555799999973
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Stackline, our fictional series a company. Developers try the API but rarely reach a working integration. What would you measure before rewriting the docs?",
+      "path": "af_sarah/23365d59e907eba9.wav",
+      "sha256": "23365d59e907eba94a3d5ef28aed6b09dd4ff4634e864713b92217f074603754",
+      "durationMs": 12525,
+      "synthesisMs": 13889.586899999995
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Stackline, our fictional series a company. Developers try the API but rarely reach a working integration. Which failure deserves the first fix?",
+      "path": "af_sarah/bd3a479bc2756510.wav",
+      "sha256": "bd3a479bc2756510783f77a8340fafd6af6d94aa88b3bcb870782829c6990524",
+      "durationMs": 12250,
+      "synthesisMs": 13513.164000000106
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Stackline, our fictional series a company. Developers try the API but rarely reach a working integration. How would you weigh reliability against a requested feature?",
+      "path": "af_sarah/49a760bae12fdd81.wav",
+      "sha256": "49a760bae12fdd81627f9f6ee1985e69bf316930e716b949b1ecf9498e355b13",
+      "durationMs": 13500,
+      "synthesisMs": 16847.163800000213
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Stackline, our fictional series a company. Developers try the API but rarely reach a working integration. What would you ask before changing the API?",
+      "path": "af_sarah/11ffb81ade0fcbaa.wav",
+      "sha256": "11ffb81ade0fcbaab6f4ea5b5c13da855fb5f989886ace40fb7a4e7e94523fac",
+      "durationMs": 12775,
+      "synthesisMs": 17001.32529999991
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Draftwise, our fictional seed stage company. Usage grows while users report inconsistent outputs. What would you count as a useful AI result?",
+      "path": "af_sarah/410cf83fe971a350.wav",
+      "sha256": "410cf83fe971a350c2a5dd0fb84e10e0e17a8b9527a05fb2e50c00160e8f46b1",
+      "durationMs": 12475,
+      "synthesisMs": 15082.02509999997
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Draftwise, our fictional seed stage company. Usage grows while users report inconsistent outputs. How would you investigate inconsistent quality?",
+      "path": "af_sarah/0be1726e142084f6.wav",
+      "sha256": "0be1726e142084f6a19bea4398c8db8ca31f353855dbe92dd2063320c6f2e226",
+      "durationMs": 12600,
+      "synthesisMs": 14370.429600000149
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Draftwise, our fictional seed stage company. Usage grows while users report inconsistent outputs. Where would you put a human in the loop?",
+      "path": "af_sarah/ef3f142d5f65c555.wav",
+      "sha256": "ef3f142d5f65c555484870b9ea4749472b0012a46171d80d075c1b1f15ec4cc9",
+      "durationMs": 11500,
+      "synthesisMs": 12839.058799999999
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Draftwise, our fictional seed stage company. Usage grows while users report inconsistent outputs. What failure would you refuse to ship?",
+      "path": "af_sarah/f6d7e57d1ab6365d.wav",
+      "sha256": "f6d7e57d1ab6365d2d8ebf59a3da1b582137e0422fce939b5c7e7aa2febc8a0a",
+      "durationMs": 11700,
+      "synthesisMs": 12950.251500000013
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Draftwise, our fictional seed stage company. Usage grows while users report inconsistent outputs. How would you choose between quality and speed?",
+      "path": "af_sarah/467fcf7fe2614b72.wav",
+      "sha256": "467fcf7fe2614b721793d8cc3d783b042f326975c0958f22d84af35dcc5ddf1d",
+      "durationMs": 12325,
+      "synthesisMs": 13555.76270000008
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Draftwise, our fictional seed stage company. Usage grows while users report inconsistent outputs. What should we evaluate before changing the model?",
+      "path": "af_sarah/f842e00a12a80fc3.wav",
+      "sha256": "f842e00a12a80fc33245d27b24aed2200c0f02c3932038e8edc55b6248fd84f1",
+      "durationMs": 12450,
+      "synthesisMs": 14224.41429999983
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Fieldwork, our fictional established brand company. Discount campaigns grow orders while margins weaken. How would you judge whether this growth is useful?",
+      "path": "af_sarah/ab28cf7c415ce8a7.wav",
+      "sha256": "ab28cf7c415ce8a7239b7b37e98383647dd85c7cf20392803228248e63245f1a",
+      "durationMs": 12075,
+      "synthesisMs": 13313.19209999987
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Fieldwork, our fictional established brand company. Discount campaigns grow orders while margins weaken. Which customer would you focus on first?",
+      "path": "af_sarah/3e4f04b90f8a5563.wav",
+      "sha256": "3e4f04b90f8a55638c581e74541aea885c57e88991e1d2d05b2c7c458bb653e6",
+      "durationMs": 11750,
+      "synthesisMs": 12729.421799999895
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Fieldwork, our fictional established brand company. Discount campaigns grow orders while margins weaken. What would you test before another promotion?",
+      "path": "af_sarah/5057d7e266be218b.wav",
+      "sha256": "5057d7e266be218bf5b36f9fab366618bb752865b54104344e3e37a6c041a840",
+      "durationMs": 11800,
+      "synthesisMs": 14098.694600000046
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Fieldwork, our fictional established brand company. Discount campaigns grow orders while margins weaken. Where might the unit economics mislead us?",
+      "path": "af_sarah/a4829de19755c6df.wav",
+      "sha256": "a4829de19755c6df2caf5b555d08cf967c0e887da3ab5e4004b96077c2bc2b31",
+      "durationMs": 11900,
+      "synthesisMs": 18533.45160000003
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Fieldwork, our fictional established brand company. Discount campaigns grow orders while margins weaken. What should operations veto?",
+      "path": "af_sarah/108596b1f1e33947.wav",
+      "sha256": "108596b1f1e33947d1a1743f290c244bcbdee2ac1acdb5b99948c84d944b091f",
+      "durationMs": 11175,
+      "synthesisMs": 17128.352799999993
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Fieldwork, our fictional established brand company. Discount campaigns grow orders while margins weaken. How would you choose what to stop doing?",
+      "path": "af_sarah/8e265d2604bfad63.wav",
+      "sha256": "8e265d2604bfad63bad55c35122fe7ca4602e8ed27603121fe779ff7e7ac3298",
+      "durationMs": 11525,
+      "synthesisMs": 18344.741900000023
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Civic Bridge, our fictional public service company. Residents start applications but many need assisted support. Who might the dashboard be missing?",
+      "path": "af_sarah/5b4eadee54f7d292.wav",
+      "sha256": "5b4eadee54f7d292c23039aff6937dac5735b0ba80c799aef0e7f514d9f394d8",
+      "durationMs": 11675,
+      "synthesisMs": 20400.470900000073
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Civic Bridge, our fictional public service company. Residents start applications but many need assisted support. What would you observe at the service desk?",
+      "path": "af_sarah/8a91ca6c4451a587.wav",
+      "sha256": "8a91ca6c4451a58723f388c291486714ed5a888a0bc50c9dec3ce68da28d1ea9",
+      "durationMs": 12050,
+      "synthesisMs": 20395.677799999947
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Civic Bridge, our fictional public service company. Residents start applications but many need assisted support. How would you decide which barrier matters most?",
+      "path": "af_sarah/a6a5e9eb0e4e42f6.wav",
+      "sha256": "a6a5e9eb0e4e42f6e800773dafab58099094088078fe46ff1aadb6c86d9fe8fa",
+      "durationMs": 12775,
+      "synthesisMs": 20260.688799999887
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Civic Bridge, our fictional public service company. Residents start applications but many need assisted support. What does successful access mean here?",
+      "path": "af_sarah/f89a7e674847bd4c.wav",
+      "sha256": "f89a7e674847bd4cee2640178509662a1e421f01ea1e84311978aceef17d6f22",
+      "durationMs": 12300,
+      "synthesisMs": 19547.86310000019
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Civic Bridge, our fictional public service company. Residents start applications but many need assisted support. Which trade-off would you explain publicly?",
+      "path": "af_sarah/1de2f47aff978bd5.wav",
+      "sha256": "1de2f47aff978bd5e9cdc6bdbaae1305100f4e403f3fc8afbef42cecb7973951",
+      "durationMs": 12525,
+      "synthesisMs": 21172.735199999996
+    },
+    {
+      "voice": "af_sarah",
+      "text": "I'm Kai Moreno. You're joining Civic Bridge, our fictional public service company. Residents start applications but many need assisted support. How would you test a change on a constrained budget?",
+      "path": "af_sarah/0d954c6e2afcb38c.wav",
+      "sha256": "0d954c6e2afcb38cebfee5fa0deba99a2597f6ba66d3f97eb577ac2af2d31b02",
+      "durationMs": 12950,
+      "synthesisMs": 21091.205499999924
+    },
+    {
+      "voice": "af_bella",
+      "text": "We will stop here and review the reasoning you documented. This is provisional practice feedback, not a hiring verdict.",
+      "path": "af_bella/89dbb83819f7483f.wav",
+      "sha256": "89dbb83819f7483fae7abff8572659e4d7e3d68ba6c76585ea391c7dc7f91f8d",
+      "durationMs": 8125,
+      "synthesisMs": 13946.778400000001
+    },
+    {
+      "voice": "af_bella",
+      "text": "What would you do differently after hearing the challenge?",
+      "path": "af_bella/c928b25c4872119d.wav",
+      "sha256": "c928b25c4872119d122ac1bdaf677eb12ed6d710e5fda5ab462d92cdab6e009b",
+      "durationMs": 3675,
+      "synthesisMs": 6681.2874999999985
+    },
+    {
+      "voice": "af_bella",
+      "text": "How would you define that measure, and what would keep you from optimizing the wrong thing?",
+      "path": "af_bella/2c686b15766b6d96.wav",
+      "sha256": "2c686b15766b6d963d008b9a56ccb267209bdaf0d623df329bb3f0da6549e354",
+      "durationMs": 5400,
+      "synthesisMs": 9012.316999999995
+    },
+    {
+      "voice": "af_bella",
+      "text": "What would make that test change your decision?",
+      "path": "af_bella/e73001e1384d102d.wav",
+      "sha256": "e73001e1384d102dd37583a11a15ab0c7f39f3fdabdfd2d7de9c54c4cda5b042",
+      "durationMs": 3225,
+      "synthesisMs": 5604.527900000001
+    },
+    {
+      "voice": "af_bella",
+      "text": "How would you explain the opportunity cost to the stakeholder who disagrees?",
+      "path": "af_bella/413d58084c685861.wav",
+      "sha256": "413d58084c6858615dc11205a6927912fdc51d923e698a11b3b0e24433d23bed",
+      "durationMs": 4925,
+      "synthesisMs": 8610.7013
+    },
+    {
+      "voice": "af_sarah",
+      "text": "We will stop here and review the reasoning you documented. This is provisional practice feedback, not a hiring verdict.",
+      "path": "af_sarah/12588d1213e4d6a2.wav",
+      "sha256": "12588d1213e4d6a2878ccacdaa7a00140c1018991b61e2e4635ad1a22ab93665",
+      "durationMs": 8050.000000000001,
+      "synthesisMs": 13012.501100000001
+    },
+    {
+      "voice": "af_sarah",
+      "text": "What would you do differently after hearing the challenge?",
+      "path": "af_sarah/51d6621164d9b645.wav",
+      "sha256": "51d6621164d9b645f5927371dd48ffb6be0f573194c2eb43659069b71a063b21",
+      "durationMs": 3725,
+      "synthesisMs": 6254.595000000001
+    },
+    {
+      "voice": "af_sarah",
+      "text": "How would you define that measure, and what would keep you from optimizing the wrong thing?",
+      "path": "af_sarah/88dc2fda944051c8.wav",
+      "sha256": "88dc2fda944051c823f15952243a782ea381997af929e5698c126c229ec4cc6e",
+      "durationMs": 5450,
+      "synthesisMs": 9471.126000000004
+    },
+    {
+      "voice": "af_sarah",
+      "text": "What would make that test change your decision?",
+      "path": "af_sarah/f0b0b27d5c69204b.wav",
+      "sha256": "f0b0b27d5c69204baf27357f50f82f063e894460278c5183d23fd5a1e777c0a6",
+      "durationMs": 3375,
+      "synthesisMs": 5474.907899999991
+    },
+    {
+      "voice": "af_sarah",
+      "text": "How would you explain the opportunity cost to the stakeholder who disagrees?",
+      "path": "af_sarah/a06bf88842fdcaa9.wav",
+      "sha256": "a06bf88842fdcaa9375a16b22d34ae4cbbefa92bd3926785787fb434884b7d14",
+      "durationMs": 4975,
+      "synthesisMs": 8371.410399999993
+    }
+  ],
+  "format": "mono-pcm16-wav"
+}

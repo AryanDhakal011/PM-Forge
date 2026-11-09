@@ -2,7 +2,7 @@
 
 For the requested zero-cost pilot, read [the free-hosting decision](FREE-HOSTING.md) first. Local SQLite is not durable on serverless hosts.
 
-PMForge is prepared for a **single persistent Node server**, with Caddy terminating HTTPS. The SQLite database and private mail queue require a persistent disk. An ephemeral or multi-replica serverless deployment is not supported by this configuration. AI-provider integration is a separate future task; no paid AI service is required for the authored interviews.
+PMForge is prepared for a **single persistent Node server**, with Caddy or the managed host terminating HTTPS. SQLite and the private mail queue require a persistent disk. Ephemeral or multi-replica serverless hosting is not supported. Optional realtime voice has a separate long-lived worker and vendor budget. Read the [hosting decision](HOSTING-DECISION.md) and [production audit](prr.md) before provisioning.
 
 ## Configure
 

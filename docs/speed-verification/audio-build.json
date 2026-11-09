@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-09T08:41:06.151Z",
+  "modelLoadMs": 2216.2241000000004,
+  "thisBuildMs": 88720.133,
+  "totalRecordedSynthesisMs": 1969062.9221000003,
+  "renderedNow": 10,
+  "clips": 118,
+  "engine": {
+    "engine": "kokoro-js",
+    "package": "1.2.1",
+    "model": "Kokoro-82M-v1.0-ONNX",
+    "dtype": "q8",
+    "speed": 0.98,
+    "sampleRate": 24000
+  },
+  "externalSpeechCalls": 0
+}

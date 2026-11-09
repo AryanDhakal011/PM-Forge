@@ -2,7 +2,7 @@
   "name": "pmforge",
   "version": "1.0.0",
   "private": true,
-  "description": "PMForge \u2014 a practice platform for product decisions.",
+  "description": "PMForge \u00e2\u20ac\u201d a practice platform for product decisions.",
   "scripts": {
     "dev": "node scripts/dev-preview.mjs",
     "build": "next build",
@@ -34,9 +34,13 @@
     "ai:eval": "node --conditions=react-server --import tsx scripts/evaluate-interview-ai.ts",
     "ai:ops": "node --conditions=react-server --import tsx scripts/ai-ops.ts",
     "qa:release": "node scripts/qa-release.mjs",
-    "test:hot-seat": "node --conditions=react-server --import tsx --test tests/hot-seat.test.ts tests/hot-seat-route.test.ts tests/hot-seat-ux.test.ts tests/hot-seat-dictation.test.ts tests/hot-seat-realtime.test.ts tests/hot-seat-realtime-route.test.ts",
+    "test:hot-seat": "node --conditions=react-server --import tsx --test tests/hot-seat.test.ts tests/hot-seat-route.test.ts tests/hot-seat-ux.test.ts tests/hot-seat-microphone.test.ts tests/hot-seat-worklet.test.ts tests/hot-seat-voice-lifecycle.test.ts tests/production-controls.test.ts tests/hot-seat-realtime.test.ts tests/hot-seat-realtime-route.test.ts",
+    "hot-seat:audio:build": "node --import tsx scripts/render-hot-seat-library.ts && node scripts/finalize-hot-seat-library.mjs",
     "hot-seat:eval": "node --conditions=react-server --import tsx scripts/evaluate-hot-seat.ts",
-    "hot-seat:voice:ops": "node --conditions=react-server --env-file-if-exists=.env.local --import tsx scripts/hot-seat-voice-ops.ts"
+    "hot-seat:voice:ops": "node --conditions=react-server --env-file-if-exists=.env.local --import tsx scripts/hot-seat-voice-ops.ts",
+    "hot-seat:audio:check": "node scripts/check-hot-seat-library.mjs",
+    "security:scan": "node scripts/scan-release-secrets.mjs",
+    "hot-seat:dictation:check": "node --import tsx scripts/verify-device-dictation.ts"
   },
   "dependencies": {
     "@fontsource/barlow-condensed": "^5.3.0",
@@ -46,6 +50,7 @@
     "@fontsource/inter": "5.3.0",
     "@google/genai": "^3.0.0",
     "@gsap/react": "2.1.2",
+    "@huggingface/transformers": "3.8.1",
     "@react-three/drei": "10.7.9",
     "@react-three/fiber": "9.8.2",
     "better-auth": "1.7.14",

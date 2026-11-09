@@ -1,0 +1,7 @@
+{
+  "measurement": "Local Chromium request-to-scheduled playback, not physical sound or service p95. Includes post-pause hardware resume delay; only running-context final-build records below.",
+  "samples": [
+    "Hot Seat playback timing {\"path\":\"library\",\"voice\":\"af_bella\",\"requestToScheduledMs\":141,\"outputLatencyMs\":10,\"contextState\":\"running\"}",
+    "Hot Seat playback timing {\"path\":\"device-cache\",\"voice\":\"af_sarah\",\"requestToScheduledMs\":1593,\"outputLatencyMs\":10,\"contextState\":\"running\"}"
+  ]
+}

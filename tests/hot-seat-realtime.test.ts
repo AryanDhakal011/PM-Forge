@@ -29,6 +29,20 @@ test('signed worker messages bind the complete body, expire, and reject invalid 
   assert.equal(validWorkerSignature(body,stamp,signature,secret,Number(stamp)+61000),false);
   assert.equal(validWorkerSignature(body,stamp,'x',secret),false);
 });
+test('development defaults cannot enable real voice rooms',()=>{
+  const c=configured();assert.match(realtimeBlocker({...c,key:'devkey'})!,/Development/);assert.match(realtimeBlocker({...c,secret:'secret'})!,/Development/);
+});
+test('one verified owner cannot reserve or resume a second active room',()=>{
+  const h=fixture();h.config.concurrent=4;
+  try{
+    h.store.start(h.input,'member:a',undefined,h.config);
+    const other={...h.input,id:randomUUID()};
+    assert.throws(()=>h.store.start(other,'member:a',undefined,h.config),/active-session-exists/);
+    h.store.disconnected(h.input.id,'member:a',false);
+    h.store.start(other,'member:a',undefined,h.config);
+    assert.throws(()=>h.store.claim(h.input.id,'member:a',h.config),/active-session-exists/);
+  }finally{h.db.close();}
+});
 test('reservation is idempotent, private, and capacity is shared by ledger instances',()=>{
   const h=fixture();try {
     const s=h.store.start(h.input,'member:a',undefined,h.config);

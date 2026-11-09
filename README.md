@@ -2,6 +2,8 @@
 
 A practice workspace for product judgment: 63 interview scenarios, seven category workbenches, twelve three-chapter projects, evidence-backed debriefs and a private decision portfolio.
 
+Release status: **not approved for public launch**. See [production readiness](docs/prr.md), [hosting decision](docs/HOSTING-DECISION.md), [microphone verification](docs/mic-test-report.md) and [latency evidence](docs/latency-report.md). The proposed backend is the existing Next.js Node service with a persistent disk; realtime voice additionally needs a long-lived agent. No cloud resources or new paid services were enabled.
+
 ## Run locally
 
 ```sh

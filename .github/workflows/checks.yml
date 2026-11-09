@@ -7,12 +7,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
           cache: npm
       - run: npm ci --legacy-peer-deps
       - run: npm run typecheck
+      - run: npm audit --omit=dev
+      - run: npm ci
+        working-directory: services/hot-seat-agent
+      - run: npm run typecheck
+        working-directory: services/hot-seat-agent
+      - run: npm audit --omit=dev
+        working-directory: services/hot-seat-agent
       - run: npm run test:portfolio
       - run: npm run test:interview-live
       - run: npm run test:platform
@@ -34,6 +43,9 @@ jobs:
       - run: npm run test:legacy-fracture
       - run: npm run test:pivot-point
       - run: npm run build
+      - run: npm run security:scan
+      - run: npm run hot-seat:audio:check
+      - run: npm sbom --sbom-format cyclonedx > docs/production-verification/sbom.json
       - run: node scripts/deadlock-budgets.mjs
       - name: Check shared project browser flows
         env:

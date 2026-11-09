@@ -1,9 +1,11 @@
-import {mkdirSync,readFileSync,statSync,writeFileSync} from 'node:fs';
+import {mkdirSync,readFileSync,statSync,writeFileSync as writeChangedFile} from 'node:fs';
 import {join} from 'node:path';
 import {corrected,levelIds,loadDefinition} from '../platform/devtools/server';
 import {validate} from '../platform/devtools/validate';
 import {backgroundSvg,portraitSvg} from '../platform/art';
 import {expressions} from '../platform/core';
+// Deterministic assets need no rewrite; avoids Windows file locks in a running preview.
+function writeFileSync(path:string,value:string){try{if(readFileSync(path,'utf8')===value)return;}catch(error){if((error as NodeJS.ErrnoException).code!=='ENOENT')throw error;}writeChangedFile(path,value);}
 const status:Record<string,boolean>=Object.fromEntries(levelIds.map(id=>[id,false])),reports=[];let failed=false;
 for(const id of corrected){const d=loadDefinition(id),report=validate(d);status[id]=report.valid;reports.push({id,...report});if(!report.valid){console.error(id,report.errors);failed=true;continue}const out=join('public','levels',id,'art');mkdirSync(join(out,'portraits'),{recursive:true});mkdirSync(join(out,'backgrounds'),{recursive:true});const assets=[];
  for(const p of d.people)for(const mood of expressions){const path=`/levels/${id}/art/portraits/${p.id}_${mood}.svg`,svg=portraitSvg(p,mood);writeFileSync('public'+path,svg);assets.push({id:p.id+'-'+mood,path,sizeKB:Buffer.byteLength(svg)/1024,source:'PMForge parametric portrait generator',license:'Project-authored original',alt:`${p.name}, ${mood}`,status:'placeholder'})}

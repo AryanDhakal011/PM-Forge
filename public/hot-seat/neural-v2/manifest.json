@@ -5,17 +5,25 @@
   "previews": [
     {
       "voice": "af_bella",
-      "text": "Let\u2019s get specific. What would you need to know before making that call?",
-      "sha256": "2273e77cba8cd1e9acde53e258199207359a02915ff585df8ccafde5c305944e",
+      "text": "Let’s get specific. What would you need to know before making that call?",
+      "sha256": "79ad269992ce7d3ad64bd45456889e1b9234f7157a5c130ae9067ddad5ad2545",
       "sampleRate": 24000,
       "path": "af_bella/preview.wav"
     },
     {
       "voice": "af_sarah",
       "text": "There might be something interesting there. What would you try first, and why?",
-      "sha256": "1d2a5ba38441cdccd5dd5870632f8964cacb85368fc341b5782669e131c9fbba",
+      "sha256": "0eaf99865433aca4496566bebe24f27190d1354c3f3357247134ff55ca3d1094",
       "sampleRate": 24000,
       "path": "af_sarah/preview.wav"
     }
-  ]
+  ],
+  "profile": {
+    "engine": "kokoro-js",
+    "package": "1.2.1",
+    "model": "Kokoro-82M-v1.0-ONNX",
+    "dtype": "q8",
+    "speed": 0.98,
+    "sampleRate": 24000
+  }
 }

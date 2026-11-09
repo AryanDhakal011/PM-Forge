@@ -1,0 +1,37 @@
+[
+  {
+    "composerVisible": true,
+    "document": 320,
+    "scrollWidth": 320,
+    "sendVisible": true,
+    "viewport": 320
+  },
+  {
+    "composerVisible": true,
+    "document": 375,
+    "scrollWidth": 375,
+    "sendVisible": true,
+    "viewport": 375
+  },
+  {
+    "composerVisible": true,
+    "document": 768,
+    "scrollWidth": 768,
+    "sendVisible": true,
+    "viewport": 768
+  },
+  {
+    "composerVisible": true,
+    "document": 1024,
+    "scrollWidth": 1024,
+    "sendVisible": true,
+    "viewport": 1024
+  },
+  {
+    "composerVisible": true,
+    "document": 1440,
+    "scrollWidth": 1440,
+    "sendVisible": true,
+    "viewport": 1440
+  }
+]

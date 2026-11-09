@@ -147,3 +147,17 @@ Status: local production candidate, 2026-10-25. This directory is not a Git repo
 **Why:** The workspace was not a Git repository and no remote or CI target was provided. Creating one would have implied a hosting and review workflow that does not exist.
 
 **Cost:** No history, blame, rollback, or automated checks. `DECISIONS.md`, `BLOCKERS.md`, and the QA record are the substitute audit trail.
+
+# Decisions — 9 November 2026
+
+**Microphone:** replace the failing browser SpeechRecognition service with an AudioWorklet capture controller and explicit local Whisper dictation. Capture ownership and transcription are separate. No silent paid-service fallback; typing stays available.
+
+**Voice:** preserve Bella and Sarah, exact Kokoro q8 settings for the cached library and live local speech. Reuse authored introductions instead of blocking Begin on model warmup. Premium streaming voices remain separately configured and cannot be previewed by the local samples.
+
+**Hosting:** prepare a one-instance persistent Docker pilot in Singapore. Current SQLite makes stateless free/serverless deployment unsafe. Defer high availability until a tested Postgres migration; no provisioning or paid spend in this change.
+
+**Auth:** keep the existing maintained Better Auth implementation and saved account data. Gate new realtime admission on verified accounts. Managed auth and magic-link-only login from the reference handoff remain explicit missing items, not claimed equivalents.
+
+**Publishing:** fail closed for new production portfolio publishing pending verified account ownership, isolated origin and abuse review. Local editing/export and existing revocation are preserved. Do not present this as completed public publishing.
+
+**Latency:** cache predictable speech and measure scheduling separately from actual sound. Do not create speculative provider requests, prewarm paid calls or hedged fallbacks under the default $0 budget. Streaming splice and real p95 targets remain unverified.

@@ -38,6 +38,7 @@ export function realtimeBlocker(c: RealtimeConfig) {
   if(!c.concurrent || !c.daily || !c.maxTurns || !c.maxSeconds) return 'Realtime session limits need configuration.';
   if(c.llmModel!=='gpt-oss-120b'||!['flux-general-en','flux-general-multi'].includes(c.sttModel)||c.ttsModel!=='inworld-tts-2')return 'This provider/model combination needs a verified adapter.';
   if(!c.url.startsWith('wss://') || !c.key || !c.secret || c.workerSecret.length < 32) return 'The secure voice room is not configured.';
+  if(c.key==='devkey'||c.secret==='secret')return 'Development voice-room credentials are not permitted.';
   if(!c.noraVoice || !c.kaiVoice || !c.region) return 'The voice worker and providers need configuration.';
   return null;
 }

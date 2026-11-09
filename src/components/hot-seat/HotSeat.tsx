@@ -182,8 +182,9 @@ function Seat({ ownerId }: { ownerId: string }) {
       })
       .catch((e) => {seat.setNotice(e.message);showError(e.message)});
   }
-  const mic = useMicrophone((text, seconds) => {
+  const mic = useMicrophone((text, seconds, capturedFor) => {
     const r = runRef.current;
+    if(capturedFor!=='lobby'&&r?.id!==capturedFor){void db.hotSeats.get(capturedFor).then(saved=>{if(saved?.ownerId===ownerId)return db.hotSeats.put({...saved,draft:[saved.draft,text].filter(Boolean).join(' ').slice(0,4000)});}).catch(()=>showError('Dictation could not be saved. Keep this tab open.'));return;}
     if (r) {
       const draft = [r.draft, text].filter(Boolean).join(" ").slice(0, 4000);
       runRef.current = {...r, draft};
@@ -191,7 +192,7 @@ function Seat({ ownerId }: { ownerId: string }) {
       setDeliverySeconds((n) => n + seconds);
       setSource("voice");
     }
-  }, interrupt);
+  }, interrupt,run?.id||'lobby');
   useEffect(() => {
     if (
       run && run.mode !== 'realtime' &&
@@ -242,6 +243,7 @@ function Seat({ ownerId }: { ownerId: string }) {
       seat.busy ||
       mic.active ||
       mic.starting ||
+      mic.processing ||
       moment ||
       run.draft ||
       voiceState !== "idle"
@@ -263,6 +265,7 @@ function Seat({ ownerId }: { ownerId: string }) {
     seat.busy,
     mic.active,
     mic.starting,
+    mic.processing,
     moment,
     !!run?.draft,
     voiceState,
@@ -319,19 +322,19 @@ function Seat({ ownerId }: { ownerId: string }) {
         !e.repeat &&
         micConsent &&
         input === "voice" &&
-        !mic.active && !mic.starting &&
+        !mic.starting && !mic.processing &&
         !paused
       ) {
         e.preventDefault();
         pushToTalk.current = true;
-        void mic.start();
+        mic.press('keyboard');
       }
     };
     const up = (e: KeyboardEvent) => {
       if (e.code === "Space" && pushToTalk.current) {
         e.preventDefault();
         pushToTalk.current = false;
-        mic.stop();
+        mic.release('keyboard');
       }
     };
     window.addEventListener("keydown", key);
@@ -343,10 +346,7 @@ function Seat({ ownerId }: { ownerId: string }) {
   }, [run?.id, paused, finished, lastAI?.id, mic.active, mic.starting, micConsent, input]);
   async function begin(guided = false) {
     voice.current?.unlock();
-    if (voiceOn && !voiceReady) {
-      const ready=await voice.current?.prepare();setVoiceReady(!!ready);
-      if(!ready)return;
-    }
+    // Authored lines use the matching pre-rendered library; live synthesis warms only when needed.
     const started = await seat.start(
       options,
       !guided && ai && !!seat.cap?.available,
@@ -361,12 +361,13 @@ function Seat({ ownerId }: { ownerId: string }) {
     }
   }
   async function send() {
-    if (mic.active || mic.starting) {
+    if (mic.active || mic.starting || mic.processing) {
       seat.setNotice("Finish dictation first, then review and send your captured words.");
       return;
     }
     interrupt();
     setMoment(false);
+    mic.clearNotice();
     await seat.send(source, deliverySeconds);
     setDeliverySeconds(0);
     setSource("typed");
@@ -604,8 +605,7 @@ function Seat({ ownerId }: { ownerId: string }) {
                         setMicConsent(e.target.checked);
                       }}
                     />
-                    Allow microphone input. Browser dictation may process audio
-                    with your browser’s provider. Raw audio is not retained.
+                    Allow microphone input and the on-device dictation model download from Hugging Face. Speech is transcribed on this device; no microphone recording is retained.
                   </label>
                   <button
                     className={s.secondary}
@@ -621,8 +621,9 @@ function Seat({ ownerId }: { ownerId: string }) {
                     aria-label="Real microphone input"
                   />
                   <p role="status" aria-live="polite">
-                    {mic.starting ? "Waiting for microphone permission…" : mic.active ? "Checking microphone input for three seconds…" : mic.notice}
+                    {mic.preparing ? mic.notice || "Preparing dictation. Microphone off." : mic.starting ? "Waiting for microphone permission…" : mic.active ? "Checking microphone input for three seconds…" : mic.notice}
                   </p>
+                  <button className={s.secondary} disabled={!micConsent||!mic.supported||mic.starting||mic.active||mic.processing||mic.modelReady} onClick={()=>void mic.prepare()}>{mic.modelReady?'On-device dictation ready':'Prepare English dictation · microphone stays off'}</button>
                   {!mic.supported && (
                     <p>
                       Dictation is unavailable in this browser. Typing still
@@ -1039,6 +1040,8 @@ function Seat({ ownerId }: { ownerId: string }) {
       ? "Thinking"
       : mic.starting
         ? "Starting microphone"
+      : mic.processing
+        ? "Transcribing on device"
       : mic.active
         ? "Listening"
         : voiceState === "preparing"
@@ -1065,6 +1068,7 @@ function Seat({ ownerId }: { ownerId: string }) {
           <span className={s.state} role="status">
             {status}
           </span>
+          <span className={s.chip}>{mic.live?'Mic live':'Mic off'}</span>
         </div>
         <div>
           <button
@@ -1177,8 +1181,10 @@ function Seat({ ownerId }: { ownerId: string }) {
         <div className={s.nextMove}>
           {seat.busy
             ? "Your answer is saved. A follow-up is being prepared."
+            : mic.processing
+              ? "Converting speech on this device. Your draft stays here; review it before sending."
             : mic.starting
-              ? "Waiting for browser dictation. Allow microphone access if asked; press again to cancel."
+              ? "Preparing on-device dictation. Your microphone stays off until it is ready; press again to cancel."
             : mic.active
               ? "Speak naturally. Press the microphone again when you are done."
               : "Your next move: explain your decision, ask for clarification, or challenge the premise."}
@@ -1189,14 +1195,21 @@ function Seat({ ownerId }: { ownerId: string }) {
               className={s.mic}
               aria-label={mic.starting ? "Cancel dictation" : mic.active ? "Finish dictation" : "Start dictation"}
               aria-pressed={mic.active || mic.starting}
-              disabled={!micConsent || !mic.supported || paused || seat.busy || !!run.pending}
-              onClick={() => (mic.active || mic.starting ? mic.stop() : mic.start())}
+              disabled={!micConsent || !mic.supported || paused || seat.busy || !!run.pending || mic.processing}
+              onPointerDown={event=>{event.preventDefault();event.currentTarget.setPointerCapture(event.pointerId);if(mic.starting)void mic.stop();else mic.press('pointer');}}
+              onPointerUp={()=>mic.release('pointer')}
+              onPointerCancel={()=>mic.release('pointer',true)}
+              onLostPointerCapture={()=>mic.release('pointer',true)}
+              onContextMenu={event=>event.preventDefault()}
+              onKeyDown={event=>{if(event.code==='Space'){event.preventDefault();if(!event.repeat){if(mic.starting)void mic.stop();else mic.press('button-key');}}}}
+              onKeyUp={event=>{if(event.code==='Space'){event.preventDefault();mic.release('button-key');}}}
+              onClick={event=>{if(event.detail===0){if(mic.starting)void mic.stop();else if(mic.active)void mic.finish();else void mic.start();}}}
             >
               {mic.active || mic.starting ? <Square /> : <Mic />}
             </button>
             <span>
               {mic.supported
-                ? "Dictation stays a draft until Send."
+                ? "English dictation · tap to start/finish, or hold to talk. Review before Send."
                 : "Dictation unavailable here. Use typing."}
             </span>
           </div>
@@ -1214,6 +1227,8 @@ function Seat({ ownerId }: { ownerId: string }) {
             placeholder="Think it through. Ask for context. Make a call."
             onChange={(e) => {
               seat.draft(e.target.value);
+              // Edited/mixed drafts are not a trustworthy voice-only delivery sample.
+              setSource('typed');setDeliverySeconds(0);
               setMoment(false);
             }}
             onKeyDown={(e) => {
@@ -1228,7 +1243,7 @@ function Seat({ ownerId }: { ownerId: string }) {
               paused ||
               seat.busy ||
               !!run.pending ||
-              mic.active || mic.starting ||
+              mic.active || mic.starting || mic.processing ||
               !run.draft.trim() ||
               seat.storageError
             }
@@ -1254,7 +1269,7 @@ function Seat({ ownerId }: { ownerId: string }) {
                 checked={micConsent}
                 onChange={(e) => setMicConsent(e.target.checked)}
               />
-              Allow mic and browser dictation
+              Allow mic and on-device dictation model download
             </label>
           )}
           <button onClick={() => lastAI && void say(lastAI.text, lastAI.id)}>
@@ -1263,6 +1278,7 @@ function Seat({ ownerId }: { ownerId: string }) {
           <button
             disabled={seat.busy || !!run.pending}
             onClick={() => {
+              setSource('typed');setDeliverySeconds(0);
               seat.draft(
                 "Could you rephrase your last question without adding new facts?",
               );

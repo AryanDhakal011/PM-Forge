@@ -1,5 +1,5 @@
 import {AccessToken,AgentDispatchClient,RoomServiceClient,TrackSource} from 'livekit-server-sdk';
-import {validOrigin} from '@/lib/product/server';
+import {validOrigin,memberSession} from '@/lib/product/server';
 import {limitedBody} from '@/lib/portfolio/request';
 import {AILedger,digest} from '@/lib/interview-ai/ledger';
 import {AIError} from '@/lib/interview-ai/provider';
@@ -22,6 +22,11 @@ export async function POST(request:Request) {
     const input=rtRequest.parse(JSON.parse(new TextDecoder().decode(await limitedBody(request,12000))));
     const base=new AILedger(),store=new RealtimeLedger(base),c=realtimeConfig();
     seatRequestLimit(request,base);
+    // A guest capability may recover/delete old work, but cannot reserve paid voice capacity.
+    if(input.action==='start'||input.action==='connect'){
+      const member=await memberSession(request);
+      if(!member?.user.emailVerified)throw new AIError('verified-account-required',401);
+    }
     const identity=await seatAccess(request,base,input.action==='start',input.action==='start'?undefined:input.id);
     cookie=identity.cookie;
     const ok=(body:unknown)=>Response.json(body,{headers:{...headers,...(cookie?{'Set-Cookie':cookie}:{})}});

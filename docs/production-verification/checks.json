@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-09T11:36:43.150Z",
+  "command": "node --conditions=react-server --import tsx --test --test-concurrency=4 tests/*.test.ts",
+  "files": 39,
+  "tests": 388,
+  "passed": 388,
+  "failed": 0,
+  "skipped": 0,
+  "exitCode": 0,
+  "durationMs": 114911
+}

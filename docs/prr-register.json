@@ -1,0 +1,1282 @@
+[
+  {
+    "id": "PRR-001",
+    "section": "1",
+    "requirement": "This table is the most likely place you are missing something. Check every row.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-002",
+    "section": "1",
+    "requirement": "HTTPS everywhere, HSTS, and `Permissions-Policy: microphone=(self)`. Test on the real domain.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-003",
+    "section": "1",
+    "requirement": "Vendor keys only in server or agent environment. Grep the built bundle for key patterns before every release.",
+    "status": "Done",
+    "evidence": "[Server-only config](../src/lib/hot-seat/realtime/config.ts), [bundle/history pattern scan](production-verification/secrets.json), [CI release check](../.github/workflows/checks.yml). Independent security review/rotation are separate Missing items.",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-004",
+    "section": "1",
+    "requirement": "Company-owned paid accounts with budgets, alerts and spend caps. Keys named per environment.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-005",
+    "section": "1",
+    "requirement": "Explicit origin allowlist, CSRF protection for cookie sessions, no wildcard with credentials.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-006",
+    "section": "1",
+    "requirement": "Remove or hard-disable. Flags default off in prod. Search the repo for `mock`, `simulate`, `demo`, `TODO`, `FIXME`, `console.log`.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-007",
+    "section": "1",
+    "requirement": "Per user, per IP, per day and global limits. Server-enforced max session length. Kill switch.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-008",
+    "section": "1",
+    "requirement": "TURN service (including TURN over TCP and TLS on 443). Test on mobile data, hotel Wi-Fi, and a restrictive network.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-009",
+    "section": "1",
+    "requirement": "Real keys, rotated, in a secret manager. Never the dev pair.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-010",
+    "section": "1",
+    "requirement": "Idempotent setup and cleanup, tests assert exactly one stream and one socket.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-011",
+    "section": "1",
+    "requirement": "Redis or the database. Stateless web and API instances.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-012",
+    "section": "1",
+    "requirement": "Object storage (S3 compatible), signed URLs, lifecycle rules.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-013",
+    "section": "1",
+    "requirement": "Agent workers and WebSocket handlers run as long-lived services with min instances.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-014",
+    "section": "1",
+    "requirement": "Versioned migrations, backup before migrate, tested rollback.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-015",
+    "section": "1",
+    "requirement": "Remove or protect with auth and IP allowlist. Default passwords must not exist.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-016",
+    "section": "1",
+    "requirement": "Generic messages plus a correlation id. Details only in logs.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-017",
+    "section": "1",
+    "requirement": "Structured logs, redaction, no PII, no secrets.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-018",
+    "section": "1",
+    "requirement": "Real transactional email provider, SPF, DKIM, DMARC, tested deliverability.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-019",
+    "section": "1",
+    "requirement": "Production redirect URIs allowlisted. Stable webhook endpoints with signature verification.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-020",
+    "section": "1",
+    "requirement": "Self-host fonts and libraries. Pin versions, use SRI where external.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-021",
+    "section": "1",
+    "requirement": "Source maps uploaded privately to the error tracker, not served.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-022",
+    "section": "1",
+    "requirement": "Verify production builds, minified, tree-shaken, dev dependencies excluded.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-023",
+    "section": "1",
+    "requirement": "Region choice per section 6, warm instances.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-024",
+    "section": "1",
+    "requirement": "`audio:build` runs in CI with production keys, manifest checks `voiceProfileId` at agent start.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-025",
+    "section": "1",
+    "requirement": "Staging behind auth, `noindex`, separate keys and data.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-026",
+    "section": "1",
+    "requirement": "Test on mid-range Android, Safari iOS, throttled networks, from Kathmandu.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-027",
+    "section": "1",
+    "requirement": "Full matrix test (section 7.4).",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-028",
+    "section": "1",
+    "requirement": "NTP on servers, 60 second leeway on JWT validation, quotas defined in UTC with user-facing local display.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-029",
+    "section": "1",
+    "requirement": "Shared admin ownership, 2FA, recovery codes, documented (section 13).",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-030",
+    "section": "2",
+    "requirement": "Environments: `dev`, `staging` (production-like, real vendors with low budgets), `prod`. Separate keys, databases, domains and budgets. Infrastructure as code (Terraform or the platform's config files) committed to the repo.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-031",
+    "section": "3.1",
+    "requirement": "**Use a managed auth provider** (Supabase Auth, Clerk, Auth0 or Firebase Auth). Do not roll your own password or session code. Default pick: Supabase Auth with Postgres row level security if you also use Supabase for the database; otherwise Clerk. Choose by: price, Nepal and India email deliverability, Google sign in, magic link, MFA, session handling, data location.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-032",
+    "section": "3.1",
+    "requirement": "**Sign-in methods:** Google and email magic link (no passwords at launch). Add passkeys later.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-033",
+    "section": "3.1",
+    "requirement": "**Guests:** the local-first practice features work without an account (\"On this device\"). **Anything that costs money or is shared requires an account**: Hot Seat sessions, publishing portfolios, cloud backup.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-034",
+    "section": "3.1",
+    "requirement": "**Account linking:** when a guest signs up, offer to import local data to the account (versioned, user confirmed, idempotent).",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-035",
+    "section": "3.2",
+    "requirement": "Cookie sessions: `__Host-` prefix, `Secure`, `HttpOnly`, `SameSite=Lax`, short access token plus rotating refresh token, idle timeout 30 days, absolute 90 days, logout everywhere, revoke on password or email change.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-036",
+    "section": "3.2",
+    "requirement": "API authentication on every route (deny by default). Authorization checks by resource owner (`user_id` on every row). No client-supplied user ids.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-037",
+    "section": "3.2",
+    "requirement": "CSRF: SameSite plus a CSRF token on state-changing cookie-authenticated requests.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-038",
+    "section": "3.2",
+    "requirement": "Email verification required before using paid-cost features. Block disposable email domains. Rate limit sign-in and magic-link requests per email and IP.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-039",
+    "section": "3.2",
+    "requirement": "Bot protection: Cloudflare Turnstile on sign-up and magic-link request.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-040",
+    "section": "3.3",
+    "requirement": "Client calls `POST /api/session/prepare` and `POST /api/session/start` with the session cookie.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-041",
+    "section": "3.3",
+    "requirement": "Server checks: authenticated, email verified, plan and quota remaining (per day and per month), **no other active session for this user**, global budget not exceeded, kill switch off.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-042",
+    "section": "3.3",
+    "requirement": "Server creates a `sessions` row, then mints a **LiveKit access token**: identity = user id, room = random UUID (unguessable), grants = join this room only, publish audio only, no admin rights, TTL = session length + 5 minutes (confirm the refresh behavior of your LiveKit version).",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-043",
+    "section": "3.3",
+    "requirement": "Server dispatches the agent with signed metadata (persona id, company type id, pressure, length). **The agent re-validates the signature and ignores any prompt text or settings coming from the client.** The client can only choose ids from allowlists.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-044",
+    "section": "3.3",
+    "requirement": "The agent enforces max duration server side (length plus 2 minutes grace), sends heartbeats, and ends the session if the user disconnects for more than 60 seconds. A janitor job closes zombie sessions and releases quota holds.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-045",
+    "section": "3.3",
+    "requirement": "Usage is metered per session (STT seconds, LLM tokens, TTS characters, estimated cost) into a `usage_ledger` table for billing, limits and audits.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-046",
+    "section": "3.4",
+    "requirement": "Account deletion (one click, confirmed, completes within 30 days and removes sessions, transcripts, uploads, published pages and ledger personal fields); data export (JSON); email change with re-verification; session list with revoke; admin role only via an allowlist and MFA; admin actions logged to an `audit_log`.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-047",
+    "section": "4.1",
+    "requirement": "Top risks for this product: (1) **cost fraud**, someone uses your paid voice and LLM budget; (2) account takeover; (3) data exposure of transcripts and uploaded evidence; (4) XSS or content abuse through user generated portfolio pages; (5) prompt injection and misuse of the AI interviewer; (6) secrets leakage; (7) supply chain compromise; (8) denial of service.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-048",
+    "section": "4.2",
+    "requirement": "Set on the app origin (tune and test, CSP will need `wasm-unsafe-eval` for the VAD model and `worker-src blob:` for AudioWorklet and workers):",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-049",
+    "section": "4.2",
+    "requirement": "Run CSP in report-only first, collect violations, then enforce. No `unsafe-eval`. Avoid inline scripts, use nonces if needed.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-050",
+    "section": "4.3",
+    "requirement": "**Serve published portfolios from a separate registrable domain** (not a subdomain of the app domain) with no cookies, no app code, strict CSP, `X-Robots-Tag: noindex` by default. This isolates XSS from user sessions.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-051",
+    "section": "4.3",
+    "requirement": "Render user text as escaped text or sanitized Markdown (allowlist, for example DOMPurify configured for a minimal tag set). Never `dangerouslySetInnerHTML` raw user content. Test with XSS payloads in every field, including case study fields, handles, titles and image captions.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-052",
+    "section": "4.3",
+    "requirement": "Handles: validate (lowercase letters, digits, hyphen, 3 to 30 chars), reserved words list (admin, api, www, support, pmforge, login and similar), profanity and impersonation checks, rate limit changes.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-053",
+    "section": "4.3",
+    "requirement": "Uploads (evidence images): max size (for example 4 MB), content sniffing by magic bytes (allow PNG, JPEG, WebP), re-encode server side to strip EXIF and GPS, store in a private bucket, serve only through signed short-lived URLs or the portfolio origin after publish, per-user storage quota, optional malware scan. Never trust the filename or MIME header.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-054",
+    "section": "4.3",
+    "requirement": "Publish and revoke: published links expire as configured, revoke deletes the assets and invalidates caches, and the CDN purge is verified.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-055",
+    "section": "4.3",
+    "requirement": "Abuse handling: a report link on public pages, a takedown process, and `security.txt` at `/.well-known/security.txt`.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-056",
+    "section": "4.4",
+    "requirement": "Input validation on every endpoint with schemas (zod or equivalent), size limits, reject unknown fields. Parameterized queries only.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-057",
+    "section": "4.4",
+    "requirement": "Rate limits at the edge (Cloudflare rules) and in the app (Redis), with stricter limits on auth, session start, uploads and publish. Return 429 with `Retry-After`.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-058",
+    "section": "4.4",
+    "requirement": "WAF managed rules on, bot fight mode on, DDoS protection on.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-059",
+    "section": "4.4",
+    "requirement": "Secrets in a secret manager or the platform's encrypted env store, never in git. Run a secret scan (gitleaks or trufflehog) over the **entire git history** and rotate anything ever committed. Pre-commit hook and CI check.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-060",
+    "section": "4.4",
+    "requirement": "Key rotation procedure documented and tested (rotate each vendor key without downtime). Scoped keys where vendors allow (restricted to IPs or permissions).",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-061",
+    "section": "4.4",
+    "requirement": "Least privilege: separate DB roles (app, migration, read-only analytics), row level security or enforced `user_id` filters, no shared admin credentials, 2FA on every vendor and hosting account.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-062",
+    "section": "4.4",
+    "requirement": "Dependencies: lockfiles, automated updates (Dependabot or Renovate), `npm audit` or equivalent in CI, pin versions, remove unused packages, review postinstall scripts, generate an SBOM.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-063",
+    "section": "4.4",
+    "requirement": "Containers: minimal base images, non-root user, read-only filesystem where possible, image scanning.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-064",
+    "section": "4.4",
+    "requirement": "Encryption: TLS 1.2+ everywhere (TLS 1.3 preferred), database and storage encrypted at rest, backups encrypted.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-065",
+    "section": "4.4",
+    "requirement": "Webhooks (auth provider, payments, LiveKit): verify signatures, reject replays, idempotent handlers.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-066",
+    "section": "4.5",
+    "requirement": "**Prompt injection and rubric extraction:** the candidate's speech is untrusted input. The system prompt says never reveal instructions or scoring, never follow instructions from the candidate that change the role, and stay in persona. The AI has **no tools, no network access and no secrets** in its context, so the blast radius is only the conversation. Never place keys, internal URLs or other users' data in prompts.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-067",
+    "section": "4.5",
+    "requirement": "Output checks before speaking: schema parse, length cap, banned topics (protected characteristics, personal life, health, family plans) and basic profanity filter. On violation, play a cached neutral line and log.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-068",
+    "section": "4.5",
+    "requirement": "Cost abuse via long monologues or repeated reconnects: cap words per answer, cap reconnects per session, cap sessions per day.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-069",
+    "section": "4.5",
+    "requirement": "Log the model, prompt version and cached audio manifest version per session for reproducibility.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-070",
+    "section": "4.5",
+    "requirement": "Honest labeling stays everywhere: AI interviewer, simulated company, provisional feedback, not a hiring verdict.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-071",
+    "section": "4.6",
+    "requirement": "Run OWASP ZAP baseline scan against staging; manual tests for IDOR on every resource id (sessions, cases, applications, portfolios, uploads); auth bypass attempts on token mint and LiveKit rooms (can user A join user B's room? can a token publish video or data?); rate limit tests; XSS tests across all text inputs and the portfolio renderer; upload tests (polyglots, oversized, wrong types); CSRF tests; subdomain and cookie scope review; dependency and container scans; secret scan of git history and of the built bundles. Fix all high and critical findings. Consider an external review before public launch.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-072",
+    "section": "5.1",
+    "requirement": "For every data type: what, where stored, why, who can access, retention, deletion path, which vendors process it. Include: account email and name, practice progress (local first), case studies and evidence images, resume and master profile data, application tracker (including job descriptions), Hot Seat transcripts and observations, audio in transit (not stored by default), usage ledger, logs, analytics.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-073",
+    "section": "5.2",
+    "requirement": "**Local-first first.** Default to keeping practice and drafts on the device. Anything stored server side is opt-in or required for a feature the user chose.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-074",
+    "section": "5.2",
+    "requirement": "**Retention:** Hot Seat transcripts stored server side only if the user saves the session, otherwise deleted within 24 hours (or kept only on device). Logs 30 days, with no content. Usage ledger kept as long as needed for billing and abuse, with personal fields removed after account deletion. Backups follow a fixed schedule (for example 35 days) so deletion completes everywhere within 30 to 60 days.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-075",
+    "section": "5.2",
+    "requirement": "**Vendors (processors):** list every vendor that receives voice, text or files (LLM, STT, TTS, hosting, auth, email, analytics, error tracking). Prefer paid tiers with **no training on your data** and zero or short retention modes where offered. Sign data processing agreements. Do not rely on free-tier terms in production (free tiers may use inputs to improve products).",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-076",
+    "section": "5.2",
+    "requirement": "**Consent:** microphone use is explicit. The lobby consent line names the actual vendors. No audio recording unless the user opts in. Do not record or transcribe other people.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-077",
+    "section": "5.2",
+    "requirement": "**Analytics:** privacy friendly and cookieless where possible, no session replay on Hot Seat or Career Studio pages, no third party trackers.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-078",
+    "section": "5.2",
+    "requirement": "**Minors:** set a minimum age in the terms (for example 16) and gate sign up accordingly; do not knowingly collect data from children.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-079",
+    "section": "5.2",
+    "requirement": "**Legal documents required at launch (legal):** Privacy Policy (what voice and text data is processed and by whom, retention, rights, contact), Terms of Service (AI interviewer disclosure, simulated companies, no hiring decision, acceptable use, account termination), Cookie notice if any non-essential cookies, Acceptable Use and takedown policy for published portfolios, subprocessor list. Check applicability of Nepal's privacy law, and of GDPR and CCPA if you accept users from those regions. Have counsel review.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner + qualified counsel"
+  },
+  {
+    "id": "PRR-080",
+    "section": "5.2",
+    "requirement": "**Rights handling:** a working process and an email address for access, export, correction and deletion requests, with a 30 day response target.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-081",
+    "section": "5.2",
+    "requirement": "**Payments (if you charge):** Stripe does not generally support businesses in Nepal (verify). Evaluate merchant-of-record providers (Paddle, Lemon Squeezy) or local gateways (eSewa, Khalti, ConnectIPS) and confirm cross-border card acceptance and payout path before designing pricing. Ensure the vendor billing cards you use for cloud and API accounts work internationally and have expiry alerts.",
+    "status": "Not applicable",
+    "evidence": "No customer payments/checkout in this release; cloud costs are separate.",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-082",
+    "section": "6.1",
+    "requirement": "**TURN:** required. With LiveKit Cloud it is included, confirm TURN/TLS on 443 works. If self-hosting, deploy TURN with TLS on 443 and TCP fallback, correct external IP configuration, and open the required UDP port range. Test from a network that blocks UDP.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-083",
+    "section": "6.1",
+    "requirement": "**Region:** agent workers, LiveKit, STT, LLM and TTS endpoints in Singapore or Mumbai (verify available regions per vendor) and measure from Kathmandu.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-084",
+    "section": "6.1",
+    "requirement": "**Warm pools:** minimum idle agent workers, scale on active session count, graceful drain on deploy (finish sessions, accept no new ones).",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-085",
+    "section": "6.1",
+    "requirement": "**Concurrency limits per vendor tier:** document them in `VENDORS.md`, load test to twice your expected peak, request limit increases before launch.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-086",
+    "section": "6.1",
+    "requirement": "**Reconnects:** transparent room reconnect, STT and TTS socket reconnect with keep-alive, session returns in `paused`.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-087",
+    "section": "6.1",
+    "requirement": "**Browser support policy:** current and previous two versions of Chrome, Edge, Firefox, Safari; iOS 16.4 or newer. Show a friendly \"unsupported browser\" screen with the typing path if capture or WebRTC is missing.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-088",
+    "section": "6.2",
+    "requirement": "Static build on a CDN with Brotli and HTTP/3, immutable hashed assets, short TTL HTML, route level code splitting (room, studio, landing animation chunks lazy loaded), images in AVIF and WebP with dimensions, self-hosted fonts with `font-display: swap`, Core Web Vitals budgets (LCP under 2.5 s on mid-range mobile, CLS under 0.1, INP under 200 ms), Lighthouse CI in the pipeline. Pre-rendered audio and large assets on the CDN with immutable caching.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-089",
+    "section": "6.3",
+    "requirement": "Managed Postgres in the nearest region, daily backups plus point-in-time recovery, connection pooling, indexes reviewed for the main queries, migrations versioned, read replica only if needed. Redis for rate limits, quotas and locks. Object storage with versioning off for user uploads (deletion must really delete) and lifecycle rules for temporary files.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-090",
+    "section": "7.1",
+    "requirement": "SLOs: 99.5 percent monthly availability for the app and API, 99 percent of Hot Seat sessions complete without a fatal error, time to first audio per the speed handoff.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-091",
+    "section": "7.1",
+    "requirement": "Health checks and readiness probes, graceful shutdown, timeouts and retries with backoff and jitter on every outbound call, circuit breakers per vendor, idempotency keys on state-changing endpoints.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-092",
+    "section": "7.1",
+    "requirement": "**Vendor failover tested for real:** disable each vendor key in staging and confirm the ladder (second TTS, second LLM, Kokoro fallback, typing mode) works and the user sees a calm message.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-093",
+    "section": "7.1",
+    "requirement": "Chaos checklist run once before launch: kill an agent worker mid session, drop the database connection, rate-limit a vendor, expire a token mid session.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-094",
+    "section": "7.1",
+    "requirement": "**Silent vendor changes:** pin model versions. A daily synthetic session (scripted audio through the full pipeline) alerts on failure or latency regression. Subscribe to vendor changelogs and deprecation emails (use a shared inbox). Several current model prices and versions change on fixed dates (for example Dec 31, 2026), put those dates in the maintenance calendar.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-095",
+    "section": "7.2",
+    "requirement": "Simulate at least twice expected peak concurrent sessions with realistic audio. Record per stage latency, agent CPU and memory, vendor 429 rates, LiveKit participant limits, database load. Fix the first bottleneck, repeat. Keep the report in `docs/load-test.md`.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-096",
+    "section": "7.3",
+    "requirement": "Cost per session is logged. A dashboard shows spend per vendor per day and per active user.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-097",
+    "section": "7.3",
+    "requirement": "Budgets and alerts at 50, 80 and 100 percent in every vendor console, plus an internal daily cap that flips the **kill switch** (new sessions blocked, existing finish, a friendly \"capacity reached\" screen).",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-098",
+    "section": "7.3",
+    "requirement": "Per user: 1 concurrent session, daily and monthly quotas, maximum session length, maximum reconnects.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-099",
+    "section": "7.3",
+    "requirement": "Free tier design: limited sessions per week and shorter length. Use the cheaper voice (for example Kokoro on GPU) for free users and the premium voice for paid users only if the product decision allows.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-100",
+    "section": "7.3",
+    "requirement": "Review the first 7 days of spend daily.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-101",
+    "section": "7.4",
+    "requirement": "Test matrix: Chrome, Edge, Firefox, Safari desktop, Android Chrome, iOS Safari; built-in mic, wired and Bluetooth headsets, laptop speakers; screen readers (NVDA or VoiceOver) on lobby, room, debrief, studio; keyboard-only completion of every flow; reduced motion; zoom 200 percent; slow 3G throttling for the landing page. WCAG 2.2 AA is the bar.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-102",
+    "section": "8",
+    "requirement": "**Safari and iOS can delete local storage and IndexedDB** for sites the user has not interacted with for about 7 days (anti-tracking limits), except installed home screen apps. A local-first product must handle this. Call `navigator.storage.persist()` and check `navigator.storage.estimate()`, show a clear backup nudge, make backup export and import one click, and encourage account sync. Explain it plainly in the app (\"Safari may clear data you have not visited in a week. Back up or sign in\").",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-103",
+    "section": "8",
+    "requirement": "Quota handling for evidence images and audio, with warnings at 80 percent.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-104",
+    "section": "8",
+    "requirement": "Schema versioning and migrations for IndexedDB, tested with old data fixtures.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-105",
+    "section": "8",
+    "requirement": "Backup file integrity (checksum) and a restore test from a real backup.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-106",
+    "section": "8",
+    "requirement": "Private browsing and storage-disabled modes handled gracefully.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-107",
+    "section": "9",
+    "requirement": "**Logging:** structured JSON, correlation id per request and per session, no PII, no transcripts, no audio, no tokens. Retention 30 days.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-108",
+    "section": "9",
+    "requirement": "**Tracing and metrics:** per turn OpenTelemetry spans (speed handoff), dashboards for latency p50 and p95 by stage and path, STT and TTS error rates, fallback rate, underruns, barge-in success, session completion, cost per session, quota and rate limit hits, sign-up funnel and activation.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-109",
+    "section": "9",
+    "requirement": "**Errors:** frontend and backend error tracking (Sentry or similar) with scrubbing, release tagging, source maps uploaded privately.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-110",
+    "section": "9",
+    "requirement": "**Uptime:** synthetic probes every minute from several regions **including South Asia**, covering landing, login, API health, and one full synthetic voice session daily.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-111",
+    "section": "9",
+    "requirement": "**Alerts** (to a real channel you read, with a phone push for severe ones): API error rate, p95 latency, vendor failure, cost spike, queue backlog, disk, certificate expiry (30 days), failed backups, security events (many failed logins, many 429s).",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-112",
+    "section": "9",
+    "requirement": "**Status page** (public) and a support email with an auto-reply. In-app feedback button, error page with reference id.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-113",
+    "section": "9",
+    "requirement": "**Runbooks** in `docs/runbooks/`, each one page with symptoms, checks, fix, rollback and who to tell: vendor outage, latency regression, cost spike, abuse wave, leaked key (rotate within one hour), database restore, bad deploy rollback, DDoS, data deletion request, security incident, expired certificate or domain.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-114",
+    "section": "9",
+    "requirement": "**Incident process:** severity levels, one owner per incident, short post-mortem for every severity 1 or 2.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-115",
+    "section": "10",
+    "requirement": "Pipeline: lint, type check, unit tests, build, secret scan, dependency audit, e2e (Playwright including the fake-audio latency and mic tests), Lighthouse CI, preview deploy per pull request.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-116",
+    "section": "10",
+    "requirement": "Deploy: automated, one command or merge, **rollback in under 5 minutes** (previous image and static build retained), database migrations backward compatible (expand, then contract), feature flags for risky features with a kill switch.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-117",
+    "section": "10",
+    "requirement": "Versioning: the model, prompt, persona and audio library manifest versions are recorded per session and deployed together. Prompt and content changes go through review and a small regression suite (10 scripted interviews with expected behaviors).",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-118",
+    "section": "10",
+    "requirement": "Environments promote staging to production with the same artifact.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-119",
+    "section": "10",
+    "requirement": "Canary: release to 5 percent of sessions first for voice changes, watch metrics for 24 hours.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-120",
+    "section": "11",
+    "requirement": "Custom domain with registrar lock and 2FA, auto-renewal, DNS managed with DNSSEC if supported, TLS auto-renew with expiry alerts; email SPF, DKIM, DMARC for the sending domain; `robots.txt` and sitemap for marketing pages only, `noindex` for app, staging and portfolios by default; 404, 500 and offline pages; maintenance mode; favicon and social preview images; privacy friendly analytics; terms and privacy links in footer and sign up; cookie notice if needed; changelog; accessibility statement; support and abuse contacts; basic SEO for the landing page (titles, meta, structured data); a waitlist or invite gate for the soft launch.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-121",
+    "section": "12",
+    "requirement": "**Stages:** (1) internal dogfood with the real production stack, (2) closed beta of 20 to 50 invited users with low quotas, (3) public soft launch behind a waitlist, (4) full public launch.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-122",
+    "section": "12",
+    "requirement": "**Launch gate (all must be true, with PRR evidence):**",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-123",
+    "section": "12",
+    "requirement": "Every PRR item Done or justified Not applicable. Zero Missing blockers.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-124",
+    "section": "12",
+    "requirement": "Section 1 table fully checked, including a bundle grep showing no keys.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-125",
+    "section": "12",
+    "requirement": "Auth, quotas, session authorization and kill switch tested, including abuse attempts.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-126",
+    "section": "12",
+    "requirement": "Security tests in 4.6 completed, high and critical issues fixed, CSP enforced.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-127",
+    "section": "12",
+    "requirement": "Privacy policy, terms and vendor DPAs in place (legal), consent copy lists real vendors.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner + qualified counsel"
+  },
+  {
+    "id": "PRR-128",
+    "section": "12",
+    "requirement": "Production vendors on paid accounts, budgets and alerts set, kill switch tested.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-129",
+    "section": "12",
+    "requirement": "TURN verified from restrictive networks. Region latency targets met from Kathmandu.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-130",
+    "section": "12",
+    "requirement": "Load test at 2x expected peak passed. Failover tests passed.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-131",
+    "section": "12",
+    "requirement": "Backups restored successfully in a drill. Rollback rehearsed.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-132",
+    "section": "12",
+    "requirement": "Monitoring, alerts, status page and runbooks exist and the first alert has been triggered on purpose.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-133",
+    "section": "12",
+    "requirement": "Accessibility and browser matrix passed.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-134",
+    "section": "12",
+    "requirement": "Two people have admin access and recovery information (section 13).",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-135",
+    "section": "12",
+    "requirement": "**Rollback triggers:** error rate above 2 percent for 10 minutes, p95 time to first audio above 3 s for 15 minutes, cost per session above 3x plan, any security incident. Rolling back is a standing decision, not a debate.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-136",
+    "section": "13",
+    "requirement": "Produce these documents in the repo and keep them short and current:",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-137",
+    "section": "13",
+    "requirement": "`README.md` (what this is, run locally, deploy, test), `ARCHITECTURE.md` (diagram, data flow, regions), `DECISIONS.md` (short ADRs: why this auth, why this voice, why this region).",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-138",
+    "section": "13",
+    "requirement": "`ENV.md`: every environment variable and secret, what it does, which environment, where stored, who owns it, rotation schedule.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-139",
+    "section": "13",
+    "requirement": "`VENDORS.md`: every account (hosting, DNS and registrar, auth, database, LiveKit, STT, LLM, TTS, email, error tracking, analytics, payments), plan and limits, billing owner, renewal date, support link, status page, DPA status.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner + qualified counsel"
+  },
+  {
+    "id": "PRR-140",
+    "section": "13",
+    "requirement": "`ACCESS.md`: who has which access, two admins minimum, password manager vault, 2FA method, recovery codes stored offline, offboarding checklist. **Vendor accounts belong to the company or a shared project email, not to one person's personal account** (including the current AI Studio key).",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-141",
+    "section": "13",
+    "requirement": "`SECURITY.md` (threat model, reporting), `docs/runbooks/`, `docs/prr.md`, `docs/data-inventory.md`, `docs/load-test.md`, `docs/latency-report.md`, `docs/mic-test-report.md`.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-142",
+    "section": "13",
+    "requirement": "`CONTENT.md`: how to add or edit lines, personas, company types and curveballs, and how to rebuild and publish the audio library.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-143",
+    "section": "13",
+    "requirement": "**Maintenance calendar (this is the minimum to keep it healthy):**",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-144",
+    "section": "13",
+    "requirement": "Weekly (15 minutes): dashboards, spend, errors, fallback rate, support inbox.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-145",
+    "section": "13",
+    "requirement": "Monthly: dependency and container updates, access review, restore one backup into a scratch database, review abuse reports, check vendor changelogs and deprecations.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-146",
+    "section": "13",
+    "requirement": "Quarterly: rotate keys, re-run the voice and LLM bake-off, security scan and dependency audit, review legal pages against actual data flows, load test, review costs and renegotiate tiers.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner + qualified counsel"
+  },
+  {
+    "id": "PRR-147",
+    "section": "13",
+    "requirement": "Yearly: domain and certificate review, vendor contract review, privacy and security review, disaster recovery drill.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-148",
+    "section": "13",
+    "requirement": "On a vendor notice or model deprecation date: schedule the migration the same day it is announced.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-149",
+    "section": "13",
+    "requirement": "Nothing is truly zero maintenance. This calendar plus alerts keeps the work small and predictable.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-150",
+    "section": "14",
+    "requirement": "Audit: fill `docs/prr.md` with the current state of every item, including a repo search for dev leftovers and a built bundle secret scan.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-151",
+    "section": "14",
+    "requirement": "Accounts and keys: company-owned vendor accounts, paid plans, budgets, secret manager, environments.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-152",
+    "section": "14",
+    "requirement": "Auth, quotas, session authorization, kill switch, usage ledger.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-153",
+    "section": "14",
+    "requirement": "Security hardening (headers, CORS, CSRF, rate limits, uploads, portfolio origin) and tests.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-154",
+    "section": "14",
+    "requirement": "Infrastructure as code, regions, TURN, warm pools, CI/CD, rollback.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-155",
+    "section": "14",
+    "requirement": "Observability, alerts, status page, runbooks.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-156",
+    "section": "14",
+    "requirement": "Privacy, legal documents, consent copy, data deletion and export.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner + qualified counsel"
+  },
+  {
+    "id": "PRR-157",
+    "section": "14",
+    "requirement": "Load test, failover test, chaos checks, backup restore drill.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-158",
+    "section": "14",
+    "requirement": "Closed beta with low quotas, daily review, fix, then soft launch, then full launch.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-159",
+    "section": "14",
+    "requirement": "Handover documents and the maintenance calendar set up as recurring reminders.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  },
+  {
+    "id": "PRR-160",
+    "section": "14",
+    "requirement": "After each step post a 5 line status: what shipped, evidence added to the PRR, deviations and why, open risks, next step.",
+    "status": "Missing",
+    "evidence": "[Audit, partial implementation and remaining steps](production-audit.md) — whole requirement not verified",
+    "owner": "Project owner / deployment operator"
+  }
+]

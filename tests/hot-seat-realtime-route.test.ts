@@ -25,6 +25,13 @@ test('worker endpoint rejects unsigned forged transcript writes',async()=>{
   const response=await POST(new Request('http://localhost:3002/api/hot-seat/realtime/worker',{method:'POST',body:JSON.stringify({kind:'turn',text:'forged'})}));
   assert.equal(response.status,401);assert.equal((await response.json()).error,'worker-authentication-required');
 });
+test('a guest cannot reserve or reconnect paid voice capacity',async()=>{
+  const {POST}=await import('../src/app/api/hot-seat/realtime/route');
+  for(const input of [{action:'connect',id:'unowned-room-test'},{action:'start',id:'new-room-test',localOwnerId:'local-test-owner',options:{company:'saas',persona:'nora',minutes:10,pressure:'direct'},consent:{adult:true,providers:true,version:'hot-seat-realtime-2026-11-09'}}]){
+    const response=await POST(new Request('http://localhost:3002/api/hot-seat/realtime',{method:'POST',headers:{origin:'http://localhost:3002','Content-Type':'application/json'},body:JSON.stringify(input)}));
+    assert.equal(response.status,401);assert.equal((await response.json()).error,'verified-account-required');assert.equal(response.headers.get('set-cookie'),null);
+  }
+});
 test.after(async()=>{
   const {serverDatabase}=await import('../src/lib/product/server');serverDatabase().close();
   for(const name of ['test.sqlite','test.sqlite-wal','test.sqlite-shm'])rmSync(join(directory,name),{force:true});rmdirSync(directory);

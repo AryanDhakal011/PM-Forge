@@ -34,7 +34,7 @@ export function serverDatabase() {
         join(process.cwd(), ".data", "pmforge.sqlite"),
     );
     database.exec(
-      "PRAGMA journal_mode=WAL; PRAGMA foreign_keys=ON; CREATE TABLE IF NOT EXISTS workspace (user_id TEXT PRIMARY KEY, version INTEGER NOT NULL DEFAULT 0, data TEXT NOT NULL, updated_at TEXT NOT NULL);",
+      "PRAGMA journal_mode=WAL; PRAGMA foreign_keys=ON; PRAGMA busy_timeout=5000; CREATE TABLE IF NOT EXISTS workspace (user_id TEXT PRIMARY KEY, version INTEGER NOT NULL DEFAULT 0, data TEXT NOT NULL, updated_at TEXT NOT NULL);",
     );
     globalState.pmfSqlite = database;
   }
@@ -115,18 +115,12 @@ export function validOrigin(request: Request) {
     origin === new URL(process.env.BETTER_AUTH_URL || request.url).origin
   );
 }
-const limits = new Map<string, { at: number; count: number }>();
 export function rateLimited(key: string, max = 120) {
-  const now = Date.now();
-  if (limits.size > 5000)
-    for (const [k, v] of limits) if (now - v.at > 60000) limits.delete(k);
-  const state = limits.get(key);
-  if (!state || now - state.at > 60000) {
-    limits.set(key, { at: now, count: 1 });
-    return false;
-  }
-  state.count++;
-  return state.count > max;
+  const db=serverDatabase(),now=Date.now();
+  db.exec('CREATE TABLE IF NOT EXISTS product_limits (key TEXT PRIMARY KEY,at INTEGER NOT NULL,count INTEGER NOT NULL)');
+  db.prepare('DELETE FROM product_limits WHERE at<=?').run(now-60000);
+  const row=db.prepare('INSERT INTO product_limits VALUES(?,?,1) ON CONFLICT(key) DO UPDATE SET count=count+1 RETURNING count').get(key,now) as {count:number};
+  return row.count>max;
 }
 
 export const clientKey=(request:Request)=>request.headers.get(process.env.AUTH_TRUSTED_IP_HEADER||'x-pmforge-client-ip')||'unattributed';

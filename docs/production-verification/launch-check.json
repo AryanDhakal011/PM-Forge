@@ -1,0 +1,7 @@
+{
+  "command": "npm run launch:check",
+  "exitCode": 1,
+  "verdict": "blocked",
+  "output": "Deployment configuration needs attention:\nDisable PMFORGE_AI_LOCAL_TEST and verify actual project quotas before public deployment.\nSet a unique random BETTER_AUTH_SECRET (at least 32 characters).\nSet BETTER_AUTH_URL to the public HTTPS origin.\nSet SITE_URL to the public HTTPS origin.\nConfigure RESEND_API_KEY and a verified AUTH_EMAIL_FROM sender.\nReview notes:\n0/63 scenarios have two documented expert reviews; draft/provisional labels must remain.\nContainer sets PMFORGE_DATABASE_PATH=/data/pmforge.sqlite. Other hosts must mount a persistent path.",
+  "liveDeployment": "not provisioned"
+}

@@ -1,0 +1,12 @@
+{
+  "at": "2026-11-09T08:08:13.884Z",
+  "runtime": "Node CPU smoke test; not browser/WASM or live microphone verification",
+  "fixture": "public authored Bella preview",
+  "model": "whisper-tiny.en q8",
+  "loadMs": 6345.5899,
+  "inferenceMs": 1594.6614,
+  "seconds": 3.9672916666666667,
+  "text": " Let's get specific. What would you need to know before making that call?",
+  "expected": "Let's get specific. What would you need to know before making that call?",
+  "wordErrorRate": 0
+}

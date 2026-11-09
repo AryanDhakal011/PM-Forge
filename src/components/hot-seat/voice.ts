@@ -12,6 +12,7 @@ type Events = {
   notice: (text: string) => void;
 };
 export class SeatVoice {
+  private library?:Promise<{version:string;profile:{engine:string;package:string;model:string;dtype:string;speed:number;sampleRate:number};clips:{voice:string;text:string;path:string}[]}|null>;
   private disposed=false;
   private worker?: Worker;
   private waiting = new Map<
@@ -85,7 +86,8 @@ export class SeatVoice {
       this.events.progress("Neural voice ready · runs on this device");
       this.events.state("idle");
       return true;
-    } catch {
+    } catch (error) {
+      if((error as Error)?.name==='AbortError')return false;
       if(this.disposed)return false;
       this.events.state("error");
       this.events.notice(
@@ -94,13 +96,17 @@ export class SeatVoice {
       return false;
     }
   }
-  unlock() {
+  unlock(userGesture=true) {
+    if(userGesture)this.paused=false;
     if (!this.ctx || this.ctx.state === "closed") this.ctx = new AudioContext();
     if (!this.paused) void this.ctx.resume().catch(() => {});
   }
   stop() {
     this.paused = false;
     this.generation++;
+    // Stop cancelled ONNX work too: otherwise a barge-in leaves synthesis
+    // competing with local recognition even though its sound is discarded.
+    if(this.waiting.size){this.worker?.terminate();this.worker=undefined;for(const job of this.waiting.values()){clearTimeout(job.timer);job.reject(new DOMException('Speech cancelled','AbortError'));}this.waiting.clear();}
 
     try {
       this.source?.stop();
@@ -132,6 +138,7 @@ export class SeatVoice {
     turnId?: string,
   ) {
     this.stop();
+    const requestedAt=performance.now();let path='live-local';
     const generation = this.generation,
       p = persona(voiceId);
     this.events.state("preparing");
@@ -148,6 +155,15 @@ export class SeatVoice {
           .join(""),
         key = session.id + ":" + hash;
       let blob = (await db.hotSeatAudio.get(key))?.blob;
+      if(blob)path='device-cache';
+      if(!blob){
+        this.library??=fetch('/hot-seat/library-v1/manifest.json').then(r=>r.ok?r.json():null).catch(()=>null);
+        const library=await this.library;
+        if(library?.version==='kokoro-female-v2'&&library.profile.engine==='kokoro-js'&&library.profile.package==='1.2.1'&&library.profile.model==='Kokoro-82M-v1.0-ONNX'&&library.profile.dtype==='q8'&&library.profile.speed===.98&&library.profile.sampleRate===24000){
+          const clip=library.clips.find(clip=>clip.voice===p.voice&&clip.text===text);
+          if(clip&&/^af_(bella|sarah)\/[a-f0-9]{16}\.wav$/.test(clip.path)){const response=await fetch('/hot-seat/library-v1/'+clip.path);if(response.ok){blob=await response.blob();path='library';}}
+        }
+      }
       if (!blob && voiceId !== "ellis" && text === p.sample) {
         const response=await fetch(`/hot-seat/neural-v2/${p.voice}/preview.wav`);
         if(response.ok)blob=await response.blob();
@@ -159,7 +175,7 @@ export class SeatVoice {
           voice: p.voice,
         });
         if (generation !== this.generation) return;
-        this.unlock();
+        this.unlock(false);
         const buffer = this.ctx!.createBuffer(
           1,
           result.samples.length,
@@ -206,9 +222,15 @@ export class SeatVoice {
           blob,
           createdAt: new Date().toISOString(),
         });
-      this.unlock();
+      this.unlock(false);
       const ctx = this.ctx!,
         buffer = await ctx.decodeAudioData(await blob.arrayBuffer());
+      // Returning from Pause can leave the audio device suspended. Do not announce
+      // playback before the existing context has actually resumed.
+      if(!this.paused&&ctx.state!=='running'){
+        let timeout:ReturnType<typeof setTimeout>|undefined;
+        try{await Promise.race([ctx.resume(),new Promise<never>((_resolve,reject)=>{timeout=setTimeout(()=>reject(Error('Audio needs a new playback gesture.')),2500);})]);}finally{clearTimeout(timeout);}
+      }
       if (generation !== this.generation) return;
       const source = ctx.createBufferSource(),
         analyser = ctx.createAnalyser(),
@@ -252,6 +274,9 @@ export class SeatVoice {
         }
       };
       source.start();
+      // Scheduling latency is observable; this does not claim physical speaker latency.
+      window.dispatchEvent(new CustomEvent('pmforge:voice-timing',{detail:{path,voice:p.voice,requestToScheduledMs:performance.now()-requestedAt,outputLatencyMs:(ctx.outputLatency||ctx.baseLatency)*1000,contextState:ctx.state,turnId}}));
+      console.debug('Hot Seat playback timing',JSON.stringify({path,voice:p.voice,requestToScheduledMs:Math.round(performance.now()-requestedAt),outputLatencyMs:Math.round((ctx.outputLatency||ctx.baseLatency)*1000),contextState:ctx.state}));
       this.events.state(this.paused ? "paused" : "speaking");
       frame();
     } catch {
