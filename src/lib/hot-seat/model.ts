@@ -70,7 +70,7 @@ export type Turn = {
   who: "ai" | "user";
   text: string;
   at: number;
-  source: "authored" | "gemini" | "guided" | "mock" | "typed" | "voice";
+  source: "authored" | "gemini" | "guided" | "mock" | "typed" | "voice" | "realtime";
   intent?: Output["intent"];
   interrupted?: boolean;
   spokenChars?: number;
@@ -92,7 +92,7 @@ export type SeatSession = {
   ownerId: string;
   options: Options;
   variant: number;
-  mode: "gemini" | "guided" | "mock";
+  mode: "gemini" | "guided" | "mock" | "realtime";
   status: "active" | "paused" | "complete";
   revision: number;
   maxTurns: number;
@@ -107,6 +107,7 @@ export type SeatSession = {
   serverLinked?: boolean;
   trailSaved?: boolean;
   debriefRead?: boolean;
+  realtime?: {version:1; consentVersion:string; promptVersion?:string; stack?:{stt:string;llm:string;tts:string;voice:string;region:string}};
 };
 export function createSeat(
   ownerId: string,

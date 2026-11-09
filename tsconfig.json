@@ -48,6 +48,7 @@
     ".next-development/dev/types/**/*.ts"
   ],
   "exclude": [
+    "services/hot-seat-agent",
     "node_modules"
   ]
 }

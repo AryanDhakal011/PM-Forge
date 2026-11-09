@@ -1,0 +1,36 @@
+{
+  "name": "hot-seat-agent",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env.local --import=tsx src/agent.ts dev",
+    "start": "node --env-file-if-exists=.env.local --import=tsx src/agent.ts start",
+    "typecheck": "tsc --noEmit",
+    "download-files": "node --import=tsx src/agent.ts download-files"
+  },
+  "type": "module",
+  "dependencies": {
+    "@livekit/agents": "1.9.5",
+    "@livekit/agents-plugin-cerebras": "1.9.5",
+    "@livekit/agents-plugin-deepgram": "1.9.5",
+    "@livekit/agents-plugin-inworld": "1.9.5",
+    "@livekit/agents-plugin-openai": "1.9.5",
+    "@livekit/agents-plugin-silero": "1.9.5",
+    "@livekit/rtc-node": "1.2.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.6",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  },
+  "private": true,
+  "overrides": {
+    "glob": "14.0.4",
+    "minimatch": "11.0.5",
+    "adm-zip": "0.6.1"
+  },
+  "engines": {
+    "node": ">=24.4 <25"
+  }
+}

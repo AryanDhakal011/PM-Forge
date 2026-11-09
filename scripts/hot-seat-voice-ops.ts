@@ -1,0 +1,14 @@
+import {AILedger} from '../src/lib/interview-ai/ledger';
+import {RealtimeLedger} from '../src/lib/hot-seat/realtime/ledger';
+import {realtimeConfig,realtimeBlocker} from '../src/lib/hot-seat/realtime/config';
+import {percentile} from '../src/lib/hot-seat/realtime/chunks';
+const c=realtimeConfig(),store=new RealtimeLedger(new AILedger());
+const action=process.argv[2]||'status';
+if(action==='kill')store.ledger.setControl('rt-kill','true');
+else if(action==='unkill')store.ledger.setControl('rt-kill','false');
+else if(action!=='status')throw Error('Use status, kill or unkill.');
+const metrics=store.ledger.db.prepare('SELECT stage,ms,input_tokens,output_tokens,characters FROM hotseat_rt_metrics WHERE at>?').all(Date.now()-86400000) as {stage:string;ms:number;input_tokens:number;output_tokens:number;characters:number}[];
+const month=new Date().toISOString().slice(0,7);
+const reserved=(store.ledger.db.prepare('SELECT COALESCE(SUM(reserved_micro),0) n FROM hotseat_rt_rooms WHERE month=?').get(month) as {n:number}).n/1e6;
+const stages=['llm_ttft','tts_ttfb','eot','stt','playback','first_audio'].map(stage=>{const values=metrics.filter(m=>m.stage===stage).map(m=>m.ms);return {stage,samples:values.length,p50Ms:percentile(values,.5),p95Ms:percentile(values,.95)};});
+console.log(JSON.stringify({configured:!realtimeBlocker(c),blocker:realtimeBlocker(c),sharedKill:store.ledger.control('rt-kill')==='true',region:c.region,monthlyBudgetUsd:c.budget,monthlyReservedUsd:reserved,billing:'Reservations are conservative admission holds, not measured provider invoices.',last24Hours:{inputTokens:metrics.reduce((n,m)=>n+m.input_tokens,0),outputTokens:metrics.reduce((n,m)=>n+m.output_tokens,0),ttsCharacters:metrics.reduce((n,m)=>n+m.characters,0)},stages},null,2));

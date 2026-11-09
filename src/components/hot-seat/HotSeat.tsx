@@ -47,6 +47,9 @@ import { useSeat } from "./useSeat";
 import { SeatVoice, type VoiceMode } from "./voice";
 import { useMicrophone } from "./useMicrophone";
 import { Presence } from "./Presence";
+import dynamic from 'next/dynamic';
+import {RealtimeStart} from './RealtimeStart';
+const RealtimeConversation=dynamic(()=>import('./RealtimeConversation'),{ssr:false});
 import s from "./HotSeat.module.css";
 const icons = [
   Layers,
@@ -81,7 +84,7 @@ function Seat({ ownerId }: { ownerId: string }) {
       minutes: 10,
       pressure: "direct",
     }),
-    [ai, setAI] = useState(true),
+    [ai, setAI] = useState(false),
     [adult, setAdult] = useState(false),
     [fictional, setFictional] = useState(false),
     [region, setRegion] = useState(""),
@@ -191,7 +194,7 @@ function Seat({ ownerId }: { ownerId: string }) {
   }, interrupt);
   useEffect(() => {
     if (
-      run &&
+      run && run.mode !== 'realtime' &&
       lastAI &&
       run.status === "active" &&
       lastSpoken.current !== lastAI.id
@@ -202,17 +205,17 @@ function Seat({ ownerId }: { ownerId: string }) {
   }, [lastAI?.id, run?.status, voiceOn]);
   useEffect(() => {
     const id = run?.pending?.turnId;
-    if (!id || !seat.busy || paused || voiceMode !== "neural" || acknowledgedTurn.current === id) return;
+    if (run?.mode === 'realtime' || !id || !seat.busy || paused || voiceMode !== "neural" || acknowledgedTurn.current === id) return;
     acknowledgedTurn.current = id;
     void say("Got it.", "authored-ack-" + id);
   }, [run?.pending?.turnId, seat.busy, paused]);
   useEffect(()=>{
-    if(!run||run.status!=='complete'||run.debriefRead)return;
+    if(!run||run.mode==='realtime'||run.status!=='complete'||run.debriefRead)return;
     void say('The conversation is complete. Let’s look at the reasoning you documented. This review is provisional, not a hiring verdict.','debrief-intro');
     void seat.persist({...run,debriefRead:true}).catch(e=>seat.setNotice(e.message));
   },[run?.id,run?.status]);
   useEffect(() => {
-    if (!run || run.status !== "active") return;
+    if (!run || run.mode === 'realtime' || run.status !== "active") return;
     let previous = Date.now();
     const timer = setInterval(() => {
       const at = Date.now(),
@@ -234,6 +237,7 @@ function Seat({ ownerId }: { ownerId: string }) {
   useEffect(() => {
     if (
       !run ||
+      run.mode === 'realtime' ||
       run.status !== "active" ||
       seat.busy ||
       mic.active ||
@@ -295,6 +299,7 @@ function Seat({ ownerId }: { ownerId: string }) {
       if (
         target.closest("textarea,input,select,button,[role=dialog]") ||
         !run ||
+        run.mode === 'realtime' ||
         finished
       )
         return;
@@ -657,6 +662,7 @@ function Seat({ ownerId }: { ownerId: string }) {
                 </dd>
               </div>
             </dl>
+            <RealtimeStart options={options} ownerId={ownerId} onStart={seat.persist}/>
             <label className={s.check}>
               <input
                 type="checkbox"
@@ -664,7 +670,7 @@ function Seat({ ownerId }: { ownerId: string }) {
                 disabled={!seat.cap?.available}
                 onChange={(e) => setAI(e.target.checked)}
               />
-              Gemini conversation{seat.cap?.mock ? " · test double" : ""}
+              Legacy Gemini text pilot{seat.cap?.mock ? " · test double" : ""}
             </label>
             <p className={s.fine}>
               {seat.cap?.available
@@ -1026,6 +1032,7 @@ function Seat({ ownerId }: { ownerId: string }) {
       </Dialog>
     );
   }
+  if(run.mode==='realtime')return <RealtimeConversation run={run} persist={seat.persist} onLobby={()=>{seat.setSession(null);runRef.current=null;void seat.refresh();}} onGuided={seat.guided}/>;
   const status = paused
     ? "Paused"
     : seat.busy

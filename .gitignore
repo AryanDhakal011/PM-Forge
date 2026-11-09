@@ -1,5 +1,6 @@
 # dependencies
 node_modules/
+services/hot-seat-agent/reports/
 .pnp
 .pnp.*
 

@@ -1,5 +1,8 @@
 .git
 node_modules
+**/node_modules
+**/.env*
+services/hot-seat-agent/reports
 .next*
 .pmforge-preview
 .data

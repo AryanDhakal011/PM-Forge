@@ -2,6 +2,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { showError, friendlyRequestError } from "@/lib/ui-feedback";
 import { db, IDENTITY_KEY } from "@/lib/product/db";
+import {realtimeRequest} from './realtimeRequest';
 import {
   createSeat,
   mergeSeat,
@@ -153,7 +154,7 @@ export function useSeat(ownerId: string) {
   }
   async function recover(local: SeatSession) {
     if (local.mode === "guided") return local;
-    const data = await seatRequest({ action: "status", id: local.id });
+    const data = await (local.mode==='realtime'?realtimeRequest:seatRequest)({ action: "status", id: local.id });
     if (data.session?.id !== local.id || data.session.ownerId !== ownerId)
       throw Error("Saved session ownership could not be verified.");
     if (data.pending) {
@@ -321,7 +322,7 @@ export function useSeat(ownerId: string) {
     const s = current.current;
     if (!s) return;
     if (s.mode !== "guided")
-      await seatRequest({ action: "release", id: s.id }).catch(() => {});
+      await (s.mode==='realtime'?realtimeRequest({action:'pause',id:s.id}):seatRequest({ action: "release", id: s.id })).catch(() => {});
     const next = { ...s, serverLinked: s.serverLinked || s.mode !== "guided", mode: "guided" as const, pending: undefined };
     if (s.pending) {
       const out = guidedOutput(withCurveball(next));
@@ -346,7 +347,7 @@ export function useSeat(ownerId: string) {
     if (s.ownerId !== ownerId) return;
     if (s.serverLinked || s.mode !== "guided")
       try {
-        await seatRequest({ action: "delete", id: s.id });
+        await (s.realtime?realtimeRequest:seatRequest)({ action: "delete", id: s.id });
       } catch (e) {
         const gone = ["session-not-found", "session-expired"].includes((e as any).code) || Date.now() - new Date(s.createdAt).getTime() > 86400000;
         if (!gone) {
