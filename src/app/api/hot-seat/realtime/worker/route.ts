@@ -1,3 +1,5 @@
+import {cloudEnabled} from '@/lib/cloud/config';
+import {cloudAIUnavailable} from '@/lib/cloud/availability';
 import {limitedBody} from '@/lib/portfolio/request';
 import {AIError} from '@/lib/interview-ai/provider';
 import {realtimeConfig} from '@/lib/hot-seat/realtime/config';
@@ -7,6 +9,7 @@ import {RealtimeLedger} from '@/lib/hot-seat/realtime/ledger';
 export const runtime='nodejs';
 export const dynamic='force-dynamic';
 export async function POST(request:Request) {
+ if(cloudEnabled())return cloudAIUnavailable();
   try {
     const body=new TextDecoder().decode(await limitedBody(request,22000)),c=realtimeConfig();
     if(!validWorkerSignature(body,request.headers.get('x-pmforge-timestamp'),request.headers.get('x-pmforge-signature'),c.workerSecret))throw new AIError('worker-authentication-required',401);

@@ -7,13 +7,14 @@ import { getMigrations } from "better-auth/db/migration";
 import { DatabaseSync } from "node:sqlite";
 import { mkdirSync } from "node:fs";
 import { join,dirname } from "node:path";
+import {cloudEnabled,cloudConfigured,cloudConfig} from '../cloud/config';
 
 const globalState = globalThis as unknown as {
   pmfAuth?: ReturnType<typeof betterAuth>;
   pmfSqlite?: DatabaseSync;
   pmfMigration?: Promise<void>;
 };
-export const providersConfigured = () => ({
+export const providersConfigured = () => cloudEnabled()?{email:cloudConfigured()&&cloudConfig().email,google:cloudConfigured()&&cloudConfig().google,github:cloudConfigured()&&cloudConfig().github}:({
   email: !!process.env.BETTER_AUTH_SECRET && process.env.BETTER_AUTH_SECRET.length>=32 && mailConfigured(),
   google: !!(
     process.env.BETTER_AUTH_SECRET &&
@@ -27,6 +28,7 @@ export const providersConfigured = () => ({
   ),
 });
 export function serverDatabase() {
+  if(cloudEnabled())throw Error('Local server storage is disabled on the cloud deployment.');
   if (!globalState.pmfSqlite) {
     mkdirSync(process.env.PMFORGE_DATABASE_PATH ? dirname(process.env.PMFORGE_DATABASE_PATH) : join(process.cwd(), ".data"), { recursive: true, mode:0o700 });
     const database = new DatabaseSync(
@@ -105,6 +107,7 @@ export async function getAuth() {
   return globalState.pmfAuth;
 }
 export async function memberSession(request: Request) {
+  if(cloudEnabled()){const {cloudMember}=await import('../cloud/server');return cloudConfigured()?cloudMember():null;}
   const auth = await getAuth();
   return auth ? auth.api.getSession({ headers: request.headers }) : null;
 }

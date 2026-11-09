@@ -98,3 +98,6 @@ docs/navigation-verification/dev-diagnosis.json
 public/hot-seat/runtime/
 
 public/hot-seat/runtime-v2/
+
+# Local Supabase CLI cache and linked-project metadata.
+supabase/.temp/

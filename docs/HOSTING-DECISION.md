@@ -1,3 +1,5 @@
+> Superseded for the owner-selected free hosting route: see [current cloud migration and deployment status](FREE-CLOUD-MIGRATION.md). The guide below records the earlier local/container architecture.
+
 # Hosting decision — 9 November 2026
 
 No hosting resources were provisioned and no spend was authorized by this change.

@@ -259,7 +259,7 @@ const info: Record<
     ],
   },
   "privacy": {
-  "eyebrow": "Privacy · updated 8 November 2026",
+  "eyebrow": "Privacy · updated 9 November 2026",
   "title": "Your practice deserves a private room.",
   "intro": "This notice describes what PMForge currently stores and sends. Private means not published to other users; it does not always mean data never leaves your device.",
   "sections": [
@@ -274,6 +274,10 @@ const info: Record<
     {
       "title": "Accounts and workspace synchronization",
       "text": "An account stores identity, verification, hashed credentials, sessions and synced workspace text on the PMForge server. Email delivery uses the configured email provider; optional OAuth providers supply basic identity when you choose them. Account workspace synchronization may include private case and application text. Interview transcripts and outlines follow the separate transcript-sync choice. Local audio and evidence images are not automatically included in account sync."
+    },
+    {
+      "title": "Managed cloud hosting",
+      "text": "When the managed cloud deployment is enabled, Vercel hosts the website and application APIs. Supabase processes account authentication, synced workspace text, deliberately published portfolio snapshots and limited operational counters; the current database region is Mumbai, India. Providers may receive ordinary request and security metadata. Device-only practice is not automatically uploaded. Hosting is separate from AI processing: the free managed deployment currently enables guided practice and on-device speech, not hosted generative inference. Accounts and portfolio publication remain unavailable until their required configuration is verified. Provider infrastructure and operator-managed exports have separate retention and deletion procedures."
     },
     {
       "title": "AI interviews and provider processing",

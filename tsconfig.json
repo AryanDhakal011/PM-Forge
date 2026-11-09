@@ -49,6 +49,7 @@
   ],
   "exclude": [
     "services/hot-seat-agent",
-    "node_modules"
+    "node_modules",
+    "supabase/functions"
   ]
 }

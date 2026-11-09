@@ -1,3 +1,5 @@
+import {cloudEnabled} from '@/lib/cloud/config';
+import {cloudRealtimeCapability,cloudAIUnavailable} from '@/lib/cloud/availability';
 import {AccessToken,AgentDispatchClient,RoomServiceClient,TrackSource} from 'livekit-server-sdk';
 import {validOrigin,memberSession} from '@/lib/product/server';
 import {limitedBody} from '@/lib/portfolio/request';
@@ -11,11 +13,13 @@ export const runtime='nodejs';
 export const dynamic='force-dynamic';
 const headers={'Cache-Control':'no-store'};
 export async function GET() {
+ if(cloudEnabled())return cloudRealtimeCapability();
   const c=realtimeConfig(),ledger=new AILedger();
   const reason=realtimeBlocker(c)||(ledger.control('kill')==='true'||ledger.control('rt-kill')==='true'?'Realtime voice is paused by the operator.':null);
   return Response.json({available:!reason,reason,providers:'LiveKit (voice transport), Deepgram (transcription), Cerebras (conversation), Inworld (synthetic speech)',consentVersion:REALTIME_CONSENT,region:c.region,maxTurns:c.maxTurns,maxSeconds:c.maxSeconds},{headers});
 }
 export async function POST(request:Request) {
+ if(cloudEnabled())return cloudAIUnavailable();
   let cookie:string|undefined;
   try {
     if(!validOrigin(request))throw new AIError('origin-rejected',403);

@@ -1,0 +1,44 @@
+{
+  "at": "2026-11-09T13:39:46.757Z",
+  "publicDeployment": null,
+  "backend": {
+    "project": "wddsmywlorlcmdlfkett",
+    "plan": "Free",
+    "region": "ap-south-1",
+    "migrations": 3,
+    "functionVersion": 4,
+    "health": 200,
+    "anonymousPublication": 401,
+    "missingPortfolio": 404
+  },
+  "checks": {
+    "cloud": 14,
+    "auth": 3,
+    "portfolio": 31,
+    "core": 54,
+    "hotSeat": 51,
+    "total": 153,
+    "liveSql": [
+      "workspace ownership and RLS",
+      "compare-and-swap conflicts",
+      "revoked session status and access",
+      "single-use recovery",
+      "publication retry idempotency",
+      "handle ownership",
+      "asset replacement rollback",
+      "shared counters and grants"
+    ],
+    "browser": [
+      "hosted-backend local guided answer and follow-up",
+      "pause and save",
+      "unconfigured signup disclosure"
+    ]
+  },
+  "pending": [
+    "Vercel workspace access or dashboard sign-in",
+    "actual public URL verification",
+    "SMTP or OAuth configuration and live account flows",
+    "isolated reader deployment and authenticated publication flows",
+    "owner production-readiness review"
+  ]
+}

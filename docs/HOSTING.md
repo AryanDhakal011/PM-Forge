@@ -1,3 +1,5 @@
+> Superseded for the owner-selected free hosting route: see [current cloud migration and deployment status](FREE-CLOUD-MIGRATION.md). The guide below records the earlier local/container architecture.
+
 # Hosting PMForge
 
 For the requested zero-cost pilot, read [the free-hosting decision](FREE-HOSTING.md) first. Local SQLite is not durable on serverless hosts.

@@ -1,3 +1,5 @@
+import {cloudEnabled} from '@/lib/cloud/config';
+import {cloudAIUnavailable} from '@/lib/cloud/availability';
 import {clientKey} from '@/lib/product/server';
 import {vocabularyFor} from '@/lib/product/pm-vocabulary';
 import {getQuestion} from '@/lib/product/content';
@@ -7,8 +9,9 @@ function allowed(request:Request){if(request.headers.get('origin')!==new URL(req
 const paidSpeechApproved=()=>process.env.PMFORGE_AI_MODE==='production'&&Number(process.env.PMFORGE_AI_MONTHLY_BUDGET_USD)>0&&Number(process.env.PMFORGE_VOICE_MONTHLY_BUDGET_USD)>0&&process.env.PMFORGE_PAID_SPEECH_APPROVED==='true';
 const configured=()=>({stt:paidSpeechApproved()&&process.env.PMFORGE_VOICE_ENABLED==='true'&&!!process.env.DEEPGRAM_API_KEY,tts:paidSpeechApproved()&&process.env.PMFORGE_VOICE_ENABLED==='true'&&!!process.env.ELEVENLABS_API_KEY&&!!process.env.ELEVENLABS_VOICE_ID});
 async function limitedBody(request:Request,max:number){const reader=request.body?.getReader();if(!reader)return new Uint8Array();const chunks:Uint8Array[]= [];let length=0;try{while(true){const {done,value}=await reader.read();if(done)break;length+=value.length;if(length>max){await reader.cancel();throw Error('Body limit')}chunks.push(value)}}finally{reader.releaseLock()}const body=new Uint8Array(length);let offset=0;for(const chunk of chunks){body.set(chunk,offset);offset+=chunk.length}return body}
-export async function GET(){return Response.json(configured(),{headers:{'Cache-Control':'no-store'}})}
+export async function GET(){return Response.json(cloudEnabled()?{stt:false,tts:false}:configured(),{headers:{'Cache-Control':'no-store'}})}
 export async function POST(request:Request){
+ if(cloudEnabled())return cloudAIUnavailable();
  if(!allowed(request))return Response.json({error:'Voice request unavailable. Keep typing or retry shortly.'},{status:429});
  if(request.headers.get('x-pmforge-voice-consent')!=='1')return Response.json({error:'Voice consent is required.'},{status:403});
  const kind=new URL(request.url).searchParams.get('kind');

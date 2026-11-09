@@ -1,5 +1,7 @@
 import { z } from "zod";
 import { exportSchema } from "@/lib/product/schema";
+import {cloudEnabled} from '@/lib/cloud/config';
+import {cloudWorkspace} from '@/lib/cloud/workspace';
 import {
   memberSession,
   rateLimited,
@@ -8,6 +10,7 @@ import {
 } from "@/lib/product/server";
 export const runtime = "nodejs";
 export async function GET(request: Request) {
+  if(cloudEnabled())return cloudWorkspace(request);
   const session = await memberSession(request);
   if (!session)
     return Response.json({ error: "Sign in to sync." }, { status: 401 });
@@ -25,6 +28,7 @@ export async function GET(request: Request) {
   );
 }
 export async function PUT(request: Request) {
+  if(cloudEnabled())return cloudWorkspace(request);
   if (!validOrigin(request))
     return Response.json({ error: "Origin rejected." }, { status: 403 });
   const session = await memberSession(request);

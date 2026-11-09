@@ -1,3 +1,5 @@
+> Superseded for the owner-selected free hosting route: see [current cloud migration and deployment status](FREE-CLOUD-MIGRATION.md). The guide below records the earlier local/container architecture.
+
 # Free hosting decision — 8 November 2026
 
 For a **personal, non-commercial pilot**, the recommended target is Vercel Hobby for Next.js and API routes, Supabase Free for durable Postgres/storage, and the existing bounded Gemini fictional pilot. Use the free provider subdomain initially. Vercel Hobby restricts use to personal/non-commercial projects; a commercial PMForge launch requires an eligible alternative. No paid plan, trial or domain was enabled.

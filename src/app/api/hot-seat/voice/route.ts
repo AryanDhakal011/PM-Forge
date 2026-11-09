@@ -1,3 +1,5 @@
+import {cloudEnabled} from '@/lib/cloud/config';
+import {cloudAIUnavailable} from '@/lib/cloud/availability';
 import { z } from "zod";
 import { GoogleGenAI } from "@google/genai";
 import { AILedger, digest } from "@/lib/interview-ai/ledger";
@@ -16,6 +18,7 @@ import { validOrigin } from "@/lib/product/server";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export async function POST(request: Request) {
+ if(cloudEnabled())return cloudAIUnavailable();
   const headers = { "Cache-Control": "no-store" };
   try {
     const c = aiConfig();

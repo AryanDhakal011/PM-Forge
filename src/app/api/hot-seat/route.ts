@@ -1,3 +1,5 @@
+import {cloudEnabled} from '@/lib/cloud/config';
+import {cloudAICapability,cloudAIUnavailable} from '@/lib/cloud/availability';
 import {seatSpeechEnabled} from "@/lib/hot-seat/speech-config";
 import { aiConfig, availability } from "@/lib/interview-ai/config";
 import { AILedger } from "@/lib/interview-ai/ledger";
@@ -14,6 +16,7 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 const headers = { "Cache-Control": "no-store" };
 export async function GET(request: Request) {
+ if(cloudEnabled())return cloudAICapability();
   const c = aiConfig(),
     ledger = new AILedger(),
     reason =
@@ -42,6 +45,7 @@ export async function GET(request: Request) {
   );
 }
 export async function POST(request: Request) {
+ if(cloudEnabled())return cloudAIUnavailable();
   let cookie: string | undefined;
   try {
     const c = aiConfig();

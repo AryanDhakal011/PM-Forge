@@ -2,7 +2,7 @@
 
 A practice workspace for product judgment: 63 interview scenarios, seven category workbenches, twelve three-chapter projects, evidence-backed debriefs and a private decision portfolio.
 
-Release status: **not approved for public launch**. See [production readiness](docs/prr.md), [hosting decision](docs/HOSTING-DECISION.md), [microphone verification](docs/mic-test-report.md) and [latency evidence](docs/latency-report.md). The proposed backend is the existing Next.js Node service with a persistent disk; realtime voice additionally needs a long-lived agent. No cloud resources or new paid services were enabled.
+Release status: **free cloud migration implemented; public deployment and account setup pending**. See [current managed-hosting status](docs/FREE-CLOUD-MIGRATION.md). See [production readiness](docs/prr.md), [hosting decision](docs/HOSTING-DECISION.md), [microphone verification](docs/mic-test-report.md) and [latency evidence](docs/latency-report.md). Supabase Free has been provisioned for cloud Auth/Postgres and portfolio operations. Vercel deployment is pending; external AI and paid speech remain off.
 
 ## Run locally
 
@@ -19,7 +19,7 @@ Guest mode needs no credentials. Email signup, verification and password recover
 
 ## Project and deployment map
 
-See [architecture](docs/ARCHITECTURE.md), [free hosting](docs/FREE-HOSTING.md), [brand](docs/BRAND.md) and [email setup](docs/EMAIL-SETUP.md). The current durable backend needs a persistent Node host; the free serverless migration is not implemented.
+See [architecture](docs/ARCHITECTURE.md), [free hosting](docs/FREE-HOSTING.md), [brand](docs/BRAND.md) and [email setup](docs/EMAIL-SETUP.md). The free managed-backend implementation and exact remaining deployment gates are in [the cloud migration guide](docs/FREE-CLOUD-MIGRATION.md). The Node/SQLite guide describes the retained local/container alternative.
 
 ## Navigation
 

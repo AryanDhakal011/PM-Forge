@@ -1,3 +1,5 @@
+import {cloudEnabled} from '@/lib/cloud/config';
+import {cloudAICapability,cloudAIUnavailable} from '@/lib/cloud/availability';
 import {randomBytes} from 'node:crypto';
 import {AILedger,digest} from '@/lib/interview-ai/ledger';
 import {aiConfig,availability} from '@/lib/interview-ai/config';
@@ -8,8 +10,10 @@ import {limitedBody} from '@/lib/portfolio/request';
 export const runtime='nodejs';export const dynamic='force-dynamic';
 const headers={'Cache-Control':'no-store'};
 const localHost=(request:Request)=>['localhost','127.0.0.1','[::1]'].includes(new URL(request.url).hostname);
-export async function GET(request:Request){const c=aiConfig(),ledger=new AILedger(),reason=(c.localTest&&!localHost(request)?'Local AI testing is only available on this computer.':null)||availability(c)|| (ledger.control('kill')==='true'?'AI interviews are paused by the operator.':null);return Response.json({available:!reason,reason,localTest:c.localTest,mode:c.mode,model:c.model,mock:c.mock,maxTurns:c.maxTurns,timeboxSeconds:c.timebox,dailySessions:c.dailySessions,regions:c.regions,personalAllowed:c.mode==='production'&&c.personalApproved,dataUse:c.mode==='free-pilot'?'Only approved fictional case positions and unlocked scenario facts go to Google. Private scratch notes are kept on this device. Google may use unpaid-service inputs and outputs to improve its services.':'Your committed answers and necessary unlocked case context are sent to the configured provider. Provider processing is separate from publishing or account sync.'},{headers})}
+export async function GET(request:Request){
+ if(cloudEnabled())return cloudAICapability();const c=aiConfig(),ledger=new AILedger(),reason=(c.localTest&&!localHost(request)?'Local AI testing is only available on this computer.':null)||availability(c)|| (ledger.control('kill')==='true'?'AI interviews are paused by the operator.':null);return Response.json({available:!reason,reason,localTest:c.localTest,mode:c.mode,model:c.model,mock:c.mock,maxTurns:c.maxTurns,timeboxSeconds:c.timebox,dailySessions:c.dailySessions,regions:c.regions,personalAllowed:c.mode==='production'&&c.personalApproved,dataUse:c.mode==='free-pilot'?'Only approved fictional case positions and unlocked scenario facts go to Google. Private scratch notes are kept on this device. Google may use unpaid-service inputs and outputs to improve its services.':'Your committed answers and necessary unlocked case context are sent to the configured provider. Provider processing is separate from publishing or account sync.'},{headers})}
 export async function POST(request:Request){
+ if(cloudEnabled())return cloudAIUnavailable();
  if(aiConfig().localTest&&!localHost(request))return Response.json({error:'local-test-only'},{status:403,headers});
  if(!validOrigin(request))return Response.json({error:'origin-rejected'},{status:403,headers});
  let cookie:string|undefined,quotaOwner:string|undefined;

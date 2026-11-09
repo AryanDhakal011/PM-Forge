@@ -30,6 +30,7 @@ jobs:
       - run: npm run hot-seat:eval
       - run: npm run test:ai
       - run: npm run ai:eval
+      - run: npm run test:cloud
       - run: npm run test:auth
       - run: npm test
       - run: npm run test:deadlock
