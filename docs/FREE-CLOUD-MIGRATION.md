@@ -1,5 +1,7 @@
 # Free managed hosting - 9 November 2026
 
+> Superseded deployment status: PMForge is now live as a device-practice beta. See [the verified hosting handover](LIVE-HOSTING.md), dated 10 November 2026. The provisioning notes below record the earlier migration stage.
+
 Owner selected free hosting and explicitly selected **aryan's Org**. Supabase quoted **$0/month** before project creation. No paid upgrades, paid services or billing changes were enabled.
 
 ## Actual resources and status

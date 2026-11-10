@@ -1,0 +1,128 @@
+{
+  "at": "2026-11-10T00:01:50.265Z",
+  "results": [
+    {
+      "url": "https://pmforge-tau.vercel.app/",
+      "status": 200,
+      "location": null,
+      "hsts": true,
+      "nosniff": "nosniff"
+    },
+    {
+      "url": "https://pmforge-tau.vercel.app/api/health",
+      "status": 200,
+      "location": null,
+      "hsts": true,
+      "nosniff": "nosniff",
+      "body": {
+        "schema": 1,
+        "status": "ready",
+        "storage": "postgres",
+        "release": "device-practice",
+        "accounts": "not-configured",
+        "portfolio": "configured",
+        "externalAI": "off"
+      }
+    },
+    {
+      "url": "https://pmforge-tau.vercel.app/api/auth-config",
+      "status": 200,
+      "location": null,
+      "hsts": true,
+      "nosniff": "nosniff",
+      "body": {
+        "storage": "supabase",
+        "email": false,
+        "google": false,
+        "github": false,
+        "emailPreview": false
+      }
+    },
+    {
+      "url": "https://pmforge-tau.vercel.app/app/practice",
+      "status": 200,
+      "location": null,
+      "hsts": true,
+      "nosniff": "nosniff"
+    },
+    {
+      "url": "https://pmforge-tau.vercel.app/app/projects",
+      "status": 200,
+      "location": null,
+      "hsts": true,
+      "nosniff": "nosniff"
+    },
+    {
+      "url": "https://pmforge-tau.vercel.app/app/hot-seat",
+      "status": 200,
+      "location": null,
+      "hsts": true,
+      "nosniff": "nosniff"
+    },
+    {
+      "url": "https://pmforge-tau.vercel.app/api/workspace",
+      "status": 401,
+      "location": null,
+      "hsts": true,
+      "nosniff": "nosniff"
+    },
+    {
+      "url": "https://pmforge-tau.vercel.app/p/nonexistent",
+      "status": 307,
+      "location": "https://pmforge-reader.vercel.app/p/nonexistent",
+      "hsts": true,
+      "nosniff": "nosniff"
+    },
+    {
+      "url": "https://pmforge-reader.vercel.app/api/health",
+      "status": 200,
+      "location": null,
+      "hsts": true,
+      "nosniff": "nosniff",
+      "body": {
+        "schema": 1,
+        "status": "ready",
+        "storage": "postgres",
+        "release": "device-practice",
+        "accounts": "not-configured",
+        "portfolio": "not-configured",
+        "externalAI": "off"
+      }
+    },
+    {
+      "url": "https://pmforge-reader.vercel.app/api/workspace",
+      "status": 404,
+      "location": null,
+      "hsts": true,
+      "nosniff": "nosniff"
+    },
+    {
+      "url": "https://pmforge-reader.vercel.app/api/auth/get-session",
+      "status": 404,
+      "location": null,
+      "hsts": true,
+      "nosniff": "nosniff"
+    },
+    {
+      "url": "https://pmforge-reader.vercel.app/app",
+      "status": 404,
+      "location": null,
+      "hsts": true,
+      "nosniff": "nosniff"
+    },
+    {
+      "url": "https://pmforge-reader.vercel.app/p/nonexistent",
+      "status": 404,
+      "location": null,
+      "hsts": true,
+      "nosniff": "nosniff"
+    },
+    {
+      "url": "https://pmforge-reader.vercel.app/",
+      "status": 307,
+      "location": "https://pmforge-tau.vercel.app/",
+      "hsts": true,
+      "nosniff": "nosniff"
+    }
+  ]
+}
