@@ -5,7 +5,23 @@ import {createRun} from '../src/lib/product/engine';
 import {questions} from '../src/lib/product/content';
 import {deskState} from '../src/lib/product/desk';
 import {projectDuration,projectTimes} from '../src/lib/projects/durations';
+import { portablePortfolio } from '../src/lib/portfolio/portable';
 const p=blankMaster('test','Alex'),c={...blankCase('test'),title:'Enterprise retention',kind:'simulation' as const,problem:'Enterprise churn rose.',decision:'Staged the migration after engineers challenged the rollback plan.',metric:'Retention',tradeoff:'Reduced scope to protect retention.',reviewed:true};
+test('offline portfolio keeps reviewed selected text and escapes markup', () => {
+  const profile = { ...p, name: '<script>Test</script>', email: 'omitted@example.test', selectedCases: [c.id, 'private', 'draft', 'unconfirmed'] };
+  const html = portablePortfolio(profile, [
+    { ...c, ready: true, confidentiality: 'public', artifactIds: ['omitted-artifact'], evidence: '<img src=x onerror=alert(1)>' },
+    { ...c, id: 'private', title: 'Private case', confidentiality: 'private' },
+    { ...c, id: 'draft', title: 'Draft case', ready: false },
+    { ...c, id: 'unconfirmed', title: 'Unconfirmed work', kind: 'production' },
+    { ...c, id: 'unselected', title: 'Unselected case' },
+  ]);
+  assert.match(html, /Simulated practice/);
+  assert.match(html, /&lt;script&gt;Test&lt;\/script&gt;/);
+  assert.match(html, /&lt;img src=x onerror=alert\(1\)&gt;/);
+  assert.doesNotMatch(html, /<script|<img|Private case|Draft case|Unconfirmed work|Unselected case|omitted/);
+  assert.throws(() => portablePortfolio({ ...profile, selectedCases: [] }, [c]));
+});
 test('interview imports always disclose simulation and use saved evidence',()=>{const run=createRun(questions[0],'test');run.evidenceIds=[questions[0].evidence[0].id];const result=caseFromRun(run);assert.equal(result.kind,'simulation');assert.equal(result.realWorkConfirmed,false);assert.ok(result.evidence.includes(questions[0].evidence[0].text));assert.match(result.outcome,/No production impact/);assert.equal(caseLabel(result),'Strategic Teardown & Stress Test')});
 test('default portfolio has no selected cases and private fields are excluded',()=>{assert.deepEqual(p.selectedCases,[]);const result=publicSnapshot({...p,selectedCases:[c.id]},[c,{...c,id:'private',title:'Private'}]);assert.equal(result.cases.length,1);assert.equal(result.cases[0].ownerId,'');assert.ok(!('publishKey' in result));assert.ok(!JSON.stringify(result).includes('Private'))});
 test('scrubber preserves percentages, numeric mappings and longest name aliases',()=>{const result=scrubText('Acme Bank grew from 120000 to 150000 with 25% lift; Acme retained 600.',{'Acme Bank':'Bank A',Acme:'Client B'},{'120000':'Index 100','150000':'Index 125'});assert.equal(result,'Bank A grew from Index 100 to Index 125 with 25% lift; Client B retained [amount withheld].');const many=Array.from({length:40},(_,i)=>i+'%').join(' ');assert.equal(scrubText(many,{}),many)});

@@ -62,7 +62,7 @@ function Toggle({
   );
 }
 export function SettingsView() {
-  const { profile, setProfile, sync, reload } = useWorkspace();
+  const { profile, setProfile, sync, reload, showcase } = useWorkspace();
   const prefs = useSettings();
   const [debug, setDebug] = useState(false);
   useEffect(() => {
@@ -278,7 +278,7 @@ export function SettingsView() {
               <ShieldCheck size={17} />
             </div>
             <p className={styles.prose} style={{ fontSize: ".82rem" }}>
-              {profile?.identity === "guest"
+              {showcase ? "Your workspace is stored in this browser. Export a backup before clearing browser data or switching devices." : profile?.identity === "guest"
                 ? "Guest data is stored in this browser’s IndexedDB. It does not become an account by entering an email, and it is not uploaded."
                 : "Your device copy remains usable offline. Account sync requires a valid server session."}
             </p>
@@ -307,10 +307,10 @@ export function SettingsView() {
                 hidden
                 onChange={(e) => void importFile(e.target.files?.[0])}
               />
-              <button className={styles.secondary} onClick={reload}>
+              {!showcase && <button className={styles.secondary} onClick={reload}>
                 <RefreshCw size={15} />
                 Retry connection / reload identity
-              </button>
+              </button>}
               <a href="/reset.html" className={styles.secondary}>Clear app cache / start a fresh test</a>
               <button className={styles.danger} onClick={() => setReset(true)}>
                 <Trash2 size={15} />
@@ -318,13 +318,14 @@ export function SettingsView() {
               </button>
             </div>
             <p className={styles.finePrint} style={{ marginTop: 18 }}>
-              Guest data stays on this device. Configured account data is stored
+              {showcase ? "Voice is optional. Any audio you choose to retain stays in this browser." : <>Guest data stays on this device. Configured account data is stored
               by the PMForge server. Browser voice typing may send audio to its
-              speech provider; PMForge does not record or store audio.
+              speech provider.</>}
             </p>
           </section>
           <section className={styles.panel}>
-            <h2>Account & privacy</h2>
+            <h2>{showcase ? "Privacy" : "Account & privacy"}</h2>
+            {!showcase && <>
             <p
               className={styles.prose}
               style={{ fontSize: ".8rem", margin: "14px 0" }}
@@ -336,6 +337,7 @@ export function SettingsView() {
               Open account settings
               <ExternalLink size={14} />
             </Link>
+            </>}
             <div className={styles.row}>
               <Link href="/privacy" className={styles.small}>
                 Privacy

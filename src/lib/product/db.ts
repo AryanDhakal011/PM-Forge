@@ -53,22 +53,45 @@ export async function getLocalProfile() {
   const id = localStorage.getItem(IDENTITY_KEY);
   return id ? db.profiles.get(id) : undefined;
 }
-export async function startGuest() {
-  const existing = await getLocalProfile();
-  if (existing?.identity === "guest") return existing;
-  const profile: Profile = {
+function newGuest(onboardingComplete: boolean): Profile {
+  return {
     id: `guest-${crypto.randomUUID()}`,
     name: "",
     role: "Aspiring PM",
     level: "easy",
     timeline: "Exploring",
-    onboardingComplete: false,
+    onboardingComplete,
     identity: "guest",
     updatedAt: new Date().toISOString(),
   };
+}
+export async function startGuest() {
+  const existing = await getLocalProfile();
+  if (existing?.identity === "guest") return existing;
+  const profile = newGuest(false);
   await db.profiles.put(profile);
   localStorage.setItem(IDENTITY_KEY, profile.id);
   window.dispatchEvent(new Event("pmforge:identity"));
+  return profile;
+}
+
+export async function openDeviceWorkspace() {
+  const local = await getLocalProfile();
+  if (local?.identity === "member") return local;
+  const profile = await db.transaction("rw", db.profiles, db.meta, async () => {
+    const key = "showcase-device-profile";
+    const remembered = await db.meta.get(key);
+    const existing = local ?? (remembered && await db.profiles.get(remembered.value));
+    const device = existing?.identity === "guest" ? existing : newGuest(true);
+    if (device !== existing) await db.profiles.put(device);
+    await db.meta.put({ key, value: device.id });
+    return device;
+  });
+  if (localStorage.getItem(IDENTITY_KEY) !== profile.id) {
+    localStorage.setItem(IDENTITY_KEY, profile.id);
+    stageLandingCarry();
+    window.dispatchEvent(new Event("pmforge:identity"));
+  }
   return profile;
 }
 export class WriteConflict extends Error {

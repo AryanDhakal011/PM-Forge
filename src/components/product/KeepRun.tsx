@@ -4,6 +4,7 @@ import Link from "next/link";
 import { db, exportWorkspace } from "@/lib/product/db";
 import type { Profile, Run } from "@/lib/product/types";
 import styles from "./Product.module.css";
+import { useWorkspace } from "./WorkspaceProvider";
 export default function KeepRun({
   run,
   profile,
@@ -11,6 +12,7 @@ export default function KeepRun({
   run: Run;
   profile: Profile;
 }) {
+  const { showcase } = useWorkspace();
   const [status, setStatus] = useState("");
   const [dismissed, setDismissed] = useState(true);
   useEffect(() => {
@@ -80,14 +82,14 @@ export default function KeepRun({
   return (
     <section className={styles.notice} aria-label="Keep this run">
       <h2>Keep this run.</h2>
-      <p>Create an account to sync, or export a backup now.</p>
+      <p>{showcase ? "Your decision is saved in this browser. Export a backup to carry it with you." : "Create an account to sync, or export a backup now."}</p>
       <div className={styles.row}>
-        <Link
+        {!showcase && <Link
           href={`/signup?next=${encodeURIComponent(`/app/run/${run.id}/debrief`)}`}
           className={styles.primary}
         >
           Keep this run · create account
-        </Link>
+        </Link>}
         <button className={styles.secondary} onClick={() => void backup()}>
           Export a backup
         </button>

@@ -13,6 +13,7 @@ import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import { LOADER_BOOT_SCRIPT } from "@/lib/loaderBoot";
 import { ErrorFeedback } from "@/components/providers/ErrorFeedback";
 import { EntryGate } from "@/components/product/EntryGate";
+import { showcaseMode } from "@/lib/product/showcase";
 
 // Set NEXT_PUBLIC_SITE_URL when deploying. The localhost fallback keeps
 // canonical and social URLs valid for a local preview on the documented port.
@@ -77,7 +78,7 @@ export default async function RootLayout({
         <SettingsProvider>
           <SmoothScroll />
           {children}
-          <EntryGate />
+          {!showcaseMode() && <EntryGate />}
           <ErrorFeedback />
         </SettingsProvider>
       </body>

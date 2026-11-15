@@ -1,5 +1,7 @@
 # Zero-budget release status
 
+The active release is the account-free portfolio showcase. Its acceptance is direct visitor entry, playable guided practice and simulations, durable browser saves, and a portable Career Studio export. The account-enabled release work orders below remain a separate future scope.
+
 Decisions on 15 November 2026
 
 1. Keep the live guest beta on the existing Vercel Hobby and Supabase Free projects. Release account features after verified Google and GitHub sign-in.
@@ -13,6 +15,7 @@ The Final Completion Runbook now governs the execution order. Start with [config
 | ID | Area | Requirement | Status | Named acceptance check | Evidence | Owner | Last checked |
 |---|---|---|---|---|---|---|---|
 | HOST-01 | Hosting | Public beta and Postgres health RPC | Verified | HOST-01 | [Live health endpoint](https://pmforge-tau.vercel.app/api/health) | Engineering / QA | 2026-11-15 |
+| SHOWCASE-01 | Portfolio showcase | Direct visitor entry, browser saves, guided Hot Seat and portfolio download | Implemented, awaiting verification | Showcase browser walkthrough | [Offline export regression](../tests/portfolio.test.ts) | Engineering / QA | 2026-11-15 |
 | CONF-01 | Readiness | Public configuration report and deployment baseline | Verified | WO-READINESS | [Production command log](evidence/WO-READINESS/production-check.txt) | Engineering | 2026-11-15 |
 | CONF-02 | Readiness | Verified CAPTCHA, identity-linking, AI probes and operations receipts | Not implemented | WO-READINESS, WO-A1, WO-B1 to B3, WO-C2 | [Configuration evidence](evidence/WO-READINESS/README.md) | Owner / engineering | 2026-11-15 |
 | LAND-01 | Landing | First decision through guest entry, skip onboarding and arrive at the selected scenario | Verified | LAND-01 | [Hosted browser evidence](cloud-verification/guest-scenario-entry.png) | Engineering / QA | 2026-11-15 |

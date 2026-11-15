@@ -60,7 +60,7 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
   const [collapsed, setCollapsed] = useState(false);
   const [backupStatus, setBackupStatus] = useState("");
   const [thought, setThought] = useState("Clarity is a practice.");
-  const { profile, loading, error, reload, sync } = useWorkspace();
+  const { profile, loading, error, reload, sync, showcase } = useWorkspace();
   useEffect(()=>{if(!loading && !profile)resetPageScroll();},[loading,profile?.id]);
   const { reducedMotion } = useSettings();
   useEffect(()=>{
@@ -396,13 +396,13 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
                 <details className={styles.storageMenu} data-popover-menu>
                   <summary className={styles.storage}>
                     <i />
-                    {profile.identity === "guest"
+                    {showcase || profile.identity === "guest"
                       ? "On this device"
                       : "Sync status"}
                   </summary>
                   <div className={styles.popover}>
                     <strong>
-                      {profile.identity === "guest"
+                      {showcase || profile.identity === "guest"
                         ? "Your device, your workspace"
                         : sync}
                     </strong>
@@ -414,7 +414,7 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
                       <Download size={16} />
                       Export backup
                     </button>
-                    {profile.identity === "guest" && (
+                    {!showcase && profile.identity === "guest" && (
                       <Link
                         className={styles.menuPrimary}
                         href={entryHref(pathname, "storage") + "&upgrade=1"}
@@ -446,9 +446,9 @@ export function ProductShell({ children }: { children: React.ReactNode }) {
                     )}
                   </summary>
                   <div className={styles.popover}>
-                    <strong>{profile.name||"Your workspace"}</strong><p>{profile.identity==="guest"?"Saved on this device":"Your account & preferences"}</p><Link href="/app/settings"><Settings size={16}/>Settings</Link>
+                    <strong>{profile.name||"Your workspace"}</strong><p>{showcase||profile.identity==="guest"?"Saved on this device":"Your account & preferences"}</p><Link href="/app/settings"><Settings size={16}/>Settings</Link>
                     <button className={styles.menuAccent} onClick={() => void backup()}><Download size={16}/>Export backup</button>
-                    {profile.identity === "guest" && (
+                    {!showcase && profile.identity === "guest" && (
                       <Link className={styles.menuPrimary} href={entryHref(pathname, "avatar") + "&upgrade=1"}>
                         Create account
                       </Link>

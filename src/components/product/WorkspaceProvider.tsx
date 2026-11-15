@@ -16,6 +16,7 @@ import {
   IDENTITY_KEY,
   importWorkspace,
   markDirty,
+  openDeviceWorkspace,
 } from "@/lib/product/db";
 import type { Profile } from "@/lib/product/types";
 
@@ -24,11 +25,12 @@ type Workspace = {
   loading: boolean;
   error: string;
   sync: string;
+  showcase: boolean;
   setProfile: (p: Profile) => Promise<void>;
   reload: () => void;
 };
 const Context = createContext<Workspace | null>(null);
-export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
+export function WorkspaceProvider({ children, showcase = false }: { children: React.ReactNode; showcase?: boolean }) {
   const [profile, setCurrent] = useState<Profile | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -45,6 +47,14 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
       setError("");
       setLoading(true);
       try {
+        if (showcase) {
+          const deviceProfile = await openDeviceWorkspace();
+          if (!cancelled) {
+            setCurrent(deviceProfile);
+            setSync("Saved on this device");
+          }
+          return;
+        }
         const local = await getLocalProfile();
         const response = await fetch("/api/me", { cache: "no-store" });
         const member = response.ok ? await response.json() : null;
@@ -104,7 +114,7 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
     return () => {
       cancelled = true;
     };
-  }, [revision]);
+  }, [revision, showcase]);
   useEffect(() => {
     const changed = (event: StorageEvent) => {
       if (
@@ -120,7 +130,7 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
     return () => window.removeEventListener("storage", changed);
   }, []);
   useEffect(() => {
-    if (!profile || profile.identity !== "member") return;
+    if (showcase || !profile || profile.identity !== "member") return;
     if (!dirty && initialSync.current === profile.id) return;
     let cancelled = false;
     let timer = 0;
@@ -180,7 +190,7 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
       clearTimeout(timer);
       window.removeEventListener("online", online);
     };
-  }, [profile, dirty?.value]);
+  }, [profile, dirty?.value, showcase]);
   useEffect(()=>{
     if(loading)return;
     const check=()=>{try{if(document.visibilityState==='visible' && profile && localStorage.getItem(IDENTITY_KEY)!==profile.id){setCurrent(null);initialSync.current="";setRevision(v=>v+1)}}catch{setError("Device storage is unavailable. Enable site storage and retry.")}};
@@ -201,6 +211,7 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
         loading,
         error,
         sync,
+        showcase,
         setProfile,
         reload: () => setRevision((v) => v + 1),
       }}

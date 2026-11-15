@@ -70,10 +70,10 @@ const labels = {
 };
 const stamp = () => new Date().toISOString();
 export default function HotSeat() {
-  const { profile } = useWorkspace();
-  return profile ? <Seat ownerId={profile.id} /> : null;
+  const { profile, showcase } = useWorkspace();
+  return profile ? <Seat ownerId={profile.id} showcase={showcase} /> : null;
 }
-function Seat({ ownerId }: { ownerId: string }) {
+function Seat({ ownerId, showcase }: { ownerId: string; showcase: boolean }) {
   const seat = useSeat(ownerId),
     run = seat.session,
     runRef = useRef(run);
@@ -459,7 +459,7 @@ function Seat({ ownerId }: { ownerId: string }) {
       <div className={s.lobby}>
         <div className={s.intro}>
           <span className={s.eyebrow}>
-            <Armchair size={17} /> {HOT_SEAT_NAME} · AI conversation
+            <Armchair size={17} /> {HOT_SEAT_NAME} · {showcase ? "Guided conversation" : "AI conversation"}
           </span>
           <h1>
             Pull up a chair.
@@ -675,6 +675,7 @@ function Seat({ ownerId }: { ownerId: string }) {
                 </dd>
               </div>
             </dl>
+            {showcase ? <p className={s.fine}>Guided conversation · scripted interviewer with optional natural speech.</p> : <>
             <RealtimeStart options={options} ownerId={ownerId} onStart={seat.persist}/>
             <label className={s.check}>
               <input
@@ -730,30 +731,30 @@ function Seat({ ownerId }: { ownerId: string }) {
                 </label>
               </>
             )}
+            </>}
             <button
               className={s.primary}
               disabled={
-                seat.busy || voiceState === "preparing" || !seat.cap ||
-                (ai &&
+                seat.busy || voiceState === "preparing" || (!showcase && !seat.cap) ||
+                (!showcase && ai &&
                   !!seat.cap?.available &&
                   (!adult || !fictional || !region))
               }
-              onClick={() => void begin()}
+              onClick={() => void begin(showcase)}
             >
               {voiceState === "preparing" ? "Preparing natural voices…" : seat.busy ? "Opening your room…" : "Take the seat"}
               <ArrowRight size={18} />
             </button>
-            <button
+            {!showcase && <button
               className={s.textButton}
               disabled={seat.busy || voiceState === "preparing"}
               onClick={() => void begin(true)}
             >
               Start a local guided conversation instead
-            </button>
+            </button>}
             <p className={s.fine}>
               Simulated company. Synthetic persona. Your transcript stays on
-              this device; committed AI answers also have an encrypted server
-              recovery copy for up to 24 hours.{" "}
+              this device. {!showcase && "Committed AI answers also have an encrypted server recovery copy for up to 24 hours. " }
               <Link href="/privacy">Privacy details</Link>.
             </p>
             {notice}
