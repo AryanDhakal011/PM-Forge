@@ -1,6 +1,6 @@
 # Zero-budget release status
 
-The active release is the account-free portfolio showcase. Its acceptance is direct visitor entry, playable guided practice and simulations, durable browser saves, and a portable Career Studio export. The account-enabled release work orders below remain a separate future scope.
+The active release is the account-free portfolio showcase. It offers direct visitor entry, guided practice and simulations, browser saves, and a portable Career Studio export. Hot Seat shows the recorded opening. The first follow-up and hosted publishing offer a walkthrough request. The account-enabled release work orders below remain a separate future scope.
 
 Decisions on 15 November 2026
 

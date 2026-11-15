@@ -626,6 +626,46 @@
 .composer > button:hover {
   background: #f6e7a8;
 }
+.previewActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.previewActions a {
+  text-decoration: none;
+}
+.previewHeading {
+  font: 400 32px/1.1 var(--font-display, Georgia, serif);
+  margin: 10px 0 0;
+}
+.previewComposer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+.previewComposer label,
+.previewComposer p {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+.previewComposer textarea {
+  width: 100%;
+  max-height: 96px;
+}
+.previewComposer > button {
+  grid-column: 2;
+  grid-row: 2;
+  max-width: none;
+}
+@media (max-width: 560px) {
+  .previewComposer {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 7px;
+  }
+  .previewComposer > button {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
 .micRow {
   display: flex;
   gap: 15px;

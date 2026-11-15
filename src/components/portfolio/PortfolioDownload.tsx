@@ -5,6 +5,7 @@ import { downloadFile } from "@/lib/product/db";
 import type { CaseStudy, MasterProfile } from "@/lib/portfolio/model";
 import { canExportCase, portablePortfolio } from "@/lib/portfolio/portable";
 import { CaseReader } from "./CaseReader";
+import { HostedAccessDialog } from "@/components/product/HostedAccessDialog";
 import s from "./Portfolio.module.css";
 
 export function PortfolioDownload({ master, cases, onSave, onEdit, notify }: {
@@ -16,6 +17,7 @@ export function PortfolioDownload({ master, cases, onSave, onEdit, notify }: {
 }) {
   const [reviewed, setReviewed] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [accessOpen, setAccessOpen] = useState(false);
   const eligible = cases.filter(canExportCase);
   const selected = eligible.filter((item) => master.selectedCases.includes(item.id));
   async function choose(id: string, checked: boolean) {
@@ -56,11 +58,13 @@ export function PortfolioDownload({ master, cases, onSave, onEdit, notify }: {
           notify("Could not download the portfolio. Review your selection and retry.");
         }
       }}>Download portfolio</button>
+      <p><button className={s.inlineButton} onClick={() => setAccessOpen(true)}>Ask about hosted publishing</button></p>
     </section>
     <aside className={s.panel}>
       <h2>Selected cases</h2>
       {selected.length ? selected.map((item) => <CaseReader key={item.id} item={item} compact />)
         : <p>Choose a reviewed case to preview it here.</p>}
     </aside>
+    <HostedAccessDialog open={accessOpen} onClose={() => setAccessOpen(false)} feature="Portfolio publishing" />
   </div>;
 }
