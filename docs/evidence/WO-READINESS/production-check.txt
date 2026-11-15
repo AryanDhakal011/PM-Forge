@@ -1,0 +1,62 @@
+Observed (UTC): 2026-11-15T05:05:03.7714010+00:00
+Deployment revision: b6002c07ccc5532a568b1ccd3cf1dd33fb884bb5
+Environment: production
+
+Baseline verifier (exit 0)
+PASS Production environment
+PASS Deployment revision
+PASS Database
+PASS Supabase Auth settings reachable
+PASS Publishing backend reachable
+PASS Isolated portfolio reader reachable
+PASS Email sign-in disabled in the app
+OPEN Email provider disabled in Supabase
+OPEN Google sign-in
+OPEN GitHub sign-in
+OPEN Anonymous cloud sign-in
+OPEN Manual identity linking
+OPEN CAPTCHA rejects bad tokens
+OPEN Pooled inference enabled
+OPEN BYOK enabled
+OPEN On-device lane enabled
+PASS AI kill switch inactive
+OPEN At least one pooled provider verified in the last 24 hours
+OPEN Provider groq verified
+OPEN Provider cerebras verified
+OPEN Provider openrouter verified
+OPEN Provider cloudflare verified
+OPEN Optional server transcription enabled
+OPEN Cron succeeded in the last 24 hours
+OPEN Encrypted backup verified in the last 24 hours
+OPEN Retention ran successfully in the last 24 hours
+Baseline only. OPEN items still need release evidence.
+
+Full verifier (exit 1)
+PASS Production environment
+PASS Deployment revision
+PASS Database
+PASS Supabase Auth settings reachable
+FAIL Publishing backend reachable
+PASS Isolated portfolio reader reachable
+PASS Email sign-in disabled in the app
+FAIL Email provider disabled in Supabase
+FAIL Google sign-in
+FAIL GitHub sign-in
+FAIL Anonymous cloud sign-in
+FAIL Manual identity linking
+FAIL CAPTCHA rejects bad tokens
+FAIL Pooled inference enabled
+FAIL BYOK enabled
+FAIL On-device lane enabled
+PASS AI kill switch inactive
+FAIL At least one pooled provider verified in the last 24 hours
+OPEN Provider groq verified
+OPEN Provider cerebras verified
+OPEN Provider openrouter verified
+OPEN Provider cloudflare verified
+OPEN Optional server transcription enabled
+FAIL Cron succeeded in the last 24 hours
+FAIL Encrypted backup verified in the last 24 hours
+FAIL Retention ran successfully in the last 24 hours
+
+Reader readiness route isolation: HTTP 404

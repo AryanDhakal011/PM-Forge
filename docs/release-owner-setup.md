@@ -17,3 +17,10 @@ Use the provider dashboards for secrets. Share completed item numbers, dated quo
 | O11 | Arrange qualified review of the privacy policy and terms. | Record review and publish approved text before general release. |
 
 Start with O1–O5 and O7. O8 unlocks support and consent-screen details. The [current checklist](release-status.md) carries the work-order evidence and remaining engineering.
+
+### OAuth callback addresses
+
+- In Google and GitHub use the OAuth redirect URI displayed on the relevant Supabase provider page. It ends in `/auth/v1/callback` on the Supabase project host.
+- In Supabase Auth URL Configuration use `https://pmforge-tau.vercel.app` as the Site URL. PMForge exchanges the code at `https://pmforge-tau.vercel.app/api/auth/callback/cloud` and then loads its `/auth/callback` page. WO-A1 will verify the exact production allowlist entry and return-to-page behavior before enabling sign-in.
+
+[Supabase redirect URLs](https://supabase.com/docs/guides/auth/redirect-urls)
