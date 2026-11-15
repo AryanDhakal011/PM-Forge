@@ -186,6 +186,10 @@ export default function InterviewRunner({ runId }: { runId: string }) {
   const [microphoneActive,setMicrophoneActive]=useState(false);
   const liveBusyRef=useRef(false);
   const advancing=useRef(false);
+  const onLiveBusy = useCallback((busy: boolean) => {
+    liveBusyRef.current = busy;
+    setLiveBusy(busy);
+  }, []);
   useEffect(() => {
     if (run?.stage !== "reflection") return;
     const update = () =>
@@ -401,6 +405,11 @@ export default function InterviewRunner({ runId }: { runId: string }) {
   ];
   const inDebrief = resultStages.includes(run.stage);
   const paused = run.status === "paused";
+  const stageBlock = stageIssue(run);
+  const workbenchLocked = Boolean(
+    (run.live?.pending && !run.live.pending.resolvedAt) ||
+    (run.live?.ai?.enabled && liveBusy),
+  );
   const budget = remainingEvidence(run, q);
   const category = categoryOf(q.category);
   const chosen = q.choices.find((c) => c.id === run.choiceId);
@@ -423,26 +432,24 @@ export default function InterviewRunner({ runId }: { runId: string }) {
     return await persist(current.current,true)?current.current:undefined;
   };
   const next = async () => {
-    const issue = stageIssue(current.current!);
-    if (liveBusyRef.current||advancing.current) return;
-    if (issue) {
-      setError(issue);
-      return;
-    }
+    const candidate = current.current;
+    if (!candidate || advancing.current || conflict || candidate.status === "paused") return;
+    if (stageIssue(candidate) || (candidate.live?.ai?.enabled && liveBusyRef.current)) return;
     advancing.current=true;
     try {
     clearTimeout(saveTimer.current);
     saveTimer.current = undefined;
-    if(current.current?.live?.ai?.enabled){setSaving(true);current.current=await mirrorAdvance(current.current)}
-    if(run.stage==='primer'){elapsedRef.current=0;setClock(0)}
-    const nextRun = advance(current.current!);
+    let latest = candidate;
+    if(latest.live?.ai?.enabled){setSaving(true);latest=await mirrorAdvance(latest)}
+    if(candidate.stage==='primer'){elapsedRef.current=0;setClock(0)}
+    const nextRun = advance(latest);
     current.current = nextRun;
     setRun(nextRun);
     setReview(null);
     if (!(await persist(nextRun, true))) return;
     if (nextRun.stage === "feedback")
       void trackActivation(nextRun, "debrief_reached");
-    if (run.stage === "reflection")
+    if (candidate.stage === "reflection")
       void trackActivation(
         nextRun,
         nextRun.reflectionCompletedAt
@@ -587,13 +594,13 @@ export default function InterviewRunner({ runId }: { runId: string }) {
         </p>
         <span>{q.status} content · local-first</span>
       </div>}
-      {run.stage==='primer'?<section className={liveStyles.prepare} data-testid="interview-prepare"><div className={liveStyles.prepareBrief}><span className={styles.eyebrow}>{category.label} · {q.level} · {run.live?.ai?.enabled?Math.round(run.live.ai.timeboxSeconds/60):q.minutes} min {run.live?.ai?.enabled?'soft timebox':'estimated practice'}</span><h1 data-stage-heading tabIndex={-1}>{q.title}</h1><p className={liveStyles.prepareLead}>{q.primer[0]}</p><p><strong>Your decision:</strong> {q.goal}</p><details><summary>Keep these in mind</summary>{q.primer.slice(1).map((text,i)=><p key={i}>{text}</p>)}</details></div><LiveInterviewDesk preparing saveForAI={saveForAI} run={run} question={q} change={change} onBusy={busy=>{liveBusyRef.current=busy;setLiveBusy(busy)}} onAudioState={setMicrophoneActive}/><div className={liveStyles.prepareActions}><div><strong>Your next move</strong><p>{paused?'Resume preparation before beginning.':stageIssue(run)||nextMove.primer.cue}</p><small>{saving?'Saving…':savedAt?'Saved on device · '+savedAt:'Saved on this device'} · The interview clock has not started.</small>{error&&<p role="alert">{error}</p>}</div>{paused?<button className={styles.primary} onClick={pause}>Resume preparation</button>:<button className={styles.primary} disabled={saving||conflict||!!stageIssue(run)} onClick={()=>void next()}>Begin interview <ArrowRight size={17}/></button>}</div></section>:<>
+      {run.stage==='primer'?<section className={liveStyles.prepare} data-testid="interview-prepare"><div className={liveStyles.prepareBrief}><span className={styles.eyebrow}>{category.label} · {q.level} · {run.live?.ai?.enabled?Math.round(run.live.ai.timeboxSeconds/60):q.minutes} min {run.live?.ai?.enabled?'soft timebox':'estimated practice'}</span><h1 data-stage-heading tabIndex={-1}>{q.title}</h1><p className={liveStyles.prepareLead}>{q.primer[0]}</p><p><strong>Your decision:</strong> {q.goal}</p><details><summary>Keep these in mind</summary>{q.primer.slice(1).map((text,i)=><p key={i}>{text}</p>)}</details></div><LiveInterviewDesk preparing saveForAI={saveForAI} run={run} question={q} change={change} onBusy={onLiveBusy} onAudioState={setMicrophoneActive}/><div className={liveStyles.prepareActions}><div><strong>Your next move</strong><p>{paused?'Resume preparation before beginning.':stageIssue(run)||nextMove.primer.cue}</p><small>{saving?'Saving…':savedAt?'Saved on device · '+savedAt:'Saved on this device'} · The interview clock has not started.</small>{error&&<p role="alert">{error}</p>}</div>{paused?<button className={styles.primary} onClick={pause}>Resume preparation</button>:<button className={styles.primary} disabled={saving||conflict||!!stageIssue(run)} onClick={()=>void next()}>Begin interview <ArrowRight size={17}/></button>}</div></section>:<>
       <div className={run.live?liveStyles.sessionGrid:styles.runGrid}>
         <div className={styles.runMain} ref={stageRef}>
           <div className={run.live?liveStyles.sessionStage:styles.runStage}>
             <div className={liveStyles.nextMove}><span>Your next move · {['Prepare','Frame','Investigate','Decide','Reflect'][interviewStageOf(run.stage)]}</span><p>{run.live?.pending?'Address the interviewer’s current challenge before returning to your work.':run.stage==='workbench'?(workbenchCue[q.category]||nextMove.workbench.cue):nextMove[run.stage].cue}</p></div>
             <div className={run.live?liveStyles.roomGrid:undefined}>
-            {run.live&&<div className={liveStyles.conversation}><LiveInterviewDesk saveForAI={saveForAI} run={run} question={q} change={change} onBusy={busy=>{liveBusyRef.current=busy;setLiveBusy(busy)}} onAudioState={setMicrophoneActive}/></div>}
+            {run.live&&<div className={liveStyles.conversation}><LiveInterviewDesk saveForAI={saveForAI} run={run} question={q} change={change} onBusy={onLiveBusy} onAudioState={setMicrophoneActive}/></div>}
             <div className={liveStyles.work}>
             {run.guided && run.stage==='fundamentals' && (
               <p className={styles.finePrint}>
@@ -680,7 +687,7 @@ export default function InterviewRunner({ runId }: { runId: string }) {
                 </button>
               </section>
             ) : (
-              <div id="native-interview-workbench" tabIndex={-1} data-stage-content inert={liveBusy}>
+              <div id="native-interview-workbench" tabIndex={-1} data-stage-content inert={workbenchLocked}>
                 {run.live&&<RealityChecks run={run} question={q} change={change}/>}
                 {run.stage === "fundamentals" && (
                   <>
@@ -1913,7 +1920,7 @@ export default function InterviewRunner({ runId }: { runId: string }) {
             {!paused && !review && run.stage !== "complete" && (
               <footer className={styles.runFooter}>
                 <div>
-                  {stageIssue(run)&&<p className={liveStyles.actionIssue}>{stageIssue(run)}</p>}<p aria-live="polite">
+                  {stageBlock && <p className={liveStyles.actionIssue} id="interview-stage-block" role="status">{stageBlock}</p>}<p aria-live="polite">
                     {saving
                       ? "Saving…"
                       : savedAt
@@ -1935,7 +1942,8 @@ export default function InterviewRunner({ runId }: { runId: string }) {
                 </div>
                 <button
                   className={styles.primary}
-                  disabled={saving || conflict || liveBusy}
+                  disabled={saving || conflict || workbenchLocked || !!stageBlock}
+                  aria-describedby={stageBlock ? "interview-stage-block" : undefined}
                   onClick={() => void next()}
                 >
                   {nextMove[run.stage].action}

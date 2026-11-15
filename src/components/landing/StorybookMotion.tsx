@@ -58,7 +58,7 @@ export function StorybookMotion(){
             const paper=section.querySelector('[data-story-portfolio]');
             const scene=gsap.timeline({defaults:{ease:'power2.out',duration:.65},scrollTrigger:{trigger:paper,start:'top 90%',end:'top 38%',scrub:.25,invalidateOnRefresh:true}});
             scene.fromTo(paper,{y:28,rotation:2,scale:.97,transformOrigin:'15% 25%'},{y:0,rotation:0,scale:1},.1)
-              .fromTo(section.querySelectorAll('[data-story-portfolio] dl>div'),{x:16,opacity:.65},{x:0,opacity:1,stagger:.09},.25);
+              .fromTo(section.querySelectorAll('[data-story-portfolio] dl>div'),{x:16},{x:0,stagger:.09},.25);
             tl.fromTo(section.querySelectorAll('[data-story-stamps]>span'),{scale:1.12,rotation:-5},{scale:1,rotation:0,stagger:.12},.45);
           }else if(kind==='practice'){
             section.querySelectorAll('[data-story-scenarios]>a').forEach((card,i)=>gsap.fromTo(card,{y:24,rotation:(i-1)*2,x:(i-1)*12},{y:0,rotation:0,x:0,ease:'power2.out',force3D:false,scrollTrigger:{trigger:card,start:'top 92%',end:'top 62%',scrub:.25}}));

@@ -46,11 +46,12 @@ jobs:
       - run: npm run build
       - run: npm run security:scan
       - run: npm run hot-seat:audio:check
-      - run: npm sbom --sbom-format cyclonedx > docs/production-verification/sbom.json
+      - run: npm sbom --sbom-format cyclonedx --legacy-peer-deps > docs/production-verification/sbom.json
       - run: node scripts/deadlock-budgets.mjs
       - name: Check shared project browser flows
         env:
           PMFORGE_PROJECT_PREVIEW: 'true'
+          PMFORGE_SHOWCASE: 'false'
           PRODUCT_URL: http://localhost:3002
         run: |
           npm start -- -p 3002 > /tmp/pmforge-preview.log 2>&1 &

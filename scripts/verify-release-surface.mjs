@@ -3,10 +3,8 @@ import {mkdtempSync,mkdirSync,writeFileSync,readFileSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {projects} from '../src/lib/projects/content.ts';
-import {createRun} from '../src/lib/product/engine.ts';
-import {questions} from '../src/lib/product/content.ts';
-import {createLive} from '../src/lib/product/interview-live.ts';
 const base=process.env.PRODUCT_URL||'http://localhost:3012',out=process.env.VERIFY_OUTPUT||'docs/release-surface-verification',port=10000+Math.floor(Math.random()*40000);mkdirSync(out,{recursive:true});
+const showcase=process.env.PMFORGE_SHOWCASE_QA==='true';
 const report={base,checks:[],errors:[],console:[],accessibility:[],screenshots:[]},wait=ms=>new Promise(r=>setTimeout(r,ms));
 const chrome=process.env.CHROME_PATH||(process.platform==='win32'?'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe':'/usr/bin/google-chrome');
 const browser=spawn(chrome,['--headless=new',`--remote-debugging-port=${port}`,`--user-data-dir=${mkdtempSync(join(tmpdir(),'pmf-interview-'))}`,'--no-first-run','--autoplay-policy=no-user-gesture-required',...(process.env.CI?['--no-sandbox','--disable-dev-shm-usage']:[]),'about:blank'],{stdio:'ignore',windowsHide:true});let ws;
@@ -23,10 +21,25 @@ try{
  await send('Page.enable');await send('Runtime.enable');await send('Emulation.setDeviceMetricsOverride',{width:1600,height:1050,deviceScaleFactor:1,mobile:false});
 
 
- await navigate('/app');await click('Try without an account');await click('Skip setup');await until('!!localStorage.getItem("pmforge.product.identity")','guest');
- for(const path of ['/app','/app/practice','/app/projects','/app/progress','/app/portfolio','/app/settings','/app/help']){await navigate(path);await until('!!document.querySelector("main h1")','heading '+path);await wait(700);check(!await ev('(document.body?.innerText||"").includes("Application error:")'),'route loads '+path);for(const width of [320,375,768,1024,1440]){await send('Emulation.setDeviceMetricsOverride',{width,height:1000,deviceScaleFactor:1,mobile:width<768});await wait(100);check(await ev('document.documentElement.scrollWidth<=innerWidth+1'),'surface fits '+path+' '+width)}await snap(path.split('/').at(-1)||'today');await axe(path)}
+ await navigate('/app');
+ if(!showcase){await click('Try without an account');await click('Skip setup')}
+ await until('!!localStorage.getItem("pmforge.product.identity")','guest');
+ const surfaces=['/app','/app/practice','/app/projects','/app/progress','/app/portfolio','/app/settings','/app/help'];
+ if(showcase)surfaces.unshift('/','/app/hot-seat');
+ for(const path of surfaces){await navigate(path);await until('!!document.querySelector("main h1")','heading '+path);await wait(700);check(!await ev('(document.body?.innerText||"").includes("Application error:")'),'route loads '+path);for(const width of [320,375,768,1024,1440]){await send('Emulation.setDeviceMetricsOverride',{width,height:1000,deviceScaleFactor:1,mobile:width<768});await wait(100);check(await ev('document.documentElement.scrollWidth<=innerWidth+1'),'surface fits '+path+' '+width)}await snap(path.split('/').at(-1)||'today');await axe(path)}
  for(const project of projects){await navigate('/app/projects/'+project.id);await until('!!document.querySelector("main h1")||!!document.querySelector("h1")','project '+project.id);await wait(500);check(!await ev('(document.body?.innerText||"").includes("404")'),'project entry '+project.id);check(await ev('document.documentElement.scrollWidth<=innerWidth+1'),'project entry fits '+project.id)}
  await navigate('/app');await until('!!document.querySelector("main h1")','today');await ev('localStorage.setItem("pmforge.theme","dark");window.dispatchEvent(new Event("pmforge:theme"))');await wait(200);await axe('today dark');await snap('today-dark');await navigate('/app/practice');await until('!!document.querySelector("main h1")','practice dark');await axe('practice dark');
+ if(showcase){
+   await navigate('/app/hot-seat');
+   await click('Open the room');
+   await send('Emulation.setDeviceMetricsOverride',{width:375,height:760,deviceScaleFactor:1,mobile:true});
+   check(await ev('document.documentElement.scrollWidth<=innerWidth+1'),'Hot Seat room fits 375');
+   await click('Continue conversation');
+   await until("document.activeElement?.hasAttribute('data-access-contact')",'walkthrough contact focused');
+   check(await ev("getComputedStyle(document.activeElement).backgroundColor==='rgb(25, 75, 55)'"),'Walkthrough has a forest-green primary action');
+   await axe('Hot Seat walkthrough dialog 375');
+   await snap('hot-seat-dialog-375');
+ }
  console.log('RELEASE SURFACE CHECKS',report.checks.length);
 }catch(e){report.errors.push(e.stack)}finally{writeFileSync(join(out,'browser.json'),JSON.stringify(report,null,2));if(ws?.readyState===WebSocket.OPEN)ws.send(JSON.stringify({id:999999,method:"Browser.close"}));ws?.close();browser.kill()}
 console.log(JSON.stringify({checks:report.checks.length,failed:report.checks.filter(x=>!x.pass),errors:report.errors,console:report.console},null,2));if(report.errors.length||report.console.length||report.checks.some(x=>!x.pass))process.exitCode=1;

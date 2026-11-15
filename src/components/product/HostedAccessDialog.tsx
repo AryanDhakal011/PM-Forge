@@ -2,7 +2,7 @@
 
 import { ArrowUpRight } from "lucide-react";
 import { Dialog } from "@/components/ui/Dialog";
-import styles from "./Product.module.css";
+import styles from "./HostedAccessDialog.module.css";
 
 export function HostedAccessDialog({ open, onClose, feature }: {
   open: boolean;
@@ -22,12 +22,12 @@ export function HostedAccessDialog({ open, onClose, feature }: {
     size="sm"
     initialFocus="[data-access-contact]"
   >
-    <div className={styles.row}>
-      <a data-access-contact className={styles.primary} href={request.href} target="_blank" rel="noopener noreferrer">
+    <div className={styles.actions}>
+      <a data-access-contact className={styles.contact} href={request.href} target="_blank" rel="noopener noreferrer">
         Ask about a walkthrough <ArrowUpRight size={16} aria-hidden="true" />
       </a>
-      <button type="button" className={styles.secondary} onClick={onClose}>Back to preview</button>
+      <button type="button" className={styles.back} onClick={onClose}>Back to preview</button>
     </div>
-    <p className={styles.finePrint}>GitHub opens a public thread. Leave out private details.</p>
+    <p className={styles.note}>GitHub opens a public thread. Leave out private details.</p>
   </Dialog>;
 }

@@ -1,0 +1,56 @@
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.actions a,
+.actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 9px 16px;
+  border: 1px solid #194b37;
+  border-radius: 6px;
+  font: 600 14px/1.4 var(--font-body, Inter, sans-serif);
+}
+
+.contact {
+  color: #fffdf6;
+  background: #194b37;
+  text-decoration: none;
+}
+
+.contact:hover {
+  color: #fffdf6;
+  background: #123c2b;
+}
+
+.back {
+  color: #194b37;
+  background: transparent;
+}
+
+.back:hover {
+  background: #194b3710;
+}
+
+.actions :focus-visible {
+  outline: 2px solid #a9552a;
+  outline-offset: 3px;
+}
+
+.note {
+  margin: 12px 0 0;
+  color: #4e6257;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@media (max-width: 380px) {
+  .actions > * {
+    width: 100%;
+  }
+}
