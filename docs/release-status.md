@@ -8,9 +8,13 @@ Decisions on 15 November 2026
 
 In scope are guest practice, social sign-in, guest migration, account sync, Career Studio and publication, the three generative Hot Seat lanes, turn-based voice, hosted QA and basic operations. The four statuses below distinguish deployed evidence from implementation and planned work. The IDs spell out the handoff’s grouped ranges as individual checks.
 
+The Final Completion Runbook now governs the execution order. Start with [configuration readiness](evidence/WO-READINESS/README.md) and the [batched owner setup](release-owner-setup.md).
+
 | ID | Area | Requirement | Status | Named acceptance check | Evidence | Owner | Last checked |
 |---|---|---|---|---|---|---|---|
 | HOST-01 | Hosting | Public beta and Postgres health RPC | Verified | HOST-01 | [Live health endpoint](https://pmforge-tau.vercel.app/api/health) | Engineering / QA | 2026-11-15 |
+| CONF-01 | Readiness | Public configuration report and deployment baseline | Implemented, awaiting verification | WO-READINESS | [Configuration evidence](evidence/WO-READINESS/README.md) | Engineering | 2026-11-15 |
+| CONF-02 | Readiness | Verified CAPTCHA, identity-linking, AI probes and operations receipts | Not implemented | WO-READINESS, WO-A1, WO-B1 to B3, WO-C2 | [Configuration evidence](evidence/WO-READINESS/README.md) | Owner / engineering | 2026-11-15 |
 | LAND-01 | Landing | First decision through guest entry, skip onboarding and arrive at the selected scenario | Verified | LAND-01 | [Hosted browser evidence](cloud-verification/guest-scenario-entry.png) | Engineering / QA | 2026-11-15 |
 | PRACTICE-01 | Practice | All 63 valid guided journeys | Implemented, awaiting verification | PRACTICE-01 | [Hosting handover](LIVE-HOSTING.md) | Engineering / QA | 2026-11-15 |
 | SIM-01 | Simulations | All 12 start, resume, branch and debrief journeys | Implemented, awaiting verification | SIM-01 | [Hosting handover](LIVE-HOSTING.md) | Engineering / QA | 2026-11-15 |
@@ -111,4 +115,4 @@ In scope are guest practice, social sign-in, guest migration, account sync, Care
 | DEF-04 | Deferred | Monetization and paid inference. Trigger: Commercial hosting and an approved budget. | Deferred | DEF-04 scope review | Zero-budget handoff | Owner | 2026-11-15 |
 | DEF-05 | Deferred | SOC-style compliance and native apps. Trigger: Separate requirements and resourcing. | Deferred | DEF-05 scope review | Zero-budget handoff | Owner | 2026-11-15 |
 
-Pilot completion requires the applicable checks above, an independent restore, a rollback rehearsal, a received test alert, and five consecutive green hosted journey runs. Record the sample size, crash-free session rate (target at least 98%), data-loss and account-isolation incidents (target zero), AI latency and voice recovery evidence before declaring v1 complete.
+Pilot completion requires the applicable checks above, an independent restore, a rollback rehearsal, a received test alert, five consecutive green hosted core nights, and at least one full-suite pass in that window. Run the pilot for 5–7 days with 8–20 participants. Record crash-free session rate (target at least 98%), data-loss and account-isolation incidents (target zero), AI latency and voice recovery evidence before declaring v1 complete.

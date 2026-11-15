@@ -4,6 +4,7 @@
   "private": true,
   "description": "PMForge â€” a practice platform for product decisions.",
   "scripts": {
+    "verify:prod": "node scripts/verify-production.mjs",
     "dev": "node scripts/dev-preview.mjs",
     "build": "next build",
     "start": "node scripts/start-preview.mjs",
@@ -26,7 +27,7 @@
     "platform:fuzz": "node --import tsx scripts/fuzz-shared-platform.ts",
     "test:interview-live": "node --import tsx --test tests/interview-live.test.ts && node --conditions=react-server --import tsx --test tests/interview-voice-route.test.ts",
     "test:portfolio": "node --import tsx --test tests/portfolio.test.ts tests/career-studio.test.ts && node --conditions=react-server --import tsx --test tests/portfolio-server.test.ts",
-    "test:cloud": "node --import tsx --test tests/cloud-backend.test.ts",
+    "test:cloud": "node --import tsx --test tests/cloud-backend.test.ts && node --conditions=react-server --import tsx --test tests/config-readiness.test.ts",
     "test:auth": "node --conditions=react-server --import tsx --test tests/auth-flow.test.ts tests/auth-email-template.test.ts",
     "start:server": "node .next/standalone/server.js",
     "backup:data": "node scripts/backup-data.mjs",
