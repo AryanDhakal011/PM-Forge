@@ -184,7 +184,7 @@ export function useSeat(ownerId: string) {
       }
     }
   }
-  function draft(text: string) {
+  function draft(text: string, saveImmediately = false) {
     const s = current.current;
     if (!s) return;
     const next = {
@@ -195,6 +195,13 @@ export function useSeat(ownerId: string) {
     current.current = next;
     setSession(next);
     clearTimeout(draftTimer.current);
+    if (saveImmediately) {
+      void persist(next).catch((error: Error) => {
+        setNotice(error.message);
+        showError(error.message);
+      });
+      return;
+    }
     draftTimer.current = setTimeout(
       () => void persist(next).catch((e) => {setNotice(e.message);showError(e.message)}),
       300,

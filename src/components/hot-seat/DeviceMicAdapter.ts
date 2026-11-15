@@ -1,6 +1,12 @@
 import type {MicAdapter} from '@/lib/hot-seat/microphone-controller';
+import {DictationSegments} from '@/lib/hot-seat/dictation-segments';
 let owner:DeviceMicAdapter|undefined;
 export class DeviceMicAdapter implements MicAdapter {
+  private segments?: DictationSegments;
+  constructor(
+    private readonly onSegment?: (samples: Float32Array, rate: number) => void,
+    private readonly useSegments = () => true,
+  ) {}
   private stream?:MediaStream;private context?:AudioContext;private node?:AudioWorkletNode;
   private chunks:Float32Array[]=[];private samples=0;private closing?:()=>void;
   private epoch=0;
@@ -20,7 +26,15 @@ export class DeviceMicAdapter implements MicAdapter {
       const silent=context.createGain();silent.gain.value=0;
       context.createMediaStreamSource(stream).connect(node).connect(silent).connect(context.destination);
       node.port.onmessage=({data})=>{
-        if(data.samples&&this.samples<context.sampleRate*61){this.chunks.push(data.samples);this.samples+=data.samples.length;}
+        if (data.samples) {
+          if (this.segments) {
+            const segment = this.segments.push(data.samples);
+            if (segment) this.onSegment?.(segment, context.sampleRate);
+          } else if (this.samples < context.sampleRate * 61) {
+            this.chunks.push(data.samples);
+            this.samples += data.samples.length;
+          }
+        }
         if(data.level!==undefined)level(data.level);
         if(data.finished){this.closing?.();this.closing=undefined;}
       };
@@ -34,9 +48,14 @@ export class DeviceMicAdapter implements MicAdapter {
       void navigator.permissions?.query({name:'microphone' as PermissionName}).then(p=>{if(epoch!==this.epoch)return;permission=p;p.addEventListener('change',revoked);}).catch(()=>{});
     }catch(error){await this.close();throw error;}
   }
-  open(){this.chunks=[];this.samples=0;this.node?.port.postMessage({open:true});}
+  open(){this.chunks=[];this.samples=0;this.segments=this.onSegment&&this.context&&this.useSegments()?new DictationSegments(this.context.sampleRate):undefined;this.node?.port.postMessage({open:true});}
   async finish(){
     if(this.node)await new Promise<void>(resolve=>{const timeout=setTimeout(resolve,150);this.closing=()=>{clearTimeout(timeout);resolve();};this.node!.port.postMessage({open:false});});
+    if (this.segments) {
+      const samples = this.segments.finish() ?? new Float32Array();
+      this.segments = undefined;
+      return {samples, rate: this.context?.sampleRate || 48000};
+    }
     const samples=new Float32Array(this.samples);let index=0;for(const chunk of this.chunks){samples.set(chunk,index);index+=chunk.length;}
     this.chunks=[];this.samples=0;return {samples,rate:this.context?.sampleRate||48000};
   }

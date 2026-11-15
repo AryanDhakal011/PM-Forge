@@ -182,13 +182,25 @@ function Seat({ ownerId }: { ownerId: string }) {
       })
       .catch((e) => {seat.setNotice(e.message);showError(e.message)});
   }
-  const mic = useMicrophone((text, seconds, capturedFor) => {
+  const mic = useMicrophone(async (text, seconds, capturedFor) => {
     const r = runRef.current;
-    if(capturedFor!=='lobby'&&r?.id!==capturedFor){void db.hotSeats.get(capturedFor).then(saved=>{if(saved?.ownerId===ownerId)return db.hotSeats.put({...saved,draft:[saved.draft,text].filter(Boolean).join(' ').slice(0,4000)});}).catch(()=>showError('Dictation could not be saved. Keep this tab open.'));return;}
+    if (capturedFor !== "lobby" && r?.id !== capturedFor) {
+      try {
+        await db.transaction("rw", db.hotSeats, async () => {
+          const saved = await db.hotSeats.get(capturedFor);
+          if (saved?.ownerId !== ownerId) return;
+          const draft = [saved.draft, text].filter(Boolean).join(" ").slice(0, 4000);
+          await db.hotSeats.update(capturedFor, { draft });
+        });
+      } catch {
+        showError("Dictation could not be saved. Keep this tab open.");
+      }
+      return;
+    }
     if (r) {
       const draft = [r.draft, text].filter(Boolean).join(" ").slice(0, 4000);
       runRef.current = {...r, draft};
-      seat.draft(draft);
+      seat.draft(draft, true);
       setDeliverySeconds((n) => n + seconds);
       setSource("voice");
     }

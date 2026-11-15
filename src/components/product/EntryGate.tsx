@@ -11,6 +11,13 @@ import { safeNext } from "@/lib/product/routes";
 import { InstrumentDrawing } from "./InstrumentDrawing";
 import styles from "./Product.module.css";
 
+type EntryProviders = {
+  google: boolean;
+  github: boolean;
+  email: boolean;
+  emailPreview: boolean;
+};
+
 export function GatePanel({
   next = "/app",
   mode = "signup",
@@ -19,10 +26,12 @@ export function GatePanel({
   mode?: string;
 }) {
   const router = useRouter();
-  const [providers, setProviders] = useState({ google: false, github: false,email:false,emailPreview:false });
+  const [providers, setProviders] = useState<EntryProviders | null>(null);
   const [busy, setBusy] = useState("");
   const [error, setError] = useState("");
   const target = safeNext(next);
+  const hasSocial = providers?.google || providers?.github;
+  const hasAccountOption = providers?.email || hasSocial;
   useEffect(() => {
     let active = true;
     void fetch("/api/auth-config")
@@ -86,9 +95,17 @@ export function GatePanel({
         Real scenarios. Decisions you can defend. A practice space that
         remembers where you left off.
       </p>
-      <AccountForm key={mode} mode={mode} next={target} enabled={providers.email} preview={providers.emailPreview}/>
-      {(providers.google||providers.github)&&<div className={styles.socialAccounts}><span className={styles.divider}>or use a connected account</span>{providers.google&&<button className={styles.secondary} disabled={!!busy} onClick={()=>void signIn('google')}>Continue with Google</button>}{providers.github&&<button className={styles.secondary} disabled={!!busy} onClick={()=>void signIn('github')}><GitBranch size={18}/>Continue with GitHub</button>}</div>}
-      <span className={styles.divider}>or explore first</span>
+      {providers?.email && (
+        <AccountForm key={mode} mode={mode} next={target} enabled preview={providers.emailPreview} />
+      )}
+      {hasSocial && (
+        <div className={styles.socialAccounts}>
+          {providers?.email && <span className={styles.divider}>or use a connected account</span>}
+          {providers?.google && <button className={styles.secondary} disabled={!!busy} onClick={() => void signIn("google")}>Continue with Google</button>}
+          {providers?.github && <button className={styles.secondary} disabled={!!busy} onClick={() => void signIn("github")}><GitBranch size={18} />Continue with GitHub</button>}
+        </div>
+      )}
+      {hasAccountOption && <span className={styles.divider}>or explore first</span>}
       <button
         className={styles.secondary}
         onClick={() => void guest()}

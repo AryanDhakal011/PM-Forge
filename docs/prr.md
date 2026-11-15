@@ -1,3 +1,5 @@
+> ARCHIVED. The zero-budget release uses [Release status](release-status.md).
+
 # Production Readiness Report — 9 November 2026
 
 **Launch verdict: BLOCKED.** Each enumerated item and production table row in the supplied [handoff](production-requirements.md) is registered below. Missing means the entire compound requirement lacks evidence; it does not mean no part exists. No hosted tests, legal review or provisioning are inferred from source code. The launch checkboxes remain Missing. Paragraph-level scope and reference architecture remain in the source.

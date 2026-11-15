@@ -1,3 +1,5 @@
+> ARCHIVED. The zero-budget release uses [Release status](release-status.md).
+
 # Production audit — 9 November 2026
 
 ## Implemented and independently checkable in the repository

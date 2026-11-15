@@ -1,0 +1,58 @@
+name: Encrypted cloud backup
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 19 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pmforge-cloud-backup
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    if: github.ref_name == 'main' && (github.event_name == 'workflow_dispatch' || vars.PMFORGE_BACKUPS_ENABLED == 'true')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SUPABASE_POOLER_URL: ${{ secrets.SUPABASE_POOLER_URL }}
+      PMFORGE_AGE_RECIPIENT: ${{ vars.PMFORGE_AGE_RECIPIENT }}
+      PMFORGE_BACKUP_BUCKET: ${{ vars.PMFORGE_BACKUP_BUCKET }}
+      RCLONE_CONFIG_PMFORGE_TYPE: b2
+      RCLONE_CONFIG_PMFORGE_ACCOUNT: ${{ secrets.PMFORGE_B2_KEY_ID }}
+      RCLONE_CONFIG_PMFORGE_KEY: ${{ secrets.PMFORGE_B2_APPLICATION_KEY }}
+      RCLONE_CONFIG_PMFORGE_HARD_DELETE: 'false'
+    steps:
+      - name: Validate backup configuration
+        shell: bash
+        run: |
+          set +x
+          : "${SUPABASE_POOLER_URL:?Set SUPABASE_POOLER_URL}"
+          : "${PMFORGE_AGE_RECIPIENT:?Set PMFORGE_AGE_RECIPIENT}"
+          : "${PMFORGE_BACKUP_BUCKET:?Set PMFORGE_BACKUP_BUCKET}"
+          : "${RCLONE_CONFIG_PMFORGE_ACCOUNT:?Set PMFORGE_B2_KEY_ID}"
+          : "${RCLONE_CONFIG_PMFORGE_KEY:?Set PMFORGE_B2_APPLICATION_KEY}"
+          [[ "$PMFORGE_BACKUP_BUCKET" =~ ^[A-Za-z0-9-]+$ ]]
+          [[ "$PMFORGE_AGE_RECIPIENT" == age1* ]]
+      - name: Install encryption and upload tools
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq age rclone
+      - name: Encrypt and upload logical backup
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          backup_dir="$(mktemp -d)"
+          trap 'rm -f -- "$backup_dir/pmforge.dump.age"; rmdir -- "$backup_dir"' EXIT
+          # Use the session pooler with TLS verification settings from the supplied URL.
+          # Keep the raw archive out of the runner filesystem and all Actions artifacts.
+          docker run --rm --env SUPABASE_POOLER_URL postgres:18 sh -ec 'exec pg_dump --dbname="$SUPABASE_POOLER_URL" --no-owner --format=custom --schema=auth --schema=public --schema=pmforge_private' |
+            age -r "$PMFORGE_AGE_RECIPIENT" -o "$backup_dir/pmforge.dump.age"
+          object="database/$(date -u +%F)-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}.dump.age"
+          rclone copyto --immutable "$backup_dir/pmforge.dump.age" "pmforge:$PMFORGE_BACKUP_BUCKET/$object"
+          downloaded="$(rclone cat "pmforge:$PMFORGE_BACKUP_BUCKET/$object" | sha256sum)"
+          local_hash="$(sha256sum "$backup_dir/pmforge.dump.age")"
+          [[ "${downloaded%% *}" == "${local_hash%% *}" ]]
+          printf 'Encrypted upload verified for Actions run %s.\n' "$GITHUB_RUN_ID"

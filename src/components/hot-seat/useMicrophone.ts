@@ -4,7 +4,10 @@ import {MicController,resample16k,type MicSnapshot} from '@/lib/hot-seat/microph
 import {DeviceMicAdapter} from './DeviceMicAdapter';
 import {showError} from '@/lib/ui-feedback';
 import {usableDictation} from '@/lib/hot-seat/dictation-quality';
-export function useMicrophone(onText:(text:string,seconds:number,context:string)=>void,onInterrupt:()=>void,context='lobby') {
+
+const segmentedDictation = process.env.NEXT_PUBLIC_PMFORGE_SEGMENTED_DICTATION === 'true';
+
+export function useMicrophone(onText:(text:string,seconds:number,context:string)=>Promise<void>,onInterrupt:()=>void,context='lobby') {
   const [state,setState]=useState<MicSnapshot>({phase:'off',live:false,level:0,message:''}),[notice,setNotice]=useState(''),[preparing,setPreparing]=useState(false),[processing,setProcessing]=useState(false),[supported,setSupported]=useState(false);
   const current=useRef({onText,onInterrupt,context});current.current={onText,onInterrupt,context};
   const controller=useRef<MicController|null>(null),worker=useRef<Worker|null>(null),ready=useRef(false),request=useRef(0),origin=useRef(context),checking=useRef(false);
@@ -23,13 +26,54 @@ export function useMicrophone(onText:(text:string,seconds:number,context:string)
   }),[]);
   useEffect(()=>{
     setSupported(!!navigator.mediaDevices?.getUserMedia&&typeof AudioWorkletNode!=='undefined');
-    const mic=new MicController(new DeviceMicAdapter(),async(samples,rate)=>{
-      const seconds=samples.length/rate,energy=samples.reduce((sum,n)=>sum+n*n,0)/Math.max(1,samples.length);
-      if(checking.current){setNotice(energy>.000001?'Microphone input detected. No recording was retained.':'No clear input detected. Check the input device and retry.');return;}
-      if(seconds<.25||energy<.000001){setNotice('No clear speech captured. Try again or keep typing.');return;}
-      const capturedFor=origin.current;processingRef.current=true;setProcessing(true);
-      try{const data=await ask('transcribe',resample16k(samples,rate));if(data.text?.trim()){if(!usableDictation(data.text,seconds))throw Error('The recognition repeated or lost track of the audio. No words were added. Try a shorter answer in a quiet room, or type.');current.current.onText(data.text.trim(),seconds,capturedFor);setNotice(`Words added to your draft. On-device recognition took ${(data.latencyMs/1000).toFixed(1)} seconds; review before sending.`);}else setNotice('No clear words recognized. Try a short answer in English, or keep typing.');}
-      catch(error){setNotice((error as Error).message);showError((error as Error).message);}finally{processingRef.current=false;setProcessing(false);}
+    let queue = Promise.resolve();
+    let accepted = 0;
+    let recognitionFailure = '';
+    const enqueue = (samples: Float32Array, rate: number) => {
+      if (!samples.length) return;
+      const seconds = samples.length / rate;
+      const capturedFor = origin.current;
+      queue = queue.then(async () => {
+        const data = await ask('transcribe', resample16k(samples, rate));
+        const words = data.text?.trim();
+        if (!words) return;
+        if (!usableDictation(words, seconds)) {
+          recognitionFailure = 'Some speech could not be recognized. Review your draft, retry, or keep typing.';
+          return;
+        }
+        accepted++;
+        await current.current.onText(words, seconds, capturedFor);
+      }).catch((error: Error) => {
+        recognitionFailure = error.message;
+      });
+    };
+    const mic=new MicController(new DeviceMicAdapter(enqueue, () => segmentedDictation && !checking.current),async(samples,rate)=>{
+      if (checking.current) {
+        const energy = samples.reduce((sum, value) => sum + value * value, 0) / Math.max(1, samples.length);
+        setNotice(energy > .000001 ? 'Microphone input detected. No recording was retained.' : 'No clear input detected. Check the input device and retry.');
+        return;
+      }
+      const finished = performance.now();
+      processingRef.current = true;
+      setProcessing(true);
+      enqueue(samples, rate);
+      try {
+        await queue;
+        const finishToDraftMs = Math.round(performance.now() - finished);
+        performance.measure('pmforge:dictation-finish-to-draft', {start: finished, end: finished + finishToDraftMs});
+        performance.clearMeasures('pmforge:dictation-finish-to-draft');
+        if (recognitionFailure) {
+          setNotice(recognitionFailure);
+          showError(recognitionFailure);
+        } else {
+          setNotice(accepted ? 'Review your dictated draft before sending.' : 'No clear words recognized. Try a short answer in English, or keep typing.');
+        }
+      } finally {
+        accepted = 0;
+        recognitionFailure = '';
+        processingRef.current = false;
+        setProcessing(false);
+      }
     });
     controller.current=mic;let lastError='';const unsubscribe=mic.subscribe(next=>{setState(next);if(['error','lost'].includes(next.phase)&&next.message&&next.message!==lastError){lastError=next.message;showError(next.message);}if(next.phase==='listening')lastError='';});
     const cancelPreparation=()=>{gesture.current=null;++request.current;preparingRef.current=false;setPreparing(false);};

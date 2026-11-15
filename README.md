@@ -2,7 +2,7 @@
 
 A practice workspace for product judgment: 63 interview scenarios, seven category workbenches, twelve three-chapter projects, evidence-backed debriefs and a private decision portfolio.
 
-Release status: **live device-practice beta at [pmforge-tau.vercel.app](https://pmforge-tau.vercel.app/)**. See [the verified hosting handover](docs/LIVE-HOSTING.md). Vercel Hobby hosts the app and isolated portfolio reader; Supabase Free hosts the managed backend. Signup, cloud sync, authenticated publishing and hosted generative AI still require configuration. The [broader production-readiness review](docs/prr.md), [microphone verification](docs/mic-test-report.md) and [latency evidence](docs/latency-report.md) retain their separate limits and remaining gates.
+**Live device-practice beta at [pmforge-tau.vercel.app](https://pmforge-tau.vercel.app/).** The [zero-budget release checklist](docs/release-status.md) records verified journeys, implementation gaps and launch gates. See the [hosting handover](docs/LIVE-HOSTING.md) for the Vercel Hobby app, isolated portfolio reader and Supabase Free backend.
 
 ## Run locally
 
