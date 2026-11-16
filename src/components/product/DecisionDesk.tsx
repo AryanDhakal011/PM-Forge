@@ -318,10 +318,9 @@ export default function DecisionDesk() {
         <aside className={s.constellationPanel} aria-label="Coverage and momentum">
           <header className={s.skyHeader}>
             <div><span className={u.eyebrow}>Coverage & momentum</span><strong>{lit} <small>lit</small></strong></div>
-            <div className={s.segmented} role="tablist" aria-label="Constellation view">
-              <span className={!table ? s.selected : ""} />
-              <button role="tab" aria-selected={!table} onClick={() => setTable(false)}>Sky</button>
-              <button role="tab" aria-selected={table} onClick={() => setTable(true)}>Table</button>
+            <div className={s.segmented} role="group" aria-label="Coverage view">
+              <button type="button" aria-pressed={!table} onClick={() => setTable(false)}>Sky</button>
+              <button type="button" aria-pressed={table} onClick={() => setTable(true)}>Table</button>
             </div>
           </header>
           {!table ? (

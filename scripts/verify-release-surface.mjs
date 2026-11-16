@@ -27,7 +27,32 @@ try{
  const surfaces=['/app','/app/practice','/app/projects','/app/progress','/app/portfolio','/app/settings','/app/help'];
  if(showcase)surfaces.unshift('/','/app/hot-seat');
  for(const path of surfaces){await navigate(path);await until('!!document.querySelector("main h1")','heading '+path);await wait(700);check(!await ev('(document.body?.innerText||"").includes("Application error:")'),'route loads '+path);for(const width of [320,375,768,1024,1440]){await send('Emulation.setDeviceMetricsOverride',{width,height:1000,deviceScaleFactor:1,mobile:width<768});await wait(100);check(await ev('document.documentElement.scrollWidth<=innerWidth+1'),'surface fits '+path+' '+width)}await snap(path.split('/').at(-1)||'today');await axe(path)}
- for(const project of projects){await navigate('/app/projects/'+project.id);await until('!!document.querySelector("main h1")||!!document.querySelector("h1")','project '+project.id);await wait(500);check(!await ev('(document.body?.innerText||"").includes("404")'),'project entry '+project.id);check(await ev('document.documentElement.scrollWidth<=innerWidth+1'),'project entry fits '+project.id)}
+ const projectStarts={'invisible-wall':'Badge in','feature-factory':'Clock in','silent-churn':'Take the elevator','legacy-fracture':'Ring the bell','shadow-roadmap':'Enter project','public-fracture':'Enter project'};
+ for(const project of projects){
+   await navigate('/app/projects');
+   const card=JSON.stringify('#project-'+project.id+' a[aria-label='+JSON.stringify('Open '+project.title)+']');
+   await until(`!!document.querySelector(${card})`,'project hub entry '+project.id);
+   await ev(`document.querySelector(${card}).click()`);
+   const start=projectStarts[project.id]||'Step inside';
+   const startButton=`Array.from(document.querySelectorAll('button')).find(b=>!b.disabled && b.textContent.trim().startsWith(${JSON.stringify(start)}))`;
+   await until(`location.pathname.startsWith(${JSON.stringify('/app/projects/'+project.id)}) && !!${startButton}`,'project start button '+project.id);
+   await ev(`${startButton}.click()`);
+   await until(`!Array.from(document.querySelectorAll('button')).some(b=>b.textContent.trim().startsWith(${JSON.stringify(start)})) && (location.pathname.includes('/run/') || Array.from(document.querySelectorAll('button')).some(b=>/case file|pause/i.test(b.textContent+' '+b.getAttribute('aria-label'))))`,'first playable scene '+project.id);
+   check(true,'project opens from hub and starts '+project.id);
+   check(await ev('document.documentElement.scrollWidth<=innerWidth+1'),'project fits '+project.id);
+ }
+ await navigate('/app');
+ const switcher='[aria-label="Coverage view"]';
+ await until(`!!document.querySelector(${JSON.stringify(switcher)})`,'coverage view switch');
+ for(const width of [320,375,768,1024,1440]){
+   await send('Emulation.setDeviceMetricsOverride',{width,height:1000,deviceScaleFactor:1,mobile:width<768});
+   check(await ev(`(()=>{const group=document.querySelector(${JSON.stringify(switcher)}), [sky,table]=group.querySelectorAll('button'), bounds=group.getBoundingClientRect(), a=sky.getBoundingClientRect(), b=table.getBoundingClientRect();return a.height>=44&&b.height>=44&&Math.abs(a.top-b.top)<1&&a.left>=bounds.left&&b.right<=bounds.right&&bounds.left>=0&&bounds.right<=innerWidth})()`),'Sky and Table aligned at '+width);
+ }
+ await ev(`document.querySelector(${JSON.stringify(switcher)}).lastElementChild.click()`);
+ await until('!!document.querySelector("table caption") && document.querySelector(\'[aria-label="Coverage view"] button:last-child\').ariaPressed==="true"','coverage table selected');
+ await ev(`document.querySelector(${JSON.stringify(switcher)}).firstElementChild.click()`);
+ await until('!!document.querySelector(\'svg[aria-label*="decisions lit"]\') && document.querySelector(\'[aria-label="Coverage view"] button:first-child\').ariaPressed==="true"','coverage sky selected');
+ check(true,'Sky and Table switch views');
  await navigate('/app');await until('!!document.querySelector("main h1")','today');await ev('localStorage.setItem("pmforge.theme","dark");window.dispatchEvent(new Event("pmforge:theme"))');await wait(200);await axe('today dark');await snap('today-dark');await navigate('/app/practice');await until('!!document.querySelector("main h1")','practice dark');await axe('practice dark');
  if(showcase){
    await navigate('/app/hot-seat');

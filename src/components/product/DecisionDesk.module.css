@@ -93,12 +93,15 @@
 .caseSurface { transition:transform .25s,box-shadow .25s; }
 
 .constellationPanel { height:100%; min-width:0; min-height:560px; background:var(--paper); border:1px solid rgba(35,61,46,.09); border-radius:20px; padding:22px 24px 16px; box-shadow:0 12px 28px -18px rgba(35,61,46,.25); overflow:hidden; }
-.skyHeader { min-height:50px; display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
-.skyHeader>div:first-child { display:flex; align-items:center; gap:16px; }
+.skyHeader { min-height:50px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px 12px; margin-bottom:6px; }
+.skyHeader>div:first-child { display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 12px; }
 .skyHeader strong { font:400 30px var(--font-display); color:#233d2e; }
 .skyHeader strong small { font:600 12px var(--font-body); }
-.segmented { width:112px; height:38px; border:1px solid rgba(35,61,46,.12); border-radius:999px; display:grid; grid-template-columns:1fr 1fr; overflow:hidden; }
-.segmented button { border:0; background:transparent; color:#52614f; font-size:12px; cursor:pointer; }
+.segmented { flex:none; display:grid; grid-template-columns:1fr 1fr; gap:2px; padding:2px; border:1px solid #a7b39d; border-radius:999px; background:#eef1e6; }
+.segmented button { min-height:44px; min-width:54px; padding:0 10px; border:0; border-radius:999px; background:transparent; color:#233d2e; font-size:13px; font-weight:600; cursor:pointer; }
+.segmented button:hover { background:#dfe7d7; }
+.segmented button[aria-pressed=true] { background:#233d2e; color:#fffaf0; }
+.segmented button:focus-visible { outline:2px solid #233d2e; outline-offset:2px; }
 .sky { width:100%; max-height:360px; display:block; }
 .orbit { fill:none; stroke:rgba(35,61,46,.14); stroke-width:1; }
 .skyZero { font:400 56px var(--font-display); fill:#233d2e; }
@@ -159,7 +162,7 @@
 @media (max-width:1200px) {
   .page { padding-inline:24px; }
   .deskGrid { grid-template-columns:1fr; }
-  .constellationPanel { height:460px; min-height:460px; }
+  .constellationPanel { height:auto; min-height:460px; }
   .sky { height:330px; max-height:330px; }
   .lowerGrid { grid-template-columns:1fr 1fr; }
   .portfolioWide { grid-column:span 1; }

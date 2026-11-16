@@ -31,7 +31,7 @@ The stories have 71 primary scenes and 120 authored check-in events in total. Ev
 
 ## Release policy
 
-Deadlock, Invisible Wall, and Feature Factory are the three **launch candidates**, as requested. Candidate is not the same as ready. The manifests remain draft while human review gates are pending, so the public hub displays **In development**, without Enter or Resume. A development server, or a server started with `PMFORGE_PROJECT_PREVIEW=true`, can open review previews directly. Explicit kill switches always take priority over preview access.
+The portfolio showcase allows visitors to play all twelve authored projects, including projects whose manifests still say draft while human review is pending. The hub and definition API share an eligibility rule for public play: the project must be visible, enabled, validated, and compatible with the current platform. The hidden `toy-regression` fixture stays out of public production. Developers can open it on a development server or with `PMFORGE_PROJECT_PREVIEW=true` for review. Explicit kill switches take priority over preview access.
 
 Do not mark a level ready until its founder review, six-to-eight-player Fun Rubric assessment, relevant domain review, manual screen-reader pass, compatibility matrix, and remaining performance checks have evidence. Automated tests do not fabricate those approvals.
 
