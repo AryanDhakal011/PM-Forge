@@ -10,7 +10,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@livekit/agents": "1.9.5",
+    "@livekit/agents": "1.10.1",
     "@livekit/agents-plugin-cerebras": "1.9.5",
     "@livekit/agents-plugin-deepgram": "1.9.5",
     "@livekit/agents-plugin-inworld": "1.9.5",
